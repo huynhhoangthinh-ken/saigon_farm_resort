@@ -207,7 +207,7 @@ posts = [
         "id": 104,
         "title": "Sunrise 2 Villa (Mẫu 4PN Đơn Lập Siêu VIP - 1.500m²): Di Sản Truyền Đời Đẳng Cấp Nhất",
         "excerpt": "Dinh thự sinh thái 4 phòng ngủ quy mô lớn nhất dự án, sở hữu khuôn viên vườn 1.500m², hồ bơi vô cực riêng và nội thất gỗ quý thượng hạng.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.3D_TKCS-NHA_GO_4_MAU_2-_02.2026/07.TKCS-NHA_GO_4-MAU_2/01.NGOAI_THAT/SFR_TONG_THE_01.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/01.NGOAI_THAT/SFR_TONG_THE_01.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Là biểu tượng đỉnh cao của phong cách sống điền trang sinh thái tại <strong>Saigon Farm Resort</strong>, <strong>Sunrise 2 Villa (Mẫu Nhà Gỗ 4 Phòng Ngủ)</strong> được thiết kế cho các đại gia đình đa thế hệ mong muốn kiến tạo một tài sản di sản truyền đời trường tồn cùng thời gian.</p>
@@ -229,8 +229,8 @@ posts = [
 <p>Tầng trệt gồm đại sảnh đón tiếp, phòng khách trần cao nối liền phòng ăn đại tiệc, bếp khô & bếp ướt, cùng 2 phòng ngủ tầng trệt thuận tiện cho người lớn tuổi. Tầng 2 gồm 2 phòng ngủ Master Suite đẳng cấp, phòng sinh hoạt chung (SHC) và ban công ngắm toàn cảnh hồ 100ha lộng gió.</p>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.3D_TKCS-NHA_GO_4_MAU_2-_02.2026/07.TKCS-NHA_GO_4-MAU_2/02.NOI_THAT/01._TRET_PKHACH_&_BEP/SFR_01.jpg" alt="Đại sảnh phòng khách & Bếp Sunrise 2" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.3D_TKCS-NHA_GO_4_MAU_2-_02.2026/07.TKCS-NHA_GO_4-MAU_2/02.NOI_THAT/04._LAU_P_SHC/SFR_1.jpg" alt="Phòng sinh hoạt chung tầng lầu Sunrise 2" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <img src="assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/02.NOI_THAT/01._TRET_PKHACH_&_BEP/SFR_01.jpg" alt="Đại sảnh phòng khách & Bếp Sunrise 2" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <img src="assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/02.NOI_THAT/04._LAU_P_SHC/SFR_1.jpg" alt="Phòng sinh hoạt chung tầng lầu Sunrise 2" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -444,7 +444,7 @@ posts = [
         "id": 126,
         "title": "Tổ Hợp Thể Thao Pickleball, Gym & Yoga Hướng Hồ Sinh Thái",
         "excerpt": "Cụm sân Pickleball tiêu chuẩn thi đấu, khu tập Gym ngoài trời và đường chạy bộ ven hồ 3.2km rợp bóng cây xanh.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_10.jpg",
+        "image": "assets/Index_asset/the_thao_ven_ho.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Nhằm đáp ứng xu hướng rèn luyện sức khỏe của cộng đồng gia chủ hiện đại, <strong>Tổ hợp thể thao</strong> tại <strong>Saigon Farm Resort</strong> được trang bị đầy đủ các bộ môn thời thượng:</p>
@@ -592,7 +592,7 @@ posts = [
         "id": 202,
         "title": "Saigon Farm Resort Thiết Lập Chuẩn Sống Eco-Luxury: Bản Giao Hưởng Giữa Thiên Nhiên & Tiện Nghi Thượng Lưu",
         "excerpt": "Định nghĩa lại phong cách nghỉ dưỡng xa xỉ bền vững với mật độ xây dựng thấp, kiến trúc gỗ mộc tinh xảo và hệ sinh thái tiện ích khép kín.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.3D_TKCS-NHA_GO_4_MAU_2-_02.2026/07.TKCS-NHA_GO_4-MAU_2/01.NGOAI_THAT/SFR_TONG_THE_01.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/01.NGOAI_THAT/SFR_TONG_THE_01.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p><strong>Eco-Luxury</strong> không đơn thuần là sự kết hợp giữa sinh thái và xa xỉ, mà là một triết lý sống tôn trọng tự nhiên nhưng không đánh đổi sự tiện nghi. Tại <strong>Saigon Farm Resort</strong>, chuẩn sống này được hiện thực hóa qua từng chi tiết kiến trúc, cảnh quan và dịch vụ:</p>
