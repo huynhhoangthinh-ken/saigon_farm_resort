@@ -31,7 +31,7 @@ posts = [
     <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Hiên Việt (* Hình ảnh minh họa)</p>
   </div>
   <div>
-    <img src="assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg" alt="Việt Mã Trang & Cảnh Quan Ven Hồ" style="border-radius: 8px; width:100%; height: 320px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png" alt="Việt Mã Trang & Cảnh Quan Ven Hồ" style="border-radius: 8px; width:100%; height: 320px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
     <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Việt Mã Trang (* Hình ảnh minh họa)</p>
   </div>
 </div>
@@ -142,22 +142,30 @@ posts = [
 </table>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 30px 0;">
   <div>
-    <img src="assets/Index_asset/Tien_ich_minh_hoa/Bo_sen.png" alt="Bờ Sen (The Lotus Shore)" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Bờ Sen (The Lotus Shore) <span style="font-weight:400; font-size:0.75rem; color:#888; font-style:italic;">(* Hình ảnh minh họa)</span></p>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Bo_sen.png" alt="Bờ Sen (The Lotus Shore)" style="border-radius: 8px; width: 100%; height: 200px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Bờ Sen (* Minh họa)</p>
   </div>
   <div>
-    <img src="assets/Index_asset/Tien_ich_minh_hoa/Giao_tri_viet.png" alt="Giáo Trí Việt (The Maker's House)" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Giáo Trí Việt (The Maker's House) <span style="font-weight:400; font-size:0.75rem; color:#888; font-style:italic;">(* Hình ảnh minh họa)</span></p>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Giao_tri_viet.png" alt="Giáo Trí Việt" style="border-radius: 8px; width: 100%; height: 200px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Giáo Trí Việt (* Minh họa)</p>
   </div>
   <div>
-    <img src="assets/Index_asset/Tien_ich_minh_hoa/Duong_Ve_Nguon.png" alt="Dòng Sử Việt – Về Nguồn" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Dòng Sử Việt – Về Nguồn <span style="font-weight:400; font-size:0.75rem; color:#888; font-style:italic;">(* Hình ảnh minh họa)</span></p>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Duong_Ve_Nguon.png" alt="Dòng Sử Việt – Về Nguồn" style="border-radius: 8px; width: 100%; height: 200px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Dòng Sử Việt (* Minh họa)</p>
   </div>
   <div>
-    <img src="assets/Index_asset/Tien_ich_minh_hoa/Nha_am_sac_viet.png" alt="Nhà Âm Sắc Việt" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Nhà Âm Sắc Việt <span style="font-weight:400; font-size:0.75rem; color:#888; font-style:italic;">(* Hình ảnh minh họa)</span></p>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png" alt="Việt Mã Trang" style="border-radius: 8px; width: 100%; height: 200px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Việt Mã Trang (* Minh họa)</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Quang_truong_Hoi_Viet.png" alt="Quảng Trường Hội Việt" style="border-radius: 8px; width: 100%; height: 200px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Quảng Trường (* Minh họa)</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Nha_am_sac_viet.png" alt="Nhà Âm Sắc Việt" style="border-radius: 8px; width: 100%; height: 200px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Nhà Âm Sắc Việt (* Minh họa)</p>
   </div>
 </div>
 
@@ -175,7 +183,7 @@ posts = [
         "id": 205,
         "title": "Chuỗi Hoạt Động Lễ Hội Bản Sắc Việt: Khi Điền Trang Là Nơi Trở Về Của Ký Ức & Gắn Kết Gia Đình",
         "excerpt": "Hệ thống hoạt động văn hóa định kỳ hàng tuần, hàng tháng và các lễ hội mùa vụ truyền thống: Trung Thu, Tết Cổ Truyền, Mùa Gặt và Đêm Nhạc Ánh Trăng ven hồ 100ha.",
-        "image": "assets/posts/xa_xi_ban_sac/am_thuc_viet.jpg",
+        "image": "assets/Index_asset/Tien_ich_minh_hoa/Quang_truong_Hoi_Viet.png",
         "date": "29 TH8 2026",
         "content": """
 <p>Khác biệt với những khu nghỉ dưỡng thông thường chỉ có phòng ốc và dịch vụ lưu trú tĩnh, <strong>Saigon Farm Resort</strong> được thổi hồn bởi <strong>nhịp sống lễ hội và các hoạt động văn hóa sống động</strong> diễn ra quanh năm. Đây là nơi mọi thế hệ ông bà, cha mẹ và con cháu cùng tìm lại niềm vui thuần khiết và ký ức sum vầy:</p>
@@ -453,7 +461,7 @@ posts = [
         "id": 120,
         "title": "Bến Thuyền, Chèo SUP & Kayak Thể Thao Mặt Nước Bên Hồ 100ha",
         "excerpt": "Tận hưởng làn gió mát lành và khám phá mặt hồ sinh thái 100ha với trải nghiệm chèo SUP, Kayak, thuyền du ngoạn và câu cá thư giãn.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_2.jpg",
+        "image": "assets/Index_asset/Tien_ich_minh_hoa/Clubhouse_ven_ho.png",
         "date": "29 TH8 2026",
         "content": """
 <p>Mặt hồ tự nhiên 100ha tại <strong>Saigon Farm Resort</strong> là báu vật cảnh quan quý giá mà hiếm khu nghỉ dưỡng ven đô nào có được. Tại phân khu bến thuyền, cư dân và du khách được hòa mình vào không gian sông nước bao la:</p>
@@ -469,7 +477,7 @@ posts = [
 </div>
 
 <div style="margin: 24px 0; text-align: center;">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_2.jpg" alt="Bến thuyền ven hồ Saigon Farm Resort" style="width: 100%; border-radius: 8px;">
+  <img src="assets/Index_asset/Tien_ich_minh_hoa/ben_thuyen_kayak.png" alt="Bến thuyền ven hồ Saigon Farm Resort" style="width: 100%; border-radius: 8px;">
   <p style="font-size: 0.82rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Bến thuyền & thể thao chèo SUP, Kayak trên hồ 100ha (* Hình ảnh minh họa)</p>
 </div>
 
@@ -487,7 +495,7 @@ posts = [
         "id": 121,
         "title": "Nông Trại Hữu Cơ Organic Farm: Chuẩn Sống Xanh Farm-to-Table Tại Gia",
         "excerpt": "Cung cấp nguồn thực phẩm sạch tự nhiên 100% và không gian giáo trí sinh thái cho con trẻ tự tay gieo mầm, chăm sóc và thu hoạch.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/08._TKSP-CANH_QUAN_VEN_RUONG-20260515T044351Z-3-001/SFR_1.png",
+        "image": "assets/Index_asset/Tien_ich_minh_hoa/Nong_trai_huu_co.png",
         "date": "29 TH8 2026",
         "content": """
 <p><strong>Nông trại Organic Farm</strong> tại <strong>Saigon Farm Resort</strong> được quy hoạch chuyên canh các loại rau củ hữu cơ, thảo mộc và vườn cây ăn trái theo tiêu chuẩn VietGAP/Organic, đem lại trải nghiệm sống chuẩn Farm-to-Table đích thực:</p>
@@ -515,7 +523,7 @@ posts = [
         "id": 123,
         "title": "Việt Mã Trang (The Equestrian Estate): Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Giữa Thảo Nguyên",
         "excerpt": "Trải nghiệm môn thể thao quý tộc với những chú ngựa thuần chủng được chăm sóc bài bản, đường chạy ven hồ lộng gió.",
-        "image": "assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg",
+        "image": "assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png",
         "date": "29 TH8 2026",
         "content": """
 <p><strong>Việt Mã Trang (The Equestrian Estate)</strong> tại <strong>Saigon Farm Resort</strong> là một trong những tiện ích độc bản hiếm có tại khu vực phía Nam. Được xây dựng trên thảm cỏ xanh mướt ven hồ, câu lạc bộ mang lại phong cách sống thượng lưu và phóng khoáng:</p>
@@ -531,7 +539,7 @@ posts = [
 </div>
 
 <div style="margin: 24px 0; text-align: center;">
-  <img src="assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg" alt="Việt Mã Trang bên hồ sinh thái" style="width: 100%; border-radius: 8px;">
+  <img src="assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png" alt="Việt Mã Trang bên hồ sinh thái" style="width: 100%; border-radius: 8px;">
   <p style="font-size: 0.82rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Việt Mã Trang – Câu lạc bộ cưỡi ngựa quý tộc ven hồ (* Hình ảnh minh họa)</p>
 </div>
 
@@ -583,7 +591,7 @@ posts = [
         "id": 126,
         "title": "Tổ Hợp Thể Thao Pickleball, Gym & Yoga Hướng Hồ Sinh Thái",
         "excerpt": "Cụm sân Pickleball tiêu chuẩn thi đấu, khu tập Gym ngoài trời và đường chạy bộ ven hồ 3.2km rợp bóng cây xanh.",
-        "image": "assets/Index_asset/the_thao_ven_ho.jpg",
+        "image": "assets/Index_asset/Tien_ich_minh_hoa/Pickel_ball.png",
         "date": "29 TH8 2026",
         "content": """
 <p>Nhằm đáp ứng xu hướng rèn luyện sức khỏe của cộng đồng gia chủ hiện đại, <strong>Tổ hợp thể thao</strong> tại <strong>Saigon Farm Resort</strong> được trang bị đầy đủ các bộ môn thời thượng:</p>
@@ -611,7 +619,7 @@ posts = [
         "id": 127,
         "title": "Khu Cắm Trại Glamping & Tiệc Nướng BBQ Ngoài Trời Ven Nước",
         "excerpt": "Trải nghiệm cắm trại sang trọng với lều Glamping tiện nghi, tiệc nướng BBQ ấm cúng bên ánh lửa bập bùng và ngắm bầu trời đầy sao.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_15.jpg",
+        "image": "assets/Index_asset/Tien_ich_minh_hoa/hoat_dong_ven_ho.png",
         "date": "29 TH8 2026",
         "content": """
 <p><strong>Khu Glamping & BBQ ven hồ</strong> tại <strong>Saigon Farm Resort</strong> là điểm hẹn tuyệt vời cho những buổi tối quây quần bên người thân và bạn bè, nơi khói bếp BBQ thơm lừng quyện cùng làn gió hồ dịu mát:</p>
