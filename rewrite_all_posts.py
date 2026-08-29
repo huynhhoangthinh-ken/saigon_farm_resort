@@ -26,8 +26,14 @@ posts = [
 <p>Nhiều gia đình vẫn muốn giữ sự thuận tiện, dịch vụ và tiêu chuẩn sống hiện đại, đồng thời có thêm một nơi đủ gần thiên nhiên để trở về thường xuyên. Chính từ nhu cầu ấy, ý tưởng về một <strong>điền trang bản sắc Việt đương đại</strong> tại <strong>Saigon Farm Resort</strong> trở nên đáng để suy nghĩ.</p>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
-  <img src="assets/posts/xa_xi_ban_sac/hien_viet.jpg" alt="Hiên Việt & Bàn Trà An Yên" style="border-radius: 8px; width:100%; height: 320px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <img src="assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg" alt="Việt Mã Trang & Cảnh Quan Ven Hồ" style="border-radius: 8px; width:100%; height: 320px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <div>
+    <img src="assets/posts/xa_xi_ban_sac/hien_viet.jpg" alt="Hiên Việt & Bàn Trà An Yên" style="border-radius: 8px; width:100%; height: 320px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Hiên Việt (* Hình ảnh minh họa)</p>
+  </div>
+  <div>
+    <img src="assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg" alt="Việt Mã Trang & Cảnh Quan Ven Hồ" style="border-radius: 8px; width:100%; height: 320px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Việt Mã Trang (* Hình ảnh minh họa)</p>
+  </div>
 </div>
 
 <h2>Saigon Farm Resort & Một Cách Sống Rộng Hơn</h2>
@@ -51,7 +57,7 @@ posts = [
 
 <div style="margin: 30px 0;">
   <img src="assets/posts/xa_xi_ban_sac/am_thuc_viet.jpg" alt="Nếp Nhà Việt - Ẩm thực gia đình sum vầy" style="border-radius: 8px; width:100%; height: 440px; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
-  <p style="font-size: 0.88rem; color: #777; text-align: center; margin-top: 10px; font-style: italic;">Nếp Nhà Việt: Bữa cơm gia đình ấm cúng giữa không gian hiên nhà lộng gió và thiên nhiên giao hòa</p>
+  <p style="font-size: 0.85rem; color: #777; text-align: center; margin-top: 10px; font-style: italic;">Nếp Nhà Việt: Bữa cơm gia đình sum vầy (* Hình ảnh minh họa)</p>
 </div>
 
 <h2>Bản Sắc Cũng Cần Được Vận Hành</h2>
@@ -139,19 +145,19 @@ posts = [
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
   <div>
     <img src="assets/Index_asset/Tien_ich_minh_hoa/Bo_sen.png" alt="Bờ Sen (The Lotus Shore)" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Bờ Sen (The Lotus Shore)</p>
+    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Bờ Sen (The Lotus Shore) <span style="font-weight:400; font-size:0.75rem; color:#888; font-style:italic;">(* Hình ảnh minh họa)</span></p>
   </div>
   <div>
     <img src="assets/Index_asset/Tien_ich_minh_hoa/Giao_tri_viet.png" alt="Giáo Trí Việt (The Maker's House)" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Giáo Trí Việt (The Maker's House)</p>
+    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Giáo Trí Việt (The Maker's House) <span style="font-weight:400; font-size:0.75rem; color:#888; font-style:italic;">(* Hình ảnh minh họa)</span></p>
   </div>
   <div>
     <img src="assets/Index_asset/Tien_ich_minh_hoa/Duong_Ve_Nguon.png" alt="Dòng Sử Việt – Về Nguồn" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Dòng Sử Việt – Đường Về Nguồn</p>
+    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Dòng Sử Việt – Về Nguồn <span style="font-weight:400; font-size:0.75rem; color:#888; font-style:italic;">(* Hình ảnh minh họa)</span></p>
   </div>
   <div>
     <img src="assets/Index_asset/Tien_ich_minh_hoa/Nha_am_sac_viet.png" alt="Nhà Âm Sắc Việt" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Nhà Âm Sắc Việt (The Sound & Silk House)</p>
+    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Nhà Âm Sắc Việt <span style="font-weight:400; font-size:0.75rem; color:#888; font-style:italic;">(* Hình ảnh minh họa)</span></p>
   </div>
 </div>
 
@@ -236,8 +242,14 @@ posts = [
 <p>Điểm nhấn độc bản của <strong>Sunset 1 Villa</strong> là khoảng sân trong (Courtyard) nằm ở trung tâm ngôi nhà. Sân trong đóng vai trò như một "lá phổi xanh" đón ánh sáng tự nhiên và gió đối lưu từ mặt hồ thổi qua từng gian phòng, giúp không gian sống luôn mát mẻ và tràn ngập sinh khí quanh năm.</p>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_05.P.KHACH_01.jpg" alt="Phòng khách & Không gian sinh hoạt chung" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_10.PNGU_MASTER_01.jpg" alt="Phòng ngủ Master view vườn xanh" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <div>
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_05.P.KHACH_01.jpg" alt="Phòng khách" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Phòng khách & Bếp (* Hình ảnh minh họa)</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_10.PNGU_MASTER_01.jpg" alt="Phòng ngủ Master" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Phòng ngủ Master (* Hình ảnh minh họa)</p>
+  </div>
 </div>
 
 <h2>Bản Vẽ Mặt Bằng & Giải Pháp Bố Trí Công Năng</h2>
@@ -284,8 +296,14 @@ posts = [
 <p>Tầng trệt của Sunset 2 Villa được tối ưu cho các hoạt động sinh hoạt chung với phòng khách mở, bếp lớn tiêu chuẩn resort và 1 phòng ngủ cho người lớn tuổi. Tầng lầu là thế giới riêng tư của gia chủ với 2 phòng ngủ Master, phòng làm việc/đọc sách và ban công ngắm cảnh hướng hồ tuyệt mỹ.</p>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_03.MAT_CAT.jpg" alt="Mặt cắt kiến trúc Sunset 2 Villa" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_11.WC_MASTER_02.jpg" alt="Phòng tắm Master tiêu chuẩn 5 sao" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <div>
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_03.MAT_CAT.jpg" alt="Mặt cắt kiến trúc" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Mặt cắt kiến trúc (* Hình ảnh minh họa)</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_11.WC_MASTER_02.jpg" alt="Phòng tắm Master" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Phòng tắm Master (* Hình ảnh minh họa)</p>
+  </div>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -323,8 +341,14 @@ posts = [
 <p>Từng thanh gỗ, viên ngói và chi tiết mộc tại Sunrise 1 Villa đều được gia công tinh xảo bởi những nghệ nhân giàu kinh nghiệm. Sự kết hợp giữa chất liệu gỗ mộc ấm áp và các trang thiết bị vệ sinh nhập khẩu Đức mang đến trải nghiệm nghỉ dưỡng vừa gần gũi vừa tiện nghi tối đa.</p>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/02._NOI_THAT/01.TANG_TRET/SFR_P.KHACH_&_AN_(1).jpg" alt="Không gian phòng khách Sunrise 1" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/02._NOI_THAT/02.TANG_LAU/SFR_P.NGU_MASTER-WC_(1).jpg" alt="Phòng ngủ Master ấm cúng" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <div>
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/02._NOI_THAT/01.TANG_TRET/SFR_P.KHACH_&_AN_(1).jpg" alt="Không gian phòng khách" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Phòng khách & Bếp ăn (* Hình ảnh minh họa)</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/02._NOI_THAT/02.TANG_LAU/SFR_P.NGU_MASTER-WC_(1).jpg" alt="Phòng ngủ Master" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Phòng ngủ Master (* Hình ảnh minh họa)</p>
+  </div>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -363,8 +387,14 @@ posts = [
 <p>Tầng trệt gồm đại sảnh đón tiếp, phòng khách trần cao nối liền phòng ăn đại tiệc, bếp khô & bếp ướt, cùng 2 phòng ngủ tầng trệt thuận tiện cho người lớn tuổi. Tầng 2 gồm 2 phòng ngủ Master Suite đẳng cấp, phòng sinh hoạt chung (SHC) và ban công ngắm toàn cảnh hồ 100ha lộng gió.</p>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/02.NOI_THAT/01._TRET_PKHACH_&_BEP/SFR_01.jpg" alt="Đại sảnh phòng khách & Bếp Sunrise 2" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/02.NOI_THAT/04._LAU_P_SHC/SFR_1.jpg" alt="Phòng sinh hoạt chung tầng lầu Sunrise 2" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <div>
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/02.NOI_THAT/01._TRET_PKHACH_&_BEP/SFR_01.jpg" alt="Đại sảnh phòng khách & Bếp" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Đại sảnh phòng khách (* Hình ảnh minh họa)</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/02.NOI_THAT/04._LAU_P_SHC/SFR_1.jpg" alt="Phòng sinh hoạt chung" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Phòng sinh hoạt chung (* Hình ảnh minh họa)</p>
+  </div>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -406,7 +436,7 @@ posts = [
 
 <div style="margin: 30px 0; text-align: center;">
   <img src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Sơ đồ tiện ích tổng thể Saigon Farm Resort" style="width: 100%; border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
-  <p style="font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;">Sơ đồ quy hoạch phân khu tiện ích đa tầng gần 3ha tại trung tâm Saigon Farm Resort</p>
+  <p style="font-size: 0.85rem; color: #777; margin-top: 8px; font-style: italic;">Sơ đồ quy hoạch phân khu tiện ích gần 3ha (* Hình ảnh sơ đồ quy hoạch minh họa)</p>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -440,6 +470,7 @@ posts = [
 
 <div style="margin: 24px 0; text-align: center;">
   <img src="assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_2.jpg" alt="Bến thuyền ven hồ Saigon Farm Resort" style="width: 100%; border-radius: 8px;">
+  <p style="font-size: 0.82rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Bến thuyền & thể thao chèo SUP, Kayak trên hồ 100ha (* Hình ảnh minh họa)</p>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -501,6 +532,7 @@ posts = [
 
 <div style="margin: 24px 0; text-align: center;">
   <img src="assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg" alt="Việt Mã Trang bên hồ sinh thái" style="width: 100%; border-radius: 8px;">
+  <p style="font-size: 0.82rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Việt Mã Trang – Câu lạc bộ cưỡi ngựa quý tộc ven hồ (* Hình ảnh minh họa)</p>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -534,6 +566,7 @@ posts = [
 
 <div style="margin: 24px 0; text-align: center;">
   <img src="assets/Index_asset/Tien_ich_minh_hoa/Bo_sen.png" alt="Bờ Sen (The Lotus Shore)" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <p style="font-size: 0.82rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Bờ Sen & Herbal Spa ngâm khoáng thảo mộc dưỡng sinh (* Hình ảnh minh họa)</p>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -623,6 +656,7 @@ posts = [
 
 <div style="margin: 24px 0; text-align: center;">
   <img src="assets/Index_asset/Tien_ich_minh_hoa/Giao_tri_viet.png" alt="Giáo Trí Việt (The Maker's House)" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <p style="font-size: 0.82rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Giáo Trí Việt & Vườn Cội – Không gian trẻ học bằng đôi tay (* Hình ảnh minh họa)</p>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -719,7 +753,7 @@ posts = [
 
 <div style="margin: 24px 0; text-align: center;">
   <img src="assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg" alt="Toàn cảnh phối cảnh tổng thể Saigon Farm Resort" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <p style="font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;">Phối cảnh tổng thể sinh thái ven hồ 100ha Saigon Farm Resort</p>
+  <p style="font-size: 0.85rem; color: #777; margin-top: 8px; font-style: italic;">Phối cảnh tổng thể sinh thái ven hồ 100ha (* Hình ảnh phối cảnh minh họa)</p>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -752,7 +786,7 @@ posts = [
 
 <div style="margin: 24px 0; text-align: center;">
   <img src="assets/Index_asset/Phoi_canh_tong_the/SFR_NEW_S02.jpg" alt="Phối cảnh trên cao Saigon Farm Resort" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <p style="font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;">Phối cảnh toàn cảnh mặt hồ 100ha và phân khu biệt thự Saigon Farm Resort</p>
+  <p style="font-size: 0.85rem; color: #777; margin-top: 8px; font-style: italic;">Phối cảnh toàn cảnh mặt hồ 100ha (* Hình ảnh phối cảnh minh họa)</p>
 </div>
 
 <div class="key-takeaways">

@@ -373,10 +373,14 @@
               <div class="container">
                 <div class="article-featured-image">
                   <img src="${post.image}" alt="${post.title}">
+                  <p style="font-size: 0.82rem; color: #888; text-align: center; margin-top: 8px; font-style: italic;">* Hình ảnh mang tính chất minh họa</p>
                 </div>
                 
                 <article class="article-content">
                   ${post.content}
+                  <div style="margin: 28px 0 10px; padding: 14px 18px; background: #faf9f6; border-left: 3px solid #c9a96e; font-size: 0.84rem; color: #777; font-style: italic; border-radius: 0 6px 6px 0;">
+                    * Lưu ý: Toàn bộ thông tin quy hoạch, kiến trúc và hình ảnh tiện ích trong bài viết mang tính chất minh họa theo định hướng phát triển thực tế của dự án Saigon Farm Resort.
+                  </div>
                 </article>
               </div>
             `;
@@ -388,8 +392,9 @@
                 relatedSection.style.display = 'block';
                 relatedGrid.innerHTML = otherPosts.map(op => `
                   <a href="article.html?id=${op.id}" class="grid-card" style="text-decoration:none; color:inherit; display:block; background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
-                    <div class="grid-img" style="height:200px; overflow:hidden;">
+                    <div class="grid-img" style="height:200px; overflow:hidden; position:relative;">
                       <img src="${op.image}" alt="${op.title}" style="width:100%; height:100%; object-fit:cover;">
+                      <span style="position:absolute; bottom:6px; right:6px; background:rgba(0,0,0,0.65); color:#fff; font-size:0.6rem; padding:2px 6px; border-radius:3px; backdrop-filter:blur(3px);">* Hình ảnh minh họa</span>
                     </div>
                     <div class="grid-card-info" style="padding:16px;">
                       <h5 style="margin-bottom:8px; font-size:1.05rem; line-height:1.4;">${op.title}</h5>

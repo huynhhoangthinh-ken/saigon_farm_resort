@@ -216,6 +216,7 @@ window.activateTab = function(tabId) {
               <a href="article.html?id=${post.id}" style="display: block; text-decoration: none; color: inherit;">
                 <div class="grid-img">
                    <img src="${post.image}" alt="${post.title}">
+                   <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
                 </div>
                 <h5 style="margin-bottom: 8px; line-height: 1.4;">${post.title}</h5>
               </a>
