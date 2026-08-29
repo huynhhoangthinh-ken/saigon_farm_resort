@@ -77,62 +77,64 @@ posts = [
         "content": """
 <p>Tại <strong>Saigon Farm Resort</strong>, khái niệm <em>Điền Trang Nghỉ Dưỡng Bản Sắc Việt Đương Đại</em> không chỉ nằm ở lớp vỏ kiến trúc mái ngói hay cột gỗ, mà được hiện thực hóa thành một hệ sinh thái trải nghiệm sống trọn vẹn gồm <strong>9 Không Gian Văn Hóa Đặc Quyền</strong> do <strong>MDS Living</strong> phát triển và vận hành:</p>
 
-<table style="width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.92rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1);">
+<div style="overflow-x: auto; margin: 30px 0;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #ffffff; border: 1px solid #e0d5c1; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-width: 600px;">
   <thead>
-    <tr style="background: rgba(201,169,110,0.15); border-bottom: 2px solid #c9a96e; text-align: left;">
-      <th style="padding: 12px 14px; color: #c9a96e; font-weight: 700;">ĐIỂM ĐẾN</th>
-      <th style="padding: 12px 14px; color: #c9a96e; font-weight: 700;">NỘI DUNG TRẢI NGHIỆM</th>
-      <th style="padding: 12px 14px; color: #c9a96e; font-weight: 700;">TÊN QUỐC TẾ</th>
+    <tr style="background: #fbf9f5; border-bottom: 2px solid #c9a96e; text-align: left;">
+      <th style="padding: 14px 16px; color: #8a6d3b; font-weight: 700; font-family: var(--font-serif); font-size: 1.02rem;">ĐIỂM ĐẾN</th>
+      <th style="padding: 14px 16px; color: #8a6d3b; font-weight: 700; font-family: var(--font-serif); font-size: 1.02rem;">NỘI DUNG TRẢI NGHIỆM</th>
+      <th style="padding: 14px 16px; color: #8a6d3b; font-weight: 700; font-family: var(--font-serif); font-size: 1.02rem;">TÊN QUỐC TẾ</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">HIÊN VIỆT</td>
-      <td style="padding: 12px 14px;">Phòng khách chung của cả khu: sảnh đón, phòng trà, thư phòng, phòng khách doanh nhân, câu lạc bộ trẻ em.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Veranda</td>
+    <tr style="border-bottom: 1px solid #eee; background: #fff;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">HIÊN VIỆT</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Phòng khách chung của cả khu: sảnh đón, phòng trà, thư phòng, phòng khách doanh nhân, câu lạc bộ trẻ em.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The Veranda</td>
     </tr>
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">GIÁO TRÍ VIỆT</td>
-      <td style="padding: 12px 14px;">Nơi trẻ học bằng đôi tay: gốm, vẽ, thư pháp, thắt lá dừa, nặn tò he truyền thống.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Maker's House</td>
+    <tr style="border-bottom: 1px solid #eee; background: #faf8f5;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">GIÁO TRÍ VIỆT</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Nơi trẻ học bằng đôi tay: gốm, vẽ, thư pháp, thắt lá dừa, nặn tò he truyền thống.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The Maker's House</td>
     </tr>
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">BỜ SEN</td>
-      <td style="padding: 12px 14px;">Hồ sen thơm mát, hồ bơi sinh thái, spa, ngâm tắm thảo mộc bản địa, thưởng trà Việt và thiền tịnh.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Lotus Shore</td>
+    <tr style="border-bottom: 1px solid #eee; background: #fff;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">BỜ SEN</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Hồ sen thơm mát, hồ bơi sinh thái, spa, ngâm tắm thảo mộc bản địa, thưởng trà Việt và thiền tịnh.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The Lotus Shore</td>
     </tr>
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">VIỆT MÃ TRANG</td>
-      <td style="padding: 12px 14px;">Nơi gặp gỡ giữa người, ngựa và thiên nhiên: cưỡi ngựa quý tộc, lớp ngựa con, chăm sóc ngựa, trình diễn cuối tuần.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Equestrian Estate</td>
+    <tr style="border-bottom: 1px solid #eee; background: #faf8f5;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">VIỆT MÃ TRANG</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Nơi gặp gỡ giữa người, ngựa và thiên nhiên: cưỡi ngựa quý tộc, lớp ngựa con, chăm sóc ngựa, trình diễn cuối tuần.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The Equestrian Estate</td>
     </tr>
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">NẾP NHÀ VIỆT</td>
-      <td style="padding: 12px 14px;">Nhà hàng ẩm thực Farm-to-Table từ vườn đến bàn ăn, bàn ăn cùng bếp trưởng, tiệc giữa đồng lúa, tiệc bên hồ sen.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Vietnamese Table</td>
+    <tr style="border-bottom: 1px solid #eee; background: #fff;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">NẾP NHÀ VIỆT</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Nhà hàng ẩm thực Farm-to-Table từ vườn đến bàn ăn, bàn ăn cùng bếp trưởng, tiệc giữa đồng lúa, tiệc bên hồ sen.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The Vietnamese Table</td>
     </tr>
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">DÒNG SỬ VIỆT – VỀ NGUỒN</td>
-      <td style="padding: 12px 14px;">Bốn nghìn năm lịch sử kể bằng cảnh quan: đá cuội, đồng, phù điêu, nghệ thuật ánh sáng và mặt nước.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The River of Time</td>
+    <tr style="border-bottom: 1px solid #eee; background: #faf8f5;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">DÒNG SỬ VIỆT – VỀ NGUỒN</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Bốn nghìn năm lịch sử kể bằng cảnh quan: đá cuội, đồng, phù điêu, nghệ thuật ánh sáng và mặt nước.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The River of Time</td>
     </tr>
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">QUẢNG TRƯỜNG HỘI VIỆT</td>
-      <td style="padding: 12px 14px;">Lễ hội mùa vụ, sân khấu ngoài trời, chợ phiên quê, đêm nhạc hòa tấu acoustic và rạp chiếu phim dưới trời sao.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Village Green</td>
+    <tr style="border-bottom: 1px solid #eee; background: #fff;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">QUẢNG TRƯỜNG HỘI VIỆT</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Lễ hội mùa vụ, sân khấu ngoài trời, chợ phiên quê, đêm nhạc hòa tấu acoustic và rạp chiếu phim dưới trời sao.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The Village Green</td>
     </tr>
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">VƯỜN CỘI</td>
-      <td style="padding: 12px 14px;">Vườn cây gia đình, gắn bảng tên lưu dấu kỷ niệm và ký ức truyền đời cho các thế hệ con cháu.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Roots Garden</td>
+    <tr style="border-bottom: 1px solid #eee; background: #faf8f5;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">VƯỜN CỘI</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Vườn cây gia đình, gắn bảng tên lưu dấu kỷ niệm và ký ức truyền đời cho các thế hệ con cháu.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The Roots Garden</td>
     </tr>
-    <tr>
-      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">NHÀ ÂM SẮC VIỆT</td>
-      <td style="padding: 12px 14px;">Trưng bày trang phục và nhạc cụ 54 dân tộc, gallery sống, sân khấu biểu diễn âm nhạc dân tộc đương đại.</td>
-      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Sound & Silk House</td>
+    <tr style="background: #fff;">
+      <td style="padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);">NHÀ ÂM SẮC VIỆT</td>
+      <td style="padding: 14px 16px; color: #333; line-height: 1.6;">Trưng bày trang phục và nhạc cụ 54 dân tộc, gallery sống, sân khấu biểu diễn âm nhạc dân tộc đương đại.</td>
+      <td style="padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;">The Sound & Silk House</td>
     </tr>
   </tbody>
 </table>
+</div>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
   <img src="assets/posts/xa_xi_ban_sac/hien_viet.jpg" alt="Hiên Việt" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover;">
