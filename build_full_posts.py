@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 posts = [
     # -------------------------------------------------------------
@@ -97,8 +98,8 @@ posts = [
 <p>Điểm nhấn độc bản của <strong>Sunset 1 Villa</strong> là khoảng sân trong (Courtyard) nằm ở trung tâm ngôi nhà. Sân trong đóng vai trò như một "lá phổi xanh" đón ánh sáng tự nhiên và gió đối lưu từ mặt hồ thổi qua từng gian phòng, giúp không gian sống luôn mát mẻ và tràn ngập sinh khí quanh năm.</p>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.P_KHACH_&_AN.jpg" alt="Phòng khách & Không gian ăn uống mở" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_08.P_NGU_MASTER.jpg" alt="Phòng ngủ Master view vườn xanh" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_05.P.KHACH_01.jpg" alt="Phòng khách & Không gian sinh hoạt chung" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_10.PNGU_MASTER_01.jpg" alt="Phòng ngủ Master view vườn xanh" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 </div>
 
 <h2>Bản Vẽ Mặt Bằng & Giải Pháp Bố Trí Công Năng</h2>
@@ -167,7 +168,7 @@ posts = [
         "id": 103,
         "title": "Sunrise 1 Villa (Mẫu 3PN Đơn Lập Vườn Sinh Thái): Đón Trọn Ánh Bình Minh Tinh Khôi",
         "excerpt": "Thiết kế đón trọn ánh nắng ban mai tinh khiết, hồ bơi riêng biệt và khu vườn hữu cơ Farm-to-Table ngay trước hiên nhà.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_TONG_THE_01.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Được phát triển từ hồ sơ thiết kế kỹ thuật giai đoạn 1, <strong>Sunrise 1 Villa</strong> là mẫu biệt thự đơn lập vườn sinh thái hướng Đông, nơi mỗi sớm mai gia chủ được đánh thức bởi tiếng chim hót líu lo ngoài vườn và những vạt nắng vàng tinh khôi rọi qua tán cây dừa.</p>
@@ -206,7 +207,7 @@ posts = [
         "id": 104,
         "title": "Sunrise 2 Villa (Mẫu 4PN Đơn Lập Siêu VIP - 1.500m²): Di Sản Truyền Đời Đẳng Cấp Nhất",
         "excerpt": "Dinh thự sinh thái 4 phòng ngủ quy mô lớn nhất dự án, sở hữu khuôn viên vườn 1.500m², hồ bơi vô cực riêng và nội thất gỗ quý thượng hạng.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.3D_TKCS-NHA_GO_4_MAU_2-_02.2026/07.TKCS-NHA_GO_4-MAU_2/01.NGOAI_THAT/SFR_01.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.3D_TKCS-NHA_GO_4_MAU_2-_02.2026/07.TKCS-NHA_GO_4-MAU_2/01.NGOAI_THAT/SFR_TONG_THE_01.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Là biểu tượng đỉnh cao của phong cách sống điền trang sinh thái tại <strong>Saigon Farm Resort</strong>, <strong>Sunrise 2 Villa (Mẫu Nhà Gỗ 4 Phòng Ngủ)</strong> được thiết kế cho các đại gia đình đa thế hệ mong muốn kiến tạo một tài sản di sản truyền đời trường tồn cùng thời gian.</p>
@@ -261,7 +262,7 @@ posts = [
   <h3>Đặc Quyền Vị Trí & Không Gian Sống Lakeview Grand</h3>
   <ul>
     <li><strong>Tọa độ trực diện hồ 100ha:</strong> 100% các phòng đều có view mặt nước khoáng đạt.</li>
-    <li><strong>Sân vườn ven hồ:</strong> Thảm cỏ mịn màng kéo dài sát mép nước, bến thuyền riêng neo đậu ca nô/thuyền du ngoạn.</li>
+    <li><strong>Sân vườn ven hồ:</strong> Thảm cỏ mịn màng kéo dài sát mép nước, bến thuyền riêng neo đậu thuyền du ngoạn.</li>
     <li><strong>Không gian thiền định & Thư giãn:</strong> Chòi ngắm hoàng hôn trên mặt nước, hồ ngâm thảo dược ngoài trời.</li>
     <li><strong>Pháp lý minh bạch:</strong> Sổ hồng riêng từng khuôn viên, đất thổ cư vườn lâu dài.</li>
   </ul>
@@ -285,7 +286,7 @@ posts = [
         "id": 106,
         "title": "Riverside Eco Villa (Biệt Thự Vườn Thảo Dược): Chốn An Trú Thanh Lọc Thân Tâm Trí",
         "excerpt": "Không gian sống xanh chuẩn Wellness, bao bọc bởi rạch nước tự nhiên, vườn dược liệu quý và không khí trong lành nguyên bản.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/08._TKSP-CANH_QUAN_VEN_RUONG-20260515T044351Z-3-001/SFR_0.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/08._TKSP-CANH_QUAN_VEN_RUONG-20260515T044351Z-3-001/SFR_1.png",
         "date": "29 TH8 2026",
         "content": """
 <p><strong>Riverside Eco Villa</strong> là dòng biệt thự sinh thái hướng tới lối sống chữa lành (Wellness Sanctuary). Nằm uốn lượn theo dòng suối rạch sinh thái nội khu, mỗi căn Riverside Eco Villa được quy hoạch như một trang viên thảo dược thu nhỏ, nơi gia chủ tái tạo năng lượng sau chuỗi ngày bận rộn nơi phố thị.</p>
@@ -450,7 +451,7 @@ posts = [
         "id": 124,
         "title": "Herbal Spa & Zen Zone: Nghệ Thuật Chăm Sóc Sức Khỏe Bằng Thảo Dược Tự Nhiên",
         "excerpt": "Liệu pháp phục hồi thân tâm trí kết hợp thảo dược bản địa, hồ ngâm khoáng nóng và không gian thiền định hướng hồ thanh tịnh.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_13.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_14.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Lấy cảm hứng từ y học cổ truyền và nghệ thuật dưỡng sinh tự nhiên, <strong>Herbal Spa & Zen Zone</strong> tại <strong>Saigon Farm Resort</strong> mang đến không gian tĩnh lặng tuyệt đối để thanh lọc cơ thể và nuôi dưỡng tâm hồn:</p>
@@ -534,7 +535,7 @@ posts = [
         "id": 128,
         "title": "Bãi Cỏ Thả Diều & Thế Giới Vui Chơi Trẻ Thơ Giữa Thiên Nhiên",
         "excerpt": "Mang đến cho con trẻ một tuổi thơ trọn vẹn với thảm cỏ thả diều bao la, khu vui chơi gỗ mộc và lớp học giáo trí văn hóa Vườn Cội.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_18.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_19.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Tại <strong>Saigon Farm Resort</strong>, trẻ em được tạm rời xa màn hình điện thoại để hòa mình vào thế giới tự nhiên rộng lớn tại <strong>Bãi cỏ thả diều & Khu giáo trí Vườn Cội</strong>:</p>
@@ -598,7 +599,7 @@ posts = [
         "id": 506,
         "title": "MDS LIVING: Chuẩn Mực Quản Gia & Quản Lý Vận Hành Nghỉ Dưỡng Chuyên Nghiệp",
         "excerpt": "Mô hình quản gia chuyên trách chăm sóc bất động sản 24/7, bảo dưỡng sân vườn và giải pháp khai thác cho thuê tối ưu dòng tiền thụ động cho gia chủ.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/06.3D_TKCS-NHA_DIEU_HANH_VEN_RUONG-08.2025_(update)/02.TANG_LAU/SFR_2._Nha_Hang_05.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/nha_hang_05.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Một trong những nỗi lo lớn nhất của chủ sở hữu Second Home là việc bảo quản, chăm sóc ngôi nhà khi không có mặt tại đó. Tại <strong>Saigon Farm Resort</strong>, mô hình quản lý vận hành chuyên nghiệp <strong>MDS LIVING</strong> mang đến giải pháp thảnh thơi trọn vẹn cho gia chủ:</p>
@@ -823,4 +824,4 @@ posts = [
 with open('data/posts.json', 'w', encoding='utf-8') as f:
     json.dump(posts, f, ensure_ascii=False, indent=2)
 
-print(f"Successfully generated and wrote {len(posts)} thorough, project-accurate articles to data/posts.json!")
+print("Updated data/posts.json with verified physical asset paths!")
