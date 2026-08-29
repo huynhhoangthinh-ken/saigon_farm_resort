@@ -137,8 +137,22 @@ posts = [
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
-  <img src="assets/posts/xa_xi_ban_sac/hien_viet.jpg" alt="Hiên Việt" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover;">
-  <img src="assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg" alt="Việt Mã Trang" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover;">
+  <div>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Bo_sen.png" alt="Bờ Sen (The Lotus Shore)" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Bờ Sen (The Lotus Shore)</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Giao_tri_viet.png" alt="Giáo Trí Việt (The Maker's House)" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Giáo Trí Việt (The Maker's House)</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Duong_Ve_Nguon.png" alt="Dòng Sử Việt – Về Nguồn" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Dòng Sử Việt – Đường Về Nguồn</p>
+  </div>
+  <div>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/Nha_am_sac_viet.png" alt="Nhà Âm Sắc Việt" style="border-radius: 8px; width: 100%; height: 260px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;">Nhà Âm Sắc Việt (The Sound & Silk House)</p>
+  </div>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -503,7 +517,7 @@ posts = [
         "id": 124,
         "title": "Bờ Sen & Herbal Spa (The Lotus Shore): Nghệ Thuật Dưỡng Sinh & Chăm Sóc Sức Khỏe Thảo Mộc",
         "excerpt": "Liệu pháp phục hồi thân tâm trí kết hợp thảo dược bản địa, hồ ngâm khoáng nóng, hồ sen thơm ngát và không gian thiền tịnh ven hồ.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_14.jpg",
+        "image": "assets/Index_asset/Tien_ich_minh_hoa/Bo_sen.png",
         "date": "29 TH8 2026",
         "content": """
 <p>Lấy cảm hứng từ y học cổ truyền và nghệ thuật dưỡng sinh tự nhiên, <strong>Bờ Sen (The Lotus Shore)</strong> tại <strong>Saigon Farm Resort</strong> mang đến không gian tĩnh lặng tuyệt đối để thanh lọc cơ thể và nuôi dưỡng tâm hồn:</p>
@@ -516,6 +530,10 @@ posts = [
     <li><strong>Massage trị liệu chuyên sâu:</strong> Giúp giải tỏa căng thẳng thần kinh và phục hồi cơ bắp toàn diện.</li>
     <li><strong>Thưởng trà Việt:</strong> Không gian thưởng thức các dòng danh trà cổ thụ Việt Nam trong bầu không khí an yên.</li>
   </ul>
+</div>
+
+<div style="margin: 24px 0; text-align: center;">
+  <img src="assets/Index_asset/Tien_ich_minh_hoa/Bo_sen.png" alt="Bờ Sen (The Lotus Shore)" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -588,7 +606,7 @@ posts = [
         "id": 128,
         "title": "Giáo Trí Việt & Vườn Cội: Thế Giới Tuổi Thơ Học Bằng Đôi Tay Giữa Thiên Nhiên",
         "excerpt": "Không gian giáo trí văn hóa và bãi cỏ thả diều ngút ngàn, nơi trẻ nhỏ tự do chạy nhảy, học làm gốm, nặn tò he, viết thư pháp và gắn kết cội nguồn gia đình.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_19.jpg",
+        "image": "assets/Index_asset/Tien_ich_minh_hoa/Giao_tri_viet.png",
         "date": "29 TH8 2026",
         "content": """
 <p>Tại <strong>Saigon Farm Resort</strong>, trẻ em được tạm rời xa màn hình điện thoại để hòa mình vào thế giới tự nhiên rộng lớn tại <strong>Giáo Trí Việt (The Maker's House) & Vườn Cội (The Roots Garden)</strong>:</p>
@@ -601,6 +619,10 @@ posts = [
     <li><strong>Lớp học văn hóa thủ công:</strong> Trải nghiệm làm gốm, nặn tò he, vẽ tranh dân gian, thắt cào cào lá dừa và tìm hiểu nhạc cụ dân tộc.</li>
     <li><strong>Vườn Cội – Cây Ký Ức:</strong> Nơi mỗi gia đình trồng cây, gắn bảng tên lưu dấu kỷ niệm truyền đời qua các thế hệ.</li>
   </ul>
+</div>
+
+<div style="margin: 24px 0; text-align: center;">
+  <img src="assets/Index_asset/Tien_ich_minh_hoa/Giao_tri_viet.png" alt="Giáo Trí Việt (The Maker's House)" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -681,7 +703,7 @@ posts = [
         "id": 202,
         "title": "Saigon Farm Resort Thiết Lập Chuẩn Sống Eco-Luxury: Bản Giao Hưởng Giữa Thiên Nhiên & Tiện Nghi Thượng Lưu",
         "excerpt": "Định nghĩa lại phong cách nghỉ dưỡng xa xỉ bền vững với mật độ xây dựng thấp, kiến trúc gỗ mộc tinh xảo và hệ sinh thái tiện ích khép kín.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/07.3D_TKCS-SUNRISE_2_VILLA/07.TKCS-NHA_GO_4-MAU_2/01.NGOAI_THAT/SFR_TONG_THE_01.jpg",
+        "image": "assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p><strong>Eco-Luxury</strong> không đơn thuần là sự kết hợp giữa sinh thái và xa xỉ, mà là một triết lý sống tôn trọng tự nhiên nhưng không đánh đổi sự tiện nghi. Tại <strong>Saigon Farm Resort</strong>, chuẩn sống này được hiện thực hóa qua từng chi tiết kiến trúc, cảnh quan và dịch vụ:</p>
@@ -693,6 +715,11 @@ posts = [
     <li><strong>Vật liệu kiến trúc xanh bền vững:</strong> Gỗ tự nhiên, ngói đất nung, đá tự nhiên và giải pháp thông gió đón sáng tự nhiên.</li>
     <li><strong>Tiện nghi vận hành chuẩn 5 sao:</strong> Đội ngũ quản gia MDS Living phục vụ chu đáo, mang đến sự thảnh thơi tuyệt đối.</li>
   </ul>
+</div>
+
+<div style="margin: 24px 0; text-align: center;">
+  <img src="assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg" alt="Toàn cảnh phối cảnh tổng thể Saigon Farm Resort" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <p style="font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;">Phối cảnh tổng thể sinh thái ven hồ 100ha Saigon Farm Resort</p>
 </div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
@@ -709,10 +736,24 @@ posts = [
         "id": 1,
         "title": "Second Home Sinh Thái Ven Hồ 100ha: Xu Hướng Tích Sản & Nghỉ Dưỡng Bền Vững 2026",
         "excerpt": "Phân tích sự dịch chuyển dòng vốn đầu tư tinh hoa vào phân khúc bất động sản nghỉ dưỡng sinh thái ven đô có pháp lý hoàn chỉnh và tiện ích vận hành trọn gói.",
-        "image": "assets/Index_asset/Flycam/DJI_0997_2.JPG",
+        "image": "assets/Index_asset/Phoi_canh_tong_the/SFR_NEW_S02.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Năm 2026 chứng kiến bước ngoặt lớn trong khẩu vị đầu tư của giới tinh hoa. Những sản phẩm căn hộ hay condotel trung tâm dần nhường chỗ cho dòng sản phẩm <strong>Biệt thự vườn sinh thái ven hồ (Eco-Villa Second Home)</strong> với diện tích khuôn viên lớn từ 1.000m² trở lên.</p>
+
+<div class="key-takeaways">
+  <h3>3 Động Lực Khiến Second Home Ven Hồ Bứt Phá</h3>
+  <ul>
+    <li><strong>Sự hoàn thiện của hạ tầng cao tốc:</strong> Tuyến Cao tốc Biên Hòa - Vũng Tàu và Vành đai 3 giúp rút ngắn thời gian di chuyển từ TP.HCM xuống dưới 1 giờ.</li>
+    <li><strong>Nhu cầu chăm sóc sức khỏe thể chất & Tinh thần (Wellness Living):</strong> Xu hướng tìm về thiên nhiên để thanh lọc cơ thể sau những ngày làm việc bận rộn.</li>
+    <li><strong>Tính khan hiếm của quỹ đất tựa hồ tự nhiên:</strong> Những khu đất rộng tựa hồ lớn 100ha liền kề biển ngày càng trở nên vô giá.</li>
+  </ul>
+</div>
+
+<div style="margin: 24px 0; text-align: center;">
+  <img src="assets/Index_asset/Phoi_canh_tong_the/SFR_NEW_S02.jpg" alt="Phối cảnh trên cao Saigon Farm Resort" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <p style="font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;">Phối cảnh toàn cảnh mặt hồ 100ha và phân khu biệt thự Saigon Farm Resort</p>
+</div>
 
 <div class="key-takeaways">
   <h3>3 Động Lực Khiến Second Home Ven Hồ Bứt Phá</h3>
