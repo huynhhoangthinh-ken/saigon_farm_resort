@@ -324,7 +324,7 @@ posts = [
         "id": 120,
         "title": "Bến Thuyền & Trải Nghiệm Thể Thao Mặt Nước Bên Hồ 100ha",
         "excerpt": "Tận hưởng làn gió mát lành và khám phá mặt hồ sinh thái 100ha bằng thuyền du ngoạn, ngắm cảnh thiên nhiên thanh bình.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_0.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_2.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Mặt hồ tự nhiên 100ha tại <strong>Saigon Farm Resort</strong> là báu vật cảnh quan quý giá mà hiếm khu nghỉ dưỡng ven đô nào có được. Tại phân khu bến thuyền, cư dân và du khách được hòa mình vào không gian sông nước bao la:</p>
@@ -689,7 +689,7 @@ posts = [
         "id": 302,
         "title": "Cơ Hội Nghề Nghiệp: Gia Nhập Đội Ngũ Chuyên Viên Tư Vấn Bất Động Sản Nghỉ Dưỡng Triệu Đô",
         "excerpt": "Đại Chúng Properties chào đón những tài năng nhiệt huyết, có tư duy dịch vụ thượng lưu và khao khát khẳng định bản thân trong phân khúc BĐS cao cấp.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_0.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_2.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Bạn đam mê lĩnh vực bất động sản nghỉ dưỡng cao cấp? Bạn muốn làm việc trong môi trường chuyên nghiệp với những khách hàng thượng lưu và thu nhập không giới hạn? Hãy gia nhập đội ngũ <strong>Đại Chúng Properties</strong> ngay hôm nay!</p>
