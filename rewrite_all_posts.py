@@ -245,39 +245,7 @@ posts = [
     },
 
     # -------------------------------------------------------------
-    # 4. BIỆT THỰ VƯỜN THẢO DƯỢC (ID: 106)
-    # -------------------------------------------------------------
-    {
-        "id": 106,
-        "title": "Riverside Eco Villa (Biệt Thự Vườn Thảo Dược): Chốn An Trú Thanh Lọc Thân Tâm Trí",
-        "excerpt": "Không gian sống xanh chuẩn Wellness, bao bọc bởi rạch nước tự nhiên, vườn dược liệu quý và không khí trong lành nguyên bản.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/08._TKSP-CANH_QUAN_VEN_RUONG-20260515T044351Z-3-001/SFR_1.png",
-        "date": "29 TH8 2026",
-        "content": """
-<p><strong>Riverside Eco Villa</strong> là dòng biệt thự sinh thái hướng tới lối sống chữa lành (Wellness Sanctuary). Nằm uốn lượn theo dòng suối rạch sinh thái nội khu, mỗi căn Riverside Eco Villa được quy hoạch như một trang viên thảo dược thu nhỏ, nơi gia chủ tái tạo năng lượng sau chuỗi ngày bận rộn nơi phố thị.</p>
-
-<p>Khuôn viên đất từ <strong>808m² – 1.000m²</strong> được bao phủ bởi các loài thảo mộc quý: sả chanh, hương nhu, bạc hà, hoa sen và các loại cây ăn trái nhiệt đới, tỏa hương thơm dịu nhẹ thanh lọc không khí 24/7.</p>
-
-<div class="key-takeaways">
-  <h3>Điểm Nhấn Sống Xanh Tại Riverside Eco Villa</h3>
-  <ul>
-    <li><strong>Môi trường sinh thái nguyên bản:</strong> Không khói bụi, không tiếng ồn, nhiệt độ luôn thấp hơn trung tâm TP.HCM từ 3-5°C.</li>
-    <li><strong>Vườn thảo dược tại gia:</strong> Cung cấp nguyên liệu tươi sạch cho các liệu trình xông hơi, ngâm chân thảo dược hàng ngày.</li>
-    <li><strong>Kiến trúc mở thân thiện:</strong> Sử dụng vật liệu tự nhiên (gỗ, đá cuội, mây tre đan) hài hòa cùng cảnh quan sông nước.</li>
-    <li><strong>Dịch vụ chăm sóc vườn:</strong> Đội ngũ quản gia MDS Living tưới tiêu, tỉa cành và thu hoạch rau củ định kỳ cho gia chủ.</li>
-  </ul>
-</div>
-
-<div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-  <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
-  <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
-  </a>
-</div>
-"""
-    },
+        # -------------------------------------------------------------
 
     # -------------------------------------------------------------
     # 5. HỆ SINH THÁI TIỆN ÍCH ĐA TẦNG GẦN 3HA (ID: 122, 120, 121, 123, 124, 126, 127, 128)
