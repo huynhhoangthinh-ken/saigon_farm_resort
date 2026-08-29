@@ -4,7 +4,7 @@ import re
 
 posts = [
     # -------------------------------------------------------------
-    # 1. BÀI VIẾT TÂM ĐIỂM (ID: 203)
+    # 1. BÀI VIẾT TÂM ĐIỂM BẢN SẮC VIỆT (ID: 203, 204, 205)
     # -------------------------------------------------------------
     {
         "id": 203,
@@ -35,13 +35,17 @@ posts = [
 <p>Bao quanh khu nghỉ dưỡng là hồ nước tự nhiên 100ha, đồng lúa và những vườn dừa. Ở trung tâm, gần <strong>3ha (24.488m²)</strong> được dành cho hệ tiện ích và trải nghiệm với nhà hàng, sân khấu ngoài trời, câu lạc bộ cưỡi ngựa, khu nông nghiệp hữu cơ, hồ sen, hồ bơi, spa, bến thuyền cùng các hoạt động thư giãn.</p>
 
 <div class="key-takeaways">
-  <h3>Hệ Thống Không Gian Văn Hóa & Trải Nghiệm MDS Living</h3>
+  <h3>Hệ Thống 9 Không Gian Bản Sắc Việt MDS Living</h3>
   <ul>
-    <li><strong>Hiên Việt & Bờ Sen:</strong> Không gian thưởng trà, ngắm cảnh và kết nối thảnh thơi giữa thiên nhiên.</li>
-    <li><strong>Giáo Trí Việt & Vườn Cội:</strong> Trẻ nhỏ tự tay gieo hạt, làm gốm, hội họa, thư pháp, tìm hiểu nhạc cụ dân tộc và đờn ca tài tử.</li>
-    <li><strong>Việt Mã Trang (Horse Riding):</strong> Câu lạc bộ cưỡi ngựa quý tộc giữa thiên nhiên khoáng đạt.</li>
-    <li><strong>Nếp Nhà Việt & Dòng Sử Việt:</strong> Nơi lưu giữ giá trị gia đình qua các mùa Tết, mùa diều, mùa sen, Trung Thu và mùa gặt.</li>
-    <li><strong>Nhà Âm Sắc Việt & Quảng Trường Hội Việt:</strong> Không gian giao lưu văn hóa nghệ thuật tinh hoa.</li>
+    <li><strong>Hiên Việt (The Veranda):</strong> Phòng khách chung của cả khu: sảnh đón, phòng trà, thư phòng, phòng khách doanh nhân, câu lạc bộ trẻ em.</li>
+    <li><strong>Giáo Trí Việt (The Maker's House):</strong> Nơi trẻ học bằng đôi tay: gốm, vẽ, thư pháp, thắt lá dừa, nặn tò he.</li>
+    <li><strong>Bờ Sen (The Lotus Shore):</strong> Hồ sen ngát hương, hồ bơi, spa, tắm khoáng thảo mộc, thưởng trà Việt và thiền định.</li>
+    <li><strong>Việt Mã Trang (The Equestrian Estate):</strong> Nơi gặp gỡ giữa người, ngựa và thiên nhiên: cưỡi ngựa, lớp ngựa con, chăm sóc ngựa, trình diễn cuối tuần.</li>
+    <li><strong>Nếp Nhà Việt (The Vietnamese Table):</strong> Nhà hàng ẩm thực Farm-to-Table từ vườn đến bàn ăn, tiệc giữa đồng lúa, tiệc bên hồ sen.</li>
+    <li><strong>Dòng Sử Việt – Về Nguồn (The River of Time):</strong> Bốn nghìn năm văn hiến kể bằng cảnh quan: đá, đồng, phù điêu, ánh sáng và mặt nước.</li>
+    <li><strong>Quảng Trường Hội Việt (The Village Green):</strong> Không gian lễ hội, sân khấu nghệ thuật, chợ phiên nông sản, hòa nhạc và chiếu phim ngoài trời.</li>
+    <li><strong>Vườn Cội (The Roots Garden):</strong> Nơi trồng cây gia đình, gắn bảng tên lưu giữ ký ức truyền đời cho con cháu.</li>
+    <li><strong>Nhà Âm Sắc Việt (The Sound & Silk House):</strong> Gallery trưng bày trang phục và nhạc cụ 54 dân tộc, sân khấu âm nhạc dân tộc nhỏ.</li>
   </ul>
 </div>
 
@@ -54,9 +58,127 @@ posts = [
 <p>Một gia đình hiện đại có điều kiện sẽ sống như thế nào nếu họ muốn giữ lại những điều đẹp của đời sống Việt trước đây? Họ vẫn cần một ngôi nhà được thiết kế tốt, hồ bơi, spa, nhà hàng, dịch vụ, an ninh, sự riêng tư và những tiêu chuẩn vận hành hiện đại. Nhưng trong một buổi chiều tiếp bạn bè hay đối tác, không gian ấy hoàn toàn mang một tinh thần khác: <em>một bàn tiệc Việt được chuẩn bị tinh tế, âm nhạc truyền thống vang lên vừa đủ, phía ngoài là hồ sen, khu vườn hay cánh đồng đang vào mùa.</em></p>
 <p>Đó là lúc bản sắc trở thành một phần của hospitality và đời sống thực tế. Sự tinh tế nằm ở chỗ những trải nghiệm văn hóa phải đủ tự nhiên để người Việt cảm thấy gần gũi, đồng thời đủ chỉn chu để một thế hệ đã quen với tiêu chuẩn quốc tế vẫn cảm thấy tự hào và thoải mái.</p>
 
-<h2>Thế Giới Đến Việt Nam Để Nhìn Thấy Việt Nam</h2>
-<p>Nhật Bản có rất nhiều điều đáng để học. Ý, Hàn Quốc và những nền văn hóa phát triển khác cũng vậy. Nhưng điều khiến chúng ta yêu thích một khu vườn Nhật chính là tinh thần Nhật Bản trong đó. Người ta đi nửa vòng trái đất đến Tuscany bởi những ngôi nhà đá, vườn nho, ẩm thực và cảnh quan ấy thuộc về nước Ý. Bali được nhớ bởi Bali.</p>
-<p><strong>Saigon Farm Resort</strong> được phát triển từ chính những chất liệu ấy, trong một chuẩn sống dành cho gia đình Việt hôm nay. Chúng ta có thể tiếp nhận những gì tốt nhất của thế giới, đồng thời đủ tự tin để tạo ra một nơi sống mang câu chuyện, cảnh quan và ký ức của chính mình.</p>
+<div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
+  <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+  </a>
+</div>
+"""
+    },
+    {
+        "id": 204,
+        "title": "Hệ Thống 9 Không Gian Bản Sắc Việt Đương Đại Tại Saigon Farm Resort: Từ Hiên Việt Đến Dòng Sử Việt",
+        "excerpt": "Hành trình trải nghiệm kiến trúc và văn hóa độc bản: Hiên Việt, Giáo Trí Việt, Bờ Sen, Việt Mã Trang, Nếp Nhà Việt, Dòng Sử Việt, Quảng Trường Hội Việt, Vườn Cội và Nhà Âm Sắc Việt.",
+        "image": "assets/posts/xa_xi_ban_sac/hien_viet.jpg",
+        "date": "29 TH8 2026",
+        "content": """
+<p>Tại <strong>Saigon Farm Resort</strong>, khái niệm <em>Điền Trang Nghỉ Dưỡng Bản Sắc Việt Đương Đại</em> không chỉ nằm ở lớp vỏ kiến trúc mái ngói hay cột gỗ, mà được hiện thực hóa thành một hệ sinh thái trải nghiệm sống trọn vẹn gồm <strong>9 Không Gian Văn Hóa Đặc Quyền</strong> do <strong>MDS Living</strong> phát triển và vận hành:</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.92rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1);">
+  <thead>
+    <tr style="background: rgba(201,169,110,0.15); border-bottom: 2px solid #c9a96e; text-align: left;">
+      <th style="padding: 12px 14px; color: #c9a96e; font-weight: 700;">ĐIỂM ĐẾN</th>
+      <th style="padding: 12px 14px; color: #c9a96e; font-weight: 700;">NỘI DUNG TRẢI NGHIỆM</th>
+      <th style="padding: 12px 14px; color: #c9a96e; font-weight: 700;">TÊN QUỐC TẾ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">HIÊN VIỆT</td>
+      <td style="padding: 12px 14px;">Phòng khách chung của cả khu: sảnh đón, phòng trà, thư phòng, phòng khách doanh nhân, câu lạc bộ trẻ em.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Veranda</td>
+    </tr>
+    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">GIÁO TRÍ VIỆT</td>
+      <td style="padding: 12px 14px;">Nơi trẻ học bằng đôi tay: gốm, vẽ, thư pháp, thắt lá dừa, nặn tò he truyền thống.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Maker's House</td>
+    </tr>
+    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">BỜ SEN</td>
+      <td style="padding: 12px 14px;">Hồ sen thơm mát, hồ bơi sinh thái, spa, ngâm tắm thảo mộc bản địa, thưởng trà Việt và thiền tịnh.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Lotus Shore</td>
+    </tr>
+    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">VIỆT MÃ TRANG</td>
+      <td style="padding: 12px 14px;">Nơi gặp gỡ giữa người, ngựa và thiên nhiên: cưỡi ngựa quý tộc, lớp ngựa con, chăm sóc ngựa, trình diễn cuối tuần.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Equestrian Estate</td>
+    </tr>
+    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">NẾP NHÀ VIỆT</td>
+      <td style="padding: 12px 14px;">Nhà hàng ẩm thực Farm-to-Table từ vườn đến bàn ăn, bàn ăn cùng bếp trưởng, tiệc giữa đồng lúa, tiệc bên hồ sen.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Vietnamese Table</td>
+    </tr>
+    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">DÒNG SỬ VIỆT – VỀ NGUỒN</td>
+      <td style="padding: 12px 14px;">Bốn nghìn năm lịch sử kể bằng cảnh quan: đá cuội, đồng, phù điêu, nghệ thuật ánh sáng và mặt nước.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The River of Time</td>
+    </tr>
+    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">QUẢNG TRƯỜNG HỘI VIỆT</td>
+      <td style="padding: 12px 14px;">Lễ hội mùa vụ, sân khấu ngoài trời, chợ phiên quê, đêm nhạc hòa tấu acoustic và rạp chiếu phim dưới trời sao.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Village Green</td>
+    </tr>
+    <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">VƯỜN CỘI</td>
+      <td style="padding: 12px 14px;">Vườn cây gia đình, gắn bảng tên lưu dấu kỷ niệm và ký ức truyền đời cho các thế hệ con cháu.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Roots Garden</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 14px; font-weight: 700; color: #fff;">NHÀ ÂM SẮC VIỆT</td>
+      <td style="padding: 12px 14px;">Trưng bày trang phục và nhạc cụ 54 dân tộc, gallery sống, sân khấu biểu diễn âm nhạc dân tộc đương đại.</td>
+      <td style="padding: 12px 14px; font-style: italic; color: #c9a96e;">The Sound & Silk House</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 30px 0;">
+  <img src="assets/posts/xa_xi_ban_sac/hien_viet.jpg" alt="Hiên Việt" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover;">
+  <img src="assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg" alt="Việt Mã Trang" style="border-radius: 8px; width: 100%; height: 280px; object-fit: cover;">
+</div>
+
+<div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
+  <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+  </a>
+</div>
+"""
+    },
+    {
+        "id": 205,
+        "title": "Chuỗi Hoạt Động Lễ Hội Bản Sắc Việt: Khi Điền Trang Là Nơi Trở Về Của Ký Ức & Gắn Kết Gia Đình",
+        "excerpt": "Hệ thống hoạt động văn hóa định kỳ hàng tuần, hàng tháng và các lễ hội mùa vụ truyền thống: Trung Thu, Tết Cổ Truyền, Mùa Gặt và Đêm Nhạc Ánh Trăng ven hồ 100ha.",
+        "image": "assets/posts/xa_xi_ban_sac/am_thuc_viet.jpg",
+        "date": "29 TH8 2026",
+        "content": """
+<p>Khác biệt với những khu nghỉ dưỡng thông thường chỉ có phòng ốc và dịch vụ lưu trú tĩnh, <strong>Saigon Farm Resort</strong> được thổi hồn bởi <strong>nhịp sống lễ hội và các hoạt động văn hóa sống động</strong> diễn ra quanh năm. Đây là nơi mọi thế hệ ông bà, cha mẹ và con cháu cùng tìm lại niềm vui thuần khiết và ký ức sum vầy:</p>
+
+<div class="key-takeaways">
+  <h3>Lịch Trình Hoạt Động & Lễ Hội Văn Hóa Bản Sắc Việt</h3>
+  <ul>
+    <li><strong>Hoạt động Hàng Tuần (Weekend Rituals):</strong>
+      <br>• Trình diễn nghệ thuật cưỡi ngựa tại <em>Việt Mã Trang</em> và lớp học cưỡi ngựa cho trẻ nhỏ.
+      <br>• Lớp học thủ công mỹ nghệ tại <em>Giáo Trí Việt</em>: nặn tò he, làm gốm Bát Tràng, viết thư pháp, thắt cào cào lá dừa.
+      <br>• Thưởng trà chiều tại <em>Hiên Việt</em>, tiệc BBQ ngoài trời và rạp chiếu phim gia đình dưới trời sao.
+    </li>
+    <li><strong>Sự Kiện Hàng Tháng (Monthly Gatherings):</strong>
+      <br>• Đêm nhạc Acoustic & Hòa tấu nhạc cụ dân tộc tại <em>Quảng Trường Hội Việt</em>.
+      <br>• <em>Chợ Phiên Nông Sản Xanh</em>: Nơi cư dân giao lưu, thưởng thức bánh quê và nông sản sạch thu hái từ vườn Organic Farm.
+      <br>• <em>Đêm Trăng Rằm Hồ Sen</em>: Thả hoa đăng cầu bình an trên mặt hồ tự nhiên 100ha.
+    </li>
+    <li><strong>Đại Lễ Hội Hàng Năm & Mùa Vụ (Annual Heritage Festivals):</strong>
+      <br>• <strong>Lễ Hội Mùa Gặt & Mùa Lúa Chín:</strong> Cả gia đình cùng trải nghiệm gặt lúa, đập lúa, nướng cá lóc đồng và thưởng thức xôi nếp mới.
+      <br>• <strong>Tết Trung Thu Đoàn Viên:</strong> Lễ hội rước đèn ông sao, múa lân sư rồng và phá cỗ trông trăng bên bờ hồ.
+      <br>• <strong>Tết Cổ Truyền Dân Tộc:</strong> Không gian gói bánh chưng bánh tét bên bếp lửa hồng, xin chữ đầu xuân, chợ Tết xưa và trồng cây lưu niệm tại <em>Vườn Cội</em>.
+      <br>• <strong>Hội Thả Diều Mùa Hè:</strong> Hàng trăm cánh diều rực rỡ đón gió hồ lộng lẫy trên bãi cỏ ngút ngàn.
+    </li>
+  </ul>
+</div>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
@@ -70,7 +192,7 @@ posts = [
     },
 
     # -------------------------------------------------------------
-    # 2. BỘ SƯU TẬP BIỆT THỰ SUNSET (ID: 101, 102)
+    # 2. BỘ SƯU TẬP 4 MẪU BIỆT THỰ VƯỜN (ID: 101, 102, 103, 104)
     # -------------------------------------------------------------
     {
         "id": 101,
@@ -103,7 +225,7 @@ posts = [
 </div>
 
 <h2>Bản Vẽ Mặt Bằng & Giải Pháp Bố Trí Công Năng</h2>
-<p>Toàn bộ 3 phòng ngủ được bố trí riêng tư, đều có cửa sổ kính lớn mở thẳng ra khu vườn thảo dược riêng. Phòng khách và bếp được thiết kế liên thông tạo cảm giác thoáng đãng, là nơi sum họp lý tưởng của cả gia đình trong mỗi kỳ nghỉ dưỡng cuối tuần.</p>
+<p>Toàn bộ 3 phòng ngủ được bố trí riêng tư, đều có cửa sổ kính lớn mở thẳng ra khu vườn riêng. Phòng khách và bếp được thiết kế liên thông tạo cảm giác thoáng đãng, là nơi sum họp lý tưởng của cả gia đình trong mỗi kỳ nghỉ dưỡng cuối tuần.</p>
 
 <div style="margin: 24px 0; text-align: center;">
   <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_01a.MB_TRET.jpg" alt="Mặt bằng công năng tầng trệt Sunset 1 Villa" style="width: 100%; max-width: 850px; border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
@@ -160,10 +282,6 @@ posts = [
 </div>
 """
     },
-
-    # -------------------------------------------------------------
-    # 3. BỘ SƯU TẬP BIỆT THỰ SUNRISE (ID: 103, 104)
-    # -------------------------------------------------------------
     {
         "id": 103,
         "title": "Sunrise 1 Villa (Mẫu 3PN Đơn Lập Vườn Sinh Thái): Đón Trọn Ánh Bình Minh Tinh Khôi",
@@ -245,15 +363,12 @@ posts = [
     },
 
     # -------------------------------------------------------------
-        # -------------------------------------------------------------
-
-    # -------------------------------------------------------------
-    # 5. HỆ SINH THÁI TIỆN ÍCH ĐA TẦNG GẦN 3HA (ID: 122, 120, 121, 123, 124, 126, 127, 128)
+    # 3. HỆ SINH THÁI TIỆN ÍCH ĐA TẦNG GẦN 3HA (ID: 122, 120, 121, 123, 124, 126, 127, 128)
     # -------------------------------------------------------------
     {
         "id": 122,
         "title": "Hệ Sinh Thái Tiện Ích Đa Tầng Gần 3ha: Clubhouse, Bến Thuyền, Organic Farm & Herbal Spa",
-        "excerpt": "Dành trọn gần 3ha (24.488m²) cho cảnh quan và hệ tiện ích đặc quyền: Nông trại Organic Farm-to-Table, CLB cưỡi ngựa Horse Riding, sân thể thao Pickleball, Spa thảo dược và Bến thuyền ven hồ 100ha.",
+        "excerpt": "Dành trọn gần 3ha (24.488m²) cho cảnh quan và hệ tiện ích đặc quyền: Nông trại Organic Farm-to-Table, CLB cưỡi ngựa Horse Riding, sân thể thao Pickleball, Spa thảo dược và Bến thuyền chèo SUP & Kayak hồ 100ha.",
         "image": "assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png",
         "date": "29 TH8 2026",
         "content": """
@@ -263,10 +378,10 @@ posts = [
   <h3>8 Phân Khu Tiện Ích Đặc Quyền Đẳng Cấp</h3>
   <ul>
     <li><strong>1. Clubhouse & Lounge Ven Hồ:</strong> Nhà hàng Fine Dining ẩm thực đồng quê cao cấp, cafe ngắm hoàng hôn và trung tâm tiếp đón thượng khách.</li>
-    <li><strong>2. Bến Thuyền & Du Ngoạn Mặt Nước:</strong> Du ngoạn ngắm cảnh mặt hồ tự nhiên 100ha khoáng đạt.</li>
+    <li><strong>2. Bến Thuyền, Chèo SUP & Kayak:</strong> Trải nghiệm thể thao mặt nước, chèo SUP đón bình minh và du ngoạn ngắm cảnh mặt hồ tự nhiên 100ha khoáng đạt.</li>
     <li><strong>3. Nông Trại Hữu Cơ Organic Farm:</strong> Trải nghiệm làm vườn chuẩn Farm-to-Table, cung cấp rau củ sạch tươi ngon mỗi ngày.</li>
-    <li><strong>4. Việt Mã Trang (Horse Riding Club):</strong> Câu lạc bộ cưỡi ngựa quý tộc giữa thảo nguyên xanh.</li>
-    <li><strong>5. Herbal Spa & Zen Zone:</strong> Khu phục hồi sức khỏe bằng liệu pháp thảo dược tự nhiên, hồ khoáng và yoga ven hồ.</li>
+    <li><strong>4. Việt Mã Trang (The Equestrian Estate):</strong> Câu lạc bộ cưỡi ngựa quý tộc giữa thảo nguyên xanh.</li>
+    <li><strong>5. Herbal Spa & Bờ Sen (The Lotus Shore):</strong> Khu phục hồi sức khỏe bằng liệu pháp thảo dược tự nhiên, hồ khoáng và yoga ven hồ.</li>
     <li><strong>6. Tổ Hợp Thể Thao Pickleball:</strong> Cụm sân Pickleball tiêu chuẩn quốc tế, Gym ngoài trời và đường chạy bộ ven hồ 3.2km.</li>
     <li><strong>7. Khu Glamping & BBQ Bên Hồ:</strong> Không gian cắm trại cao cấp và tiệc nướng dã ngoại ấm cúng dưới trời sao.</li>
     <li><strong>8. Khu Giáo Trí Vườn Cội & Thả Diều:</strong> Không gian trẻ thơ tự do chạy nhảy, thả diều, học làm gốm và tìm hiểu văn hóa dân gian.</li>
@@ -290,19 +405,20 @@ posts = [
     },
     {
         "id": 120,
-        "title": "Bến Thuyền & Trải Nghiệm Thể Thao Mặt Nước Bên Hồ 100ha",
-        "excerpt": "Tận hưởng làn gió mát lành và khám phá mặt hồ sinh thái 100ha bằng thuyền du ngoạn, ngắm cảnh thiên nhiên thanh bình.",
+        "title": "Bến Thuyền, Chèo SUP & Kayak Thể Thao Mặt Nước Bên Hồ 100ha",
+        "excerpt": "Tận hưởng làn gió mát lành và khám phá mặt hồ sinh thái 100ha với trải nghiệm chèo SUP, Kayak, thuyền du ngoạn và câu cá thư giãn.",
         "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_2.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Mặt hồ tự nhiên 100ha tại <strong>Saigon Farm Resort</strong> là báu vật cảnh quan quý giá mà hiếm khu nghỉ dưỡng ven đô nào có được. Tại phân khu bến thuyền, cư dân và du khách được hòa mình vào không gian sông nước bao la:</p>
 
 <div class="key-takeaways">
-  <h3>Trải Nghiệm Độc Quyền Tại Bến Thuyền</h3>
+  <h3>Trải Nghiệm Thể Thao Mặt Nước Độc Quyền</h3>
   <ul>
-    <li><strong>Du ngoạn ngắm hoàng hôn:</strong> Những chuyến thuyền nhẹ lướt trên mặt hồ phẳng lặng vào thời khắc hoàng hôn buông xuống rực rỡ.</li>
-    <li><strong>Cầu tàu vọng cảnh:</strong> Nơi lý tưởng để chụp những bức hình kỷ niệm sang trọng và đón gió mát lành.</li>
-    <li><strong>Hệ sinh thái mặt nước trong lành:</strong> Hồ nước ngọt tự nhiên điều hòa vi khí hậu, tạo nên không gian tĩnh tại tuyệt đối.</li>
+    <li><strong>Chèo SUP & Kayak:</strong> Rèn luyện thể lực và lướt nhẹ trên mặt nước phẳng lặng trong ánh bình minh tinh khôi.</li>
+    <li><strong>Du ngoạn ngắm hoàng hôn:</strong> Những chuyến thuyền nhẹ đưa gia đình dạo quanh mặt hồ khi ráng chiều buông xuống rực rỡ.</li>
+    <li><strong>Bến câu cá giải trí & Cầu tàu vọng cảnh:</strong> Nơi lý tưởng để thư giãn tĩnh tâm và lưu giữ những khoảnh khắc đẹp bên gia đình.</li>
+    <li><strong>Hệ sinh thái mặt nước trong lành:</strong> Hồ nước ngọt tự nhiên điều hòa vi khí hậu mát mẻ quanh năm.</li>
   </ul>
 </div>
 
@@ -332,9 +448,9 @@ posts = [
 <div class="key-takeaways">
   <h3>Giá Trị Nông Trại Hữu Cơ Mang Lại</h3>
   <ul>
-    <li><strong>Rau củ quả tươi sạch tại bàn:</strong> Cung cấp thực phẩm xanh, tươi ngon mỗi ngày cho bữa ăn gia đình và nhà hàng Clubhouse.</li>
+    <li><strong>Rau củ quả tươi sạch tại bàn:</strong> Cung cấp thực phẩm xanh, tươi ngon mỗi ngày cho bữa ăn gia đình và nhà hàng Nếp Nhà Việt.</li>
     <li><strong>Trải nghiệm làm nông dân nhí:</strong> Con trẻ được trực tiếp xới đất, gieo hạt, tưới cây, học cách yêu thương và trân trọng thiên nhiên.</li>
-    <li><strong>Vườn dược liệu chăm sóc sức khỏe:</strong> Trồng các loại thảo mộc dùng trong ẩm thực và trị liệu spa.</li>
+    <li><strong>Vườn dược liệu chăm sóc sức khỏe:</strong> Trồng các loại thảo mộc dùng trong ẩm thực và trị liệu Bờ Sen Spa.</li>
   </ul>
 </div>
 
@@ -350,19 +466,20 @@ posts = [
     },
     {
         "id": 123,
-        "title": "Horse Riding Club: Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Ven Biển",
+        "title": "Việt Mã Trang (The Equestrian Estate): Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Giữa Thảo Nguyên",
         "excerpt": "Trải nghiệm môn thể thao quý tộc với những chú ngựa thuần chủng được chăm sóc bài bản, đường chạy ven hồ lộng gió.",
         "image": "assets/posts/xa_xi_ban_sac/viet_ma_trang.jpg",
         "date": "29 TH8 2026",
         "content": """
-<p><strong>Việt Mã Trang (Horse Riding Club)</strong> tại <strong>Saigon Farm Resort</strong> là một trong những tiện ích độc bản hiếm có tại khu vực phía Nam. Được xây dựng trên thảm cỏ xanh mướt ven hồ, câu lạc bộ mang lại phong cách sống thượng lưu và phóng khoáng:</p>
+<p><strong>Việt Mã Trang (The Equestrian Estate)</strong> tại <strong>Saigon Farm Resort</strong> là một trong những tiện ích độc bản hiếm có tại khu vực phía Nam. Được xây dựng trên thảm cỏ xanh mướt ven hồ, câu lạc bộ mang lại phong cách sống thượng lưu và phóng khoáng:</p>
 
 <div class="key-takeaways">
-  <h3>Đặc Quyền Câu Lạc Bộ Cưỡi Ngựa</h3>
+  <h3>Đặc Quyền Câu Lạc Bộ Cưỡi Ngựa Việt Mã Trang</h3>
   <ul>
     <li><strong>Ngựa thuần chủng tuyển chọn:</strong> Ngựa được thuần dưỡng chuyên nghiệp, an toàn tuyệt đối cho cả người lớn và trẻ nhỏ.</li>
-    <li><strong>Huấn luyện viên chuyên nghiệp:</strong> Hướng dẫn kỹ thuật bài bản từ cơ bản đến nâng cao.</li>
+    <li><strong>Lớp học cưỡi ngựa & Chăm sóc ngựa:</strong> Huấn luyện viên hướng dẫn kỹ thuật bài bản từ cơ bản đến nâng cao.</li>
     <li><strong>Đường chạy cảnh quan ven hồ:</strong> Cung đường cưỡi ngựa dạo quanh rặng dừa và mặt nước hồ 100ha lãng mạn.</li>
+    <li><strong>Trình diễn cuối tuần:</strong> Các buổi biểu diễn kỹ năng cưỡi ngựa đặc sắc phục vụ cư dân và du khách.</li>
   </ul>
 </div>
 
@@ -382,19 +499,20 @@ posts = [
     },
     {
         "id": 124,
-        "title": "Herbal Spa & Zen Zone: Nghệ Thuật Chăm Sóc Sức Khỏe Bằng Thảo Dược Tự Nhiên",
-        "excerpt": "Liệu pháp phục hồi thân tâm trí kết hợp thảo dược bản địa, hồ ngâm khoáng nóng và không gian thiền định hướng hồ thanh tịnh.",
+        "title": "Bờ Sen & Herbal Spa (The Lotus Shore): Nghệ Thuật Dưỡng Sinh & Chăm Sóc Sức Khỏe Thảo Mộc",
+        "excerpt": "Liệu pháp phục hồi thân tâm trí kết hợp thảo dược bản địa, hồ ngâm khoáng nóng, hồ sen thơm ngát và không gian thiền tịnh ven hồ.",
         "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_14.jpg",
         "date": "29 TH8 2026",
         "content": """
-<p>Lấy cảm hứng từ y học cổ truyền và nghệ thuật dưỡng sinh tự nhiên, <strong>Herbal Spa & Zen Zone</strong> tại <strong>Saigon Farm Resort</strong> mang đến không gian tĩnh lặng tuyệt đối để thanh lọc cơ thể và nuôi dưỡng tâm hồn:</p>
+<p>Lấy cảm hứng từ y học cổ truyền và nghệ thuật dưỡng sinh tự nhiên, <strong>Bờ Sen (The Lotus Shore)</strong> tại <strong>Saigon Farm Resort</strong> mang đến không gian tĩnh lặng tuyệt đối để thanh lọc cơ thể và nuôi dưỡng tâm hồn:</p>
 
 <div class="key-takeaways">
-  <h3>Các Liệu Trình Trị Liệu Đặc Quyền</h3>
+  <h3>Các Liệu Trình Trị Liệu & Dưỡng Sinh Đặc Quyền</h3>
   <ul>
-    <li><strong>Xông hơi & Ngâm khoáng thảo dược:</strong> Sử dụng 100% dược liệu tươi thu hái từ vườn organic của resort.</li>
-    <li><strong>Sàn Yoga & Thiền định ven hồ:</strong> Đón năng lượng bình minh và hoàng hôn giữa tiếng sóng nước vỗ về.</li>
+    <li><strong>Xông hơi & Ngâm khoáng thảo mộc:</strong> Sử dụng 100% dược liệu tươi thu hái từ vườn organic của resort.</li>
+    <li><strong>Sàn Yoga & Thiền định ven hồ sen:</strong> Đón năng lượng bình minh và hoàng hôn giữa hương sen thanh khiết và tiếng sóng nước vỗ về.</li>
     <li><strong>Massage trị liệu chuyên sâu:</strong> Giúp giải tỏa căng thẳng thần kinh và phục hồi cơ bắp toàn diện.</li>
+    <li><strong>Thưởng trà Việt:</strong> Không gian thưởng thức các dòng danh trà cổ thụ Việt Nam trong bầu không khí an yên.</li>
   </ul>
 </div>
 
@@ -466,19 +584,20 @@ posts = [
     },
     {
         "id": 128,
-        "title": "Bãi Cỏ Thả Diều & Thế Giới Vui Chơi Trẻ Thơ Giữa Thiên Nhiên",
-        "excerpt": "Mang đến cho con trẻ một tuổi thơ trọn vẹn với thảm cỏ thả diều bao la, khu vui chơi gỗ mộc và lớp học giáo trí văn hóa Vườn Cội.",
+        "title": "Giáo Trí Việt & Vườn Cội: Thế Giới Tuổi Thơ Học Bằng Đôi Tay Giữa Thiên Nhiên",
+        "excerpt": "Không gian giáo trí văn hóa và bãi cỏ thả diều ngút ngàn, nơi trẻ nhỏ tự do chạy nhảy, học làm gốm, nặn tò he, viết thư pháp và gắn kết cội nguồn gia đình.",
         "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_19.jpg",
         "date": "29 TH8 2026",
         "content": """
-<p>Tại <strong>Saigon Farm Resort</strong>, trẻ em được tạm rời xa màn hình điện thoại để hòa mình vào thế giới tự nhiên rộng lớn tại <strong>Bãi cỏ thả diều & Khu giáo trí Vườn Cội</strong>:</p>
+<p>Tại <strong>Saigon Farm Resort</strong>, trẻ em được tạm rời xa màn hình điện thoại để hòa mình vào thế giới tự nhiên rộng lớn tại <strong>Giáo Trí Việt (The Maker's House) & Vườn Cội (The Roots Garden)</strong>:</p>
 
 <div class="key-takeaways">
   <h3>Hoạt Động Giáo Trí & Vui Chơi Tuổi Thơ</h3>
   <ul>
     <li><strong>Thảm cỏ thả diều rộng hàng ngàn m²:</strong> Đón gió hồ lồng lộng để những cánh diều sặc sỡ bay cao vút.</li>
     <li><strong>Khu vui chơi mộc:</strong> Cầu trượt gỗ, xích đu, nhà trên cây hoàn toàn an toàn và thân thiện.</li>
-    <li><strong>Lớp học văn hóa dân gian:</strong> Trải nghiệm làm gốm, nặn tò he, vẽ tranh và tìm hiểu nhạc cụ dân tộc.</li>
+    <li><strong>Lớp học văn hóa thủ công:</strong> Trải nghiệm làm gốm, nặn tò he, vẽ tranh dân gian, thắt cào cào lá dừa và tìm hiểu nhạc cụ dân tộc.</li>
+    <li><strong>Vườn Cội – Cây Ký Ức:</strong> Nơi mỗi gia đình trồng cây, gắn bảng tên lưu dấu kỷ niệm truyền đời qua các thế hệ.</li>
   </ul>
 </div>
 
@@ -494,7 +613,7 @@ posts = [
     },
 
     # -------------------------------------------------------------
-    # 6. VỊ TRÍ, QUẢN LÝ VẬN HÀNH & XU HƯỚNG ĐẦU TƯ (ID: 125, 506, 202, 1)
+    # 4. VỊ TRÍ, QUẢN LÝ VẬN HÀNH & XU HƯỚNG ĐẦU TƯ (ID: 125, 506, 202, 1)
     # -------------------------------------------------------------
     {
         "id": 125,
@@ -532,7 +651,7 @@ posts = [
         "id": 506,
         "title": "MDS LIVING: Chuẩn Mực Quản Gia & Quản Lý Vận Hành Nghỉ Dưỡng Chuyên Nghiệp",
         "excerpt": "Mô hình quản gia chuyên trách chăm sóc bất động sản 24/7, bảo dưỡng sân vườn và giải pháp khai thác cho thuê tối ưu dòng tiền thụ động cho gia chủ.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/nha_hang_05.jpg",
+        "image": "assets/Index_asset/mds_living_01.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Một trong những nỗi lo lớn nhất của chủ sở hữu Second Home là việc bảo quản, chăm sóc ngôi nhà khi không có mặt tại đó. Tại <strong>Saigon Farm Resort</strong>, mô hình quản lý vận hành chuyên nghiệp <strong>MDS LIVING</strong> mang đến giải pháp thảnh thơi trọn vẹn cho gia chủ:</p>
@@ -619,7 +738,7 @@ posts = [
     },
 
     # -------------------------------------------------------------
-    # 7. DOANH NGHIỆP, PHÁP LÝ & LIÊN HỆ TRẢI NGHIỆM (ID: 301, 302, 303, 304)
+    # 5. DOANH NGHIỆP, PHÁP LÝ & LIÊN HỆ TRẢI NGHIỆM (ID: 301, 302, 303, 304)
     # -------------------------------------------------------------
     {
         "id": 301,
@@ -657,7 +776,7 @@ posts = [
         "id": 302,
         "title": "Cơ Hội Nghề Nghiệp: Gia Nhập Đội Ngũ Chuyên Viên Tư Vấn Bất Động Sản Nghỉ Dưỡng Triệu Đô",
         "excerpt": "Đại Chúng Properties chào đón những tài năng nhiệt huyết, có tư duy dịch vụ thượng lưu và khao khát khẳng định bản thân trong phân khúc BĐS cao cấp.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_2.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_1.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p>Bạn đam mê lĩnh vực bất động sản nghỉ dưỡng cao cấp? Bạn muốn làm việc trong môi trường chuyên nghiệp với những khách hàng thượng lưu và thu nhập không giới hạn? Hãy gia nhập đội ngũ <strong>Đại Chúng Properties</strong> ngay hôm nay!</p>
@@ -733,6 +852,7 @@ posts = [
     <li>Xe Limousine cao cấp đưa đón gia đình tận nơi (TP.HCM ↔ Saigon Farm Resort).</li>
     <li>Tham quan thực tế toàn khu, khuôn viên đất và nhà mẫu biệt thự Sunset & Sunrise.</li>
     <li>Thưởng thức bữa trưa ấm cúng với ẩm thực tươi ngon tại không gian nhà hàng ven hồ.</li>
+    <li>Trải nghiệm chèo SUP, dạo bến thuyền hồ 100ha và tham quan Việt Mã Trang.</li>
     <li>Giới thiệu chi tiết quy hoạch, pháp lý sổ hồng và tư vấn chính sách ưu đãi trực tiếp từ Đại Chúng Properties.</li>
   </ul>
 </div>
@@ -757,4 +877,4 @@ posts = [
 with open('data/posts.json', 'w', encoding='utf-8') as f:
     json.dump(posts, f, ensure_ascii=False, indent=2)
 
-print("Updated data/posts.json with verified physical asset paths!")
+print(f"Generated {len(posts)} posts with full Vietnamese heritage & activities ecosystem!")
