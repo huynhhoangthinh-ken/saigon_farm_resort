@@ -245,43 +245,8 @@ posts = [
     },
 
     # -------------------------------------------------------------
-    # 4. CÁC DÒNG BIỆT THỰ ĐẶC BIỆT (ID: 105, 106)
+    # 4. BIỆT THỰ VƯỜN THẢO DƯỢC (ID: 106)
     # -------------------------------------------------------------
-    {
-        "id": 105,
-        "title": "Lakeview Grand Villa (Biệt Thự Vườn Ven Hồ): Bản Giao Hưởng Giữa Nước Và Cây Xanh",
-        "excerpt": "Vị trí trực diện mặt nước hồ sinh thái 100ha, sở hữu bến đỗ thuyền riêng và tầm nhìn mặt hồ vô cực không giới hạn.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_0.jpg",
-        "date": "29 TH8 2026",
-        "content": """
-<p>Sở hữu vị trí đắt giá nhất toàn khu, <strong>Lakeview Grand Villa</strong> là dòng biệt thự đơn lập tọa lạc ngay cung đường ven hồ tự nhiên 100ha tại <strong>Saigon Farm Resort</strong>. Mỗi căn biệt thự như một ốc đảo biệt lập, nơi gia chủ chạm tay vào mặt nước trong veo và đón trọn làn gió mát lành từ hồ lớn.</p>
-
-<p>Khuôn viên đất rộng từ <strong>1.100m² – 1.400m²</strong> với mặt tiền tiếp giáp cảnh quan hồ nước, mở ra không gian sống thoáng đãng tuyệt đối và giá trị phong thủy "Tụ Thủy Sinh Tài" hưng thịnh.</p>
-
-<div class="key-takeaways">
-  <h3>Đặc Quyền Vị Trí & Không Gian Sống Lakeview Grand</h3>
-  <ul>
-    <li><strong>Tọa độ trực diện hồ 100ha:</strong> 100% các phòng đều có view mặt nước khoáng đạt.</li>
-    <li><strong>Sân vườn ven hồ:</strong> Thảm cỏ mịn màng kéo dài sát mép nước, bến thuyền riêng neo đậu thuyền du ngoạn.</li>
-    <li><strong>Không gian thiền định & Thư giãn:</strong> Chòi ngắm hoàng hôn trên mặt nước, hồ ngâm thảo dược ngoài trời.</li>
-    <li><strong>Pháp lý minh bạch:</strong> Sổ hồng riêng từng khuôn viên, đất thổ cư vườn lâu dài.</li>
-  </ul>
-</div>
-
-<div style="margin: 24px 0; text-align: center;">
-  <img src="assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_2.jpg" alt="Phối cảnh cảnh quan ven hồ Lakeview Grand Villa" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-</div>
-
-<div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-  <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
-  <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
-  </a>
-</div>
-"""
-    },
     {
         "id": 106,
         "title": "Riverside Eco Villa (Biệt Thự Vườn Thảo Dược): Chốn An Trú Thanh Lọc Thân Tâm Trí",
