@@ -1,0 +1,17 @@
+.git
+.git/**
+.github/**
+.wrangler/**
+.gitignore
+.wranglerignore
+.assetsignore
+build_full_posts.py
+import_docx_posts.py
+test_wiki.py
+generate_data.py
+convert_all_listings.py
+posts/**
+*.pdf
+*.dwg
+*.zip
+*.psd
