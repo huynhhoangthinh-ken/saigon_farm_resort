@@ -878,10 +878,15 @@ posts = [
         "id": 301,
         "title": "Về Đại Chúng Properties & Đơn Vị Tiếp Thị Phân Phối Độc Quyền",
         "excerpt": "Đại Chúng Properties là thương hiệu tư vấn, tiếp thị và phân phối bất động sản nghỉ dưỡng sinh thái và cao cấp hàng đầu với triết lý phụng sự tận tâm.",
-        "image": "assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg",
+        "image": "assets/brand/hcmc_skyline_luxury.jpg",
         "date": "29 TH8 2026",
         "content": """
 <p><strong>Đại Chúng Properties</strong> tự hào là Đơn vị Tổng Đại Lý Tiếp Thị & Phân Phối độc quyền cho khu nghỉ dưỡng sinh thái <strong>Saigon Farm Resort</strong>. Chúng tôi cam kết mang lại giải pháp tư vấn đầu tư, quy hoạch chuẩn xác và an cư thịnh vượng nhất cho quý khách hàng.</p>
+
+<div style="margin: 24px 0; text-align: center;">
+  <img src="assets/brand/hcmc_skyline_luxury.jpg" alt="Thành phố Hồ Chí Minh - Trụ sở & Trung tâm kết nối Đại Chúng Properties" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <p style="font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;">Đại Chúng Properties — Đơn vị tư vấn & tiếp thị bất động sản nghỉ dưỡng cao cấp tại TP. Hồ Chí Minh</p>
+</div>
 
 <div class="key-takeaways">
   <h3>Tầm Nhìn & Giá Trị Cốt Lõi</h3>
