@@ -5,3 +5,4 @@
 *.psd
 assets/Index_asset/02_Phoi_Canh_3D/251231*
 __pycache__/
+.wrangler/

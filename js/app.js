@@ -172,18 +172,24 @@ window.activateTab = function(tabId) {
             <div class="grid-card">
               <a href="article.html?id=${post.id}" style="display: block; text-decoration: none; color: inherit;">
                 <div class="grid-img">
-                   <img src="${post.image}" alt="${post.title}">
+                   <img src="${post.image}" alt="${post.title}" loading="lazy">
                    <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
                 </div>
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">${post.title}</h5>
               </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 12px;">
-                ${post.excerpt}
-              </p>
-              <a href="article.html?id=${post.id}" class="editorial-btn">Đọc tiếp</a>
-              <a href="https://zalo.me/0906060036" class="editorial-btn" style="background-color: #0068FF; color: white; border-color: #0068FF; margin-left: 8px;">
-                Hotline Tiếp Nhận Thông Tin (0906060036)
-              </a>
+              <div class="grid-card-info">
+                <a href="article.html?id=${post.id}" style="text-decoration: none; color: inherit;">
+                  <h5 style="margin-bottom: 8px; line-height: 1.4;">${post.title}</h5>
+                </a>
+                <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
+                  ${post.excerpt}
+                </p>
+                <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
+                  <a href="article.html?id=${post.id}" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
+                  <a href="https://zalo.me/0906060036" target="_blank" class="editorial-btn" style="margin-top:0; background-color: #0068FF; color: white; border-color: #0068FF;">
+                    Hotline Zalo
+                  </a>
+                </div>
+              </div>
             </div>
           `;
           editorialGrid.insertAdjacentHTML('beforeend', postHTML);

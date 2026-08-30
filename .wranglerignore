@@ -3,4 +3,7 @@ assets/Index_asset/02_Phoi_Canh_3D/251231_l_HO_SO_THIET_KE_GIAI_DOAN_1*
 *.dwg
 *.zip
 *.psd
+*.py
+__pycache__/**
+posts/**
 .git
