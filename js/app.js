@@ -33,49 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initialize Podcast Audio Modal
-  const podcastBtns = document.querySelectorAll('.podcast-listen-btn');
-  const audioModal = document.getElementById('audioModal');
-  const modalClose = document.getElementById('modalCloseBtn');
-  const audioElem = document.getElementById('podcastAudio');
-  const modalTitle = document.getElementById('audioModalTitle');
-  const modalDesc = document.getElementById('audioModalDesc');
-  const audioSource = document.getElementById('podcastAudioSource');
-
-  if (podcastBtns.length > 0 && audioModal && modalClose) {
-    podcastBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const title = btn.getAttribute('data-ep-title');
-        const desc = btn.getAttribute('data-ep-desc');
-        const src = btn.getAttribute('data-audio-src');
-        
-        if (modalTitle) modalTitle.textContent = title;
-        if (modalDesc) modalDesc.textContent = desc;
-        if (audioSource) {
-          audioSource.src = src;
-          if (audioElem) {
-            audioElem.load(); // reload the audio source
-          }
-        }
-        
-        audioModal.classList.add('active');
-        if (audioElem) audioElem.play().catch(() => {});
-      });
-    });
-
-    modalClose.addEventListener('click', () => {
-      audioModal.classList.remove('active');
-      if (audioElem) audioElem.pause();
-    });
-
-    audioModal.addEventListener('click', (e) => {
-      if (e.target === audioModal) {
-        audioModal.classList.remove('active');
-        if (audioElem) audioElem.pause();
-      }
-    });
-  }
-
 // Global Tab Activation Function
 window.activateTab = function(tabId) {
   const tabBtns = document.querySelectorAll('.tab-btn');
@@ -225,7 +182,7 @@ window.activateTab = function(tabId) {
               </p>
               <a href="article.html?id=${post.id}" class="editorial-btn">Đọc tiếp</a>
               <a href="https://zalo.me/0906060036" class="editorial-btn" style="background-color: #0068FF; color: white; border-color: #0068FF; margin-left: 8px;">
-                Liên hệ CEO Thịnh (Ken) (0906060036)
+                Hotline Tiếp Nhận Thông Tin (0906060036)
               </a>
             </div>
           `;

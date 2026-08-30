@@ -66,10 +66,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -171,10 +171,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -212,10 +212,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -270,10 +270,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -316,10 +316,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -361,10 +361,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -407,10 +407,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -449,10 +449,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -483,10 +483,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -511,10 +511,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -545,10 +545,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -579,10 +579,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -607,10 +607,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -635,10 +635,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -669,10 +669,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -705,10 +705,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -733,10 +733,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -766,10 +766,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -813,10 +813,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -829,10 +829,10 @@ posts = [
         "id": 301,
         "title": "Về Đại Chúng Properties & Đơn Vị Tiếp Thị Phân Phối Độc Quyền",
         "excerpt": "Đại Chúng Properties là thương hiệu tư vấn, tiếp thị và phân phối bất động sản nghỉ dưỡng sinh thái và cao cấp hàng đầu với triết lý phụng sự tận tâm.",
-        "image": "assets/Index_asset/ceo_thinh.jpg",
+        "image": "assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg",
         "date": "29 TH8 2026",
         "content": """
-<p><strong>Đại Chúng Properties</strong> tự hào là Đơn vị Tổng Đại Lý Tiếp Thị & Phân Phối độc quyền cho khu nghỉ dưỡng sinh thái <strong>Saigon Farm Resort</strong>. Dưới sự dẫn dắt của CEO Huỳnh Hoàng Thịnh (Ken), chúng tôi cam kết mang lại giải pháp đầu tư và an cư thịnh vượng nhất cho quý khách hàng.</p>
+<p><strong>Đại Chúng Properties</strong> tự hào là Đơn vị Tổng Đại Lý Tiếp Thị & Phân Phối độc quyền cho khu nghỉ dưỡng sinh thái <strong>Saigon Farm Resort</strong>. Chúng tôi cam kết mang lại giải pháp tư vấn đầu tư, quy hoạch chuẩn xác và an cư thịnh vượng nhất cho quý khách hàng.</p>
 
 <div class="key-takeaways">
   <h3>Tầm Nhìn & Giá Trị Cốt Lõi</h3>
@@ -843,16 +843,16 @@ posts = [
   </ul>
 </div>
 
-<h2>Thông Tin Người Sáng Lập & Đại Diện</h2>
-<p>👤 <strong>CEO Huỳnh Hoàng Thịnh (Ken)</strong> — Chuyên gia tư vấn đầu tư bất động sản cao cấp với hơn 10 năm kinh nghiệm đồng hành cùng hàng trăm nhà đầu tư tinh hoa.</p>
-<p>📞 Hotline / Zalo: <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700;">0906060036</a></p>
+<h2>Thông Tin Tiếp Nhận Tư Vấn</h2>
+<p>🏢 <strong>Đại Chúng Properties</strong> — Đơn vị tư vấn và phân phối bất động sản nghỉ dưỡng sinh thái cao cấp.</p>
+<p>📞 Hotline / Zalo Tiếp Nhận Thông Tin: <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700;">0906060036</a></p>
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -870,7 +870,7 @@ posts = [
   <h3>Quyền Lợi Dành Cho Bạn</h3>
   <ul>
     <li>Hoa hồng cao nhất thị trường, thanh toán nhanh chóng và minh bạch.</li>
-    <li>Được đào tạo bài bản trực tiếp từ CEO Huỳnh Hoàng Thịnh về tư duy bán hàng xa xỉ và kỹ năng đàm phán cấp cao.</li>
+    <li>Được đào tạo bài bản về tư duy bán hàng xa xỉ và kỹ năng đàm phán cấp cao.</li>
     <li>Nguồn khách hàng tiềm năng chất lượng cao được công ty hỗ trợ liên tục.</li>
     <li>Môi trường làm việc văn minh, năng động, nhiều cơ hội thăng tiến lên cấp Quản lý / Giám đốc kinh doanh.</li>
   </ul>
@@ -880,10 +880,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -914,10 +914,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
@@ -925,7 +925,7 @@ posts = [
     {
         "id": 304,
         "title": "Thông Tin Liên Hệ & Đăng Ký Trải Nghiệm Thực Tế Saigon Farm Resort",
-        "excerpt": "Đại diện tư vấn: CEO Huỳnh Hoàng Thịnh. Hỗ trợ xe đưa đón tận nơi từ TP.HCM xuống tham quan và trải nghiệm ẩm thực ven hồ tại resort.",
+        "excerpt": "Hỗ trợ xe đưa đón tận nơi từ TP.HCM xuống tham quan và trải nghiệm thực tế không gian điền trang nghỉ dưỡng ven hồ.",
         "image": "assets/Index_asset/Flycam/DJI_0007_2.JPG",
         "date": "29 TH8 2026",
         "content": """
@@ -949,10 +949,10 @@ posts = [
 
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
   <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-  <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
-  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
+  <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
+  <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Lịch Trải Nghiệm Thực Tế
+    <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
   </a>
 </div>
 """
