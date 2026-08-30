@@ -163,39 +163,48 @@ window.activateTab = function(tabId) {
   // Fetch JSON and render Editorial Posts
   const editorialGrid = document.getElementById('editorial-grid');
   if (editorialGrid) {
-    fetch('data/posts.json')
-      .then(response => response.json())
-      .then(posts => {
-        editorialGrid.innerHTML = ''; // clear initial content
-        posts.forEach(post => {
-          const postHTML = `
-            <div class="grid-card">
-              <a href="article.html?id=${post.id}" style="display: block; text-decoration: none; color: inherit;">
-                <div class="grid-img">
-                   <img src="${post.image}" alt="${post.title}" loading="lazy">
-                   <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-                </div>
+    function renderEditorialList(posts) {
+      editorialGrid.innerHTML = ''; // clear initial content
+      posts.forEach(post => {
+        const postHTML = `
+          <div class="grid-card">
+            <a href="article.html?id=${post.id}" style="display: block; text-decoration: none; color: inherit;">
+              <div class="grid-img">
+                 <img src="${post.image}" alt="${post.title}" loading="lazy">
+                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
+              </div>
+            </a>
+            <div class="grid-card-info">
+              <a href="article.html?id=${post.id}" style="text-decoration: none; color: inherit;">
+                <h5 style="margin-bottom: 8px; line-height: 1.4;">${post.title}</h5>
               </a>
-              <div class="grid-card-info">
-                <a href="article.html?id=${post.id}" style="text-decoration: none; color: inherit;">
-                  <h5 style="margin-bottom: 8px; line-height: 1.4;">${post.title}</h5>
+              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
+                ${post.excerpt}
+              </p>
+              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
+                <a href="article.html?id=${post.id}" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
+                <a href="https://zalo.me/0906060036" target="_blank" class="editorial-btn" style="margin-top:0; background-color: #0068FF; color: white; border-color: #0068FF;">
+                  Hotline Zalo
                 </a>
-                <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                  ${post.excerpt}
-                </p>
-                <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                  <a href="article.html?id=${post.id}" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-                  <a href="https://zalo.me/0906060036" target="_blank" class="editorial-btn" style="margin-top:0; background-color: #0068FF; color: white; border-color: #0068FF;">
-                    Hotline Zalo
-                  </a>
-                </div>
               </div>
             </div>
-          `;
-          editorialGrid.insertAdjacentHTML('beforeend', postHTML);
-        });
-      })
-      .catch(err => console.error("Error fetching posts:", err));
+          </div>
+        `;
+        editorialGrid.insertAdjacentHTML('beforeend', postHTML);
+      });
+    }
+
+    if (window.SAIGON_POSTS && Array.isArray(window.SAIGON_POSTS) && window.SAIGON_POSTS.length > 0) {
+      renderEditorialList(window.SAIGON_POSTS);
+    } else {
+      fetch('data/posts.json?v=' + Date.now())
+        .then(response => response.json())
+        .then(posts => {
+          window.SAIGON_POSTS = posts;
+          renderEditorialList(posts);
+        })
+        .catch(err => console.error("Error fetching posts:", err));
+    }
   }
 });
 
