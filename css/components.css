@@ -163,6 +163,12 @@
   overflow: hidden;
 }
 
+.hero-slider-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -181,6 +187,19 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.08) 45%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+.hero-minh-hoa-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.65);
+  color: #e0e0e0;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  z-index: 10;
 }
 
 .hero-content {
@@ -203,6 +222,47 @@
   max-width: 650px;
   letter-spacing: -0.01em;
   text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+  color: #e0e0e0;
+  font-size: 1.15rem;
+  max-width: 750px;
+  margin-top: 14px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  line-height: 1.6;
+}
+
+.hero-cta-btns {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-cta-zalo {
+  background: #0068FF;
+  color: #fff;
+  border-color: #0068FF;
+  font-weight: 700;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-cta-car {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  border-color: #fff;
+  font-weight: 600;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .hero-stats-line {
@@ -251,6 +311,44 @@
 
 .hero-btn:hover {
   opacity: 1;
+}
+
+/* ---------------- TAB INTRO BANNERS ---------------- */
+.tab-intro-banner {
+  background: linear-gradient(135deg, rgba(201,169,110,0.18) 0%, rgba(17,17,17,0.94) 100%), url('../assets/Index_asset/Phoicanh/S01_Final_Fix.jpg') center/cover;
+  padding: 38px 24px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(201,169,110,0.4);
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+.tab-intro-tag {
+  background: #c9a96e;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 5px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.tab-intro-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  color: #fff;
+  margin: 14px 0 8px;
+}
+
+.tab-intro-desc {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #ddd;
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
 
 /* ---------------- FEATURED CATEGORIES ---------------- */
@@ -522,6 +620,13 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.featured-news-body {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
 }
 
 .news-date-badge {
