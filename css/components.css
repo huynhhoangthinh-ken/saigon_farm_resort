@@ -190,16 +190,7 @@
 }
 
 .hero-minh-hoa-tag {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(0,0,0,0.65);
-  color: #e0e0e0;
-  font-size: 0.7rem;
-  padding: 4px 10px;
-  border-radius: 4px;
-  backdrop-filter: blur(4px);
-  z-index: 10;
+  display: none !important;
 }
 
 .hero-content {
@@ -315,13 +306,13 @@
 
 /* ---------------- TAB INTRO BANNERS ---------------- */
 .tab-intro-banner {
-  background: linear-gradient(135deg, rgba(201,169,110,0.18) 0%, rgba(17,17,17,0.94) 100%), url('../assets/Index_asset/Phoicanh/S01_Final_Fix.jpg') center/cover;
+  background: linear-gradient(135deg, #18201b 0%, #101411 100%);
   padding: 38px 24px;
   border-radius: 10px;
   margin-bottom: 32px;
-  border: 1px solid rgba(201,169,110,0.4);
+  border: 1px solid rgba(201,169,110,0.35);
   text-align: center;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
 }
 
 .tab-intro-tag {
@@ -587,26 +578,57 @@
 
 .news-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 36px;
+  align-items: stretch;
 }
 
-/* Left Featured Article */
+/* Left Featured Article — Image on Top, Content Below (Huỳnh Hoàng Thịnh style) */
 .featured-news-card {
   position: relative;
-  height: 460px;
-  border-radius: 2px;
-  overflow: hidden;
-  color: var(--color-white);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 32px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #ebe6df;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  height: 100%;
 }
 
+.featured-news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.featured-news-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+  background-color: #f4f2ee;
+}
+
+.featured-news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.featured-news-card:hover .featured-news-img {
+  transform: scale(1.04);
+}
+
+/* Backward-compatible background-image support */
 .featured-news-bg {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  width: 100%;
+  height: 310px;
   background-size: cover;
   background-position: center;
   transition: transform 0.6s ease;
@@ -617,49 +639,66 @@
 }
 
 .featured-news-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.85) 100%);
+  display: none;
 }
 
 .featured-news-body {
-  position: relative;
-  z-index: 5;
+  padding: 24px 28px 28px;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .news-date-badge {
-  position: relative;
-  z-index: 5;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: #8a6d3b;
   margin-bottom: 10px;
+  display: inline-block;
 }
 
 .featured-news-title {
-  position: relative;
-  z-index: 5;
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.55rem;
+  font-weight: 600;
   line-height: 1.35;
+  color: var(--color-dark, #1a1a1a);
   margin-bottom: 12px;
+  transition: color 0.2s ease;
+}
+
+.featured-news-card:hover .featured-news-title {
+  color: #8a6d3b;
 }
 
 .featured-news-excerpt {
-  position: relative;
-  z-index: 5;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.6;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.featured-news-more {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #8a6d3b;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.featured-news-card:hover .featured-news-more {
+  gap: 12px;
+  color: #6d542b;
 }
 
 /* Right Side Stacked News */
@@ -667,27 +706,36 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 18px;
 }
 
 .side-news-item {
   display: flex;
   gap: 20px;
   align-items: center;
-  padding-bottom: 16px;
+  padding: 10px 12px 18px;
+  border-radius: 8px;
   border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.side-news-item:hover {
+  background-color: #faf9f6;
+  transform: translateX(3px);
 }
 
 .side-news-item:last-child {
   border-bottom: none;
-  padding-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .side-news-thumb {
   width: 140px;
-  height: 95px;
+  height: 96px;
   flex-shrink: 0;
-  border-radius: 2px;
+  border-radius: 8px;
   overflow: hidden;
   background-color: #e0e0e0;
 }
@@ -706,6 +754,7 @@
 .side-news-content {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .side-news-date {
@@ -713,7 +762,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: #8a6d3b;
   margin-bottom: 4px;
 }
 
@@ -728,6 +777,11 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.side-news-item:hover .side-news-title {
+  color: #8a6d3b;
 }
 
 .side-news-excerpt {
@@ -737,7 +791,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* ---------------- PODCAST BANNER ---------------- */
@@ -1186,25 +1240,17 @@ audio {
   transform: scale(1.05);
 }
 .estate-card__badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  font-size: 0.7rem;
+  position: static;
+  display: inline-block;
+  font-size: 0.68rem;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: 4px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  z-index: 2;
 }
 .estate-card__minh-hoa {
-  position: absolute;
-  bottom: 6px;
-  right: 8px;
-  font-size: 0.65rem;
-  color: rgba(255,255,255,0.75);
-  font-style: italic;
-  z-index: 2;
+  display: none !important;
 }
 .estate-card__body {
   padding: 18px 16px 14px;
@@ -1372,32 +1418,9 @@ audio {
   transform: translateX(4px);
 }
 
-.minh-hoa-tag {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(0, 0, 0, 0.65);
-  color: #e5e5e5;
-  font-size: 0.62rem;
-  padding: 2px 6px;
-  border-radius: 3px;
-  backdrop-filter: blur(4px);
-  z-index: 5;
-  pointer-events: none;
-}
-
+.minh-hoa-tag,
 .top-listing-minh-hoa {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(0, 0, 0, 0.65);
-  color: #e5e5e5;
-  font-size: 0.62rem;
-  padding: 2px 6px;
-  border-radius: 3px;
-  backdrop-filter: blur(4px);
-  z-index: 5;
-  pointer-events: none;
+  display: none !important;
 }
 
 .grid-card p {

@@ -99,7 +99,8 @@
   .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .category-card { height: 380px; }
   .news-grid { grid-template-columns: 1fr; gap: 24px; }
-  .featured-news-card { height: 380px; }
+  .featured-news-card { height: auto; }
+  .featured-news-img-wrap, .featured-news-bg { height: 260px; }
   .side-news-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -274,21 +275,22 @@
   .trending-card { width: 210px; }
   .trending-img-wrapper { height: 148px; }
 
-  /* News — Featured card with top image + bottom content box */
+  /* News — Featured card with top image + bottom content box (Huỳnh Hoàng Thịnh style) */
   .featured-news-card {
     height: auto;
     min-height: 0;
     display: flex;
     flex-direction: column;
-    background: #181c19;
+    background: #ffffff;
     border-radius: 8px;
-    border: 1px solid rgba(201,169,110,0.25);
+    border: 1px solid #ebe6df;
     overflow: hidden;
     padding: 0;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
   }
+  .featured-news-img-wrap,
   .featured-news-bg {
     position: relative;
     height: 220px;
@@ -303,10 +305,10 @@
     position: relative;
     z-index: 5;
     padding: 18px 18px 22px;
-    background: #181c19;
+    background: #ffffff;
   }
   .news-date-badge {
-    color: #c9a96e;
+    color: #8a6d3b;
     font-size: 0.72rem;
     margin-bottom: 8px;
     display: inline-block;
@@ -314,12 +316,12 @@
   .featured-news-title {
     font-size: 1.25rem;
     line-height: 1.38;
-    color: #ffffff;
+    color: #1a1a1a;
     margin-bottom: 10px;
   }
   .featured-news-excerpt {
     font-size: 0.88rem;
-    color: #b5b5b5;
+    color: #666666;
     line-height: 1.55;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -407,6 +409,7 @@
   .grid-card { height: auto; }
 
   /* News */
+  .featured-news-img-wrap,
   .featured-news-bg { height: 185px; }
   .featured-news-body { padding: 15px 14px 18px; }
   .featured-news-title { font-size: 1.12rem; }
