@@ -10,7 +10,7 @@ other_posts = [p for p in existing_posts if p['id'] not in villa_ids]
 # Clean up terminology in other_posts as well
 for p in other_posts:
     if p.get('id') == 506:
-        p['image'] = 'assets/Index_asset/Phoi_canh_tong_the/mds_living_01.jpg'
+        p['image'] = 'assets/Index_asset/MatBang/QuanLy_MDS_Living.png'
     # Replace Villa/Biệt thự/Dự án in titles and excerpts of other posts
     p['title'] = p['title'].replace('Villa', 'Điền Trang').replace('villa', 'điền trang').replace('biệt thự', 'điền trang').replace('Biệt thự', 'Điền Trang').replace('Biệt Thự', 'Điền Trang').replace('dự án', 'khu nghỉ dưỡng').replace('Dự án', 'Khu nghỉ dưỡng').replace('Dự Án', 'Khu Nghỉ Dưỡng')
     p['excerpt'] = p['excerpt'].replace('Villa', 'Điền Trang').replace('villa', 'điền trang').replace('biệt thự', 'điền trang').replace('Biệt thự', 'Điền Trang').replace('dự án', 'khu điền trang')
@@ -35,7 +35,7 @@ new_estate_posts = [
         "id": 103,
         "title": "Điền Trang Sunrise 1: Giải Mã Mặt Bằng 1 Tầng Trệt Trải Rộng – Sự Tiện Nghi Mở Đón Nắng Mai",
         "excerpt": "Phân tích chi tiết layout trệt của Điền Trang Sunrise 1: kiến trúc trải ngang tối ưu ánh sáng tự nhiên, hồ bơi riêng biệt lập, không góc chết và sự gắn kết các thế hệ trong cùng một mặt bằng điền trang thuần khiết.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg",
         "date": "30 TH8 2026",
         "category": "Mặt Bằng & Kiến Trúc",
         "content": f"""
@@ -360,7 +360,7 @@ new_estate_posts = [
         "id": 111,
         "title": "Phong Thủy Điền Trang Hướng Đông (Sunrise 1 & 2): Đón Vượng Khí Nắng Sớm & Năng Lượng Tái Sinh",
         "excerpt": "Phân tích phong thủy nhà hướng Đông tại Saigon Farm Resort: thế đất Tọa Sơn Hướng Thủy, trường năng lượng sinh khí buổi sớm và tác động kích hoạt sức khỏe, sự hanh thông cho gia chủ.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(2).jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(2).jpg",
         "date": "30 TH8 2026",
         "category": "Phong Thủy & Vi Khí Hậu",
         "content": f"""
@@ -549,7 +549,7 @@ new_estate_posts = [
         "id": 114,
         "title": "Thủy Khí Hồ 100ha & Không Gian Cây Xanh: Trụ Cột Nuôi Dưỡng Sức Khỏe Gia Chủ Tại Cụm Điền Trang",
         "excerpt": "Phân tích tác động y sinh học của mặt nước hồ 100ha và thảm thực vật nhiệt đới: mật độ ion âm cực đại, cải thiện giấc ngủ sâu, hạ huyết áp và thanh lọc hệ hô hấp cho cư dân Saigon Farm Resort.",
-        "image": "assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg",
+        "image": "assets/Index_asset/Phoicanh/S01_Final_Fix.jpg",
         "date": "30 TH8 2026",
         "category": "Phong Thủy & Vi Khí Hậu",
         "content": f"""
@@ -615,7 +615,7 @@ new_estate_posts = [
         "id": 115,
         "title": "Đặc Quyền Hồ Bơi Vô Cực & Vườn Nông Trại Riêng: Chuẩn Sống Xanh Sunrise 1 & Sunset 1",
         "excerpt": "Trải nghiệm đặc quyền 'Resort tại gia' của hai mẫu điền trang 1 tầng Sunrise 1 & Sunset 1: sở hữu bể bơi lọc khoáng muối 45m² và mảnh vườn rau quả hữu cơ tự thu hoạch chuẩn Farm-to-Table.",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(4).jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(4).jpg",
         "date": "30 TH8 2026",
         "category": "Trải Nghiệm & Tiện Ích",
         "content": f"""

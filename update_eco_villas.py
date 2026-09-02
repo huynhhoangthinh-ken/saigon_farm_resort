@@ -5,7 +5,7 @@ with open('index.html', 'r', encoding='utf-8') as f:
 
 tab_eco_villas_html = """<!-- Tab 2: Villas Sinh Thái (tab-eco-villas) -->
 <div class="tab-content" id="tab-eco-villas">
-  <div style="background: linear-gradient(135deg, rgba(46,125,50,0.18) 0%, rgba(17,17,17,0.92) 100%), url('assets/Index_asset/Phoi_canh_tong_the/SFR_NEW_S02.jpg') center/cover; padding: 36px 24px; border-radius: 10px; margin-bottom: 30px; border: 1px solid rgba(46,125,50,0.35); text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
+  <div style="background: linear-gradient(135deg, rgba(46,125,50,0.18) 0%, rgba(17,17,17,0.92) 100%), url('assets/Index_asset/Phoicanh/NEW_S02.jpg') center/cover; padding: 36px 24px; border-radius: 10px; margin-bottom: 30px; border: 1px solid rgba(46,125,50,0.35); text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
     <span style="background: #2e7d32; color: #fff; font-size: 0.75rem; font-weight: 800; padding: 5px 14px; border-radius: 20px; letter-spacing: 0.1em; text-transform: uppercase;">CHUẨN SỐNG ECO-LUXURY</span>
     <h3 style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin: 14px 0 8px;">4 MẪU BIỆT THỰ VƯỜN SINH THÁI ĐỘC BẢN</h3>
     <p style="max-width: 820px; margin: 0 auto; color: #ddd; font-size: 0.96rem; line-height: 1.6;">
@@ -17,7 +17,7 @@ tab_eco_villas_html = """<!-- Tab 2: Villas Sinh Thái (tab-eco-villas) -->
     <!-- Sunrise 1 -->
     <a href="article.html?id=103" class="grid-card" style="text-decoration: none; color: inherit; display: block; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e0d5c1;">
       <div class="grid-img" style="position: relative; height: 220px;">
-        <img alt="Sunrise 1 Villa" src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+        <img alt="Sunrise 1 Villa" src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg" style="width:100%; height:100%; object-fit:cover;"/>
         <span style="position: absolute; top: 12px; left: 12px; background: #c9a96e; color: #000; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 4px;">MẪU 3PN • ĐÓN BÌNH MINH</span>
         <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
       </div>

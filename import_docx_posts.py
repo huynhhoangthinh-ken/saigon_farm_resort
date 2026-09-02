@@ -106,7 +106,7 @@ def process_posts():
         if images:
             feat_img = images[0]
         else:
-            feat_img = 'assets/Index_asset/02_Phoi_Canh_3D/02.3D_TKCS-CANH_QUAN_VEN_HO-12.2025/SFR_1.jpg'
+            feat_img = 'assets/Index_asset/Phoicanh/SFR_1.jpg'
             
         # Build HTML content
         html_parts = []

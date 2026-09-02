@@ -7,7 +7,7 @@ with open('index.html', 'r', encoding='utf-8') as f:
 tab_villas_market_html = """<!-- Tab 1: Biệt Thự Mở Bán (tab-villas-market) -->
 <div class="tab-content active" id="tab-villas-market">
   <!-- Intro Banner: 4 Dòng Villa Mở Bán -->
-  <div style="background: linear-gradient(135deg, rgba(201,169,110,0.18) 0%, rgba(17,17,17,0.92) 100%), url('assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg') center/cover; padding: 36px 24px; border-radius: 10px; margin-bottom: 30px; border: 1px solid rgba(201,169,110,0.35); text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
+  <div style="background: linear-gradient(135deg, rgba(201,169,110,0.18) 0%, rgba(17,17,17,0.92) 100%), url('assets/Index_asset/Phoicanh/S01_Final_Fix.jpg') center/cover; padding: 36px 24px; border-radius: 10px; margin-bottom: 30px; border: 1px solid rgba(201,169,110,0.35); text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
     <span style="background: #c9a96e; color: #000; font-size: 0.75rem; font-weight: 800; padding: 5px 14px; border-radius: 20px; letter-spacing: 0.1em; text-transform: uppercase;">DANH MỤC SẢN PHẨM CHỦ LỰC</span>
     <h3 style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin: 14px 0 8px;">BỘ SƯU TẬP 4 DÒNG BIỆT THỰ SINH THÁI MỞ BÁN</h3>
     <p style="max-width: 820px; margin: 0 auto; color: #ddd; font-size: 0.96rem; line-height: 1.6;">
@@ -21,7 +21,7 @@ tab_villas_market_html = """<!-- Tab 1: Biệt Thự Mở Bán (tab-villas-marke
     <!-- Model 1: Sunrise 1 -->
     <a href="article.html?id=103" class="grid-card" style="text-decoration: none; color: inherit; display: block; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e0d5c1; transition: transform 0.3s ease;">
       <div class="grid-img" style="position: relative; height: 230px;">
-        <img alt="Sunrise 1 Villa" src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+        <img alt="Sunrise 1 Villa" src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg" style="width:100%; height:100%; object-fit:cover;"/>
         <span style="position: absolute; top: 12px; left: 12px; background: #c9a96e; color: #000; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 4px;">MẪU 3PN • ĐÓN BÌNH MINH</span>
         <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
       </div>
@@ -158,7 +158,7 @@ tab_villas_market_html = """<!-- Tab 1: Biệt Thự Mở Bán (tab-villas-marke
     <div class="sub-tab-content" id="subtab-villa-climate">
       <div class="grid-listing">
         <a class="grid-card" href="article.html?id=111" style="text-decoration: none; color: inherit; display: block;">
-          <div class="grid-img"><img alt="Phong thủy Sunrise" src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(2).jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+          <div class="grid-img"><img alt="Phong thủy Sunrise" src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(2).jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
           <div class="grid-card-info">
             <h5>Phong Thủy Hướng Đông: Đón Vượng Khí Nắng Sớm</h5>
             <p class="grid-card-subtitle">Thế đất Tọa Sơn Hướng Thủy, đón photon năng lượng dương tái tạo thể chất và tinh thần</p>
@@ -182,7 +182,7 @@ tab_villas_market_html = """<!-- Tab 1: Biệt Thự Mở Bán (tab-villas-marke
           </div>
         </a>
         <a class="grid-card" href="article.html?id=114" style="text-decoration: none; color: inherit; display: block;">
-          <div class="grid-img"><img alt="Thủy khí hồ 100ha" src="assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+          <div class="grid-img"><img alt="Thủy khí hồ 100ha" src="assets/Index_asset/Phoicanh/S01_Final_Fix.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
           <div class="grid-card-info">
             <h5>Thủy Khí Hồ 100ha: Trụ Cột Nuôi Dưỡng Sức Khỏe</h5>
             <p class="grid-card-subtitle">Nồng độ ion âm cực đại, không khí sạch chuẩn quốc tế và hiệu ứng Blue Mind giảm stress</p>
@@ -196,7 +196,7 @@ tab_villas_market_html = """<!-- Tab 1: Biệt Thự Mở Bán (tab-villas-marke
     <div class="sub-tab-content" id="subtab-villa-experience">
       <div class="grid-listing">
         <a class="grid-card" href="article.html?id=115" style="text-decoration: none; color: inherit; display: block;">
-          <div class="grid-img"><img alt="Pool & Farm" src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(4).jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+          <div class="grid-img"><img alt="Pool & Farm" src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(4).jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
           <div class="grid-card-info">
             <h5>Đặc Quyền Hồ Bơi Vô Cực & Vườn Farm Tại Gia</h5>
             <p class="grid-card-subtitle">Bể bơi khoáng muối tự nhiên 45m² và mảnh vườn rau củ quả tự thu hoạch chuẩn Farm-to-Table</p>

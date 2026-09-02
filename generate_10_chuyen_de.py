@@ -388,7 +388,7 @@ new_articles = [
         "id": 404,
         "title": "Tiện Nghi Nghỉ Dưỡng & Dịch Vụ Chu Đáo: Chuẩn Mực Quản Gia 5 Sao Giữa Lòng Saigon Farm Resort",
         "excerpt": "Sự kết hợp hoàn hảo giữa không gian sinh thái nguyên bản và tiện nghi nghỉ dưỡng xa xỉ: Dịch vụ quản gia MDS Living chu đáo, cá nhân hóa, ẩm thực Farm-to-Table và câu lạc bộ thể thao thượng lưu ven hồ 100ha.",
-        "image": "assets/Index_asset/Phoi_canh_tong_the/nha_hang_05.jpg",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/06.3D_TKCS-NHA_DIEU_HANH_VEN_RUONG-08.2025_(update)/02.TANG_LAU/SFR_2._Nha_Hang_05.jpg",
         "date": "31 TH8 2026",
         "author": "Ban Quản Lý Vận Hành Quốc Tế MDS Living",
         "category": "Tiện Nghi & Dịch Vụ",
@@ -410,7 +410,7 @@ new_articles = [
   </div>
 
   <figure style="margin: 0 0 32px; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: 1px solid #e0d5c1;">
-    <img src="assets/Index_asset/Phoi_canh_tong_the/nha_hang_05.jpg" alt="Nhà hàng ẩm thực cao cấp ven hồ tại Saigon Farm Resort" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="lazy">
+    <img src="assets/Index_asset/02_Phoi_Canh_3D/06.3D_TKCS-NHA_DIEU_HANH_VEN_RUONG-08.2025_(update)/02.TANG_LAU/SFR_2._Nha_Hang_05.jpg" alt="Nhà hàng ẩm thực cao cấp ven hồ tại Saigon Farm Resort" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="lazy">
     <figcaption style="padding: 10px 16px; background: #fdfbf7; font-size: 0.8rem; color: #777; font-style: italic; border-top: 1px solid #eee; text-align: right;">
       * Không gian nhà hàng ẩm thực Farm-to-Table ven hồ 100ha tại Saigon Farm Resort.
     </figcaption>
@@ -494,102 +494,231 @@ new_articles = [
     {
         "id": 405,
         "title": "Lòng Tự Hào Dân Tộc: Ngọn Lửa Bất Diệt Trong Tim Mỗi Thế Hệ Con Lạc Cháu Hồng & Dấu Ấn Di Sản",
-        "excerpt": "Hành trình 4.000 năm lịch sử hào hùng dựng nước và giữ nước: Khi lòng tự hào dân tộc không chỉ là khúc tráng ca trong quá khứ mà là nguồn sức mạnh nội tại để kiến tạo những giá trị trường tồn hôm nay.",
+        "excerpt": "Hành trình khắc họa dòng chảy 4.000 năm lịch sử hào hùng của dân tộc Việt Nam tại Saigon Farm Resort qua trục cảnh quan Dòng Sử Việt – Về Nguồn, nghệ thuật kiến trúc mộc bản sắc và sứ mệnh trao truyền ngọn lửa tự hào dân tộc cho các thế hệ con Lạc cháu Hồng.",
         "image": "assets/Index_asset/Tien_ich_minh_hoa/Duong_Ve_Nguon.png",
         "date": "31 TH8 2026",
         "author": "Hội Đồng Nghiên Cứu Văn Hóa Đại Chúng Properties",
         "category": "Văn Hóa & Bản Sắc",
-        "content": """
-<article class="article-detail" style="font-family: var(--font-sans); color: #2c2c2c; line-height: 1.85; max-width: 900px; margin: 0 auto;">
-
-  <div class="article-meta-header" style="border-bottom: 2px solid #c9a96e; padding-bottom: 22px; margin-bottom: 30px;">
-    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px; flex-wrap: wrap;">
-      <span style="background: #c9a96e; color: #000; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 4px; letter-spacing: 0.05em; text-transform: uppercase;">TỰ HÀO DÂN TỘC</span>
-      <span style="background: #f0ebe1; color: #666; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px;">Di Sản Lịch Sử</span>
-      <span style="color: #888; font-size: 0.82rem;"><i class="fa-regular fa-clock" style="margin-right: 4px;"></i> Thời gian đọc: 8-10 phút (1.500+ từ)</span>
+        "content": "
+<article class=\"article-detail\" style=\"font-family: var(--font-sans); color: #2c2c2c; line-height: 1.85; max-width: 900px; margin: 0 auto;\">
+  
+  <!-- Header meta block -->
+  <div class=\"article-meta-header\" style=\"border-bottom: 2px solid #c9a96e; padding-bottom: 22px; margin-bottom: 30px;\">
+    <div style=\"display: flex; gap: 10px; align-items: center; margin-bottom: 12px; flex-wrap: wrap;\">
+      <span style=\"background: #c9a96e; color: #000; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 4px; letter-spacing: 0.05em; text-transform: uppercase;\">LÒNG TỰ HÀO DÂN TỘC</span>
+      <span style=\"background: #111; color: #c9a96e; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 4px; border: 1px solid #c9a96e;\">DÒNG SỬ VIỆT 4.000 NĂM</span>
+      <span style=\"color: #666; font-size: 0.85rem;\"><i class=\"fa-regular fa-clock\"></i> 15 phút đọc • 2.950+ từ</span>
     </div>
-    <h1 style="font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.4rem); color: #111; line-height: 1.35; margin: 0 0 14px;">
+    <h1 style=\"font-family: var(--font-serif); font-size: 2.15rem; line-height: 1.35; color: #111; margin-bottom: 16px; font-weight: 700;\">
       Lòng Tự Hào Dân Tộc: Ngọn Lửa Bất Diệt Trong Tim Mỗi Thế Hệ Con Lạc Cháu Hồng & Dấu Ấn Di Sản
     </h1>
-    <p style="font-size: 1.1rem; color: #555; font-style: italic; margin: 0; line-height: 1.6;">
-      "Dân ta phải biết sử ta, cho tường gốc tích nước nhà Việt Nam." — Lòng yêu nước nồng nàn và ý thức bảo tồn nguồn cội là điểm tựa tinh thần vững chãi nhất giúp mỗi người con đất Việt vươn tầm thế giới.
+    <p style=\"font-size: 1.1rem; line-height: 1.7; color: #555; font-style: italic;\">
+      Hành trình khắc họa dòng chảy 4.000 năm lịch sử hào hùng của dân tộc Việt Nam tại Saigon Farm Resort qua trục cảnh quan Dòng Sử Việt – Về Nguồn, nghệ thuật kiến trúc mộc bản sắc và sứ mệnh trao truyền ngọn lửa tự hào dân tộc cho các thế hệ tinh hoa con Lạc cháu Hồng.
     </p>
   </div>
 
-  <figure style="margin: 0 0 32px; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: 1px solid #e0d5c1;">
-    <img src="assets/Index_asset/Tien_ich_minh_hoa/Duong_Ve_Nguon.png" alt="Không gian Dòng Sử Việt Về Nguồn" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="lazy">
-    <figcaption style="padding: 10px 16px; background: #fdfbf7; font-size: 0.8rem; color: #777; font-style: italic; border-top: 1px solid #eee; text-align: right;">
-      * Không gian "Dòng Sử Việt – Về Nguồn" tái hiện bốn nghìn năm văn hiến bằng ngôn ngữ kiến trúc cảnh quan.
-    </figcaption>
-  </figure>
+  <!-- Key takeaways box -->
+  <div style=\"background: linear-gradient(135deg, #2b1d16 0%, #3d291e 100%); color: #fff; border-left: 4px solid #c9a96e; padding: 24px 28px; border-radius: 8px; margin: 30px 0; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\">
+    <h3 style=\"color: #c9a96e; font-size: 1.25rem; font-weight: 700; margin-top: 0; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em;\">
+      <i class=\"fa-solid fa-flag\" style=\"margin-right: 8px;\"></i> Những Giá Trị Cốt Lõi Của Di Sản Bản Sắc:
+    </h3>
+    <ul style=\"margin: 0; padding-left: 20px; font-size: 0.98rem; line-height: 1.8;\">
+      <li><strong>Ngọn lửa nguồn cội bất diệt:</strong> Lòng tự hào dân tộc là tài sản tinh thần vô giá, là điểm tựa vững chắc nhất để mỗi người con đất Việt tự tin vươn ra biển lớn toàn cầu mà không bao giờ đánh mất bản sắc.</li>
+      <li><strong>Trục Cảnh Quan 'Dòng Sử Việt – Về Nguồn':</strong> Tái hiện 4.000 năm lịch sử dựng nước và giữ nước bằng nghệ thuật điêu khắc đá cuội, đúc đồng, phù điêu gốm mộc và dòng chảy mặt nước thiêng liêng.</li>
+      <li><strong>Không Gian 'Vườn Cội' (The Roots Garden):</strong> Nghi thức vun trồng cây di sản gia đình, gắn bảng tên lưu dấu kỷ niệm và khắc sâu đạo lý 'Uống nước nhớ nguồn' cho con cháu mai sau.</li>
+      <li><strong>Định Vị Điền Trang Di Sản:</strong> Nơi một bất động sản nghỉ dưỡng vượt lên trên giá trị vật chất đơn thuần để trở thành 'bảo tàng tinh thần' lưu giữ cốt cách, danh gia vọng tộc và truyền thống hiếu đạo của gia đình.</li>
+    </ul>
+  </div>
 
-  <div style="background: #fcf9f2; border-left: 4px solid #c9a96e; padding: 22px 24px; border-radius: 0 8px 8px 0; margin-bottom: 35px; box-shadow: 0 4px 16px rgba(201,169,110,0.08);">
-    <h4 style="font-family: var(--font-serif); color: #8a6d3b; font-size: 1.15rem; margin: 0 0 10px; display: flex; align-items: center; gap: 8px;">
-      <i class="fa-solid fa-flag" style="color: #c9a96e;"></i> TINH THẦN BẢN LĨNH VIỆT NAM
-    </h4>
-    <p style="margin: 0 0 10px; font-size: 0.96rem; color: #444; line-height: 1.65;">
-      Bài viết tôn vinh ngọn lửa yêu nước nồng nàn luôn âm ỉ cháy trong lồng ngực mỗi người Việt Nam: Từ truyền thống quật cường chống ngoại xâm đến khát vọng kiến thiết những công trình mang bản sắc dân tộc, để thế hệ mai sau luôn tự hào về cội nguồn dòng máu Tiên Rồng.
+  <!-- Hero Image -->
+  <div style=\"margin: 36px 0; text-align: center;\">
+    <img src=\"assets/Index_asset/Tien_ich_minh_hoa/Duong_Ve_Nguon.png\" alt=\"Trục cảnh quan Dòng Sử Việt – Về Nguồn tại Saigon Farm Resort\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);\" />
+    <p style=\"font-size: 0.88rem; color: #777; margin-top: 10px; font-style: italic;\">
+      Dòng Sử Việt — Tuyến cảnh quan kể lại 4.000 năm lịch sử hào hùng của dân tộc Việt Nam giữa không gian thiên nhiên tĩnh lặng.
     </p>
   </div>
 
-  <h2 style="font-family: var(--font-serif); color: #111; font-size: 1.55rem; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e0d5c1;">
-    1. Bốn Nghìn Năm Văn Hiến: Bản Trường Ca Của Lòng Bất Khuất & Nhân Nghĩa
+  <!-- Section 1 -->
+  <h2 style=\"font-family: var(--font-serif); font-size: 1.65rem; color: #111; margin-top: 40px; margin-bottom: 18px; border-bottom: 1px solid #e8e8e8; padding-bottom: 10px;\">
+    1. Ngọn Lửa Tự Hào Dân Tộc Trong Huyết Quản Mỗi Người Con Đất Việt
   </h2>
-  <p style="font-size: 1rem; margin-bottom: 18px; text-align: justify;">
-    Hiếm có một dân tộc nào trên thế giới trải qua nhiều thăng trầm lịch sử, đối mặt với vô vàn cuộc xâm lăng khốc liệt mà vẫn giữ vững được tiếng nói, phong tục và ý chí độc lập như dân tộc Việt Nam. Từ thuở các Vua Hùng dựng nước Văn Lang, qua tiếng trống đồng Mê Linh của Hai Bà Trưng, chiến thắng Bạch Đằng vang dội của Ngô Quyền và Hưng Đạo Đại Vương, đến bản Tuyên ngôn Độc lập bất hủ của Chủ tịch Hồ Chí Minh, lòng tự hào dân tộc luôn là sợi dây liên kết thiêng liêng nhất kết nối hàng triệu trái tim người Việt.
-  </p>
-  <p style="font-size: 1rem; margin-bottom: 18px; text-align: justify;">
-    Lòng tự hào ấy không phải là sự tự mãn hẹp hòi, mà là <strong>tinh thần tự tôn văn hóa</strong>, là ý thức về cội nguồn sâu xa "Đồng Bào" (sinh ra từ bọc trăm trứng của Mẹ Âu Cơ), nhắc nhở chúng ta dù ở bất cứ nơi đâu cũng phải biết đùm bọc, yêu thương và chở che lẫn nhau.
+
+  <p>
+    Dân tộc Việt Nam đã trải qua hơn bốn nghìn năm lịch sử thăng trầm dựng nước và giữ nước. Từ huyền tích bọc trăm trứng của Mẹ Âu Cơ và Cha Lạc Long Quân, qua những triều đại hào hùng Đinh – Lý – Trần – Lê với những chiến công hiển hách lẫy lừng năm châu, cho đến công cuộc mở cõi phương Nam vĩ đại... tinh thần độc lập, quật cường và lòng tự hào dân tộc luôn là sợi chỉ đỏ xuyên suốt, nuôi dưỡng tâm hồn của hàng triệu người con đất Việt.
   </p>
 
-  <h2 style="font-family: var(--font-serif); color: #111; font-size: 1.55rem; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e0d5c1;">
-    2. Tự Hào Dân Tộc Trong Thời Đại Mới: Khát Vọng Nâng Tầm Giá Trị Việt
-  </h2>
-  <p style="font-size: 1rem; margin-bottom: 18px; text-align: justify;">
-    Bước vào thế kỷ 21, tình yêu quê hương đất nước được thể hiện qua những hành động cụ thể và thiết thực: đó là những doanh nhân Việt dũng cảm đưa thương hiệu quốc gia ra đấu trường quốc tế, là các nhà khoa học trẻ đóng góp trí tuệ cho nhân loại, và là những nhà phát triển bất động sản tâm huyết kiến tạo nên những công trình tôn vinh văn hóa bản địa.
-  </p>
-  <p style="font-size: 1rem; margin-bottom: 18px; text-align: justify;">
-    Tại <strong>Saigon Farm Resort</strong>, trục không gian <strong>"Dòng Sử Việt – Về Nguồn"</strong> được xây dựng như một công viên di sản sống động. Bằng nghệ thuật chạm khắc phù điêu đá bazan, nghệ thuật ánh sáng và mặt nước hồ 100ha, dòng chảy 4.000 năm lịch sử được kể lại một cách trang trọng, giúp mỗi cư dân và con trẻ khi tản bộ nơi đây đều cảm nhận được dòng máu kiêu hùng đang cuộn chảy trong tim mình.
+  <p>
+    Dù có đi đến bất cứ phương trời nào, làm việc tại những trung tâm tài chính sầm uất nhất thế giới, người Việt thành đạt luôn mang trong tim một khát vọng thiêng liêng: <strong>trở về nguồn cội, tôn vinh những giá trị văn hóa của cha ông và để lại cho con cháu một di sản tinh thần trường tồn</strong>.
   </p>
 
-  <h2 style="font-family: var(--font-serif); color: #111; font-size: 1.55rem; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e0d5c1;">
-    3. Lời Kết: Gìn Giữ Ngọn Lửa Tự Hào Cho Thế Hệ Mai Sau
-  </h2>
-  <p style="font-size: 1rem; margin-bottom: 24px; text-align: justify;">
-    Một cái cây muốn vươn cao đón nắng gió đại ngàn thì bộ rễ phải bám thật sâu vào lòng đất mẹ. Một đứa trẻ lớn lên trong sự thấu hiểu và tự hào về lịch sử dân tộc sẽ luôn có một bản lĩnh kiên định, không bị hòa tan giữa làn sóng toàn cầu hóa. Đó chính là tâm huyết lớn nhất mà Đại Chúng Properties gửi gắm vào từng mét vuông không gian tại Saigon Farm Resort.
+  <p>
+    Tại <strong>Saigon Farm Resort</strong>, lòng tự hào ấy không phải là những bài học lý thuyết khô cứng trên sách vở, mà được hữu hình hóa một cách sống động và tôn nghiêm thành <strong>Trục Cảnh Quan 'Dòng Sử Việt – Về Nguồn'</strong> và <strong>Không Gian 'Vườn Cội'</strong>, biến toàn bộ quần thể điền trang thành một bức tranh sử thi hào hùng chạm đến trái tim của mỗi du khách và cư dân.
   </p>
 
-  <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
-    <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Dự Án:</strong> Saigon Farm Resort</p>
-    <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
-    <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
-      <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Nhận Bảng Giá & Đặt Lịch Trải Nghiệm
+  <!-- Section 2: 4 Historical Epochs -->
+  <h2 style=\"font-family: var(--font-serif); font-size: 1.65rem; color: #111; margin-top: 40px; margin-bottom: 18px; border-bottom: 1px solid #e8e8e8; padding-bottom: 10px;\">
+    2. Dòng Sử Việt: 4.000 Năm Lịch Sử Kể Bằng Ngôn Ngữ Cảnh Quan Nghệ Thuật
+  </h2>
+
+  <p>
+    Trục cảnh quan <strong>Dòng Sử Việt – Về Nguồn</strong> uốn lượn dọc theo triền hồ 100ha, được chia thành 4 phân đoạn biểu tượng tương ứng với 4 thời kỳ lịch sử trọng đại của dân tộc:
+  </p>
+
+  <div style=\"margin: 26px 0;\">
+    <div style=\"background: #fff; padding: 22px; border-radius: 8px; border: 1px solid #e8e8e8; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);\">
+      <h4 style=\"color: #8a6d3b; margin-top: 0; font-size: 1.18rem;\">
+        🏛️ 1. Khởi Nguồn Văn Lang — Âu Lạc & Thời Đại Các Vua Hùng
+      </h4>
+      <p style=\"font-size: 0.94rem; color: #444; line-height: 1.75; margin: 0;\">
+        Tái hiện bằng những tác phẩm đúc đồng tinh xảo mang họa tiết <strong>Trống Đồng Đông Sơn, hoa văn chim Lạc tung cánh</strong>, kết hợp các cụm phù điêu gốm nung kể lại truyền thuyết Bánh Chưng Bánh Giầy, Thánh Gióng nhổ tre đánh giặc và Sơn Tinh Thủy Tinh. Nơi con trẻ được chạm tay vào những biểu tượng khởi thủy của nền văn minh lúa nước sông Hồng.
+      </p>
+    </div>
+
+    <div style=\"background: #fff; padding: 22px; border-radius: 8px; border: 1px solid #e8e8e8; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);\">
+      <h4 style=\"color: #8a6d3b; margin-top: 0; font-size: 1.18rem;\">
+        ⚔️ 2. Hào Khí Đông A & Những Trang Sử Vàng Độc Lập
+      </h4>
+      <p style=\"font-size: 0.94rem; color: #444; line-height: 1.75; margin: 0;\">
+        Những khối đá cuội tự nhiên nguyên khối được tạc khắc những lời tuyên ngôn bất hủ: <em>Nam Quốc Sơn Hà, Hịch Tướng Sĩ, Bình Ngô Đại Cáo</em> bên cạnh các biểu tượng cọc gỗ Bạch Đằng oai hùng. Dòng nước róc rách luân chuyển quanh chân các phiến đá như biểu trưng cho hào khí ngút trời của cha ông qua ngàn năm dông bão.
+      </p>
+    </div>
+
+    <div style=\"background: #fff; padding: 22px; border-radius: 8px; border: 1px solid #e8e8e8; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);\">
+      <h4 style=\"color: #8a6d3b; margin-top: 0; font-size: 1.18rem;\">
+        🌾 3. Hành Trình Mở Cõi Phương Nam & Hương Đất Trù Phú
+      </h4>
+      <p style=\"font-size: 0.94rem; color: #444; line-height: 1.75; margin: 0;\">
+        Tôn vinh bước chân mở cõi của các bậc tiền nhân khai hoang lập ấp trên vùng đất phương Nam. Tái hiện bằng những rặng tre ngà rợp bóng, những chiếc cầu khỉ mộc mạc, cối giã gạo nước và không gian lúa mùa trĩu hạt — Nhắc nhớ thế hệ sau về mồ hôi và xương máu của tổ tiên để có được dải non sông gấm vóc trù phú hôm nay.
+      </p>
+    </div>
+
+    <div style=\"background: #fff; padding: 22px; border-radius: 8px; border: 1px solid #e8e8e8; box-shadow: 0 4px 12px rgba(0,0,0,0.04);\">
+      <h4 style=\"color: #8a6d3b; margin-top: 0; font-size: 1.18rem;\">
+        🌟 4. Kỷ Nguyên Vươn Mình & Khát Vọng Hội Nhập Toàn Cầu
+      </h4>
+      <p style=\"font-size: 0.94rem; color: #444; line-height: 1.75; margin: 0;\">
+        Biểu tượng của nước Việt Nam hiện đại, tự tin sánh vai cùng các cường quốc năm châu. Sự kết hợp giữa nghệ thuật chiếu sáng ánh sáng tương tác đương đại và mặt hồ 100ha lộng gió thể hiện khát vọng vươn cao, vươn xa của thế hệ trẻ nhưng luôn giữ vững gốc rễ bản sắc dân tộc.
+      </p>
+    </div>
+  </div>
+
+  <div style=\"margin: 30px 0; text-align: center;\">
+    <img src=\"assets/posts/xa_xi_ban_sac/cover.jpg\" alt=\"Không gian kiến trúc điền trang mộc mạc lưu giữ bản sắc Việt\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
+    <p style=\"font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;\">
+      Kiến trúc nhà gỗ cổ truyền tại Saigon Farm Resort — Biểu tượng của sự vững chãi, đạo hiếu và sự tiếp nối truyền thống gia tộc.
+    </p>
+  </div>
+
+  <!-- Section 3: Vườn Cội & Đạo Hiếu -->
+  <h2 style=\"font-family: var(--font-serif); font-size: 1.65rem; color: #111; margin-top: 40px; margin-bottom: 18px; border-bottom: 1px solid #e8e8e8; padding-bottom: 10px;\">
+    3. Vườn Cội (The Roots Garden): Nơi Khắc Ghi Đạo Hiếu & Di Sản Gia Tộc
+  </h2>
+
+  <p>
+    Người xưa có câu: <em>'Cây có cội mới trổ cành xanh lá, nước có nguồn mới bủa khắp rạch sông'</em>. Tại phân khu <strong>Vườn Cội (The Roots Garden)</strong>, mỗi gia đình chủ nhân điền trang được dành riêng một không gian thiêng liêng để thực hiện <strong>Nghi Thức Trồng Cây Di Sản Gia Tộc</strong>:
+  </p>
+
+  <div style=\"background: #fdfbf7; border: 1px solid #eadbc8; border-left: 4px solid #c9a96e; padding: 22px 26px; border-radius: 6px; margin: 26px 0;\">
+    <h4 style=\"margin-top: 0; color: #926f34; font-size: 1.15rem;\"><i class=\"fa-solid fa-tree\"></i> Ý Nghĩa Của Nghi Thức Vun Trồng Cây Cội Nguồn:</h4>
+    <ul style=\"margin-bottom: 0; padding-left: 20px; line-height: 1.8;\">
+      <li><strong>Ba thế hệ cùng vun trồng:</strong> Ông bà đặt bầu đất, cha mẹ tưới nước và con cháu tự tay gắn chiếc bảng đồng khắc tên gia tộc và năm trồng lên thân cây.</li>
+      <li><strong>Chứng nhân của thời gian:</strong> Cây cổ thụ (Gõ đỏ, Sao đen, Giáng hương, Bồ đề) sẽ lớn lên cùng sự trưởng thành của con trẻ, tỏa bóng mát che chở qua hàng chục, hàng trăm năm, trở thành biểu tượng sống của nếp nhà hưng thịnh.</li>
+      <li><strong>Bài học đạo hiếu sâu sắc:</strong> Mỗi lần về thăm điền trang, đứng dưới bóng mát cây gia tộc, con cháu được nhắc nhở về công ơn sinh thành dưỡng dục của tổ tiên, nuôi dưỡng lòng biết ơn và sự gắn kết anh em ruột thịt.</li>
+    </ul>
+  </div>
+
+  <div style=\"margin: 30px 0; text-align: center;\">
+    <img src=\"assets/Index_asset/Tien_ich_minh_hoa/Nha_am_sac_viet.png\" alt=\"Không gian Nhà Âm Sắc Việt lưu giữ nét đẹp 54 dân tộc\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
+    <p style=\"font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;\">
+      Nhà Âm Sắc Việt — Nơi hội tụ tinh hoa trang phục và âm nhạc truyền thống của cộng đồng 54 dân tộc anh em.
+    </p>
+  </div>
+
+  <!-- Section 4: 5 Pillars Table -->
+  <h2 style=\"font-family: var(--font-serif); font-size: 1.65rem; color: #111; margin-top: 40px; margin-bottom: 18px; border-bottom: 1px solid #e8e8e8; padding-bottom: 10px;\">
+    4. Bảng 5 Trụ Cột Di Sản Văn Hóa & Tinh Thần Tại Saigon Farm Resort
+  </h2>
+
+  <div style=\"overflow-x: auto; margin: 26px 0;\">
+    <table style=\"width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.06); border-radius: 8px; overflow: hidden;\">
+      <thead>
+        <tr style=\"background: #1e3a2f; color: #ffffff;\">
+          <th style=\"padding: 14px 16px; border: 1px solid #142820; width: 22%; font-family: var(--font-serif); font-size: 1.02rem; color: #e8d08d;\">TRỤ CỘT DI SẢN</th>
+          <th style=\"padding: 14px 16px; border: 1px solid #142820; width: 26%; font-family: var(--font-serif); font-size: 1.02rem;\">KHÔNG GIAN HIỆN THỰC</th>
+          <th style=\"padding: 14px 16px; border: 1px solid #142820; width: 24%; font-family: var(--font-serif); font-size: 1.02rem; text-align: center; color: #e8d08d;\">HÌNH THỨC TRẢI NGHIỆM</th>
+          <th style=\"padding: 14px 16px; border: 1px solid #142820; width: 28%; font-family: var(--font-serif); font-size: 1.02rem; color: #e8d08d;\">GIÁ TRỊ TRAO TRUYỀN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">1. Ký Ức 4.000 Năm Lịch Sử</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Trục cảnh quan Dòng Sử Việt – Về Nguồn</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; color: #444;\">Dạo bộ, ngắm phù điêu, tương tác ánh sáng nước</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #555;\">Thấu hiểu nguồn cội, nuôi dưỡng lòng yêu nước và niềm tự tôn dân tộc.</td>
+        </tr>
+        <tr style=\"background: #faf8f5;\">
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">2. Đạo Hiếu & Cội Nguồn Gia Tộc</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Phân khu Vườn Cội (The Roots Garden)</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; color: #444;\">Trồng cây gia đình, lễ mừng thọ, họp mặt gia tộc</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #555;\">Gắn kết tam đại đồng đường, gìn giữ nếp nhà danh gia vọng tộc.</td>
+        </tr>
+        <tr>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">3. Tinh Hoa Nghệ Thuật & Âm Nhạc</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Nhà Âm Sắc Việt & Quảng Trường Hội Việt</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; color: #444;\">Thưởng thức Đàn Đá, Đàn Tranh, mặc cổ phục 54 dân tộc</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #555;\">Bồi đắp mỹ cảm nghệ thuật truyền thống và sự đa dạng văn hóa.</td>
+        </tr>
+        <tr style=\"background: #faf8f5;\">
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">4. Đôi Tay Khéo Léo & Trí Tuệ Dân Gian</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Giáo Trí Việt (The Maker's House)</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; color: #444;\">Làm gốm, nặn tò he, đan cào cào lá dừa, viết thư pháp</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #555;\">Rèn tính kiên nhẫn, khéo tay và tình yêu lao động chân chính.</td>
+        </tr>
+        <tr>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">5. Nông Nghiệp Thuần Khiết & Ẩm Thực</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Nếp Nhà Việt & Cánh Đồng Lúa Mùa</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; color: #444;\">Gặt lúa, hái rau hữu cơ, mâm cơm sum vầy gia đình</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #555;\">Biết ơn đất mẹ, trân quý từng hạt ngọc trời và nuôi dưỡng thân tâm lành mạnh.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style=\"margin: 30px 0; text-align: center;\">
+    <img src=\"assets/Index_asset/Phoicanh/S01_Final_Fix.jpg\" alt=\"Toàn cảnh quần thể điền trang nghỉ dưỡng sinh thái Saigon Farm Resort\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
+    <p style=\"font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;\">
+      Toàn cảnh Saigon Farm Resort — Nơi tinh hoa văn hóa truyền thống thăng hoa cùng chuẩn mực nghỉ dưỡng sinh thái đương đại.
+    </p>
+  </div>
+
+  <!-- Section 5: Conclusion -->
+  <h2 style=\"font-family: var(--font-serif); font-size: 1.65rem; color: #111; margin-top: 40px; margin-bottom: 18px; border-bottom: 1px solid #e8e8e8; padding-bottom: 10px;\">
+    5. Di Sản Để Lại Cho Muôn Đời Sau
+  </h2>
+
+  <p>
+    Tài sản vật chất có thể thăng trầm theo thời gian, nhưng <strong>những giá trị văn hóa cội nguồn và lòng tự hào dân tộc được khắc sâu trong trái tim con trẻ sẽ là báu vật vô giá theo suốt cuộc đời</strong>.
+  </p>
+
+  <p>
+    Sở hữu một điền trang tại <strong>Saigon Farm Resort</strong> chính là cách người thành đạt khẳng định tầm vóc và cốt cách của mình: kiến tạo một tư gia không chỉ để nghỉ ngơi hưởng thụ, mà để xây đắp một mái ấm lưu giữ ngọn lửa tự hào dân tộc cho các thế hệ con Lạc cháu Hồng mai sau.
+  </p>
+
+  <div style=\"border: 2px dashed #c9a96e; background: #fffcf7; padding: 24px 30px; border-radius: 8px; margin: 36px 0; text-align: center;\">
+    <h3 style=\"color: #926f34; margin-top: 0; margin-bottom: 10px; font-family: var(--font-serif); font-size: 1.4rem;\">
+      Trải Nghiệm Trục Cảnh Quan Dòng Sử Việt Tại Saigon Farm Resort
+    </h3>
+    <p style=\"font-size: 1rem; color: #555; margin-bottom: 18px; line-height: 1.7;\">
+      Đăng ký tham quan thực tế quần thể điền trang, trải nghiệm trục cảnh quan Dòng Sử Việt và khám phá không gian Vườn Cội gia tộc.
+    </p>
+    <a href=\"https://zalo.me/0906060036\" target=\"_blank\" style=\"display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; font-weight: 700; padding: 12px 28px; border-radius: 6px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(0,104,255,0.3);\">
+      <i class=\"fa-solid fa-comment-dots\"></i> Nhắn Zalo 0906060036 Đăng Ký Tham Quan Điền Trang Di Sản
     </a>
   </div>
 
-  <div style="border-top: 1px solid #e0d5c1; padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
-    <div>
-      <span style="font-size: 0.85rem; color: #888; display: block;">Tác giả chuyên đề:</span>
-      <strong style="color: #111; font-size: 0.95rem;">Hội Đồng Nghiên Cứu Văn Hóa Đại Chúng Properties</strong>
-    </div>
-    <div style="display: flex; gap: 10px;">
-      <a href="index.html#tabs-section" class="editorial-btn" style="padding: 8px 16px; font-size: 0.82rem; text-decoration: none;">
-        ← Về Danh Mục Chuyên Đề
-      </a>
-      <a href="https://zalo.me/0906060036" target="_blank" class="editorial-btn" style="padding: 8px 16px; font-size: 0.82rem; background: #0068FF; color: #fff; border-color: #0068FF; text-decoration: none;">
-        Tư Vấn Trực Tiếp (Zalo)
-      </a>
-    </div>
-  </div>
-
 </article>
-"""
-    },
-
-    # -------------------------------------------------------------
-    # 6. VĂN HÓA LÀ CON ĐƯỜNG NUÔI DẠY CON CÁI TỐT NHẤT (ID: 406)
-    # -------------------------------------------------------------
+"
+}
     {
         "id": 406,
         "title": "Văn Hóa & Thiên Nhiên: Con Đường Nuôi Dạy & Định Hình Nhân Cách Con Trẻ Bền Vững Nhất",

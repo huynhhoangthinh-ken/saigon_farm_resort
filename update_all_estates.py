@@ -50,7 +50,7 @@ html = html.replace(tab_buttons_old, tab_buttons_new)
 tab_villas_market_html = """<!-- Tab 1: Biệt Phủ Điền Trang (tab-villas-market) -->
 <div class="tab-content active" id="tab-villas-market">
   <!-- Intro Banner: 4 Loại Hình Biệt Phủ Điền Trang -->
-  <div style="background: linear-gradient(135deg, rgba(201,169,110,0.2) 0%, rgba(17,17,17,0.94) 100%), url('assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg') center/cover; padding: 38px 24px; border-radius: 10px; margin-bottom: 32px; border: 1px solid rgba(201,169,110,0.4); text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
+  <div style="background: linear-gradient(135deg, rgba(201,169,110,0.2) 0%, rgba(17,17,17,0.94) 100%), url('assets/Index_asset/Phoicanh/S01_Final_Fix.jpg') center/cover; padding: 38px 24px; border-radius: 10px; margin-bottom: 32px; border: 1px solid rgba(201,169,110,0.4); text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
     <span style="background: #c9a96e; color: #000; font-size: 0.75rem; font-weight: 800; padding: 5px 16px; border-radius: 20px; letter-spacing: 0.1em; text-transform: uppercase;">DANH MỤC BIỆT PHỦ MỞ BÁN</span>
     <h3 style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.3rem); color: #fff; margin: 14px 0 8px;">BỘ SƯU TẬP 4 LOẠI HÌNH BIỆT PHỦ ĐIỀN TRANG</h3>
     <p style="max-width: 850px; margin: 0 auto; color: #ddd; font-size: 0.98rem; line-height: 1.6;">
@@ -64,7 +64,7 @@ tab_villas_market_html = """<!-- Tab 1: Biệt Phủ Điền Trang (tab-villas-m
     <!-- Model 1: Điền Trang Sunrise 1 -->
     <div class="grid-card" style="border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 6px 24px rgba(0,0,0,0.07); border: 1px solid #e0d5c1; display: flex; flex-direction: column; height: 100%;">
       <div class="grid-img" style="position: relative; height: 230px;">
-        <img alt="Điền Trang Sunrise 1" src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+        <img alt="Điền Trang Sunrise 1" src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg" style="width:100%; height:100%; object-fit:cover;"/>
         <span style="position: absolute; top: 12px; left: 12px; background: #c9a96e; color: #000; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.03em;">3PN TRỆT • ĐÓN BÌNH MINH</span>
         <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
       </div>
@@ -197,7 +197,7 @@ tab_masterplan_html = """<!-- Tab 4: Mặt Bằng & Quy Hoạch (tab-masterplan)
   <div class="top-listings-grid">
     <!-- Top 1: Phối cảnh tổng thể -->
     <a class="top-listing-card" href="article.html?id=122" style="text-decoration: none; color: inherit; display: block;">
-      <div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg');"></div>
+      <div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoicanh/S01_Final_Fix.jpg');"></div>
       <span class="top-listing-minh-hoa">* Hình ảnh minh họa</span>
       <div class="top-listing-info">
         <h4>Phối Cảnh Toàn Cảnh Điền Trang 100ha</h4>
@@ -215,7 +215,7 @@ tab_masterplan_html = """<!-- Tab 4: Mặt Bằng & Quy Hoạch (tab-masterplan)
     </a>
     <!-- Top 3: Phối cảnh trên cao -->
     <a class="top-listing-card" href="article.html?id=303" style="text-decoration: none; color: inherit; display: block;">
-      <div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoi_canh_tong_the/SFR_NEW_S02.jpg');"></div>
+      <div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoicanh/NEW_S02.jpg');"></div>
       <span class="top-listing-minh-hoa">* Hình ảnh minh họa</span>
       <div class="top-listing-info">
         <h4>Quy Hoạch & Pháp Lý Minh Bạch</h4>
@@ -359,7 +359,7 @@ tab_masterplan_html = """<!-- Tab 4: Mặt Bằng & Quy Hoạch (tab-masterplan)
     <div class="sub-tab-content" id="subtab-villa-climate">
       <div class="grid-listing">
         <a class="grid-card" href="article.html?id=111" style="text-decoration: none; color: inherit; display: block;">
-          <div class="grid-img"><img alt="Phong thủy Sunrise" src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(2).jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+          <div class="grid-img"><img alt="Phong thủy Sunrise" src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(2).jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
           <div class="grid-card-info">
             <h5>Phong Thủy Điền Trang Hướng Đông: Đón Vượng Khí Nắng Sớm</h5>
             <p class="grid-card-subtitle">Thế đất Tọa Sơn Hướng Thủy, đón photon năng lượng dương tái tạo thể chất và tinh thần</p>
@@ -383,7 +383,7 @@ tab_masterplan_html = """<!-- Tab 4: Mặt Bằng & Quy Hoạch (tab-masterplan)
           </div>
         </a>
         <a class="grid-card" href="article.html?id=114" style="text-decoration: none; color: inherit; display: block;">
-          <div class="grid-img"><img alt="Thủy khí hồ 100ha" src="assets/Index_asset/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+          <div class="grid-img"><img alt="Thủy khí hồ 100ha" src="assets/Index_asset/Phoicanh/S01_Final_Fix.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
           <div class="grid-card-info">
             <h5>Thủy Khí Hồ 100ha: Trụ Cột Nuôi Dưỡng Sức Khỏe Gia Chủ</h5>
             <p class="grid-card-subtitle">Nồng độ ion âm cực đại, không khí sạch chuẩn quốc tế và hiệu ứng Blue Mind giảm stress</p>
@@ -397,7 +397,7 @@ tab_masterplan_html = """<!-- Tab 4: Mặt Bằng & Quy Hoạch (tab-masterplan)
     <div class="sub-tab-content" id="subtab-villa-experience">
       <div class="grid-listing">
         <a class="grid-card" href="article.html?id=115" style="text-decoration: none; color: inherit; display: block;">
-          <div class="grid-img"><img alt="Pool & Farm" src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(4).jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+          <div class="grid-img"><img alt="Pool & Farm" src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(4).jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
           <div class="grid-card-info">
             <h5>Đặc Quyền Hồ Bơi Vô Cực & Vườn Nông Trại Riêng</h5>
             <p class="grid-card-subtitle">Bể bơi khoáng muối tự nhiên 45m² và mảnh vườn rau củ quả tự thu hoạch chuẩn Farm-to-Table</p>
@@ -484,7 +484,7 @@ else:
 # 4. Tab 2: Điền Trang Sinh Thái (tab-eco-villas)
 tab_eco_villas_html = """<!-- Tab 3: Điền Trang Sinh Thái (tab-eco-villas) -->
 <div class="tab-content" id="tab-eco-villas">
-  <div style="background: linear-gradient(135deg, rgba(46,125,50,0.18) 0%, rgba(17,17,17,0.92) 100%), url('assets/Index_asset/Phoi_canh_tong_the/SFR_NEW_S02.jpg') center/cover; padding: 36px 24px; border-radius: 10px; margin-bottom: 30px; border: 1px solid rgba(46,125,50,0.35); text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
+  <div style="background: linear-gradient(135deg, rgba(46,125,50,0.18) 0%, rgba(17,17,17,0.92) 100%), url('assets/Index_asset/Phoicanh/NEW_S02.jpg') center/cover; padding: 36px 24px; border-radius: 10px; margin-bottom: 30px; border: 1px solid rgba(46,125,50,0.35); text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.35);">
     <span style="background: #2e7d32; color: #fff; font-size: 0.75rem; font-weight: 800; padding: 5px 14px; border-radius: 20px; letter-spacing: 0.1em; text-transform: uppercase;">CHUẨN SỐNG ECO-LUXURY</span>
     <h3 style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.2rem); color: #fff; margin: 14px 0 8px;">4 MẪU BIỆT PHỦ ĐIỀN TRANG SINH THÁI ĐỘC BẢN</h3>
     <p style="max-width: 820px; margin: 0 auto; color: #ddd; font-size: 0.96rem; line-height: 1.6;">
@@ -496,7 +496,7 @@ tab_eco_villas_html = """<!-- Tab 3: Điền Trang Sinh Thái (tab-eco-villas) -
     <!-- Sunrise 1 -->
     <a href="article.html?id=103" class="grid-card" style="text-decoration: none; color: inherit; display: block; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #e0d5c1;">
       <div class="grid-img" style="position: relative; height: 220px;">
-        <img alt="Điền Trang Sunrise 1" src="assets/Index_asset/02_Phoi_Canh_3D/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+        <img alt="Điền Trang Sunrise 1" src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg" style="width:100%; height:100%; object-fit:cover;"/>
         <span style="position: absolute; top: 12px; left: 12px; background: #c9a96e; color: #000; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 4px;">MẪU 3PN • ĐÓN BÌNH MINH</span>
         <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
       </div>
