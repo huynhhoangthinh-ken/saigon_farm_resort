@@ -1,0 +1,585 @@
+/* ================================================================
+   RESPONSIVE.CSS — Complete Mobile-First Responsive System
+   Breakpoints:
+   - Mobile:   < 480px
+   - Mobile+:  < 640px
+   - Tablet:   < 768px
+   - Laptop:   < 1024px
+   - Desktop:  >= 1024px
+================================================================ */
+
+/* ---- MOBILE MENU DRAWER ELEMENTS ---- */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 900;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: min(320px, 85vw);
+  height: 100vh;
+  background: #0d0d0d;
+  z-index: 950;
+  overflow-y: auto;
+  transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu-drawer.open { left: 0; }
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.mobile-menu-logo {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.mobile-menu-close {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  flex: 1;
+}
+.mobile-menu-links a {
+  display: block;
+  padding: 16px 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-menu-links a:hover, .mobile-menu-links a.active {
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+}
+.mobile-menu-footer {
+  padding: 20px 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.05em;
+}
+
+/* ================================================================
+   LAPTOP — max-width: 1024px
+================================================================ */
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+  .hero-title { font-size: 2.75rem; }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .category-card { height: 380px; }
+  .news-grid { grid-template-columns: 1fr; gap: 24px; }
+  .featured-news-card { height: auto; }
+  .featured-news-img-wrap, .featured-news-bg { height: 260px; }
+  .side-news-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .side-news-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .side-news-thumb { width: 100%; height: 160px; }
+  .top-listing { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .grid-listing { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .footer-top-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+/* ================================================================
+   TABLET — max-width: 768px
+================================================================ */
+@media (max-width: 768px) {
+  /* Top bar */
+  .top-bar { display: none; }
+
+  /* Header — fixed + frosted glass */
+  .main-header {
+    position: fixed;
+    top: 0;
+    background: rgba(10,10,10,0.93);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 12px 0;
+  }
+  .header-container { gap: 12px; }
+  .nav-menu-links { display: none; }
+  .mobile-menu-overlay { display: block; }
+  .brand-avatar-ring { width: 38px; height: 38px; }
+  .brand-logo { font-size: 1.05rem; }
+  .brand-tagline { font-size: 0.52rem; }
+
+  /* Hero — Mobile clean layout (photo top, text card bottom, NO text over photos) */
+  .hero-section {
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding-top: 54px !important;
+    background: #0e1410 !important;
+    overflow: visible !important;
+  }
+  .hero-slider-wrap {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    height: 250px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    z-index: 1 !important;
+  }
+  .hero-slide {
+    position: absolute !important;
+    inset: 0 !important;
+  }
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.35) 100%) !important;
+  }
+  .hero-minh-hoa-tag {
+    position: absolute !important;
+    bottom: 8px !important;
+    right: 8px !important;
+    font-size: 0.62rem !important;
+    padding: 3px 8px !important;
+    border-radius: 3px !important;
+    background: rgba(0,0,0,0.7) !important;
+    color: #e0e0e0 !important;
+    backdrop-filter: blur(4px) !important;
+    z-index: 10 !important;
+  }
+  .hero-bottom-controls {
+    display: flex !important;
+    position: absolute !important;
+    left: 8px !important;
+    bottom: 8px !important;
+    right: auto !important;
+    padding: 4px 8px !important;
+    background: rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(6px) !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    z-index: 20 !important;
+    gap: 10px !important;
+  }
+  .hero-btn {
+    font-size: 0.88rem !important;
+    padding: 2px 6px !important;
+  }
+  .hero-content {
+    position: relative !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 20px 28px !important;
+    background: #111613 !important;
+    border-bottom: 2px solid rgba(201,169,110,0.3) !important;
+    color: #fff !important;
+    justify-content: flex-start !important;
+    z-index: 5 !important;
+  }
+  .hero-title {
+    font-size: 1.48rem !important;
+    line-height: 1.32 !important;
+    max-width: 100% !important;
+    margin-bottom: 12px !important;
+    text-shadow: none !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+  }
+  .hero-subtitle {
+    font-size: 0.92rem !important;
+    color: #cccccc !important;
+    line-height: 1.6 !important;
+    margin-top: 0 !important;
+    text-shadow: none !important;
+  }
+  .hero-cta-btns {
+    margin-top: 18px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .hero-cta-zalo, .hero-cta-car {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 10px !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    line-height: 1.35 !important;
+    gap: 6px !important;
+    min-height: 48px !important;
+  }
+  .hero-cta-zalo i, .hero-cta-car i {
+    font-size: 0.85rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Section */
+  :root { --section-padding: 48px 0; }
+  .section-title { font-size: 1.6rem !important; margin-bottom: 20px !important; }
+  .section-header-flex { flex-wrap: wrap !important; gap: 12px !important; }
+
+  /* Tab Intro Banners — Pure luxury dark card without photo overlay clash */
+  .tab-intro-banner {
+    background: linear-gradient(135deg, #18221b 0%, #121814 100%) !important;
+    background-image: linear-gradient(135deg, #18221b 0%, #121814 100%) !important;
+    padding: 22px 18px !important;
+    border-radius: 8px !important;
+    margin-bottom: 22px !important;
+    border: 1px solid rgba(201,169,110,0.35) !important;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25) !important;
+    text-align: center !important;
+  }
+  .tab-intro-tag {
+    background: #c9a96e !important;
+    color: #000 !important;
+    font-size: 0.72rem !important;
+    padding: 4px 14px !important;
+    border-radius: 20px !important;
+    letter-spacing: 0.08em !important;
+    display: inline-block !important;
+  }
+  .tab-intro-title {
+    font-size: 1.3rem !important;
+    color: #ffffff !important;
+    margin: 12px 0 8px !important;
+    line-height: 1.35 !important;
+  }
+  .tab-intro-desc {
+    font-size: 0.88rem !important;
+    color: #dddddd !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Estate Cards Mobile Structure (Photo top, clean text below) */
+  .estate-card {
+    background: #ffffff !important;
+    border: 1px solid #dfd7c5 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+  }
+  .estate-card__img {
+    height: 190px !important;
+    width: 100% !important;
+    position: relative !important;
+    background: #f0ece3 !important;
+    overflow: hidden !important;
+  }
+  .estate-card__img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+  .estate-card__body {
+    padding: 16px 14px 18px !important;
+  }
+
+  /* Categories */
+  .categories-grid { grid-template-columns: 1fr; gap: 12px; }
+  .category-card { height: 260px; }
+
+  /* Trending */
+  .trending-card { width: 210px; }
+  .trending-img-wrapper { height: 148px; }
+
+  /* News — Featured card with top image + bottom content box (Huỳnh Hoàng Thịnh style) */
+  .featured-news-card {
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ebe6df;
+    overflow: hidden;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  .featured-news-img-wrap,
+  .featured-news-bg {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    inset: auto;
+    flex-shrink: 0;
+  }
+  .featured-news-overlay {
+    display: none;
+  }
+  .featured-news-body {
+    position: relative;
+    z-index: 5;
+    padding: 18px 18px 22px;
+    background: #ffffff;
+  }
+  .news-date-badge {
+    color: #8a6d3b;
+    font-size: 0.72rem;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .featured-news-title {
+    font-size: 1.25rem;
+    line-height: 1.38;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  .featured-news-excerpt {
+    font-size: 0.88rem;
+    color: #666666;
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .side-news-list { display: flex; flex-direction: column; gap: 14px; }
+  .side-news-item { flex-direction: row; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); }
+  .side-news-thumb { width: 110px; height: 78px; }
+
+  /* Podcast */
+  .podcast-section-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .podcast-list { grid-template-columns: 1fr; gap: 16px; }
+  .podcast-card-box { padding: 20px; }
+  .podcast-title { font-size: 1.1rem; }
+
+  /* Tabs */
+  .tabs-header { gap: 2px; overflow-x: auto; padding-bottom: 0; }
+  .tab-btn { padding: 12px 14px; font-size: 0.82rem; }
+
+  /* Top listing */
+  .top-listing { grid-template-columns: 1fr; gap: 16px; }
+  .top-listing-card { height: auto; }
+
+  /* Grid listing — 2 col */
+  .grid-listing { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .grid-card { height: auto; }
+  .grid-card h5 { font-size: 0.98rem; }
+  .car-price { font-size: 0.76rem !important; }
+
+  /* Footer */
+  .footer-top-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom-bar { flex-direction: column; gap: 10px; text-align: center; }
+
+  /* Zalo */
+  .zalo-floating-btn { width: 52px; height: 52px; bottom: 20px; right: 16px; }
+  .zalo-icon { font-size: 1.5rem; }
+}
+
+/* ================================================================
+   MOBILE — max-width: 480px
+================================================================ */
+@media (max-width: 480px) {
+  .container { padding: 0 14px; }
+
+  /* Hero */
+  .hero-slider-wrap { height: 235px !important; }
+  .hero-content { padding: 18px 14px 20px !important; }
+  .hero-title { font-size: 1.32rem !important; line-height: 1.3 !important; }
+  .hero-subtitle { font-size: 0.86rem !important; }
+  .hero-cta-btns {
+    margin-top: 14px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .hero-cta-zalo, .hero-cta-car {
+    padding: 10px 6px !important;
+    font-size: 0.76rem !important;
+    min-height: 44px !important;
+    gap: 5px !important;
+    line-height: 1.3 !important;
+  }
+  .hero-cta-zalo i, .hero-cta-car i {
+    font-size: 0.8rem !important;
+  }
+
+  /* Logo & Brand */
+  .brand-avatar-ring { width: 34px; height: 34px; }
+  .brand-logo { font-size: 0.92rem; letter-spacing: 0.08em; }
+  .brand-tagline { font-size: 0.48rem; }
+
+  /* Section */
+  .section-title { font-size: 1.25rem !important; }
+
+  /* Tab Intro Banners */
+  .tab-intro-banner { padding: 18px 14px !important; }
+  .tab-intro-title { font-size: 1.18rem !important; }
+  .tab-intro-desc { font-size: 0.84rem !important; }
+
+  /* Categories */
+  .category-card { height: 210px; }
+  .category-card-title { font-size: 1.25rem; }
+
+  /* Trending */
+  .trending-card { width: 165px; }
+  .trending-img-wrapper { height: 125px; }
+  .trending-price { font-size: 0.88rem; }
+  .trending-title { font-size: 0.76rem; }
+
+  /* Tabs */
+  .tab-btn { padding: 10px 11px; font-size: 0.76rem; }
+
+  /* Top listing → single */
+  .top-listing-card { height: auto; }
+  .top-listing-info h4 { font-size: 1.1rem; }
+
+  /* Grid listing → single col */
+  .grid-listing { grid-template-columns: 1fr; gap: 14px; }
+  .grid-card { height: auto; }
+
+  /* News */
+  .featured-news-img-wrap,
+  .featured-news-bg { height: 185px; }
+  .featured-news-body { padding: 15px 14px 18px; }
+  .featured-news-title { font-size: 1.12rem; }
+  .featured-news-excerpt { font-size: 0.84rem; }
+
+  /* Side news */
+  .side-news-thumb { width: 88px; height: 68px; }
+  .side-news-title { font-size: 0.83rem; }
+  .side-news-excerpt { display: none; }
+
+  /* Sub-tabs */
+  .sub-tabs-header { flex-wrap: wrap; gap: 8px; }
+  .sub-tab-btn { font-size: 0.76rem; padding: 6px 13px; }
+
+  /* Podcast */
+  .podcast-card-box { padding: 18px 14px; }
+  .podcast-desc { font-size: 0.76rem; }
+
+  /* Footer */
+  .footer-bottom-bar { font-size: 0.68rem; }
+
+  /* Zalo */
+  .zalo-floating-btn { width: 46px; height: 46px; bottom: 14px; right: 12px; }
+  .zalo-icon { font-size: 1.25rem; }
+}
+
+/* ================================================================
+   ARTICLE PAGE — article.html specific
+================================================================ */
+@media (max-width: 768px) {
+  .article-header { padding: 100px 0 36px; }
+  .article-title { font-size: 1.75rem !important; }
+  .article-body { font-size: 1rem; }
+  .magazine-quote {
+    font-size: 1.15rem;
+    padding: 20px 18px;
+    margin: 24px auto;
+    max-width: 100%;
+  }
+  .magazine-dropcap::first-letter {
+    font-size: 3rem;
+    padding-right: 8px;
+  }
+  .magazine-figure { margin: 22px 0; }
+}
+@media (max-width: 480px) {
+  .article-title { font-size: 1.4rem !important; line-height: 1.2; }
+  .magazine-quote { font-size: 0.95rem; padding: 14px; }
+  .article-body h2 { font-size: 1.15rem; }
+}
+
+/* ================================================================
+   TOUCH DEVICE — disable hover transforms for performance
+================================================================ */
+@media (hover: none) {
+  .category-card:hover .category-card-bg,
+  .featured-news-card:hover .featured-news-bg,
+  .trending-card:hover .trending-img-wrapper img,
+  .grid-card:hover .grid-img img,
+  .top-listing-card:hover .top-listing-img,
+  .side-news-item:hover .side-news-thumb img { transform: none !important; }
+}
+
+/* ================================================================
+   UTILITIES — Scroll-smooth, scrollbar hide on mobile tab headers
+================================================================ */
+.tabs-header::-webkit-scrollbar { display: none; }
+.tabs-header { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Location Section Responsive */
+@media (max-width: 992px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .map-container-frame, .location-map-wrap {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-section {
+    padding: 35px 0 60px;
+  }
+  .location-info-card {
+    padding: 24px 18px;
+  }
+  .location-name {
+    font-size: 1.4rem;
+  }
+  .map-container-frame, .location-map-wrap {
+    min-height: 350px;
+  }
+  .location-cta-group {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .transit-item {
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .transit-time {
+    font-size: 0.76rem;
+    padding: 3px 8px;
+  }
+}
