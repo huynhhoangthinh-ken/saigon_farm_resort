@@ -1,0 +1,22 @@
+{
+  "name": "Saigon Farm Resort — Thư Mời Hợp Tác Phân Phối",
+  "short_name": "SFR Thư Mời",
+  "description": "Thư mời hợp tác phân phối độc quyền Dinh Thự Điền Trang Nghỉ Dưỡng Bản Sắc Việt Saigon Farm Resort từ Đại Chúng Properties.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fffdf9",
+  "theme_color": "#183024",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/Index_asset/logo/logo-sfr.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/Index_asset/logo/logo-sfr.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
