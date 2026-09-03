@@ -606,3 +606,81 @@
     padding: 3px 8px;
   }
 }
+
+/* ================================================================
+   VIETNAMESE HERITAGE WATERMARK MOBILE SCALING
+================================================================ */
+@media (max-width: 768px) {
+  .heritage-watermark-overlay .hw-drum {
+    top: 480px;
+    right: -100px;
+    width: 380px;
+    height: 380px;
+    opacity: 0.045;
+  }
+  .heritage-watermark-overlay .hw-lotus {
+    top: 1350px;
+    left: -70px;
+    width: 240px;
+    height: 360px;
+    opacity: 0.045;
+  }
+  .heritage-watermark-overlay .hw-crane {
+    top: 2350px;
+    right: -70px;
+    width: 240px;
+    height: 360px;
+    opacity: 0.045;
+  }
+  .heritage-watermark-overlay .hw-pavilion {
+    top: 3400px;
+    left: -80px;
+    width: 300px;
+    height: 200px;
+    opacity: 0.042;
+  }
+  .heritage-watermark-overlay .hw-gate {
+    top: 4300px;
+    right: -70px;
+    width: 280px;
+    height: 190px;
+    opacity: 0.04;
+  }
+  .tabs-section::before {
+    width: 200px;
+    height: 300px;
+    left: -40px;
+    opacity: 0.045;
+  }
+  .tabs-section::after {
+    width: 360px;
+    height: 360px;
+    right: -100px;
+    opacity: 0.045;
+  }
+  .news-section::before {
+    width: 220px;
+    height: 80px;
+    opacity: 0.045;
+  }
+  .news-section::after {
+    width: 260px;
+    height: 180px;
+    opacity: 0.04;
+  }
+  .location-section::before {
+    width: 280px;
+    height: 190px;
+    opacity: 0.04;
+  }
+  .location-section::after {
+    display: none;
+  }
+  .site-footer::after {
+    width: 320px;
+    height: 320px;
+    top: -20px;
+    right: -70px;
+    opacity: 0.07;
+  }
+}
