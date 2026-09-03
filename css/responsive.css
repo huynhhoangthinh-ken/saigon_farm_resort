@@ -231,19 +231,29 @@
   }
   .hero-cta-btns {
     margin-top: 18px !important;
-    display: flex !important;
-    flex-direction: column !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 10px !important;
     width: 100% !important;
   }
   .hero-cta-zalo, .hero-cta-car {
     width: 100% !important;
-    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
     justify-content: center !important;
-    padding: 13px 16px !important;
-    font-size: 0.92rem !important;
+    text-align: center !important;
+    padding: 12px 10px !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
     border-radius: 6px !important;
     box-sizing: border-box !important;
+    line-height: 1.35 !important;
+    gap: 6px !important;
+    min-height: 48px !important;
+  }
+  .hero-cta-zalo i, .hero-cta-car i {
+    font-size: 0.85rem !important;
+    flex-shrink: 0 !important;
   }
 
   /* Section */
@@ -410,10 +420,26 @@
 
   /* Hero */
   .hero-slider-wrap { height: 235px !important; }
-  .hero-content { padding: 18px 14px 22px !important; }
+  .hero-content { padding: 18px 14px 20px !important; }
   .hero-title { font-size: 1.32rem !important; line-height: 1.3 !important; }
   .hero-subtitle { font-size: 0.86rem !important; }
-  .hero-cta-zalo, .hero-cta-car { padding: 12px 14px !important; font-size: 0.88rem !important; }
+  .hero-cta-btns {
+    margin-top: 14px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .hero-cta-zalo, .hero-cta-car {
+    padding: 10px 6px !important;
+    font-size: 0.76rem !important;
+    min-height: 44px !important;
+    gap: 5px !important;
+    line-height: 1.3 !important;
+  }
+  .hero-cta-zalo i, .hero-cta-car i {
+    font-size: 0.8rem !important;
+  }
 
   /* Logo & Brand */
   .brand-avatar-ring { width: 34px; height: 34px; }
