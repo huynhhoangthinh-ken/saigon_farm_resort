@@ -438,16 +438,7 @@
         }
       }
 
-      // Check window.SAIGON_POSTS first (0ms latency instant render)
-      if (window.SAIGON_POSTS && Array.isArray(window.SAIGON_POSTS)) {
-        const found = window.SAIGON_POSTS.find(p => String(p.id).trim() === String(rawId).trim());
-        if (found) {
-          renderArticle(found, window.SAIGON_POSTS);
-          return;
-        }
-      }
-
-      // Fallback to fetch with cache buster
+      // Fetch latest data/posts.json so any edit in IDE is reflected immediately
       fetch('data/posts.json?v=' + Date.now())
         .then(response => response.json())
         .then(posts => {
@@ -456,7 +447,14 @@
           renderArticle(post, posts);
         })
         .catch(err => {
-          console.error(err);
+          console.warn('Fetch posts.json failed, falling back to window.SAIGON_POSTS:', err);
+          if (window.SAIGON_POSTS && Array.isArray(window.SAIGON_POSTS)) {
+            const found = window.SAIGON_POSTS.find(p => String(p.id).trim() === String(rawId).trim());
+            if (found) {
+              renderArticle(found, window.SAIGON_POSTS);
+              return;
+            }
+          }
           if (!container.innerHTML || container.innerHTML.includes('loading')) {
             container.innerHTML = '<div style="text-align: center; padding: 120px 20px;">Lỗi tải dữ liệu bài viết. Vui lòng tải lại trang.</div>';
           }

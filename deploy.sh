@@ -10,6 +10,17 @@ CUSTOM_DOMAIN="saigonfarmresort.com"
 # 2. Lấy thông điệp commit (mặc định nếu không truyền tham số)
 COMMIT_MSG="${1:-Auto update and deploy website}"
 
+# Tự động đồng bộ data/posts.json sang js/posts-data.js nếu người dùng vừa sửa bài viết
+if [ -f "data/posts.json" ]; then
+    python3 -c '
+import json
+with open("data/posts.json") as f:
+    posts = json.load(f)
+with open("js/posts-data.js", "w") as f:
+    f.write("window.SAIGON_POSTS = " + json.dumps(posts, ensure_ascii=False, indent=2) + ";\n")
+' 2>/dev/null
+fi
+
 echo "🚀 [1/3] Kiểm tra và gom tất cả thay đổi (Staging)..."
 git add -A
 

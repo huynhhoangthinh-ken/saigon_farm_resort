@@ -545,3 +545,41 @@
 ================================================================ */
 .tabs-header::-webkit-scrollbar { display: none; }
 .tabs-header { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Location Section Responsive */
+@media (max-width: 992px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .map-container-frame, .location-map-wrap {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-section {
+    padding: 35px 0 60px;
+  }
+  .location-info-card {
+    padding: 24px 18px;
+  }
+  .location-name {
+    font-size: 1.4rem;
+  }
+  .map-container-frame, .location-map-wrap {
+    min-height: 350px;
+  }
+  .location-cta-group {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .transit-item {
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .transit-time {
+    font-size: 0.76rem;
+    padding: 3px 8px;
+  }
+}
