@@ -580,7 +580,7 @@
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
   gap: 36px;
-  align-items: stretch;
+  align-items: start;
 }
 
 /* Left Featured Article — Image on Top, Content Below (Huỳnh Hoàng Thịnh style) */
@@ -705,15 +705,15 @@
 .side-news-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 18px;
+  justify-content: flex-start;
+  gap: 12px;
 }
 
 .side-news-item {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
-  padding: 10px 12px 18px;
+  padding: 8px 12px 14px;
   border-radius: 8px;
   border-bottom: 1px solid var(--color-border);
   text-decoration: none;
@@ -728,7 +728,7 @@
 
 .side-news-item:last-child {
   border-bottom: none;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 .side-news-thumb {
