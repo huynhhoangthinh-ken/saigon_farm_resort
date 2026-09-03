@@ -206,28 +206,35 @@
     height: auto !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 24px 20px 28px !important;
-    background: #111613 !important;
-    border-bottom: 2px solid rgba(201,169,110,0.3) !important;
-    color: #fff !important;
+    padding: 24px 20px 24px !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e8e3d9 !important;
+    color: #111111 !important;
     justify-content: flex-start !important;
     z-index: 5 !important;
   }
   .hero-title {
-    font-size: 1.48rem !important;
+    font-family: var(--font-serif) !important;
+    font-size: 1.52rem !important;
     line-height: 1.32 !important;
     max-width: 100% !important;
     margin-bottom: 12px !important;
     text-shadow: none !important;
-    color: #ffffff !important;
-    font-weight: 600 !important;
+    color: #111111 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.01em !important;
   }
   .hero-subtitle {
+    font-family: var(--font-sans) !important;
     font-size: 0.92rem !important;
-    color: #cccccc !important;
-    line-height: 1.6 !important;
+    color: #333333 !important;
+    line-height: 1.65 !important;
     margin-top: 0 !important;
     text-shadow: none !important;
+  }
+  .hero-subtitle strong {
+    color: #111111 !important;
+    font-weight: 700 !important;
   }
   .hero-cta-btns {
     margin-top: 18px !important;
@@ -250,6 +257,16 @@
     line-height: 1.35 !important;
     gap: 6px !important;
     min-height: 48px !important;
+  }
+  .hero-cta-zalo {
+    background: #0068FF !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+  .hero-cta-car {
+    background: #18221b !important;
+    color: #ffffff !important;
+    border: 1px solid #18221b !important;
   }
   .hero-cta-zalo i, .hero-cta-car i {
     font-size: 0.85rem !important;
@@ -420,11 +437,12 @@
 
   /* Hero */
   .hero-slider-wrap { height: 235px !important; }
-  .hero-content { padding: 18px 14px 20px !important; }
-  .hero-title { font-size: 1.32rem !important; line-height: 1.3 !important; }
-  .hero-subtitle { font-size: 0.86rem !important; }
+  .hero-content { padding: 20px 16px 22px !important; background: #ffffff !important; }
+  .hero-title { font-size: 1.36rem !important; line-height: 1.3 !important; color: #111111 !important; }
+  .hero-subtitle { font-size: 0.88rem !important; color: #333333 !important; }
+  .hero-subtitle strong { color: #111111 !important; }
   .hero-cta-btns {
-    margin-top: 14px !important;
+    margin-top: 15px !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 8px !important;
@@ -436,6 +454,11 @@
     min-height: 44px !important;
     gap: 5px !important;
     line-height: 1.3 !important;
+  }
+  .hero-cta-car {
+    background: #18221b !important;
+    color: #ffffff !important;
+    border: 1px solid #18221b !important;
   }
   .hero-cta-zalo i, .hero-cta-car i {
     font-size: 0.8rem !important;
