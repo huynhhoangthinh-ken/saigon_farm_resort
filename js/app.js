@@ -271,4 +271,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }, {passive: true});
   }
+
+  // Global Image Fallback Safety Net: Prevents any broken image icon from displaying
+  window.addEventListener('error', function(e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      var img = e.target;
+      if (!img.dataset.fallbackTried) {
+        img.dataset.fallbackTried = 'true';
+        img.src = 'assets/Index_asset/Phoicanh/S01_Final_Fix.jpg';
+      }
+    }
+  }, true);
 });
