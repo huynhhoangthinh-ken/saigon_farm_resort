@@ -17,7 +17,8 @@ import json
 with open("data/posts.json") as f:
     posts = json.load(f)
 with open("js/posts-data.js", "w") as f:
-    f.write("window.SAIGON_POSTS = " + json.dumps(posts, ensure_ascii=False, indent=2) + ";\n")
+    data = json.dumps(posts, ensure_ascii=False, indent=2)
+    f.write("const POSTS = " + data + ";\nwindow.SAIGON_POSTS = POSTS;\n")
 ' 2>/dev/null
 fi
 

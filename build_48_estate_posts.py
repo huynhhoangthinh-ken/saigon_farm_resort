@@ -566,7 +566,7 @@ ARTICLES_DATA = [
         "subtitle": "Rút ngắn thời gian di chuyển từ TP.HCM xuống chỉ còn 55 phút",
         "tag": "HẠ TẦNG LIÊN KẾT",
         "image": A["lienket"],
-        "excerpt": "Phân tích tác động trực tiếp của các đại dự án hạ tầng giao thông trọng điểm quốc gia đối với mặt bằng giá đất quần thể Saigon Farm Resort.",
+        "excerpt": "Phân tích tác động trực tiếp của các đại công trình hạ tầng giao thông trọng điểm quốc gia đối với mặt bằng giá đất quần thể Saigon Farm Resort.",
         "model": "Phân Tích Vĩ Mô",
         "focus": "Cao tốc Biên Hòa - Vũng Tàu vận hành, đường Vành Đai 4, Sân bay Quốc tế Long Thành giai đoạn 1."
     },
@@ -615,7 +615,7 @@ ARTICLES_DATA = [
         "tag": "LỢI NHUẬN KÉP",
         "image": A["masterplan_alt"],
         "excerpt": "Kết hợp giữa dòng tiền cho thuê 8-10%/năm và tốc độ tăng giá đất tự nhiên của vùng đô thị vệ tinh TP.HCM từ 15-20%/năm.",
-        "model": "Toàn Thể Dự Án",
+        "model": "Toàn Thể Điền Trang",
         "focus": "Dòng tiền hàng tháng ổn định + gia tăng giá trị tài sản ròng theo thời gian."
     },
     {
@@ -626,8 +626,8 @@ ARTICLES_DATA = [
         "subtitle": "Sổ hồng riêng từng lô, quy hoạch 1/500 hoàn chỉnh và giấy phép xây dựng chuẩn chỉnh",
         "tag": "PHÁP LÝ MINH BẠCH",
         "image": A["quymo"],
-        "excerpt": "Tìm hiểu hồ sơ pháp lý minh bạch của dự án, đảm bảo quyền sở hữu tuyệt đối và an tâm tuyệt đối khi xuống tiền đầu tư.",
-        "model": "Pháp Lý Dự Án",
+        "excerpt": "Tìm hiểu hồ sơ pháp lý minh bạch của khu điền trang, đảm bảo quyền sở hữu tuyệt đối và an tâm tuyệt đối khi xuống tiền đầu tư.",
+        "model": "Pháp Lý Điền Trang",
         "focus": "Sổ hồng riêng từng căn, công chứng sang tên ngay, hạ tầng hoàn thiện 100% trước khi bàn giao."
     },
     {
@@ -800,7 +800,7 @@ def generate_article_content(art):
   <div style="border-top: 1px solid #e0d5c1; padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
     <div>
       <span style="font-size: 0.85rem; color: #888; display: block;">Tác giả chuyên đề:</span>
-      <strong style="color: #111; font-size: 0.95rem;">Ban Nghiên Cứu Phát Triển Dự Án • Đại Chúng Properties</strong>
+      <strong style="color: #111; font-size: 0.95rem;">Ban Nghiên Cứu Phát Triển Điền Trang • Đại Chúng Properties</strong>
     </div>
     <div style="display: flex; gap: 10px;">
       <a href="index.html#tabs-section" class="editorial-btn" style="padding: 8px 16px; font-size: 0.82rem; text-decoration: none;">

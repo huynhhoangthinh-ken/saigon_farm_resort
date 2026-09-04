@@ -270,7 +270,7 @@ tab_villas_market_html = """<!-- Tab 1: Biệt Thự Mở Bán (tab-villas-marke
 
   </div>
 
-  <div style="text-align: right; margin-top: 18px; font-size: 0.78rem; color: #888; font-style: italic;">* Lưu ý: Toàn bộ thông tin, mặt bằng kiến trúc và hình ảnh tiện ích mang tính chất minh họa theo định hướng phát triển thực tế của dự án.</div>
+  <div style="text-align: right; margin-top: 18px; font-size: 0.78rem; color: #888; font-style: italic;">* Lưu ý: Toàn bộ thông tin, mặt bằng kiến trúc và hình ảnh tiện ích mang tính chất minh họa theo định hướng phát triển thực tế của khu điền trang.</div>
 </div>"""
 
 # Replace tab-villas-market section using regex

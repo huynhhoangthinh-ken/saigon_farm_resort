@@ -7,12 +7,12 @@ with open(filepath, "r", encoding="utf-8") as f:
     posts = json.load(f)
 
 real_estate_html = """
-<p>Nằm tại những vị trí đắc địa bậc nhất, đây là những tuyệt tác kiến trúc dành riêng cho giới thượng lưu. Dự án nổi bật với không gian sống được thiết kế tỉ mỉ, kết hợp giữa nghệ thuật đương đại và vật liệu thiên nhiên cao cấp nhất.</p>
+<p>Nằm tại những vị trí đắc địa bậc nhất, đây là những tuyệt tác kiến trúc dành riêng cho giới thượng lưu. Khu điền trang nổi bật với không gian sống được thiết kế tỉ mỉ, kết hợp giữa nghệ thuật đương đại và vật liệu thiên nhiên cao cấp nhất.</p>
 <h2>Thiết Kế Độc Bản và Tiện Ích Đỉnh Cao</h2>
 <p>Không chỉ sở hữu diện tích rộng rãi, mỗi chi tiết từ nội thất, cảnh quan sân vườn đến hệ thống an ninh 24/7 đều được cá nhân hóa hoàn toàn. Tầm nhìn panorama đắt giá mang lại trải nghiệm sống thư thái, tách biệt khỏi sự ồn ào của phố thị nhưng vẫn nằm ngay tại trái tim của sự tiện nghi.</p>
 <img src="{img_src}" alt="Hình ảnh thực tế" style="width:100%; border-radius:12px; margin: 30px 0;">
 <h2>Cơ Hội Đầu Tư Không Thể Bỏ Lỡ</h2>
-<p>Sở hữu bất động sản siêu sang không chỉ là một biểu tượng của sự thành đạt, mà còn là một kênh đầu tư trú ẩn an toàn và có khả năng sinh lời vượt trội trong tương lai. Sự khan hiếm của những dự án có vị trí "vàng" thế này khiến giá trị của chúng luôn tăng trưởng bất chấp những biến động của thị trường chung.</p>
+<p>Sở hữu bất động sản siêu sang không chỉ là một biểu tượng của sự thành đạt, mà còn là một kênh đầu tư trú ẩn an toàn và có khả năng sinh lời vượt trội trong tương lai. Sự khan hiếm của những điền trang có vị trí "vàng" thế này khiến giá trị của chúng luôn tăng trưởng bất chấp những biến động của thị trường chung.</p>
 <div class="key-takeaways">
   <h3>Chi Tiết Bất Động Sản</h3>
   <ul>
