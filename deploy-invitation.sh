@@ -1,10 +1,10 @@
 #!/bin/bash
 # ==============================================================================
-# SCRIPT DEPLOY TRANG THƯ MỜI RIÊNG BIỆT (invitation.daichung.com.vn)
+# SCRIPT DEPLOY TRANG THƯ MỜI RIÊNG BIỆT (invitation.saigonfarmresort.com)
 # ==============================================================================
 
 PROJECT_NAME="invitation-saigonfarmresort"
-CUSTOM_DOMAIN="invitation.daichung.com.vn"
+CUSTOM_DOMAIN="invitation.saigonfarmresort.com"
 DIST="dist-invitation"
 
 echo "📦 [1/3] Đóng gói trang thư mời độc lập vào $DIST..."
