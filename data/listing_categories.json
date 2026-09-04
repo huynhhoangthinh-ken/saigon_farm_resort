@@ -9,8 +9,6 @@
     "table_idx": 0,
     "default_image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg",
     "hero_image": "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg",
-    "accent_color": "#204b36",
-    "accent_gold": "#c9a96e",
     "items": [
       {
         "code": "A6",
@@ -40,7 +38,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg"
       },
       {
         "code": "A4",
@@ -50,7 +48,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_2_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(3).jpg"
       },
       {
         "code": "A16",
@@ -160,7 +158,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
       },
       {
         "code": "A18",
@@ -170,7 +168,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
       },
       {
         "code": "A23",
@@ -180,7 +178,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
       }
     ]
   },
@@ -194,8 +192,6 @@
     "table_idx": 1,
     "default_image": "assets/Index_asset/tien_ich_3D/Tong_Quan_1.jpg",
     "hero_image": "assets/Index_asset/tien_ich_3D/Tong_quan.jpg",
-    "accent_color": "#1b3a4b",
-    "accent_gold": "#d4af37",
     "items": [
       {
         "code": "A8",
@@ -295,7 +291,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
       },
       {
         "code": "B18",
@@ -305,7 +301,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
       },
       {
         "code": "B5",
@@ -315,7 +311,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
       }
     ]
   },
@@ -329,8 +325,6 @@
     "table_idx": 2,
     "default_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg",
     "hero_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg",
-    "accent_color": "#2c4a3e",
-    "accent_gold": "#e0a96d",
     "items": [
       {
         "code": "B24",
@@ -380,7 +374,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
       },
       {
         "code": "A15",
@@ -390,7 +384,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Đang giữ chỗ",
         "status_type": "reserved",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
       },
       {
         "code": "A22",
@@ -400,7 +394,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
       }
     ]
   }

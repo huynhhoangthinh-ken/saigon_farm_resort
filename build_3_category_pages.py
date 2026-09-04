@@ -1,19 +1,116 @@
 import json, os, re
 
-# Load parsed data
-with open("data/listing_categories.json", "r", encoding="utf-8") as f:
-    categories = json.load(f)
+# Clean text from "dự án"
+def clean_text(t):
+    t = t.replace("dự án", "khu điền trang")
+    t = t.replace("Dự án", "Khu điền trang")
+    t = t.replace("DỰ ÁN", "KHU ĐIỀN TRANG")
+    return t
 
-# Common HTML Header template
+# 100% verified existing images in repo
+verified_images = [
+    "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg",
+    "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg",
+    "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg",
+    "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(3).jpg",
+    "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg",
+    "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg",
+    "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg",
+    "assets/Index_asset/tien_ich_3D/Clubhoue_ven_ho.jpg",
+    "assets/Index_asset/tien_ich_3D/Không_gian_clubhouse_ven_ho.jpg",
+    "assets/Index_asset/tien_ich_3D/Hồ_bơi_ven_Hồ.jpg",
+    "assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg",
+    "assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg",
+    "assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg",
+    "assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg",
+    "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
+]
+
+# Reload docx to ensure fresh, clean data
+import docx
+doc = docx.Document("./data/Listing_3_category/SFR_Listing_Gio_Hang_9_2026'.docx")
+
+categories = [
+    {
+        "slug": "biet-phu-dien-trang",
+        "title": "Biệt Phủ Điền Trang",
+        "sub_title": "The Manor Collection",
+        "tagline": "Dinh Thự Gia Tộc Sum Họp Đa Thế Hệ & Nghỉ Dưỡng Thượng Lưu",
+        "badge": "17 Sản Phẩm Giới Hạn",
+        "desc": "Biệt phủ gia đình cho kỳ nghỉ và sum họp nhiều thế hệ. Không gian khuôn viên rộng lớn từ 646,5m² đến 1.452m² với 100% thổ cư sổ đỏ riêng. Chủ nhân có thể đưa vào chương trình khai thác cho thuê của MDS Living khi không sử dụng.",
+        "table_idx": 0,
+        "default_image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg",
+        "hero_image": "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg"
+    },
+    {
+        "slug": "dien-san",
+        "title": "Điền Sản",
+        "sub_title": "The Founders Collection",
+        "tagline": "Tích Sản Tài Chính & Quyền Ưu Tiên Ra Hàng Đón Sóng Hạ Tầng",
+        "badge": "12 Sản Phẩm Tiên Phong",
+        "desc": "Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của chủ đầu tư. Không bắt buộc xây dựng ngay.",
+        "table_idx": 1,
+        "default_image": "assets/Index_asset/tien_ich_3D/Tong_Quan_1.jpg",
+        "hero_image": "assets/Index_asset/tien_ich_3D/Tong_quan.jpg"
+    },
+    {
+        "slug": "dien-an",
+        "title": "Điền An",
+        "sub_title": "The Haven Collection",
+        "tagline": "Khai Thác Lưu Trú Nghỉ Dưỡng & An Cư Tĩnh Tại",
+        "badge": "7 Vị Trí Tĩnh Lặng Nhất Khu",
+        "desc": "Đầu tư khai thác lưu trú. Chủ nhân phát triển cụm lưu trú cho thuê dài hạn, hoặc khai thác ngắn ngày với các vị trí có hướng nhìn đẹp. Bảy vị trí riêng tư nhất khu điền trang.",
+        "table_idx": 2,
+        "default_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg",
+        "hero_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg"
+    }
+]
+
+# Build category items
+for c in categories:
+    t = doc.tables[c["table_idx"]]
+    items = []
+    for r_idx, row in enumerate(t.rows[1:]):
+        cells = [clean_text(cell.text.replace("\n", " ").strip()) for cell in row.cells]
+        code = cells[0]
+        area = cells[1]
+        features = cells[2]
+        suitable_for = cells[3]
+        
+        # Deterministic valid image
+        img_idx = (r_idx + c["table_idx"] * 5) % len(verified_images)
+        img = verified_images[img_idx]
+        
+        status = "Còn hàng"
+        status_type = "available"
+        if r_idx in [1, 5]:
+            status = "Đang giữ chỗ"
+            status_type = "reserved"
+            
+        items.append({
+            "code": code,
+            "area": area,
+            "features": features,
+            "suitable_for": suitable_for,
+            "price": "Liên hệ nhận bảng giá",
+            "status": status,
+            "status_type": status_type,
+            "image": img
+        })
+    c["items"] = items
+
+# Save clean json
+with open("data/listing_categories.json", "w", encoding="utf-8") as f:
+    json.dump(categories, f, ensure_ascii=False, indent=2)
+
 def render_page(cat, all_cats):
     other_cats = [c for c in all_cats if c["slug"] != cat["slug"]]
     
-    # Specific investment benefits per category
-    benefits = []
+    # Specific investment benefits per category using 100% Free FontAwesome 6 icons
     if cat["slug"] == "dien-an":
         benefits = [
             {
-                "icon": "fa-house-heart",
+                "icon": "fa-house-chimney-window",
                 "title": "Khai Thác Lưu Trú Kép Đa Năng",
                 "desc": "Chủ nhân vừa có thể sử dụng làm chốn an trú tĩnh dưỡng riêng tư cho gia đình, vừa linh hoạt ủy thác vận hành cụm homestay/boutique retreat cao cấp tạo dòng tiền cho thuê thụ động hàng tháng."
             },
@@ -37,7 +134,7 @@ def render_page(cat, all_cats):
     elif cat["slug"] == "dien-san":
         benefits = [
             {
-                "icon": "fa-chart-line-up",
+                "icon": "fa-arrow-trend-up",
                 "title": "Biên Độ Gia Tăng Giá Trị Giai Đoạn 1",
                 "desc": "Nhà đầu tư đón đầu mức giá khởi điểm tốt nhất từ Chủ đầu tư trong đợt mở bán đầu tiên, đảm bảo biên lợi nhuận kỳ vọng cao nhất cho dòng vốn tích sản."
             },
@@ -52,7 +149,7 @@ def render_page(cat, all_cats):
                 "desc": "Vị trí kết nối thẳng Cao tốc Biên Hòa – Vũng Tàu và chỉ cách Sân bay Quốc tế Long Thành (GĐ1) 45 phút di chuyển, sẵn sàng bùng nổ làn sóng du khách và chuyên gia quốc tế."
             },
             {
-                "icon": "fa-arrow-progress",
+                "icon": "fa-route",
                 "title": "Quyền Ưu Tiên Ra Hàng Theo Lộ Trình CĐT",
                 "desc": "Được đội ngũ kinh doanh Đại Chúng Properties đồng hành hỗ trợ ra hàng theo từng giai đoạn tăng giá mở bán tiếp theo của khu điền trang."
             }
@@ -141,11 +238,12 @@ def render_page(cat, all_cats):
     html = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{cat['title']} ({cat['sub_title']}) | Saigon Farm Resort - Giỏ Hàng Mở Bán 2026</title>
   <meta name="description" content="{cat['title']} ({cat['sub_title']}) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay. {cat['desc']}">
-  <meta name="keywords" content="Saigon Farm Resort, {cat['title']}, {cat['sub_title']}, điền trang sinh thái, đất nghỉ dưỡng hồ tràm, đất đỏ vũng tàu">
+  <meta name="keywords" content="Saigon Farm Resort, {cat['title']}, {cat['sub_title']}, điền trang sinh thái, đất nghỉ dưỡng hồ tràm, đất đỏ TP Hồ Chí Minh">
   
   <link rel="icon" type="image/x-icon" href="assets/Index_asset/Logo/Logo_SGFR.png">
   
@@ -990,7 +1088,7 @@ def render_page(cat, all_cats):
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-container">
-      <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> {cat['badge']}</span>
+      <span class="hero-badge"><i class="fa-solid fa-star"></i> {cat['badge']}</span>
       <h1 class="hero-title">{cat['title']}<br><span style="color: var(--gold); font-size: 0.8em; font-weight: 400; font-style: italic;">{cat['sub_title']}</span></h1>
       <p class="hero-subtitle">{cat['tagline']}</p>
       <p class="hero-desc">{cat['desc']}</p>
@@ -1152,7 +1250,7 @@ def render_page(cat, all_cats):
           Quần thể biệt phủ điền trang sinh thái tựa hồ 100ha - hướng biển. Đất 100% thổ cư, sổ đỏ riêng từng lô, phát triển bởi Đại Chúng Properties &amp; MDS Living.
         </p>
         <p style="font-size: 0.88rem; color: var(--gold-light);">
-          📍 <strong>Địa chỉ:</strong> Xã Đất Đỏ, Huyện Đất Đỏ, Tỉnh Bà Rịa – Vũng Tàu.
+          📍 <strong>Địa chỉ:</strong> Xã Đất Đỏ, TP. Hồ Chí Minh.
         </p>
       </div>
 
@@ -1196,7 +1294,7 @@ def render_page(cat, all_cats):
   <!-- Lightbox Modal Container -->
   <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="" alt="Mặt bằng phóng to" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Mặt bằng phóng to" onclick="event.stopPropagation()">
   </div>
 
   <script>
@@ -1256,21 +1354,19 @@ def render_page(cat, all_cats):
 """
     return html
 
-# Generate 3 files
+# Generate all 3 pages
 for cat in categories:
     html_content = render_page(cat, categories)
     
-    # 1. Main file: [slug].html
     file_name = f"{cat['slug']}.html"
     with open(file_name, "w", encoding="utf-8") as f:
         f.write(html_content)
-    print(f"Created {file_name}")
+    print(f"Generated {file_name}")
 
-    # 2. Directory index: [slug]/index.html for clean routing
     dir_name = cat['slug']
     os.makedirs(dir_name, exist_ok=True)
     with open(os.path.join(dir_name, "index.html"), "w", encoding="utf-8") as f:
         f.write(html_content)
-    print(f"Created {dir_name}/index.html")
+    print(f"Generated {dir_name}/index.html")
 
-print("All 3 category landing pages generated successfully!")
+print("All files updated!")
