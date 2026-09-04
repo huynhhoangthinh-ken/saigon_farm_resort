@@ -31,8 +31,8 @@ posts = [
     <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Hiên Việt (* Hình ảnh minh họa)</p>
   </div>
   <div>
-    <img src="assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png" alt="Việt Mã Trang & Cảnh Quan Ven Hồ" style="border-radius: 8px; width:100%; height: 320px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Việt Mã Trang (* Hình ảnh minh họa)</p>
+    <img src="assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png" alt="Việt Mã Viện & Cảnh Quan Ven Hồ" style="border-radius: 8px; width:100%; height: 320px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 6px; font-style: italic;">Việt Mã Viện (* Hình ảnh minh họa)</p>
   </div>
 </div>
 
@@ -46,7 +46,7 @@ posts = [
     <li><strong>Hiên Việt (The Veranda):</strong> Phòng khách chung của cả khu: sảnh đón, phòng trà, thư phòng, phòng khách doanh nhân, câu lạc bộ trẻ em.</li>
     <li><strong>Giáo Trí Việt (The Maker's House):</strong> Nơi trẻ học bằng đôi tay: gốm, vẽ, thư pháp, thắt lá dừa, nặn tò he.</li>
     <li><strong>Bờ Sen (The Lotus Shore):</strong> Hồ sen ngát hương, hồ bơi, spa, tắm khoáng thảo mộc, thưởng trà Việt và thiền định.</li>
-    <li><strong>Việt Mã Trang (The Equestrian Estate):</strong> Nơi gặp gỡ giữa người, ngựa và thiên nhiên: cưỡi ngựa, lớp ngựa con, chăm sóc ngựa, trình diễn cuối tuần.</li>
+    <li><strong>Việt Mã Viện (The Equestrian Estate):</strong> Nơi gặp gỡ giữa người, ngựa và thiên nhiên: cưỡi ngựa, lớp ngựa con, chăm sóc ngựa, trình diễn cuối tuần.</li>
     <li><strong>Nếp Nhà Việt (The Vietnamese Table):</strong> Nhà hàng ẩm thực Farm-to-Table từ vườn đến bàn ăn, tiệc giữa đồng lúa, tiệc bên hồ sen.</li>
     <li><strong>Dòng Sử Việt – Về Nguồn (The River of Time):</strong> Bốn nghìn năm văn hiến kể bằng cảnh quan: đá, đồng, phù điêu, ánh sáng và mặt nước.</li>
     <li><strong>Quảng Trường Hội Việt (The Village Green):</strong> Không gian lễ hội, sân khấu nghệ thuật, chợ phiên nông sản, hòa nhạc và chiếu phim ngoài trời.</li>
@@ -77,7 +77,7 @@ posts = [
     {
         "id": 204,
         "title": "Hệ Thống 9 Không Gian Bản Sắc Việt Đương Đại Tại Saigon Farm Resort: Từ Hiên Việt Đến Dòng Sử Việt",
-        "excerpt": "Hệ sinh thái 9 không gian văn hóa đặc quyền: Hiên Việt, Giáo Trí Việt, Bờ Sen, Việt Mã Trang, Nếp Nhà Việt, Dòng Sử Việt, Quảng Trường Hội Việt, Vườn Cội và Nhà Âm Sắc Việt. Lịch trình trải nghiệm Chủ nhật trọn vẹn cho gia đình 3 thế hệ.",
+        "excerpt": "Hệ sinh thái 9 không gian văn hóa đặc quyền: Hiên Việt, Giáo Trí Việt, Bờ Sen, Việt Mã Viện, Nếp Nhà Việt, Dòng Sử Việt, Quảng Trường Hội Việt, Vườn Cội và Nhà Âm Sắc Việt. Lịch trình trải nghiệm Chủ nhật trọn vẹn cho gia đình 3 thế hệ.",
         "image": "assets/posts/xa_xi_ban_sac/hien_viet.jpg",
         "date": "29 TH8 2026",
         "content": "
@@ -105,7 +105,7 @@ posts = [
     </h3>
     <ul style=\"margin: 0; padding-left: 20px; font-size: 0.98rem; line-height: 1.8;\">
       <li><strong>Triết lý Bản Sắc Việt Đương Đại:</strong> Không sao chép phong cách ngoại lai, Saigon Farm Resort tôn vinh giá trị cội nguồn qua ngôn ngữ kiến trúc gỗ quý, mái ngói truyền thống kết hợp tiêu chuẩn vận hành resort 5 sao của MDS Living.</li>
-      <li><strong>Hệ sinh thái 9 không gian văn hóa:</strong> Hiên Việt (Sảnh đón & Thư phòng), Giáo Trí Việt (Xưởng thủ công truyền thống), Bờ Sen (Spa dưỡng sinh & Onsen), Việt Mã Trang (CLB Cưỡi ngựa), Nếp Nhà Việt (Ẩm thực Farm-to-Table), Dòng Sử Việt (Cảnh quan 4.000 năm lịch sử), Quảng Trường Hội Việt (Lễ hội & Chiếu phim), Vườn Cội (Lưu dấu gia tộc) và Nhà Âm Sắc Việt (Trưng bày 54 dân tộc).</li>
+      <li><strong>Hệ sinh thái 9 không gian văn hóa:</strong> Hiên Việt (Sảnh đón & Thư phòng), Giáo Trí Việt (Xưởng thủ công truyền thống), Bờ Sen (Spa dưỡng sinh & Onsen), Việt Mã Viện (CLB Cưỡi ngựa), Nếp Nhà Việt (Ẩm thực Farm-to-Table), Dòng Sử Việt (Cảnh quan 4.000 năm lịch sử), Quảng Trường Hội Việt (Lễ hội & Chiếu phim), Vườn Cội (Lưu dấu gia tộc) và Nhà Âm Sắc Việt (Trưng bày 54 dân tộc).</li>
       <li><strong>Trải nghiệm Một Ngày Chủ Nhật Của Gia Đình 3 Thế Hệ:</strong> Lịch trình từ 06:30 sớm mai đến 20:00 đêm sao, nơi ông bà tĩnh tâm dưỡng sinh, bố mẹ tái tạo năng lượng và con trẻ đắm mình trong tuổi thơ rực rỡ.</li>
     </ul>
   </div>
@@ -162,7 +162,7 @@ posts = [
           <td style=\"padding: 14px 16px; color: #333; line-height: 1.6;\">Đầm sen tự nhiên ngát hương, hồ bơi sinh thái nước khoáng muối, khu trị liệu spa dưỡng sinh thân - tâm - trí, bồn ngâm tắm thảo mộc bản địa và chòi thiền ven hồ.</td>
         </tr>
         <tr style=\"border-bottom: 1px solid #eee; background: #faf8f5;\">
-          <td style=\"padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);\">4. VIỆT MÃ TRANG</td>
+          <td style=\"padding: 14px 16px; font-weight: 700; color: #1a1a1a; font-family: var(--font-serif);\">4. VIỆT MÃ VIỆN</td>
           <td style=\"padding: 14px 16px; font-style: italic; color: #8a6d3b; font-weight: 600;\">The Equestrian Estate</td>
           <td style=\"padding: 14px 16px; color: #333; line-height: 1.6;\">Câu lạc bộ cưỡi ngựa quý tộc đẳng cấp: sân tập cưỡi ngựa tiêu chuẩn, lớp huấn luyện nài ngựa nhí, khu chăm sóc ngựa thuần chủng và các buổi trình diễn kỹ năng cuối tuần.</td>
         </tr>
@@ -210,8 +210,8 @@ posts = [
       <p style=\"font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;\">Dòng Sử Việt — Trục Cảnh Quan</p>
     </div>
     <div>
-      <img src=\"assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png\" alt=\"Việt Mã Trang\" style=\"border-radius: 8px; width: 100%; height: 180px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\">
-      <p style=\"font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;\">Việt Mã Trang — CLB Cưỡi Ngựa</p>
+      <img src=\"assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png\" alt=\"Việt Mã Viện\" style=\"border-radius: 8px; width: 100%; height: 180px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\">
+      <p style=\"font-size: 0.82rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;\">Việt Mã Viện — CLB Cưỡi Ngựa</p>
     </div>
     <div>
       <img src=\"assets/Index_asset/Tien_ich_minh_hoa/Quang_truong_Hoi_Viet.png\" alt=\"Quảng Trường Hội Việt\" style=\"border-radius: 8px; width: 100%; height: 180px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\">
@@ -259,7 +259,7 @@ posts = [
         </tr>
         <tr style=\"background: #faf7f2; border-bottom: 1px solid #ede7db;\">
           <td style=\"padding: 14px 18px; font-weight: 800; color: #9c7837; text-align: center; font-size: 1.05rem;\">09:00</td>
-          <td style=\"padding: 14px 18px; color: #222; font-weight: 600;\">Con vào lớp cưỡi ngựa tại Việt Mã Trang; bố mẹ tập gym hoặc yoga tại Nhà Chung.</td>
+          <td style=\"padding: 14px 18px; color: #222; font-weight: 600;\">Con vào lớp cưỡi ngựa tại Việt Mã Viện; bố mẹ tập gym hoặc yoga tại Nhà Chung.</td>
           <td style=\"padding: 14px 18px; color: #555;\">Cách nhau vài bước chân, mỗi thành viên đều có không gian rèn luyện thể chất đẳng cấp.</td>
         </tr>
         <tr style=\"background: #ffffff; border-bottom: 1px solid #ede7db;\">
@@ -487,7 +487,7 @@ posts = [
         <tr style=\"background: #faf8f5;\">
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">Trình Diễn Cưỡi Ngựa Quý Tộc</td>
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; font-weight: 600; color: #2e7d32;\">Chiều Thứ Bảy (16:00 – 17:30)</td>
-          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Việt Mã Trang (Sân 2.000m²)</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Việt Mã Viện (Sân 2.000m²)</td>
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #555;\">Biểu diễn kỹ năng kỵ mã điêu luyện, diễu hành câu lạc bộ kỵ sĩ giữa hoàng hôn đồng lúa.</td>
         </tr>
         <tr>
@@ -860,7 +860,7 @@ posts = [
   </p>
 
   <p>
-    Thấu hiểu sâu sắc điều đó, tại <strong>Saigon Farm Resort</strong>, phân khu <strong>Giáo Trí Việt (The Maker's House)</strong>, <strong>Việt Mã Trang</strong> và <strong>Vườn Cội</strong> được xây dựng như một <em>Học viện thiên nhiên mở</em>. Ở đó, không có giáo trình gò bó, không có điểm số áp lực, mà mỗi ngày cuối tuần là một cuộc phiêu lưu diệu kỳ đánh thức trọn vẹn 5 giác quan và gieo vào tâm hồn con hạt mầm của lòng trắc ẩn, tính tự lập và niềm tự hào nguồn cội.
+    Thấu hiểu sâu sắc điều đó, tại <strong>Saigon Farm Resort</strong>, phân khu <strong>Giáo Trí Việt (The Maker's House)</strong>, <strong>Việt Mã Viện</strong> và <strong>Vườn Cội</strong> được xây dựng như một <em>Học viện thiên nhiên mở</em>. Ở đó, không có giáo trình gò bó, không có điểm số áp lực, mà mỗi ngày cuối tuần là một cuộc phiêu lưu diệu kỳ đánh thức trọn vẹn 5 giác quan và gieo vào tâm hồn con hạt mầm của lòng trắc ẩn, tính tự lập và niềm tự hào nguồn cội.
   </p>
 
   <!-- Section 2: Full 16 Activities Master Table -->
@@ -995,8 +995,8 @@ posts = [
 
   <div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0;\">
     <div>
-      <img src=\"assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png\" alt=\"Việt Mã Trang — Sân cưỡi ngựa và học viện huấn luyện nhí\" style=\"width: 100%; border-radius: 8px; height: 230px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\" />
-      <p style=\"font-size: 0.84rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;\">Việt Mã Trang — Rèn luyện lòng dũng cảm & phong thái quý tộc</p>
+      <img src=\"assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png\" alt=\"Việt Mã Viện — Sân cưỡi ngựa và học viện huấn luyện nhí\" style=\"width: 100%; border-radius: 8px; height: 230px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\" />
+      <p style=\"font-size: 0.84rem; color: #666; text-align: center; margin-top: 6px; font-weight: 600;\">Việt Mã Viện — Rèn luyện lòng dũng cảm & phong thái quý tộc</p>
     </div>
     <div>
       <img src=\"assets/Index_asset/Tien_ich_minh_hoa/Quang_truong_Hoi_Viet.png\" alt=\"Quảng trường Hội Việt — Sân khấu trò chơi dân gian và lửa trại\" style=\"width: 100%; border-radius: 8px; height: 230px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1);\" />
@@ -1472,7 +1472,7 @@ posts = [
     <li><strong>1. Clubhouse & Lounge Ven Hồ:</strong> Nhà hàng Fine Dining ẩm thực đồng quê cao cấp, cafe ngắm hoàng hôn và trung tâm tiếp đón thượng khách.</li>
     <li><strong>2. Bến Thuyền, Chèo SUP & Kayak:</strong> Trải nghiệm thể thao mặt nước, chèo SUP đón bình minh và du ngoạn ngắm cảnh mặt hồ tự nhiên 100ha khoáng đạt.</li>
     <li><strong>3. Nông Trại Hữu Cơ Organic Farm:</strong> Trải nghiệm làm vườn chuẩn Farm-to-Table, cung cấp rau củ sạch tươi ngon mỗi ngày.</li>
-    <li><strong>4. Việt Mã Trang (The Equestrian Estate):</strong> Câu lạc bộ cưỡi ngựa quý tộc giữa thảo nguyên xanh.</li>
+    <li><strong>4. Việt Mã Viện (The Equestrian Estate):</strong> Câu lạc bộ cưỡi ngựa quý tộc giữa thảo nguyên xanh.</li>
     <li><strong>5. Herbal Spa & Bờ Sen (The Lotus Shore):</strong> Khu phục hồi sức khỏe bằng liệu pháp thảo dược tự nhiên, hồ khoáng và yoga ven hồ.</li>
     <li><strong>6. Tổ Hợp Thể Thao Pickleball:</strong> Cụm sân Pickleball tiêu chuẩn quốc tế, Gym ngoài trời và đường chạy bộ ven hồ 3.2km.</li>
     <li><strong>7. Khu Glamping & BBQ Bên Hồ:</strong> Không gian cắm trại cao cấp và tiệc nướng dã ngoại ấm cúng dưới trời sao.</li>
@@ -1746,8 +1746,8 @@ posts = [
     },
     {
         "id": 123,
-        "title": "Việt Mã Trang (The Equestrian Estate): Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Giữa Đồng Lúa — Tiện Ích Độc Bản Khẳng Định Đẳng Cấp Thượng Lưu",
-        "excerpt": "Khám phá Việt Mã Trang (The Equestrian Estate) tại Saigon Farm Resort: Câu lạc bộ cưỡi ngựa quý tộc giữa cánh đồng lúa chín vàng và hồ sinh thái 100ha. Tiện ích đặc sắc được đầu tư quy mô, mang đến trải nghiệm sống khác biệt và sang trọng.",
+        "title": "Việt Mã Viện (The Equestrian Estate): Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Giữa Đồng Lúa — Tiện Ích Độc Bản Khẳng Định Đẳng Cấp Thượng Lưu",
+        "excerpt": "Khám phá Việt Mã Viện (The Equestrian Estate) tại Saigon Farm Resort: Câu lạc bộ cưỡi ngựa quý tộc giữa cánh đồng lúa chín vàng và hồ sinh thái 100ha. Tiện ích đặc sắc được đầu tư quy mô, mang đến trải nghiệm sống khác biệt và sang trọng.",
         "image": "assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png",
         "date": "29 TH8 2026",
         "content": "
@@ -1757,11 +1757,11 @@ posts = [
   <div class=\"article-meta-header\" style=\"border-bottom: 2px solid #c9a96e; padding-bottom: 22px; margin-bottom: 30px;\">
     <div style=\"display: flex; gap: 10px; align-items: center; margin-bottom: 12px; flex-wrap: wrap;\">
       <span style=\"background: #c9a96e; color: #000; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 4px; letter-spacing: 0.05em; text-transform: uppercase;\">TIỆN ÍCH QUÝ TỘC ĐỘC BẢN</span>
-      <span style=\"background: #111; color: #c9a96e; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 4px; border: 1px solid #c9a96e;\">VIỆT MÃ TRANG</span>
+      <span style=\"background: #111; color: #c9a96e; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 4px; border: 1px solid #c9a96e;\">VIỆT MÃ VIỆN</span>
       <span style=\"color: #666; font-size: 0.85rem;\"><i class=\"fa-regular fa-clock\"></i> 15 phút đọc • 2.950+ từ</span>
     </div>
     <h1 style=\"font-family: var(--font-serif); font-size: 2.15rem; line-height: 1.35; color: #111; margin-bottom: 16px; font-weight: 700;\">
-      Việt Mã Trang (The Equestrian Estate): Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Giữa Đồng Lúa — Tiện Ích Độc Bản Khẳng Định Đẳng Cấp Thượng Lưu
+      Việt Mã Viện (The Equestrian Estate): Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Giữa Đồng Lúa — Tiện Ích Độc Bản Khẳng Định Đẳng Cấp Thượng Lưu
     </h1>
     <p style=\"font-size: 1.1rem; line-height: 1.7; color: #555; font-style: italic;\">
       Sự giao thoa hoàn mỹ giữa thú chơi cưỡi ngựa vương giả và không gian đồng quê thanh bình — Nơi mang đến trải nghiệm sống khác biệt, sang trọng và phóng khoáng cho chủ nhân điền trang cùng du khách lưu trú tại Saigon Farm Resort.
@@ -1771,7 +1771,7 @@ posts = [
   <!-- Key takeaways box -->
   <div style=\"background: linear-gradient(135deg, #2b1f14 0%, #3d2c1c 100%); color: #fff; border-left: 4px solid #c9a96e; padding: 24px 28px; border-radius: 8px; margin: 30px 0; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\">
     <h3 style=\"color: #c9a96e; font-size: 1.25rem; font-weight: 700; margin-top: 0; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em;\">
-      <i class=\"fa-solid fa-horse\" style=\"margin-right: 8px;\"></i> Điểm Nhấn Tiện Ích Độc Bản Việt Mã Trang:
+      <i class=\"fa-solid fa-horse\" style=\"margin-right: 8px;\"></i> Điểm Nhấn Tiện Ích Độc Bản Việt Mã Viện:
     </h3>
     <ul style=\"margin: 0; padding-left: 20px; font-size: 0.98rem; line-height: 1.8;\">
       <li><strong>Trải nghiệm cưỡi ngựa giữa cánh đồng lúa độc nhất vô nhị:</strong> Cung đường phi ngựa ven bờ hồ 100ha và cánh đồng lúa chín vàng 2.5km, tạo nên chất sống tự do, kiêu hãnh và lãng mạn.</li>
@@ -1783,9 +1783,9 @@ posts = [
 
   <!-- Hero Image -->
   <div style=\"margin: 36px 0; text-align: center;\">
-    <img src=\"assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png\" alt=\"Phối cảnh Câu lạc bộ cưỡi ngựa quý tộc Việt Mã Trang tại Saigon Farm Resort\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);\" />
+    <img src=\"assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png\" alt=\"Phối cảnh Câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viện tại Saigon Farm Resort\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);\" />
     <p style=\"font-size: 0.88rem; color: #777; margin-top: 10px; font-style: italic;\">
-      Việt Mã Trang (The Equestrian Estate) — Biểu tượng tiện ích quý tộc kiêu hãnh giữa miền xanh sinh thái Saigon Farm Resort.
+      Việt Mã Viện (The Equestrian Estate) — Biểu tượng tiện ích quý tộc kiêu hãnh giữa miền xanh sinh thái Saigon Farm Resort.
     </p>
   </div>
 
@@ -1808,7 +1808,7 @@ posts = [
   </h2>
 
   <p>
-    Để đảm bảo an toàn tuyệt đối và trải nghiệm chuẩn mực cho cộng đồng cư dân tinh hoa, <strong>Việt Mã Trang</strong> được xây dựng với hệ thống hạ tầng đồng bộ và chuyên nghiệp:
+    Để đảm bảo an toàn tuyệt đối và trải nghiệm chuẩn mực cho cộng đồng cư dân tinh hoa, <strong>Việt Mã Viện</strong> được xây dựng với hệ thống hạ tầng đồng bộ và chuyên nghiệp:
   </p>
 
   <div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 28px 0;\">
@@ -1859,7 +1859,7 @@ posts = [
   </h2>
 
   <p>
-    Được vận hành bởi đội ngũ huấn luyện viên kỵ mã chuyên nghiệp của <strong>MDS Living</strong>, Việt Mã Trang mang đến các khóa trải nghiệm phong phú:
+    Được vận hành bởi đội ngũ huấn luyện viên kỵ mã chuyên nghiệp của <strong>MDS Living</strong>, Việt Mã Viện mang đến các khóa trải nghiệm phong phú:
   </p>
 
   <h3 style=\"font-size: 1.25rem; color: #222; margin-top: 24px; margin-bottom: 12px;\">
@@ -1890,7 +1890,7 @@ posts = [
 
   <!-- Section 4: Experience Packages Table -->
   <h2 style=\"font-family: var(--font-serif); font-size: 1.65rem; color: #111; margin-top: 40px; margin-bottom: 18px; border-bottom: 1px solid #e8e8e8; padding-bottom: 10px;\">
-    4. Bảng Các Gói Trải Nghiệm & Khóa Học Tại Việt Mã Trang
+    4. Bảng Các Gói Trải Nghiệm & Khóa Học Tại Việt Mã Viện
   </h2>
 
   <div style=\"overflow-x: auto; margin: 26px 0;\">
@@ -1920,7 +1920,7 @@ posts = [
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">Khóa Kỵ Mã Chuyên Nghiệp Doanh Nhân</td>
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; font-weight: 600; color: #2e7d32;\">10 Buổi (60 Phút/buổi)</td>
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Kỹ thuật điều khiển nước kiệu (trot), phi nước đại (canter), vượt chướng ngại vật thấp.</td>
-          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #555;\">Thẻ hội viên danh dự Việt Mã Trang, tham gia dạ tiệc kỵ mã thường niên.</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #555;\">Thẻ hội viên danh dự Việt Mã Viện, tham gia dạ tiệc kỵ mã thường niên.</td>
         </tr>
         <tr style=\"background: #faf8f5;\">
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">Gói Chụp Ảnh Nghệ Thuật Hoàng Hôn</td>
@@ -1945,7 +1945,7 @@ posts = [
   </h2>
 
   <p>
-    Sự hiện diện của <strong>Việt Mã Trang</strong> chính là lời khẳng định mạnh mẽ cho triết lý đầu tư khác biệt và tâm huyết của chủ đầu tư: <em>Không chỉ xây dựng những ngôi nhà đẹp, mà kiến tạo nên một phong cách sống kiêu hãnh, tự do và trường tồn</em>.
+    Sự hiện diện của <strong>Việt Mã Viện</strong> chính là lời khẳng định mạnh mẽ cho triết lý đầu tư khác biệt và tâm huyết của chủ đầu tư: <em>Không chỉ xây dựng những ngôi nhà đẹp, mà kiến tạo nên một phong cách sống kiêu hãnh, tự do và trường tồn</em>.
   </p>
 
   <p>
@@ -1954,13 +1954,13 @@ posts = [
 
   <div style=\"border: 2px dashed #c9a96e; background: #fffcf7; padding: 24px 30px; border-radius: 8px; margin: 36px 0; text-align: center;\">
     <h3 style=\"color: #926f34; margin-top: 0; margin-bottom: 10px; font-family: var(--font-serif); font-size: 1.4rem;\">
-      Trải Nghiệm Cưỡi Ngựa Quý Tộc Tại Việt Mã Trang
+      Trải Nghiệm Cưỡi Ngựa Quý Tộc Tại Việt Mã Viện
     </h3>
     <p style=\"font-size: 1rem; color: #555; margin-bottom: 18px; line-height: 1.7;\">
       Đăng ký nhận vé mời trải nghiệm cưỡi ngựa thực tế, tham quan chuồng trại Stables 5 sao và khám phá các căn biệt thự điền trang Saigon Farm Resort.
     </p>
     <a href=\"https://zalo.me/0906060036\" target=\"_blank\" style=\"display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; font-weight: 700; padding: 12px 28px; border-radius: 6px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(0,104,255,0.3);\">
-      <i class=\"fa-solid fa-comment-dots\"></i> Nhắn Zalo 0906060036 Nhận Lịch Trải Nghiệm Việt Mã Trang
+      <i class=\"fa-solid fa-comment-dots\"></i> Nhắn Zalo 0906060036 Nhận Lịch Trải Nghiệm Việt Mã Viện
     </a>
   </div>
 
@@ -2832,7 +2832,7 @@ posts = [
         <tr>
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; font-weight: 700; color: #2e7d32;\">10:00 – 11:30</td>
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; font-weight: 700; color: #1a1a1a;\">Khảo Sát Thực Địa Từng Vị Trí Đất</td>
-          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Tham quan thực tế ranh đất, kiểm tra tiến độ hoàn thiện hạ tầng, vị trí phân khu tiện ích (Việt Mã Trang, Hiên Việt, sân Pickleball).</td>
+          <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; color: #444;\">Tham quan thực tế ranh đất, kiểm tra tiến độ hoàn thiện hạ tầng, vị trí phân khu tiện ích (Việt Mã Viện, Hiên Việt, sân Pickleball).</td>
         </tr>
         <tr style=\"background: #faf8f5;\">
           <td style=\"padding: 14px 16px; border: 1px solid #e8e8e8; text-align: center; font-weight: 700; color: #2e7d32;\">11:30 – 13:00</td>

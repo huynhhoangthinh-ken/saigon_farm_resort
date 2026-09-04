@@ -396,7 +396,7 @@ ARTICLES_DATA = [
         "image": A["lotus"],
         "excerpt": "Hành trình 24 giờ phục hồi năng lượng trọn vẹn: Từ bài tập Yoga đón nắng mai ven hồ đến liệu trình ngâm khoáng thảo mộc Bờ Sen lúc chiều muộn.",
         "model": "Toàn Thể Cư Dân",
-        "focus": "Yoga đón bình minh 6:00 AM, cưỡi ngựa Việt Mã Trang, tắm khoáng thảo dược Onsen Bờ Sen."
+        "focus": "Yoga đón bình minh 6:00 AM, cưỡi ngựa Việt Mã Viện, tắm khoáng thảo dược Onsen Bờ Sen."
     },
     {
         "id": 151,
@@ -438,9 +438,9 @@ ARTICLES_DATA = [
         "id": 154,
         "subtab": "subtab-villa-experience",
         "category": "Trải Nghiệm & Dưỡng Sinh",
-        "title": "Khám Phá Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Việt Mã Trang Liền Kề Cụm Điền Trang",
+        "title": "Khám Phá Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Việt Mã Viện Liền Kề Cụm Điền Trang",
         "subtitle": "Bộ môn thể thao thượng lưu rèn luyện phong thái đĩnh đạc và sức khỏe",
-        "tag": "VIỆT MÃ TRANG",
+        "tag": "VIỆT MÃ VIỆN",
         "image": A["horse"],
         "excerpt": "Đặc quyền sở hữu ngựa riêng, huấn luyện viên quốc tế hướng dẫn tận tình từ kỹ năng cơ bản đến các cung đường dạo bộ ven hồ 100ha thơ mộng.",
         "model": "Tiện Ích Đặc Quyền",

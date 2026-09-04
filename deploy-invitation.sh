@@ -1,9 +1,10 @@
 #!/bin/bash
 # ==============================================================================
-# SCRIPT DEPLOY TRANG THƯ MỜI RIÊNG BIỆT (invitation.saigonfarmresort.com)
+# SCRIPT DEPLOY TRANG THƯ MỜI RIÊNG BIỆT (invitation.daichung.com.vn)
 # ==============================================================================
 
 PROJECT_NAME="invitation-saigonfarmresort"
+CUSTOM_DOMAIN="invitation.daichung.com.vn"
 DIST="dist-invitation"
 
 echo "📦 [1/3] Đóng gói trang thư mời độc lập vào $DIST..."
@@ -24,6 +25,10 @@ for folder in ['assets', 'css', 'js']:
     if os.path.exists(folder):
         shutil.copytree(folder, os.path.join(dist, folder))
 
+# 3. Tạo file CNAME cho subdomain
+with open(os.path.join(dist, 'CNAME'), 'w') as f:
+    f.write('$CUSTOM_DOMAIN\n')
+
 print('  -> Đóng gói thành công!')
 "
 
@@ -32,3 +37,6 @@ npx -y wrangler pages deploy "$DIST" --project-name="$PROJECT_NAME" --commit-dir
 
 echo "✅ [3/3] Triển khai thành công!"
 echo "🌐 URL Pages: https://$PROJECT_NAME.pages.dev"
+if [ -n "$CUSTOM_DOMAIN" ]; then
+    echo "🌐 Domain chính thức: https://$CUSTOM_DOMAIN"
+fi
