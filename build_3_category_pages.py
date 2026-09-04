@@ -1,4 +1,5 @@
 import json, os, re
+import docx
 
 # Clean text from "dự án"
 def clean_text(t):
@@ -26,8 +27,6 @@ verified_images = [
     "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
 ]
 
-# Reload docx to ensure fresh, clean data
-import docx
 doc = docx.Document("./data/Listing_3_category/SFR_Listing_Gio_Hang_9_2026'.docx")
 
 categories = [
@@ -77,7 +76,6 @@ for c in categories:
         features = cells[2]
         suitable_for = cells[3]
         
-        # Deterministic valid image
         img_idx = (r_idx + c["table_idx"] * 5) % len(verified_images)
         img = verified_images[img_idx]
         
@@ -180,7 +178,7 @@ def render_page(cat, all_cats):
         ]
         product_form_desc = "Khuôn viên điền trang siêu lớn với 100% thổ cư sổ đỏ riêng. Thiết kế kiến trúc dinh thự thuần Việt đương đại kết hợp tiện nghi cao cấp phương Tây, hồ bơi muối khoáng và vườn cây sinh thái riêng biệt."
 
-    # Generate cards HTML
+    # Generate cards HTML with button opening popup
     cards_html = ""
     for idx, item in enumerate(cat["items"]):
         status_badge_class = "status-available" if item["status_type"] == "available" else "status-reserved"
@@ -211,9 +209,9 @@ def render_page(cat, all_cats):
                 <span class="price-label">Giá niêm yết CĐT:</span>
                 <span class="price-val">Liên hệ nhận bảng giá</span>
               </div>
-              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô {item['code']}">
+              <button type="button" class="card-btn-action" onclick="openBookingModal('{item['code']}', '{item['area']}', '{cat['title']}')" title="Đặt lịch / Giữ chỗ lô {item['code']}">
                 <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -405,6 +403,10 @@ def render_page(cat, all_cats):
       font-weight: 600;
       box-shadow: 0 4px 14px rgba(32,75,54,0.2);
       transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 0.92rem;
+      font-family: inherit;
     }}
     .btn-nav-cta:hover {{
       background: var(--primary-dark);
@@ -818,7 +820,7 @@ def render_page(cat, all_cats):
     .card-btn-action {{
       background: var(--primary);
       color: #fff;
-      text-decoration: none;
+      border: none;
       padding: 10px 16px;
       border-radius: 8px;
       font-size: 0.85rem;
@@ -828,6 +830,8 @@ def render_page(cat, all_cats):
       gap: 6px;
       transition: all 0.2s ease;
       white-space: nowrap;
+      cursor: pointer;
+      font-family: inherit;
     }}
     .card-btn-action:hover {{
       background: var(--primary-dark);
@@ -1039,12 +1043,149 @@ def render_page(cat, all_cats):
       cursor: pointer;
     }}
 
+    /* Elegant Booking Guidance Modal */
+    .booking-modal-overlay {{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(14, 26, 20, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1001;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }}
+    .booking-modal-overlay.active {{
+      display: flex;
+    }}
+    .booking-modal-box {{
+      background: #fffdf9;
+      border: 1px solid #e4dac8;
+      border-radius: 18px;
+      max-width: 540px;
+      width: 100%;
+      padding: 36px 32px 30px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      text-align: center;
+      position: relative;
+      animation: modalSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }}
+    @keyframes modalSlideUp {{
+      from {{ opacity: 0; transform: translateY(24px) scale(0.96); }}
+      to {{ opacity: 1; transform: translateY(0) scale(1); }}
+    }}
+    .modal-close-btn {{
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: #f0ebe1;
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: #666;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }}
+    .modal-close-btn:hover {{
+      background: #e2d7c5;
+      color: #111;
+    }}
+    .modal-emblem {{
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, #f5e6c8 0%, #ecdcb9 100%);
+      color: #8c6b32;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 14px rgba(201, 169, 110, 0.25);
+    }}
+    .modal-title {{
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }}
+    .modal-subtitle {{
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold-dark);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }}
+    .modal-unit-tag {{
+      display: inline-block;
+      background: #edf5f0;
+      color: var(--primary);
+      border: 1px solid #c8e4d2;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }}
+    .modal-desc {{
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: #38453e;
+      margin-bottom: 20px;
+      text-align: justify;
+      text-align-last: center;
+    }}
+    .modal-notice-box {{
+      background: #fbf9f4;
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      color: #5c6961;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }}
+    .modal-btn-confirm {{
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px 36px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(32, 75, 54, 0.25);
+      transition: all 0.25s ease;
+    }}
+    .modal-btn-confirm:hover {{
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }}
+
     @media (max-width: 900px) {{
       .overview-grid, .masterplan-wrap, .footer-grid {{
         grid-template-columns: 1fr;
       }}
       .nav-links {{
         display: none;
+      }}
+      .booking-modal-box {{
+        padding: 30px 20px 24px;
       }}
     }}
   </style>
@@ -1080,7 +1221,11 @@ def render_page(cat, all_cats):
         <li><a href="dien-san.html" class="{'active' if cat['slug'] == 'dien-san' else ''}">Điền Sản</a></li>
         <li><a href="biet-phu-dien-trang.html" class="{'active' if cat['slug'] == 'biet-phu-dien-trang' else ''}">Biệt Phủ Điền Trang</a></li>
         <li><a href="gioi-thieu.html">Tổng Thể Điền Trang</a></li>
-        <li><a href="https://zalo.me/0906060036" target="_blank" class="btn-nav-cta"><i class="fa-solid fa-comment-dots"></i> Nhận Bảng Giá</a></li>
+        <li>
+          <button type="button" class="btn-nav-cta" onclick="openBookingModal('', '', '{cat['title']}')">
+            <i class="fa-solid fa-file-signature"></i> Nhận Bảng Giá
+          </button>
+        </li>
       </ul>
     </div>
   </header>
@@ -1190,7 +1335,7 @@ def render_page(cat, all_cats):
 
       <!-- Legal note box -->
       <div style="background: #fff; border: 1px dashed #d5ccbe; border-radius: 12px; padding: 22px 28px; margin-top: 40px; font-size: 0.88rem; color: #666; line-height: 1.65;">
-        <strong>* Lưu ý về cách đọc giỏ hàng:</strong> Ba dòng sản phẩm là cách phân loại theo mục đích sử dụng tối ưu, không phải rào chắn cứng. Khách hàng quan tâm bất kỳ vị trí nào, đội ngũ tư vấn Đại Chúng Properties sẽ hỗ trợ bố trí phương án khai thác phù hợp nhất. Diện tích theo bản đồ phân lô cung cấp tháng 8/2026.
+        <strong>* Lưu ý về cách đọc giỏ hàng:</strong> Ba dòng sản phẩm là cách phân loại theo mục đích sử dụng tối ưu, không phải rào chắn cứng. Khách hàng quan tâm bất kỳ vị trí nào, đội ngũ tư vấn sẽ hỗ trợ bố trí phương án khai thác phù hợp nhất. Diện tích theo bản đồ phân lô cung cấp tháng 8/2026.
       </div>
     </div>
   </section>
@@ -1279,15 +1424,15 @@ def render_page(cat, all_cats):
         <p style="font-size: 0.88rem; margin-bottom: 14px; color: #a7b7af;">
           Đăng ký để nhận danh sách bảng giá chi tiết từng mã lô đợt mở bán tháng 9/2026.
         </p>
-        <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 10px 18px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.88rem;">
-          <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Giữ Chỗ
-        </a>
+        <button type="button" onclick="openBookingModal('', '', '{cat['title']}')" style="display: inline-flex; align-items: center; gap: 8px; background: var(--primary); border: 1px solid var(--gold); color: #fff; padding: 10px 18px; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.88rem; font-family: inherit;">
+          <i class="fa-solid fa-file-signature"></i> Đăng Ký Nhận Bảng Giá
+        </button>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div>© 2026 Saigon Farm Resort. Bảo lưu mọi quyền.</div>
-      <div>Đại diện tiếp thị độc quyền: <strong>Đại Chúng Properties</strong></div>
+      <div>Phát triển bởi: <strong>MDS Living &amp; Đại Chúng Properties</strong></div>
     </div>
   </footer>
 
@@ -1297,7 +1442,55 @@ def render_page(cat, all_cats):
     <img id="lightbox-img" src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Mặt bằng phóng to" onclick="event.stopPropagation()">
   </div>
 
+  <!-- Elegant Booking Guidance Modal -->
+  <div id="booking-modal" class="booking-modal-overlay" onclick="closeBookingModal()">
+    <div class="booking-modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Đóng">&times;</button>
+      
+      <div class="modal-emblem">
+        <i class="fa-solid fa-feather"></i>
+      </div>
+      
+      <h3 class="modal-title">Trân Trọng Cảm Ơn Quý Khách</h3>
+      <div class="modal-subtitle">Thông Tin Đặt Chỗ &amp; Bảng Giá Niêm Yết</div>
+      
+      <div id="modal-unit-tag" class="modal-unit-tag" style="display:none;"></div>
+      
+      <p class="modal-desc">
+        Để nhận trọn bộ hồ sơ pháp lý, bảng giá niêm yết chính thức từ Chủ đầu tư và được hỗ trợ thủ tục giữ chỗ ưu tiên trong đợt mở bán tháng 9/2026, <strong>kính mời Quý khách liên hệ trực tiếp với Đơn vị Đại lý hoặc Chuyên viên tư vấn đã trân trọng gửi Quý khách đường link thông tin này.</strong>
+      </p>
+      
+      <div class="modal-notice-box">
+        <i class="fa-solid fa-circle-info" style="color: var(--gold-dark); margin-top: 3px; font-size: 0.95rem;"></i>
+        <span>Chuyên viên tư vấn của Quý khách sẽ kiểm tra tình trạng giữ chỗ thời gian thực và sắp xếp phương tiện đưa đón Quý khách cùng gia đình tham quan thực địa.</span>
+      </div>
+      
+      <button type="button" class="modal-btn-confirm" onclick="closeBookingModal()">
+        <i class="fa-solid fa-check" style="margin-right: 6px;"></i> Đã Hiểu &amp; Đóng
+      </button>
+    </div>
+  </div>
+
   <script>
+    function openBookingModal(code, area, catTitle) {{
+      const modal = document.getElementById('booking-modal');
+      const unitTag = document.getElementById('modal-unit-tag');
+      
+      if (code && code.trim() !== '') {{
+        unitTag.style.display = 'inline-block';
+        unitTag.innerHTML = `<i class="fa-solid fa-tag" style="margin-right:4px;"></i> Quý khách đang quan tâm: <strong>Lô ${{code}}</strong> · ${{area}} m² (${{catTitle}})`;
+      }} else {{
+        unitTag.style.display = 'none';
+      }}
+      
+      modal.classList.add('active');
+    }}
+
+    function closeBookingModal() {{
+      const modal = document.getElementById('booking-modal');
+      modal.classList.remove('active');
+    }}
+
     function filterListings(type, btn) {{
       const buttons = document.querySelectorAll('.filter-btn');
       buttons.forEach(b => b.classList.remove('active'));
@@ -1346,7 +1539,10 @@ def render_page(cat, all_cats):
     }}
 
     document.addEventListener('keydown', (e) => {{
-      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'Escape') {{
+        closeLightbox();
+        closeBookingModal();
+      }}
     }});
   </script>
 </body>
@@ -1369,4 +1565,4 @@ for cat in categories:
         f.write(html_content)
     print(f"Generated {dir_name}/index.html")
 
-print("All files updated!")
+print("All files updated successfully!")
