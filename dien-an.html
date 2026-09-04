@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Điền An (The Haven Collection) | Saigon Farm Resort - Giỏ Hàng Mở Bán 2026</title>
+  <meta name="description" content="Điền An (The Haven Collection) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay. Đầu tư khai thác lưu trú. Chủ nhân phát triển cụm lưu trú cho thuê dài hạn, hoặc khai thác ngắn ngày với các vị trí có hướng nhìn đẹp. Bảy vị trí riêng tư nhất khu điền trang.">
+  <meta name="keywords" content="Saigon Farm Resort, Điền An, The Haven Collection, điền trang sinh thái, đất nghỉ dưỡng hồ tràm, đất đỏ vũng tàu">
+  
+  <link rel="icon" type="image/x-icon" href="assets/Index_asset/Logo/Logo_SGFR.png">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #204b36;
+      --primary-dark: #143324;
+      --primary-light: #2d6349;
+      --gold: #c9a96e;
+      --gold-dark: #a88444;
+      --gold-light: #f5e6c8;
+      --bg-cream: #fcfaf7;
+      --bg-card: #ffffff;
+      --text-main: #1d2521;
+      --text-muted: #5e6d65;
+      --border-color: #e5dfd5;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: var(--bg-cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* Utility Topbar */
+    .topbar {
+      background: #111814;
+      color: #b0bfb7;
+      font-size: 0.82rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .topbar-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .topbar a {
+      color: #d1ded8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .topbar a:hover {
+      color: var(--gold);
+    }
+
+    /* Main Navigation Header */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--primary-dark);
+    }
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 10px rgba(32,75,54,0.25);
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--primary-dark);
+    }
+    .brand-tag {
+      font-size: 0.75rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+    }
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+    .btn-nav-cta {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(32,75,54,0.2);
+      transition: all 0.3s ease;
+    }
+    .btn-nav-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 80px 20px;
+      background-image: linear-gradient(to right, rgba(14,26,20,0.92) 0%, rgba(14,26,20,0.72) 60%, rgba(14,26,20,0.4) 100%), url('assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg');
+    }
+    .hero-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,169,110,0.2);
+      border: 1px solid var(--gold);
+      color: #f7e7cb;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.18;
+      font-weight: 700;
+      margin-bottom: 14px;
+      max-width: 820px;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 22px;
+      max-width: 780px;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: #dbe5e0;
+      max-width: 740px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .hero-stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+      max-width: 960px;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-num {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--gold-light);
+      margin-top: 4px;
+    }
+
+    /* Section Layouts */
+    .section {
+      padding: 70px 20px;
+    }
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px;
+    }
+    .section-tag {
+      display: inline-block;
+      color: var(--gold-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Philosophy & Product Form Card */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .overview-content {
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+    .overview-content h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+    }
+    .overview-img-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      height: 100%;
+      min-height: 380px;
+    }
+    .overview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .overview-img-wrap:hover .overview-img {
+      transform: scale(1.04);
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .benefit-card {
+      background: #fff;
+      padding: 32px 26px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+    .benefit-icon {
+      width: 54px;
+      height: 54px;
+      background: #edf5f0;
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    .benefit-card:hover .benefit-icon {
+      background: var(--primary);
+      color: var(--gold-light);
+    }
+    .benefit-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+    .benefit-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Listing Catalog Section */
+    .catalog-section {
+      background: #f4f0e9;
+      padding: 80px 20px;
+    }
+    .catalog-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 36px;
+      background: #fff;
+      padding: 16px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+    .catalog-count {
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: #f5f2eb;
+      border: 1px solid #ddd6c8;
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* Listing Cards Grid */
+    .listings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+    .listing-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+    }
+    .listing-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gold);
+    }
+    .card-thumb-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: #222;
+    }
+    .card-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .listing-card:hover .card-thumb {
+      transform: scale(1.08);
+    }
+    .card-badge-code {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(14,26,20,0.85);
+      backdrop-filter: blur(6px);
+      color: #f7e7cb;
+      border: 1px solid var(--gold);
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .card-badge-status {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .status-available {
+      background: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #c8e6c9;
+    }
+    .status-reserved {
+      background: #fff8e1;
+      color: #b78103;
+      border: 1px solid #ffe082;
+    }
+    .card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .card-area {
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+    }
+    .card-area strong {
+      font-size: 1.3rem;
+      color: var(--primary);
+    }
+    .card-legal {
+      font-size: 0.78rem;
+      color: #2e7d32;
+      background: #eaf5ea;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .card-desc {
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+    .card-fit {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      background: #fbf9f5;
+      border: 1px dashed #ded4c1;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+    }
+    .card-footer {
+      border-top: 1px solid var(--border-color);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .card-price-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .price-label {
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .price-val {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-style: italic;
+    }
+    .card-btn-action {
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .card-btn-action:hover {
+      background: var(--primary-dark);
+      box-shadow: 0 4px 12px rgba(32,75,54,0.25);
+    }
+
+    /* Master Plan Banner */
+    .masterplan-section {
+      background: #121815;
+      color: #fff;
+      padding: 70px 20px;
+    }
+    .masterplan-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .masterplan-img-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid rgba(201,169,110,0.4);
+      cursor: pointer;
+    }
+    .masterplan-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .masterplan-img-card:hover .masterplan-img {
+      transform: scale(1.03);
+    }
+    .zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+    }
+
+    /* Other Collections Switcher */
+    .switch-section {
+      padding: 80px 20px;
+      background: #fff;
+    }
+    .switch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 30px;
+    }
+    .collection-switch-card {
+      position: relative;
+      min-height: 280px;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 36px 30px;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: var(--shadow-md);
+      transition: all 0.4s ease;
+    }
+    .switch-card-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s ease;
+      filter: brightness(0.75);
+    }
+    .collection-switch-card:hover .switch-card-bg {
+      transform: scale(1.08);
+      filter: brightness(0.65);
+    }
+    .switch-card-content {
+      position: relative;
+      z-index: 2;
+    }
+    .switch-badge {
+      display: inline-block;
+      background: rgba(201,169,110,0.3);
+      border: 1px solid var(--gold);
+      color: #f7e7cb;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .switch-card-content h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+    }
+    .switch-sub {
+      font-size: 0.88rem;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+    .switch-desc {
+      font-size: 0.88rem;
+      color: #e0e8e4;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .switch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 3px;
+    }
+
+    /* Global Footer */
+    .site-footer {
+      background: #0d1410;
+      color: #a7b7af;
+      padding: 60px 20px 30px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-grid {
+      max-width: 1240px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-heading {
+      font-family: var(--font-serif);
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 18px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      color: #a7b7af;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+    .footer-bottom {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.82rem;
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .lightbox-modal.active {
+      display: flex;
+    }
+    .lightbox-modal img {
+      max-width: 95%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .overview-grid, .masterplan-wrap, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Utility Topbar -->
+  <div class="topbar">
+    <div class="topbar-container">
+      <div>🌿 <strong>Saigon Farm Resort:</strong> Tựa Hồ 100ha - Hướng Biển - Đất 100% Thổ Cư Sổ Riêng Từng Lô</div>
+      <div style="display: flex; gap: 16px;">
+        <a href="index.html">Trang Chủ</a>
+        <a href="gioi-thieu.html">Bản Giới Thiệu Điền Trang</a>
+        <a href="article.html?id=304">Đăng Ký Khảo Sát</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">Saigon Farm Resort</span>
+          <span class="brand-tag">Hồ Tràm · Đất Đỏ</span>
+        </div>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="dien-an.html" class="active">Điền An</a></li>
+        <li><a href="dien-san.html" class="">Điền Sản</a></li>
+        <li><a href="biet-phu-dien-trang.html" class="">Biệt Phủ Điền Trang</a></li>
+        <li><a href="gioi-thieu.html">Tổng Thể Điền Trang</a></li>
+        <li><a href="https://zalo.me/0906060036" target="_blank" class="btn-nav-cta"><i class="fa-solid fa-comment-dots"></i> Nhận Bảng Giá</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> 7 Vị Trí Tĩnh Lặng Nhất Khu</span>
+      <h1 class="hero-title">Điền An<br><span style="color: var(--gold); font-size: 0.8em; font-weight: 400; font-style: italic;">The Haven Collection</span></h1>
+      <p class="hero-subtitle">Khai Thác Lưu Trú Nghỉ Dưỡng & An Cư Tĩnh Tại</p>
+      <p class="hero-desc">Đầu tư khai thác lưu trú. Chủ nhân phát triển cụm lưu trú cho thuê dài hạn, hoặc khai thác ngắn ngày với các vị trí có hướng nhìn đẹp. Bảy vị trí riêng tư nhất khu điền trang.</p>
+      
+      <div class="hero-stats-bar">
+        <div class="stat-item">
+          <span class="stat-num">100% THỔ CƯ</span>
+          <span class="stat-label">Sổ đỏ riêng từng lô có sẵn</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">7 SẢN PHẨM</span>
+          <span class="stat-label">Giỏ hàng mở bán tháng 9/2026</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">24.488 m²</span>
+          <span class="stat-label">Đại công viên & Tiện ích resort</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">CÔNG CHỨNG</span>
+          <span class="stat-label">Sang tên sở hữu ngay trong ngày</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Overview & Product Form -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">TRIẾT LÝ &amp; HÌNH THỨC SẢN PHẨM</span>
+        <h2 class="section-title">Ý Nghĩa Dòng Sản Phẩm &amp; Quy Chuẩn Bàn Giao</h2>
+        <p class="section-sub">Mỗi dòng sản phẩm tại Saigon Farm Resort được thiết kế chuyên biệt để đáp ứng đúng mục đích an cư, nghỉ dưỡng hoặc sinh lời bền vững của Quý chủ nhân.</p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-content">
+          <h3>Ý Nghĩa &amp; Bản Sắc Điền An</h3>
+          <p style="font-size: 1.02rem; color: #333; margin-bottom: 20px; line-height: 1.75;">
+            Đầu tư khai thác lưu trú. Chủ nhân phát triển cụm lưu trú cho thuê dài hạn, hoặc khai thác ngắn ngày với các vị trí có hướng nhìn đẹp. Bảy vị trí riêng tư nhất khu điền trang.
+          </p>
+          <div style="background: #fbf9f5; border-left: 4px solid var(--gold); padding: 18px 20px; border-radius: 6px; margin-bottom: 22px;">
+            <h5 style="color: var(--primary-dark); font-size: 1rem; margin-bottom: 6px; font-weight: 700;">HÌNH THỨC SẢN PHẨM BÀN GIAO:</h5>
+            <p style="font-size: 0.94rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
+              Đất 100% thổ cư (đất ở nông thôn lâu dài), sổ đỏ riêng từng lô, công chứng sang tên ngay trong ngày. Quy hoạch lý tưởng để phát triển mô hình dinh thự vườn sinh thái kết hợp cụm bungalow lưu trú chuẩn 5 sao.
+            </p>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--primary); font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Sổ đỏ trao tay</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--primary); font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Hạ tầng hoàn thiện 100%</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--primary); font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Vận hành quản gia MDS Living</span>
+          </div>
+        </div>
+
+        <div class="overview-img-wrap">
+          <img src="assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg" alt="Điền An" class="overview-img">
+        </div>
+      </div>
+
+      <!-- 4 Investment Benefits -->
+      <div class="benefits-grid">
+        
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-house-heart"></i></div>
+          <h4>Khai Thác Lưu Trú Kép Đa Năng</h4>
+          <p>Chủ nhân vừa có thể sử dụng làm chốn an trú tĩnh dưỡng riêng tư cho gia đình, vừa linh hoạt ủy thác vận hành cụm homestay/boutique retreat cao cấp tạo dòng tiền cho thuê thụ động hàng tháng.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-water-ladder"></i></div>
+          <h4>Kề Cận Cụm Đại Tiện Ích 24.488 m²</h4>
+          <p>Các vị trí Điền An ôm trọn lõi công viên sinh thái, hồ bơi điện phân khoáng muối, bến thuyền kayak và câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên chỉ trong vài bước chân.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+          <h4>Tầm Nhìn Hướng Đồng Lúa Thơ Mộng</h4>
+          <p>Sở hữu những lô đất có view mở toang ra cánh đồng lúa thanh bình và mặt nước tự nhiên 100ha — mang lại không gian ion âm tươi mát và năng lượng chữa lành vô giá.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-gem"></i></div>
+          <h4>Số Lượng Khan Hiếm Bậc Nhất (Chỉ 7 Lô)</h4>
+          <p>Quy hoạch giới hạn tuyệt đối chỉ 7 sản phẩm giúp Điền An sở hữu tính độc bản cao, giữ vững giá trị và thanh khoản vượt trội trước mọi biến động thị trường.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Product Listing Catalog -->
+  <section class="catalog-section" id="gio-hang">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">DANH SÁCH MÃ CĂN MỞ BÁN</span>
+        <h2 class="section-title">Bảng Giỏ Hàng Điền An</h2>
+        <p class="section-sub">Tổng hợp chi tiết các mã lô, diện tích quy hoạch, đặc tính vị trí và mức độ phù hợp. Bảng giá chính thức do Chủ đầu tư công bố trước thời điểm mở bán.</p>
+      </div>
+
+      <!-- Controls & Filter -->
+      <div class="catalog-controls">
+        <div class="catalog-count">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span>Hiển thị: <strong id="item-count">7</strong> sản phẩm</span>
+        </div>
+        <div class="filter-pills">
+          <button class="filter-btn active" onclick="filterListings('all', this)">Tất Cả</button>
+          <button class="filter-btn" onclick="filterListings('large', this)">Trên 1.000 m²</button>
+          <button class="filter-btn" onclick="filterListings('compact', this)">Dưới 1.000 m²</button>
+          <button class="filter-btn" onclick="filterListings('available', this)">Còn Hàng</button>
+        </div>
+      </div>
+
+      <!-- Listing Cards -->
+      <div class="listings-grid" id="listings-grid">
+        
+        <div class="listing-card" data-area="1.358,4" data-status="available">
+          <div class="card-thumb-wrap">
+            <img src="assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg" alt="Phối cảnh Lô B24" loading="lazy" class="card-thumb">
+            <span class="card-badge-code">LÔ B24</span>
+            <span class="card-badge-status status-available">
+              <i class="fa-solid fa-circle-check"></i> Còn hàng
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-top">
+              <span class="card-area"><i class="fa-solid fa-ruler-combined"></i> <strong>1.358,4</strong> m²</span>
+              <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
+            </div>
+            <h4 class="card-title">Mã Lô B24 · Điền An</h4>
+            <p class="card-desc"><strong>Đặc tính:</strong> Lô lớn nhất cụm phía Nam, góc ngoài cùng, hai mặt thoáng, GIÁP TRỰC TIẾP KHU TIỆN ÍCH</p>
+            <div class="card-fit">
+              <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
+              <span><strong>Phù hợp:</strong> Quy mô cụm lưu trú lớn nhất</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="price-label">Giá niêm yết CĐT:</span>
+                <span class="price-val">Liên hệ nhận bảng giá</span>
+              </div>
+              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô B24">
+                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="listing-card" data-area="1.322,5" data-status="reserved">
+          <div class="card-thumb-wrap">
+            <img src="assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg" alt="Phối cảnh Lô A14" loading="lazy" class="card-thumb">
+            <span class="card-badge-code">LÔ A14</span>
+            <span class="card-badge-status status-reserved">
+              <i class="fa-solid fa-clock"></i> Đang giữ chỗ
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-top">
+              <span class="card-area"><i class="fa-solid fa-ruler-combined"></i> <strong>1.322,5</strong> m²</span>
+              <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
+            </div>
+            <h4 class="card-title">Mã Lô A14 · Điền An</h4>
+            <p class="card-desc"><strong>Đặc tính:</strong> Trên 1.320 m², giữa dãy Tây Bắc, lưng giáp ranh khu điền trang — tách biệt khu ở</p>
+            <div class="card-fit">
+              <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
+              <span><strong>Phù hợp:</strong> Cụm lưu trú quy mô lớn, rất riêng tư</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="price-label">Giá niêm yết CĐT:</span>
+                <span class="price-val">Liên hệ nhận bảng giá</span>
+              </div>
+              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô A14">
+                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="listing-card" data-area="1.318,6" data-status="available">
+          <div class="card-thumb-wrap">
+            <img src="assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg" alt="Phối cảnh Lô A13" loading="lazy" class="card-thumb">
+            <span class="card-badge-code">LÔ A13</span>
+            <span class="card-badge-status status-available">
+              <i class="fa-solid fa-circle-check"></i> Còn hàng
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-top">
+              <span class="card-area"><i class="fa-solid fa-ruler-combined"></i> <strong>1.318,6</strong> m²</span>
+              <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
+            </div>
+            <h4 class="card-title">Mã Lô A13 · Điền An</h4>
+            <p class="card-desc"><strong>Đặc tính:</strong> Trên 1.310 m², dãy Tây Bắc, tiếp giáp cụm Điền Sản</p>
+            <div class="card-fit">
+              <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
+              <span><strong>Phù hợp:</strong> Cụm lưu trú quy mô lớn</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="price-label">Giá niêm yết CĐT:</span>
+                <span class="price-val">Liên hệ nhận bảng giá</span>
+              </div>
+              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô A13">
+                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="listing-card" data-area="1.204,6" data-status="available">
+          <div class="card-thumb-wrap">
+            <img src="assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg" alt="Phối cảnh Lô B23" loading="lazy" class="card-thumb">
+            <span class="card-badge-code">LÔ B23</span>
+            <span class="card-badge-status status-available">
+              <i class="fa-solid fa-circle-check"></i> Còn hàng
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-top">
+              <span class="card-area"><i class="fa-solid fa-ruler-combined"></i> <strong>1.204,6</strong> m²</span>
+              <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
+            </div>
+            <h4 class="card-title">Mã Lô B23 · Điền An</h4>
+            <p class="card-desc"><strong>Đặc tính:</strong> Giữa cụm phía Nam, GIÁP TRỰC TIẾP KHU TIỆN ÍCH — hồ bơi, sân thể thao, vườn</p>
+            <div class="card-fit">
+              <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
+              <span><strong>Phù hợp:</strong> Cụm lưu trú, cảnh quan tiện ích</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="price-label">Giá niêm yết CĐT:</span>
+                <span class="price-val">Liên hệ nhận bảng giá</span>
+              </div>
+              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô B23">
+                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="listing-card" data-area="1.119,4" data-status="available">
+          <div class="card-thumb-wrap">
+            <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg" alt="Phối cảnh Lô B22" loading="lazy" class="card-thumb">
+            <span class="card-badge-code">LÔ B22</span>
+            <span class="card-badge-status status-available">
+              <i class="fa-solid fa-circle-check"></i> Còn hàng
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-top">
+              <span class="card-area"><i class="fa-solid fa-ruler-combined"></i> <strong>1.119,4</strong> m²</span>
+              <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
+            </div>
+            <h4 class="card-title">Mã Lô B22 · Điền An</h4>
+            <p class="card-desc"><strong>Đặc tính:</strong> Đầu cụm phía Nam, giáp khu tiện ích và lối vào từ trục D1</p>
+            <div class="card-fit">
+              <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
+              <span><strong>Phù hợp:</strong> Cụm lưu trú, tiếp cận thuận tiện</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="price-label">Giá niêm yết CĐT:</span>
+                <span class="price-val">Liên hệ nhận bảng giá</span>
+              </div>
+              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô B22">
+                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="listing-card" data-area="1.115,3" data-status="reserved">
+          <div class="card-thumb-wrap">
+            <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg" alt="Phối cảnh Lô A15" loading="lazy" class="card-thumb">
+            <span class="card-badge-code">LÔ A15</span>
+            <span class="card-badge-status status-reserved">
+              <i class="fa-solid fa-clock"></i> Đang giữ chỗ
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-top">
+              <span class="card-area"><i class="fa-solid fa-ruler-combined"></i> <strong>1.115,3</strong> m²</span>
+              <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
+            </div>
+            <h4 class="card-title">Mã Lô A15 · Điền An</h4>
+            <p class="card-desc"><strong>Đặc tính:</strong> Đầu dãy Tây Bắc, hai mặt giáp ranh khu điền trang — vị trí riêng tư nhất khu</p>
+            <div class="card-fit">
+              <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
+              <span><strong>Phù hợp:</strong> Cụm lưu trú tách biệt hoàn toàn</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="price-label">Giá niêm yết CĐT:</span>
+                <span class="price-val">Liên hệ nhận bảng giá</span>
+              </div>
+              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô A15">
+                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="listing-card" data-area="1.086,6" data-status="available">
+          <div class="card-thumb-wrap">
+            <img src="assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg" alt="Phối cảnh Lô A22" loading="lazy" class="card-thumb">
+            <span class="card-badge-code">LÔ A22</span>
+            <span class="card-badge-status status-available">
+              <i class="fa-solid fa-circle-check"></i> Còn hàng
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-top">
+              <span class="card-area"><i class="fa-solid fa-ruler-combined"></i> <strong>1.086,6</strong> m²</span>
+              <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
+            </div>
+            <h4 class="card-title">Mã Lô A22 · Điền An</h4>
+            <p class="card-desc"><strong>Đặc tính:</strong> VIEW ĐẸP NHẤT DÒNG. Dãy Tây Nam, hướng nhìn mở thẳng ra cánh đồng lúa</p>
+            <div class="card-fit">
+              <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
+              <span><strong>Phù hợp:</strong> Khai thác lưu trú ngắn ngày</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="price-label">Giá niêm yết CĐT:</span>
+                <span class="price-val">Liên hệ nhận bảng giá</span>
+              </div>
+              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô A22">
+                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Legal note box -->
+      <div style="background: #fff; border: 1px dashed #d5ccbe; border-radius: 12px; padding: 22px 28px; margin-top: 40px; font-size: 0.88rem; color: #666; line-height: 1.65;">
+        <strong>* Lưu ý về cách đọc giỏ hàng:</strong> Ba dòng sản phẩm là cách phân loại theo mục đích sử dụng tối ưu, không phải rào chắn cứng. Khách hàng quan tâm bất kỳ vị trí nào, đội ngũ tư vấn Đại Chúng Properties sẽ hỗ trợ bố trí phương án khai thác phù hợp nhất. Diện tích theo bản đồ phân lô cung cấp tháng 8/2026.
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Plan Section -->
+  <section class="masterplan-section">
+    <div class="container">
+      <div class="masterplan-wrap">
+        <div>
+          <span class="section-tag" style="color: var(--gold);">QUY HOẠCH TỔNG THỂ ĐIỀN TRANG</span>
+          <h2 class="section-title" style="color: #fff; margin-bottom: 20px;">Mặt Bằng &amp; Hệ Thống Tiện Ích 24.488 m²</h2>
+          <p style="color: #c2d1cb; line-height: 1.7; margin-bottom: 24px;">
+            Saigon Farm Resort được quy hoạch bài bản với mật độ xây dựng thấp kỷ lục. Trung tâm là quần thể tiện ích sinh thái 5 sao: Clubhouse ven hồ, Hồ bơi điện phân khoáng muối, Sân Pickleball, Làng ngựa quý tộc Việt Mã Viên, Bến thuyền Kayak và Đầm sen ngát hương.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="gioi-thieu.html" class="btn-nav-cta" style="background: var(--gold); color: #111 !important;">
+              <i class="fa-solid fa-book-open"></i> Xem Bản Giới Thiệu Đầy Đủ
+            </a>
+            <button onclick="openLightbox('assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png')" class="btn-nav-cta" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); cursor: pointer;">
+              <i class="fa-solid fa-expand"></i> Phóng To Sơ Đồ Tiện Ích
+            </button>
+          </div>
+        </div>
+
+        <div class="masterplan-img-card" onclick="openLightbox('assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png')">
+          <img src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Sơ Đồ Phân Lô & Tiện Ích Saigon Farm Resort" class="masterplan-img">
+          <div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Nhấp để xem lớn</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Collections Switcher -->
+  <section class="switch-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">BỘ SƯU TẬP ĐIỀN TRANG KHÁC</span>
+        <h2 class="section-title">Khám Phá Các Dòng Sản Phẩm Cùng Giỏ Hàng</h2>
+        <p class="section-sub">Tìm hiểu thêm các phương án đầu tư và sở hữu biệt phủ điền trang phù hợp với khẩu vị tài chính của Quý khách.</p>
+      </div>
+
+      <div class="switch-grid">
+        
+        <a href="biet-phu-dien-trang.html" class="collection-switch-card">
+          <div class="switch-card-bg" style="background-image: url('assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg');"></div>
+          <div class="switch-card-content">
+            <span class="switch-badge">17 Sản Phẩm Giới Hạn</span>
+            <h3>Biệt Phủ Điền Trang</h3>
+            <p class="switch-sub">The Manor Collection</p>
+            <p class="switch-desc">Dinh Thự Gia Tộc Sum Họp Đa Thế Hệ & Nghỉ Dưỡng Thượng Lưu</p>
+            <span class="switch-btn">Khám Phá Dòng Sản Phẩm <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        
+        <a href="dien-san.html" class="collection-switch-card">
+          <div class="switch-card-bg" style="background-image: url('assets/Index_asset/tien_ich_3D/Tong_quan.jpg');"></div>
+          <div class="switch-card-content">
+            <span class="switch-badge">12 Sản Phẩm Tiên Phong</span>
+            <h3>Điền Sản</h3>
+            <p class="switch-sub">The Founders Collection</p>
+            <p class="switch-desc">Tích Sản Tài Chính & Quyền Ưu Tiên Ra Hàng Đón Sóng Hạ Tầng</p>
+            <span class="switch-btn">Khám Phá Dòng Sản Phẩm <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1rem;"><i class="fa-solid fa-tree"></i></div>
+          <span style="font-family: var(--font-serif); font-size: 1.2rem; color: #fff; font-weight: 700;">Saigon Farm Resort</span>
+        </div>
+        <p style="font-size: 0.88rem; line-height: 1.7; color: #8e9e96; margin-bottom: 20px;">
+          Quần thể biệt phủ điền trang sinh thái tựa hồ 100ha - hướng biển. Đất 100% thổ cư, sổ đỏ riêng từng lô, phát triển bởi Đại Chúng Properties &amp; MDS Living.
+        </p>
+        <p style="font-size: 0.88rem; color: var(--gold-light);">
+          📍 <strong>Địa chỉ:</strong> Xã Đất Đỏ, Huyện Đất Đỏ, Tỉnh Bà Rịa – Vũng Tàu.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Bộ Sưu Tập</h4>
+        <ul class="footer-links">
+          <li><a href="dien-an.html">Điền An (The Haven Collection)</a></li>
+          <li><a href="dien-san.html">Điền Sản (The Founders Collection)</a></li>
+          <li><a href="biet-phu-dien-trang.html">Biệt Phủ Điền Trang (The Manor Collection)</a></li>
+          <li><a href="index.html#villas-section">Bộ Sưu Tập Dinh Thự Sunrise &amp; Sunset</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Thông Tin Pháp Lý</h4>
+        <ul class="footer-links">
+          <li><a href="gioi-thieu.html">Bản Giới Thiệu Điền Trang</a></li>
+          <li><a href="article.html?id=301">Về Đại Chúng Properties</a></li>
+          <li><a href="article.html?id=303">Báo Chí &amp; Pháp Lý Minh Bạch</a></li>
+          <li><a href="article.html?id=304">Đăng Ký Khảo Sát Thực Địa</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Liên Hệ &amp; Đặt Chỗ</h4>
+        <p style="font-size: 0.88rem; margin-bottom: 14px; color: #a7b7af;">
+          Đăng ký để nhận danh sách bảng giá chi tiết từng mã lô đợt mở bán tháng 9/2026.
+        </p>
+        <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 10px 18px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.88rem;">
+          <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Giữ Chỗ
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Saigon Farm Resort. Bảo lưu mọi quyền.</div>
+      <div>Đại diện tiếp thị độc quyền: <strong>Đại Chúng Properties</strong></div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal Container -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="Mặt bằng phóng to" onclick="event.stopPropagation()">
+  </div>
+
+  <script>
+    function filterListings(type, btn) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.listing-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const areaStr = card.getAttribute('data-area') || '0';
+        const area = parseFloat(areaStr.replace('.', '').replace(',', '.'));
+        const status = card.getAttribute('data-status');
+
+        let show = false;
+        if (type === 'all') {
+          show = true;
+        } else if (type === 'large') {
+          show = area >= 1000;
+        } else if (type === 'compact') {
+          show = area < 1000;
+        } else if (type === 'available') {
+          show = status === 'available';
+        }
+
+        if (show) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('item-count').textContent = visibleCount;
+    }
+
+    function openLightbox(src) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

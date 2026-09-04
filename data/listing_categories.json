@@ -1,0 +1,407 @@
+[
+  {
+    "slug": "biet-phu-dien-trang",
+    "title": "Biệt Phủ Điền Trang",
+    "sub_title": "The Manor Collection",
+    "tagline": "Dinh Thự Gia Tộc Sum Họp Đa Thế Hệ & Nghỉ Dưỡng Thượng Lưu",
+    "badge": "17 Sản Phẩm Giới Hạn",
+    "desc": "Biệt phủ gia đình cho kỳ nghỉ và sum họp nhiều thế hệ. Không gian khuôn viên rộng lớn từ 646,5m² đến 1.452m² với 100% thổ cư sổ đỏ riêng. Chủ nhân có thể đưa vào chương trình khai thác cho thuê của MDS Living khi không sử dụng.",
+    "table_idx": 0,
+    "default_image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg",
+    "hero_image": "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg",
+    "accent_color": "#204b36",
+    "accent_gold": "#c9a96e",
+    "items": [
+      {
+        "code": "A6",
+        "area": "1.452,0",
+        "features": "LÔ LỚN NHẤT GIỎ HÀNG. Trục trung tâm, hai mặt tiếp giáp đường nội khu",
+        "suitable_for": "Gia đình muốn quỹ đất lớn nhất khu điền trang",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "A24",
+        "area": "1.298,2",
+        "features": "Lô góc Tây Nam, hình thế đất riêng biệt. Giáp cánh đồng lúa và lối vào khu tiện ích",
+        "suitable_for": "Chủ nhân muốn một vị trí độc bản",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Đang giữ chỗ",
+        "status_type": "reserved",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "A21",
+        "area": "1.193,0",
+        "features": "Trên 1.190 m², dãy Tây Nam, lưng nhìn ra cánh đồng lúa",
+        "suitable_for": "Gia đình ưu tiên tầm nhìn đồng lúa",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "A4",
+        "area": "1.135,9",
+        "features": "Trục trung tâm phía Bắc, gần lối vào chính từ đường Long Tân – Lãng Dài",
+        "suitable_for": "Khách đi lại thường xuyên",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_2_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "A16",
+        "area": "1.093,6",
+        "features": "Cuối dãy Tây Nam, sát lối vào khu tiện ích trung tâm",
+        "suitable_for": "Gia đình có trẻ nhỏ, đi bộ tới tiện ích",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg"
+      },
+      {
+        "code": "B20",
+        "area": "[CHỜ]",
+        "features": "Cụm Đông Nam, cuối cụm, giáp ranh khu điền trang phía Đông và khu tiện ích",
+        "suitable_for": "Gia đình muốn giáp tiện ích, ít xe qua lại",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Đang giữ chỗ",
+        "status_type": "reserved",
+        "image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg"
+      },
+      {
+        "code": "B14",
+        "area": "1.008,0",
+        "features": "Cụm Đông Nam, nằm giữa, được che chắn bốn phía",
+        "suitable_for": "Gia đình ưu tiên an toàn cho trẻ",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg"
+      },
+      {
+        "code": "B6",
+        "area": "1.004,2",
+        "features": "Trục Đông, mặt tiền đường D1, gần lối vào chính",
+        "suitable_for": "Khách ưu tiên tiếp cận thuận tiện",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Clubhoue_ven_ho.jpg"
+      },
+      {
+        "code": "A20",
+        "area": "982,8",
+        "features": "Dãy Tây Nam, giữa hàng, lưng nhìn ra cánh đồng lúa",
+        "suitable_for": "Gia đình nhỏ, ngân sách vừa",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Không_gian_clubhouse_ven_ho.jpg"
+      },
+      {
+        "code": "B7",
+        "area": "926,6",
+        "features": "Trục Đông, mặt tiền đường D2",
+        "suitable_for": "Khách muốn vị trí trung tâm",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Hồ_bơi_ven_Hồ.jpg"
+      },
+      {
+        "code": "B15",
+        "area": "897,1",
+        "features": "GIÁP TRỰC TIẾP KHU TIỆN ÍCH TRUNG TÂM phía Nam",
+        "suitable_for": "Gia đình muốn ở sát tiện ích",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg"
+      },
+      {
+        "code": "A19",
+        "area": "888,3",
+        "features": "Dãy Tây Nam, giữa hàng, lưng nhìn ra cánh đồng lúa",
+        "suitable_for": "Ngân sách vừa, vẫn đủ đất xây biệt phủ",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg"
+      },
+      {
+        "code": "A17",
+        "area": "880,7",
+        "features": "Cuối dãy Tây Nam, cạnh lối vào khu tiện ích",
+        "suitable_for": "Khách muốn gần tiện ích nhất",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg"
+      },
+      {
+        "code": "B13",
+        "area": "879,3",
+        "features": "Cụm Đông Nam, giữa cụm, mặt tiền đường D1",
+        "suitable_for": "Ngân sách vừa",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg"
+      },
+      {
+        "code": "B12",
+        "area": "874,5",
+        "features": "Cụm Đông Nam, đầu cụm, gần giao lộ D1 – D2",
+        "suitable_for": "Khách ưu tiên tiếp cận thuận tiện",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "A18",
+        "area": "873,9",
+        "features": "Dãy Tây Nam, giữa hàng, yên tĩnh",
+        "suitable_for": "Ngân sách vừa",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "A23",
+        "area": "646,5",
+        "features": "LÔ NHỎ NHẤT KHU. Đầu dãy Tây Nam, hai mặt giáp ranh khu điền trang và cánh đồng lúa",
+        "suitable_for": "Khách muốn vào khu với ngân sách thấp nhất",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "dien-san",
+    "title": "Điền Sản",
+    "sub_title": "The Founders Collection",
+    "tagline": "Tích Sản Tài Chính & Quyền Ưu Tiên Ra Hàng Đón Sóng Hạ Tầng",
+    "badge": "12 Sản Phẩm Tiên Phong",
+    "desc": "Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của chủ đầu tư. Không bắt buộc xây dựng ngay.",
+    "table_idx": 1,
+    "default_image": "assets/Index_asset/tien_ich_3D/Tong_Quan_1.jpg",
+    "hero_image": "assets/Index_asset/tien_ich_3D/Tong_quan.jpg",
+    "accent_color": "#1b3a4b",
+    "accent_gold": "#d4af37",
+    "items": [
+      {
+        "code": "A8",
+        "area": "1.348,1",
+        "features": "Lô lớn nhất dãy Tây Bắc. Mặt tiền đường D7, gần trục trung tâm",
+        "suitable_for": "Nhà đầu tư ưu tiên quỹ đất lớn",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg"
+      },
+      {
+        "code": "A9",
+        "area": "1.334,0",
+        "features": "Trên 1.330 m², dãy Tây Bắc, mặt tiền đường D7",
+        "suitable_for": "Nhà đầu tư giữ trung hạn",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Đang giữ chỗ",
+        "status_type": "reserved",
+        "image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg"
+      },
+      {
+        "code": "A10",
+        "area": "1.304,5",
+        "features": "Trên 1.300 m², giữa dãy Tây Bắc",
+        "suitable_for": "Nhà đầu tư giữ trung hạn",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Clubhoue_ven_ho.jpg"
+      },
+      {
+        "code": "A11",
+        "area": "1.304,5",
+        "features": "Trên 1.300 m², giữa dãy Tây Bắc, tiếp giáp cụm Điền An",
+        "suitable_for": "Nhà đầu tư giữ trung hạn",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Không_gian_clubhouse_ven_ho.jpg"
+      },
+      {
+        "code": "A12",
+        "area": "1.295,2",
+        "features": "Trên 1.290 m², đầu dãy Tây Bắc, liền kề cụm Điền An",
+        "suitable_for": "Nhà đầu tư ưu tiên quỹ đất lớn",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Hồ_bơi_ven_Hồ.jpg"
+      },
+      {
+        "code": "B10",
+        "area": "1.293,3",
+        "features": "Lô góc ngoài cùng cánh Đông, hai mặt thoáng, giáp ranh khu điền trang",
+        "suitable_for": "Nhà đầu tư ưu tiên lô góc",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Đang giữ chỗ",
+        "status_type": "reserved",
+        "image": "assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg"
+      },
+      {
+        "code": "B9",
+        "area": "1.176,6",
+        "features": "Cánh Đông, giáp ranh khu điền trang phía Đông, hướng nhìn mở",
+        "suitable_for": "Nhà đầu tư giữ trung hạn",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg"
+      },
+      {
+        "code": "B8",
+        "area": "1.158,5",
+        "features": "Cánh Đông, mặt tiền đường D2 — trục ngang chính của khu",
+        "suitable_for": "Nhà đầu tư ưu tiên mặt tiền trục chính",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg"
+      },
+      {
+        "code": "B17",
+        "area": "1.036,9",
+        "features": "Cụm Đông Nam, đầu cụm, giáp ranh khu điền trang",
+        "suitable_for": "Nhà đầu tư mua theo gói",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg"
+      },
+      {
+        "code": "B19",
+        "area": "1.036,0",
+        "features": "Cụm Đông Nam, giữa cụm",
+        "suitable_for": "Nhà đầu tư mua theo gói",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "B18",
+        "area": "1.031,0",
+        "features": "Cụm Đông Nam, giữa cụm",
+        "suitable_for": "Nhà đầu tư mua theo gói",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "B5",
+        "area": "891,0",
+        "features": "Giá trị vào thấp nhất của dòng. Trục Đông, gần lối vào chính phía Bắc",
+        "suitable_for": "Nhà đầu tư vốn vừa, ưu tiên thanh khoản",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "dien-an",
+    "title": "Điền An",
+    "sub_title": "The Haven Collection",
+    "tagline": "Khai Thác Lưu Trú Nghỉ Dưỡng & An Cư Tĩnh Tại",
+    "badge": "7 Vị Trí Tĩnh Lặng Nhất Khu",
+    "desc": "Đầu tư khai thác lưu trú. Chủ nhân phát triển cụm lưu trú cho thuê dài hạn, hoặc khai thác ngắn ngày với các vị trí có hướng nhìn đẹp. Bảy vị trí riêng tư nhất khu điền trang.",
+    "table_idx": 2,
+    "default_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg",
+    "hero_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg",
+    "accent_color": "#2c4a3e",
+    "accent_gold": "#e0a96d",
+    "items": [
+      {
+        "code": "B24",
+        "area": "1.358,4",
+        "features": "Lô lớn nhất cụm phía Nam, góc ngoài cùng, hai mặt thoáng, GIÁP TRỰC TIẾP KHU TIỆN ÍCH",
+        "suitable_for": "Quy mô cụm lưu trú lớn nhất",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg"
+      },
+      {
+        "code": "A14",
+        "area": "1.322,5",
+        "features": "Trên 1.320 m², giữa dãy Tây Bắc, lưng giáp ranh khu điền trang — tách biệt khu ở",
+        "suitable_for": "Cụm lưu trú quy mô lớn, rất riêng tư",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Đang giữ chỗ",
+        "status_type": "reserved",
+        "image": "assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg"
+      },
+      {
+        "code": "A13",
+        "area": "1.318,6",
+        "features": "Trên 1.310 m², dãy Tây Bắc, tiếp giáp cụm Điền Sản",
+        "suitable_for": "Cụm lưu trú quy mô lớn",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg"
+      },
+      {
+        "code": "B23",
+        "area": "1.204,6",
+        "features": "Giữa cụm phía Nam, GIÁP TRỰC TIẾP KHU TIỆN ÍCH — hồ bơi, sân thể thao, vườn",
+        "suitable_for": "Cụm lưu trú, cảnh quan tiện ích",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg"
+      },
+      {
+        "code": "B22",
+        "area": "1.119,4",
+        "features": "Đầu cụm phía Nam, giáp khu tiện ích và lối vào từ trục D1",
+        "suitable_for": "Cụm lưu trú, tiếp cận thuận tiện",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "A15",
+        "area": "1.115,3",
+        "features": "Đầu dãy Tây Bắc, hai mặt giáp ranh khu điền trang — vị trí riêng tư nhất khu",
+        "suitable_for": "Cụm lưu trú tách biệt hoàn toàn",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Đang giữ chỗ",
+        "status_type": "reserved",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+      },
+      {
+        "code": "A22",
+        "area": "1.086,6",
+        "features": "VIEW ĐẸP NHẤT DÒNG. Dãy Tây Nam, hướng nhìn mở thẳng ra cánh đồng lúa",
+        "suitable_for": "Khai thác lưu trú ngắn ngày",
+        "price": "Liên hệ nhận bảng giá",
+        "status": "Còn hàng",
+        "status_type": "available",
+        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/SUNRISE_1_VILLA/SFR_04.PC_01.jpg"
+      }
+    ]
+  }
+]

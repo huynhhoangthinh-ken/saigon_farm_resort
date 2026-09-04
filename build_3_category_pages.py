@@ -1,0 +1,1276 @@
+import json, os, re
+
+# Load parsed data
+with open("data/listing_categories.json", "r", encoding="utf-8") as f:
+    categories = json.load(f)
+
+# Common HTML Header template
+def render_page(cat, all_cats):
+    other_cats = [c for c in all_cats if c["slug"] != cat["slug"]]
+    
+    # Specific investment benefits per category
+    benefits = []
+    if cat["slug"] == "dien-an":
+        benefits = [
+            {
+                "icon": "fa-house-heart",
+                "title": "Khai Thác Lưu Trú Kép Đa Năng",
+                "desc": "Chủ nhân vừa có thể sử dụng làm chốn an trú tĩnh dưỡng riêng tư cho gia đình, vừa linh hoạt ủy thác vận hành cụm homestay/boutique retreat cao cấp tạo dòng tiền cho thuê thụ động hàng tháng."
+            },
+            {
+                "icon": "fa-water-ladder",
+                "title": "Kề Cận Cụm Đại Tiện Ích 24.488 m²",
+                "desc": "Các vị trí Điền An ôm trọn lõi công viên sinh thái, hồ bơi điện phân khoáng muối, bến thuyền kayak và câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên chỉ trong vài bước chân."
+            },
+            {
+                "icon": "fa-wheat-awn",
+                "title": "Tầm Nhìn Hướng Đồng Lúa Thơ Mộng",
+                "desc": "Sở hữu những lô đất có view mở toang ra cánh đồng lúa thanh bình và mặt nước tự nhiên 100ha — mang lại không gian ion âm tươi mát và năng lượng chữa lành vô giá."
+            },
+            {
+                "icon": "fa-gem",
+                "title": "Số Lượng Khan Hiếm Bậc Nhất (Chỉ 7 Lô)",
+                "desc": "Quy hoạch giới hạn tuyệt đối chỉ 7 sản phẩm giúp Điền An sở hữu tính độc bản cao, giữ vững giá trị và thanh khoản vượt trội trước mọi biến động thị trường."
+            }
+        ]
+        product_form_desc = "Đất 100% thổ cư (đất ở nông thôn lâu dài), sổ đỏ riêng từng lô, công chứng sang tên ngay trong ngày. Quy hoạch lý tưởng để phát triển mô hình dinh thự vườn sinh thái kết hợp cụm bungalow lưu trú chuẩn 5 sao."
+    elif cat["slug"] == "dien-san":
+        benefits = [
+            {
+                "icon": "fa-chart-line-up",
+                "title": "Biên Độ Gia Tăng Giá Trị Giai Đoạn 1",
+                "desc": "Nhà đầu tư đón đầu mức giá khởi điểm tốt nhất từ Chủ đầu tư trong đợt mở bán đầu tiên, đảm bảo biên lợi nhuận kỳ vọng cao nhất cho dòng vốn tích sản."
+            },
+            {
+                "icon": "fa-layer-group",
+                "title": "Không Áp Lực Xây Dựng Ngay",
+                "desc": "Sở hữu đất có sổ đỏ riêng 100% thổ cư mà không bị áp lực thời gian bắt buộc xây dựng, giúp tối ưu hóa hiệu quả sử dụng vốn tự có và dễ dàng chuyển nhượng."
+            },
+            {
+                "icon": "fa-plane-departure",
+                "title": "Hưởng Trọn Cú Hích Hạ Tầng Quốc Gia 2026",
+                "desc": "Vị trí kết nối thẳng Cao tốc Biên Hòa – Vũng Tàu và chỉ cách Sân bay Quốc tế Long Thành (GĐ1) 45 phút di chuyển, sẵn sàng bùng nổ làn sóng du khách và chuyên gia quốc tế."
+            },
+            {
+                "icon": "fa-arrow-progress",
+                "title": "Quyền Ưu Tiên Ra Hàng Theo Lộ Trình CĐT",
+                "desc": "Được đội ngũ kinh doanh Đại Chúng Properties đồng hành hỗ trợ ra hàng theo từng giai đoạn tăng giá mở bán tiếp theo của khu điền trang."
+            }
+        ]
+        product_form_desc = "Đất nền điền trang 100% thổ cư, sổ đỏ cầm tay, hạ tầng hoàn thiện đồng bộ (đường nội khu trải nhựa, vỉa hè cỏ lạc, cấp điện nước ngầm). Nhà đầu tư an tâm nắm giữ tài sản đất vàng ven đô không lo khấu hao."
+    else: # biet-phu-dien-trang
+        benefits = [
+            {
+                "icon": "fa-crown",
+                "title": "Biểu Tượng Vị Thế & Di Sản Gia Tộc",
+                "desc": "Quần thể biệt phủ điền trang từ 646m² đến 1.452m² khẳng định đẳng cấp sống thượng lưu của chủ nhân, nơi lưu giữ giá trị tinh thần và tài sản truyền đời qua nhiều thế hệ."
+            },
+            {
+                "icon": "fa-bell-concierge",
+                "title": "Dịch Vụ Quản Gia Nghỉ Dưỡng MDS Living 5 Sao",
+                "desc": "Hệ thống quản gia chăm sóc sân vườn, hồ bơi khoáng muối, đầu bếp riêng phục vụ tiệc gia đình và bảo vệ an ninh khép kín 24/7."
+            },
+            {
+                "icon": "fa-seedling",
+                "title": "Không Gian Sống Xanh Nguyên Bản Ven Hồ 100ha",
+                "desc": "Mật độ xây dựng chỉ 20-25%, dành trọn hơn 75% diện tích cho vườn cây ăn trái sum sê, bãi cỏ sinh hoạt ngoài trời và không khí trong lành tựa thiên đường."
+            },
+            {
+                "icon": "fa-hand-holding-dollar",
+                "title": "Ủy Thác Vận Hành Cho Thuê Doanh Thu Cao",
+                "desc": "Chủ nhân hoàn toàn có thể bàn giao căn biệt phủ cho đơn vị quản lý resort khai thác đón khách thượng lưu những ngày không sử dụng để nhận lợi nhuận chia sẻ hấp dẫn."
+            }
+        ]
+        product_form_desc = "Khuôn viên điền trang siêu lớn với 100% thổ cư sổ đỏ riêng. Thiết kế kiến trúc dinh thự thuần Việt đương đại kết hợp tiện nghi cao cấp phương Tây, hồ bơi muối khoáng và vườn cây sinh thái riêng biệt."
+
+    # Generate cards HTML
+    cards_html = ""
+    for idx, item in enumerate(cat["items"]):
+        status_badge_class = "status-available" if item["status_type"] == "available" else "status-reserved"
+        status_icon = "fa-circle-check" if item["status_type"] == "available" else "fa-clock"
+        
+        cards_html += f"""
+        <div class="listing-card" data-area="{item['area']}" data-status="{item['status_type']}">
+          <div class="card-thumb-wrap">
+            <img src="{item['image']}" alt="Phối cảnh Lô {item['code']}" loading="lazy" class="card-thumb">
+            <span class="card-badge-code">LÔ {item['code']}</span>
+            <span class="card-badge-status {status_badge_class}">
+              <i class="fa-solid {status_icon}"></i> {item['status']}
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta-top">
+              <span class="card-area"><i class="fa-solid fa-ruler-combined"></i> <strong>{item['area']}</strong> m²</span>
+              <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
+            </div>
+            <h4 class="card-title">Mã Lô {item['code']} · {cat['title']}</h4>
+            <p class="card-desc"><strong>Đặc tính:</strong> {item['features']}</p>
+            <div class="card-fit">
+              <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
+              <span><strong>Phù hợp:</strong> {item['suitable_for']}</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="price-label">Giá niêm yết CĐT:</span>
+                <span class="price-val">Liên hệ nhận bảng giá</span>
+              </div>
+              <a href="https://zalo.me/0906060036" target="_blank" class="card-btn-action" title="Nhận bảng giá và kiểm tra trạng thái lô {item['code']}">
+                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
+              </a>
+            </div>
+          </div>
+        </div>
+        """
+
+    # Generate Other Collections Cards
+    other_cards_html = ""
+    for oc in other_cats:
+        other_cards_html += f"""
+        <a href="{oc['slug']}.html" class="collection-switch-card">
+          <div class="switch-card-bg" style="background-image: url('{oc['hero_image']}');"></div>
+          <div class="switch-card-content">
+            <span class="switch-badge">{oc['badge']}</span>
+            <h3>{oc['title']}</h3>
+            <p class="switch-sub">{oc['sub_title']}</p>
+            <p class="switch-desc">{oc['tagline']}</p>
+            <span class="switch-btn">Khám Phá Dòng Sản Phẩm <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        """
+
+    html = f"""<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{cat['title']} ({cat['sub_title']}) | Saigon Farm Resort - Giỏ Hàng Mở Bán 2026</title>
+  <meta name="description" content="{cat['title']} ({cat['sub_title']}) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay. {cat['desc']}">
+  <meta name="keywords" content="Saigon Farm Resort, {cat['title']}, {cat['sub_title']}, điền trang sinh thái, đất nghỉ dưỡng hồ tràm, đất đỏ vũng tàu">
+  
+  <link rel="icon" type="image/x-icon" href="assets/Index_asset/Logo/Logo_SGFR.png">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {{
+      --primary: #204b36;
+      --primary-dark: #143324;
+      --primary-light: #2d6349;
+      --gold: #c9a96e;
+      --gold-dark: #a88444;
+      --gold-light: #f5e6c8;
+      --bg-cream: #fcfaf7;
+      --bg-card: #ffffff;
+      --text-main: #1d2521;
+      --text-muted: #5e6d65;
+      --border-color: #e5dfd5;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+    }}
+    
+    * {{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }}
+    
+    body {{
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: var(--bg-cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }}
+
+    /* Utility Topbar */
+    .topbar {{
+      background: #111814;
+      color: #b0bfb7;
+      font-size: 0.82rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }}
+    .topbar-container {{
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }}
+    .topbar a {{
+      color: #d1ded8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }}
+    .topbar a:hover {{
+      color: var(--gold);
+    }}
+
+    /* Main Navigation Header */
+    .navbar {{
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }}
+    .nav-container {{
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }}
+    .nav-brand {{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--primary-dark);
+    }}
+    .brand-icon {{
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 10px rgba(32,75,54,0.25);
+    }}
+    .brand-text {{
+      display: flex;
+      flex-direction: column;
+    }}
+    .brand-name {{
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--primary-dark);
+    }}
+    .brand-tag {{
+      font-size: 0.75rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }}
+    .nav-links {{
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }}
+    .nav-links a {{
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      position: relative;
+    }}
+    .nav-links a:hover, .nav-links a.active {{
+      color: var(--primary);
+    }}
+    .nav-links a.active::after {{
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }}
+    .btn-nav-cta {{
+      background: var(--primary);
+      color: #fff !important;
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(32,75,54,0.2);
+      transition: all 0.3s ease;
+    }}
+    .btn-nav-cta:hover {{
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }}
+
+    /* Hero Section */
+    .hero-section {{
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 80px 20px;
+      background-image: linear-gradient(to right, rgba(14,26,20,0.92) 0%, rgba(14,26,20,0.72) 60%, rgba(14,26,20,0.4) 100%), url('{cat['hero_image']}');
+    }}
+    .hero-container {{
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+    }}
+    .hero-badge {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,169,110,0.2);
+      border: 1px solid var(--gold);
+      color: #f7e7cb;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }}
+    .hero-title {{
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.18;
+      font-weight: 700;
+      margin-bottom: 14px;
+      max-width: 820px;
+    }}
+    .hero-subtitle {{
+      font-size: 1.25rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 22px;
+      max-width: 780px;
+    }}
+    .hero-desc {{
+      font-size: 1.05rem;
+      color: #dbe5e0;
+      max-width: 740px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }}
+    .hero-stats-bar {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+      max-width: 960px;
+    }}
+    .stat-item {{
+      display: flex;
+      flex-direction: column;
+    }}
+    .stat-num {{
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+    }}
+    .stat-label {{
+      font-size: 0.82rem;
+      color: var(--gold-light);
+      margin-top: 4px;
+    }}
+
+    /* Section Layouts */
+    .section {{
+      padding: 70px 20px;
+    }}
+    .container {{
+      max-width: 1240px;
+      margin: 0 auto;
+    }}
+    .section-header {{
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px;
+    }}
+    .section-tag {{
+      display: inline-block;
+      color: var(--gold-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }}
+    .section-title {{
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }}
+    .section-sub {{
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }}
+
+    /* Philosophy & Product Form Card */
+    .overview-grid {{
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 40px;
+    }}
+    .overview-content {{
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }}
+    .overview-content h3 {{
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+    }}
+    .overview-img-wrap {{
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      height: 100%;
+      min-height: 380px;
+    }}
+    .overview-img {{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }}
+    .overview-img-wrap:hover .overview-img {{
+      transform: scale(1.04);
+    }}
+
+    /* Benefits Grid */
+    .benefits-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }}
+    .benefit-card {{
+      background: #fff;
+      padding: 32px 26px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }}
+    .benefit-card:hover {{
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }}
+    .benefit-icon {{
+      width: 54px;
+      height: 54px;
+      background: #edf5f0;
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }}
+    .benefit-card:hover .benefit-icon {{
+      background: var(--primary);
+      color: var(--gold-light);
+    }}
+    .benefit-card h4 {{
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }}
+    .benefit-card p {{
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }}
+
+    /* Listing Catalog Section */
+    .catalog-section {{
+      background: #f4f0e9;
+      padding: 80px 20px;
+    }}
+    .catalog-controls {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 36px;
+      background: #fff;
+      padding: 16px 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }}
+    .catalog-count {{
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }}
+    .filter-pills {{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }}
+    .filter-btn {{
+      background: #f5f2eb;
+      border: 1px solid #ddd6c8;
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }}
+    .filter-btn.active, .filter-btn:hover {{
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }}
+
+    /* Listing Cards Grid */
+    .listings-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }}
+    .listing-card {{
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+    }}
+    .listing-card:hover {{
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gold);
+    }}
+    .card-thumb-wrap {{
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: #222;
+    }}
+    .card-thumb {{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }}
+    .listing-card:hover .card-thumb {{
+      transform: scale(1.08);
+    }}
+    .card-badge-code {{
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(14,26,20,0.85);
+      backdrop-filter: blur(6px);
+      color: #f7e7cb;
+      border: 1px solid var(--gold);
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }}
+    .card-badge-status {{
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }}
+    .status-available {{
+      background: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #c8e6c9;
+    }}
+    .status-reserved {{
+      background: #fff8e1;
+      color: #b78103;
+      border: 1px solid #ffe082;
+    }}
+    .card-body {{
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }}
+    .card-meta-top {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }}
+    .card-area {{
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+    }}
+    .card-area strong {{
+      font-size: 1.3rem;
+      color: var(--primary);
+    }}
+    .card-legal {{
+      font-size: 0.78rem;
+      color: #2e7d32;
+      background: #eaf5ea;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }}
+    .card-title {{
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }}
+    .card-desc {{
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      flex: 1;
+    }}
+    .card-fit {{
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      background: #fbf9f5;
+      border: 1px dashed #ded4c1;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+    }}
+    .card-footer {{
+      border-top: 1px solid var(--border-color);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }}
+    .card-price-wrap {{
+      display: flex;
+      flex-direction: column;
+    }}
+    .price-label {{
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }}
+    .price-val {{
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-style: italic;
+    }}
+    .card-btn-action {{
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }}
+    .card-btn-action:hover {{
+      background: var(--primary-dark);
+      box-shadow: 0 4px 12px rgba(32,75,54,0.25);
+    }}
+
+    /* Master Plan Banner */
+    .masterplan-section {{
+      background: #121815;
+      color: #fff;
+      padding: 70px 20px;
+    }}
+    .masterplan-wrap {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }}
+    .masterplan-img-card {{
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid rgba(201,169,110,0.4);
+      cursor: pointer;
+    }}
+    .masterplan-img {{
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }}
+    .masterplan-img-card:hover .masterplan-img {{
+      transform: scale(1.03);
+    }}
+    .zoom-hint {{
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+    }}
+
+    /* Other Collections Switcher */
+    .switch-section {{
+      padding: 80px 20px;
+      background: #fff;
+    }}
+    .switch-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 30px;
+    }}
+    .collection-switch-card {{
+      position: relative;
+      min-height: 280px;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 36px 30px;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: var(--shadow-md);
+      transition: all 0.4s ease;
+    }}
+    .switch-card-bg {{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s ease;
+      filter: brightness(0.75);
+    }}
+    .collection-switch-card:hover .switch-card-bg {{
+      transform: scale(1.08);
+      filter: brightness(0.65);
+    }}
+    .switch-card-content {{
+      position: relative;
+      z-index: 2;
+    }}
+    .switch-badge {{
+      display: inline-block;
+      background: rgba(201,169,110,0.3);
+      border: 1px solid var(--gold);
+      color: #f7e7cb;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }}
+    .switch-card-content h3 {{
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+    }}
+    .switch-sub {{
+      font-size: 0.88rem;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }}
+    .switch-desc {{
+      font-size: 0.88rem;
+      color: #e0e8e4;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }}
+    .switch-btn {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 3px;
+    }}
+
+    /* Global Footer */
+    .site-footer {{
+      background: #0d1410;
+      color: #a7b7af;
+      padding: 60px 20px 30px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }}
+    .footer-grid {{
+      max-width: 1240px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+    }}
+    .footer-heading {{
+      font-family: var(--font-serif);
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 18px;
+    }}
+    .footer-links {{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }}
+    .footer-links a {{
+      color: #a7b7af;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }}
+    .footer-links a:hover {{
+      color: var(--gold);
+    }}
+    .footer-bottom {{
+      max-width: 1240px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.82rem;
+    }}
+
+    /* Lightbox Modal */
+    .lightbox-modal {{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }}
+    .lightbox-modal.active {{
+      display: flex;
+    }}
+    .lightbox-modal img {{
+      max-width: 95%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }}
+    .lightbox-close {{
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }}
+
+    @media (max-width: 900px) {{
+      .overview-grid, .masterplan-wrap, .footer-grid {{
+        grid-template-columns: 1fr;
+      }}
+      .nav-links {{
+        display: none;
+      }}
+    }}
+  </style>
+</head>
+<body>
+
+  <!-- Utility Topbar -->
+  <div class="topbar">
+    <div class="topbar-container">
+      <div>🌿 <strong>Saigon Farm Resort:</strong> Tựa Hồ 100ha - Hướng Biển - Đất 100% Thổ Cư Sổ Riêng Từng Lô</div>
+      <div style="display: flex; gap: 16px;">
+        <a href="index.html">Trang Chủ</a>
+        <a href="gioi-thieu.html">Bản Giới Thiệu Điền Trang</a>
+        <a href="article.html?id=304">Đăng Ký Khảo Sát</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">Saigon Farm Resort</span>
+          <span class="brand-tag">Hồ Tràm · Đất Đỏ</span>
+        </div>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="dien-an.html" class="{'active' if cat['slug'] == 'dien-an' else ''}">Điền An</a></li>
+        <li><a href="dien-san.html" class="{'active' if cat['slug'] == 'dien-san' else ''}">Điền Sản</a></li>
+        <li><a href="biet-phu-dien-trang.html" class="{'active' if cat['slug'] == 'biet-phu-dien-trang' else ''}">Biệt Phủ Điền Trang</a></li>
+        <li><a href="gioi-thieu.html">Tổng Thể Điền Trang</a></li>
+        <li><a href="https://zalo.me/0906060036" target="_blank" class="btn-nav-cta"><i class="fa-solid fa-comment-dots"></i> Nhận Bảng Giá</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> {cat['badge']}</span>
+      <h1 class="hero-title">{cat['title']}<br><span style="color: var(--gold); font-size: 0.8em; font-weight: 400; font-style: italic;">{cat['sub_title']}</span></h1>
+      <p class="hero-subtitle">{cat['tagline']}</p>
+      <p class="hero-desc">{cat['desc']}</p>
+      
+      <div class="hero-stats-bar">
+        <div class="stat-item">
+          <span class="stat-num">100% THỔ CƯ</span>
+          <span class="stat-label">Sổ đỏ riêng từng lô có sẵn</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">{len(cat['items'])} SẢN PHẨM</span>
+          <span class="stat-label">Giỏ hàng mở bán tháng 9/2026</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">24.488 m²</span>
+          <span class="stat-label">Đại công viên & Tiện ích resort</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">CÔNG CHỨNG</span>
+          <span class="stat-label">Sang tên sở hữu ngay trong ngày</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Overview & Product Form -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">TRIẾT LÝ &amp; HÌNH THỨC SẢN PHẨM</span>
+        <h2 class="section-title">Ý Nghĩa Dòng Sản Phẩm &amp; Quy Chuẩn Bàn Giao</h2>
+        <p class="section-sub">Mỗi dòng sản phẩm tại Saigon Farm Resort được thiết kế chuyên biệt để đáp ứng đúng mục đích an cư, nghỉ dưỡng hoặc sinh lời bền vững của Quý chủ nhân.</p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-content">
+          <h3>Ý Nghĩa &amp; Bản Sắc {cat['title']}</h3>
+          <p style="font-size: 1.02rem; color: #333; margin-bottom: 20px; line-height: 1.75;">
+            {cat['desc']}
+          </p>
+          <div style="background: #fbf9f5; border-left: 4px solid var(--gold); padding: 18px 20px; border-radius: 6px; margin-bottom: 22px;">
+            <h5 style="color: var(--primary-dark); font-size: 1rem; margin-bottom: 6px; font-weight: 700;">HÌNH THỨC SẢN PHẨM BÀN GIAO:</h5>
+            <p style="font-size: 0.94rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
+              {product_form_desc}
+            </p>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--primary); font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Sổ đỏ trao tay</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--primary); font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Hạ tầng hoàn thiện 100%</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--primary); font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Vận hành quản gia MDS Living</span>
+          </div>
+        </div>
+
+        <div class="overview-img-wrap">
+          <img src="{cat['default_image']}" alt="{cat['title']}" class="overview-img">
+        </div>
+      </div>
+
+      <!-- 4 Investment Benefits -->
+      <div class="benefits-grid">
+        {''.join(f'''
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid {b['icon']}"></i></div>
+          <h4>{b['title']}</h4>
+          <p>{b['desc']}</p>
+        </div>
+        ''' for b in benefits)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Product Listing Catalog -->
+  <section class="catalog-section" id="gio-hang">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">DANH SÁCH MÃ CĂN MỞ BÁN</span>
+        <h2 class="section-title">Bảng Giỏ Hàng {cat['title']}</h2>
+        <p class="section-sub">Tổng hợp chi tiết các mã lô, diện tích quy hoạch, đặc tính vị trí và mức độ phù hợp. Bảng giá chính thức do Chủ đầu tư công bố trước thời điểm mở bán.</p>
+      </div>
+
+      <!-- Controls & Filter -->
+      <div class="catalog-controls">
+        <div class="catalog-count">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span>Hiển thị: <strong id="item-count">{len(cat['items'])}</strong> sản phẩm</span>
+        </div>
+        <div class="filter-pills">
+          <button class="filter-btn active" onclick="filterListings('all', this)">Tất Cả</button>
+          <button class="filter-btn" onclick="filterListings('large', this)">Trên 1.000 m²</button>
+          <button class="filter-btn" onclick="filterListings('compact', this)">Dưới 1.000 m²</button>
+          <button class="filter-btn" onclick="filterListings('available', this)">Còn Hàng</button>
+        </div>
+      </div>
+
+      <!-- Listing Cards -->
+      <div class="listings-grid" id="listings-grid">
+        {cards_html}
+      </div>
+
+      <!-- Legal note box -->
+      <div style="background: #fff; border: 1px dashed #d5ccbe; border-radius: 12px; padding: 22px 28px; margin-top: 40px; font-size: 0.88rem; color: #666; line-height: 1.65;">
+        <strong>* Lưu ý về cách đọc giỏ hàng:</strong> Ba dòng sản phẩm là cách phân loại theo mục đích sử dụng tối ưu, không phải rào chắn cứng. Khách hàng quan tâm bất kỳ vị trí nào, đội ngũ tư vấn Đại Chúng Properties sẽ hỗ trợ bố trí phương án khai thác phù hợp nhất. Diện tích theo bản đồ phân lô cung cấp tháng 8/2026.
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Plan Section -->
+  <section class="masterplan-section">
+    <div class="container">
+      <div class="masterplan-wrap">
+        <div>
+          <span class="section-tag" style="color: var(--gold);">QUY HOẠCH TỔNG THỂ ĐIỀN TRANG</span>
+          <h2 class="section-title" style="color: #fff; margin-bottom: 20px;">Mặt Bằng &amp; Hệ Thống Tiện Ích 24.488 m²</h2>
+          <p style="color: #c2d1cb; line-height: 1.7; margin-bottom: 24px;">
+            Saigon Farm Resort được quy hoạch bài bản với mật độ xây dựng thấp kỷ lục. Trung tâm là quần thể tiện ích sinh thái 5 sao: Clubhouse ven hồ, Hồ bơi điện phân khoáng muối, Sân Pickleball, Làng ngựa quý tộc Việt Mã Viên, Bến thuyền Kayak và Đầm sen ngát hương.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="gioi-thieu.html" class="btn-nav-cta" style="background: var(--gold); color: #111 !important;">
+              <i class="fa-solid fa-book-open"></i> Xem Bản Giới Thiệu Đầy Đủ
+            </a>
+            <button onclick="openLightbox('assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png')" class="btn-nav-cta" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); cursor: pointer;">
+              <i class="fa-solid fa-expand"></i> Phóng To Sơ Đồ Tiện Ích
+            </button>
+          </div>
+        </div>
+
+        <div class="masterplan-img-card" onclick="openLightbox('assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png')">
+          <img src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Sơ Đồ Phân Lô & Tiện Ích Saigon Farm Resort" class="masterplan-img">
+          <div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Nhấp để xem lớn</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Collections Switcher -->
+  <section class="switch-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">BỘ SƯU TẬP ĐIỀN TRANG KHÁC</span>
+        <h2 class="section-title">Khám Phá Các Dòng Sản Phẩm Cùng Giỏ Hàng</h2>
+        <p class="section-sub">Tìm hiểu thêm các phương án đầu tư và sở hữu biệt phủ điền trang phù hợp với khẩu vị tài chính của Quý khách.</p>
+      </div>
+
+      <div class="switch-grid">
+        {other_cards_html}
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <div class="brand-icon" style="width: 36px; height: 36px; font-size: 1rem;"><i class="fa-solid fa-tree"></i></div>
+          <span style="font-family: var(--font-serif); font-size: 1.2rem; color: #fff; font-weight: 700;">Saigon Farm Resort</span>
+        </div>
+        <p style="font-size: 0.88rem; line-height: 1.7; color: #8e9e96; margin-bottom: 20px;">
+          Quần thể biệt phủ điền trang sinh thái tựa hồ 100ha - hướng biển. Đất 100% thổ cư, sổ đỏ riêng từng lô, phát triển bởi Đại Chúng Properties &amp; MDS Living.
+        </p>
+        <p style="font-size: 0.88rem; color: var(--gold-light);">
+          📍 <strong>Địa chỉ:</strong> Xã Đất Đỏ, Huyện Đất Đỏ, Tỉnh Bà Rịa – Vũng Tàu.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Bộ Sưu Tập</h4>
+        <ul class="footer-links">
+          <li><a href="dien-an.html">Điền An (The Haven Collection)</a></li>
+          <li><a href="dien-san.html">Điền Sản (The Founders Collection)</a></li>
+          <li><a href="biet-phu-dien-trang.html">Biệt Phủ Điền Trang (The Manor Collection)</a></li>
+          <li><a href="index.html#villas-section">Bộ Sưu Tập Dinh Thự Sunrise &amp; Sunset</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Thông Tin Pháp Lý</h4>
+        <ul class="footer-links">
+          <li><a href="gioi-thieu.html">Bản Giới Thiệu Điền Trang</a></li>
+          <li><a href="article.html?id=301">Về Đại Chúng Properties</a></li>
+          <li><a href="article.html?id=303">Báo Chí &amp; Pháp Lý Minh Bạch</a></li>
+          <li><a href="article.html?id=304">Đăng Ký Khảo Sát Thực Địa</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Liên Hệ &amp; Đặt Chỗ</h4>
+        <p style="font-size: 0.88rem; margin-bottom: 14px; color: #a7b7af;">
+          Đăng ký để nhận danh sách bảng giá chi tiết từng mã lô đợt mở bán tháng 9/2026.
+        </p>
+        <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 10px 18px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.88rem;">
+          <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Giữ Chỗ
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Saigon Farm Resort. Bảo lưu mọi quyền.</div>
+      <div>Đại diện tiếp thị độc quyền: <strong>Đại Chúng Properties</strong></div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal Container -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="Mặt bằng phóng to" onclick="event.stopPropagation()">
+  </div>
+
+  <script>
+    function filterListings(type, btn) {{
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.listing-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {{
+        const areaStr = card.getAttribute('data-area') || '0';
+        const area = parseFloat(areaStr.replace('.', '').replace(',', '.'));
+        const status = card.getAttribute('data-status');
+
+        let show = false;
+        if (type === 'all') {{
+          show = true;
+        }} else if (type === 'large') {{
+          show = area >= 1000;
+        }} else if (type === 'compact') {{
+          show = area < 1000;
+        }} else if (type === 'available') {{
+          show = status === 'available';
+        }}
+
+        if (show) {{
+          card.style.display = 'flex';
+          visibleCount++;
+        }} else {{
+          card.style.display = 'none';
+        }}
+      }});
+
+      document.getElementById('item-count').textContent = visibleCount;
+    }}
+
+    function openLightbox(src) {{
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      modal.classList.add('active');
+    }}
+
+    function closeLightbox() {{
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('active');
+    }}
+
+    document.addEventListener('keydown', (e) => {{
+      if (e.key === 'Escape') closeLightbox();
+    }});
+  </script>
+</body>
+</html>
+"""
+    return html
+
+# Generate 3 files
+for cat in categories:
+    html_content = render_page(cat, categories)
+    
+    # 1. Main file: [slug].html
+    file_name = f"{cat['slug']}.html"
+    with open(file_name, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"Created {file_name}")
+
+    # 2. Directory index: [slug]/index.html for clean routing
+    dir_name = cat['slug']
+    os.makedirs(dir_name, exist_ok=True)
+    with open(os.path.join(dir_name, "index.html"), "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"Created {dir_name}/index.html")
+
+print("All 3 category landing pages generated successfully!")
