@@ -16,9 +16,11 @@ if os.path.exists(dist):
     shutil.rmtree(dist)
 os.makedirs(dist, exist_ok=True)
 
-# 1. Biến thu-moi.html thành index.html của trang chủ subdomain
+# 1. Biến thu-moi.html thành index.html của trang chủ subdomain và copy gioi-thieu.html
 shutil.copy('thu-moi.html', os.path.join(dist, 'index.html'))
 shutil.copy('thu-moi.html', os.path.join(dist, 'thu-moi.html'))
+if os.path.exists('gioi-thieu.html'):
+    shutil.copy('gioi-thieu.html', os.path.join(dist, 'gioi-thieu.html'))
 
 # 2. Copy toàn bộ assets, css, js
 for folder in ['assets', 'css', 'js']:
