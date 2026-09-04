@@ -761,7 +761,7 @@ new_estate_posts = [
     </tr>
     <tr style="border-bottom: 1px solid #eee;">
       <td style="padding: 14px 16px; font-weight: 700;">09:00 - 11:00</td>
-      <td style="padding: 14px 16px;">Cưỡi ngựa tại Việt Mã Viện / Chèo Kayak mặt hồ 100ha</td>
+      <td style="padding: 14px 16px;">Cưỡi ngựa tại Việt Mã Viên / Chèo Kayak mặt hồ 100ha</td>
       <td style="padding: 14px 16px;">Rèn luyện cơ lõi, thăng bằng và sức bền tim mạch</td>
     </tr>
     <tr style="border-bottom: 1px solid #eee; background: #faf9f6;">

@@ -114,7 +114,7 @@ new_articles = [
     Tọa lạc tại vùng đất Đất Đỏ – Liền kề cung đường biển Hồ Tràm thơ mộng, <strong>Saigon Farm Resort</strong> tiên phong kiến tạo một quần thể biệt phủ điền trang sinh thái quy mô bậc nhất khu vực phía Nam. Dự án chỉ cách TP.HCM 90 phút di chuyển qua Cao tốc Biên Hòa – Vũng Tàu và Sân bay Quốc tế Long Thành.
   </p>
   <p style="font-size: 1rem; margin-bottom: 18px; text-align: justify;">
-    Mỗi căn biệt phủ Sunrise và Sunset tại đây được thiết kế theo ngôn ngữ kiến trúc thuần Việt đương đại: mái ngói đất nung truyền thống, cột gỗ mộc sang trọng kết hợp cùng hệ vách kính Low-E tràn viền mở toang tầm nhìn ra mặt nước 100ha. Tại đây, gia chủ được tận hưởng hệ sinh thái tiện ích quản gia 5 sao từ <strong>MDS Living</strong>: từ dịch vụ đầu bếp riêng, chăm sóc vườn cây, hồ bơi điện phân khoáng muối đến câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viện và bến thuyền kayak dạo hồ.
+    Mỗi căn biệt phủ Sunrise và Sunset tại đây được thiết kế theo ngôn ngữ kiến trúc thuần Việt đương đại: mái ngói đất nung truyền thống, cột gỗ mộc sang trọng kết hợp cùng hệ vách kính Low-E tràn viền mở toang tầm nhìn ra mặt nước 100ha. Tại đây, gia chủ được tận hưởng hệ sinh thái tiện ích quản gia 5 sao từ <strong>MDS Living</strong>: từ dịch vụ đầu bếp riêng, chăm sóc vườn cây, hồ bơi điện phân khoáng muối đến câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên và bến thuyền kayak dạo hồ.
   </p>
 
   <h2 style="font-family: var(--font-serif); color: #111; font-size: 1.55rem; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e0d5c1;">
@@ -440,7 +440,7 @@ new_articles = [
   </h2>
   <ul style="padding-left: 24px; margin-bottom: 24px; font-size: 0.98rem; line-height: 1.8; color: #444;">
     <li style="margin-bottom: 10px;">
-      <strong>Việt Mã Viện (Equestrian Club):</strong> Câu lạc bộ cưỡi ngựa chuẩn quý tộc, lớp đào tạo cưỡi ngựa chuyên nghiệp cho trẻ em và người lớn.
+      <strong>Việt Mã Viên (Equestrian Club):</strong> Câu lạc bộ cưỡi ngựa chuẩn quý tộc, lớp đào tạo cưỡi ngựa chuyên nghiệp cho trẻ em và người lớn.
     </li>
     <li style="margin-bottom: 10px;">
       <strong>Bến thuyền Kayak & SUP trên hồ 100ha:</strong> Trải nghiệm lướt sóng nước êm đềm, ngắm bình minh và hoàng hôn buông xuống mặt hồ bao la.
