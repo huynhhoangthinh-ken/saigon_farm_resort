@@ -623,6 +623,243 @@
       width: 22%;
     }
 
+    /* Diagram Showcase (Sơ đồ tiện ích trung tâm) */
+    .editorial-diagram-showcase {
+      margin: 28px 0 32px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #faf8f3;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .diagram-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .diagram-caption {
+      padding: 12px 18px;
+      background: #fbf9f4;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .diagram-caption .caption-tag {
+      font-size: 0.78rem;
+      color: var(--color-gold-dark);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Location & Google Maps Section */
+    .invitation-location-section {
+      margin: 36px 0 28px;
+      padding: 24px 0 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .invitation-location-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 22px;
+      margin-top: 18px;
+      align-items: stretch;
+    }
+
+    .invitation-map-box {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #eae5dc;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      min-height: 420px;
+    }
+
+    .invitation-map-iframe {
+      width: 100%;
+      flex: 1;
+      min-height: 380px;
+      border: 0;
+      display: block;
+    }
+
+    .invitation-map-badge {
+      background: var(--color-accent-green);
+      color: #ffffff;
+      font-size: 0.8rem;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-top: 1px solid rgba(194, 155, 83, 0.3);
+    }
+
+    .invitation-location-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .inv-location-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--color-gold-dark);
+      letter-spacing: 0.08em;
+      background: var(--color-gold-box-bg);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .inv-location-title {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--color-dark);
+      margin: 0 0 6px;
+      font-weight: 700;
+    }
+
+    .inv-location-address {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      margin: 0 0 16px;
+      line-height: 1.5;
+    }
+
+    .inv-location-address i {
+      color: var(--color-gold);
+      margin-top: 2px;
+    }
+
+    .inv-transit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .inv-transit-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      background: #faf8f4;
+      border-radius: 6px;
+      border: 1px solid #efe8dc;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .inv-transit-item:hover {
+      background: #f5f0e6;
+      transform: translateX(3px);
+    }
+
+    .inv-transit-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 50%;
+      background: var(--color-accent-green);
+      color: var(--color-gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.88rem;
+    }
+
+    .inv-transit-text {
+      flex: 1;
+    }
+
+    .inv-transit-text strong {
+      display: block;
+      font-size: 0.86rem;
+      color: var(--color-dark);
+      margin-bottom: 2px;
+    }
+
+    .inv-transit-text p {
+      font-size: 0.76rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .inv-transit-time {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #2e7d32;
+      background: #eef7ed;
+      padding: 3px 8px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    .inv-cta-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .btn-maps-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: #0068FF;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 11px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn-maps-link:hover {
+      background: #0056cc;
+    }
+
+    .btn-tour-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--color-accent-green);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 11px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-tour-link:hover {
+      opacity: 0.9;
+    }
+
     /* Magazine Duo Gallery */
     .editorial-gallery-duo {
       display: grid;
@@ -1306,7 +1543,7 @@
         font-size: 0.82rem;
       }
 
-      /* 9. Duo Gallery */
+      /* 9. Duo Gallery & Diagram Showcase */
       .editorial-gallery-duo {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -1314,6 +1551,25 @@
       }
       .gallery-img {
         height: 190px;
+      }
+      .diagram-caption {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+      }
+      .invitation-location-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .invitation-map-box {
+        min-height: 280px;
+      }
+      .invitation-map-iframe {
+        min-height: 260px;
+        height: 260px;
+      }
+      .inv-cta-group {
+        grid-template-columns: 1fr;
       }
 
       /* 10. Product Lines: Modern Compact iOS Horizontal Cards (Eliminates tall scroll & redundant table) */
@@ -1602,20 +1858,101 @@
         </div>
       </section>
 
-      <!-- Magazine Duo Images: Clubhouse & Việt Mã Viện -->
-      <section class="editorial-gallery-duo">
-        <div class="gallery-item">
-          <img src="assets/Index_asset/Tien_ich_minh_hoa/Clubhouse_ven_ho.png" alt="Clubhouse Hiên Việt và Hồ bơi sinh thái ven hồ 100ha" class="gallery-img" loading="lazy">
-          <div class="gallery-caption">
-            <strong>Hiên Việt &amp; Clubhouse Ven Hồ</strong>
-            Quy mô 3.000 m² sàn phục vụ riêng cho 47 gia chủ và du khách thượng lưu.
-          </div>
+      <!-- Sơ Đồ Tiện Ích Khu Trung Tâm (Thay thế 2 thẻ ảnh tiện ích) -->
+      <figure class="editorial-diagram-showcase">
+        <img src="assets/tien_ich/tien_ich.png" alt="Sơ đồ tiện ích khu trung tâm Saigon Farm Resort" class="diagram-img" loading="lazy">
+        <figcaption class="diagram-caption">
+          <span><strong style="color: var(--color-dark);">Sơ Đồ Phân Bổ Tiện Ích Trung Tâm (24.488 m²)</strong> — Phục vụ riêng cho 47 chủ nhân</span>
+          <span class="caption-tag">Saigon Farm Resort</span>
+        </figcaption>
+      </figure>
+
+      <!-- Vị Trí Khu Đất & Hướng Dẫn Đường Đi (Google Maps) -->
+      <section class="invitation-location-section" id="vi-tri-du-an">
+        <div class="sheet-section-header" style="margin-bottom: 14px;">
+          <span class="section-num">TÂM ĐIỂM KẾT NỐI VÙNG</span>
+          <h3 class="sheet-section-title">Vị Trí Khu Đất &amp; Hướng Dẫn Đường Đi Thực Tế</h3>
         </div>
-        <div class="gallery-item">
-          <img src="assets/Index_asset/Tien_ich_minh_hoa/viet_ma_trang.png" alt="Câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viện" class="gallery-img" loading="lazy">
-          <div class="gallery-caption">
-            <strong>Việt Mã Viện (Equestrian Club)</strong>
-            Khuôn viên 6.800 m² — Tiện ích cưỡi ngựa quý tộc giữa đồng lúa nguyên bản.
+        <p style="font-size: 0.96rem; color: var(--color-muted); line-height: 1.65; margin-bottom: 18px;">
+          Saigon Farm Resort tọa lạc bên mặt hồ sinh thái 100ha tự nhiên tại Đất Đỏ — Liền kề cung đường biển Hồ Tràm, đón đầu các trục cao tốc huyết mạch và Sân bay Quốc tế Long Thành. Quý Đối tác và Khách hàng có thể dễ dàng định vị và di chuyển khảo sát thực địa qua Google Maps:
+        </p>
+
+        <div class="invitation-location-grid">
+          <!-- Left: Google Map Frame -->
+          <div class="invitation-map-box">
+            <iframe 
+              class="invitation-map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10546.45749938832!2d107.31304917184532!3d10.552185196294168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175a10072d7d27f%3A0x352f099442591fd7!2zU2FpZ29uIEZhcm0gUmVzb3J0IC0gxJBp4buBbiB0cmFuZyBi4bqjbiBz4bqvYyBWaeG7h3Q!5e1!3m2!1svi!2s!4v1788421691294!5m2!1svi!2s" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Vị trí Saigon Farm Resort trên Google Maps">
+            </iframe>
+            <div class="invitation-map-badge">
+              <i class="fa-solid fa-location-dot" style="color: var(--color-gold); margin-right: 6px;"></i>
+              <span>Vị trí ghim chính thức trên Google Maps • Đón tiếp khảo sát thực địa</span>
+            </div>
+          </div>
+
+          <!-- Right: Transit & Destination Details -->
+          <div class="invitation-location-card">
+            <div>
+              <span class="inv-location-tag">ĐIỂM ĐẾN NGHỈ DƯỠNG SINH THÁI</span>
+              <h4 class="inv-location-title">Saigon Farm Resort</h4>
+              <p class="inv-location-address">
+                <i class="fa-solid fa-map-pin"></i>
+                <span>Huyện Đất Đỏ, Tỉnh Bà Rịa – Vũng Tàu (Bên mặt hồ tự nhiên 100ha, liền kề Hồ Tràm)</span>
+              </p>
+
+              <div class="inv-transit-list">
+                <div class="inv-transit-item">
+                  <div class="inv-transit-icon"><i class="fa-solid fa-car-side"></i></div>
+                  <div class="inv-transit-text">
+                    <strong>TP. Hồ Chí Minh (Quận 1 / Thảo Điền)</strong>
+                    <p>~60 – 75 phút qua Cao tốc Long Thành – Dầu Giây &amp; Biên Hòa – Vũng Tàu</p>
+                  </div>
+                  <div class="inv-transit-time">~60 Phút</div>
+                </div>
+
+                <div class="inv-transit-item">
+                  <div class="inv-transit-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                  <div class="inv-transit-text">
+                    <strong>Sân Bay Quốc Tế Long Thành</strong>
+                    <p>Khoảng cách lý tưởng đón dòng khách quốc tế &amp; chuyên gia lưu trú</p>
+                  </div>
+                  <div class="inv-transit-time">~30 Phút</div>
+                </div>
+
+                <div class="inv-transit-item">
+                  <div class="inv-transit-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                  <div class="inv-transit-text">
+                    <strong>Cung Đường Biển &amp; Casino Hồ Tràm</strong>
+                    <p>Bãi biển cát trắng mịn, sân Golf The Bluffs &amp; tổ hợp giải trí</p>
+                  </div>
+                  <div class="inv-transit-time">~15 Phút</div>
+                </div>
+
+                <div class="inv-transit-item">
+                  <div class="inv-transit-icon"><i class="fa-solid fa-hot-tub-person"></i></div>
+                  <div class="inv-transit-text">
+                    <strong>Suối Khoáng Nóng Thiên Nhiên Bình Châu</strong>
+                    <p>Tắm khoáng onsen tự nhiên, phục hồi sức khỏe &amp; cân bằng thân tâm trí</p>
+                  </div>
+                  <div class="inv-transit-time">~25 Phút</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="inv-cta-group">
+              <a href="https://maps.app.goo.gl/LUnjKV4tpYHkc7kG6" target="_blank" rel="noopener noreferrer" class="btn-maps-link">
+                <i class="fa-solid fa-diamond-turn-right"></i>
+                <span>Mở Google Maps</span>
+              </a>
+              <a href="https://zalo.me/0906060036" target="_blank" rel="noopener noreferrer" class="btn-tour-link">
+                <i class="fa-solid fa-van-shuttle"></i>
+                <span>Đăng Ký Khảo Sát</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
