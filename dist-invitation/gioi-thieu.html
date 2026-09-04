@@ -1705,6 +1705,313 @@
         font-size: 0.82rem;
       }
     }
+  
+    /* ================================================================
+       17. HORIZONTAL 3D AMENITY GALLERY & FULLSCREEN LIGHTBOX
+       ================================================================ */
+    .gallery-3d-section {
+      margin: 36px 0 32px;
+      padding-top: 10px;
+    }
+    .gallery-3d-wrapper {
+      position: relative;
+      margin-top: 16px;
+    }
+    .gallery-3d-track {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 8px 4px 18px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-gold) #f1ece2;
+    }
+    .gallery-3d-track::-webkit-scrollbar {
+      height: 7px;
+    }
+    .gallery-3d-track::-webkit-scrollbar-track {
+      background: #f1ece2;
+      border-radius: 4px;
+    }
+    .gallery-3d-track::-webkit-scrollbar-thumb {
+      background: var(--color-gold);
+      border-radius: 4px;
+    }
+    .gallery-3d-card {
+      flex: 0 0 310px;
+      scroll-snap-align: start;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+    @media (min-width: 768px) {
+      .gallery-3d-card {
+        flex: 0 0 350px;
+      }
+    }
+    .gallery-3d-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 26px rgba(194, 155, 83, 0.22);
+      border-color: var(--color-gold);
+    }
+    .gallery-3d-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #141414;
+      overflow: hidden;
+    }
+    .gallery-3d-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-3d-card:hover .gallery-3d-thumb img {
+      transform: scale(1.06);
+    }
+    .gallery-3d-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(20, 20, 20, 0.8);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      color: #f7eed8;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 4px;
+      border: 1px solid rgba(194, 155, 83, 0.45);
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
+    .gallery-3d-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.65) 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 10px 12px;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+      z-index: 1;
+    }
+    .gallery-3d-card:hover .gallery-3d-overlay {
+      opacity: 1;
+    }
+    .gallery-3d-zoom-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+    .gallery-3d-card:hover .gallery-3d-zoom-btn {
+      transform: scale(1.15);
+    }
+    .gallery-3d-info {
+      padding: 10px 14px 12px;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #f1ece1;
+    }
+    .gallery-3d-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 8px;
+    }
+    .gallery-3d-action-hint {
+      font-size: 0.74rem;
+      color: var(--color-gold-dark);
+      font-weight: 600;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .gallery-nav-arrow {
+      position: absolute;
+      top: calc(50% - 10px);
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid var(--color-gold);
+      color: var(--color-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 5;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      transition: all 0.2s ease;
+    }
+    .gallery-nav-arrow:hover {
+      background: var(--color-gold);
+      color: #ffffff;
+      transform: translateY(-50%) scale(1.08);
+    }
+    .gallery-nav-arrow.prev { left: -16px; }
+    .gallery-nav-arrow.next { right: -16px; }
+    @media (max-width: 640px) {
+      .gallery-nav-arrow { display: none; }
+    }
+
+    /* Lightbox Modal */
+    .gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      background: rgba(6, 10, 8, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .gallery-lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+    .lightbox-top-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+      background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+      color: #fff;
+    }
+    .lightbox-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 80%;
+    }
+    .lightbox-counter {
+      background: var(--color-gold);
+      color: #141414;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+    .lightbox-title {
+      color: #ffffff;
+      font-size: 0.92rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .lightbox-btn-close {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .lightbox-btn-close:hover {
+      background: var(--color-gold);
+      color: #141414;
+      transform: scale(1.08);
+    }
+    .lightbox-btn-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(20, 20, 20, 0.7);
+      border: 1px solid rgba(194, 155, 83, 0.5);
+      color: #ffffff;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+    .lightbox-btn-nav:hover {
+      background: var(--color-gold);
+      color: #141414;
+      border-color: var(--color-gold);
+      transform: translateY(-50%) scale(1.08);
+    }
+    .lightbox-btn-nav.prev { left: 20px; }
+    .lightbox-btn-nav.next { right: 20px; }
+    @media (max-width: 640px) {
+      .lightbox-btn-nav.prev { left: 10px; width: 40px; height: 40px; font-size: 1rem; }
+      .lightbox-btn-nav.next { right: 10px; width: 40px; height: 40px; font-size: 1rem; }
+      .lightbox-info { gap: 8px; }
+      .lightbox-title { font-size: 0.8rem; }
+    }
+    .lightbox-body {
+      position: relative;
+      max-width: 92vw;
+      max-height: 84vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    .lightbox-image {
+      max-width: 92vw;
+      max-height: 84vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 16px 50px rgba(0,0,0,0.65);
+      animation: lightboxZoomIn 0.24s ease-out;
+    }
+    @keyframes lightboxZoomIn {
+      from { opacity: 0; transform: scale(0.94); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
   </style>
 </head>
 <body>
@@ -2011,6 +2318,467 @@
         </div>
       </section>
 
+            <!-- ================================================================
+           GALLERY HÌNH ẢNH PHỐI CẢNH TIỆN ÍCH DỰ ÁN 3D (LƯỚT NGANG & PHÓNG TO)
+           ================================================================ -->
+      <section class="gallery-3d-section" id="gallery-tien-ich-3d">
+        <div class="sheet-section-header" style="margin-bottom: 12px;">
+          <span class="section-num">PHỐI CẢNH TIỆN ÍCH 3D</span>
+          <h3 class="sheet-section-title">Bộ Sưu Tập Phối Cảnh Tiện Ích &amp; Cảnh Quan Thực Tế</h3>
+        </div>
+        <p style="font-size: 0.96rem; color: var(--color-muted); line-height: 1.65; margin-bottom: 6px;">
+          Chiêm ngưỡng hệ thống 24.488 m² tiện ích resort 5 sao, clubhouse ven hồ, đầm sen, làng ngựa Việt Mã Viên và cảnh quan thiên nhiên nguyên sơ qua 29 góc nhìn 3D trực quan. <em>Quý khách có thể vuốt ngang và nhấp vào bất kỳ hình ảnh nào để xem phóng to tràn màn hình:</em>
+        </p>
+
+        <div class="gallery-3d-wrapper">
+          <button class="gallery-nav-arrow prev" id="gallery-3d-prev" onclick="scroll3DGallery(-360)" aria-label="Xem ảnh trước">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="gallery-3d-track" id="gallery-3d-track">
+          <div class="gallery-3d-card" data-index="0" onclick="open3DLightbox(0)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">01 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/S01_Final_Fix.jpg" alt="Toàn Cảnh Điền Trang Ven Hồ 100ha" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Toàn Cảnh Điền Trang Ven Hồ 100ha</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="1" onclick="open3DLightbox(1)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">02 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/NEW_S02.jpg" alt="Phối Cảnh Cổng Chào & Trục Đường Sinh Thái" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Phối Cảnh Cổng Chào & Trục Đường Sinh Thái</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="2" onclick="open3DLightbox(2)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">03 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/S03_Final_Fix_001.jpg" alt="Quần Thể Clubhouse & Bến Thuyền Ven Hồ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Quần Thể Clubhouse & Bến Thuyền Ven Hồ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="3" onclick="open3DLightbox(3)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">04 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/S04_Final_Fix.jpg" alt="Không Gian Sinh Hoạt Cộng Đồng Bản Sắc Việt" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Không Gian Sinh Hoạt Cộng Đồng Bản Sắc Việt</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="4" onclick="open3DLightbox(4)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">05 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/S05_Fix_Final.jpg" alt="Bể Bơi Vô Cực & Cảnh Quan Đầm Sen" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Bể Bơi Vô Cực & Cảnh Quan Đầm Sen</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="5" onclick="open3DLightbox(5)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">06 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/S06_Final_Fix.jpg" alt="Khu Vui Chơi & Trải Nghiệm Nông Trang Hữu Cơ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Khu Vui Chơi & Trải Nghiệm Nông Trang Hữu Cơ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="6" onclick="open3DLightbox(6)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">07 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/S07_Final_Fix.jpg" alt="Làng Ngựa Việt Mã Viên & Sân Cưỡi Ngựa" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Làng Ngựa Việt Mã Viên & Sân Cưỡi Ngựa</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="7" onclick="open3DLightbox(7)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">08 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_1.jpg" alt="Tổ Hợp Nhà Hàng 250 Chỗ Ven Mặt Nước" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Tổ Hợp Nhà Hàng 250 Chỗ Ven Mặt Nước</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="8" onclick="open3DLightbox(8)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">09 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_2-2.jpg" alt="Khu Biệt Phủ Gỗ Truyền Thống Đương Đại" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Khu Biệt Phủ Gỗ Truyền Thống Đương Đại</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="9" onclick="open3DLightbox(9)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">10 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_3.jpg" alt="Bến Chèo Kayak & Ngắm Hoàng Hôn Ven Hồ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Bến Chèo Kayak & Ngắm Hoàng Hôn Ven Hồ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="10" onclick="open3DLightbox(10)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">11 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_9_(1).jpg" alt="Đường Dạo Bộ Ven Đầm Sen Tự Nhiên" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Đường Dạo Bộ Ven Đầm Sen Tự Nhiên</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="11" onclick="open3DLightbox(11)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">12 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_10_(1).jpg" alt="Không Gian Thiền Trà & Thư Giãn Bản Sắc" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Không Gian Thiền Trà & Thư Giãn Bản Sắc</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="12" onclick="open3DLightbox(12)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">13 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_14.jpg" alt="Cụm Tiện Ích Trung Tâm 24.488 m²" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Cụm Tiện Ích Trung Tâm 24.488 m²</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="13" onclick="open3DLightbox(13)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">14 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_15.jpg" alt="Quảng Trường & Sân Khấu Ngoài Trời 300 Chỗ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Quảng Trường & Sân Khấu Ngoài Trời 300 Chỗ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="14" onclick="open3DLightbox(14)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">15 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_16.jpg" alt="Khu Vực Cắm Trại Glamping Sinh Thái" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Khu Vực Cắm Trại Glamping Sinh Thái</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="15" onclick="open3DLightbox(15)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">16 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_19.jpg" alt="Cầu Gỗ Ngắm Cảnh & Đài Vọng Cảnh Ven Hồ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Cầu Gỗ Ngắm Cảnh & Đài Vọng Cảnh Ven Hồ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="16" onclick="open3DLightbox(16)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">17 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_20.jpg" alt="Vườn Cây Ăn Quả & Vườn Thảo Dược Hữu Cơ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Vườn Cây Ăn Quả & Vườn Thảo Dược Hữu Cơ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="17" onclick="open3DLightbox(17)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">18 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_21.jpg" alt="Khu Biệt Phủ Nghỉ Dưỡng Sum Họp Đa Thế Hệ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Khu Biệt Phủ Nghỉ Dưỡng Sum Họp Đa Thế Hệ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="18" onclick="open3DLightbox(18)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">19 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/SFR_22.jpg" alt="Góc Cảnh Quan Hoàng Hôn Hồ Lồ Ồ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Góc Cảnh Quan Hoàng Hôn Hồ Lồ Ồ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="19" onclick="open3DLightbox(19)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">20 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/1.jpg" alt="Kiến Trúc Dinh Thự Điền Trang Mẫu 01" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Kiến Trúc Dinh Thự Điền Trang Mẫu 01</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="20" onclick="open3DLightbox(20)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">21 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/2.jpg" alt="Khu Vực BBQ & Tiệc Ngoài Trời Ven Hồ" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Khu Vực BBQ & Tiệc Ngoài Trời Ven Hồ</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="21" onclick="open3DLightbox(21)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">22 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/3.jpg" alt="Hồ Bơi Sinh Thái & Chòi Nghỉ Dưỡng Thượng Lưu" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Hồ Bơi Sinh Thái & Chòi Nghỉ Dưỡng Thượng Lưu</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="22" onclick="open3DLightbox(22)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">23 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/4.jpg" alt="Lối Dạo Bộ Thư Thái Dưới Tán Cây Xanh" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Lối Dạo Bộ Thư Thái Dưới Tán Cây Xanh</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="23" onclick="open3DLightbox(23)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">24 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/5.jpg" alt="Khu Spa & Chăm Sóc Sức Khỏe Thân Tâm Trí" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Khu Spa & Chăm Sóc Sức Khỏe Thân Tâm Trí</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="24" onclick="open3DLightbox(24)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">25 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/6.jpg" alt="Câu Lạc Bộ Thể Thao & Rèn Luyện Thể Chất" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Câu Lạc Bộ Thể Thao & Rèn Luyện Thể Chất</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="25" onclick="open3DLightbox(25)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">26 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/7.jpg" alt="Khu Biệt Thự Gỗ Giao Hòa Với Thiên Nhiên" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Khu Biệt Thự Gỗ Giao Hòa Với Thiên Nhiên</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="26" onclick="open3DLightbox(26)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">27 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/8.jpg" alt="Cảnh Quan Thảm Cỏ & Không Gian Dã Ngoại" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Cảnh Quan Thảm Cỏ & Không Gian Dã Ngoại</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="27" onclick="open3DLightbox(27)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">28 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/9.jpg" alt="Góc Nhìn Từ Hiên Biệt Phủ Ra Cánh Đồng Lúa" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Góc Nhìn Từ Hiên Biệt Phủ Ra Cánh Đồng Lúa</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          <div class="gallery-3d-card" data-index="28" onclick="open3DLightbox(28)">
+            <div class="gallery-3d-thumb">
+              <span class="gallery-3d-badge">29 / 29</span>
+              <img src="assets/Index_asset/tien_ich_3D/10.jpg" alt="Điểm Đón Tiếp & Sảnh Lễ Tân Sang Trọng" loading="lazy">
+              <div class="gallery-3d-overlay">
+                <div class="gallery-3d-zoom-btn" title="Phóng to toàn màn hình">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-3d-info">
+              <span class="gallery-3d-title">Điểm Đón Tiếp & Sảnh Lễ Tân Sang Trọng</span>
+              <span class="gallery-3d-action-hint"><i class="fa-regular fa-eye"></i> Xem lớn</span>
+            </div>
+          </div>
+          </div>
+
+          <button class="gallery-nav-arrow next" id="gallery-3d-next" onclick="scroll3DGallery(360)" aria-label="Xem ảnh sau">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
       <!-- Section 03: Chính sách bán hàng -->
       <section>
         <div class="sheet-section-header">
@@ -2174,6 +2942,115 @@
     </div><!-- End .sheet-content -->
 
   </main>
+
+
+  <!-- ================================================================
+       LIGHTBOX PHÓNG TO TRÀN MÀN HÌNH (FULLSCREEN IMAGE MODAL)
+       ================================================================ -->
+  <div id="gallery-3d-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh tràn màn hình">
+    <div class="lightbox-top-bar">
+      <div class="lightbox-info">
+        <span class="lightbox-counter" id="lightbox-counter">01 / 29</span>
+        <span class="lightbox-title" id="lightbox-title">Toàn Cảnh Điền Trang Ven Hồ 100ha</span>
+      </div>
+      <button class="lightbox-btn-close" onclick="close3DLightbox()" aria-label="Đóng (Phím Esc)">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <button class="lightbox-btn-nav prev" onclick="nav3DLightbox(-1)" aria-label="Ảnh trước (Mũi tên trái)">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="lightbox-body" onclick="event.stopPropagation()">
+      <img id="lightbox-3d-img" class="lightbox-image" src="" alt="Phối cảnh tiện ích 3D">
+    </div>
+
+    <button class="lightbox-btn-nav next" onclick="nav3DLightbox(1)" aria-label="Ảnh tiếp (Mũi tên phải)">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <script>
+    (function() {
+      const galleryData = [{"src": "assets/Index_asset/tien_ich_3D/S01_Final_Fix.jpg", "title": "Toàn Cảnh Điền Trang Ven Hồ 100ha"}, {"src": "assets/Index_asset/tien_ich_3D/NEW_S02.jpg", "title": "Phối Cảnh Cổng Chào & Trục Đường Sinh Thái"}, {"src": "assets/Index_asset/tien_ich_3D/S03_Final_Fix_001.jpg", "title": "Quần Thể Clubhouse & Bến Thuyền Ven Hồ"}, {"src": "assets/Index_asset/tien_ich_3D/S04_Final_Fix.jpg", "title": "Không Gian Sinh Hoạt Cộng Đồng Bản Sắc Việt"}, {"src": "assets/Index_asset/tien_ich_3D/S05_Fix_Final.jpg", "title": "Bể Bơi Vô Cực & Cảnh Quan Đầm Sen"}, {"src": "assets/Index_asset/tien_ich_3D/S06_Final_Fix.jpg", "title": "Khu Vui Chơi & Trải Nghiệm Nông Trang Hữu Cơ"}, {"src": "assets/Index_asset/tien_ich_3D/S07_Final_Fix.jpg", "title": "Làng Ngựa Việt Mã Viên & Sân Cưỡi Ngựa"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_1.jpg", "title": "Tổ Hợp Nhà Hàng 250 Chỗ Ven Mặt Nước"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_2-2.jpg", "title": "Khu Biệt Phủ Gỗ Truyền Thống Đương Đại"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_3.jpg", "title": "Bến Chèo Kayak & Ngắm Hoàng Hôn Ven Hồ"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_9_(1).jpg", "title": "Đường Dạo Bộ Ven Đầm Sen Tự Nhiên"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_10_(1).jpg", "title": "Không Gian Thiền Trà & Thư Giãn Bản Sắc"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_14.jpg", "title": "Cụm Tiện Ích Trung Tâm 24.488 m²"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_15.jpg", "title": "Quảng Trường & Sân Khấu Ngoài Trời 300 Chỗ"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_16.jpg", "title": "Khu Vực Cắm Trại Glamping Sinh Thái"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_19.jpg", "title": "Cầu Gỗ Ngắm Cảnh & Đài Vọng Cảnh Ven Hồ"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_20.jpg", "title": "Vườn Cây Ăn Quả & Vườn Thảo Dược Hữu Cơ"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_21.jpg", "title": "Khu Biệt Phủ Nghỉ Dưỡng Sum Họp Đa Thế Hệ"}, {"src": "assets/Index_asset/tien_ich_3D/SFR_22.jpg", "title": "Góc Cảnh Quan Hoàng Hôn Hồ Lồ Ồ"}, {"src": "assets/Index_asset/tien_ich_3D/1.jpg", "title": "Kiến Trúc Dinh Thự Điền Trang Mẫu 01"}, {"src": "assets/Index_asset/tien_ich_3D/2.jpg", "title": "Khu Vực BBQ & Tiệc Ngoài Trời Ven Hồ"}, {"src": "assets/Index_asset/tien_ich_3D/3.jpg", "title": "Hồ Bơi Sinh Thái & Chòi Nghỉ Dưỡng Thượng Lưu"}, {"src": "assets/Index_asset/tien_ich_3D/4.jpg", "title": "Lối Dạo Bộ Thư Thái Dưới Tán Cây Xanh"}, {"src": "assets/Index_asset/tien_ich_3D/5.jpg", "title": "Khu Spa & Chăm Sóc Sức Khỏe Thân Tâm Trí"}, {"src": "assets/Index_asset/tien_ich_3D/6.jpg", "title": "Câu Lạc Bộ Thể Thao & Rèn Luyện Thể Chất"}, {"src": "assets/Index_asset/tien_ich_3D/7.jpg", "title": "Khu Biệt Thự Gỗ Giao Hòa Với Thiên Nhiên"}, {"src": "assets/Index_asset/tien_ich_3D/8.jpg", "title": "Cảnh Quan Thảm Cỏ & Không Gian Dã Ngoại"}, {"src": "assets/Index_asset/tien_ich_3D/9.jpg", "title": "Góc Nhìn Từ Hiên Biệt Phủ Ra Cánh Đồng Lúa"}, {"src": "assets/Index_asset/tien_ich_3D/10.jpg", "title": "Điểm Đón Tiếp & Sảnh Lễ Tân Sang Trọng"}];
+      let currentIdx = 0;
+      const lightbox = document.getElementById('gallery-3d-lightbox');
+      const imgEl = document.getElementById('lightbox-3d-img');
+      const counterEl = document.getElementById('lightbox-counter');
+      const titleEl = document.getElementById('lightbox-title');
+      const track = document.getElementById('gallery-3d-track');
+
+      window.scroll3DGallery = function(offset) {
+        if (track) {
+          track.scrollBy({ left: offset, behavior: 'smooth' });
+        }
+      };
+
+      window.open3DLightbox = function(idx) {
+        currentIdx = idx;
+        updateLightboxContent();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.close3DLightbox = function() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      window.nav3DLightbox = function(direction) {
+        currentIdx = (currentIdx + direction + galleryData.length) % galleryData.length;
+        updateLightboxContent();
+      };
+
+      function updateLightboxContent() {
+        const item = galleryData[currentIdx];
+        if (!item) return;
+        imgEl.style.animation = 'none';
+        imgEl.offsetHeight; /* trigger reflow */
+        imgEl.style.animation = 'lightboxZoomIn 0.24s ease-out';
+        imgEl.src = item.src;
+        imgEl.alt = item.title;
+        counterEl.textContent = String(currentIdx + 1).padStart(2, '0') + ' / ' + String(galleryData.length).padStart(2, '0');
+        titleEl.textContent = item.title;
+      }
+
+      // Đóng khi nhấp nền ngoài
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox || e.target.classList.contains('lightbox-body')) {
+          close3DLightbox();
+        }
+      });
+
+      // Bàn phím điều khiển (Esc, Mũi tên trái / phải)
+      window.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') {
+          close3DLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          nav3DLightbox(-1);
+        } else if (e.key === 'ArrowRight') {
+          nav3DLightbox(1);
+        }
+      });
+
+      // Hỗ trợ vuốt chạm cảm ứng trên điện thoại
+      let touchStartX = 0;
+      lightbox.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      lightbox.addEventListener('touchend', function(e) {
+        const touchEndX = e.changedTouches[0].screenX;
+        const diffX = touchEndX - touchStartX;
+        if (Math.abs(diffX) > 45) {
+          if (diffX < 0) nav3DLightbox(1);
+          else nav3DLightbox(-1);
+        }
+      }, { passive: true });
+    })();
+  </script>
 
 </body>
 </html>
