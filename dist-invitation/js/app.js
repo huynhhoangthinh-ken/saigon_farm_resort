@@ -183,9 +183,6 @@ window.activateTab = function(tabId) {
               </p>
               <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
                 <a href="article.html?id=${post.id}" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-                <a href="https://zalo.me/0906060036" target="_blank" class="editorial-btn" style="margin-top:0; background-color: #0068FF; color: white; border-color: #0068FF;">
-                  Hotline Zalo
-                </a>
               </div>
             </div>
           </div>
