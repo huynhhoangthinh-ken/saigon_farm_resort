@@ -1,3 +1,14 @@
+// ---- GLOBAL IMAGE FALLBACK & SELF-HEALING ----
+window.addEventListener('error', function(e) {
+  if (e.target && e.target.tagName === 'IMG') {
+    const img = e.target;
+    if (!img.dataset.hasHandledError) {
+      img.dataset.hasHandledError = 'true';
+      img.src = 'assets/Index_asset/hero_slide_new/SGFR_H01.webp';
+    }
+  }
+}, true);
+
 // ---- MOBILE MENU (prepended) ----
 function closeMobileMenu() {
   var drawer = document.getElementById('mobileMenuDrawer');
