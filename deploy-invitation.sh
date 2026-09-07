@@ -19,7 +19,7 @@ os.makedirs(dist, exist_ok=True)
 # 1. Biến thu-moi.html thành index.html của trang chủ subdomain và copy các trang liên quan
 shutil.copy('thu-moi.html', os.path.join(dist, 'index.html'))
 shutil.copy('thu-moi.html', os.path.join(dist, 'thu-moi.html'))
-for f in ['gioi-thieu.html', 'dien-an.html', 'dien-san.html', 'biet-phu-dien-trang.html']:
+for f in ['gioi-thieu.html', 'introduction.html', 'Saigon_Farm_Resort_Introduction.html', 'dien-an.html', 'dien-san.html', 'biet-phu-dien-trang.html']:
     if os.path.exists(f):
         shutil.copy(f, os.path.join(dist, f))
 for d in ['dien-an', 'dien-san', 'biet-phu-dien-trang']:
