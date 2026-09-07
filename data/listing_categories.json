@@ -8,7 +8,7 @@
     "desc": "Biệt phủ gia đình cho kỳ nghỉ và sum họp nhiều thế hệ. Không gian khuôn viên rộng lớn từ 646,5m² đến 1.452m² với 100% thổ cư sổ đỏ riêng. Chủ nhân có thể đưa vào chương trình khai thác cho thuê của MDS Living khi không sử dụng.",
     "table_idx": 0,
     "default_image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg",
-    "hero_image": "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg",
+    "hero_image": "assets/Index_asset/tien_ich_3D/Dinh_thu_ven_dong_lua.jpg",
     "items": [
       {
         "code": "A6",
@@ -323,8 +323,8 @@
     "badge": "7 Vị Trí Tĩnh Lặng Nhất Khu",
     "desc": "Đầu tư khai thác lưu trú. Chủ nhân phát triển cụm lưu trú cho thuê dài hạn, hoặc khai thác ngắn ngày với các vị trí có hướng nhìn đẹp. Bảy vị trí riêng tư nhất khu điền trang.",
     "table_idx": 2,
-    "default_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg",
-    "hero_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg",
+    "default_image": "assets/Index_asset/tien_ich_3D/dien_trang_dong_lua.jpg",
+    "hero_image": "assets/Index_asset/tien_ich_3D/dien_trang_dong_lua_chin.jpg",
     "items": [
       {
         "code": "B24",

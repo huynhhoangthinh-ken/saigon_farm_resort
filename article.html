@@ -595,6 +595,16 @@
             `).join('');
           }
         }
+
+        // Automatic fallback for any broken images inside article
+        container.querySelectorAll('img').forEach(img => {
+          img.addEventListener('error', function() {
+            if (!this.dataset.hasHandledError) {
+              this.dataset.hasHandledError = 'true';
+              this.src = 'assets/Index_asset/hero_slide_new/SGFR_H01.webp';
+            }
+          });
+        });
       }
 
       // Fetch latest data/posts.json so any edit in IDE is reflected immediately
