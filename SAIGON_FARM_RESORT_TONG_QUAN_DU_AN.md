@@ -1,10 +1,10 @@
-# TÀI LIỆU TỔNG QUAN DỰ ÁN SAIGON FARM RESORT
+# TÀI LIỆU TỔNG QUAN QUẦN THỂ ĐIỀN TRANG SAIGON FARM RESORT
 ### QUẦN THỂ ĐIỀN TRANG NGHỈ DƯỠNG SINH THÁI VEN HỒ 100HA — BẢN SẮC VIỆT ĐƯƠNG ĐẠI
 
 ---
 
 ## MỤC LỤC
-1. [Thông Tin Tổng Quan & Nhận Diện Dự Án](#1-thông-tin-tổng-quan--nhận-diện-dự-án)
+1. [Thông Tin Tổng Quan & Nhận Diện Quần Thể](#1-thông-tin-tổng-quan--nhận-diện-quần-thể)
 2. [Tọa Độ Kim Cương & Đòn Bẩy Hạ Tầng Đột Phá](#2-tọa-độ-kim-cương--đòn-bẩy-hạ-tầng-đột-phá)
 3. [Triết Lý Phát Triển & 5 Trụ Cột Lối Sống Việt](#3-triết-lý-phát-triển--5-trụ-cột-lối-sống-việt)
 4. [Cơ Cấu 3 Dòng Sản Phẩm Cốt Lõi (Mở Bán 36 Sản Phẩm Đợt 1)](#4-cơ-cấu-3-dòng-sản-phẩm-cốt-lõi-mở-bán-36-sản-phẩm-đợt-1)
@@ -19,7 +19,7 @@
 
 ---
 
-## 1. THÔNG TIN TỔNG QUAN & NHẬN DIỆN DỰ ÁN
+## 1. THÔNG TIN TỔNG QUAN & NHẬN DIỆN QUẦN THỂ
 
 | Thông Số | Chi Tiết |
 | :--- | :--- |
@@ -31,7 +31,7 @@
 | **Tổng số sản phẩm toàn khu** | **47 sản phẩm điền trang** độc bản |
 | **Quy mô mở bán Đợt 1 (T9/2026)** | **36 sản phẩm** (Bao gồm: 17 Biệt Phủ + 12 Điền Sản + 07 Điền An) |
 | **Diện tích khuôn viên riêng** | **646,5 m² – 1.452 m²** (Bình quân 1.108 m² / khuôn viên) |
-| **Pháp lý dự án** | **Sổ hồng riêng từng nền**, sang tên công chứng ngay |
+| **Pháp lý sản phẩm** | **Sổ hồng riêng từng nền**, sang tên công chứng ngay |
 | **Tiêu chuẩn vận hành** | Khu Resort gnhỉ dưỡng mang âm hưởng Văn hóa & Bản sắc Việt |
 | **Thời gian vận hành chính thức** | Bàn giao và vận hành toàn khu vào **Cuối năm 2027** |
 
@@ -46,8 +46,8 @@ Saigon Farm Resort tọa lạc tại vị trí phong thủy hiếm có khu vực
 - **Tiếp giáp TP. Hồ Chí Minh (60 – 75 phút di chuyển):** Khoảng cách lý tưởng cho ngôi nhà thứ hai (Second Home) để cả gia đình nghỉ dưỡng mỗi cuối tuần mà không mệt mỏi vì di chuyển xa.
 
 ### 2.2. Tam giác đòn bẩy hạ tầng bứt phá giá trị (2025 – 2027)
-1. **Cao tốc Biên Hòa – Vũng Tàu (Vận hành 2025 – 2026):** Rút ngắn thời gian từ TP.HCM về dự án chỉ còn hơn 1 giờ lái xe êm ái.
-2. **Sân bay Quốc tế Long Thành (Vận hành 2026):** Cách dự án khoảng 45 phút di chuyển, đón hàng chục triệu lượt khách du lịch quốc tế và giới chuyên gia cao cấp mỗi năm.
+1. **Cao tốc Biên Hòa – Vũng Tàu (Vận hành 2025 – 2026):** Rút ngắn thời gian từ TP.HCM về khu nghỉ dưỡng chỉ còn hơn 1 giờ lái xe êm ái.
+2. **Sân bay Quốc tế Long Thành (Vận hành 2026):** Cách khu nghỉ dưỡng khoảng 45 phút di chuyển, đón hàng chục triệu lượt khách du lịch quốc tế và giới chuyên gia cao cấp mỗi năm.
 3. **Nâng cấp tuyến đường ven biển ĐT994 (Mở rộng 6 – 8 làn xe):** Trục xương sống kết nối toàn bộ chuỗi đô thị nghỉ dưỡng từ Long Hải – Đất Đỏ – Hồ Tràm – Bình Châu – Phan Thiết.
 4. **Sân bay chuyên dùng Lộc An – Hồ Tràm:** Động lực kích hoạt du lịch hàng không cao cấp và giới siêu giàu.
 
@@ -59,7 +59,7 @@ Saigon Farm Resort tọa lạc tại vị trí phong thủy hiếm có khu vực
 > *"Một nơi để gia đình hiện đại sống giữa thiên nhiên, để trẻ lớn lên bằng trải nghiệm, để 3 thế hệ tìm lại thời gian dành cho nhau, và để những giá trị đẹp của văn hóa Việt tiếp tục sống trong đời sống hôm nay."*
 
 ### 5 Trụ Cột Lối Sống Việt Đương Đại
-Dự án được kiến tạo dựa trên 5 giá trị triết lý gắn liền với cội nguồn văn hóa dân tộc:
+Saigon Farm Resort được kiến tạo dựa trên 5 giá trị triết lý gắn liền với cội nguồn văn hóa dân tộc:
 
 1. 🌿 **ĐẤT (Địa Linh & Sinh Mệnh):**
    - Đồng lúa nếp chín vàng ôm trọn khuôn viên.
@@ -85,7 +85,7 @@ Dự án được kiến tạo dựa trên 5 giá trị triết lý gắn liền
 
 ## 4. CƠ CẤU 3 DÒNG SẢN PHẨM CỐT LÕI (MỞ BÁN 36 SẢN PHẨM ĐỢT 1)
 
-Dự án mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng trọn vẹn 3 nhu cầu lớn của thị trường:
+Mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng trọn vẹn 3 nhu cầu lớn của thị trường:
 
 | Tiêu Chí | BIỆT PHỦ ĐIỀN TRANG | ĐIỀN SẢN (FOUNDERS) | ĐIỀN AN (HAVEN) |
 | :--- | :--- | :--- | :--- |
@@ -217,7 +217,7 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
   3. **Chi phí rủi ro (Rủi ro quy hoạch & treo sổ):** Đất chưa có sổ riêng luôn mang một xác suất không bao giờ hoàn tất được thủ tục pháp lý.
 - Hạ tầng giao thông nội bộ, chỉ giới đường đỏ và quy hoạch cảnh quan được phê duyệt bài bản.
 
-### 8.2. Lộ trình triển khai dự án
+### 8.2. Lộ trình phát triển quần thể
 - **Tháng 9/2026:** Chính thức ra mắt và mở bán Đợt 1 (36 sản phẩm ưu đãi đợt mở bán đầu tiên).
 - **Quý 4/2026 – Quý 2/2027:** Triển khai hoàn thiện hạ tầng kỹ thuật, đường nội bộ trải nhựa, hệ thống điện âm, cấp thoát nước và phủ xanh cảnh quan toàn khu.
 - **Quý 4/2027:** Xây dựng và hoàn thiện phân khu tiện ích trung tâm (Clubhouse, Central Restaurant, Việt Mã Viên, Sân Pickleball, Hồ bơi trung tâm).
@@ -227,7 +227,7 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
 
 ## 9. HỆ THỐNG LIÊN KẾT TRỰC TUYẾN & CỔNG THÔNG TIN
 
-- **Trang chủ chính thức của dự án:** [https://saigonfarmresort.com](https://saigonfarmresort.com)
+- **Trang chủ chính thức:** [https://saigonfarmresort.com](https://saigonfarmresort.com)
 - **Cổng thông tin Thư mời Đối tác & Đại lý:** [https://invitation.saigonfarmresort.com](https://invitation.saigonfarmresort.com)
 - **Bản thuyết trình đề xuất & Bảng giá:** [https://saigonfarmresort.com/gioi-thieu.html](https://saigonfarmresort.com/gioi-thieu.html)
 - **Trang chuyên đề Biệt Phủ Điền Trang:** [https://saigonfarmresort.com/biet-phu-dien-trang.html](https://saigonfarmresort.com/biet-phu-dien-trang.html)
