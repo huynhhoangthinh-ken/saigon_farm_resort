@@ -236,39 +236,38 @@
 
   <!-- Top Utility Bar -->
   <div class="top-bar">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-      <div>
-        <span>🌿 <strong>Saigon Farm Resort:</strong> Tựa Hồ 100ha - Liền Kề Biển Hồ Tràm - Ôm Trọn Thiên Nhiên</span>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; gap: 16px;">
+      <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+        <span>🌿 <strong>Saigon Farm Resort:</strong> Quần Thể Nghỉ Dưỡng Sinh Thái Ven Hồ 100ha • Liền Kề Biển Hồ Tràm</span>
       </div>
-      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-        <a href="gioi-thieu.html"><i class="fa-solid fa-file-lines" style="font-size:0.75rem; margin-right:4px;"></i> Bản Giới Thiệu</a>
-        <a href="dien-an.html"><i class="fa-solid fa-house-chimney-window" style="font-size:0.75rem; margin-right:4px; color:#c9a96e;"></i> Điền An</a>
-        <a href="dien-san.html"><i class="fa-solid fa-chart-line" style="font-size:0.75rem; margin-right:4px; color:#c9a96e;"></i> Điền Sản</a>
-        <a href="biet-phu-dien-trang.html"><i class="fa-solid fa-crown" style="font-size:0.75rem; margin-right:4px; color:#c9a96e;"></i> Biệt Phủ</a>
+      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: nowrap; white-space: nowrap;">
+        <a href="gioi-thieu.html"><i class="fa-solid fa-file-lines" style="font-size:0.75rem; color:#8c6b32;"></i> Bản Giới Thiệu</a>
+        <a href="dien-an.html"><i class="fa-solid fa-house-chimney-window" style="font-size:0.75rem; color:#8c6b32;"></i> Điền An</a>
+        <a href="dien-san.html"><i class="fa-solid fa-chart-line" style="font-size:0.75rem; color:#8c6b32;"></i> Điền Sản</a>
+        <a href="biet-phu-dien-trang.html"><i class="fa-solid fa-crown" style="font-size:0.75rem; color:#8c6b32;"></i> Biệt Phủ</a>
+        <a href="article.html?id=304" style="background: linear-gradient(135deg, #c9a96e 0%, #a88448 100%); color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px rgba(201, 169, 110, 0.3);"><i class="fa-solid fa-calendar-check" style="font-size:0.75rem; margin-right:4px;"></i> Đăng Ký Khảo Sát</a>
       </div>
     </div>
   </div>
 
-  <!-- Main Navigation Header (Sticky Dark Version for inner pages) -->
-  <header class="main-header" style="position: fixed; top: 0; background: rgba(10,10,10,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 12px 0;">
+  <!-- Main Navigation Header -->
+  <header class="main-header">
     <div class="container header-container">
-      <a class="brand-identity" href="index.html">
-        <div class="brand-avatar-ring" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #c9a96e 0%, #f5e6c8 50%, #c9a96e 100%);">
-          <i class="fa-solid fa-tree" style="font-size: 1.15rem; color: #111;"></i>
-        </div>
+      <a class="brand-identity" href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+        <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" style="height: 44px; width: auto; object-fit: contain;">
         <div class="brand-text-block">
           <span class="brand-logo">SAIGON FARM RESORT</span>
-          <span class="brand-tagline">Quần Thể Điền Trang Sinh Thái Ven Hồ</span>
+          <span class="brand-tagline">Khu Nghỉ Dưỡng Sinh Thái Ven Hồ</span>
         </div>
       </a>
 
       <nav class="nav-menu-links">
         <a href="index.html">Trang Chủ</a>
-        <a href="index.html#tab-villas-market">Biệt Phủ Điền Trang</a>
+        <a href="biet-phu-dien-trang.html">Biệt Phủ Điền Trang</a>
         <a href="index.html#tab-heritage">Bản Sắc Việt</a>
         <a href="index.html#tab-amenities">Tiện Ích Điền Trang</a>
-        <a href="index.html#tab-masterplan">Mặt Bằng & Quy Hoạch</a>
-        <a href="index.html#tab-editorial">Tạp Chí</a>
+        <a href="index.html#tab-masterplan">Mặt Bằng &amp; Quy Hoạch</a>
+        <a href="article.html?id=101">Tạp Chí</a>
       </nav>
 
       <button class="menu-toggle-btn" id="mobileMenuBtn" aria-label="Mở menu" style="display:none;">

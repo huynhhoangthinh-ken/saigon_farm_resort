@@ -287,11 +287,11 @@ def render_page(cat, all_cats):
 
     /* Utility Topbar */
     .topbar {{
-      background: #111814;
-      color: #b0bfb7;
+      background: #fdfaf4;
+      color: #5c472d;
       font-size: 0.82rem;
       padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid #ebdcc5;
     }}
     .topbar-container {{
       max-width: 1240px;
@@ -304,12 +304,12 @@ def render_page(cat, all_cats):
       gap: 10px;
     }}
     .topbar a {{
-      color: #d1ded8;
+      color: #5c472d;
       text-decoration: none;
       transition: color 0.2s;
     }}
     .topbar a:hover {{
-      color: var(--gold);
+      color: #8c6b32;
     }}
 
     /* Main Navigation Header */
@@ -1195,11 +1195,11 @@ def render_page(cat, all_cats):
   <!-- Utility Topbar -->
   <div class="topbar">
     <div class="topbar-container">
-      <div>🌿 <strong>Saigon Farm Resort:</strong> Tựa Hồ 100ha - Hướng Biển - Đất 100% Thổ Cư Sổ Riêng Từng Lô</div>
-      <div style="display: flex; gap: 16px;">
+      <div>🌿 <strong>Saigon Farm Resort:</strong> Quần Thể Nghỉ Dưỡng Sinh Thái Ven Hồ 100ha • Liền Kề Biển Hồ Tràm</div>
+      <div style="display: flex; gap: 16px; align-items: center;">
         <a href="index.html">Trang Chủ</a>
-        <a href="gioi-thieu.html">Bản Giới Thiệu Điền Trang</a>
-        <a href="article.html?id=304">Đăng Ký Khảo Sát</a>
+        <a href="gioi-thieu.html">Bản Giới Thiệu</a>
+        <a href="article.html?id=304" style="background: linear-gradient(135deg, #c9a96e 0%, #a88448 100%); color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px rgba(201, 169, 110, 0.3);"><i class="fa-solid fa-calendar-check" style="font-size:0.75rem; margin-right:4px;"></i> Đăng Ký Khảo Sát</a>
       </div>
     </div>
   </div>
