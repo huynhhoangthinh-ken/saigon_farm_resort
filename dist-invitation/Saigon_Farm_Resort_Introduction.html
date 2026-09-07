@@ -2881,9 +2881,9 @@
   <aside class="action-bar" aria-label="Thanh công cụ trang web">
     <div style="display: flex; gap: 8px; flex-wrap: wrap;">
       <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Trang Chủ</a>
-      <a href="dien-san.html"><i class="fa-solid fa-layer-group"></i> Giỏ Hàng Điền Sản</a>
-      <a href="biet-phu-dien-trang.html"><i class="fa-solid fa-landmark"></i> Biệt Phủ</a>
-      <a href="dien-an.html"><i class="fa-solid fa-house-chimney-user"></i> Điền An</a>
+      <a href="#buoc-6-dien-san"><i class="fa-solid fa-chart-line"></i> Bài Toán Điền Sản</a>
+      <a href="#buoc-4-biet-phu"><i class="fa-solid fa-landmark"></i> Biệt Phủ</a>
+      <a href="#buoc-5-dien-an"><i class="fa-solid fa-house-chimney-user"></i> Điền An</a>
     </div>
     <div>
       <button type="button" class="btn-cta-top" onclick="openBookingModal('', '', 'Bảng Giá Niêm Yết')"><i class="fa-solid fa-file-signature"></i> Đăng Ký Nhận Bảng Giá</button>
@@ -4208,71 +4208,205 @@
           Chính sách tài chính đột phá đợt 1: Khách hàng chỉ cần thanh toán 70% là được công chứng sang tên nhận sổ đỏ, 30% còn lại được giãn tới cuối năm 2027 với lãi suất 0%.
         </p>
 
-        <!-- Bảng Chiết Tính Tài Chính Cho 1 Lô Điền Sản Chuẩn 1.000 m² (9 Tỷ Đồng) -->
+        <!-- Bảng Chiết Tính Tài Chính Cho 1 Lô Điền Sản Chuẩn 1.000 m²: PA1 vs PA2 -->
         <div class="financial-card-box">
-          <h4><i class="fa-solid fa-file-invoice-dollar" style="color: var(--color-gold);"></i> Bảng Chiết Tính Dòng Tiền Đầu Tư 1 Lô Điền Sản 1.000 m² (Giả Định 9 Tỷ Đồng)</h4>
+          <h4><i class="fa-solid fa-scale-balanced" style="color: var(--color-gold);"></i> Bảng Chiết Tính Thực Tế: 2 Phương Án Đầu Tư 1.000 m² Điền Sản</h4>
+          <p style="font-size: 0.92rem; color: #444; line-height: 1.6; margin-bottom: 18px;">
+            Giá niêm yết: <strong>12 Tỷ Đồng</strong> (đơn giá <strong>12 Triệu/m²</strong>). Áp dụng trọn bộ ưu đãi Đợt 1: <strong>Chiết khấu 6% thanh toán nhanh</strong> (~720 Triệu) + <strong>Tặng thêm 800 Triệu</strong> gói hỗ trợ xây dựng (khách không xây vẫn được trừ thẳng vào giá). Khách hàng thanh toán 70% nhận sổ hồng riêng ngay; 30% còn lại giữ lại chưa thanh toán là <strong>cơ sở để Chủ đầu tư đồng hành hỗ trợ ra hàng</strong>, bảo đảm an toàn và lợi ích tối đa cho cả đôi bên.
+          </p>
           
-          <table class="editorial-table" aria-label="Chiết tính tài chính lô Điền Sản 1000m2">
-            <thead>
-              <tr>
-                <th>GIAI ĐOẠN THANH TOÁN</th>
-                <th>TỶ LỆ</th>
-                <th>SỐ TIỀN DỰ KIẾN (LÔ 9 TỶ ĐỒNG)</th>
-                <th>QUYỀN LỢI &amp; BẢO CHỨNG</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Đợt 1: Đặt cọc giữ chỗ</strong></td>
-                <td>Cọc cố định</td>
-                <td class="val-highlight">200.000.000 đ</td>
-                <td>Ưu tiên chọn vị trí Kim Cương + <strong>Tặng 2 chỉ vàng 9999</strong></td>
-              </tr>
-              <tr>
-                <td><strong>Đợt 2: Ký HĐ Chuyển Nhượng (T9/2026)</strong></td>
-                <td>70% (trừ cọc)</td>
-                <td class="val-highlight">6.100.000.000 đ</td>
-                <td>
-                  <strong>Hưởng Chiết Khấu 6% (~540 Triệu)</strong><br>
-                  <span class="val-green">✓ Công chứng sang tên nhận sổ đỏ riêng ngay lập tức</span>
-                </td>
-              </tr>
-              <tr>
-                <td><strong>Đợt 3: Giãn thanh toán (Cuối 2027)</strong></td>
-                <td>30% còn lại</td>
-                <td class="val-highlight">2.700.000.000 đ</td>
-                <td>
-                  <strong>HỖ TRỢ LÃI SUẤT 0% SUỐT GẦN 1,5 NĂM</strong><br>
-                  (Khách không phải vay ngân hàng, không áp lực trả lãi)
-                </td>
-              </tr>
-              <tr style="background: var(--color-gold-box-bg);">
-                <td><strong>TỔNG VỐN THỰC BỎ BAN ĐẦU</strong></td>
-                <td><strong>~64% Giá Trị</strong></td>
-                <td class="val-highlight" style="color: var(--color-accent-green); font-size: 1.1rem;"><strong>~5.760.000.000 đ</strong></td>
-                <td><strong>Đã cầm sổ đỏ trong tay với số vốn ban đầu chỉ 5,76 tỷ đồng!</strong></td>
-              </tr>
-            </tbody>
-          </table>
+          <div style="overflow-x: auto; margin-bottom: 24px;">
+            <table class="editorial-table" aria-label="Bảng so sánh 2 phương án đầu tư Điền Sản 1000m2">
+              <thead>
+                <tr>
+                  <th style="width: 42%; text-align: left; background: #faf4e8; color: #5c472d; font-weight: 700;">CHỈ SỐ TÀI CHÍNH / KHOẢN MỤC</th>
+                  <th style="width: 29%; text-align: right; background: #1b382b; color: #f5e6c8; font-weight: 700;">
+                    PA1 — GIỮ ĐẤT<br>
+                    <span style="font-size: 0.76rem; font-weight: 400; color: #c8ddd2;">Tích sản dài hạn / An toàn</span>
+                  </th>
+                  <th style="width: 29%; text-align: right; background: #234d38; color: #ffffff; font-weight: 700;">
+                    PA2 — BÁN NGUYÊN LÔ<br>
+                    <span style="font-size: 0.76rem; font-weight: 400; color: #f5e6c8;">Thanh khoản nhanh / Đón sóng</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. Giá niêm yết ban đầu (HĐMB — 12 Tr/m²)</strong></td>
+                  <td style="text-align: right; font-weight: 600;">12.000.000.000 đ</td>
+                  <td style="text-align: right; font-weight: 600;">12.000.000.000 đ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>2. Chiết khấu thanh toán nhanh 70% (6%)</strong><br>
+                    <small style="color: #666;">(Chính sách ưu đãi thanh toán sớm đợt 1)</small>
+                  </td>
+                  <td style="text-align: right; color: #2e7d32; font-weight: 600;">-720.000.000 đ</td>
+                  <td style="text-align: right; color: #2e7d32; font-weight: 600;">-720.000.000 đ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>3. Ưu đãi đợt mở bán (Gói xây dựng)</strong><br>
+                    <small style="color: #666;">(Khách hàng không xây vẫn được giảm trừ trực tiếp)</small>
+                  </td>
+                  <td style="text-align: right; color: #2e7d32; font-weight: 600;">-800.000.000 đ</td>
+                  <td style="text-align: right; color: #2e7d32; font-weight: 600;">-800.000.000 đ</td>
+                </tr>
+                <tr style="background: #faf6ef;">
+                  <td>
+                    <strong>4. Tổng giá vốn thực mua (sau ưu đãi)</strong><br>
+                    <small style="color: #666;">(Đơn giá vốn thực tế: ~10,48 Triệu/m²)</small>
+                  </td>
+                  <td style="text-align: right; font-weight: 700; color: #183024;">10.480.000.000 đ</td>
+                  <td style="text-align: right; font-weight: 700; color: #183024;">10.480.000.000 đ</td>
+                </tr>
+                <tr style="background: #fdfaf4;">
+                  <td>
+                    <strong>5. Vốn thực nộp ban đầu (70% trừ ưu đãi)</strong><br>
+                    <small style="color: #666;">(Công chứng nhận sổ hồng riêng ngay; 30% giữ lại LS 0%)</small>
+                  </td>
+                  <td style="text-align: right; font-weight: 800; color: #1b5e20; font-size: 1.02rem;">6.880.000.000 đ</td>
+                  <td style="text-align: right; font-weight: 800; color: #1b5e20; font-size: 1.02rem;">6.880.000.000 đ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>6. Khoản 30% khách giữ lại chưa thanh toán</strong><br>
+                    <small style="color: #666;">(Cơ sở để CĐT hỗ trợ ra hàng, LS 0% đến cuối 2027)</small>
+                  </td>
+                  <td style="text-align: right; font-weight: 600; color: #8c6b32;">3.600.000.000 đ</td>
+                  <td style="text-align: right; font-weight: 600; color: #8c6b32;">3.600.000.000 đ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>7. Đơn giá bán ra dự kiến (VNĐ/m²)</strong><br>
+                    <small style="color: #666;">(Mức giá CĐT hỗ trợ ra hàng đón sóng hạ tầng 2027)</small>
+                  </td>
+                  <td style="text-align: right; font-style: italic; color: #777;">Chưa bán</td>
+                  <td style="text-align: right; font-weight: 700; color: #b26a00; font-size: 1.05rem;">13.800.000 đ/m²</td>
+                </tr>
+                <tr>
+                  <td><strong>8. Tổng doanh thu bán ra dự kiến (1.000 m²)</strong></td>
+                  <td style="text-align: right;">—</td>
+                  <td style="text-align: right; font-weight: 700;">13.800.000.000 đ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>9. Chi phí bán hàng &amp; chuyển nhượng (5.5%)</strong><br>
+                    <small style="color: #666;">(Thuế TNCN 2%, phí môi giới đại lý, công chứng sang tên)</small>
+                  </td>
+                  <td style="text-align: right;">—</td>
+                  <td style="text-align: right; color: #c62828;">759.000.000 đ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>10. Chi phí lãi vay phát sinh</strong><br>
+                    <small style="color: #666;">(Chính sách CĐT tài trợ 0% lãi suất suốt thời gian giãn)</small>
+                  </td>
+                  <td style="text-align: right;">—</td>
+                  <td style="text-align: right; color: #2e7d32; font-weight: 700;">0 đ</td>
+                </tr>
+                <tr>
+                  <td><strong>11. Doanh thu thuần thực nhận sau chi phí</strong></td>
+                  <td style="text-align: right;">—</td>
+                  <td style="text-align: right; font-weight: 700; color: #183024; font-size: 1.02rem;">13.041.000.000 đ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>12. Quyết toán 30% còn lại cho CĐT</strong><br>
+                    <small style="color: #666;">(Thanh toán dứt điểm khi CĐT hỗ trợ ra hàng thành công)</small>
+                  </td>
+                  <td style="text-align: right;">—</td>
+                  <td style="text-align: right; color: #8c6b32; font-weight: 600;">-3.600.000.000 đ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>13. Số tiền thực thu về tài khoản khách hàng</strong><br>
+                    <small style="color: #666;">(Sau khi trừ mọi chi phí và hoàn tất hợp đồng CĐT)</small>
+                  </td>
+                  <td style="text-align: right;">—</td>
+                  <td style="text-align: right; font-weight: 700; color: #183024; font-size: 1.05rem;">9.441.000.000 đ</td>
+                </tr>
+                <tr style="background: #fff8e1; border-top: 2px solid #dfc89f; border-bottom: 2px solid #dfc89f;">
+                  <td style="font-size: 1rem; font-weight: 800; color: #183024;">
+                    14. LỢI NHUẬN RÒNG THỰC NHẬN (VNĐ)
+                  </td>
+                  <td style="text-align: right; font-weight: 700; color: #2e7d32; font-size: 1rem;">
+                    0 đ<br>
+                    <small style="color: #666;">(Tích sản nguyên vẹn)</small>
+                  </td>
+                  <td style="text-align: right; font-weight: 800; color: #2e7d32; font-size: 1.22rem;">
+                    +2.561.000.000 đ
+                  </td>
+                </tr>
+                <tr style="background: #fdf3d8; border-bottom: 2px solid #dfc89f;">
+                  <td style="font-size: 0.95rem; font-weight: 800; color: #183024;">
+                    15. TỶ SUẤT LỢI NHUẬN TRÊN VỐN THỰC BỎ (ROE)
+                  </td>
+                  <td style="text-align: right; font-weight: 700; color: #5c472d;">
+                    Phụ thuộc định giá 2027<br>
+                    <small style="color: #666;">(Kỳ vọng tăng x2 - x3 dài hạn)</small>
+                  </td>
+                  <td style="text-align: right; font-weight: 800; color: #b26a00; font-size: 1.25rem;">
+                    37,2%
+                  </td>
+                </tr>
+                <tr style="background: #faf6ef;">
+                  <td>
+                    <strong>16. Đơn giá hòa vốn an toàn (Break-even Price)</strong><br>
+                    <small style="color: #666;">(Giá bán tối thiểu để hòa vốn sau khi trừ toàn bộ thuế phí)</small>
+                  </td>
+                  <td style="text-align: right;">—</td>
+                  <td style="text-align: right; font-weight: 700; color: #183024; font-size: 1.02rem;">11.089.947 đ/m²</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <!-- Kịch Bản Ra Hàng Chênh Lệch -->
-          <div class="callout-leverage">
-            <h5 style="font-family: var(--font-brand); font-size: 1rem; color: #1b5e20; margin-bottom: 6px; font-weight: 800;">
-              <i class="fa-solid fa-arrow-trend-up"></i> Kịch Bản Bán Ra Chênh Lệch (Exit Strategy) Sau 1 Năm:
+          <!-- Phân Tích Chuyên Sâu 3 Lợi Thế Đột Phá Của Bài Toán Đầu Tư -->
+          <div class="callout-leverage" style="background: #fcfaf6; border-left: 4px solid #8c6b32; padding: 22px 24px; border-radius: 8px; margin-top: 20px;">
+            <h5 style="font-family: var(--font-brand); font-size: 1.08rem; color: #183024; margin-bottom: 12px; font-weight: 800;">
+              <i class="fa-solid fa-chart-line" style="color: #8c6b32; margin-right: 6px;"></i> Giải Mã 3 Điểm Tựa Đột Phá Giúp Nhà Đầu Tư Đạt Lợi Nhuận Ròng 2,56 Tỷ (ROE 37,2%):
             </h5>
-            <p>
-              Theo lộ trình mở bán của Chủ đầu tư, các đợt mở bán tiếp theo (2027) sẽ điều chỉnh giá tăng từ 15% – 20% theo tiến độ hạ tầng cao tốc. Khi đó:
-            </p>
-            <ul style="margin: 8px 0 8px 20px;">
-              <li>Giá trị thị trường lô đất tăng 15%: Tổng giá trị đạt <strong>10,35 Tỷ</strong> → Lãi ròng chênh lệch: <strong>1,35 Tỷ Đồng</strong>.</li>
-              <li>Vì Quý khách chỉ bỏ ra vốn thực tế ban đầu là <strong>~5,76 Tỷ</strong> (nhờ chính sách giãn 30% LS 0% và chiết khấu 6%), nên <strong>TỶ SUẤT LỢI NHUẬN TRÊN VỐN THỰC BỎ (ROE) ĐẠT:</strong></li>
-            </ul>
-            <p style="font-family: var(--font-brand); font-size: 1.05rem; font-weight: 800; color: #1b5e20; margin-top: 6px;">
-              ROE = (1,35 Tỷ / 5,76 Tỷ) × 100% = <strong>23,4% sau 12 tháng</strong>
-            </p>
-            <p style="font-size: 0.88rem; color: var(--color-muted); margin-top: 4px;">
-              <em>(Nếu tính theo kịch bản giá đất tăng 20% khi Sân bay Long Thành vận hành thử nghiệm: Lợi nhuận đạt <strong>1,8 Tỷ</strong> → ROE lên tới <strong>31,25%/năm</strong>!)</em>
-            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 14px;">
+              <div style="background: #fff; border: 1px solid #ebdcc5; border-radius: 8px; padding: 16px;">
+                <div style="font-weight: 800; color: #8c6b32; font-size: 0.95rem; margin-bottom: 6px;">
+                  <i class="fa-solid fa-handshake-angle" style="margin-right: 4px;"></i> 1. Cơ Chế Giữ Lại 30% — CĐT Cam Kết Đồng Hành Ra Hàng
+                </div>
+                <p style="font-size: 0.86rem; color: #555; line-height: 1.55; margin: 0;">
+                  Việc khách hàng giữ lại 30% (<strong>3,6 Tỷ</strong>) chưa thanh toán chính là <strong>mỏ neo trách nhiệm cao nhất của Chủ đầu tư</strong>. Đây là cơ sở để CĐT trực tiếp đồng hành, tổ chức kênh bán lại cho khách hàng nhằm thu hồi 30% cuối. Mô hình này tạo sự an toàn tuyệt đối cho khách hàng và bảo chứng lợi ích tốt nhất cho cả đôi bên.
+                </p>
+              </div>
+
+              <div style="background: #fff; border: 1px solid #ebdcc5; border-radius: 8px; padding: 16px;">
+                <div style="font-weight: 800; color: #2e7d32; font-size: 0.95rem; margin-bottom: 6px;">
+                  <i class="fa-solid fa-tags" style="margin-right: 4px;"></i> 2. Giá Vốn Thực Mua Cực Tốt (~10,48 Triệu/m²)
+                </div>
+                <p style="font-size: 0.86rem; color: #555; line-height: 1.55; margin: 0;">
+                  Nhờ cộng dồn 2 tầng ưu đãi: <strong>Chiết khấu thanh toán nhanh 6% (720 Tr)</strong> + <strong>Gói hỗ trợ mở bán 800 Tr</strong> (không xây vẫn được trừ thẳng), tổng chiết khấu lên đến <strong>1,52 Tỷ</strong>. Vốn thực bỏ ban đầu chỉ <strong>6,88 Tỷ</strong> là đã cầm sổ hồng riêng 100% thổ cư trao tay.
+                </p>
+              </div>
+
+              <div style="background: #fff; border: 1px solid #ebdcc5; border-radius: 8px; padding: 16px;">
+                <div style="font-weight: 800; color: #1f5f7a; font-size: 0.95rem; margin-bottom: 6px;">
+                  <i class="fa-solid fa-arrow-trend-up" style="margin-right: 4px;"></i> 3. Mức Bán Ra 13,8 Triệu/m² Cực Kỳ Khả Thi
+                </div>
+                <p style="font-size: 0.86rem; color: #555; line-height: 1.55; margin: 0;">
+                  Hiện tại đất nền khu vực Đất Đỏ – Hồ Tràm đang giao dịch 14 – 18 triệu/m². Khi Cao tốc Biên Hòa – Vũng Tàu thông xe và Sân bay Long Thành vận hành (2026 – 2027), mức giá bán lại <strong>13,8 triệu/m²</strong> là con số rất mềm và thanh khoản tức thì. Đơn giá hòa vốn sau mọi chi phí chỉ <strong>11,09 Triệu/m²</strong> — biên an toàn bảo vệ dòng vốn trọn vẹn.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tổng kết ROE -->
+            <div style="background: #faf4e8; border: 1px solid #dfc89f; border-radius: 8px; padding: 14px 18px; margin-top: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+              <div>
+                <span style="font-size: 0.88rem; color: #5c472d;">Hiệu quả đầu tư PA2 (CĐT hỗ trợ ra hàng ở giá 13,8 Triệu/m²):</span>
+                <div style="font-size: 1.15rem; font-weight: 800; color: #183024;">Lãi ròng thực nhận: <span style="color: #2e7d32;">+2.561.000.000 đ (~2,56 Tỷ)</span> • Tỷ suất sinh lời: <span style="color: #b26a00;">ROE = 37,2%</span></div>
+              </div>
+              <div style="font-size: 0.82rem; color: #777;">(Công thức: 2.561.000.000 đ / 6.880.000.000 đ vốn thực nộp ban đầu)</div>
+            </div>
+          </div>
+
           <!-- Sơ Đồ Phân Lô Tách Thửa 3 Căn Sổ Riêng -->
           <div style="margin-top: 24px; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp', 'Điền Sản (Founders) — Sơ Đồ Phân Lô Tách Thành 3 Căn Sổ Riêng Từng Lô')">
             <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp" alt="Sơ đồ phân lô Điền Sản tách 3 căn" style="width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
