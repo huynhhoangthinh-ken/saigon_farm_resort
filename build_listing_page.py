@@ -1,17 +1,82 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Generate listing.html and listing/index.html from data/listing_categories.json
+Generate listing.html and listing/index.html with verified images and fallback
 """
 
 import json
 import os
 
-def generate_listing_html():
+def update_listing():
     with open("data/listing_categories.json", "r", encoding="utf-8") as f:
         categories = json.load(f)
 
-    # Collect all items with category slug and title
+    # 17 Verified Villa Images
+    villa_imgs = [
+        "assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg",
+        "assets/Index_asset/villa_gallery/sunrise_2_living_1.jpg",
+        "assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg",
+        "assets/Index_asset/villa_gallery/sunset_2_ext_1.jpg",
+        "assets/Index_asset/villa_gallery/sunrise_1_ext_2.jpg",
+        "assets/Index_asset/villa_gallery/sunset_2_living.jpg",
+        "assets/Index_asset/villa_gallery/sunset_1_lake_1.jpg",
+        "assets/Index_asset/villa_gallery/sunset_1_lake_2.jpg",
+        "assets/Index_asset/villa_gallery/sunrise_1_bed_1.jpg",
+        "assets/Index_asset/villa_gallery/sunrise_1_living_1.jpg",
+        "assets/Index_asset/villa_gallery/sunrise_2_shc_1.jpg",
+        "assets/Index_asset/villa_gallery/sunset_1_kitchen.jpg",
+        "assets/Index_asset/villa_gallery/sunset_2_master.jpg",
+        "assets/Index_asset/villa_gallery/sunrise_2_bed_1.jpg",
+        "assets/Index_asset/villa_gallery/sunset_1_master.jpg",
+        "assets/Index_asset/villa_gallery/sunrise_1_bed_2.jpg",
+        "assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg"
+    ]
+
+    # 12 Verified Dien San Images
+    dien_san_imgs = [
+        "assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp",
+        "assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp",
+        "assets/Index_asset/editorial_photo/Canh_dong_lua.png",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.jpg",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.webp",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_2-2.webp",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_3.webp",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_4.webp",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_6.webp",
+        "assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg",
+        "assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg"
+    ]
+
+    # 7 Verified Dien An Images
+    dien_an_imgs = [
+        "assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp",
+        "assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp",
+        "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_2.jpg",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.jpg",
+        "assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.jpg"
+    ]
+
+    # Update data in memory
+    for cat in categories:
+        slug = cat.get("slug")
+        if slug == "biet-phu-dien-trang":
+            for i, item in enumerate(cat.get("items", [])):
+                item["image"] = villa_imgs[i % len(villa_imgs)]
+        elif slug == "dien-san":
+            for i, item in enumerate(cat.get("items", [])):
+                item["image"] = dien_san_imgs[i % len(dien_san_imgs)]
+        elif slug == "dien-an":
+            for i, item in enumerate(cat.get("items", [])):
+                item["image"] = dien_an_imgs[i % len(dien_an_imgs)]
+
+    # Save updated json
+    with open("data/listing_categories.json", "w", encoding="utf-8") as f:
+        json.dump(categories, f, ensure_ascii=False, indent=2)
+
+    # Flatten items
     all_items = []
     for cat in categories:
         slug = cat.get("slug", "")
@@ -24,7 +89,6 @@ def generate_listing_html():
             item_copy["category_badge"] = cat_badge
             all_items.append(item_copy)
 
-    # Total counts
     total_count = len(all_items)
     dien_san_count = sum(1 for i in all_items if i["category_slug"] == "dien-san")
     dien_an_count = sum(1 for i in all_items if i["category_slug"] == "dien-an")
@@ -34,10 +98,11 @@ def generate_listing_html():
 
     # Generate cards HTML
     cards_html = []
+    fallback_img = "assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg"
+
     for item in all_items:
         code = item.get("code", "")
         area_str = item.get("area", "")
-        # Parse area float
         try:
             area_clean = float(area_str.replace(".", "").replace(",", "."))
         except:
@@ -48,14 +113,13 @@ def generate_listing_html():
         status_text = item.get("status", "Còn hàng")
         features = item.get("features", "")
         suitable_for = item.get("suitable_for", "")
-        img = item.get("image", "assets/Index_asset/tien_ich_3D/Tong_Quan_1.jpg")
+        img = item.get("image", fallback_img)
         cat_slug = item.get("category_slug", "")
         cat_title = item.get("category_title", "")
 
         status_badge_class = "status-available" if status_type == "available" else "status-reserved"
         status_icon = "fa-circle-check" if status_type == "available" else "fa-clock"
 
-        special_note = ""
         if cat_slug == "dien-san":
             special_note = """
             <div class="card-policy-tag">
@@ -83,7 +147,11 @@ def generate_listing_html():
              data-area-val="{area_clean}" 
              data-status="{status_type}">
           <div class="card-thumb-wrap">
-            <img src="{img}" alt="Phối cảnh {code}" loading="lazy" class="card-thumb">
+            <img src="{img}" 
+                 alt="Phối cảnh {code}" 
+                 loading="lazy" 
+                 class="card-thumb" 
+                 onerror="this.onerror=null; this.src='{fallback_img}'">
             <span class="card-badge-code">MÃ LÔ {code}</span>
             <span class="card-badge-cat">{cat_title}</span>
             <span class="card-badge-status {status_badge_class}">
@@ -1091,11 +1159,10 @@ def generate_listing_html():
         f.write(html_content)
     print("Generated listing.html successfully!")
 
-    # Also create listing/index.html for clean URL /listing
     os.makedirs("listing", exist_ok=True)
     with open("listing/index.html", "w", encoding="utf-8") as f:
         f.write(html_content)
     print("Generated listing/index.html successfully!")
 
 if __name__ == "__main__":
-    generate_listing_html()
+    update_listing()
