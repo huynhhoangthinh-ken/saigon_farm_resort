@@ -244,7 +244,7 @@
       }
     }
 
-    /* Fullscreen Mode Optimization */
+    /* Fullscreen Mode Optimization (Desktop) */
     body.is-fullscreen .magazine-header {
       height: 48px;
       background: rgba(7, 14, 10, 0.96);
@@ -271,6 +271,105 @@
     }
     body.is-fullscreen .thumbnails-drawer {
       bottom: 56px;
+    }
+
+    /* Fullscreen Mode on Mobile (< 768px): Hide all clutter, only show back & flip buttons */
+    @media (max-width: 768px) {
+      body.is-fullscreen .magazine-header {
+        display: none !important;
+      }
+      body.is-fullscreen .magazine-footer {
+        display: none !important;
+      }
+      body.is-fullscreen .thumbnails-drawer {
+        display: none !important;
+      }
+      body.is-fullscreen .flip-hint {
+        display: none !important;
+      }
+      body.is-fullscreen .magazine-stage {
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        padding: 0 !important;
+      }
+      body.is-fullscreen .turn-arrow {
+        width: 44px;
+        height: 44px;
+        background: rgba(9, 18, 13, 0.75);
+        border: 1px solid rgba(201, 169, 110, 0.4);
+        color: var(--gold-light);
+        font-size: 1.1rem;
+        backdrop-filter: blur(8px);
+        z-index: 60;
+      }
+      body.is-fullscreen .turn-arrow.arrow-prev {
+        left: 6px;
+      }
+      body.is-fullscreen .turn-arrow.arrow-next {
+        right: 6px;
+      }
+    }
+
+    /* Floating Top Bar in Mobile Fullscreen */
+    .fs-mobile-top-bar {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      body.is-fullscreen .fs-mobile-top-bar {
+        display: flex;
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        right: 14px;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 120;
+        pointer-events: none;
+      }
+
+      body.is-fullscreen .fs-back-btn {
+        pointer-events: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(7, 14, 10, 0.88);
+        border: 1px solid rgba(201, 169, 110, 0.45);
+        color: var(--gold-light);
+        padding: 8px 16px;
+        border-radius: 24px;
+        font-size: 0.86rem;
+        font-weight: 700;
+        cursor: pointer;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 4px 18px rgba(0,0,0,0.6);
+        transition: all 0.2s ease;
+      }
+
+      body.is-fullscreen .fs-back-btn:hover,
+      body.is-fullscreen .fs-back-btn:active {
+        background: var(--gold-primary);
+        color: #0b140f;
+        border-color: var(--gold-light);
+        transform: scale(1.03);
+      }
+
+      body.is-fullscreen .fs-page-badge {
+        pointer-events: auto;
+        background: rgba(7, 14, 10, 0.88);
+        border: 1px solid rgba(201, 169, 110, 0.45);
+        color: var(--gold-light);
+        padding: 7px 14px;
+        border-radius: 20px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 4px 18px rgba(0,0,0,0.6);
+      }
     }
 
     .book-wrapper {
@@ -900,6 +999,17 @@
 
   <!-- Magazine Stage -->
   <main class="magazine-stage">
+    <!-- Floating Mobile Fullscreen Top Bar -->
+    <div class="fs-mobile-top-bar">
+      <button class="fs-back-btn" id="btnFsMobileBack" title="Thoát toàn màn hình">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Quay lại</span>
+      </button>
+      <div class="fs-page-badge">
+        Trang <span id="fsMobilePageNum">1</span> / 98
+      </div>
+    </div>
+
     <!-- Turn Arrows -->
     <button class="turn-arrow arrow-prev" id="btnPrevArrow" aria-label="Trang trước">
       <i class="fa-solid fa-chevron-left"></i>
@@ -1094,13 +1204,30 @@
       // 3. Exact Size Calculation to FILL the Screen
       function calculateSize() {
         const stage = document.querySelector('.magazine-stage');
-        const paddingH = (window.innerWidth < 768) ? 80 : 130;
-        const paddingV = (window.innerWidth < 768) ? 20 : 30;
+        const isMobile = window.innerWidth < 768;
+        const isFS = isFullscreenActive();
 
-        const availW = Math.max(320, stage.clientWidth - paddingH);
-        const availH = Math.max(200, stage.clientHeight - paddingV);
+        let availW, availH;
 
-        if (isSingleMode) {
+        if (isMobile && isFS) {
+          // Mobile Fullscreen: Maximum possible view
+          availW = window.innerWidth - 12;
+          availH = window.innerHeight - 60;
+        } else if (isMobile) {
+          availW = stage.clientWidth - 16;
+          availH = stage.clientHeight - 16;
+        } else if (isFS) {
+          availW = stage.clientWidth - 90;
+          availH = stage.clientHeight - 20;
+        } else {
+          availW = stage.clientWidth - 130;
+          availH = stage.clientHeight - 30;
+        }
+
+        availW = Math.max(300, availW);
+        availH = Math.max(180, availH);
+
+        if (isSingleMode || isMobile) {
           // Single 16:9 Slide Mode (Slide fills screen)
           let h = availH;
           let w = Math.round(h * (16 / 9));
@@ -1233,6 +1360,11 @@
         pageInput.value = pageNumber;
         pageScrubber.value = pageNumber;
 
+        const fsMobilePageNum = document.getElementById('fsMobilePageNum');
+        if (fsMobilePageNum) {
+          fsMobilePageNum.textContent = pageNumber;
+        }
+
         btnPrev.disabled = (pageNumber <= 1);
         btnFirst.disabled = (pageNumber <= 1);
         btnPrevArrow.classList.toggle('disabled', pageNumber <= 1);
@@ -1251,6 +1383,13 @@
           } else {
             item.classList.remove('active');
           }
+        });
+      }
+
+      const btnFsMobileBack = document.getElementById('btnFsMobileBack');
+      if (btnFsMobileBack) {
+        btnFsMobileBack.addEventListener('click', () => {
+          exitFullscreen();
         });
       }
 

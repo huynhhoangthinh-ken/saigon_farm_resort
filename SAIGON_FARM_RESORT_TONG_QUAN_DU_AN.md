@@ -199,7 +199,7 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
 | **Kịch bản Cơ Sở** | **45%** | **97 đêm** | **582.000.000 – 970.000.000 đ** | **+291.000.000 – 485.000.000 đ / năm** |
 | **Kịch bản Kỳ Vọng** | **60%** | **129 đêm** | **774.000.000 – 1.290.000.000 đ** | **+387.000.000 – 645.000.000 đ / năm** |
 
-> **Điểm ưu việt:** Khoản lợi nhuận từ 195 đến 645+ triệu đồng mỗi năm được chuyển thẳng vào tài khoản của chủ nhân như một nguồn thu nhập thụ động bền vững, hoàn toàn không phải bận tâm việc bảo trì hay tìm kiếm khách thuê.
+> **Điểm ưu việt:** Khoản lợi nhuận từ 195 đến 645+ triệu đồng mỗi năm như một nguồn thu nhập thụ động bền vững, hoàn toàn không phải bận tâm việc bảo trì hay tìm kiếm khách thuê.
 
 ### 7.2. Lợi ích kép: "Tích sản gia tăng giá trị + Dòng tiền ròng đều đặn"
 1. **Gia tăng giá đất:** Đất nghỉ dưỡng sinh thái ven hồ tự nhiên 100ha có sổ đỏ là tài nguyên hữu hạn không thể nhân bản. Đòn bẩy cao tốc và sân bay Long Thành tạo biên độ tăng giá tài sản từ 25% – 35%/năm.
@@ -214,9 +214,9 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
 - Hạ tầng giao thông nội bộ, chỉ giới đường đỏ và quy hoạch cảnh quan được phê duyệt bài bản.
 
 ### 8.2. Lộ trình triển khai dự án
-- **Tháng 9/2026:** Chính thức ra mắt và mở bán Đợt 1 (36 sản phẩm ưu đãi dành cho khách hàng Founders).
+- **Tháng 9/2026:** Chính thức ra mắt và mở bán Đợt 1 (36 sản phẩm ưu đãi đợt mở bán đầu tiên).
 - **Quý 4/2026 – Quý 2/2027:** Triển khai hoàn thiện hạ tầng kỹ thuật, đường nội bộ trải nhựa, hệ thống điện âm, cấp thoát nước và phủ xanh cảnh quan toàn khu.
-- **Quý 3/2027:** Xây dựng và hoàn thiện phân khu tiện ích trung tâm (Clubhouse, Central Restaurant, Việt Mã Viên, Sân Pickleball, Hồ bơi trung tâm).
+- **Quý 4/2027:** Xây dựng và hoàn thiện phân khu tiện ích trung tâm (Clubhouse, Central Restaurant, Việt Mã Viên, Sân Pickleball, Hồ bơi trung tâm).
 - **Cuối năm 2027:** Bàn giao biệt phủ hoàn thiện và chính thức đưa toàn khu Resort 5 sao vào vận hành thương mại.
 
 ---
