@@ -209,8 +209,12 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
 
 ## 8. PHÁP LÝ, TIẾN ĐỘ & LỘ TRÌNH PHÁT TRIỂN
 
-### 8.1. Pháp lý vững chắc
-- Toàn bộ các nền đất trong quần thể đã có **Sổ hồng riêng từng nền**, hình thức sở hữu lâu dài/an toàn tuyệt đối.
+### 8.1. Pháp lý vững chắc & Triệt tiêu 3 loại chi phí ngầm
+- Toàn bộ các nền đất trong quần thể đã có **Sổ hồng riêng từng nền**, hình thức sở hữu lâu dài/an toàn tuyệt đối, công chứng sang tên và khởi công xây dựng ngay.
+- **Triệt tiêu hoàn toàn 3 loại chi phí ngầm khổng lồ** mà người mua đất tự do thường phải đối mặt:
+  1. **Chi phí chờ đợi (Thời gian là tiền bạc):** Đất nông nghiệp chờ chuyển đổi mục đích sử dụng có thể mất 3 - 5 năm, không thể khai thác, không thể xây dựng, và mất đi chi phí cơ hội đầu tư.
+  2. **Chi phí chuyển đổi (Tiền sử dụng đất thực tế):** Nghĩa vụ tài chính nộp tiền sử dụng đất khi chuyển từ đất trồng cây lâu năm sang đất ở nông thôn theo bảng giá đất mới là một khoản tiền thật rất lớn, có thể chiếm từ 30% đến 50% giá trị mảnh đất.
+  3. **Chi phí rủi ro (Rủi ro quy hoạch & treo sổ):** Đất chưa có sổ riêng luôn mang một xác suất không bao giờ hoàn tất được thủ tục pháp lý.
 - Hạ tầng giao thông nội bộ, chỉ giới đường đỏ và quy hoạch cảnh quan được phê duyệt bài bản.
 
 ### 8.2. Lộ trình triển khai dự án
