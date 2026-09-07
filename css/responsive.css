@@ -125,30 +125,33 @@
   /* Top bar */
   .top-bar { display: none; }
 
-  /* Header — fixed + frosted glass */
+  /* Header — fixed + frosted glass light */
   .main-header {
     position: fixed;
     top: 0;
-    background: rgba(10,10,10,0.93);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    padding: 12px 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid #ebdcc5;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    padding: 10px 0;
   }
   .header-container { gap: 12px; }
   .nav-menu-links { display: none; }
   .mobile-menu-overlay { display: block; }
-  .brand-avatar-ring { width: 38px; height: 38px; }
-  .brand-logo { font-size: 1.05rem; }
-  .brand-tagline { font-size: 0.52rem; }
+  .brand-avatar-ring { width: 38px; height: 38px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .brand-logo { font-size: 1.05rem; color: #183024; }
+  .brand-tagline { font-size: 0.52rem; color: #8c6b32; }
+  .menu-toggle-btn { color: #183024; }
 
-  /* Hero — Mobile clean layout (photo top, text card bottom, NO text over photos) */
+  /* Hero — Mobile clean layout (photo top, text card bottom) */
   .hero-section {
     height: auto !important;
     min-height: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     padding-top: 54px !important;
-    background: #0e1410 !important;
+    background: #fdfaf4 !important;
     overflow: visible !important;
   }
   .hero-slider-wrap {

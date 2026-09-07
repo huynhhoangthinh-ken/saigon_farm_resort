@@ -1,49 +1,54 @@
 /* Layout Components & Section Styles */
 
-/* ---------------- HEADER & NAV ---------------- */
+/* ---------------- HEADER & NAV (SÁNG TƯƠI & RỰC RỠ) ---------------- */
 .top-bar {
-  background-color: #0b0c10;
-  color: var(--color-white);
-  padding: 10px 0;
+  background-color: #fdfaf4;
+  color: #5c472d;
+  padding: 8px 0;
   font-size: 0.82rem;
   letter-spacing: 0.03em;
+  border-bottom: 1px solid #ebdcc5;
 }
 
 .top-bar .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .top-bar a {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 400;
+  color: #5c472d;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .top-bar a:hover {
-  color: var(--color-white);
+  color: #8c6b32;
 }
 
 .main-header {
-  position: absolute;
-  top: 38px;
-  left: 0;
+  position: relative;
   width: 100%;
   z-index: 100;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
-  padding: 16px 0;
-  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(220, 200, 165, 0.45);
+  box-shadow: 0 4px 20px rgba(140, 107, 50, 0.08);
+  padding: 12px 0;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 28px;
 }
 
 .brand-identity {
@@ -51,7 +56,7 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--color-white);
+  color: #1a1a1a;
   flex-shrink: 0;
   transition: opacity 0.25s ease;
 }
@@ -66,7 +71,7 @@
   border-radius: 50%;
   padding: 2px;
   background: linear-gradient(135deg, #c9a96e 0%, #f5e6c8 50%, #c9a96e 100%);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -94,8 +99,8 @@
   font-family: var(--font-serif);
   font-size: 1.18rem;
   letter-spacing: 0.12em;
-  font-weight: 600;
-  color: var(--color-white);
+  font-weight: 700;
+  color: #183024;
   text-transform: uppercase;
   line-height: 1.15;
   white-space: nowrap;
@@ -103,21 +108,23 @@
 
 .brand-tagline {
   font-size: 0.58rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #c9a96e;
+  color: #8c6b32;
   margin-top: 2px;
   white-space: nowrap;
 }
 
 .menu-toggle-btn {
-  color: var(--color-white);
+  color: #183024;
   font-size: 1.35rem;
   display: flex;
   align-items: center;
   background: transparent;
   padding: 6px;
+  border: none;
+  cursor: pointer;
 }
 
 .nav-menu-links {
@@ -129,19 +136,20 @@
 
 .nav-menu-links a {
   font-size: 0.82rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
+  color: #2b2b2b;
   position: relative;
   padding: 6px 0;
   white-space: nowrap;
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .nav-menu-links a.active,
 .nav-menu-links a:hover {
-  color: var(--color-white);
+  color: #8c6b32;
 }
 
 .nav-menu-links a.active::after {
@@ -154,12 +162,12 @@
   background-color: #c9a96e;
 }
 
-/* ---------------- HERO SECTION ---------------- */
+/* ---------------- HERO SECTION (SÁNG TƯƠI & RỰC RỠ) ---------------- */
 .hero-section {
   position: relative;
-  height: calc(100vh - 38px);
-  min-height: 640px;
-  background-color: #0b0c10;
+  height: calc(100vh - 110px);
+  min-height: 620px;
+  background-color: #fdfaf4;
   overflow: hidden;
 }
 
@@ -186,7 +194,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.08) 45%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(180deg, rgba(20, 30, 20, 0.1) 0%, rgba(0, 0, 0, 0.02) 40%, rgba(10, 20, 15, 0.52) 100%);
 }
 
 .hero-minh-hoa-tag {
