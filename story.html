@@ -30,14 +30,14 @@
 
   <style>
     :root {
-      --bg-dark: #0b140f;
-      --bg-surface: #122119;
+      --bg-dark: #070e0a;
+      --bg-surface: #0e1d15;
       --gold-primary: #c9a96e;
-      --gold-light: #e6cb99;
+      --gold-light: #f0debb;
       --gold-dark: #9e7f45;
       --emerald: #1e3a2f;
       --text-light: #f5f2ea;
-      --text-muted: #a3b0a8;
+      --text-muted: #9ab0a3;
       --border-gold: rgba(201, 169, 110, 0.3);
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-serif: 'Playfair Display', Georgia, serif;
@@ -55,7 +55,7 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
-      background: radial-gradient(circle at center, #15271e 0%, #0b140f 70%, #050a07 100%);
+      background: radial-gradient(circle at center, #14261d 0%, #09120d 65%, #040806 100%);
       font-family: var(--font-sans);
       color: var(--text-light);
       user-select: none;
@@ -68,9 +68,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 90vw;
-      height: 80vh;
-      background: radial-gradient(ellipse at center, rgba(201, 169, 110, 0.08) 0%, rgba(30, 58, 47, 0.15) 45%, transparent 75%);
+      width: 95vw;
+      height: 85vh;
+      background: radial-gradient(ellipse at center, rgba(201, 169, 110, 0.08) 0%, rgba(30, 58, 47, 0.18) 50%, transparent 75%);
       pointer-events: none;
       z-index: 1;
     }
@@ -81,15 +81,15 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 64px;
-      background: rgba(11, 20, 15, 0.85);
+      height: 60px;
+      background: rgba(9, 18, 13, 0.9);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-gold);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 20px;
+      padding: 0 18px;
       z-index: 100;
     }
 
@@ -102,15 +102,15 @@
     }
 
     .brand-logo-emblem {
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
       border-radius: 8px;
       background: linear-gradient(135deg, #c9a96e 0%, #8c6b32 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #0b140f;
-      font-size: 1.1rem;
+      font-size: 1rem;
       box-shadow: 0 4px 12px rgba(201, 169, 110, 0.25);
     }
 
@@ -121,7 +121,7 @@
 
     .brand-main {
       font-family: var(--font-cinzel);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       color: var(--gold-light);
@@ -129,7 +129,7 @@
     }
 
     .brand-sub {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: var(--text-muted);
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -141,15 +141,15 @@
       gap: 8px;
       background: rgba(201, 169, 110, 0.1);
       border: 1px solid rgba(201, 169, 110, 0.25);
-      padding: 6px 16px;
+      padding: 5px 14px;
       border-radius: 20px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--gold-light);
       font-weight: 500;
       letter-spacing: 0.03em;
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       .header-center-badge {
         display: none;
       }
@@ -163,21 +163,21 @@
 
     .icon-btn {
       background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(201, 169, 110, 0.2);
+      border: 1px solid rgba(201, 169, 110, 0.25);
       color: var(--text-light);
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: all 0.2s ease;
     }
 
     .icon-btn:hover {
-      background: rgba(201, 169, 110, 0.15);
+      background: rgba(201, 169, 110, 0.2);
       border-color: var(--gold-primary);
       color: var(--gold-light);
       transform: translateY(-1px);
@@ -187,6 +187,7 @@
       background: var(--gold-primary);
       color: #0b140f;
       border-color: var(--gold-light);
+      font-weight: 700;
     }
 
     .btn-booking-header {
@@ -196,8 +197,8 @@
       background: linear-gradient(135deg, #c9a96e 0%, #a48243 100%);
       color: #0b140f;
       font-weight: 700;
-      font-size: 0.82rem;
-      padding: 8px 16px;
+      font-size: 0.8rem;
+      padding: 8px 14px;
       border-radius: 6px;
       text-decoration: none;
       border: none;
@@ -210,30 +211,37 @@
     .btn-booking-header:hover {
       transform: translateY(-1px);
       box-shadow: 0 6px 20px rgba(201, 169, 110, 0.45);
-      background: linear-gradient(135deg, #e6cb99 0%, #c9a96e 100%);
+      background: linear-gradient(135deg, #f0debb 0%, #c9a96e 100%);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .btn-booking-header span {
         display: none;
       }
       .btn-booking-header {
-        padding: 8px 12px;
+        padding: 8px 10px;
       }
     }
 
-    /* Magazine Stage Area */
+    /* Magazine Stage Area - Maximize viewing area */
     .magazine-stage {
       position: absolute;
-      top: 64px;
-      bottom: 74px;
+      top: 60px;
+      bottom: 68px;
       left: 0;
       right: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 10;
-      padding: 16px 20px;
+      padding: 8px 65px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .magazine-stage {
+        padding: 6px 40px;
+      }
     }
 
     .book-wrapper {
@@ -241,30 +249,31 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      max-width: 100%;
-      max-height: 100%;
-      perspective: 2500px;
+      width: 100%;
+      height: 100%;
     }
 
     #flipbook {
-      display: none; /* revealed once loaded */
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 8px 25px rgba(0, 0, 0, 0.5);
-      border-radius: 4px;
+      position: relative;
+      margin: 0 auto;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 10px 30px rgba(0, 0, 0, 0.7);
+      border-radius: 6px;
       background: #000;
+      opacity: 0;
+      transition: opacity 0.35s ease;
     }
 
-    .stf__parent {
-      margin: 0 auto !important;
+    #flipbook.ready {
+      opacity: 1;
     }
 
     /* Page styling inside Flipbook */
     .magazine-page {
-      background: #0d1612;
+      background: #000;
       width: 100%;
       height: 100%;
       overflow: hidden;
       position: relative;
-      box-shadow: inset 0 0 30px rgba(0,0,0,0.25);
     }
 
     .magazine-page img {
@@ -275,25 +284,16 @@
       pointer-events: none;
     }
 
-    /* Page Spine & Sheen effect */
-    .magazine-page::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 30px;
-      pointer-events: none;
-      z-index: 5;
+    /* Custom shadow styles for StPageFlip */
+    .stf__parent {
+      margin: 0 auto !important;
     }
 
-    .magazine-page.--left::after {
-      right: 0;
-      background: linear-gradient(to left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 40%, transparent 100%);
-    }
-
-    .magazine-page.--right::after {
-      left: 0;
-      background: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 40%, transparent 100%);
+    .stf__wrapper {
+      margin: 0 auto !important;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85);
     }
 
     /* Floating Turn Arrows */
@@ -301,52 +301,52 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: rgba(11, 20, 15, 0.75);
+      background: rgba(9, 18, 13, 0.85);
       border: 1px solid var(--border-gold);
       color: var(--gold-light);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       cursor: pointer;
       z-index: 50;
       transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
       backdrop-filter: blur(8px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
     }
 
     .turn-arrow:hover {
       background: var(--gold-primary);
       color: #0b140f;
       transform: translateY(-50%) scale(1.1);
-      box-shadow: 0 10px 30px rgba(201, 169, 110, 0.4);
+      box-shadow: 0 10px 30px rgba(201, 169, 110, 0.45);
     }
 
     .turn-arrow.arrow-prev {
-      left: 16px;
+      left: 10px;
     }
 
     .turn-arrow.arrow-next {
-      right: 16px;
+      right: 10px;
     }
 
     .turn-arrow.disabled {
-      opacity: 0.2;
+      opacity: 0.15;
       cursor: not-allowed;
       pointer-events: none;
     }
 
     @media (max-width: 768px) {
       .turn-arrow {
-        width: 42px;
-        height: 42px;
-        font-size: 1.1rem;
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
       }
-      .turn-arrow.arrow-prev { left: 8px; }
-      .turn-arrow.arrow-next { right: 8px; }
+      .turn-arrow.arrow-prev { left: 4px; }
+      .turn-arrow.arrow-next { right: 4px; }
     }
 
     /* Loading Spinner Overlay */
@@ -356,19 +356,19 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(11, 20, 15, 0.9);
+      background: rgba(7, 14, 10, 0.92);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 16px;
       z-index: 80;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.35s ease;
     }
 
     .loading-spinner {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border: 3px solid rgba(201, 169, 110, 0.2);
       border-top-color: var(--gold-primary);
       border-radius: 50%;
@@ -381,7 +381,7 @@
 
     .loading-text {
       font-family: var(--font-cinzel);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--gold-light);
       letter-spacing: 0.08em;
     }
@@ -392,37 +392,37 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 74px;
-      background: rgba(11, 20, 15, 0.88);
+      height: 68px;
+      background: rgba(9, 18, 13, 0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-top: 1px solid var(--border-gold);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 24px;
+      padding: 0 20px;
       z-index: 100;
     }
 
     .footer-left {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 10px;
     }
 
     .footer-center {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
       flex: 1;
-      max-width: 580px;
-      margin: 0 20px;
+      max-width: 600px;
+      margin: 0 16px;
     }
 
     .footer-right {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     /* Page Navigation Controls */
@@ -430,14 +430,14 @@
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(201, 169, 110, 0.25);
       color: var(--gold-light);
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       transition: all 0.2s ease;
     }
 
@@ -447,7 +447,7 @@
     }
 
     .nav-btn:disabled {
-      opacity: 0.3;
+      opacity: 0.25;
       cursor: not-allowed;
     }
 
@@ -455,21 +455,21 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-light);
       white-space: nowrap;
     }
 
     .page-input {
-      width: 46px;
-      height: 32px;
+      width: 44px;
+      height: 30px;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(201, 169, 110, 0.4);
       border-radius: 6px;
       color: var(--gold-light);
       text-align: center;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-family: inherit;
     }
 
@@ -481,7 +481,7 @@
 
     .page-total {
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.84rem;
     }
 
     /* Scrubber Slider */
@@ -489,7 +489,7 @@
       flex: 1;
       height: 6px;
       border-radius: 3px;
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.15);
       outline: none;
       -webkit-appearance: none;
       cursor: pointer;
@@ -517,13 +517,13 @@
     .btn-thumbs-toggle {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       background: rgba(201, 169, 110, 0.12);
       border: 1px solid var(--border-gold);
       color: var(--gold-light);
-      padding: 8px 16px;
+      padding: 7px 14px;
       border-radius: 8px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -538,7 +538,7 @@
     @media (max-width: 860px) {
       .footer-center {
         max-width: 100%;
-        margin: 0 8px;
+        margin: 0 6px;
       }
       .page-scrubber {
         display: none;
@@ -551,11 +551,11 @@
     /* Slide Thumbnails Drawer */
     .thumbnails-drawer {
       position: absolute;
-      bottom: 74px;
+      bottom: 68px;
       left: 0;
       right: 0;
-      height: 140px;
-      background: rgba(11, 20, 15, 0.95);
+      height: 135px;
+      background: rgba(7, 14, 10, 0.96);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-top: 1px solid var(--border-gold);
@@ -566,7 +566,7 @@
       z-index: 95;
       display: flex;
       flex-direction: column;
-      padding: 10px 16px;
+      padding: 8px 14px;
     }
 
     .thumbnails-drawer.active {
@@ -579,12 +579,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
-      padding: 0 8px;
+      margin-bottom: 6px;
+      padding: 0 6px;
     }
 
     .drawer-title {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--gold-light);
       font-weight: 600;
       letter-spacing: 0.05em;
@@ -596,8 +596,8 @@
       border: none;
       color: var(--text-muted);
       cursor: pointer;
-      font-size: 1rem;
-      padding: 4px;
+      font-size: 1.1rem;
+      padding: 2px 6px;
     }
 
     .drawer-close:hover {
@@ -606,10 +606,10 @@
 
     .thumbnails-scroll {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       overflow-x: auto;
       overflow-y: hidden;
-      padding: 4px 8px 8px;
+      padding: 4px 6px 8px;
       scroll-behavior: smooth;
     }
 
@@ -618,20 +618,20 @@
     }
 
     .thumbnails-scroll::-webkit-scrollbar-thumb {
-      background: rgba(201, 169, 110, 0.3);
+      background: rgba(201, 169, 110, 0.35);
       border-radius: 3px;
     }
 
     .thumb-item {
-      flex: 0 0 142px;
-      height: 80px;
+      flex: 0 0 135px;
+      height: 76px;
       border-radius: 6px;
       overflow: hidden;
       border: 2px solid transparent;
       position: relative;
       cursor: pointer;
       transition: all 0.2s ease;
-      background: #1a2820;
+      background: #15221b;
     }
 
     .thumb-item img {
@@ -643,13 +643,13 @@
 
     .thumb-item .thumb-num {
       position: absolute;
-      bottom: 4px;
-      right: 6px;
-      background: rgba(0,0,0,0.75);
+      bottom: 3px;
+      right: 5px;
+      background: rgba(0,0,0,0.8);
       color: #fff;
-      font-size: 0.7rem;
-      padding: 2px 6px;
-      border-radius: 4px;
+      font-size: 0.68rem;
+      padding: 1px 5px;
+      border-radius: 3px;
       font-weight: 700;
     }
 
@@ -660,21 +660,21 @@
 
     .thumb-item.active {
       border-color: var(--gold-primary);
-      box-shadow: 0 0 14px rgba(201, 169, 110, 0.6);
+      box-shadow: 0 0 14px rgba(201, 169, 110, 0.65);
       transform: scale(1.04);
     }
 
     /* Flip Hint Corner */
     .flip-hint {
       position: absolute;
-      bottom: 24px;
-      right: 24px;
-      background: rgba(11, 20, 15, 0.85);
+      bottom: 16px;
+      right: 20px;
+      background: rgba(9, 18, 13, 0.85);
       border: 1px solid var(--border-gold);
       color: var(--gold-light);
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: 20px;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -685,7 +685,7 @@
 
     @keyframes pulseHint {
       0%, 100% { opacity: 0.85; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.97); }
+      50% { opacity: 0.35; transform: scale(0.97); }
     }
 
     @media (max-width: 600px) {
@@ -699,7 +699,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(8, 14, 11, 0.85);
+      background: rgba(6, 12, 9, 0.88);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       z-index: 99999;
@@ -717,8 +717,8 @@
       border-radius: 20px;
       max-width: 520px;
       width: 100%;
-      padding: 38px 32px 32px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+      padding: 36px 30px 30px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
       text-align: center;
       position: relative;
       animation: modalSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -730,8 +730,8 @@
     }
     .modal-close-btn {
       position: absolute;
-      top: 18px;
-      right: 18px;
+      top: 16px;
+      right: 16px;
       background: #f0ebe1;
       border: none;
       width: 36px;
@@ -750,9 +750,9 @@
       color: #111;
     }
     .modal-emblem {
-      width: 58px;
-      height: 58px;
-      margin: 0 auto 16px;
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 14px;
       border-radius: 50%;
       background: linear-gradient(135deg, #fbf7ee 0%, #ecdcc2 100%);
       border: 1px solid #d8c49e;
@@ -760,40 +760,40 @@
       align-items: center;
       justify-content: center;
       color: #8c6b32;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
     .modal-title {
       font-family: var(--font-serif);
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       color: #1a2a20;
       margin-bottom: 6px;
       font-weight: 700;
     }
     .modal-subtitle {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #8c6b32;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .modal-desc {
-      font-size: 0.95rem;
+      font-size: 0.93rem;
       color: #444;
       line-height: 1.7;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       text-align: justify;
     }
     .modal-notice-box {
       background: #f8f4ec;
       border: 1px dashed #c9a96e;
-      padding: 14px 18px;
+      padding: 12px 16px;
       border-radius: 10px;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: #555;
       text-align: left;
       line-height: 1.6;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       display: flex;
       gap: 12px;
       align-items: flex-start;
@@ -842,8 +842,8 @@
 
     <div class="header-actions">
       <!-- Toggle Spread Mode (1 Page vs 2 Pages) -->
-      <button class="icon-btn" id="btnToggleMode" title="Chuyển chế độ 1 trang / 2 trang">
-        <i class="fa-solid fa-columns"></i>
+      <button class="icon-btn active" id="btnToggleMode" title="Chuyển chế độ: 1 Trang (Đang mở) / 2 Trang">
+        <i class="fa-solid fa-tablet-screen-button"></i>
       </button>
 
       <!-- Autoplay Slideshow -->
@@ -882,10 +882,10 @@
     <!-- Flip Hint -->
     <div class="flip-hint" id="flipHint">
       <i class="fa-solid fa-hand-pointer"></i>
-      <span>Nhấp hoặc kéo góc trang để lật</span>
+      <span>Nhấp hoặc kéo mép trang để lật</span>
     </div>
 
-    <div class="book-wrapper">
+    <div class="book-wrapper" id="bookWrapper">
       <!-- Loading Overlay -->
       <div class="book-loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
@@ -893,302 +893,7 @@
       </div>
 
       <!-- Flipbook Container -->
-      <div id="flipbook">
-        <div class="magazine-page" data-density="hard">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide1.webp" alt="Saigon Farm Resort Slide 1" loading="eager">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide2.webp" alt="Saigon Farm Resort Slide 2" loading="eager">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide3.webp" alt="Saigon Farm Resort Slide 3" loading="eager">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide4.webp" alt="Saigon Farm Resort Slide 4" loading="eager">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide5.webp" alt="Saigon Farm Resort Slide 5" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide6.webp" alt="Saigon Farm Resort Slide 6" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide7.webp" alt="Saigon Farm Resort Slide 7" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide8.webp" alt="Saigon Farm Resort Slide 8" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide9.webp" alt="Saigon Farm Resort Slide 9" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide10.webp" alt="Saigon Farm Resort Slide 10" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide11.webp" alt="Saigon Farm Resort Slide 11" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide12.webp" alt="Saigon Farm Resort Slide 12" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide13.webp" alt="Saigon Farm Resort Slide 13" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide14.webp" alt="Saigon Farm Resort Slide 14" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide15.webp" alt="Saigon Farm Resort Slide 15" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide16.webp" alt="Saigon Farm Resort Slide 16" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide17.webp" alt="Saigon Farm Resort Slide 17" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide18.webp" alt="Saigon Farm Resort Slide 18" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide19.webp" alt="Saigon Farm Resort Slide 19" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide20.webp" alt="Saigon Farm Resort Slide 20" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide21.webp" alt="Saigon Farm Resort Slide 21" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide22.webp" alt="Saigon Farm Resort Slide 22" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide23.webp" alt="Saigon Farm Resort Slide 23" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide24.webp" alt="Saigon Farm Resort Slide 24" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide25.webp" alt="Saigon Farm Resort Slide 25" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide26.webp" alt="Saigon Farm Resort Slide 26" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide27.webp" alt="Saigon Farm Resort Slide 27" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide28.webp" alt="Saigon Farm Resort Slide 28" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide29.webp" alt="Saigon Farm Resort Slide 29" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide30.webp" alt="Saigon Farm Resort Slide 30" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide31.webp" alt="Saigon Farm Resort Slide 31" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide32.webp" alt="Saigon Farm Resort Slide 32" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide33.webp" alt="Saigon Farm Resort Slide 33" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide34.webp" alt="Saigon Farm Resort Slide 34" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide35.webp" alt="Saigon Farm Resort Slide 35" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide36.webp" alt="Saigon Farm Resort Slide 36" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide37.webp" alt="Saigon Farm Resort Slide 37" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide38.webp" alt="Saigon Farm Resort Slide 38" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide39.webp" alt="Saigon Farm Resort Slide 39" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide40.webp" alt="Saigon Farm Resort Slide 40" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide41.webp" alt="Saigon Farm Resort Slide 41" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide42.webp" alt="Saigon Farm Resort Slide 42" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide43.webp" alt="Saigon Farm Resort Slide 43" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide44.webp" alt="Saigon Farm Resort Slide 44" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide45.webp" alt="Saigon Farm Resort Slide 45" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide46.webp" alt="Saigon Farm Resort Slide 46" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide47.webp" alt="Saigon Farm Resort Slide 47" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide48.webp" alt="Saigon Farm Resort Slide 48" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide49.webp" alt="Saigon Farm Resort Slide 49" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide50.webp" alt="Saigon Farm Resort Slide 50" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide51.webp" alt="Saigon Farm Resort Slide 51" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide52.webp" alt="Saigon Farm Resort Slide 52" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide53.webp" alt="Saigon Farm Resort Slide 53" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide54.webp" alt="Saigon Farm Resort Slide 54" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide55.webp" alt="Saigon Farm Resort Slide 55" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide56.webp" alt="Saigon Farm Resort Slide 56" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide57.webp" alt="Saigon Farm Resort Slide 57" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide58.webp" alt="Saigon Farm Resort Slide 58" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide59.webp" alt="Saigon Farm Resort Slide 59" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide60.webp" alt="Saigon Farm Resort Slide 60" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide61.webp" alt="Saigon Farm Resort Slide 61" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide62.webp" alt="Saigon Farm Resort Slide 62" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide63.webp" alt="Saigon Farm Resort Slide 63" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide64.webp" alt="Saigon Farm Resort Slide 64" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide65.webp" alt="Saigon Farm Resort Slide 65" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide66.webp" alt="Saigon Farm Resort Slide 66" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide67.webp" alt="Saigon Farm Resort Slide 67" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide68.webp" alt="Saigon Farm Resort Slide 68" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide69.webp" alt="Saigon Farm Resort Slide 69" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide70.webp" alt="Saigon Farm Resort Slide 70" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide71.webp" alt="Saigon Farm Resort Slide 71" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide72.webp" alt="Saigon Farm Resort Slide 72" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide73.webp" alt="Saigon Farm Resort Slide 73" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide74.webp" alt="Saigon Farm Resort Slide 74" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide75.webp" alt="Saigon Farm Resort Slide 75" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide76.webp" alt="Saigon Farm Resort Slide 76" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide77.webp" alt="Saigon Farm Resort Slide 77" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide78.webp" alt="Saigon Farm Resort Slide 78" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide79.webp" alt="Saigon Farm Resort Slide 79" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide80.webp" alt="Saigon Farm Resort Slide 80" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide81.webp" alt="Saigon Farm Resort Slide 81" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide82.webp" alt="Saigon Farm Resort Slide 82" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide83.webp" alt="Saigon Farm Resort Slide 83" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide84.webp" alt="Saigon Farm Resort Slide 84" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide85.webp" alt="Saigon Farm Resort Slide 85" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide86.webp" alt="Saigon Farm Resort Slide 86" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide87.webp" alt="Saigon Farm Resort Slide 87" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide88.webp" alt="Saigon Farm Resort Slide 88" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide89.webp" alt="Saigon Farm Resort Slide 89" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide90.webp" alt="Saigon Farm Resort Slide 90" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide91.webp" alt="Saigon Farm Resort Slide 91" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide92.webp" alt="Saigon Farm Resort Slide 92" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide93.webp" alt="Saigon Farm Resort Slide 93" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide94.webp" alt="Saigon Farm Resort Slide 94" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide95.webp" alt="Saigon Farm Resort Slide 95" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide96.webp" alt="Saigon Farm Resort Slide 96" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="soft">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide97.webp" alt="Saigon Farm Resort Slide 97" loading="lazy">
-        </div>
-        <div class="magazine-page" data-density="hard">
-          <img src="assets/Index_asset/SGFR_slide_product_story/web/Slide98.webp" alt="Saigon Farm Resort Slide 98" loading="lazy">
-        </div>
-      </div>
+      <div id="flipbook"></div>
     </div>
   </main>
 
@@ -1272,7 +977,6 @@
   <script>
     (function() {
       const TOTAL_PAGES = 98;
-      const flipbookEl = document.getElementById('flipbook');
       const loadingOverlay = document.getElementById('loadingOverlay');
       const pageInput = document.getElementById('pageInput');
       const pageScrubber = document.getElementById('pageScrubber');
@@ -1297,11 +1001,10 @@
       let autoplayInterval = null;
       let isAutoplaying = false;
       let audioCtx = null;
-      let forceSingleMode = (window.innerWidth < 1024);
+      // Default to Single Page Mode (1 slide 16:9 at a time) for massive, clear, easy-to-read slides!
+      let isSingleMode = true;
 
-      // 1. Pages are pre-rendered in HTML for instant loading
-
-      // 2. Build Thumbnails
+      // 1. Build Thumbnails Once
       for (let i = 1; i <= TOTAL_PAGES; i++) {
         const thumbItem = document.createElement('div');
         thumbItem.className = 'thumb-item' + (i === 1 ? ' active' : '');
@@ -1316,7 +1019,7 @@
         thumbsScroll.appendChild(thumbItem);
       }
 
-      // 3. Realistic Crisp Paper Flip Sound Synthesizer (Zero external file dependency)
+      // 2. Realistic Crisp Paper Flip Sound Synthesizer
       function playPaperSound() {
         if (!soundEnabled) return;
         try {
@@ -1327,17 +1030,15 @@
             audioCtx.resume();
           }
           const sampleRate = audioCtx.sampleRate;
-          const duration = 0.16; // 160ms
+          const duration = 0.16;
           const bufferSize = Math.floor(sampleRate * duration);
           const buffer = audioCtx.createBuffer(1, bufferSize, sampleRate);
           const data = buffer.getChannelData(0);
 
-          // Generate filtered white noise with smooth envelope
           for (let i = 0; i < bufferSize; i++) {
             const t = i / bufferSize;
-            // Envelope: rises quickly in 15%, drops with exponential decay
             const envelope = (t < 0.15 ? t / 0.15 : Math.pow(1 - (t - 0.15) / 0.85, 2.2));
-            data[i] = (Math.random() * 2 - 1) * envelope * 0.18;
+            data[i] = (Math.random() * 2 - 1) * envelope * 0.22;
           }
 
           const noise = audioCtx.createBufferSource();
@@ -1350,7 +1051,7 @@
           filter.Q.value = 1.6;
 
           const gain = audioCtx.createGain();
-          gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.35, audioCtx.currentTime);
           gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
 
           noise.connect(filter);
@@ -1358,91 +1059,137 @@
           gain.connect(audioCtx.destination);
 
           noise.start();
-        } catch (e) {
-          // Audio not allowed yet
-        }
+        } catch (e) {}
       }
 
-      // 4. Calculate Optimal Size for 16:9 Landscape Slides
+      // 3. Exact Size Calculation to FILL the Screen
       function calculateSize() {
         const stage = document.querySelector('.magazine-stage');
-        const availWidth = stage.clientWidth - 40;
-        const availHeight = stage.clientHeight - 30;
+        const paddingH = (window.innerWidth < 768) ? 80 : 130;
+        const paddingV = (window.innerWidth < 768) ? 20 : 30;
 
-        if (forceSingleMode || window.innerWidth < 1024) {
-          // Single 16:9 Page Mode
-          let w = availWidth;
-          let h = w * (9 / 16);
-          if (h > availHeight) {
-            h = availHeight;
-            w = h * (16 / 9);
+        const availW = Math.max(320, stage.clientWidth - paddingH);
+        const availH = Math.max(200, stage.clientHeight - paddingV);
+
+        if (isSingleMode) {
+          // Single 16:9 Slide Mode (Slide fills screen)
+          let h = availH;
+          let w = Math.round(h * (16 / 9));
+          if (w > availW) {
+            w = availW;
+            h = Math.round(w * (9 / 16));
           }
           return {
-            pageWidth: Math.round(w),
-            pageHeight: Math.round(h),
+            pageWidth: w,
+            pageHeight: h,
+            totalWidth: w,
+            totalHeight: h,
             isPortrait: true
           };
         } else {
-          // Double Spread 2-Page Mode
-          let totalW = availWidth;
-          let totalH = totalW * (9 / 32); // 2 pages side-by-side: 32:9 ratio
-          if (totalH > availHeight) {
-            totalH = availHeight;
-            totalW = totalH * (32 / 9);
+          // Double Spread 2-Page Mode (2 x 16:9 slides side-by-side = 32:9 ratio)
+          let totalW = availW;
+          let totalH = Math.round(totalW * (9 / 32));
+          if (totalH > availH) {
+            totalH = availH;
+            totalW = Math.round(totalH * (32 / 9));
           }
+          const pageW = Math.round(totalW / 2);
           return {
-            pageWidth: Math.round(totalW / 2),
-            pageHeight: Math.round(totalH),
+            pageWidth: pageW,
+            pageHeight: totalH,
+            totalWidth: pageW * 2,
+            totalHeight: totalH,
             isPortrait: false
           };
         }
       }
 
-      // 5. Initialize St.PageFlip Engine
-      function initPageFlip() {
+      // 4. Render or Re-render Flipbook Engine
+      function renderFlipbook(startAtPage) {
+        const targetPage = (startAtPage !== undefined) ? startAtPage : (pageFlip ? pageFlip.getCurrentPageIndex() : 0);
+
+        if (pageFlip) {
+          try {
+            pageFlip.destroy();
+          } catch(e) {}
+          pageFlip = null;
+        }
+
+        const bookWrapper = document.getElementById('bookWrapper');
+        bookWrapper.innerHTML = `
+          <div class="book-loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Đang tải tạp chí Saigon Farm Resort...</div>
+          </div>
+          <div id="flipbook"></div>
+        `;
+
+        const flipbookEl = document.getElementById('flipbook');
+        const overlay = document.getElementById('loadingOverlay');
         const dims = calculateSize();
 
+        // Explicit dimensions
+        flipbookEl.style.width = dims.totalWidth + 'px';
+        flipbookEl.style.height = dims.totalHeight + 'px';
+
+        // Inject 98 pages
+        const frag = document.createDocumentFragment();
+        for (let i = 1; i <= TOTAL_PAGES; i++) {
+          const pageDiv = document.createElement('div');
+          pageDiv.className = 'magazine-page';
+          pageDiv.dataset.density = (i === 1 || i === TOTAL_PAGES) ? 'hard' : 'soft';
+          pageDiv.style.width = dims.pageWidth + 'px';
+          pageDiv.style.height = dims.pageHeight + 'px';
+
+          const img = document.createElement('img');
+          img.src = `assets/Index_asset/SGFR_slide_product_story/web/Slide${i}.webp`;
+          img.alt = `Saigon Farm Resort Slide ${i}`;
+          img.loading = (i <= 4) ? 'eager' : 'lazy';
+
+          pageDiv.appendChild(img);
+          frag.appendChild(pageDiv);
+        }
+        flipbookEl.appendChild(frag);
+
+        // Initialize PageFlip with explicit fixed size and autoSize disabled!
         pageFlip = new St.PageFlip(flipbookEl, {
           width: dims.pageWidth,
           height: dims.pageHeight,
-          size: "stretch",
-          minWidth: 280,
-          maxWidth: 1920,
-          minHeight: 158,
-          maxHeight: 1080,
+          size: "fixed",
+          autoSize: false,
+          minWidth: dims.pageWidth,
+          maxWidth: dims.pageWidth,
+          minHeight: dims.pageHeight,
+          maxHeight: dims.pageHeight,
           drawShadow: true,
-          flippingTime: 750,
+          flippingTime: 650,
           usePortrait: dims.isPortrait,
-          startPage: 0,
-          autoSize: true,
+          startPage: targetPage,
           maxShadowOpacity: 0.5,
           showCover: false,
           mobileScrollSupport: false,
-          swipeDistance: 30,
+          swipeDistance: 25,
           clickEventForward: true,
           useMouseEvents: true
         });
 
-        pageFlip.loadFromHTML(document.querySelectorAll('.magazine-page'));
+        pageFlip.loadFromHTML(flipbookEl.querySelectorAll('.magazine-page'));
 
         pageFlip.on('init', () => {
-          flipbookEl.style.display = 'block';
-          loadingOverlay.style.opacity = '0';
-          setTimeout(() => { loadingOverlay.style.display = 'none'; }, 400);
-          updateUIState(1);
-          preloadNearbyPages(1);
+          flipbookEl.classList.add('ready');
+          if (overlay) {
+            overlay.style.opacity = '0';
+            setTimeout(() => { overlay.style.display = 'none'; }, 300);
+          }
+          updateUIState(targetPage + 1);
         });
 
         pageFlip.on('flip', (e) => {
-          const currentPage = e.data + 1;
-          updateUIState(currentPage);
-          preloadNearbyPages(currentPage);
+          const p = e.data + 1;
+          updateUIState(p);
           playPaperSound();
-
-          // Hide flip hint once user turns page
-          if (flipHint) {
-            flipHint.style.display = 'none';
-          }
+          if (flipHint) flipHint.style.display = 'none';
         });
 
         pageFlip.on('changeState', (e) => {
@@ -1452,21 +1199,7 @@
         });
       }
 
-      // 6. Lazy Preload Nearby High-Res Slides (current ± 4)
-      function preloadNearbyPages(currentPage) {
-        const pages = document.querySelectorAll('.magazine-page');
-        const start = Math.max(1, currentPage - 3);
-        const end = Math.min(TOTAL_PAGES, currentPage + 5);
-
-        for (let i = start; i <= end; i++) {
-          const img = pages[i - 1].querySelector('img');
-          if (img && img.dataset.src && img.src !== img.dataset.src) {
-            img.src = img.dataset.src;
-          }
-        }
-      }
-
-      // 7. Update UI Elements on Page Change
+      // 5. Update UI State on Page Turn
       function updateUIState(pageNumber) {
         pageInput.value = pageNumber;
         pageScrubber.value = pageNumber;
@@ -1499,7 +1232,7 @@
         }
       }
 
-      // 8. Event Listeners
+      // 6. Navigation Controls
       btnPrev.addEventListener('click', () => pageFlip && pageFlip.flipPrev());
       btnNext.addEventListener('click', () => pageFlip && pageFlip.flipNext());
       btnPrevArrow.addEventListener('click', () => pageFlip && pageFlip.flipPrev());
@@ -1576,23 +1309,19 @@
         if (!document.fullscreenElement) {
           btnFullscreen.innerHTML = '<i class="fa-solid fa-expand"></i>';
         }
+        // Re-render flipbook with updated fullscreen stage size
+        setTimeout(() => {
+          renderFlipbook(pageFlip ? pageFlip.getCurrentPageIndex() : 0);
+        }, 250);
       });
 
-      // Mode Toggle (Single vs Double Spread)
+      // Mode Toggle (Single Slide vs Double Page Spread)
       btnToggleMode.addEventListener('click', () => {
-        forceSingleMode = !forceSingleMode;
-        btnToggleMode.classList.toggle('active', forceSingleMode);
-        btnToggleMode.title = forceSingleMode ? 'Đang ở chế độ: 1 Trang' : 'Đang ở chế độ: 2 Trang';
-        
-        // Re-calculate size and update flipbook
-        if (pageFlip) {
-          const dims = calculateSize();
-          pageFlip.updateFromSettings({
-            width: dims.pageWidth,
-            height: dims.pageHeight,
-            usePortrait: dims.isPortrait
-          });
-        }
+        isSingleMode = !isSingleMode;
+        btnToggleMode.classList.toggle('active', isSingleMode);
+        btnToggleMode.innerHTML = isSingleMode ? '<i class="fa-solid fa-tablet-screen-button"></i>' : '<i class="fa-solid fa-columns"></i>';
+        btnToggleMode.title = isSingleMode ? 'Đang mở: 1 Trang (Bấm để chuyển 2 Trang)' : 'Đang mở: 2 Trang (Bấm để chuyển 1 Trang)';
+        renderFlipbook(pageFlip ? pageFlip.getCurrentPageIndex() : 0);
       });
 
       // Keyboard navigation
@@ -1619,19 +1348,14 @@
       window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-          if (pageFlip) {
-            const dims = calculateSize();
-            pageFlip.updateFromSettings({
-              width: dims.pageWidth,
-              height: dims.pageHeight,
-              usePortrait: dims.isPortrait
-            });
-          }
-        }, 200);
+          renderFlipbook(pageFlip ? pageFlip.getCurrentPageIndex() : 0);
+        }, 250);
       });
 
-      // Start Flipbook on DOM ready
-      document.addEventListener('DOMContentLoaded', initPageFlip);
+      // Start on DOM ready
+      document.addEventListener('DOMContentLoaded', () => {
+        renderFlipbook(0);
+      });
     })();
 
     // Booking Modal controls

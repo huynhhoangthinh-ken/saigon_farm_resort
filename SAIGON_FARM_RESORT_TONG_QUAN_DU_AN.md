@@ -32,7 +32,7 @@
 | **Quy mô mở bán Đợt 1 (T9/2026)** | **36 sản phẩm** (Bao gồm: 17 Biệt Phủ + 12 Điền Sản + 07 Điền An) |
 | **Diện tích khuôn viên riêng** | **646,5 m² – 1.452 m²** (Bình quân 1.108 m² / khuôn viên) |
 | **Pháp lý dự án** | **Sổ hồng riêng từng nền**, sang tên công chứng ngay |
-| **Tiêu chuẩn vận hành** | Resort 5 sao chuẩn quốc tế mang âm hưởng Văn hóa & Bản sắc Việt |
+| **Tiêu chuẩn vận hành** | Khu Resort gnhỉ dưỡng mang âm hưởng Văn hóa & Bản sắc Việt |
 | **Thời gian vận hành chính thức** | Bàn giao và vận hành toàn khu vào **Cuối năm 2027** |
 
 ---
@@ -40,9 +40,9 @@
 ## 2. TỌA ĐỘ KIM CƯƠNG & ĐÒN BẨY HẠ TẦNG ĐỘT PHÁ
 
 ### 2.1. Tọa độ kết nối độc tôn "Ven Hồ — Kề Biển — Cận Phố"
-Saigon Farm Resort tọa lạc tại vị trí phong thủy hiếm có bậc nhất khu vực Đông Nam Bộ:
+Saigon Farm Resort tọa lạc tại vị trí phong thủy hiếm có khu vực Đông Nam Bộ:
 - **Tựa hồ sinh thái 100ha:** Sở hữu vi khí hậu quanh năm mát lành, nhiệt độ thấp hơn trung tâm đô thị từ 3 – 5°C.
-- **Liền kề biển Hồ Tràm (15 phút):** Kết nối trực tiếp với "thủ phủ nghỉ dưỡng tỷ đô" Hồ Tràm (nơi quy tụ Melia Ho Tram, The Grand Ho Tram Strip, InterContinental Grand Ho Tram, Charm Resort, sân golf The Bluffs...).
+- **Liền kề biển Hồ Tràm (15 phút):** Kết nối trực tiếp với "thủ phủ nghỉ dưỡng tỷ đô" Hồ Tràm (nơi quy tụ Melia Ho Tram, The Grand Ho Tram Strip, InterContinental Grand Ho Tram, sân golf The Bluffs...).
 - **Tiếp giáp TP. Hồ Chí Minh (60 – 75 phút di chuyển):** Khoảng cách lý tưởng cho ngôi nhà thứ hai (Second Home) để cả gia đình nghỉ dưỡng mỗi cuối tuần mà không mệt mỏi vì di chuyển xa.
 
 ### 2.2. Tam giác đòn bẩy hạ tầng bứt phá giá trị (2025 – 2027)
@@ -101,15 +101,15 @@ Dự án mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chi�
 
 ### 4.1. Biệt Phủ Điền Trang (17 Dinh Thự VIP)
 - **Mô tả:** Tuyệt tác biệt phủ sinh thái ven hồ với quy chuẩn xây dựng khắt khe. Mỗi căn là một "vương quốc riêng" với khuôn viên từ 1.000m² đến 1.452m², ôm trọn tầm nhìn ra mặt hồ 100ha hoặc cánh đồng lúa chín.
-- **Tiện ích riêng trong khuôn viên:** Hồ bơi tràn viền muối khoáng riêng biệt (45m² – 53m²), sân vườn cảnh quan thảo mộc trên 700m², sảnh đón khách sang trọng trần cao 6m gỗ quý, hiên thưởng trà ven hồ.
+- **Tiện ích riêng trong khuôn viên:** Hồ bơi tràn vô cực view đồng lúa riêng biệt (45m² – 53m²), sân vườn cảnh quan thảo mộc trên 700m², sảnh đón khách sang trọng trần cao 6m gỗ quý, hiên thưởng trà ven hồ.
 - **Quyền lợi:**
-  - 150 đêm nghỉ dưỡng miễn phí cho gia đình mỗi năm.
+  - 150 đêm nghỉ dưỡng cam kết vận hành cho gia đình mỗi năm, doanh thu 4 triệu/đêm x 150 đêm = 600 triệu đồng/năm. 
   - 215 đêm còn lại ủy thác MDS Living kinh doanh lưu trú với giá thuê công bố từ **6.000.000 đ – 10.000.000 đ / đêm**, chia sẻ 50% doanh thu thuần.
 
 ### 4.2. Điền Sản (Founders) (12 Nền Độc Bản)
 - **Mô tả:** Dòng sản phẩm đất nền điền trang nghỉ dưỡng sổ đỏ ven hồ dành riêng cho 12 nhà đầu tư đồng hành đầu tiên (Founders Club).
 - **Lợi thế:**
-  - Sở hữu mức giá gốc đợt 1 từ Chủ đầu tư với quyền chọn vị trí ưu tiên nhìn trực diện hồ sinh thái.
+  - Sở hữu mức giá gốc đợt 1 từ Chủ đầu tư với quyền chọn vị trí ưu tiên.
   - Thanh toán 70% nhận sổ hồng riêng, 30% được giãn tiến độ với lãi suất 0% cho tới cuối năm 2027 khi toàn khu đi vào vận hành.
   - Quy hoạch phân lô đột phá: 1 khuôn viên điền trang có thể thiết kế tách thành cụm 3 căn riêng biệt giúp tối ưu hóa thanh khoản.
 
