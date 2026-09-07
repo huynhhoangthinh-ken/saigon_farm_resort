@@ -110,7 +110,7 @@ Dự án mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chi�
 - **Mô tả:** Dòng sản phẩm đất nền điền trang nghỉ dưỡng sổ đỏ ven hồ dành riêng cho 12 nhà đầu tư đồng hành đầu tiên (Founders Club).
 - **Lợi thế:**
   - Sở hữu mức giá gốc đợt 1 từ Chủ đầu tư với quyền chọn vị trí ưu tiên.
-  - Thanh toán 70% nhận sổ hồng riêng, 30% được giãn tiến độ với lãi suất 0% cho tới cuối năm 2027 khi toàn khu đi vào vận hành.
+  - Thanh toán 70% công chứng sang tên cho khách hàng, 30% được giãn tiến độ với lãi suất 0% cho tới cuối năm 2027 khi toàn khu đi vào vận hành.
   - Quy hoạch phân lô đột phá: 1 khuôn viên điền trang có thể thiết kế tách thành cụm 3 căn riêng biệt giúp tối ưu hóa thanh khoản.
 
 #### 📊 Bảng Chiết Tính Tài Chính 1.000 m² Điền Sản: PA1 (Giữ Đất) vs PA2 (Bán Ra Đón Sóng 13,8 Tr/m²)
@@ -166,13 +166,13 @@ Dự án mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chi�
 Khu nghỉ dưỡng được quy hoạch đồng bộ với chuỗi tiện ích đáp ứng đầy đủ tiêu chuẩn khắt khe của một Resort 5 sao:
 
 1. **Hồ Sinh Thái 100ha & Bến Thuyền Kayak:** Mặt nước mênh mông phục vụ chèo thuyền kayak thư giãn, du ngoạn ngắm bình minh và câu cá giải trí sinh thái.
-2. **Lake Clubhouse & Hồ Bơi Trung Tâm:** Quần thể clubhouse phong cách mộc sang trọng, quầy bar ven hồ, hồ bơi vô cực rộng lớn nhìn thẳng ra mặt hồ.
+2. **Lake Clubhouse & Hồ Bơi Trung Tâm:** Quần thể clubhouse phong cách mộc sang trọng, quầy bar ven hồ, nhà hàng sinh thái cao cấp, hồ bơi vô cực rộng lớn nhìn thẳng ra mặt hồ.
 3. **Nhà Hàng Trung Tâm (Central Restaurant):** 
    - Ẩm thực 3 miền chuẩn phong vị nếp nhà xưa, tiêu chuẩn fine dining cao cấp.
-   - Nguồn nguyên liệu tươi sạch 100% Farm-to-Table thu hoạch trực tiếp tại nông trại hữu cơ của dự án.
+   - Nguồn nguyên liệu tươi sạch 100% Farm-to-Table thu hoạch trực tiếp tại nông trại hữu cơ của khu.
 4. **Việt Mã Viên (Làng Ngựa Quý Tộc):** Nơi huấn luyện, chăm sóc ngựa thể thao và trải nghiệm cưỡi ngựa quý tộc giữa cánh đồng cỏ thảo nguyên rực rỡ.
 5. **Không Gian Văn Hóa & Nghệ Thuật Cổ Truyền:**
-   - Không gian bảo tồn, thưởng thức và hòa tấu âm nhạc dân tộc (đàn tranh, sáo trúc, ca trù, đàn bầu).
+   - Không gian bảo tồn, thưởng thức và hòa tấu âm nhạc dân tộc (đàn tranh, sáo trúc, ca trù, đàn bầu, đờn ca tài tử).
    - Bảo tàng trưng bày trang phục truyền thống của 54 dân tộc anh em.
    - Lớp học trải nghiệm gốm thủ công mỹ nghệ và làm nông cụ cho con trẻ.
 6. **Sân Thể Thao & Pickleball Ven Hồ:** Cụm sân Pickleball tiêu chuẩn quốc tế bố trí giữa khung cảnh cây xanh và gió hồ mát rượi.
@@ -186,8 +186,8 @@ Saigon Farm Resort áp dụng mô hình quản trị tài chính linh hoạt và
 
 ```
 TỔNG SỐ ĐÊM TRONG NĂM: 365 ĐÊM
-├── GIAI ĐOẠN 1: 150 ĐÊM NGHỈ DƯỠNG GIA ĐÌNH (Miễn phí trọn vẹn cho Chủ nhân & Người thân)
-└── GIAI ĐOẠN 2: 215 ĐÊM CÒN LẠI ỦY THÁC MDS LIVING (Khai thác thương mại — Chia sẻ 50% Doanh Thu)
+├── GIAI ĐOẠN 1: 150 ĐÊM  ỦY THÁC MDS LIVING (Khai thác 150 đêm cam kết doanh thu 600 triệu/năm)
+└── GIAI ĐOẠN 2: 215 ĐÊM CÒN LẠI NGHỈ DƯỠNG GIA ĐÌNH (Miễn phí trọn vẹn cho Chủ nhân & Người thân hoặc Khai thác thương mại — Chia sẻ 50% Doanh Thu)
 ```
 
 ### 7.1. Bảng phân tích dòng tiền khai thác 215 đêm ủy thác (Đơn giá thuê thực tế: 6 – 10 Triệu đ/đêm)

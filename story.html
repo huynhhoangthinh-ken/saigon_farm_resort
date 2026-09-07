@@ -244,6 +244,35 @@
       }
     }
 
+    /* Fullscreen Mode Optimization */
+    body.is-fullscreen .magazine-header {
+      height: 48px;
+      background: rgba(7, 14, 10, 0.96);
+    }
+    body.is-fullscreen .brand-logo-emblem {
+      width: 28px;
+      height: 28px;
+      font-size: 0.85rem;
+    }
+    body.is-fullscreen .brand-main {
+      font-size: 0.82rem;
+    }
+    body.is-fullscreen .brand-sub {
+      display: none;
+    }
+    body.is-fullscreen .magazine-stage {
+      top: 48px !important;
+      bottom: 56px !important;
+      padding: 6px 50px !important;
+    }
+    body.is-fullscreen .magazine-footer {
+      height: 56px !important;
+      background: rgba(7, 14, 10, 0.96);
+    }
+    body.is-fullscreen .thumbnails-drawer {
+      bottom: 56px;
+    }
+
     .book-wrapper {
       position: relative;
       display: flex;
@@ -1294,25 +1323,88 @@
         }
       });
 
-      // Fullscreen Toggle
-      btnFullscreen.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen().catch(() => {});
-          btnFullscreen.innerHTML = '<i class="fa-solid fa-compress"></i>';
-        } else {
-          document.exitFullscreen().catch(() => {});
-          btnFullscreen.innerHTML = '<i class="fa-solid fa-expand"></i>';
-        }
-      });
+      // Cross-Browser Fullscreen Helpers
+      function isFullscreenActive() {
+        return !!(
+          document.fullscreenElement ||
+          document.webkitFullscreenElement ||
+          document.mozFullScreenElement ||
+          document.msFullscreenElement ||
+          document.body.classList.contains('is-fullscreen')
+        );
+      }
 
-      document.addEventListener('fullscreenchange', () => {
-        if (!document.fullscreenElement) {
-          btnFullscreen.innerHTML = '<i class="fa-solid fa-expand"></i>';
+      function enterFullscreen() {
+        const el = document.documentElement;
+        let p = null;
+        try {
+          if (el.requestFullscreen) {
+            p = el.requestFullscreen();
+          } else if (el.webkitRequestFullscreen) {
+            p = el.webkitRequestFullscreen();
+          } else if (el.mozRequestFullScreen) {
+            p = el.mozRequestFullScreen();
+          } else if (el.msRequestFullscreen) {
+            p = el.msRequestFullscreen();
+          }
+        } catch (err) {
+          console.warn('Native fullscreen call threw:', err);
         }
-        // Re-render flipbook with updated fullscreen stage size
+
+        if (p && p.catch) {
+          p.catch(err => {
+            console.warn('Native fullscreen request blocked:', err);
+          });
+        }
+        document.body.classList.add('is-fullscreen');
+        updateFullscreenUI(true);
+      }
+
+      function exitFullscreen() {
+        try {
+          if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+        } catch (err) {}
+        document.body.classList.remove('is-fullscreen');
+        updateFullscreenUI(false);
+      }
+
+      function toggleFullscreen() {
+        if (!isFullscreenActive()) {
+          enterFullscreen();
+        } else {
+          exitFullscreen();
+        }
+      }
+
+      function updateFullscreenUI(active) {
+        btnFullscreen.classList.toggle('active', active);
+        btnFullscreen.innerHTML = active ? '<i class="fa-solid fa-compress"></i>' : '<i class="fa-solid fa-expand"></i>';
+        btnFullscreen.title = active ? 'Thoát toàn màn hình (Esc hoặc F)' : 'Xem toàn màn hình (F)';
+
         setTimeout(() => {
           renderFlipbook(pageFlip ? pageFlip.getCurrentPageIndex() : 0);
-        }, 250);
+        }, 200);
+      }
+
+      btnFullscreen.addEventListener('click', toggleFullscreen);
+
+      // Listen for all vendor fullscreen events
+      ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(evt => {
+        document.addEventListener(evt, () => {
+          const fs = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+          if (!fs) {
+            document.body.classList.remove('is-fullscreen');
+          }
+          updateFullscreenUI(fs);
+        });
       });
 
       // Mode Toggle (Single Slide vs Double Page Spread)
@@ -1335,11 +1427,15 @@
           pageFlip && pageFlip.flipPrev();
         } else if (e.key === 'Home') {
           goToPage(1);
-        } else if (e.key === 'End') {
-          goToPage(TOTAL_PAGES);
+        } else if (e.key === 'f' || e.key === 'F') {
+          e.preventDefault();
+          toggleFullscreen();
         } else if (e.key === 'Escape') {
           toggleDrawer(false);
           closeBookingModal();
+          if (isFullscreenActive()) {
+            exitFullscreen();
+          }
         }
       });
 
