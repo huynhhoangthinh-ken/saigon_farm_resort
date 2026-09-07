@@ -23,9 +23,11 @@
   <meta property="og:url" content="https://saigonfarmresort.com/gioi-thieu.html">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts: Montserrat (Brand), Playfair Display (Editorial Serif), Plus Jakarta Sans (Body) -->
+  <!-- Preconnect & DNS Prefetch for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" as="image" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -250,7 +252,7 @@
       left: -15px;
       width: 260px;
       height: 280px;
-      background: url('assets/patterns/gold_lotus.png') no-repeat left top;
+      background: url('assets/patterns/gold_lotus.webp') no-repeat left top;
       background-size: contain;
       opacity: 0.15;
       pointer-events: none;
@@ -262,7 +264,7 @@
       left: -15px;
       width: 270px;
       height: 290px;
-      background: url('assets/patterns/gold_lotus.png') no-repeat left bottom;
+      background: url('assets/patterns/gold_lotus.webp') no-repeat left bottom;
       background-size: contain;
       opacity: 0.16;
       pointer-events: none;
@@ -274,7 +276,7 @@
       right: -15px;
       width: 320px;
       height: 270px;
-      background: url('assets/patterns/gold_estate_pavilion.png') no-repeat right bottom;
+      background: url('assets/patterns/gold_estate_pavilion.webp') no-repeat right bottom;
       background-size: contain;
       opacity: 0.16;
       pointer-events: none;
@@ -2905,7 +2907,7 @@
       <!-- Header -->
       <header class="letter-header">
         <div class="brand-crest">
-          <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo">
+          <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" loading="eager" fetchpriority="high" decoding="async">
         </div>
 
         <div class="org-badge">ĐẠI CHÚNG PROPERTIES &amp; MDS LIVING</div>
@@ -2950,11 +2952,10 @@
         <!-- Sơ Đồ Liên Kết Vùng Infographic -->
         <figure class="location-infographic-wrap">
           <img 
-            src="assets/Index_asset/editorial_photo/So_do_lien_ket_vung.png" 
+            src="assets/Index_asset/editorial_photo/So_do_lien_ket_vung.webp" 
             alt="Sơ đồ liên kết vùng vị trí chiến lược Saigon Farm Resort" 
             class="location-infographic-img"
-            onclick="openImageDirect(this.src, 'Sơ Đồ Vị Trí & Liên Kết Vùng Chiến Lược Saigon Farm Resort')"
-          >
+            onclick="openImageDirect(this.src, 'Sơ Đồ Vị Trí & Liên Kết Vùng Chiến Lược Saigon Farm Resort')" decoding="async" loading="lazy">
         </figure>
 
         <!-- 4 Cực Tăng Trưởng Xung Quanh -->
@@ -3055,7 +3056,7 @@
 
         <!-- Hình Hero Lớn Toàn Cảnh Hồ Lồ Ồ 100ha Ấn Tượng -->
         <div class="lake-hero-showcase" onclick="openLakeLightbox(0)" role="button" tabindex="0" aria-label="Phóng to toàn cảnh Hồ Lồ Ồ 100ha và lướt xem bộ ảnh">
-          <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.avif" alt="Hình ảnh Thực Tế Cảnh Hồ Lồ Ồ 100ha Xanh Mát, Tự Nhiên" loading="eager">
+          <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp" alt="Hình ảnh Thực Tế Cảnh Hồ Lồ Ồ 100ha Xanh Mát, Tự Nhiên" loading="eager" decoding="async">
           <div class="lake-hero-badge">
             <i class="fa-solid fa-camera"></i> 100% Ảnh Chụp Thực Tế • Hồ Lồ Ồ 100ha
           </div>
@@ -3087,56 +3088,56 @@
           <div class="lake-collage-grid" id="lake-collage-grid">
             <div class="lake-collage-item" data-idx="0" onclick="openLakeLightbox(0)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 01">
               <div class="lake-collage-frame">
-                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.avif" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 01" loading="lazy">
+                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 01" loading="lazy" decoding="async">
                 <span class="lake-collage-badge">01 • Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên</span>
                 <span class="lake-collage-zoom-icon"><i class="fa-solid fa-expand"></i></span>
               </div>
             </div>
             <div class="lake-collage-item" data-idx="1" onclick="openLakeLightbox(1)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 02">
               <div class="lake-collage-frame">
-                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_2.avif" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 02" loading="lazy">
+                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_2.webp" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 02" loading="lazy" decoding="async">
                 <span class="lake-collage-badge">02 • Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên</span>
                 <span class="lake-collage-zoom-icon"><i class="fa-solid fa-expand"></i></span>
               </div>
             </div>
             <div class="lake-collage-item" data-idx="2" onclick="openLakeLightbox(2)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 03">
               <div class="lake-collage-frame">
-                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_3.avif" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 03" loading="lazy">
+                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_3.webp" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 03" loading="lazy" decoding="async">
                 <span class="lake-collage-badge">03 • Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên</span>
                 <span class="lake-collage-zoom-icon"><i class="fa-solid fa-expand"></i></span>
               </div>
             </div>
             <div class="lake-collage-item" data-idx="3" onclick="openLakeLightbox(3)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 04">
               <div class="lake-collage-frame">
-                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_4.avif" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 04" loading="lazy">
+                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_4.webp" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 04" loading="lazy" decoding="async">
                 <span class="lake-collage-badge">04 • Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên</span>
                 <span class="lake-collage-zoom-icon"><i class="fa-solid fa-expand"></i></span>
               </div>
             </div>
             <div class="lake-collage-item" data-idx="4" onclick="openLakeLightbox(4)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 05">
               <div class="lake-collage-frame">
-                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_5.avif" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 05" loading="lazy">
+                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_5.webp" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 05" loading="lazy" decoding="async">
                 <span class="lake-collage-badge">05 • Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên</span>
                 <span class="lake-collage-zoom-icon"><i class="fa-solid fa-expand"></i></span>
               </div>
             </div>
             <div class="lake-collage-item" data-idx="5" onclick="openLakeLightbox(5)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 06">
               <div class="lake-collage-frame">
-                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_6.avif" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 06" loading="lazy">
+                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_6.webp" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 06" loading="lazy" decoding="async">
                 <span class="lake-collage-badge">06 • Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên</span>
                 <span class="lake-collage-zoom-icon"><i class="fa-solid fa-expand"></i></span>
               </div>
             </div>
             <div class="lake-collage-item" data-idx="6" onclick="openLakeLightbox(6)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 07">
               <div class="lake-collage-frame">
-                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_7.avif" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 07" loading="lazy">
+                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_7.webp" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 07" loading="lazy" decoding="async">
                 <span class="lake-collage-badge">07 • Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên</span>
                 <span class="lake-collage-zoom-icon"><i class="fa-solid fa-expand"></i></span>
               </div>
             </div>
             <div class="lake-collage-item" data-idx="7" onclick="openLakeLightbox(7)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 08">
               <div class="lake-collage-frame">
-                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_8.avif" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 08" loading="lazy">
+                <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_8.webp" alt="Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên 08" loading="lazy" decoding="async">
                 <span class="lake-collage-badge">08 • Cảnh hồ Lồ Ồ 100ha xanh mát, tự nhiên</span>
                 <span class="lake-collage-zoom-icon"><i class="fa-solid fa-expand"></i></span>
               </div>
@@ -3230,8 +3231,7 @@
             src="assets/Index_asset/MatBang/SoDo_ChiTiet_TienIch_5TruCot.jpg" 
             alt="Sơ đồ chi tiết tiện ích Saigon Farm Resort" 
             class="diagram-img"
-            onclick="openImageDirect(this.src, 'Sơ Đồ Chi Tiết Tiện Ích Văn Hóa &amp; Nghỉ Dưỡng Saigon Farm Resort')"
-          >
+            onclick="openImageDirect(this.src, 'Sơ Đồ Chi Tiết Tiện Ích Văn Hóa &amp; Nghỉ Dưỡng Saigon Farm Resort')" decoding="async" loading="lazy">
           <figcaption class="diagram-caption">
             <span><strong>SAIGON FARM RESORT – TIỆN ÍCH</strong> — Bản đồ định vị 10 không gian văn hóa, thể thao &amp; sinh thái</span>
             <span style="font-weight: 700; color: var(--color-gold-dark);"><i class="fa-solid fa-expand"></i> Nhấp để xem phóng to</span>
@@ -3408,7 +3408,7 @@
             <div class="amenity-pane-grid">
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('tong-the', 0)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg" alt="Tổng thể quy hoạch" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.webp" alt="Tổng thể quy hoạch" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3418,7 +3418,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('tong-the', 1)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.jpg" alt="Tọa độ vàng kết nối hồ 100ha" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.webp" alt="Tọa độ vàng kết nối hồ 100ha" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3447,7 +3447,7 @@
             <div class="amenity-pane-grid">
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 0)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg" alt="Mặt Tiền Biểu Tượng Clubhouse 3.000 m² Ven Hồ 100ha" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.webp" alt="Mặt Tiền Biểu Tượng Clubhouse 3.000 m² Ven Hồ 100ha" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3457,7 +3457,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 1)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_2.jpg" alt="Sảnh Đón Tiếp & Lounge Ven Hồ Sang Trọng" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_2.webp" alt="Sảnh Đón Tiếp & Lounge Ven Hồ Sang Trọng" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3467,7 +3467,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 2)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.jpg" alt="Bến Thuyền Kayak & Thể Thao Dưới Nước" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.webp" alt="Bến Thuyền Kayak & Thể Thao Dưới Nước" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3477,7 +3477,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 3)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.jpg" alt="Bậc Thềm Gỗ Vươn Ra Mặt Nước Lộng Gió" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.webp" alt="Bậc Thềm Gỗ Vươn Ra Mặt Nước Lộng Gió" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3487,7 +3487,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 4)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_5.jpg" alt="Hồ Bơi & Khu Thư Giãn Ven Mặt Hồ" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_5.webp" alt="Hồ Bơi & Khu Thư Giãn Ven Mặt Hồ" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3497,7 +3497,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 5)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_6.jpg" alt="Ban Công Thưởng Trà & Café View Panorama" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_6.webp" alt="Ban Công Thưởng Trà & Café View Panorama" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3507,7 +3507,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 6)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_7.jpg" alt="Không Gian Sự Kiện Ngoài Trời Sát Mép Nước" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_7.webp" alt="Không Gian Sự Kiện Ngoài Trời Sát Mép Nước" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3517,7 +3517,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 7)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_8.jpg" alt="Góc Thư Giãn Tĩnh Tại Bên Bờ Nước" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_8.webp" alt="Góc Thư Giãn Tĩnh Tại Bên Bờ Nước" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3527,7 +3527,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 8)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_9.jpg" alt="Lối Tản Bộ & Thềm Hoa Ven Hồ Sinh Thái" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_9.webp" alt="Lối Tản Bộ & Thềm Hoa Ven Hồ Sinh Thái" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3537,7 +3537,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 9)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_11.jpg" alt="Tầng Thượng Ngắm Toàn Cảnh Hồ Lồ Ồ" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_11.webp" alt="Tầng Thượng Ngắm Toàn Cảnh Hồ Lồ Ồ" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3547,7 +3547,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 10)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_12.jpg" alt="Không Gian Thư Giãn Chiều Hoàng Hôn" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_12.webp" alt="Không Gian Thư Giãn Chiều Hoàng Hôn" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3557,7 +3557,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 11)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_14.jpg" alt="Clubhouse Lung Linh Rực Rỡ Khi Lên Đèn" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_14.webp" alt="Clubhouse Lung Linh Rực Rỡ Khi Lên Đèn" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3567,7 +3567,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 12)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_16.jpg" alt="Khung Cảnh Hồ Nước Thanh Bình Buổi Sớm" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_16.webp" alt="Khung Cảnh Hồ Nước Thanh Bình Buổi Sớm" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3596,7 +3596,7 @@
             <div class="amenity-pane-grid">
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('facilities', 0)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tâm.jpg" alt="Hồ bơi trung tâm" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tâm.webp" alt="Hồ bơi trung tâm" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3606,7 +3606,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('facilities', 1)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Sân PickleBall.jpg" alt="Sân Pickleball" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Sân PickleBall.webp" alt="Sân Pickleball" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3616,7 +3616,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('facilities', 2)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Việt Mã Viên.jpg" alt="Việt Mã Viên" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Việt Mã Viên.webp" alt="Việt Mã Viên" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3645,7 +3645,7 @@
             <div class="amenity-pane-grid">
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 0)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_1.avif" alt="Nhà Hàng Sinh Thái Farm-To-Table (250 Chỗ)" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_1.webp" alt="Nhà Hàng Sinh Thái Farm-To-Table (250 Chỗ)" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3655,7 +3655,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 1)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.avif" alt="Kiến Trúc Mái Vòm Gỗ Mộc Độc Bản" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.webp" alt="Kiến Trúc Mái Vòm Gỗ Mộc Độc Bản" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3665,7 +3665,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 2)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_3.avif" alt="Bàn Ăn Bán Lộ Thiên Đón Gió Mát Lành" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_3.webp" alt="Bàn Ăn Bán Lộ Thiên Đón Gió Mát Lành" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3675,7 +3675,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 3)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_4.avif" alt="Bữa Tối Lãng Mạn Dưới Ánh Đèn Vàng" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_4.webp" alt="Bữa Tối Lãng Mạn Dưới Ánh Đèn Vàng" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3685,7 +3685,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 4)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_5.avif" alt="Bàn Tiệc Gia Đình Ấm Cúng & Gắn Kết" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_5.webp" alt="Bàn Tiệc Gia Đình Ấm Cúng & Gắn Kết" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3695,7 +3695,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 5)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_6.avif" alt="Phòng Tiệc VIP Kín Đáo & Đẳng Cấp" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_6.webp" alt="Phòng Tiệc VIP Kín Đáo & Đẳng Cấp" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3705,7 +3705,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 6)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_7.avif" alt="Quầy Bar Thảo Mộc & Thức Uống Tự Nhiên" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_7.webp" alt="Quầy Bar Thảo Mộc & Thức Uống Tự Nhiên" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3715,7 +3715,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 7)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_8.avif" alt="Khu Vực Tiệc BBQ Ngoài Trời Bên Hồ" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_8.webp" alt="Khu Vực Tiệc BBQ Ngoài Trời Bên Hồ" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3725,7 +3725,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 8)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_9.avif" alt="Tầm Nhìn Ôm Trọn Cảnh Quan Sinh Thái" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_9.webp" alt="Tầm Nhìn Ôm Trọn Cảnh Quan Sinh Thái" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3735,7 +3735,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 9)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_10.avif" alt="Góc Thưởng Trà & Đọc Sách Thư Thái" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_10.webp" alt="Góc Thưởng Trà & Đọc Sách Thư Thái" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3745,7 +3745,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 10)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_11.avif" alt="Sảnh Đón Tiếp Ân Cần Chuẩn Quản Gia" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_11.webp" alt="Sảnh Đón Tiếp Ân Cần Chuẩn Quản Gia" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3755,7 +3755,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 11)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_12.avif" alt="Bàn Tiệc View Panorama Hướng Hồ" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_12.webp" alt="Bàn Tiệc View Panorama Hướng Hồ" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3765,7 +3765,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 12)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_13.avif" alt="Không Gian Tổ Chức Sự Kiện & Sinh Nhật" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_13.webp" alt="Không Gian Tổ Chức Sự Kiện & Sinh Nhật" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3775,7 +3775,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 13)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_14.avif" alt="Không Gian Điểm Tâm Sáng Thanh Khiết" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_14.webp" alt="Không Gian Điểm Tâm Sáng Thanh Khiết" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3785,7 +3785,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 14)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_15.avif" alt="Nhà Hàng Lung Linh Rực Rỡ Về Đêm" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_15.webp" alt="Nhà Hàng Lung Linh Rực Rỡ Về Đêm" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3795,7 +3795,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 15)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_16.avif" alt="Dịch Vụ Private Chef Phục Vụ Tận Dinh Thự" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_16.webp" alt="Dịch Vụ Private Chef Phục Vụ Tận Dinh Thự" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3824,7 +3824,7 @@
             <div class="amenity-pane-grid">
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 0)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.jpg" alt="Trục đường chính" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.webp" alt="Trục đường chính" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3834,7 +3834,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 1)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_2-2.jpg" alt="Đường dạo bộ" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_2-2.webp" alt="Đường dạo bộ" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3844,7 +3844,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 2)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_3.jpg" alt="Hạ tầng đồng bộ" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_3.webp" alt="Hạ tầng đồng bộ" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3854,7 +3854,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 3)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_4.jpg" alt="Đường ven kênh" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_4.webp" alt="Đường ven kênh" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3864,7 +3864,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 4)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_6.jpg" alt="Lối dẫn vào dinh thự" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_6.webp" alt="Lối dẫn vào dinh thự" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3893,7 +3893,7 @@
             <div class="amenity-pane-grid">
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 0)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/S03_Final_Fix_001.jpg" alt="Dinh thự ven ruộng lúa" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/S03_Final_Fix_001.webp" alt="Dinh thự ven ruộng lúa" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3903,7 +3903,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 1)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/1.jpg" alt="Hiên nhà gỗ mộc" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/1.webp" alt="Hiên nhà gỗ mộc" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3913,7 +3913,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 2)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/2.jpg" alt="Mặt tiền kiến trúc mộc" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/2.webp" alt="Mặt tiền kiến trúc mộc" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3923,7 +3923,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 3)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/6.jpg" alt="Khuôn viên sân vườn" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/6.webp" alt="Khuôn viên sân vườn" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3933,7 +3933,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 4)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/7.jpg" alt="Không gian mở" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/7.webp" alt="Không gian mở" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3943,7 +3943,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 5)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/8.jpg" alt="Bình minh trên ruộng lúa" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/8.webp" alt="Bình minh trên ruộng lúa" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3953,7 +3953,7 @@
               </div>
               <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 6)">
                 <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/9.jpg" alt="Hoàng hôn bên hiên nhà ven lúa" loading="lazy">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven ruong lua/9.webp" alt="Hoàng hôn bên hiên nhà ven lúa" loading="lazy" decoding="async">
                   <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
                 </div>
                 <div class="amenity-photo-info">
@@ -3980,10 +3980,9 @@
         <!-- Sơ Đồ Mặt Bằng Tổng Thể -->
         <figure class="masterplan-showcase">
           <img 
-            src="assets/Index_asset/MatBang/TongQuan_QuyMo.png" 
+            src="assets/Index_asset/MatBang/TongQuan_QuyMo.webp" 
             alt="Mặt bằng tổng thể phân lô Saigon Farm Resort" 
-            onclick="openImageDirect(this.src, 'Mặt Bằng Phân Lô Tổng Thể Toàn Quần Thể Saigon Farm Resort')"
-          >
+            onclick="openImageDirect(this.src, 'Mặt Bằng Phân Lô Tổng Thể Toàn Quần Thể Saigon Farm Resort')" decoding="async" loading="lazy">
           <div style="padding: 10px 18px; background: #faf7f2; border-top: 1px solid var(--color-border); font-size: 0.84rem; display: flex; justify-content: space-between;">
             <span><strong style="color: var(--color-dark);">Bản Vẽ Quy Hoạch Phân Lô Chi Tiết</strong> — 100% Thổ cư có sổ đỏ riêng</span>
             <span style="color: var(--color-gold-dark); font-weight: 700;"><i class="fa-solid fa-magnifying-glass-plus"></i> Nhấp xem chi tiết từng mã lô</span>
@@ -3992,9 +3991,9 @@
 
         <!-- 3 Dòng Sản Phẩm Card Showcase -->
         <div class="product-lines-showcase">
-          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.png', 'Biệt Phủ Điền Trang — Dòng Nghỉ Dưỡng Sum Họp Đa Thế Hệ')">
+          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.webp', 'Biệt Phủ Điền Trang — Dòng Nghỉ Dưỡng Sum Họp Đa Thế Hệ')">
             <div class="line-card__img-wrap">
-              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.png" alt="Biệt Phủ Điền Trang" class="line-card__img" loading="lazy">
+              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.webp" alt="Biệt Phủ Điền Trang" class="line-card__img" loading="lazy" decoding="async">
               <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
             </div>
             <div class="line-card__body">
@@ -4005,9 +4004,9 @@
             </div>
           </div>
 
-          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.png', 'Điền Sản (Founders) — Dòng Đầu Tư Sớm Đón Sóng')">
+          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp', 'Điền Sản (Founders) — Dòng Đầu Tư Sớm Đón Sóng')">
             <div class="line-card__img-wrap">
-              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.png" alt="Điền Sản Đầu Tư" class="line-card__img" loading="lazy">
+              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp" alt="Điền Sản Đầu Tư" class="line-card__img" loading="lazy" decoding="async">
               <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
             </div>
             <div class="line-card__body">
@@ -4018,9 +4017,9 @@
             </div>
           </div>
 
-          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.png', 'Điền An (Haven) — Dòng Tiền Cho Thuê Bền Vững')">
+          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp', 'Điền An (Haven) — Dòng Tiền Cho Thuê Bền Vững')">
             <div class="line-card__img-wrap">
-              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.png" alt="Điền An Dòng Tiền Lưu Trú" class="line-card__img" loading="lazy">
+              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp" alt="Điền An Dòng Tiền Lưu Trú" class="line-card__img" loading="lazy" decoding="async">
               <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
             </div>
             <div class="line-card__body">
@@ -4045,9 +4044,9 @@
 
           <div class="product-docs-grid">
             <!-- Doc 1: Điền An Layout -->
-            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.png', 'Điền An (Haven) — Sơ Đồ Mặt Bằng & Layout Cụm 30 Phòng Lưu Trú Chuyên Gia')">
+            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp', 'Điền An (Haven) — Sơ Đồ Mặt Bằng & Layout Cụm 30 Phòng Lưu Trú Chuyên Gia')">
               <div class="doc-card__thumb">
-                <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.png" alt="Layout cụm Điền An" loading="lazy">
+                <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp" alt="Layout cụm Điền An" loading="lazy" decoding="async">
                 <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
               </div>
               <div class="doc-card__body">
@@ -4058,9 +4057,9 @@
             </div>
 
             <!-- Doc 2: Điền An BĐS Dòng Tiền -->
-            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.png', 'Điền An — Mô Hình BĐS Dòng Tiền Ưu Việt (Thuê Chuyên Gia & Chia Sẻ MDS Living)')">
+            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp', 'Điền An — Mô Hình BĐS Dòng Tiền Ưu Việt (Thuê Chuyên Gia & Chia Sẻ MDS Living)')">
               <div class="doc-card__thumb">
-                <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.png" alt="Mô hình BĐS dòng tiền Điền An" loading="lazy">
+                <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp" alt="Mô hình BĐS dòng tiền Điền An" loading="lazy" decoding="async">
                 <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
               </div>
               <div class="doc-card__body">
@@ -4071,9 +4070,9 @@
             </div>
 
             <!-- Doc 3: Điền Sản Phân Lô -->
-            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.png', 'Điền Sản (Founders) — Sơ Đồ Phân Lô Tách Thành 3 Căn Sổ Riêng Từng Lô')">
+            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp', 'Điền Sản (Founders) — Sơ Đồ Phân Lô Tách Thành 3 Căn Sổ Riêng Từng Lô')">
               <div class="doc-card__thumb">
-                <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.png" alt="Sơ đồ phân lô Điền Sản" loading="lazy">
+                <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp" alt="Sơ đồ phân lô Điền Sản" loading="lazy" decoding="async">
                 <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
               </div>
               <div class="doc-card__body">
@@ -4084,9 +4083,9 @@
             </div>
 
             <!-- Doc 4: Chính Sách Vận Hành MDS Living -->
-            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/Chinh_sách_ủy_thác_vận_hành.png', 'Biệt Phủ Điền Trang — Chính Sách Ủy Thác Vận Hành MDS Living (Cam Kết Mua Lại 4Tr/Đêm)')">
+            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/Chinh_sách_ủy_thác_vận_hành.webp', 'Biệt Phủ Điền Trang — Chính Sách Ủy Thác Vận Hành MDS Living (Cam Kết Mua Lại 4Tr/Đêm)')">
               <div class="doc-card__thumb">
-                <img src="assets/Index_asset/editorial_photo/Chinh_sách_ủy_thác_vận_hành.png" alt="Chính sách ủy thác vận hành MDS Living" loading="lazy">
+                <img src="assets/Index_asset/editorial_photo/Chinh_sách_ủy_thác_vận_hành.webp" alt="Chính sách ủy thác vận hành MDS Living" loading="lazy" decoding="async">
                 <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
               </div>
               <div class="doc-card__body">
@@ -4097,9 +4096,9 @@
             </div>
 
             <!-- Doc 5: Cánh Đồng Lúa Sinh Thái -->
-            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/Canh_dong_lua.png', 'Cảnh Quan Quần Thể — Cánh Đồng Lúa Tuyệt Đẹp Bao Quanh Saigon Farm Resort')">
+            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/Canh_dong_lua.webp', 'Cảnh Quan Quần Thể — Cánh Đồng Lúa Tuyệt Đẹp Bao Quanh Saigon Farm Resort')">
               <div class="doc-card__thumb">
-                <img src="assets/Index_asset/editorial_photo/Canh_dong_lua.png" alt="Cánh đồng lúa tuyệt đẹp" loading="lazy">
+                <img src="assets/Index_asset/editorial_photo/Canh_dong_lua.webp" alt="Cánh đồng lúa tuyệt đẹp" loading="lazy" decoding="async">
                 <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
               </div>
               <div class="doc-card__body">
@@ -4110,9 +4109,9 @@
             </div>
 
             <!-- Doc 6: Sơ Đồ Liên Kết Vùng -->
-            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/So_do_lien_ket_vung.png', 'Vị Trí Chiến Lược — Sơ Đồ Liên Kết Vùng & Tâm Điểm Giao Thương Vĩ Mô')">
+            <div class="doc-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/So_do_lien_ket_vung.webp', 'Vị Trí Chiến Lược — Sơ Đồ Liên Kết Vùng & Tâm Điểm Giao Thương Vĩ Mô')">
               <div class="doc-card__thumb">
-                <img src="assets/Index_asset/editorial_photo/So_do_lien_ket_vung.png" alt="Sơ đồ liên kết vùng vị trí" loading="lazy">
+                <img src="assets/Index_asset/editorial_photo/So_do_lien_ket_vung.webp" alt="Sơ đồ liên kết vùng vị trí" loading="lazy" decoding="async">
                 <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
               </div>
               <div class="doc-card__body">
@@ -4166,8 +4165,8 @@
 
         <!-- Layout & Bằng Chứng Thực Tế -->
         <div class="dienan-layout-grid">
-          <div class="dienan-layout-visual" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.png', 'Layout Mẫu Thiết Kế Cụm Phòng Lưu Trú Sinh Thái Cho Chuyên Gia — Điền An')">
-            <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.png" alt="Layout phòng lưu trú Điền An" loading="lazy">
+          <div class="dienan-layout-visual" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp', 'Layout Mẫu Thiết Kế Cụm Phòng Lưu Trú Sinh Thái Cho Chuyên Gia — Điền An')">
+            <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp" alt="Layout phòng lưu trú Điền An" loading="lazy" decoding="async">
           </div>
 
           <div class="dienan-logic-card">
@@ -4188,8 +4187,8 @@
         </div>
 
         <!-- Bằng Chứng Mô Hình BĐS Dòng Tiền & Hợp Đồng Chuyên Gia -->
-        <div style="margin-top: 20px; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.png', 'Điền An — Mô Hình BĐS Dòng Tiền Ưu Việt (Thuê Chuyên Gia 4Tr/Tháng & Mô Hình Workation 700k/Đêm)')">
-          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.png" alt="Bằng chứng mô hình BĐS dòng tiền Điền An" style="width: 100%; height: auto; display: block;" loading="lazy">
+        <div style="margin-top: 20px; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp', 'Điền An — Mô Hình BĐS Dòng Tiền Ưu Việt (Thuê Chuyên Gia 4Tr/Tháng & Mô Hình Workation 700k/Đêm)')">
+          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp" alt="Bằng chứng mô hình BĐS dòng tiền Điền An" style="width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
           <div style="padding: 10px 18px; background: #faf7f2; border-top: 1px solid var(--color-border); font-size: 0.84rem; display: flex; justify-content: space-between; align-items: center;">
             <span><strong style="color: var(--color-accent-green);"><i class="fa-solid fa-file-contract"></i> Cơ Chế Dòng Tiền Cho Thuê Điền An</strong> — Thuê chuyên gia dài hạn 4 triệu/tháng &amp; chia sẻ doanh thu 50/50 MDS Living</span>
             <span style="color: var(--color-gold-dark); font-weight: 700;"><i class="fa-solid fa-expand"></i> Nhấp phóng to toàn màn hình</span>
@@ -4275,8 +4274,8 @@
               <em>(Nếu tính theo kịch bản giá đất tăng 20% khi Sân bay Long Thành vận hành thử nghiệm: Lợi nhuận đạt <strong>1,8 Tỷ</strong> → ROE lên tới <strong>31,25%/năm</strong>!)</em>
             </p>
           <!-- Sơ Đồ Phân Lô Tách Thửa 3 Căn Sổ Riêng -->
-          <div style="margin-top: 24px; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.png', 'Điền Sản (Founders) — Sơ Đồ Phân Lô Tách Thành 3 Căn Sổ Riêng Từng Lô')">
-            <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.png" alt="Sơ đồ phân lô Điền Sản tách 3 căn" style="width: 100%; height: auto; display: block;" loading="lazy">
+          <div style="margin-top: 24px; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp', 'Điền Sản (Founders) — Sơ Đồ Phân Lô Tách Thành 3 Căn Sổ Riêng Từng Lô')">
+            <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp" alt="Sơ đồ phân lô Điền Sản tách 3 căn" style="width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
             <div style="padding: 10px 18px; background: #faf7f2; border-top: 1px solid var(--color-border); font-size: 0.84rem; display: flex; justify-content: space-between; align-items: center;">
               <span><strong style="color: var(--color-accent-green);"><i class="fa-solid fa-map-location-dot"></i> Quy Hoạch Phân Lô Đột Phá Điền Sản</strong> — 1 Thửa đất tách thành 3 căn có sổ riêng từng lô</span>
               <span style="color: var(--color-gold-dark); font-weight: 700;"><i class="fa-solid fa-expand"></i> Nhấp phóng to chi tiết sơ đồ</span>
@@ -4308,8 +4307,8 @@
         <!-- TAB 1: Sunrise 1 -->
         <div id="tab-sunrise-1" class="villa-tab-pane active" role="tabpanel">
           <div class="villa-showcase-grid">
-            <div class="villa-main-visual" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg', 'Sunrise Villa 1 — Phối Cảnh Ngoại Thất Mặt Trước')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg" alt="Sunrise 1 Villa Ngoại Thất">
+            <div class="villa-main-visual" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_ext_1.webp', 'Sunrise Villa 1 — Phối Cảnh Ngoại Thất Mặt Trước')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_1_ext_1.webp" alt="Sunrise 1 Villa Ngoại Thất" decoding="async" loading="lazy">
             </div>
             <div class="villa-specs-card">
               <div class="villa-spec-header">
@@ -4331,24 +4330,24 @@
 
           <!-- 5 Sub-thumbs: Mặt bằng & Nội thất chi tiết -->
           <div class="villa-subthumbs-grid">
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_1.png', 'Mặt Bằng Bố Trí Công Năng Sunrise Villa 1')">
-              <img src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_1.png" alt="Mặt bằng Sunrise 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_1.webp', 'Mặt Bằng Bố Trí Công Năng Sunrise Villa 1')">
+              <img src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_1.webp" alt="Mặt bằng Sunrise 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Mặt Bằng Phân Lô</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_ext_2.jpg', 'Góc Phối Cảnh Sân Vườn Sunrise Villa 1')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_1_ext_2.jpg" alt="Sân vườn Sunrise 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_ext_2.webp', 'Góc Phối Cảnh Sân Vườn Sunrise Villa 1')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_1_ext_2.webp" alt="Sân vườn Sunrise 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Ngoại Thất Sân Vườn</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_living_1.jpg', 'Phòng Khách & Bàn Ăn Tầng Trệt Sunrise 1')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_1_living_1.jpg" alt="Phòng khách Sunrise 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_living_1.webp', 'Phòng Khách & Bàn Ăn Tầng Trệt Sunrise 1')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_1_living_1.webp" alt="Phòng khách Sunrise 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Phòng Khách &amp; Bếp</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_bed_1.jpg', 'Phòng Ngủ Master Tầng Lầu Sunrise 1')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_1_bed_1.jpg" alt="Phòng ngủ master Sunrise 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_bed_1.webp', 'Phòng Ngủ Master Tầng Lầu Sunrise 1')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_1_bed_1.webp" alt="Phòng ngủ master Sunrise 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Phòng Ngủ Master</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_bed_2.jpg', 'Phòng Ngủ Phụ Thoáng Đãng Sunrise 1')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_1_bed_2.jpg" alt="Phòng ngủ phụ Sunrise 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_1_bed_2.webp', 'Phòng Ngủ Phụ Thoáng Đãng Sunrise 1')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_1_bed_2.webp" alt="Phòng ngủ phụ Sunrise 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Phòng Ngủ Phụ</div>
             </div>
           </div>
@@ -4357,8 +4356,8 @@
         <!-- TAB 2: Sunrise 2 -->
         <div id="tab-sunrise-2" class="villa-tab-pane" role="tabpanel">
           <div class="villa-showcase-grid">
-            <div class="villa-main-visual" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_ext_1.jpg', 'Sunrise Villa 2 — Phối Cảnh Sân Vườn Dinh Thự Gỗ Đương Đại')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_2_ext_1.jpg" alt="Sunrise 2 Villa Sân Vườn">
+            <div class="villa-main-visual" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_ext_1.webp', 'Sunrise Villa 2 — Phối Cảnh Sân Vườn Dinh Thự Gỗ Đương Đại')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_2_ext_1.webp" alt="Sunrise 2 Villa Sân Vườn" decoding="async" loading="lazy">
             </div>
             <div class="villa-specs-card">
               <div class="villa-spec-header">
@@ -4379,24 +4378,24 @@
 
           <!-- 5 Sub-thumbs: Mặt bằng & Nội thất chi tiết -->
           <div class="villa-subthumbs-grid">
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_2.png', 'Mặt Bằng Sunrise Villa Mẫu 2')">
-              <img src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_2.png" alt="Mặt bằng Sunrise 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_2.webp', 'Mặt Bằng Sunrise Villa Mẫu 2')">
+              <img src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_2.webp" alt="Mặt bằng Sunrise 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Mặt Bằng Phân Lô</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_living_1.jpg', 'Không Gian Phòng Khách & Bếp Gỗ Sunrise 2')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_2_living_1.jpg" alt="Phòng khách Sunrise 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_living_1.webp', 'Không Gian Phòng Khách & Bếp Gỗ Sunrise 2')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_2_living_1.webp" alt="Phòng khách Sunrise 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Khách &amp; Bếp Gỗ</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg', 'Bàn Ăn & Không Gian Sinh Hoạt Gia Đình')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg" alt="Bàn ăn gia đình Sunrise 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_living_2.webp', 'Bàn Ăn & Không Gian Sinh Hoạt Gia Đình')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_2_living_2.webp" alt="Bàn ăn gia đình Sunrise 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Bàn Ăn Gia Đình</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_shc_1.jpg', 'Phòng Sinh Hoạt Chung Tầng Lầu Sunrise 2')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_2_shc_1.jpg" alt="Phòng SHC tầng lầu Sunrise 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_shc_1.webp', 'Phòng Sinh Hoạt Chung Tầng Lầu Sunrise 2')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_2_shc_1.webp" alt="Phòng SHC tầng lầu Sunrise 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Phòng Sinh Hoạt Chung</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_bed_1.jpg', 'Phòng Ngủ Bản Sắc Việt Sunrise 2')">
-              <img src="assets/Index_asset/villa_gallery/sunrise_2_bed_1.jpg" alt="Phòng ngủ Sunrise 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunrise_2_bed_1.webp', 'Phòng Ngủ Bản Sắc Việt Sunrise 2')">
+              <img src="assets/Index_asset/villa_gallery/sunrise_2_bed_1.webp" alt="Phòng ngủ Sunrise 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Phòng Ngủ Bản Sắc</div>
             </div>
           </div>
@@ -4405,8 +4404,8 @@
         <!-- TAB 3: Sunset 1 -->
         <div id="tab-sunset-1" class="villa-tab-pane" role="tabpanel">
           <div class="villa-showcase-grid">
-            <div class="villa-main-visual" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_lake_1.jpg', 'Sunset Villa 1 — Dinh Thự View Hồ Hoàng Hôn Tuyệt Mỹ')">
-              <img src="assets/Index_asset/villa_gallery/sunset_1_lake_1.jpg" alt="Sunset 1 Villa View Hồ">
+            <div class="villa-main-visual" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_lake_1.webp', 'Sunset Villa 1 — Dinh Thự View Hồ Hoàng Hôn Tuyệt Mỹ')">
+              <img src="assets/Index_asset/villa_gallery/sunset_1_lake_1.webp" alt="Sunset 1 Villa View Hồ" decoding="async" loading="lazy">
             </div>
             <div class="villa-specs-card">
               <div class="villa-spec-header">
@@ -4427,24 +4426,24 @@
 
           <!-- 5 Sub-thumbs: Mặt bằng & Nội thất chi tiết -->
           <div class="villa-subthumbs-grid">
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_1.png', 'Mặt Bằng Bố Trí Sunset Villa 1')">
-              <img src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_1.png" alt="Mặt bằng Sunset 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_1.webp', 'Mặt Bằng Bố Trí Sunset Villa 1')">
+              <img src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_1.webp" alt="Mặt bằng Sunset 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Mặt Bằng Phân Lô</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg', 'Không Gian Sân Trong Thoáng Đãng (Courtyard)')">
-              <img src="assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg" alt="Sân trong Sunset 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_courtyard.webp', 'Không Gian Sân Trong Thoáng Đãng (Courtyard)')">
+              <img src="assets/Index_asset/villa_gallery/sunset_1_courtyard.webp" alt="Sân trong Sunset 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Sân Trong (Courtyard)</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_living.jpg', 'Phòng Khách Panorama Sunset Villa 1')">
-              <img src="assets/Index_asset/villa_gallery/sunset_1_living.jpg" alt="Phòng khách Sunset 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_living.webp', 'Phòng Khách Panorama Sunset Villa 1')">
+              <img src="assets/Index_asset/villa_gallery/sunset_1_living.webp" alt="Phòng khách Sunset 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Phòng Khách Panorama</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_kitchen.jpg', 'Bếp & Khu Vực Bar Sang Trọng Sunset 1')">
-              <img src="assets/Index_asset/villa_gallery/sunset_1_kitchen.jpg" alt="Bếp Sunset 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_kitchen.webp', 'Bếp & Khu Vực Bar Sang Trọng Sunset 1')">
+              <img src="assets/Index_asset/villa_gallery/sunset_1_kitchen.webp" alt="Bếp Sunset 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Bếp &amp; Quầy Bar</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_master.jpg', 'Phòng Ngủ Master View Hồ Hoàng Hôn')">
-              <img src="assets/Index_asset/villa_gallery/sunset_1_master.jpg" alt="Phòng ngủ master Sunset 1">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_master.webp', 'Phòng Ngủ Master View Hồ Hoàng Hôn')">
+              <img src="assets/Index_asset/villa_gallery/sunset_1_master.webp" alt="Phòng ngủ master Sunset 1" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Master View Hồ</div>
             </div>
           </div>
@@ -4453,8 +4452,8 @@
         <!-- TAB 4: Sunset 2 -->
         <div id="tab-sunset-2" class="villa-tab-pane" role="tabpanel">
           <div class="villa-showcase-grid">
-            <div class="villa-main-visual" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_2_ext_1.jpg', 'Sunset Villa 2 — Phối Cảnh Dinh Thự 2 Tầng Hoàng Hôn')">
-              <img src="assets/Index_asset/villa_gallery/sunset_2_ext_1.jpg" alt="Sunset 2 Villa">
+            <div class="villa-main-visual" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_2_ext_1.webp', 'Sunset Villa 2 — Phối Cảnh Dinh Thự 2 Tầng Hoàng Hôn')">
+              <img src="assets/Index_asset/villa_gallery/sunset_2_ext_1.webp" alt="Sunset 2 Villa" decoding="async" loading="lazy">
             </div>
             <div class="villa-specs-card">
               <div class="villa-spec-header">
@@ -4475,24 +4474,24 @@
 
           <!-- 5 Sub-thumbs: Mặt bằng & Nội thất chi tiết -->
           <div class="villa-subthumbs-grid">
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_2.png', 'Mặt Bằng Bố Trí Sunset Villa 2')">
-              <img src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_2.png" alt="Mặt bằng Sunset 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_2.webp', 'Mặt Bằng Bố Trí Sunset Villa 2')">
+              <img src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_2.webp" alt="Mặt bằng Sunset 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Mặt Bằng Phân Lô</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_2_ext_2.jpg', 'Mặt Đứng Ngoại Thất Sunset Villa 2')">
-              <img src="assets/Index_asset/villa_gallery/sunset_2_ext_2.jpg" alt="Mặt đứng Sunset 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_2_ext_2.webp', 'Mặt Đứng Ngoại Thất Sunset Villa 2')">
+              <img src="assets/Index_asset/villa_gallery/sunset_2_ext_2.webp" alt="Mặt đứng Sunset 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Mặt Đứng Ngoại Thất</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_2_living.jpg', 'Không Gian Khách & Bếp Dinh Thự 2 Tầng Sunset 2')">
-              <img src="assets/Index_asset/villa_gallery/sunset_2_living.jpg" alt="Khách bếp Sunset 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_2_living.webp', 'Không Gian Khách & Bếp Dinh Thự 2 Tầng Sunset 2')">
+              <img src="assets/Index_asset/villa_gallery/sunset_2_living.webp" alt="Khách bếp Sunset 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Khách &amp; Bếp Thông Tầng</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_2_master.jpg', 'Phòng Ngủ Master View Hồ Sunset 2')">
-              <img src="assets/Index_asset/villa_gallery/sunset_2_master.jpg" alt="Master Sunset 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_2_master.webp', 'Phòng Ngủ Master View Hồ Sunset 2')">
+              <img src="assets/Index_asset/villa_gallery/sunset_2_master.webp" alt="Master Sunset 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">Master View Hồ</div>
             </div>
-            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_lake_2.jpg', 'Góc View Hồ Lãng Mạn Hoàng Hôn')">
-              <img src="assets/Index_asset/villa_gallery/sunset_1_lake_2.jpg" alt="View hồ Sunset 2">
+            <div class="villa-subthumb-item" onclick="openImageDirect('assets/Index_asset/villa_gallery/sunset_1_lake_2.webp', 'Góc View Hồ Lãng Mạn Hoàng Hôn')">
+              <img src="assets/Index_asset/villa_gallery/sunset_1_lake_2.webp" alt="View hồ Sunset 2" decoding="async" loading="lazy">
               <div class="villa-subthumb-label">View Hồ Tuyệt Mỹ</div>
             </div>
           </div>
@@ -4547,8 +4546,8 @@
               </ul>
             </div>
           <!-- Bằng Chứng Chính Sách Ủy Thác MDS Living -->
-          <div style="margin: 22px 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openImageDirect('assets/Index_asset/editorial_photo/Chinh_sách_ủy_thác_vận_hành.png', 'Biệt Phủ Điền Trang — Chính Sách Ủy Thác Vận Hành MDS Living 4* (Cam Kết Mua Lại 4Tr/Đêm)')">
-            <img src="assets/Index_asset/editorial_photo/Chinh_sách_ủy_thác_vận_hành.png" alt="Chính sách ủy thác vận hành MDS Living" style="width: 100%; height: auto; display: block;" loading="lazy">
+          <div style="margin: 22px 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openImageDirect('assets/Index_asset/editorial_photo/Chinh_sách_ủy_thác_vận_hành.webp', 'Biệt Phủ Điền Trang — Chính Sách Ủy Thác Vận Hành MDS Living 4* (Cam Kết Mua Lại 4Tr/Đêm)')">
+            <img src="assets/Index_asset/editorial_photo/Chinh_sách_ủy_thác_vận_hành.webp" alt="Chính sách ủy thác vận hành MDS Living" style="width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
             <div style="padding: 10px 18px; background: #faf7f2; border-top: 1px solid var(--color-border); font-size: 0.84rem; display: flex; justify-content: space-between; align-items: center;">
               <span><strong style="color: var(--color-accent-green);"><i class="fa-solid fa-shield-halved"></i> Bảo Chứng Dòng Tiền Từ MDS Living</strong> — Mua lại gói 90 – 120 – 150 đêm với đơn giá 4.000.000 đ/đêm</span>
               <span style="color: var(--color-gold-dark); font-weight: 700;"><i class="fa-solid fa-expand"></i> Nhấp xem văn bản chính sách</span>
@@ -4727,7 +4726,7 @@
 
       <!-- Panoramic Heritage Sketch Band -->
       <div class="panoramic-sketch-band">
-        <img src="assets/sketch/vietnam_heritage_sketch.jpg" alt="Tranh phác thảo bản sắc Việt" loading="lazy">
+        <img src="assets/sketch/vietnam_heritage_sketch.jpg" alt="Tranh phác thảo bản sắc Việt" loading="lazy" decoding="async">
       </div>
 
       <!-- Sign-off & Footer (Hotline phone deleted) -->
@@ -4772,7 +4771,7 @@
     </button>
 
     <div class="lightbox-body" onclick="event.stopPropagation()">
-      <img id="lightbox-3d-img" class="lightbox-image" src="" alt="Hình ảnh chi tiết">
+      <img id="lightbox-3d-img" class="lightbox-image" src="" alt="Hình ảnh chi tiết" decoding="async" loading="lazy">
     </div>
 
     <button class="lightbox-btn-nav next" id="lightbox-btn-next" onclick="nav3DLightbox(1)" aria-label="Ảnh tiếp (Mũi tên phải)">
@@ -5210,7 +5209,7 @@
       currentGallery.forEach((item, idx) => {
         const thumb = document.createElement('div');
         thumb.className = 'lightbox-thumb-item' + (idx === currentIdx ? ' active' : '');
-        thumb.innerHTML = `<img src="${item.src}" alt="${item.title}" loading="lazy">`;
+        thumb.innerHTML = `<img src="${item.src}" alt="${item.title}" loading="lazy" decoding="async">`;
         thumb.onclick = function(e) {
           e.stopPropagation();
           currentIdx = idx;
