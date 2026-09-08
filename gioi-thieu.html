@@ -1186,11 +1186,13 @@
       border-radius: 20px;
       max-width: 540px;
       width: 100%;
-      padding: 38px 32px 32px;
+      padding: 30px 28px 24px;
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
       text-align: center;
       position: relative;
       animation: modalSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      max-height: 92vh;
+      overflow-y: auto;
     }
 
     @keyframes modalSlideUp {
@@ -1627,6 +1629,76 @@
       font-size: 0.85rem;
       color: #64748b;
       line-height: 1.5;
+    }
+
+    /* Editorial Diagram Showcase (Sơ đồ tiện ích thu gọn) */
+    .editorial-diagram-showcase {
+      margin: 20px 0 26px;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .editorial-diagram-showcase:hover {
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-md);
+    }
+    .diagram-frame {
+      position: relative;
+      background: #faf8f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      max-height: 380px;
+    }
+    .diagram-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .editorial-diagram-showcase:hover .diagram-img {
+      transform: scale(1.02);
+    }
+    .diagram-zoom-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(18, 24, 21, 0.78);
+      color: #f7eed9;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .diagram-caption {
+      padding: 10px 16px;
+      background: #fbf9f4;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.84rem;
+      color: var(--color-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .diagram-caption strong {
+      color: var(--color-accent-green);
     }
 
     @media (max-width: 900px) {
@@ -2962,6 +3034,9 @@
       .dual-commitment-grid {
         grid-template-columns: 1fr;
       }
+      .diff-cards-grid {
+        grid-template-columns: 1fr;
+      }
       .letter-footer {
         flex-direction: column;
         align-items: flex-start;
@@ -3080,6 +3155,34 @@
       .rental-figure-row strong {
         font-size: 1.35rem;
       }
+      .diff-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .diff-card {
+        padding: 18px 16px;
+        border-radius: 12px;
+      }
+      .villa-subthumbs-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .diagram-frame {
+        max-height: 220px;
+      }
+      .diagram-img {
+        max-height: 220px;
+        object-fit: contain;
+      }
+      .diagram-zoom-badge {
+        bottom: 8px;
+        right: 8px;
+        font-size: 0.7rem;
+        padding: 4px 10px;
+      }
+      .diagram-caption {
+        padding: 8px 12px;
+        font-size: 0.78rem;
+      }
       .total-rental-sum-box {
         flex-direction: column;
         align-items: flex-start;
@@ -3090,6 +3193,61 @@
       }
       .collage-card[data-idx="4"] {
         grid-column: span 1;
+      }
+      .booking-modal-overlay {
+        padding: 12px;
+        align-items: center;
+      }
+      .booking-modal-box {
+        padding: 20px 16px 18px;
+        border-radius: 16px;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      .modal-close-btn {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 1.1rem;
+      }
+      .modal-emblem {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        margin: 0 auto 8px;
+      }
+      .modal-title {
+        font-size: 1.22rem;
+        line-height: 1.25;
+        margin-bottom: 4px;
+      }
+      .modal-subtitle {
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        margin-bottom: 10px;
+        line-height: 1.3;
+      }
+      .modal-desc {
+        font-size: 0.82rem;
+        line-height: 1.45;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .modal-notice-box {
+        padding: 10px 12px;
+        margin-bottom: 14px;
+        font-size: 0.78rem;
+        line-height: 1.4;
+        gap: 8px;
+      }
+      .modal-btn-confirm {
+        padding: 10px 24px;
+        font-size: 0.88rem;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   </style>
@@ -3462,15 +3620,19 @@
           </div>
         </div>
 
-        <!-- Sơ Đồ Quy Hoạch Tiện Ích Bản Sắc Việt (Hình ảnh đính kèm) -->
-        <figure class="editorial-diagram-showcase">
-          <img 
-            src="assets/Index_asset/MatBang/SoDo_ChiTiet_TienIch_5TruCot.jpg" 
-            alt="Sơ đồ chi tiết tiện ích Saigon Farm Resort" 
-            class="diagram-img"
-            onclick="openImageDirect(this.src, 'Sơ Đồ Chi Tiết Tiện Ích Văn Hóa &amp; Nghỉ Dưỡng Saigon Farm Resort')" decoding="async" loading="lazy">
+        <figure class="editorial-diagram-showcase" onclick="openImageDirect('assets/Index_asset/MatBang/SoDo_ChiTiet_TienIch_5TruCot.jpg', 'Sơ Đồ Chi Tiết Tiện Ích Văn Hóa &amp; Nghỉ Dưỡng Saigon Farm Resort')">
+          <div class="diagram-frame">
+            <img 
+              src="assets/Index_asset/MatBang/SoDo_ChiTiet_TienIch_5TruCot.jpg" 
+              alt="Sơ đồ chi tiết tiện ích Saigon Farm Resort" 
+              class="diagram-img"
+              decoding="async" 
+              loading="lazy">
+            <span class="diagram-zoom-badge"><i class="fa-solid fa-expand"></i> Chạm để xem 100%</span>
+          </div>
           <figcaption class="diagram-caption">
             <span><strong>SAIGON FARM RESORT – TIỆN ÍCH</strong> — Bản đồ định vị 10 không gian văn hóa, thể thao &amp; sinh thái</span>
+            <span style="color: var(--color-gold-dark); font-weight: 700; font-size: 0.78rem;"><i class="fa-solid fa-magnifying-glass-plus"></i> Xem 100%</span>
           </figcaption>
         </figure>
 
@@ -3848,7 +4010,7 @@
           <div class="amenity-layer-pane" id="amenity-pane-restaurant">
             <div class="amenity-pitch-guide">
               <div class="pitch-guide-header">
-                <h4 class="pitch-guide-title">4. Nhà Hàng Ẩm Thực Khu Trung Tâm (Central Restaurant) — Chuẩn Fine Dining &amp; Farm-To-Table (250 Chỗ)</h4>
+                <h4 class="pitch-guide-title">4. Nhà Hàng Ẩm Thực Trung Tâm Sang Trọng</h4>
               </div>
               <ul class="pitch-bullets">
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Nguồn thực phẩm Organic tại chỗ:</strong> Rau xanh, củ quả tươi sạch được canh tác tự nhiên tại nông trại điền trang, mang đến bữa ăn thuần khiết bảo vệ sức khỏe.</span></li>
@@ -4191,9 +4353,8 @@
             src="assets/Index_asset/MatBang/TongQuan_QuyMo.webp" 
             alt="Mặt bằng tổng thể phân lô Saigon Farm Resort" 
             onclick="openImageDirect(this.src, 'Mặt Bằng Phân Lô Tổng Thể Toàn Quần Thể Saigon Farm Resort')" decoding="async" loading="lazy">
-          <div style="padding: 10px 18px; background: #faf7f2; border-top: 1px solid var(--color-border); font-size: 0.84rem; display: flex; justify-content: space-between;">
+          <div style="padding: 10px 18px; background: #faf7f2; border-top: 1px solid var(--color-border); font-size: 0.84rem;">
             <span><strong style="color: var(--color-dark);">Bản Vẽ Quy Hoạch Phân Lô Chi Tiết</strong> — 100% Thổ cư có sổ đỏ riêng</span>
-            <span style="color: var(--color-gold-dark); font-weight: 700;"><i class="fa-solid fa-magnifying-glass-plus"></i> Nhấp xem chi tiết từng mã lô</span>
           </div>
         </figure>
 
