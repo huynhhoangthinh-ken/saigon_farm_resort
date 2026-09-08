@@ -1465,7 +1465,7 @@ def render_page(cat, all_cats):
       </div>
       
       <button type="button" class="modal-btn-confirm" onclick="closeBookingModal()">
-        <i class="fa-solid fa-check" style="margin-right: 6px;"></i> Đã Hiểu &amp; Đóng
+        <i class="fa-solid fa-xmark" style="margin-right: 6px;"></i> Đóng lại
       </button>
     </div>
   </div>
