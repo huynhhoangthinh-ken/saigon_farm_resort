@@ -284,16 +284,16 @@ document.addEventListener('DOMContentLoaded', function() {
   var header = document.querySelector('.main-header');
   function updateHeaderScroll() {
     if (!header) return;
+    // Clear any inline styles that might have been injected
+    header.style.background = '';
+    header.style.backgroundColor = '';
     if (window.innerWidth > 768) {
       if (window.scrollY > 50) {
-        header.style.cssText = 'position:fixed;top:0;left:0;right:0;width:100%;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.06);box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:10px 0;transition:all 0.3s ease;z-index:1000;';
         header.classList.add('scrolled-light');
       } else {
-        header.style.cssText = 'position:absolute;top:38px;left:0;right:0;width:100%;background:rgba(255,255,255,0.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:14px 0;transition:all 0.3s ease;z-index:100;';
         header.classList.remove('scrolled-light');
       }
     } else {
-      header.style.cssText = '';
       header.classList.remove('scrolled-light');
     }
   }
