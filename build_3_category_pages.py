@@ -298,7 +298,7 @@ def render_page(cat, all_cats):
       margin: 0 auto;
       padding: 0 20px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
@@ -1195,7 +1195,6 @@ def render_page(cat, all_cats):
   <!-- Utility Topbar -->
   <div class="topbar">
     <div class="topbar-container">
-      <div>🌿 <strong>Saigon Farm Resort:</strong> Quần Thể Nghỉ Dưỡng Sinh Thái Ven Hồ 100ha • Liền Kề Biển Hồ Tràm</div>
       <div style="display: flex; gap: 16px; align-items: center;">
         <a href="index.html">Trang Chủ</a>
         <a href="gioi-thieu.html">Bản Giới Thiệu</a>

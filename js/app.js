@@ -280,18 +280,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Sticky header on scroll for desktop
+  // Sticky header on scroll for desktop (Nền trong, chữ đen nhã nhặn sang trọng)
   var header = document.querySelector('.main-header');
-  window.addEventListener('scroll', function() {
+  function updateHeaderScroll() {
     if (!header) return;
     if (window.innerWidth > 768) {
-      if (window.scrollY > 80) {
-        header.style.cssText = 'position:fixed;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:12px 0;transition:all 0.3s ease;';
+      if (window.scrollY > 50) {
+        header.style.cssText = 'position:fixed;top:0;left:0;right:0;width:100%;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.06);box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:10px 0;transition:all 0.3s ease;z-index:1000;';
+        header.classList.add('scrolled-light');
       } else {
-        header.style.cssText = 'position:absolute;top:38px;background:linear-gradient(180deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);padding:20px 0;';
+        header.style.cssText = 'position:absolute;top:38px;left:0;right:0;width:100%;background:rgba(255,255,255,0.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:14px 0;transition:all 0.3s ease;z-index:100;';
+        header.classList.remove('scrolled-light');
       }
+    } else {
+      header.style.cssText = '';
+      header.classList.remove('scrolled-light');
     }
-  });
+  }
+  window.addEventListener('scroll', updateHeaderScroll, {passive: true});
+  window.addEventListener('resize', updateHeaderScroll, {passive: true});
+  updateHeaderScroll();
 
   // Swipe gesture for hero slider on mobile
   var hero = document.getElementById('heroAutoSlider');

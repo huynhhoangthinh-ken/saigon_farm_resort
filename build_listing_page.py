@@ -253,7 +253,7 @@ def update_listing():
     }}
     .topbar-container {{
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
@@ -853,7 +853,6 @@ def update_listing():
   <!-- Top Utility Bar -->
   <div class="topbar">
     <div class="container topbar-container">
-      <div>🌿 <strong>Saigon Farm Resort:</strong> Quần Thể Nghỉ Dưỡng Sinh Thái Ven Hồ 100ha • Liền Kề Biển Hồ Tràm</div>
       <div style="display: flex; gap: 16px; align-items: center;">
         <a href="index.html"><i class="fa-solid fa-house" style="font-size:0.75rem; color:#8c6b32;"></i> Trang Chủ</a>
         <a href="gioi-thieu.html"><i class="fa-solid fa-file-lines" style="font-size:0.75rem; color:#8c6b32;"></i> Bản Giới Thiệu</a>
