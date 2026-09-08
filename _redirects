@@ -1,0 +1,12 @@
+# Cloudflare Pages 301 Redirect Rules
+
+# 1. Canonical Domain: www to non-www
+https://www.saigonfarmresort.com/* https://saigonfarmresort.com/:splat 301
+
+# 2. Duplicate Introduction Pages to Canonical gioi-thieu.html
+/introduction.html /gioi-thieu.html 301
+/Saigon_Farm_Resort_Introduction.html /gioi-thieu.html 301
+
+# 3. Empty Article Root to Homepage Tabs Section
+/article /index.html#tabs-section 301
+/article/ /index.html#tabs-section 301

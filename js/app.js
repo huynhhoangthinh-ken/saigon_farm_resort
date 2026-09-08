@@ -174,44 +174,71 @@ window.activateTab = function(tabId) {
   // Fetch JSON and render Editorial Posts
   const editorialGrid = document.getElementById('editorial-grid');
   if (editorialGrid) {
-    function renderEditorialList(posts) {
-      editorialGrid.innerHTML = ''; // clear initial content
-      posts.forEach(post => {
-        const postHTML = `
-          <div class="grid-card">
-            <a href="article.html?id=${post.id}" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="${post.image}" alt="${post.title}" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="article.html?id=${post.id}" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">${post.title}</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                ${post.excerpt}
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="article.html?id=${post.id}" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-        `;
-        editorialGrid.insertAdjacentHTML('beforeend', postHTML);
-      });
+    function toSlug(str) {
+      return (str || '').normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd').replace(/Đ/g, 'd')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
     }
 
-    if (window.SAIGON_POSTS && Array.isArray(window.SAIGON_POSTS) && window.SAIGON_POSTS.length > 0) {
-      renderEditorialList(window.SAIGON_POSTS);
-    } else {
-      fetch('data/posts.json?v=' + Date.now())
-        .then(response => response.json())
-        .then(posts => {
-          window.SAIGON_POSTS = posts;
-          renderEditorialList(posts);
-        })
-        .catch(err => console.error("Error fetching posts:", err));
+    function createPostHTML(post) {
+      const slug = toSlug(post.title);
+      return `
+        <div class="grid-card">
+          <a href="bai-viet/${slug}.html" style="display: block; text-decoration: none; color: inherit;">
+            <div class="grid-img">
+               <img src="${post.image}" alt="${post.title}" loading="lazy">
+               <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
+            </div>
+          </a>
+          <div class="grid-card-info">
+            <a href="bai-viet/${slug}.html" style="text-decoration: none; color: inherit;">
+              <h5 style="margin-bottom: 8px; line-height: 1.4;">${post.title}</h5>
+            </a>
+            <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
+              ${post.excerpt}
+            </p>
+            <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
+              <a href="bai-viet/${slug}.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    let editorialOffset = editorialGrid.children.length; // Already pre-rendered 12
+    const loadMoreWrap = document.getElementById('load-more-editorial-wrap');
+
+    window.loadMoreEditorialPosts = function() {
+      function appendBatch(posts) {
+        const nextBatch = posts.slice(editorialOffset, editorialOffset + 12);
+        nextBatch.forEach(post => {
+          editorialGrid.insertAdjacentHTML('beforeend', createPostHTML(post));
+        });
+        editorialOffset += nextBatch.length;
+        if (editorialOffset >= posts.length && loadMoreWrap) {
+          loadMoreWrap.style.display = 'none';
+        }
+      }
+
+      if (window.SAIGON_POSTS && Array.isArray(window.SAIGON_POSTS) && window.SAIGON_POSTS.length > 0) {
+        appendBatch(window.SAIGON_POSTS);
+      } else {
+        fetch('data/posts.json?v=' + Date.now())
+          .then(response => response.json())
+          .then(posts => {
+            window.SAIGON_POSTS = posts;
+            appendBatch(posts);
+          })
+          .catch(err => console.error("Error fetching posts:", err));
+      }
+    };
+
+    // If no posts were pre-rendered, load the first batch
+    if (editorialGrid.children.length === 0) {
+      window.loadMoreEditorialPosts();
     }
   }
 });
