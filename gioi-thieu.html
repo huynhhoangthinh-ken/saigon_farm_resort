@@ -971,28 +971,7 @@
     }
 
     .btn-lake-glide-main {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, #183526 0%, #0d1e15 100%);
-      color: #f7eed9;
-      border: 1px solid var(--color-gold);
-      padding: 10px 22px;
-      border-radius: 30px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(24, 53, 38, 0.25);
-      transition: all 0.25s ease;
-      font-family: inherit;
-    }
-
-    .btn-lake-glide-main:hover {
-      background: var(--color-gold);
-      color: #111a14;
-      border-color: var(--color-gold);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(194, 155, 83, 0.35);
+      display: none !important;
     }
 
     .lake-collage-grid {
@@ -1724,24 +1703,7 @@
       border: 1px solid rgba(194, 155, 83, 0.35);
     }
     .btn-pane-lightbox {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #183526;
-      color: #f7eed9;
-      border: 1px solid var(--color-gold);
-      padding: 7px 16px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: inherit;
-    }
-    .btn-pane-lightbox:hover {
-      background: var(--color-gold);
-      color: #111a14;
-      transform: translateY(-1px);
+      display: none !important;
     }
     .pitch-guide-title {
       font-family: var(--font-serif);
@@ -3131,9 +3093,6 @@
               <h4 class="lake-hero-title">Toàn Cảnh Mặt Nước Hồ Lồ Ồ 100ha Xanh Mát, Tự Nhiên</h4>
               <p class="lake-hero-desc">Bức tranh sinh thái thực tế: lòng hồ nước ngọt 100ha trong xanh nối liền những cánh đồng lúa thanh bình, mang lại nguồn vượng khí phong thủy độc bản cho Saigon Farm Resort.</p>
             </div>
-            <button type="button" class="btn-hero-expand" onclick="event.stopPropagation(); openLakeLightbox(0);">
-              <i class="fa-solid fa-expand"></i> Phóng To &amp; Lướt Bộ Ảnh
-            </button>
           </div>
         </div>
 
@@ -3146,9 +3105,6 @@
         <div class="lake-collage-wrapper" id="lake-collage-wrapper">
           <div class="lake-collage-header">
             <span class="lake-collage-lead"><i class="fa-solid fa-images"></i> Bộ Sưu Tập 8 Ảnh Thực Tế Cảnh Hồ Lồ Ồ 100ha Xanh Mát &amp; Tự Nhiên</span>
-            <button type="button" class="btn-lake-glide-main" onclick="openLakeLightbox(0)">
-              <i class="fa-solid fa-expand"></i> Mở Lướt Toàn Màn Hình (8 Ảnh)
-            </button>
           </div>
 
           <div class="lake-collage-grid" id="lake-collage-grid">
@@ -3460,10 +3416,7 @@
           <div class="amenity-layer-pane active" id="amenity-pane-tong-the">
             <div class="amenity-pitch-guide">
               <div class="pitch-guide-header">
-                <h4 class="pitch-guide-title" style="margin-bottom:0;">1. Tổng Thể Quy Hoạch Quần Thể Tiện Ích 24.488 m²</h4>
-                <button type="button" class="btn-pane-lightbox" onclick="openAmenityClusterLightbox('tong-the', 0)">
-                  <i class="fa-solid fa-expand"></i> Mở Toàn Màn Hình &amp; Lướt Bộ Ảnh (2 Ảnh)
-                </button>
+                <h4 class="pitch-guide-title">1. Tổng Thể Quy Hoạch Quần Thể Tiện Ích 24.488 m²</h4>
               </div>
               <ul class="pitch-bullets">
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Tỷ lệ tiện ích độc tôn:</strong> Dành trọn vẹn 24.488 m² vị trí trung tâm phục vụ riêng cho 36 chủ nhân — bình quân mỗi khuôn viên sở hữu thêm 521 m² tiện ích đẳng cấp.</span></li>
@@ -3499,10 +3452,7 @@
           <div class="amenity-layer-pane" id="amenity-pane-clubhouse">
             <div class="amenity-pitch-guide">
               <div class="pitch-guide-header">
-                <h4 class="pitch-guide-title" style="margin-bottom:0;">2. Clubhouse 3.000 m² Sàn &amp; Bến Thuyền Kayak Ven Hồ 100ha</h4>
-                <button type="button" class="btn-pane-lightbox" onclick="openAmenityClusterLightbox('clubhouse', 0)">
-                  <i class="fa-solid fa-expand"></i> Mở Toàn Màn Hình &amp; Lướt Bộ Ảnh (12 Ảnh)
-                </button>
+                <h4 class="pitch-guide-title">2. Clubhouse 3.000 m² Sàn &amp; Bến Thuyền Kayak Ven Hồ 100ha</h4>
               </div>
               <ul class="pitch-bullets">
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Quy mô biểu tượng 3.000 m² sàn:</strong> Tọa lạc sát mép nước hồ Lồ Ồ, là nơi đón tiếp ngoại giao, giao lưu cộng đồng tinh hoa và tổ chức các đêm nhạc acoustic ven hồ.</span></li>
@@ -3638,10 +3588,7 @@
           <div class="amenity-layer-pane" id="amenity-pane-facilities">
             <div class="amenity-pitch-guide">
               <div class="pitch-guide-header">
-                <h4 class="pitch-guide-title" style="margin-bottom:0;">3. Hồ Bơi Vô Cực Điện Phân Muối, Pickleball &amp; Việt Mã Viên</h4>
-                <button type="button" class="btn-pane-lightbox" onclick="openAmenityClusterLightbox('facilities', 0)">
-                  <i class="fa-solid fa-expand"></i> Mở Toàn Màn Hình &amp; Lướt Bộ Ảnh (3 Ảnh)
-                </button>
+                <h4 class="pitch-guide-title">3. Hồ Bơi Vô Cực Điện Phân Muối, Pickleball &amp; Việt Mã Viên</h4>
               </div>
               <ul class="pitch-bullets">
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Công nghệ điện phân muối khoáng tự nhiên:</strong> Khử trùng sinh học không dùng hóa chất Clo, an toàn tuyệt đối cho mắt, làn da của trẻ em và sức khỏe người cao tuổi.</span></li>
@@ -3687,10 +3634,7 @@
           <div class="amenity-layer-pane" id="amenity-pane-restaurant">
             <div class="amenity-pitch-guide">
               <div class="pitch-guide-header">
-                <h4 class="pitch-guide-title" style="margin-bottom:0;">4. Nhà Hàng Ẩm Thực Khu Trung Tâm (Central Restaurant) — Chuẩn Fine Dining &amp; Farm-To-Table (250 Chỗ)</h4>
-                <button type="button" class="btn-pane-lightbox" onclick="openAmenityClusterLightbox('restaurant', 0)">
-                  <i class="fa-solid fa-expand"></i> Mở Toàn Màn Hình &amp; Lướt Bộ Ảnh (16 Ảnh)
-                </button>
+                <h4 class="pitch-guide-title">4. Nhà Hàng Ẩm Thực Khu Trung Tâm (Central Restaurant) — Chuẩn Fine Dining &amp; Farm-To-Table (250 Chỗ)</h4>
               </div>
               <ul class="pitch-bullets">
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Nguồn thực phẩm Organic tại chỗ:</strong> Rau xanh, củ quả tươi sạch được canh tác tự nhiên tại nông trại điền trang, mang đến bữa ăn thuần khiết bảo vệ sức khỏe.</span></li>
@@ -3866,10 +3810,7 @@
           <div class="amenity-layer-pane" id="amenity-pane-duong-noi-bo">
             <div class="amenity-pitch-guide">
               <div class="pitch-guide-header">
-                <h4 class="pitch-guide-title" style="margin-bottom:0;">5. Tuyến Đường Trục Nội Bộ Cảnh Quan Rợp Bóng Mát</h4>
-                <button type="button" class="btn-pane-lightbox" onclick="openAmenityClusterLightbox('duong-noi-bo', 0)">
-                  <i class="fa-solid fa-expand"></i> Mở Toàn Màn Hình &amp; Lướt Bộ Ảnh (5 Ảnh)
-                </button>
+                <h4 class="pitch-guide-title">5. Tuyến Đường Trục Nội Bộ Cảnh Quan Rợp Bóng Mát</h4>
               </div>
               <ul class="pitch-bullets">
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Hạ tầng giao thông sinh thái:</strong> Lòng đường rộng thoáng lát đá tự nhiên, lề đường phủ cỏ xanh, hệ thống điện ngầm và thoát nước sinh thái tự thấm bền vững.</span></li>
@@ -3935,10 +3876,7 @@
           <div class="amenity-layer-pane" id="amenity-pane-ruong-lua">
             <div class="amenity-pitch-guide">
               <div class="pitch-guide-header">
-                <h4 class="pitch-guide-title" style="margin-bottom:0;">6. Dinh Thự Mẫu Sinh Thái Ven Ruộng Lúa Bản Sắc Việt</h4>
-                <button type="button" class="btn-pane-lightbox" onclick="openAmenityClusterLightbox('ruong-lua', 0)">
-                  <i class="fa-solid fa-expand"></i> Mở Toàn Màn Hình &amp; Lướt Bộ Ảnh (7 Ảnh)
-                </button>
+                <h4 class="pitch-guide-title">6. Dinh Thự Mẫu Sinh Thái Ven Ruộng Lúa Bản Sắc Việt</h4>
               </div>
               <ul class="pitch-bullets">
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Kiến trúc bản sắc Việt đương đại:</strong> Mái ngói truyền thống, hệ khung cột gỗ mộc tự nhiên, hành lang rộng đón gió đối lưu tự nhiên quanh năm.</span></li>
