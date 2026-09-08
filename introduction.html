@@ -90,24 +90,24 @@
        ================================================================ */
     .pitch-nav-wrapper {
       position: sticky;
-      top: 12px;
+      top: 8px;
       z-index: 99;
       max-width: 1040px;
-      margin: 0 auto 24px;
+      margin: 0 auto 16px;
       padding: 0 4px;
     }
 
     .pitch-nav-bar {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 3px;
       background: rgba(24, 48, 36, 0.95);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(194, 155, 83, 0.35);
-      border-radius: 40px;
-      padding: 6px 10px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+      border-radius: 30px;
+      padding: 3px 6px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.18);
       overflow-x: auto;
       scrollbar-width: none;
     }
@@ -115,46 +115,46 @@
 
     .pitch-nav-label {
       font-family: var(--font-brand);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 800;
       color: var(--color-gold-light);
-      padding: 0 10px;
+      padding: 0 6px 0 4px;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       white-space: nowrap;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
     }
-    .pitch-nav-label i { color: var(--color-gold); }
+    .pitch-nav-label i { color: var(--color-gold); font-size: 0.72rem; }
 
     .pitch-nav-item {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 7px 14px;
-      border-radius: 20px;
+      gap: 4px;
+      padding: 4px 7px;
+      border-radius: 16px;
       color: #e3ebe7;
       text-decoration: none;
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       font-weight: 600;
       white-space: nowrap;
-      transition: all 0.22s ease;
+      transition: all 0.2s ease;
     }
     .pitch-nav-item:hover, .pitch-nav-item.active {
       background: var(--color-gold);
       color: var(--color-dark);
-      box-shadow: 0 2px 10px rgba(194, 155, 83, 0.4);
+      box-shadow: 0 2px 8px rgba(194, 155, 83, 0.4);
     }
     .pitch-nav-item .step-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       background: rgba(255,255,255,0.2);
-      font-size: 0.68rem;
+      font-size: 0.62rem;
       font-weight: 800;
     }
     .pitch-nav-item.active .step-badge, .pitch-nav-item:hover .step-badge {
@@ -379,22 +379,80 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
       margin-top: 14px;
+      width: 100%;
     }
 
-    .meta-pill {
+    .meta-pills-bar {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
+      gap: 8px;
       background: var(--color-gold-box-bg);
       border: 1px solid var(--color-gold-box-border);
       color: var(--color-gold-dark);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 700;
       padding: 6px 16px;
-      border-radius: 20px;
+      border-radius: 24px;
+      box-shadow: 0 2px 8px rgba(194, 155, 83, 0.1);
+      max-width: 100%;
+      line-height: 1.4;
+    }
+
+    .meta-bar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .meta-bar-item i {
+      color: var(--color-gold-dark);
+      font-size: 0.76rem;
+    }
+
+    .meta-bar-sep {
+      color: var(--color-gold);
+      font-weight: 400;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      .pitch-nav-wrapper {
+        top: 6px;
+        margin: 0 auto 12px;
+      }
+      .pitch-nav-bar {
+        padding: 3px 5px;
+        gap: 3px;
+      }
+      .pitch-nav-label {
+        font-size: 0.64rem;
+        padding: 0 4px 0 2px;
+      }
+      .pitch-nav-item {
+        padding: 3px 6px;
+        font-size: 0.72rem;
+        gap: 3px;
+      }
+      .pitch-nav-item .step-badge {
+        width: 15px;
+        height: 15px;
+        font-size: 0.58rem;
+      }
+
+      .meta-pills-bar {
+        font-size: 0.68rem;
+        padding: 5px 10px;
+        gap: 4px;
+        border-radius: 12px;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+      .meta-bar-item {
+        gap: 3px;
+      }
     }
 
     .salutation {
@@ -2925,9 +2983,15 @@
         <h1 class="project-name">SAIGON FARM RESORT</h1>
 
         <div class="meta-pills-row">
-          <span class="meta-pill"><i class="fa-regular fa-calendar-check" style="color: var(--color-gold-dark);"></i> Mở Bán Đợt 1 • Tháng 9/2026</span>
-          <span class="meta-pill"><i class="fa-solid fa-award" style="color: var(--color-gold-dark);"></i> Đất 100% Thổ Cư — Sổ Đỏ Riêng</span>
-          <span class="meta-pill"><i class="fa-solid fa-gem" style="color: var(--color-gold-dark);"></i> Giới Hạn 36 Dinh Thự Mở Bán</span>
+          <div class="meta-pills-bar">
+            <span class="meta-bar-item"><i class="fa-regular fa-calendar-check"></i> Mở Bán: Tháng 9/2026</span>
+            <span class="meta-bar-sep">•</span>
+            <span class="meta-bar-item"><i class="fa-solid fa-award"></i> Thổ Cư</span>
+            <span class="meta-bar-sep">•</span>
+            <span class="meta-bar-item"><i class="fa-solid fa-certificate"></i> Sổ Riêng</span>
+            <span class="meta-bar-sep">•</span>
+            <span class="meta-bar-item"><i class="fa-solid fa-gem"></i> Giới Hạn 36 Dinh Thự</span>
+          </div>
         </div>
       </header>
 
