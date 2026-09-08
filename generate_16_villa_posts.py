@@ -18,7 +18,7 @@ for p in other_posts:
 
 CONTACT_BANNER = """
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 35px;">
-  <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+  <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
   <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Quản Trị & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
   <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -998,7 +998,7 @@ new_estate_posts = [
         "date": "30 TH8 2026",
         "category": "Đầu Tư & Tích Sản",
         "content": f"""
-<p>Để giúp quý khách hàng và nhà đầu tư dễ dàng đưa ra quyết định chọn lựa căn điền trang hoàn hảo nhất tại <strong>Saigon Farm Resort</strong>, Đại Chúng Properties tổng hợp <strong>Ma Trận So Sánh Toàn Diện</strong> giữa 4 mẫu điền trang mở bán: <strong>Sunrise 1, Dinh Thự Sunrise 2, Sunset 1 và Sunset 2</strong>.</p>
+<p>Để giúp quý khách hàng và nhà đầu tư dễ dàng đưa ra quyết định chọn lựa căn điền trang hoàn hảo nhất tại <strong>Saigon Farm Resort</strong>, Ban Quản Lý Saigon Farm Resort tổng hợp <strong>Ma Trận So Sánh Toàn Diện</strong> giữa 4 mẫu điền trang mở bán: <strong>Sunrise 1, Dinh Thự Sunrise 2, Sunset 1 và Sunset 2</strong>.</p>
 
 <div class="pull-quote">
   "Mỗi mẫu điền trang tại Saigon Farm Resort là một mảnh ghép kiến trúc độc bản. Không có căn nhà tốt nhất, chỉ có căn nhà phù hợp nhất với triết lý sống và kỳ vọng của bạn."

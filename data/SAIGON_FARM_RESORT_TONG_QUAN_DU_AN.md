@@ -25,7 +25,7 @@
 | :--- | :--- |
 | **Tên thương mại** | **Saigon Farm Resort** |
 | **Chủ đầu tư & Đơn vị vận hành** | **MDS Living** (Đơn vị tiên phong phát triển và vận hành chuỗi khu nghỉ dưỡng sinh thái cao cấp) |
-| **Tổng đại lý tiếp thị & phân phối** | **Đại Chúng Properties** |
+| **Tổng đại lý tiếp thị & phân phối** | **Ban Quản Lý Saigon Farm Resort** |
 | **Vị trí địa lý** | Hồ Lồ Ồ, Xã Đất Đỏ,TP. Hồ Chí Minh (Liền kề cung đường du lịch biển Hồ Tràm – Bình Châu) |
 | **Quy mô mặt nước & sinh thái** | Mặt hồ tự nhiên **100 ha**, 3 mặt giáp cánh đồng lúa hữu cơ và hệ sinh thái cây xanh tự nhiên  |
 | **Tổng số sản phẩm toàn khu** | **47 sản phẩm điền trang** độc bản |
@@ -235,4 +235,4 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
 - **Trang chuyên đề Điền An (Haven):** [https://saigonfarmresort.com/dien-an.html](https://saigonfarmresort.com/dien-an.html)
 
 ---
-*Tài liệu được biên soạn và chuẩn hóa bởi Đại Chúng Properties & MDS Living — Bản quyền cập nhật năm 2026.*
+*Tài liệu được biên soạn và chuẩn hóa bởi Saigon Farm Resort & MDS Living — Bản quyền cập nhật năm 2026.*

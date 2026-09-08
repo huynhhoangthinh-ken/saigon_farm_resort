@@ -668,7 +668,7 @@ def generate_article_content(art):
       {title}
     </h1>
     <p style="font-size: 1.1rem; color: #555; font-style: italic; margin: 0; line-height: 1.6;">
-      {art["subtitle"]} • Phân tích chuyên sâu bởi Hội Đồng Kiến Trúc & Vận Hành Đại Chúng Properties kết hợp cùng MDS Living.
+      {art["subtitle"]} • Phân tích chuyên sâu bởi Hội Đồng Kiến Trúc & Vận Hành Ban Quản Lý Saigon Farm Resort kết hợp cùng MDS Living.
     </p>
   </div>
 
@@ -781,7 +781,7 @@ def generate_article_content(art):
     <span style="background: #c9a96e; color: #000; font-size: 0.72rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase;">TIÊU CHUẨN ĐIỀN TRANG 5 SAO</span>
     <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin: 12px 0 8px; color: #fff;">SAIGON FARM RESORT • NƠI TRỞ VỀ CỦA BẢN SẮC & THỊNH VƯỢNG</h3>
     <p style="font-size: 0.92rem; color: #ddd; max-width: 650px; margin: 0 auto 16px;">
-      Tiếp thị & Phân phối độc quyền bởi <strong>Đại Chúng Properties</strong> • Quản lý vận hành chuẩn mực bởi <strong>MDS Living</strong>.
+      Tiếp thị & Phân phối độc quyền bởi <strong>Ban Quản Lý Saigon Farm Resort</strong> • Quản lý vận hành chuẩn mực bởi <strong>MDS Living</strong>.
     </p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-block; background: #c9a96e; color: #000; font-weight: 700; font-size: 0.88rem; padding: 10px 22px; border-radius: 4px; text-decoration: none;">
       <i class="fa-solid fa-phone" style="margin-right: 6px;"></i> Nhận Trọn Bộ Hồ Sơ & Bảng Giá Chi Tiết
@@ -800,7 +800,7 @@ def generate_article_content(art):
   <div style="border-top: 1px solid #e0d5c1; padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
     <div>
       <span style="font-size: 0.85rem; color: #888; display: block;">Tác giả chuyên đề:</span>
-      <strong style="color: #111; font-size: 0.95rem;">Ban Nghiên Cứu Phát Triển Điền Trang • Đại Chúng Properties</strong>
+      <strong style="color: #111; font-size: 0.95rem;">Ban Nghiên Cứu Phát Triển Điền Trang • Ban Quản Lý Saigon Farm Resort</strong>
     </div>
     <div style="display: flex; gap: 10px;">
       <a href="index.html#tabs-section" class="editorial-btn" style="padding: 8px 16px; font-size: 0.82rem; text-decoration: none;">
@@ -824,7 +824,7 @@ for art in ARTICLES_DATA:
         "title": art["title"],
         "excerpt": art["excerpt"],
         "date": "2026-08-30",
-        "author": "Đại Chúng Properties & MDS Living",
+        "author": "Saigon Farm Resort & MDS Living",
         "category": art["category"],
         "image": art["image"],
         "content": generate_article_content(art)

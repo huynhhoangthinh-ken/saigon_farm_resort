@@ -503,7 +503,7 @@ tab_eco_villas_html = """<!-- Tab 3: Điền Trang Sinh Thái (tab-eco-villas) -
       <div class="grid-card-info" style="padding: 16px;">
         <h5 style="font-size: 1.1rem; margin-bottom: 6px; font-family: var(--font-serif);">Điền Trang Sunrise 1</h5>
         <p class="grid-card-subtitle" style="font-size: 0.84rem; color: #666; margin-bottom: 8px;">Khuôn viên 1.000m² - 1.200m² • Hồ bơi 45m² • Vườn thảo mộc • 1 Tầng thoáng đãng</p>
-        <span style="color: #2e7d32; font-weight: 700; font-size: 0.88rem;">Giá: Liên Hệ Đại Chúng</span>
+        <span style="color: #2e7d32; font-weight: 700; font-size: 0.88rem;">Giá: Liên Hệ Saigon Farm Resort</span>
       </div>
     </a>
 
@@ -517,7 +517,7 @@ tab_eco_villas_html = """<!-- Tab 3: Điền Trang Sinh Thái (tab-eco-villas) -
       <div class="grid-card-info" style="padding: 16px;">
         <h5 style="font-size: 1.1rem; margin-bottom: 6px; font-family: var(--font-serif); color: #8a6d3b;">Dinh Thự Sunrise 2</h5>
         <p class="grid-card-subtitle" style="font-size: 0.84rem; color: #666; margin-bottom: 8px;">Khuôn viên 1.500m² • Hồ bơi vô cực 53m² • Trần cao 6m • Sân thượng 40m²</p>
-        <span style="color: #8a6d3b; font-weight: 700; font-size: 0.88rem;">Giá: Liên Hệ Đại Chúng</span>
+        <span style="color: #8a6d3b; font-weight: 700; font-size: 0.88rem;">Giá: Liên Hệ Saigon Farm Resort</span>
       </div>
     </a>
 
@@ -531,7 +531,7 @@ tab_eco_villas_html = """<!-- Tab 3: Điền Trang Sinh Thái (tab-eco-villas) -
       <div class="grid-card-info" style="padding: 16px;">
         <h5 style="font-size: 1.1rem; margin-bottom: 6px; font-family: var(--font-serif);">Điền Trang Sunset 1</h5>
         <p class="grid-card-subtitle" style="font-size: 0.84rem; color: #666; margin-bottom: 8px;">Khuôn viên 1.000m² • Sân trong 38m² • Hồ bơi 45m² • Vườn ăn trái hữu cơ 260m²</p>
-        <span style="color: #2e7d32; font-weight: 700; font-size: 0.88rem;">Giá: Liên Hệ Đại Chúng</span>
+        <span style="color: #2e7d32; font-weight: 700; font-size: 0.88rem;">Giá: Liên Hệ Saigon Farm Resort</span>
       </div>
     </a>
 
@@ -545,7 +545,7 @@ tab_eco_villas_html = """<!-- Tab 3: Điền Trang Sinh Thái (tab-eco-villas) -
       <div class="grid-card-info" style="padding: 16px;">
         <h5 style="font-size: 1.1rem; margin-bottom: 6px; font-family: var(--font-serif);">Điền Trang Sunset 2</h5>
         <p class="grid-card-subtitle" style="font-size: 0.84rem; color: #666; margin-bottom: 8px;">Khuôn viên 1.200m² • Vườn ăn trái 482m² • Ban công ngắm trọn hoàng hôn</p>
-        <span style="color: #2e7d32; font-weight: 700; font-size: 0.88rem;">Giá: Liên Hệ Đại Chúng</span>
+        <span style="color: #2e7d32; font-weight: 700; font-size: 0.88rem;">Giá: Liên Hệ Saigon Farm Resort</span>
       </div>
     </a>
   </div>

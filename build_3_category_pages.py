@@ -149,7 +149,7 @@ def render_page(cat, all_cats):
             {
                 "icon": "fa-route",
                 "title": "Quyền Ưu Tiên Ra Hàng Theo Lộ Trình CĐT",
-                "desc": "Được đội ngũ kinh doanh Đại Chúng Properties đồng hành hỗ trợ ra hàng theo từng giai đoạn tăng giá mở bán tiếp theo của khu điền trang."
+                "desc": "Được đội ngũ kinh doanh Ban Quản Lý Saigon Farm Resort đồng hành hỗ trợ ra hàng theo từng giai đoạn tăng giá mở bán tiếp theo của khu điền trang."
             }
         ]
         product_form_desc = "Đất nền điền trang 100% thổ cư, sổ đỏ cầm tay, hạ tầng hoàn thiện đồng bộ (đường nội khu trải nhựa, vỉa hè cỏ lạc, cấp điện nước ngầm). Nhà đầu tư an tâm nắm giữ tài sản đất vàng ven đô không lo khấu hao."
@@ -1392,7 +1392,7 @@ def render_page(cat, all_cats):
           <span style="font-family: var(--font-serif); font-size: 1.2rem; color: #fff; font-weight: 700;">Saigon Farm Resort</span>
         </div>
         <p style="font-size: 0.88rem; line-height: 1.7; color: #8e9e96; margin-bottom: 20px;">
-          Quần thể biệt phủ điền trang sinh thái tựa hồ 100ha - hướng biển. Đất 100% thổ cư, sổ đỏ riêng từng lô, phát triển bởi Đại Chúng Properties &amp; MDS Living.
+          Quần thể biệt phủ điền trang sinh thái tựa hồ 100ha - hướng biển. Đất 100% thổ cư, sổ đỏ riêng từng lô, phát triển bởi Ban Quản Lý Saigon Farm Resort &amp; MDS Living.
         </p>
         <p style="font-size: 0.88rem; color: var(--gold-light);">
           📍 <strong>Địa chỉ:</strong> Xã Đất Đỏ, TP. Hồ Chí Minh.
@@ -1413,7 +1413,7 @@ def render_page(cat, all_cats):
         <h4 class="footer-heading">Thông Tin Pháp Lý</h4>
         <ul class="footer-links">
           <li><a href="gioi-thieu.html">Bản Giới Thiệu Điền Trang</a></li>
-          <li><a href="article.html?id=301">Về Đại Chúng Properties</a></li>
+          <li><a href="article.html?id=301">Về Ban Quản Lý Saigon Farm Resort</a></li>
           <li><a href="article.html?id=303">Báo Chí &amp; Pháp Lý Minh Bạch</a></li>
           <li><a href="article.html?id=304">Đăng Ký Khảo Sát Thực Địa</a></li>
         </ul>
@@ -1432,7 +1432,7 @@ def render_page(cat, all_cats):
 
     <div class="footer-bottom">
       <div>© 2026 Saigon Farm Resort. Bảo lưu mọi quyền.</div>
-      <div>Phát triển bởi: <strong>MDS Living &amp; Đại Chúng Properties</strong></div>
+      <div>Phát triển bởi: <strong>MDS Living &amp; Ban Quản Lý Saigon Farm Resort</strong></div>
     </div>
   </footer>
 

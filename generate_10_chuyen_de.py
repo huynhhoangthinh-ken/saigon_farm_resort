@@ -13,7 +13,7 @@ new_articles = [
         "excerpt": "Sự chuyển dịch từ những căn penthouse hào nhoáng nơi phố thị nén sang không gian biệt phủ điền trang 1.000m² - 1.500m² ven hồ tự nhiên 100ha: Khi đỉnh cao của sự xa xỉ là diện tích mảng xanh và sự an yên tuyệt đối.",
         "image": "assets/posts/chuyen_de/401_biet_phu_xu_huong.jpg",
         "date": "31 TH8 2026",
-        "author": "Ban Nghiên Cứu Phát Triển & Xu Hướng Thị Trường • Đại Chúng Properties",
+        "author": "Ban Nghiên Cứu Phát Triển & Xu Hướng Thị Trường • Ban Quản Lý Saigon Farm Resort",
         "category": "Xu Hướng Điền Trang",
         "content": """
 <article class="article-detail" style="font-family: var(--font-sans); color: #2c2c2c; line-height: 1.85; max-width: 900px; margin: 0 auto;">
@@ -60,7 +60,7 @@ new_articles = [
 
   <blockquote style="border-left: 3px solid #8a6d3b; margin: 30px 0; padding: 16px 24px; background: #faf7f2; font-style: italic; color: #444; font-size: 1.05rem; line-height: 1.7;">
     "Sự xa xỉ tột cùng của thời đại mới không phải là một chiếc đồng hồ nạm kim cương hay một căn phòng dát vàng, mà là quyền năng sở hữu một khoảng trời khoáng đạt, một mặt hồ tự nhiên và không gian sống hoàn toàn không có tiếng ồn phố thị."
-    <footer style="margin-top: 8px; font-size: 0.85rem; color: #8a6d3b; font-weight: 700; text-align: right;">— Triết Lý Phát Triển Đại Chúng Properties</footer>
+    <footer style="margin-top: 8px; font-size: 0.85rem; color: #8a6d3b; font-weight: 700; text-align: right;">— Triết Lý Phát Triển Ban Quản Lý Saigon Farm Resort</footer>
   </blockquote>
 
   <h2 style="font-family: var(--font-serif); color: #111; font-size: 1.55rem; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #e0d5c1;">
@@ -125,7 +125,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -136,7 +136,7 @@ new_articles = [
   <div style="border-top: 1px solid #e0d5c1; padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
     <div>
       <span style="font-size: 0.85rem; color: #888; display: block;">Tác giả chuyên đề:</span>
-      <strong style="color: #111; font-size: 0.95rem;">Ban Nghiên Cứu Phát Triển & Xu Hướng Thị Trường • Đại Chúng Properties</strong>
+      <strong style="color: #111; font-size: 0.95rem;">Ban Nghiên Cứu Phát Triển & Xu Hướng Thị Trường • Ban Quản Lý Saigon Farm Resort</strong>
     </div>
     <div style="display: flex; gap: 10px;">
       <a href="index.html#tabs-section" class="editorial-btn" style="padding: 8px 16px; font-size: 0.82rem; text-decoration: none;">
@@ -244,7 +244,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -354,7 +354,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -461,7 +461,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -497,7 +497,7 @@ new_articles = [
         "excerpt": "Hành trình khắc họa dòng chảy 4.000 năm lịch sử hào hùng của dân tộc Việt Nam tại Saigon Farm Resort qua trục cảnh quan Dòng Sử Việt – Về Nguồn, nghệ thuật kiến trúc mộc bản sắc và sứ mệnh trao truyền ngọn lửa tự hào dân tộc cho các thế hệ con Lạc cháu Hồng.",
         "image": "assets/Index_asset/Tien_ich_minh_hoa/Duong_Ve_Nguon.png",
         "date": "31 TH8 2026",
-        "author": "Hội Đồng Nghiên Cứu Văn Hóa Đại Chúng Properties",
+        "author": "Hội Đồng Nghiên Cứu Văn Hóa Ban Quản Lý Saigon Farm Resort",
         "category": "Văn Hóa & Bản Sắc",
         "content": "
 <article class=\"article-detail\" style=\"font-family: var(--font-sans); color: #2c2c2c; line-height: 1.85; max-width: 900px; margin: 0 auto;\">
@@ -799,7 +799,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -835,7 +835,7 @@ new_articles = [
         "excerpt": "Chữ Hiếu đứng đầu trăm nết thiện: Tìm về chốn điền trang sinh thái ven hồ để ông bà an dưỡng tuổi già thanh tịnh, cha mẹ thảnh thơi và con cháu sum vầy trong tình thân gia tộc trường tồn.",
         "image": "assets/posts/xa_xi_ban_sac/hien_viet.jpg",
         "date": "31 TH8 2026",
-        "author": "Ban Tư Vấn Phong Cách Sống Gia Đình • Đại Chúng Properties",
+        "author": "Ban Tư Vấn Phong Cách Sống Gia Đình • Ban Quản Lý Saigon Farm Resort",
         "category": "Gia Đình & Truyền Thống",
         "content": """
 <article class="article-detail" style="font-family: var(--font-sans); color: #2c2c2c; line-height: 1.85; max-width: 900px; margin: 0 auto;">
@@ -906,7 +906,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -917,7 +917,7 @@ new_articles = [
   <div style="border-top: 1px solid #e0d5c1; padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
     <div>
       <span style="font-size: 0.85rem; color: #888; display: block;">Tác giả chuyên đề:</span>
-      <strong style="color: #111; font-size: 0.95rem;">Ban Tư Vấn Phong Cách Sống Gia Đình • Đại Chúng Properties</strong>
+      <strong style="color: #111; font-size: 0.95rem;">Ban Tư Vấn Phong Cách Sống Gia Đình • Ban Quản Lý Saigon Farm Resort</strong>
     </div>
     <div style="display: flex; gap: 10px;">
       <a href="index.html#tabs-section" class="editorial-btn" style="padding: 8px 16px; font-size: 0.82rem; text-decoration: none;">
@@ -1006,7 +1006,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -1095,7 +1095,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -1131,7 +1131,7 @@ new_articles = [
         "excerpt": "Trong bối cảnh quỹ đất nội đô cạn kiệt và quy hoạch đô thị nén thu hẹp không gian, việc sở hữu một khuôn viên điền trang 1.000m² - 1.500m² ven hồ tự nhiên 100ha là cơ hội tích sản vô giá và khẳng định vị thế đỉnh cao.",
         "image": "assets/Index_asset/Flycam/DJI_0014_2.JPG",
         "date": "31 TH8 2026",
-        "author": "Ban Phân Tích Dữ Liệu BĐS Nghỉ Dưỡng • Đại Chúng Properties",
+        "author": "Ban Phân Tích Dữ Liệu BĐS Nghỉ Dưỡng • Ban Quản Lý Saigon Farm Resort",
         "category": "Đầu Tư & Bất Động Sản",
         "content": """
 <article class="article-detail" style="font-family: var(--font-sans); color: #2c2c2c; line-height: 1.85; max-width: 900px; margin: 0 auto;">
@@ -1202,7 +1202,7 @@ new_articles = [
   </p>
 
   <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+    <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
     <p style="margin-bottom: 6px; font-size: 0.95rem;">🏢 <strong>Phòng Kinh Doanh & Tư Vấn Điền Trang:</strong> Saigon Farm Resort</p>
     <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo Tiếp Nhận Thông Tin:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
     <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
@@ -1213,7 +1213,7 @@ new_articles = [
   <div style="border-top: 1px solid #e0d5c1; padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
     <div>
       <span style="font-size: 0.85rem; color: #888; display: block;">Tác giả chuyên đề:</span>
-      <strong style="color: #111; font-size: 0.95rem;">Ban Phân Tích Dữ Liệu BĐS Nghỉ Dưỡng • Đại Chúng Properties</strong>
+      <strong style="color: #111; font-size: 0.95rem;">Ban Phân Tích Dữ Liệu BĐS Nghỉ Dưỡng • Ban Quản Lý Saigon Farm Resort</strong>
     </div>
     <div style="display: flex; gap: 10px;">
       <a href="index.html#tabs-section" class="editorial-btn" style="padding: 8px 16px; font-size: 0.82rem; text-decoration: none;">

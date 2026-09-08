@@ -18,7 +18,7 @@ os.makedirs(OUTPUT_MEDIA_DIR, exist_ok=True)
 
 CONTACT_BOX = """
 <div style="background: #111; color: #fff; padding: 28px; border-radius: 8px; border-left: 4px solid #c9a96e; margin-top: 30px;">
-  <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: ĐẠI CHÚNG PROPERTIES</h4>
+  <h4 style="margin-bottom: 8px; font-family: var(--font-serif); font-size: 1.25rem; color: #c9a96e;">TỔNG ĐẠI LÝ TIẾP THỊ & PHÂN PHỐI: SAIGON FARM RESORT</h4>
   <p style="margin-bottom: 6px; font-size: 0.95rem;">👤 <strong>Đại diện tư vấn:</strong> CEO Huỳnh Hoàng Thịnh (Ken)</p>
   <p style="margin-bottom: 14px; font-size: 0.95rem;">📞 <strong>Hotline / Zalo:</strong> <a href="https://zalo.me/0906060036" target="_blank" style="color:#0068FF; font-weight:700; text-decoration:underline;">0906060036</a></p>
   <a href="https://zalo.me/0906060036" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #0068FF; color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 700; text-decoration: none;">
