@@ -891,32 +891,7 @@
     }
 
     .lake-gallery-divider {
-      text-align: center;
-      margin: 36px 0 20px;
-      position: relative;
-    }
-
-    .lake-gallery-divider::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(194, 155, 83, 0.4), transparent);
-    }
-
-    .lake-gallery-divider span {
-      position: relative;
-      background: #fbf9f4;
-      padding: 4px 18px;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      color: var(--color-gold-dark);
-      text-transform: uppercase;
-      border-radius: 20px;
-      border: 1px solid rgba(194, 155, 83, 0.25);
+      display: none !important;
     }
 
     @media (max-width: 768px) {
@@ -943,22 +918,12 @@
     }
 
     .lake-collage-wrapper {
-      margin: 18px 0 36px;
+      margin: 24px 0 36px;
       position: relative;
     }
 
     .lake-collage-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 22px;
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(220, 210, 195, 0.85);
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(18, 30, 22, 0.05);
+      display: none !important;
     }
 
     .lake-collage-lead {
@@ -3096,17 +3061,8 @@
           </div>
         </div>
 
-        <!-- Tiêu Đề Dẫn Vào Gallery Tổng -->
-        <div class="lake-gallery-divider">
-          <span>Bộ Sưu Tập 8 Góc Nhìn Flycam Thực Tế Cảnh Hồ</span>
-        </div>
-
         <!-- Collage Gallery Tổng: 8 Ảnh Thực Tế Cảnh Hồ Lồ Ồ 100ha Xanh Mát, Tự Nhiên -->
         <div class="lake-collage-wrapper" id="lake-collage-wrapper">
-          <div class="lake-collage-header">
-            <span class="lake-collage-lead"><i class="fa-solid fa-images"></i> Bộ Sưu Tập 8 Ảnh Thực Tế Cảnh Hồ Lồ Ồ 100ha Xanh Mát &amp; Tự Nhiên</span>
-          </div>
-
           <div class="lake-collage-grid" id="lake-collage-grid">
             <div class="lake-collage-item" data-idx="0" onclick="openLakeLightbox(0)" role="button" tabindex="0" aria-label="Xem ảnh hồ Lồ Ồ 01">
               <div class="lake-collage-frame">
