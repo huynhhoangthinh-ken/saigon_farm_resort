@@ -38,7 +38,7 @@ posts = [
 
 <h2>Saigon Farm Resort & Một Cách Sống Rộng Hơn</h2>
 <p>Tại <strong>Saigon Farm Resort</strong>, mỗi điền trang có diện tích từ <strong>808m² đến 1.500m²</strong>. Quy mô ấy tạo ra một cách tổ chức không gian rất khác với nhà ở đô thị. Ngôi nhà có thể lùi lại để nhường chỗ cho sân, vườn, mái hiên, những hàng cây và các khoảng sinh hoạt ngoài trời.</p>
-<p>Bao quanh khu nghỉ dưỡng là hồ nước tự nhiên 100ha, đồng lúa và những vườn dừa. Ở trung tâm, gần <strong>3ha (24.488m²)</strong> được dành cho hệ tiện ích và trải nghiệm với nhà hàng, sân khấu ngoài trời, câu lạc bộ cưỡi ngựa, khu nông nghiệp hữu cơ, hồ sen, hồ bơi, spa, bến thuyền cùng các hoạt động thư giãn.</p>
+<p>Bao quanh khu nghỉ dưỡng là hồ nước tự nhiên 100ha, đồng lúa và những vườn dừa. Ở trung tâm, gần <strong>3ha (30.000m²)</strong> được dành cho hệ tiện ích và trải nghiệm với nhà hàng, sân khấu ngoài trời, câu lạc bộ cưỡi ngựa, khu nông nghiệp hữu cơ, hồ sen, hồ bơi, spa, bến thuyền cùng các hoạt động thư giãn.</p>
 
 <div class="key-takeaways">
   <h3>Hệ Thống 9 Không Gian Bản Sắc Việt MDS Living</h3>
@@ -1460,11 +1460,11 @@ posts = [
     {
         "id": 122,
         "title": "Hệ Sinh Thái Tiện Ích Đa Tầng Gần 3ha: Clubhouse, Bến Thuyền, Organic Farm & Herbal Spa",
-        "excerpt": "Dành trọn gần 3ha (24.488m²) cho cảnh quan và hệ tiện ích đặc quyền: Nông trại Organic Farm-to-Table, CLB cưỡi ngựa Horse Riding, sân thể thao Pickleball, Spa thảo dược và Bến thuyền chèo SUP & Kayak hồ 100ha.",
+        "excerpt": "Dành trọn gần 3ha (30.000m²) cho cảnh quan và hệ tiện ích đặc quyền: Nông trại Organic Farm-to-Table, CLB cưỡi ngựa Horse Riding, sân thể thao Pickleball, Spa thảo dược và Bến thuyền chèo SUP & Kayak hồ 100ha.",
         "image": "assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png",
         "date": "29 TH8 2026",
         "content": """
-<p>Tại <strong>Saigon Farm Resort</strong>, triết lý phát triển lấy trải nghiệm sống an lành và gắn kết gia đình làm trọng tâm. Với gần <strong>3ha (24.488m²)</strong> diện tích dành trọn cho phân khu tiện ích trung tâm và cảnh quan sinh thái, mỗi ngày tại đây là một kỳ nghỉ bất tận với đầy đủ trải nghiệm thượng lưu:</p>
+<p>Tại <strong>Saigon Farm Resort</strong>, triết lý phát triển lấy trải nghiệm sống an lành và gắn kết gia đình làm trọng tâm. Với gần <strong>3ha (30.000m²)</strong> diện tích dành trọn cho phân khu tiện ích trung tâm và cảnh quan sinh thái, mỗi ngày tại đây là một kỳ nghỉ bất tận với đầy đủ trải nghiệm thượng lưu:</p>
 
 <div class="key-takeaways">
   <h3>8 Phân Khu Tiện Ích Đặc Quyền Đẳng Cấp</h3>

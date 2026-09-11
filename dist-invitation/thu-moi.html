@@ -57,6 +57,11 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 75px;
+    }
+
     /* Page Background with Subtle Heritage Ambiance */
     body {
       background-color: var(--bg-page);
@@ -2302,7 +2307,7 @@
               </tr>
               <tr>
                 <td class="col-header-spec">Tiện ích</td>
-                <td><strong>24.488 m²</strong> khu trung tâm — bình quân <strong>521 m²</strong> tiện ích bổ sung cho mỗi chủ nhân</td>
+                <td><strong>Lên đến 30.000 m²</strong> (gồm Phân khu Trung tâm & Phân khu Ven hồ) — bình quân <strong>~638 m²</strong> tiện ích bổ sung cho mỗi chủ nhân</td>
               </tr>
               <tr>
                 <td class="col-header-spec">Quy mô tiện ích</td>
@@ -2321,12 +2326,36 @@
         </div>
       </section>
 
-      <!-- Sơ Đồ Tiện Ích Khu Trung Tâm (Thay thế 2 thẻ ảnh tiện ích) -->
-      <figure class="editorial-diagram-showcase">
-        <img src="assets/tien_ich/tien_ich.png" alt="Sơ đồ tiện ích khu trung tâm Saigon Farm Resort" class="diagram-img" loading="lazy">
+      <!-- SƠ ĐỒ HỆ THỐNG TIỆN ÍCH LÊN ĐẾN 30.000 M² (TRUNG TÂM & VEN HỒ) -->
+      <div class="sheet-section-header" style="margin: 28px 0 14px;">
+        <span class="section-num">QUY MÔ TIỆN ÍCH LÊN ĐẾN 30.000 M²</span>
+        <h3 class="sheet-section-title">Sơ Đồ Phân Bổ Tiện Ích Khu Trung Tâm &amp; Tiện Ích Ven Hồ</h3>
+      </div>
+      <p style="font-size: 0.96rem; color: var(--color-muted); line-height: 1.65; margin-bottom: 20px;">
+        Hệ thống tiện ích Saigon Farm Resort với tổng diện tích lên đến 30.000 m² được quy hoạch thành 2 đại phân khu chức năng hoàn chỉnh phục vụ riêng cho 47 chủ nhân tinh hoa:
+      </p>
+
+      <!-- Sơ Đồ 1: Tiện Ích Khu Vực Trung Tâm -->
+      <figure class="editorial-diagram-showcase" style="margin-bottom: 24px;">
+        <a href="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.png" target="_blank" style="display: block; position: relative; text-decoration: none;">
+          <img src="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.webp" alt="Sơ đồ phân bổ tiện ích khu vực trung tâm Saigon Farm Resort" class="diagram-img" loading="lazy">
+          <span class="diagram-zoom-badge" style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(4px); display: inline-flex; align-items: center; gap: 6px;"><i class="fa-solid fa-expand"></i> Nhấp xem ảnh gốc</span>
+        </a>
         <figcaption class="diagram-caption">
-          <span><strong style="color: var(--color-dark);">Sơ Đồ Phân Bổ Tiện Ích Trung Tâm (24.488 m²)</strong> — Phục vụ riêng cho 47 chủ nhân</span>
-          <span class="caption-tag">Saigon Farm Resort</span>
+          <span><strong style="color: var(--color-dark);">1. Sơ Đồ Phân Bổ Tiện Ích Khu Vực Trung Tâm</strong> — Cụm sân Pickleball có mái che, Làng ngựa quý tộc Việt Mã Viên, Hiên Việt Clubhouse, Nhà hàng Fine Dining, Nông trại hữu cơ &amp; Đầm sen</span>
+          <span class="caption-tag">Phân Khu Trung Tâm</span>
+        </figcaption>
+      </figure>
+
+      <!-- Sơ Đồ 2: Tiện Ích Ven Hồ -->
+      <figure class="editorial-diagram-showcase" style="margin-bottom: 32px;">
+        <a href="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.png" target="_blank" style="display: block; position: relative; text-decoration: none;">
+          <img src="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.webp" alt="Sơ đồ phân bổ tiện ích ven hồ Saigon Farm Resort" class="diagram-img" loading="lazy">
+          <span class="diagram-zoom-badge" style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(4px); display: inline-flex; align-items: center; gap: 6px;"><i class="fa-solid fa-expand"></i> Nhấp xem ảnh gốc</span>
+        </a>
+        <figcaption class="diagram-caption">
+          <span><strong style="color: var(--color-dark);">2. Sơ Đồ Phân Bổ Tiện Ích Ven Hồ</strong> — Clubhouse ven hồ, Bến thuyền Kayak &amp; SUP, Hồ bơi vô cực điện phân khoáng muối bên mặt nước hồ tự nhiên 100ha</span>
+          <span class="caption-tag">Phân Khu Ven Hồ</span>
         </figcaption>
       </figure>
 
@@ -2431,9 +2460,6 @@
         <!-- Hero Flycam Banner -->
         <div class="flycam-hero-banner" onclick="openFlycamModal(currentFlycamIndex)" role="button" tabindex="0" aria-label="Xem ảnh flycam toàn màn hình">
           <img id="flycam-hero-img" src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp" alt="Toàn cảnh thực tế Hồ Lồ Ồ 100ha từ Flycam" loading="eager" decoding="async">
-          <div class="flycam-hero-tag">
-            <i class="fa-solid fa-drone"></i> 100% Ảnh Thực Tế Flycam • Hồ Sinh Thái 100ha
-          </div>
           <div class="flycam-hero-gradient">
             <div class="flycam-hero-text">
               <h4 id="flycam-hero-caption-title">Góc 01 • Toàn Cảnh Hồ Lồ Ồ 100ha &amp; Vòng Cung Cánh Đồng Lúa</h4>
@@ -2658,7 +2684,7 @@
               </li>
               <li>
                 <span class="check-icon" style="color: var(--color-accent-green);">✓</span>
-                <strong>Đặc quyền tiện ích, an ninh, vận hành chuyên nghiệp, cao cấp:</strong> Thụ hưởng toàn bộ 24.488 m² tiện ích resort 5 sao do MDS Living trực tiếp quản lý vận hành.
+                <strong>Đặc quyền tiện ích, an ninh, vận hành chuyên nghiệp, cao cấp:</strong> Thụ hưởng toàn bộ 30.000 m² tiện ích resort 5 sao do MDS Living trực tiếp quản lý vận hành.
               </li>
               <li>
                 <span class="check-icon" style="color: var(--color-accent-green);">✓</span>

@@ -114,7 +114,7 @@ def render_page(cat, all_cats):
             },
             {
                 "icon": "fa-water-ladder",
-                "title": "Kề Cận Cụm Đại Tiện Ích 24.488 m²",
+                "title": "Kề Cận Cụm Đại Tiện Ích 30.000 m²",
                 "desc": "Các vị trí Điền An ôm trọn lõi công viên sinh thái, hồ bơi điện phân khoáng muối, bến thuyền kayak và câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên chỉ trong vài bước chân."
             },
             {
@@ -1247,7 +1247,7 @@ def render_page(cat, all_cats):
           <span class="stat-label">Giỏ hàng mở bán tháng 9/2026</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">24.488 m²</span>
+          <span class="stat-num">30.000 m²</span>
           <span class="stat-label">Đại công viên & Tiện ích resort</span>
         </div>
         <div class="stat-item">
@@ -1345,7 +1345,7 @@ def render_page(cat, all_cats):
       <div class="masterplan-wrap">
         <div>
           <span class="section-tag" style="color: var(--gold);">QUY HOẠCH TỔNG THỂ ĐIỀN TRANG</span>
-          <h2 class="section-title" style="color: #fff; margin-bottom: 20px;">Mặt Bằng &amp; Hệ Thống Tiện Ích 24.488 m²</h2>
+          <h2 class="section-title" style="color: #fff; margin-bottom: 20px;">Mặt Bằng &amp; Hệ Thống Tiện Ích 30.000 m²</h2>
           <p style="color: #c2d1cb; line-height: 1.7; margin-bottom: 24px;">
             Saigon Farm Resort được quy hoạch bài bản với mật độ xây dựng thấp kỷ lục. Trung tâm là quần thể tiện ích sinh thái 5 sao: Clubhouse ven hồ, Hồ bơi điện phân khoáng muối, Sân Pickleball, Làng ngựa quý tộc Việt Mã Viên, Bến thuyền Kayak và Đầm sen ngát hương.
           </p>
