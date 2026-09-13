@@ -94,7 +94,7 @@ Mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chiến lượ
 | **Diện tích khuôn viên** | **1.000 m² – 1.452 m²** | **646,5 m² – 1.000 m²** | **600 m² – 800 m²** |
 | **Kiến trúc xây dựng** | Biệt phủ 1 – 2 tầng, hồ bơi khoáng muối, sân vườn >700m² | Đất điền trang ven hồ, xây dựng theo mẫu kiến trúc resort | Cụm 30 phòng lưu trú chuyên gia sinh thái hoàn chỉnh |
 | **Quyền lợi thụ hưởng** | **150 đêm nghỉ dưỡng/năm** cho gia đình | Tự do nghỉ dưỡng & tích trữ gia sản giá gốc đợt 1 | Cụm phòng sinh thái lưu trú dài hạn & an cư |
-| **Cơ chế tài chính** | Ủy thác 215 đêm MDS (Chia sẻ **50% Doanh thu**) | Lợi nhuận kỳ vọng **30% – 40%/năm** theo lộ trình CĐT | Hợp đồng thuê 5 năm, **120 tr/tháng (1,44 tỷ/năm)** |
+| **Cơ chế tài chính** | Khai thác du lịch nghỉ dưỡng cao cấp MDS Living | Thanh toán sớm giảm 800Tr - 1 Tỷ; 30% CĐT hỗ trợ ra hàng | 2 phương án linh hoạt: **80 – 120 Tr/tháng++** (PA1: 30 chuyên gia = 120 Tr/th; PA2: 20 chuyên gia = 80 Tr/th + 10 thuê ngày) |
 | **Đối tượng phù hợp** | Gia đình đa thế hệ, lãnh đạo, giới thượng lưu | Nhà đầu tư chiến lược, gom đất ven hồ đón cao tốc | Nhà đầu tư chuộng dòng tiền thụ động an toàn |
 
 ---
@@ -114,39 +114,37 @@ Mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chiến lượ
   - Quy hoạch phân lô đột phá: 1 khuôn viên điền trang có thể thiết kế tách thành cụm 3 căn riêng biệt giúp tối ưu hóa thanh khoản.
 
 #### 📊 Bảng Chiết Tính Tài Chính 1.000 m² Điền Sản: PA1 (Giữ Đất) vs PA2 (Bán Ra Đón Sóng 13,8 Tr/m²)
-*(Giá niêm yết: 12 Tỷ [12 Tr/m²]; Chiết khấu thanh toán nhanh 6% = 720 Tr; Ưu đãi mở bán giảm thêm 800 Tr; Vốn thực nộp 70% = 6,88 Tỷ nhận sổ đỏ riêng; Giữ lại 30% = 3,6 Tỷ CĐT cam kết đồng hành ra hàng; Dự kiến bán lại 13,8 Tr/m²)*
+*(Giá niêm yết: 12 Tỷ [12 Tr/m²]; Ưu đãi thanh toán sớm 70% giảm trực tiếp 800 Tr; Vốn thực nộp 70% = 7,84 Tỷ nhận sổ đỏ riêng; Giữ lại 30% = 3,36 Tỷ CĐT cam kết đồng hành ra hàng áp dụng cho Điền Sản; Dự kiến bán lại 13,8 Tr/m²)*
 
 | Chỉ Số Tài Chính / Khoản Mục | PA1 — GIỮ ĐẤT (Tích sản dài hạn / An toàn) | PA2 — BÁN RA ĐÓN SÓNG (Thanh khoản nhanh / CĐT hỗ trợ) |
 | :--- | :---: | :---: |
 | **1. Giá niêm yết ban đầu (12 Tr/m²)** | 12.000.000.000 đ | 12.000.000.000 đ |
-| **2. Giảm 6% thanh toán nhanh 70%** | -720.000.000 đ | -720.000.000 đ |
-| **3. Giảm đợt mở bán (gói xây dựng)** *(Không xây vẫn được giảm trừ)* | -800.000.000 đ | -800.000.000 đ |
-| **4. Tổng giá vốn thực mua (Net Value)** *(~10,48 Tr/m²)* | **10.480.000.000 đ** | **10.480.000.000 đ** |
-| **5. VỐN THỰC NỘP BAN ĐẦU (70% trừ ưu đãi)** *(Cầm sổ đỏ riêng 100% thổ cư)* | **6.880.000.000 đ** | **6.880.000.000 đ** |
-| **6. Khoản 30% giữ lại chưa thanh toán** *(LS 0% đến cuối năm 2027)* | **3.600.000.000 đ** | **3.600.000.000 đ** |
-| **7. Đơn giá bán ra dự kiến** | *Chưa bán (Tích sản)* | **13.800.000 đ/m²** |
-| **8. Diện tích đất chuyển nhượng** | — | **1.000 m²** |
-| **9. Doanh thu bán ra gộp** | — | **13.800.000.000 đ** |
-| **10. Chi phí bán hàng & chuyển nhượng (5.5%)** *(Thuế TNCN, môi giới, công chứng)* | — | **759.000.000 đ** |
-| **11. Chi phí lãi vay phát sinh** *(CĐT hỗ trợ 0% lãi suất)* | — | **0 đ** |
-| **12. Doanh thu thuần sau chi phí** | — | **13.041.000.000 đ** |
-| **13. Quyết toán 30% còn lại cho Chủ Đầu Tư** | — | **-3.600.000.000 đ** |
-| **14. Tiền thực thu về tài khoản khách hàng** | — | **9.441.000.000 đ** |
-| **15. LỢI NHUẬN RÒNG THỰC NHẬN (VNĐ)** | **0 đ** *(Tích sản nguyên vẹn)* | **+2.561.000.000 đ (~2,56 TỶ ĐỒNG)** |
-| **16. TỶ SUẤT LỢI NHUẬN TRÊN VỐN THỰC NỘP 70% (ROE)** | **Phụ thuộc định giá 2027** *(Tăng x2, x3)* | **37,2%** |
-| **17. Đơn giá hòa vốn an toàn (Break-even Price)** | — | **11.089.947 đ/m² (~11,09 Tr/m²)** |
+| **2. Ưu đãi thanh toán sớm 70%** *(Giảm trừ trực tiếp vào giá bán)* | -800.000.000 đ | -800.000.000 đ |
+| **3. Tổng giá vốn thực mua (Net Value)** *(~11,2 Tr/m²)* | **11.200.000.000 đ** | **11.200.000.000 đ** |
+| **4. VỐN THỰC NỘP BAN ĐẦU (70%)** *(Cầm sổ đỏ riêng 100% thổ cư)* | **7.840.000.000 đ** | **7.840.000.000 đ** |
+| **5. Khoản 30% còn lại thanh toán tại T+360** *(LS 0% 1 năm, CĐT hỗ trợ ra hàng)* | **3.360.000.000 đ** | **3.360.000.000 đ** |
+| **6. Đơn giá bán ra dự kiến** | *Chưa bán (Tích sản)* | **13.800.000 đ/m²** |
+| **7. Diện tích đất chuyển nhượng** | — | **1.000 m²** |
+| **8. Doanh thu bán ra gộp** | — | **13.800.000.000 đ** |
+| **9. Chi phí bán hàng & chuyển nhượng (5.5%)** *(Thuế TNCN, môi giới, công chứng)* | — | **759.000.000 đ** |
+| **10. Chi phí lãi vay phát sinh** *(CĐT hỗ trợ 0% lãi suất)* | — | **0 đ** |
+| **11. Doanh thu thuần sau chi phí** | — | **13.041.000.000 đ** |
+| **12. Quyết toán 30% còn lại cho Chủ Đầu Tư** | — | **-3.360.000.000 đ** |
+| **13. Tiền thực thu về tài khoản khách hàng** | — | **9.681.000.000 đ** |
+| **14. LỢI NHUẬN RÒNG THỰC NHẬN (VNĐ)** | **0 đ** *(Tích sản nguyên vẹn)* | **+1.841.000.000 đ (~1,84 TỶ ĐỒNG)** |
+| **15. TỶ SUẤT LỢI NHUẬN TRÊN VỐN THỰC NỘP 70% (ROE)** | **Phụ thuộc định giá 2027** *(Tăng x2, x3)* | **23,5%/năm** |
+| **16. Đơn giá hòa vốn an toàn (Break-even Price)** | — | **11.841.000 đ/m² (~11,85 Tr/m²)** |
 
-> **3 Điểm tựa đột phá của bài toán đầu tư:**
-> 1. **Cơ chế giữ lại 30% — CĐT đồng hành ra hàng & đôi bên cùng an toàn:** Khách hàng giữ lại 30% (3,6 Tỷ) chưa thanh toán là cơ sở để Chủ đầu tư trực tiếp đồng hành hỗ trợ ra hàng cho khách. Điều này đảm bảo an toàn tuyệt đối cho khách hàng, vừa gắn liền trách nhiệm và năng lực bán hàng của đơn vị CĐT, tạo lợi ích bền vững cho cả đôi bên mà khách vẫn cầm chắc sổ đỏ riêng 100% thổ cư trong tay.
-> 2. **Giá vốn thực mua chỉ ~10,48 Triệu/m²:** Sau khi trừ chiết khấu 6% (720 triệu) và gói mở bán (800 triệu), giá vốn mua chỉ còn **10,48 Tỷ** (vốn nộp ban đầu chỉ **6,88 Tỷ**). Đây là mức giá cực kỳ cạnh tranh, thấp hơn nhiều so với mặt bằng đất sinh thái khu vực (hiện 14 – 18 tr/m²).
-> 3. **Bán ra 13,8 Triệu/m² cực kỳ khả thi & Biên an toàn cao:** Đơn giá bán lại 13,8 triệu/m² là mức giá vô cùng hợp lý khi cao tốc Biên Hòa - Vũng Tàu thông xe. Đơn giá hòa vốn chỉ là **11,09 Triệu/m²**. Sau khi thanh toán đủ 30% còn lại cho CĐT và trừ toàn bộ 5.5% chi phí giao dịch, khách hàng thu về **lợi nhuận ròng 2,56 Tỷ Đồng (tỷ suất sinh lời 37,2% trên vốn thực nộp)**.
+> **3 Điểm tựa đột phá của bài toán đầu tư Điền Sản:**
+> 1. **Cơ chế giữ lại 30% — CĐT đồng hành ra hàng áp dụng cho Điền Sản:** Khách hàng giữ lại 30% (3,36 Tỷ) thanh toán sau 1 năm là cơ sở để Chủ đầu tư trực tiếp đồng hành hỗ trợ ra hàng cho khách. Điều này đảm bảo an toàn tuyệt đối cho khách hàng, vừa gắn liền trách nhiệm và năng lực bán hàng của đơn vị CĐT, tạo lợi ích bền vững cho cả đôi bên mà khách vẫn cầm chắc sổ đỏ riêng 100% thổ cư trong tay.
+> 2. **Giá vốn thực mua ưu đãi 11,2 Triệu/m²:** Sau khi giảm trừ trực tiếp 800 triệu, giá vốn mua chỉ còn **11,2 Tỷ** (vốn nộp 70% ban đầu là **7,84 Tỷ**). Đây là mức giá cực kỳ cạnh tranh so với mặt bằng đất sinh thái ven hồ tại khu vực (14 – 18 tr/m²).
+> 3. **Bán ra 13,8 Triệu/m² cực kỳ khả thi & Biên an toàn cao:** Đơn giá bán lại 13,8 triệu/m² là mức giá vô cùng hợp lý khi cao tốc Biên Hòa - Vũng Tàu thông xe. Khách hàng thu về lợi nhuận ròng **~1,84 Tỷ Đồng** tương đương tỷ suất sinh lời **23,5%/năm** trên vốn thực nộp.
 
 ### 4.3. Điền An (Haven) (07 Cụm Giới Hạn)
-- **Mô tả:** Mô hình phát triển cụm 30 phòng lưu trú sinh thái tiện nghi, đáp ứng nhu cầu an cư dài hạn cho các chuyên gia quốc tế, nhân sự cấp cao tại các khu công nghiệp công nghệ cao lân cận và du khách theo đuổi lối sống Workation.
-- **Hiệu quả dòng tiền:**
-  - Ký kết hợp đồng quản lý & thuê vận hành tối thiểu 5 năm.
-  - Đơn giá cho thuê bình quân: 4.000.000 đ / phòng / tháng.
-  - Doanh thu gộp thực tế: **120.000.000 đ / tháng (tương đương 1,44 tỷ đồng / năm)** sau khi hoàn thiện cụm phòng lưu trú.
+- **Mô tả:** Mô hình cụm 30 phòng lưu trú sinh thái tiện nghi trên khuôn viên 1.100m² – 1.350m² với **2 phương án khai thác linh hoạt**:
+- **Chi tiết 2 phương án dòng tiền:**
+  - **Phương án 1 (Cho thuê trọn gói 30 phòng chuyên gia):** Cho thuê toàn bộ 30 phòng cho chuyên gia làm việc tại các KCN lân cận (Hợp đồng thuê 5 năm, ~4 tr/phòng/tháng) &rarr; Dòng tiền cố định vững chắc **120.000.000 đ / tháng (~1,44 tỷ đồng / năm)**.
+  - **Phương án 2 (Khai thác kết hợp 20 + 10):** 20 phòng cho chuyên gia thuê dài hạn đảm bảo dòng tiền cốt lõi **80.000.000 đ / tháng (~960 triệu đồng / năm)**; cộng với 10 phòng cho thuê du lịch & workation theo ngày đón khách nghỉ dưỡng ven hồ, mang lại tỷ suất lợi nhuận và tổng thu nhập cao hơn hẳn (**80 triệu/tháng++**).
 
 ---
 
@@ -225,11 +223,24 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
 
 ---
 
+### 8.3. Chính sách bán hàng & Tiến độ thanh toán Đợt 1 (Mới nhất)
+1. **3 Phương thức thanh toán Giá trị Quyền sử dụng đất:**
+   - **Phương thức Chuẩn:** Đặt cọc 200 tr; Ngày T đóng 20% (Ký HĐCN QSDĐ); Đợt 2 - 5 (mỗi 60 ngày) đóng 10%/đợt (40%); T+360 ngày đóng 40% nhận bàn giao Sổ hồng riêng.
+   - **Phương thức Thanh toán sớm 70%:** **Giảm trực tiếp 800 Triệu Đồng** vào giá bán. Đặt cọc 200 tr; Ngày T đóng 70% nhận sổ; 30% còn lại thanh toán tại T+360 ngày (CĐT đồng hành hỗ trợ ra hàng áp dụng riêng cho các sản phẩm **Điền Sản**).
+   - **Phương thức Thanh toán sớm 100%:** **Giảm trực tiếp 1 Tỷ Đồng** vào giá bán. Đặt cọc 500 tr; Ngày T thanh toán 100% công chứng sang tên nhận sổ ngay.
+2. **Tiến độ Giá trị Xây dựng (Nếu khách hàng chọn gói giao xây dựng):**
+   - Ký HĐXD: 30% &rarr; Xong móng: 15% &rarr; Hoàn thiện phần thô: 20% &rarr; Hoàn thiện cơ bản: 20% &rarr; Bàn giao nhà: 15%.
+3. **Đặc quyền kiến tạo:** Ưu đãi **800 triệu đồng** dành cho khách hàng hoàn thiện công trình kiến trúc trước Quý 4/2027.
+4. **Bộ 3 đặc quyền 24 tháng:** Miễn phí Quản lý vận hành chuẩn Resort 24 tháng; Tặng dịch vụ Quản gia Resort 24 tháng; Cung cấp định kỳ nguồn nông sản sạch chuẩn Organic trong 24 tháng.
+5. **Ủy thác khai thác Điền An:** 2 phương án khai thác linh hoạt với dòng tiền **80 – 120 triệu/tháng++** (PA1: 30 phòng chuyên gia thu 120 tr/tháng; PA2: 20 phòng chuyên gia thu 80 tr/tháng + 10 phòng thuê theo ngày thu nhập và tỷ suất cao hơn).
+
+---
+
 ## 9. HỆ THỐNG LIÊN KẾT TRỰC TUYẾN & CỔNG THÔNG TIN
 
 - **Trang chủ chính thức:** [https://saigonfarmresort.com](https://saigonfarmresort.com)
 - **Cổng thông tin Thư mời Đối tác & Đại lý:** [https://invitation.saigonfarmresort.com](https://invitation.saigonfarmresort.com)
-- **Bản thuyết trình đề xuất & Bảng giá:** [https://saigonfarmresort.com/gioi-thieu.html](https://saigonfarmresort.com/gioi-thieu.html)
+- **Bản thuyết trình đề xuất & Bảng giá:** [https://saigonfarmresort.com/gioithieu](https://saigonfarmresort.com/gioithieu) (hoặc [https://saigonfarmresort.com/introduction](https://saigonfarmresort.com/introduction))
 - **Trang chuyên đề Biệt Phủ Điền Trang:** [https://saigonfarmresort.com/biet-phu-dien-trang.html](https://saigonfarmresort.com/biet-phu-dien-trang.html)
 - **Trang chuyên đề Điền Sản (Founders):** [https://saigonfarmresort.com/dien-san.html](https://saigonfarmresort.com/dien-san.html)
 - **Trang chuyên đề Điền An (Haven):** [https://saigonfarmresort.com/dien-an.html](https://saigonfarmresort.com/dien-an.html)

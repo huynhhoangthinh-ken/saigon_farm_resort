@@ -18,7 +18,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg"
       },
       {
         "code": "A24",
@@ -28,7 +28,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Đang giữ chỗ",
         "status_type": "reserved",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_2_living_1.jpg"
       },
       {
         "code": "A21",
@@ -38,7 +38,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg"
       },
       {
         "code": "A4",
@@ -48,7 +48,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(3).jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_2_ext_1.jpg"
       },
       {
         "code": "A16",
@@ -58,7 +58,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_1_ext_2.jpg"
       },
       {
         "code": "B20",
@@ -68,7 +68,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Đang giữ chỗ",
         "status_type": "reserved",
-        "image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_2_living.jpg"
       },
       {
         "code": "B14",
@@ -78,7 +78,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_1_lake_1.jpg"
       },
       {
         "code": "B6",
@@ -88,7 +88,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Clubhoue_ven_ho.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_1_lake_2.jpg"
       },
       {
         "code": "A20",
@@ -98,7 +98,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Không_gian_clubhouse_ven_ho.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_1_bed_1.jpg"
       },
       {
         "code": "B7",
@@ -108,7 +108,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Hồ_bơi_ven_Hồ.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_1_living_1.jpg"
       },
       {
         "code": "B15",
@@ -118,7 +118,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_2_shc_1.jpg"
       },
       {
         "code": "A19",
@@ -128,7 +128,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_1_kitchen.jpg"
       },
       {
         "code": "A17",
@@ -138,7 +138,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_2_master.jpg"
       },
       {
         "code": "B13",
@@ -148,7 +148,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_2_bed_1.jpg"
       },
       {
         "code": "B12",
@@ -158,7 +158,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_1_master.jpg"
       },
       {
         "code": "A18",
@@ -168,7 +168,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_1_bed_2.jpg"
       },
       {
         "code": "A23",
@@ -178,7 +178,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg"
       }
     ]
   },
@@ -201,7 +201,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg"
+        "image": "assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp"
       },
       {
         "code": "A9",
@@ -211,7 +211,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Đang giữ chỗ",
         "status_type": "reserved",
-        "image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg"
+        "image": "assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp"
       },
       {
         "code": "A10",
@@ -221,7 +221,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Clubhoue_ven_ho.jpg"
+        "image": "assets/Index_asset/editorial_photo/Canh_dong_lua.png"
       },
       {
         "code": "A11",
@@ -231,7 +231,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Không_gian_clubhouse_ven_ho.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg"
       },
       {
         "code": "A12",
@@ -241,7 +241,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Hồ_bơi_ven_Hồ.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.jpg"
       },
       {
         "code": "B10",
@@ -251,7 +251,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Đang giữ chỗ",
         "status_type": "reserved",
-        "image": "assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.webp"
       },
       {
         "code": "B9",
@@ -261,7 +261,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_2-2.webp"
       },
       {
         "code": "B8",
@@ -271,7 +271,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_3.webp"
       },
       {
         "code": "B17",
@@ -281,7 +281,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_4.webp"
       },
       {
         "code": "B19",
@@ -291,7 +291,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_6.webp"
       },
       {
         "code": "B18",
@@ -301,7 +301,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg"
       },
       {
         "code": "B5",
@@ -311,7 +311,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg"
       }
     ]
   },
@@ -334,7 +334,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg"
+        "image": "assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp"
       },
       {
         "code": "A14",
@@ -344,7 +344,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Đang giữ chỗ",
         "status_type": "reserved",
-        "image": "assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg"
+        "image": "assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp"
       },
       {
         "code": "A13",
@@ -354,7 +354,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg"
+        "image": "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp"
       },
       {
         "code": "B23",
@@ -364,7 +364,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg"
       },
       {
         "code": "B22",
@@ -374,7 +374,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_2.jpg"
       },
       {
         "code": "A15",
@@ -384,7 +384,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Đang giữ chỗ",
         "status_type": "reserved",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.jpg"
       },
       {
         "code": "A22",
@@ -394,7 +394,7 @@
         "price": "Liên hệ nhận bảng giá",
         "status": "Còn hàng",
         "status_type": "available",
-        "image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg"
+        "image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.jpg"
       }
     ]
   }

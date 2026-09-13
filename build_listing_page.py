@@ -123,13 +123,13 @@ def update_listing():
         if cat_slug == "dien-san":
             special_note = """
             <div class="card-policy-tag">
-              <i class="fa-solid fa-gift"></i> CS Mở Bán: 12 Tr/m² • Giảm 6% TT nhanh • Giảm 800Tr • Giữ lại 30% CĐT hỗ trợ ra hàng
+              <i class="fa-solid fa-gift"></i> CS Mở Bán: Ưu đãi TT sớm 70% giảm 800Tr • TT sớm 100% giảm 1 Tỷ • Giữ lại 30% CĐT hỗ trợ ra hàng
             </div>
             """
         elif cat_slug == "dien-an":
             special_note = """
             <div class="card-policy-tag" style="background:#e8f4fd; color:#125b96; border-color:#bcdcf5;">
-              <i class="fa-solid fa-hand-holding-dollar"></i> Cụm 30 phòng lưu trú • Thuê khoán 5 năm: 120 Tr/tháng
+              <i class="fa-solid fa-hand-holding-dollar"></i> Khai thác 80 - 120 Tr/tháng++ (2 PA: 30 phòng chuyên gia hoặc 20 chuyên gia + 10 thuê ngày)
             </div>
             """
         else:
@@ -1160,8 +1160,8 @@ def update_listing():
 
     os.makedirs("listing", exist_ok=True)
     with open("listing/index.html", "w", encoding="utf-8") as f:
-        f.write(html_content)
-    print("Generated listing/index.html successfully!")
+        f.write(html_content.replace("<head>", "<head>\n  <base href=\"../\">"))
+    print("Generated listing/index.html successfully with base href!")
 
 if __name__ == "__main__":
     update_listing()
