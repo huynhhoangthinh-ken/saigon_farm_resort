@@ -113,32 +113,24 @@ Mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chiến lượ
   - Thanh toán 70% công chứng sang tên cho khách hàng, 30% được giãn tiến độ với lãi suất 0% cho tới cuối năm 2027 khi toàn khu đi vào vận hành.
   - Quy hoạch phân lô đột phá: 1 khuôn viên điền trang có thể thiết kế tách thành cụm 3 căn riêng biệt giúp tối ưu hóa thanh khoản.
 
-#### 📊 Bảng Chiết Tính Tài Chính 1.000 m² Điền Sản: PA1 (Giữ Đất) vs PA2 (Bán Ra Đón Sóng 13,8 Tr/m²)
-*(Giá niêm yết: 12 Tỷ [12 Tr/m²]; Ưu đãi thanh toán sớm 70% giảm trực tiếp 800 Tr; Vốn thực nộp 70% = 7,84 Tỷ nhận sổ đỏ riêng; Giữ lại 30% = 3,36 Tỷ CĐT cam kết đồng hành ra hàng áp dụng cho Điền Sản; Dự kiến bán lại 13,8 Tr/m²)*
+#### 📊 Bảng Chiết Tính Tài Chính 1.000 m² Điền Sản: PA1 (Giữ Đất) vs PA2 (Bán Ra Đón Sóng 13,8 – 14,5 Tr/m²)
+*(Giá niêm yết: 11,2 Tỷ [11,2 Tr/m²]; Ưu đãi thanh toán sớm 70% giảm trực tiếp 800 Tr; Giá vốn thực mua: 10,4 Tỷ [10,4 Tr/m²]; Vốn thực nộp 70% = 7,28 Tỷ nhận sổ đỏ riêng; 30% còn lại = 3,12 Tỷ CĐT cam kết đồng hành ra hàng; Dự kiến bán lại 13,8 – 14,5 Tr/m²)*
 
 | Chỉ Số Tài Chính / Khoản Mục | PA1 — GIỮ ĐẤT (Tích sản dài hạn / An toàn) | PA2 — BÁN RA ĐÓN SÓNG (Thanh khoản nhanh / CĐT hỗ trợ) |
 | :--- | :---: | :---: |
-| **1. Giá niêm yết ban đầu (12 Tr/m²)** | 12.000.000.000 đ | 12.000.000.000 đ |
-| **2. Ưu đãi thanh toán sớm 70%** *(Giảm trừ trực tiếp vào giá bán)* | -800.000.000 đ | -800.000.000 đ |
-| **3. Tổng giá vốn thực mua (Net Value)** *(~11,2 Tr/m²)* | **11.200.000.000 đ** | **11.200.000.000 đ** |
-| **4. VỐN THỰC NỘP BAN ĐẦU (70%)** *(Cầm sổ đỏ riêng 100% thổ cư)* | **7.840.000.000 đ** | **7.840.000.000 đ** |
-| **5. Khoản 30% còn lại thanh toán tại T+360** *(LS 0% 1 năm, CĐT hỗ trợ ra hàng)* | **3.360.000.000 đ** | **3.360.000.000 đ** |
-| **6. Đơn giá bán ra dự kiến** | *Chưa bán (Tích sản)* | **13.800.000 đ/m²** |
-| **7. Diện tích đất chuyển nhượng** | — | **1.000 m²** |
-| **8. Doanh thu bán ra gộp** | — | **13.800.000.000 đ** |
-| **9. Chi phí bán hàng & chuyển nhượng (5.5%)** *(Thuế TNCN, môi giới, công chứng)* | — | **759.000.000 đ** |
-| **10. Chi phí lãi vay phát sinh** *(CĐT hỗ trợ 0% lãi suất)* | — | **0 đ** |
-| **11. Doanh thu thuần sau chi phí** | — | **13.041.000.000 đ** |
-| **12. Quyết toán 30% còn lại cho Chủ Đầu Tư** | — | **-3.360.000.000 đ** |
-| **13. Tiền thực thu về tài khoản khách hàng** | — | **9.681.000.000 đ** |
-| **14. LỢI NHUẬN RÒNG THỰC NHẬN (VNĐ)** | **0 đ** *(Tích sản nguyên vẹn)* | **+1.841.000.000 đ (~1,84 TỶ ĐỒNG)** |
-| **15. TỶ SUẤT LỢI NHUẬN TRÊN VỐN THỰC NỘP 70% (ROE)** | **Phụ thuộc định giá 2027** *(Tăng x2, x3)* | **23,5%/năm** |
-| **16. Đơn giá hòa vốn an toàn (Break-even Price)** | — | **11.841.000 đ/m² (~11,85 Tr/m²)** |
+| **1. Giá niêm yết ban đầu (11,2 Tr/m²)** | 11.200.000.000 đ | 11.200.000.000 đ |
+| **2. Ưu đãi thanh toán sớm** *(Giảm trừ trực tiếp vào giá bán)* | -800.000.000 đ | -800.000.000 đ |
+| **3. Tổng giá vốn thực mua (Net Value)** *(10,4 Tr/m²)* | **10.400.000.000 đ** | **10.400.000.000 đ** |
+| **4. VỐN THỰC NỘP BAN ĐẦU (70%)** *(Cầm sổ đỏ riêng 100% thổ cư)* | **7.280.000.000 đ** | **7.280.000.000 đ** |
+| **5. Khoản 30% còn lại (Giãn 1 năm LS 0%)** *(CĐT hỗ trợ ra hàng)* | **3.120.000.000 đ** | **3.120.000.000 đ** *(Quyết toán khi ra hàng)* |
+| **6. Đơn giá bán ra dự kiến (2026 – 2027)** | *Chưa bán (Tích sản)* | **13.800.000 – 14.500.000 đ/m² (13,8 Tỷ – 14,5 Tỷ)** |
+| **7. LỢI NHUẬN DỰ KIẾN (VNĐ)** | **Tích sản sinh lời x2, x3** | **+3.400.000.000 đ – +4.100.000.000 đ** |
+| **8. TỶ SUẤT LỢI NHUẬN TRÊN VỐN NỘP (ROE)** | **Bền vững dài hạn** | **46,7% – 56,3%/năm** |
 
 > **3 Điểm tựa đột phá của bài toán đầu tư Điền Sản:**
-> 1. **Cơ chế giữ lại 30% — CĐT đồng hành ra hàng áp dụng cho Điền Sản:** Khách hàng giữ lại 30% (3,36 Tỷ) thanh toán sau 1 năm là cơ sở để Chủ đầu tư trực tiếp đồng hành hỗ trợ ra hàng cho khách. Điều này đảm bảo an toàn tuyệt đối cho khách hàng, vừa gắn liền trách nhiệm và năng lực bán hàng của đơn vị CĐT, tạo lợi ích bền vững cho cả đôi bên mà khách vẫn cầm chắc sổ đỏ riêng 100% thổ cư trong tay.
-> 2. **Giá vốn thực mua ưu đãi 11,2 Triệu/m²:** Sau khi giảm trừ trực tiếp 800 triệu, giá vốn mua chỉ còn **11,2 Tỷ** (vốn nộp 70% ban đầu là **7,84 Tỷ**). Đây là mức giá cực kỳ cạnh tranh so với mặt bằng đất sinh thái ven hồ tại khu vực (14 – 18 tr/m²).
-> 3. **Bán ra 13,8 Triệu/m² cực kỳ khả thi & Biên an toàn cao:** Đơn giá bán lại 13,8 triệu/m² là mức giá vô cùng hợp lý khi cao tốc Biên Hòa - Vũng Tàu thông xe. Khách hàng thu về lợi nhuận ròng **~1,84 Tỷ Đồng** tương đương tỷ suất sinh lời **23,5%/năm** trên vốn thực nộp.
+> 1. **Đòn bẩy 70% — Cầm sổ đỏ trao tay:** Khách hàng thanh toán 70% (7,28 Tỷ) ký công chứng nhận ngay sổ hồng riêng 100% thổ cư. Khoản 30% còn lại (3,12 Tỷ) giãn 1 năm lãi suất 0%, CĐT cam kết đồng hành hỗ trợ ra hàng.
+> 2. **Giá vốn thực mua ưu đãi 10,4 Triệu/m²:** Sau khi giảm trừ trực tiếp 800 triệu từ giá niêm yết 11,2 Tỷ, giá vốn chỉ còn **10,4 Tỷ (10,4 Tr/m²)** — thấp hơn đáng kể so với mặt bằng đất sinh thái ven hồ tại khu vực (14 – 18 tr/m²).
+> 3. **Bán ra 13,8 – 14,5 Triệu/m² khả thi & Tỷ suất ROE ~46% – 56%:** Mức giá bán lại 13,8 – 14,5 triệu/m² hoàn toàn nằm trong biên độ thanh khoản an toàn của khu vực khi cao tốc Biên Hòa - Vũng Tàu và Sân bay Long Thành thông xe. Khách hàng thu về lợi nhuận dự kiến **+3,4 Tỷ đến +4,1 Tỷ Đồng**, mang lại tỷ suất sinh lời vượt trội trên vốn thực nộp ban đầu mà không bị áp lực ra hàng.
 
 ### 4.3. Điền An (Haven) (07 Cụm Giới Hạn)
 - **Mô tả:** Mô hình cụm 30 phòng lưu trú sinh thái tiện nghi trên khuôn viên 1.100m² – 1.350m² với **2 phương án khai thác linh hoạt**:

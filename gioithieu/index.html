@@ -1075,10 +1075,10 @@
       }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 900px) and (min-width: 769px) {
       .lake-collage-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
       }
       .lake-collage-item {
         transform: none !important;
@@ -1090,9 +1090,34 @@
       }
     }
 
-    @media (max-width: 540px) {
+    @media (max-width: 768px) {
       .lake-collage-grid {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 10px !important;
+        padding: 6px 2px 14px !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-gold) rgba(0,0,0,0.06);
+      }
+      .lake-collage-grid::-webkit-scrollbar {
+        height: 5px;
+      }
+      .lake-collage-grid::-webkit-scrollbar-thumb {
+        background: var(--color-gold);
+        border-radius: 4px;
+      }
+      .lake-collage-item {
+        flex: 0 0 165px !important;
+        min-width: 165px !important;
+        scroll-snap-align: start !important;
+        transform: none !important;
+        margin: 0 !important;
+      }
+      .lake-collage-badge {
+        font-size: 0.7rem !important;
+        padding: 4px 6px !important;
       }
       .lake-collage-header {
         flex-direction: column;
@@ -1983,6 +2008,271 @@
     @media (max-width: 600px) {
       .amenity-pane-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    /* ================================================================
+       TIỆN ÍCH GALLERY SHOWCASE: HERO + HORIZONTAL THUMBNAIL REEL
+       ================================================================ */
+    .gallery-bar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 14px 0 8px;
+      padding: 0 2px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .gallery-bar-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .gallery-bar-label i {
+      color: var(--color-gold-dark);
+    }
+    .gallery-bar-btn {
+      background: linear-gradient(135deg, #fbf7ee 0%, #f5e9d3 100%);
+      border: 1px solid #d4af37;
+      color: #785a20;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.22s ease;
+      white-space: nowrap;
+    }
+    .gallery-bar-btn:hover {
+      background: #d4af37;
+      color: #0e1a14;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .amenity-gallery-showcase {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .amenity-gallery-hero {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #0d1611;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      box-shadow: 0 10px 30px rgba(15, 23, 20, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .amenity-gallery-hero:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(15, 23, 20, 0.22);
+      border-color: var(--color-gold);
+    }
+    .amenity-gallery-hero-frame {
+      position: relative;
+      aspect-ratio: 16/9;
+      width: 100%;
+      overflow: hidden;
+    }
+    .amenity-gallery-hero-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .amenity-gallery-hero:hover .amenity-gallery-hero-frame img {
+      transform: scale(1.04);
+    }
+    .amenity-gallery-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(10, 18, 14, 0.94) 0%, rgba(10, 18, 14, 0.45) 45%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px 20px;
+    }
+    .amenity-gallery-hero-badge {
+      align-self: flex-end;
+      background: rgba(14, 25, 20, 0.85);
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      color: #f7eed9;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      transition: all 0.25s ease;
+    }
+    .amenity-gallery-hero-badge i {
+      color: var(--color-gold);
+    }
+    .amenity-gallery-hero:hover .amenity-gallery-hero-badge {
+      background: var(--color-gold);
+      color: #0e1a14;
+    }
+    .amenity-gallery-hero:hover .amenity-gallery-hero-badge i {
+      color: #0e1a14;
+    }
+    .amenity-gallery-hero-info {
+      color: #ffffff;
+    }
+    .amenity-gallery-hero-title {
+      font-family: var(--font-serif);
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+      line-height: 1.35;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .amenity-gallery-hero-desc {
+      font-size: 0.84rem;
+      color: #e2e8f0;
+      line-height: 1.45;
+      margin-bottom: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    }
+
+    /* Dải Thumbnail Phân Khu */
+    .amenity-gallery-reel {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 4px 2px 14px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-gold) rgba(0,0,0,0.06);
+    }
+    .amenity-gallery-reel::-webkit-scrollbar {
+      height: 5px;
+    }
+    .amenity-gallery-reel::-webkit-scrollbar-thumb {
+      background: var(--color-gold);
+      border-radius: 4px;
+    }
+    .amenity-reel-item {
+      flex: 0 0 170px;
+      min-width: 170px;
+      scroll-snap-align: start;
+      cursor: pointer;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(15, 23, 20, 0.06);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .amenity-reel-item:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-gold);
+      box-shadow: 0 8px 20px rgba(15, 23, 20, 0.14);
+    }
+    .amenity-reel-thumb {
+      position: relative;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: #0d1611;
+    }
+    .amenity-reel-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .amenity-reel-item:hover .amenity-reel-thumb img {
+      transform: scale(1.08);
+    }
+    .amenity-reel-num {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: rgba(14, 25, 20, 0.85);
+      color: #f7eed9;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .amenity-reel-zoom {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(14, 25, 20, 0.75);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .amenity-reel-item:hover .amenity-reel-zoom {
+      opacity: 1;
+    }
+    .amenity-reel-caption {
+      padding: 6px 8px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: #1e293b;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background: #ffffff;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    @media (max-width: 600px) {
+      .amenity-gallery-hero-frame {
+        aspect-ratio: 16/10;
+      }
+      .amenity-gallery-hero-overlay {
+        padding: 12px 14px;
+      }
+      .amenity-gallery-hero-title {
+        font-size: 1.05rem;
+      }
+      .amenity-gallery-hero-desc {
+        font-size: 0.76rem;
+      }
+      .amenity-reel-item {
+        flex: 0 0 145px;
+        min-width: 145px;
+      }
+      .amenity-reel-caption {
+        font-size: 0.7rem;
+      }
+      .gallery-bar-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .gallery-bar-btn {
+        justify-content: center;
       }
     }
 
@@ -2910,8 +3200,14 @@
     }
     .lightbox-info {
       display: flex;
+      flex-direction: column;
+      gap: 3px;
+      max-width: 82%;
+    }
+    .lightbox-info-row {
+      display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 10px;
     }
     .lightbox-counter {
       background: var(--color-gold);
@@ -2921,11 +3217,24 @@
       font-weight: 800;
       padding: 3px 8px;
       border-radius: 10px;
+      flex-shrink: 0;
     }
     .lightbox-title {
       font-family: var(--font-serif);
       font-size: 1.15rem;
       color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .lightbox-desc {
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      line-height: 1.35;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
     }
     .lightbox-btn-close {
       background: none;
@@ -2940,6 +3249,7 @@
       justify-content: center;
       border-radius: 50%;
       transition: background 0.2s;
+      flex-shrink: 0;
     }
     .lightbox-btn-close:hover, .lightbox-btn-close:focus-visible {
       background: rgba(255,255,255,0.15);
@@ -2953,13 +3263,31 @@
       justify-content: center;
       padding: 16px;
       position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: pan-y;
     }
     .lightbox-image {
       max-width: 92vw;
-      max-height: 82vh;
+      max-height: 76vh;
       object-fit: contain;
-      border-radius: 4px;
+      border-radius: 8px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .lightbox-image.anim-next {
+      animation: slideInRight 0.26s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .lightbox-image.anim-prev {
+      animation: slideInLeft 0.26s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    @keyframes slideInRight {
+      from { opacity: 0.35; transform: translateX(30px) scale(0.98); }
+      to { opacity: 1; transform: translateX(0) scale(1); }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0.35; transform: translateX(-30px) scale(0.98); }
+      to { opacity: 1; transform: translateX(0) scale(1); }
     }
     .lightbox-btn-nav {
       position: absolute;
@@ -2986,6 +3314,29 @@
     }
     .lightbox-btn-nav.prev { left: 24px; }
     .lightbox-btn-nav.next { right: 24px; }
+
+    @media (max-width: 768px) {
+      .lightbox-top-bar {
+        padding: 10px 14px;
+      }
+      .lightbox-title {
+        font-size: 0.95rem;
+      }
+      .lightbox-desc {
+        font-size: 0.72rem;
+      }
+      .lightbox-btn-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+        background: rgba(14, 25, 20, 0.6);
+      }
+      .lightbox-btn-nav.prev { left: 8px; }
+      .lightbox-btn-nav.next { right: 8px; }
+      .lightbox-image {
+        max-height: 72vh;
+      }
+    }
 
     /* ================================================================
        RESPONSIVE DESIGN (MOBILE & TABLET BREAKPOINTS)
@@ -3284,7 +3635,7 @@
     <div style="display: flex; gap: 8px; flex-wrap: wrap;">
       <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Trang Chủ</a>
       <a href="#buoc-6-dien-san"><i class="fa-solid fa-chart-line"></i> Bài Toán Điền Sản</a>
-      <a href="#buoc-4-biet-phu"><i class="fa-solid fa-landmark"></i> Biệt Phủ</a>
+      <a href="#buoc-7-biet-phu"><i class="fa-solid fa-landmark"></i> Biệt Phủ</a>
       <a href="#buoc-5-dien-an"><i class="fa-solid fa-house-chimney-user"></i> Điền An</a>
     </div>
     <div>
@@ -3436,11 +3787,24 @@
         <div class="lake-hero-showcase" onclick="openLakeLightbox(0)" role="button" tabindex="0" aria-label="Phóng to toàn cảnh Hồ Lồ Ồ 100ha và lướt xem bộ ảnh">
           <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp" alt="Hình ảnh Thực Tế Cảnh Hồ Lồ Ồ 100ha Xanh Mát, Tự Nhiên" loading="eager" decoding="async">
           <div class="lake-hero-overlay">
+            <div class="amenity-gallery-hero-badge" style="position: absolute; top: 16px; right: 16px;">
+              <i class="fa-solid fa-images"></i> 8 Ảnh Flycam Thực Tế
+            </div>
             <div class="lake-hero-info">
               <h4 class="lake-hero-title">Toàn Cảnh Mặt Nước Hồ Lồ Ồ 100ha Xanh Mát, Tự Nhiên</h4>
               <p class="lake-hero-desc">Bức tranh sinh thái thực tế: lòng hồ nước ngọt 100ha trong xanh nối liền những cánh đồng lúa thanh bình, mang lại nguồn vượng khí phong thủy độc bản cho Saigon Farm Resort.</p>
             </div>
           </div>
+        </div>
+
+        <!-- Dải Thumbnail & Nút Xem Ảnh -->
+        <div class="gallery-bar-header">
+          <div class="gallery-bar-label">
+            <i class="fa-solid fa-camera-retro"></i> <strong>Bộ Sưu Tập 8 Góc Nhìn Flycam Thực Tế</strong>
+          </div>
+          <button class="gallery-bar-btn" onclick="openLakeLightbox(0)" type="button">
+            <i class="fa-solid fa-expand"></i> Xem Toàn Bộ 8 Ảnh
+          </button>
         </div>
 
         <!-- Collage Gallery Tổng: 8 Ảnh Thực Tế Cảnh Hồ Lồ Ồ 100ha Xanh Mát, Tự Nhiên -->
@@ -3788,31 +4152,52 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Phong thủy tụ thủy sinh tài:</strong> Quần thể tiện ích trải dài ven mặt hồ Lồ Ồ 100ha, ba bề đồng lúa bao bọc, mang lại vượng khí tài lộc và sinh thái thịnh vượng vĩnh cửu.</span></li>
               </ul>
             </div>
-            <div class="amenity-pane-grid">
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('tong-the', 0)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.webp" alt="Tổng thể quy hoạch" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Tổng Thể Quần Thể Tiện Ích Lên Đến 30.000 m²</div>
-                  <div class="amenity-photo-desc">Phối cảnh toàn cảnh đại quần thể tiện ích trung tâm Saigon Farm Resort.</div>
+
+            <div class="amenity-gallery-showcase">
+              <div class="amenity-gallery-hero" onclick="openAmenityClusterLightbox('tong-the', 0)" role="button" tabindex="0" aria-label="Xem trọn bộ ảnh Tổng thể tiện ích">
+                <div class="amenity-gallery-hero-frame">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.webp" alt="Tổng thể quy hoạch tiện ích Saigon Farm Resort" loading="lazy" decoding="async">
+                  <div class="amenity-gallery-hero-overlay">
+                    <div class="amenity-gallery-hero-badge">
+                      <i class="fa-solid fa-images"></i> 2 Ảnh Phối Cảnh
+                    </div>
+                    <div class="amenity-gallery-hero-info">
+                      <h5 class="amenity-gallery-hero-title">Tổng Thể Quần Thể Tiện Ích Lên Đến 30.000 m²</h5>
+                      <p class="amenity-gallery-hero-desc">Phối cảnh toàn cảnh đại quần thể tiện ích trung tâm Saigon Farm Resort phục vụ riêng cho 36 chủ nhân.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('tong-the', 1)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.webp" alt="Tọa độ vàng kết nối hồ 100ha" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+
+              <div class="amenity-reel-header">
+                <span class="amenity-reel-header-title"><i class="fa-solid fa-photo-film"></i> Phối cảnh tổng thể:</span>
+                <button class="amenity-reel-slide-btn" onclick="openAmenityClusterLightbox('tong-the', 0)" type="button">
+                  <i class="fa-solid fa-expand"></i> Xem Toàn Bộ 2 Ảnh
+                </button>
+              </div>
+
+              <div class="amenity-gallery-reel">
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('tong-the', 0)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.webp" alt="Tổng Thể Tiện Ích 30.000 m²" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">01</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Tổng Thể Tiện Ích 30.000 m²</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Tọa Độ Vàng Kết Nối Hồ 100ha &amp; Đồng Lúa</div>
-                  <div class="amenity-photo-desc">Góc nhìn trên cao bao quát vị trí đắc địa của khu tiện ích sinh thái.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('tong-the', 1)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.webp" alt="Tọa Độ Vàng Kết Nối Hồ 100ha" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">02</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Tọa Độ Vàng Kết Nối Hồ 100ha</div>
                 </div>
               </div>
             </div>
           </div>
 
-                    <!-- PANE 2: CLUBHOUSE & BẾN THUYỀN (Ven_ho_clubhouse) -->
+          <!-- PANE 2: CLUBHOUSE & BẾN THUYỀN (Ven_ho_clubhouse) -->
           <div class="amenity-layer-pane" id="amenity-pane-clubhouse">
             <div class="amenity-pitch-guide">
               <div class="pitch-guide-header">
@@ -3824,125 +4209,126 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Lounge Cafe ngắm hoàng hôn triệu đô:</strong> Không gian thưởng trà, cafe và cocktail ven hồ đón gió mát rượi, là điểm check-in hấp dẫn níu chân du khách lưu trú lâu dài.</span></li>
               </ul>
             </div>
-            <div class="amenity-pane-grid">
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 0)">
-                <div class="amenity-photo-thumb">
+
+            <div class="amenity-gallery-showcase">
+              <div class="amenity-gallery-hero" onclick="openAmenityClusterLightbox('clubhouse', 0)" role="button" tabindex="0" aria-label="Xem trọn bộ ảnh Clubhouse ven hồ">
+                <div class="amenity-gallery-hero-frame">
                   <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.webp" alt="Hồ Bơi & Khu Thư Giãn Ven Mặt Hồ" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Hồ Bơi & Khu Thư Giãn Ven Mặt Hồ</div>
-                  <div class="amenity-photo-desc">Điểm thưởng ngoạn trọn vẹn cảnh sắc non nước thanh bình.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 1)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_2.webp" alt="Lối Tản Bộ & Thềm Hoa Ven Hồ Sinh Thái" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Lối Tản Bộ & Thềm Hoa Ven Hồ Sinh Thái</div>
-                  <div class="amenity-photo-desc">Cung đường đi dạo êm ái ngắm trọn cảnh sắc hoa cỏ ven hồ.</div>
+                  <div class="amenity-gallery-hero-overlay">
+                    <div class="amenity-gallery-hero-badge">
+                      <i class="fa-solid fa-images"></i> 12 Ảnh Phối Cảnh
+                    </div>
+                    <div class="amenity-gallery-hero-info">
+                      <h5 class="amenity-gallery-hero-title">Clubhouse 3.000 m² Sàn &amp; Bến Thuyền Kayak Ven Hồ 100ha</h5>
+                      <p class="amenity-gallery-hero-desc">Điểm thưởng ngoạn trọn vẹn cảnh sắc non nước thanh bình, ngắm hoàng hôn triệu đô và trải nghiệm thể thao mặt nước độc quyền.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 2)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.webp" alt="Không Gian Sự Kiện Ngoài Trời Ven Hồ" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Không Gian Sự Kiện Ngoài Trời Ven Hồ</div>
-                  <div class="amenity-photo-desc">Điểm hẹn của những buổi dạ tiệc âm nhạc và giao lưu tinh hoa.</div>
-                </div>
+
+              <div class="amenity-reel-header">
+                <span class="amenity-reel-header-title"><i class="fa-solid fa-photo-film"></i> Phối cảnh Clubhouse &amp; Bến Thuyền:</span>
+                <button class="amenity-reel-slide-btn" onclick="openAmenityClusterLightbox('clubhouse', 0)" type="button">
+                  <i class="fa-solid fa-expand"></i> Xem Toàn Bộ 12 Ảnh
+                </button>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 3)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.webp" alt="Bậc Thềm Gỗ Vươn Ra Mặt Nước Lộng Gió" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+
+              <div class="amenity-gallery-reel">
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 0)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.webp" alt="Hồ Bơi & Khu Thư Giãn Ven Mặt Hồ" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">01</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Hồ Bơi &amp; Thư Giãn Ven Hồ</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Bậc Thềm Gỗ Vươn Ra Mặt Nước Lộng Gió</div>
-                  <div class="amenity-photo-desc">Thiết kế mở kết nối trực tiếp với không gian hồ lộng gió mát rượi.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 1)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_2.webp" alt="Lối Tản Bộ & Thềm Hoa Ven Hồ" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">02</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Lối Tản Bộ &amp; Thềm Hoa</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 4)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_5.webp" alt="Hồ Bơi & Khu Thư Giãn Ven Mặt Hồ" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 2)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.webp" alt="Không Gian Sự Kiện Ngoài Trời Ven Hồ" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">03</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Không Gian Sự Kiện Ngoài Trời</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Hồ Bơi & Khu Thư Giãn Ven Mặt Hồ</div>
-                  <div class="amenity-photo-desc">Điểm thưởng ngoạn trọn vẹn cảnh sắc non nước thanh bình.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 3)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.webp" alt="Bậc Thềm Gỗ Vươn Ra Mặt Nước" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">04</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Bậc Thềm Gỗ Vươn Ra Mặt Nước</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 5)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_6.webp" alt="Ban Công Thưởng Trà & Café View Panorama" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 4)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_5.webp" alt="Khu Nghỉ Dưỡng Mặt Nước Yên Bình" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">05</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Khu Nghỉ Dưỡng Mặt Nước</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Ban Công Thưởng Trà & Café View Panorama</div>
-                  <div class="amenity-photo-desc">Thưởng lãm tầm nhìn 360 độ ôm trọn mặt hồ và đồi xanh.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 5)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_6.webp" alt="Ban Công Thưởng Trà & Café Panorama" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">06</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Ban Công Thưởng Trà &amp; Café</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 6)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_7.webp" alt="Không Gian Sự Kiện Ngoài Trời Sát Mép Nước" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 6)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_7.webp" alt="Sân Khấu Sự Kiện Sát Mép Nước" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">07</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Sân Khấu Sự Kiện Sát Nước</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Không Gian Sự Kiện Ngoài Trời Sát Mép Nước</div>
-                  <div class="amenity-photo-desc">Điểm hẹn của những buổi dạ tiệc âm nhạc và giao lưu tinh hoa.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 7)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_8.webp" alt="Góc Thư Giãn Tĩnh Tại Bên Bờ Nước" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">08</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Góc Thư Giãn Tĩnh Tại Bên Hồ</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 7)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_8.webp" alt="Góc Thư Giãn Tĩnh Tại Bên Bờ Nước" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 8)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_9.webp" alt="Hoàng Hôn Tuyệt Đẹp Trên Mặt Hồ" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">09</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Hoàng Hôn Tuyệt Đẹp Trên Hồ</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Góc Thư Giãn Tĩnh Tại Bên Bờ Nước</div>
-                  <div class="amenity-photo-desc">Nơi tái tạo năng lượng với hương thơm cỏ cây và gió mát tự nhiên.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 9)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_11.webp" alt="Không Gian Thư Giãn Chiều Hoàng Hôn" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">10</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Chiều Hoàng Hôn Lộng Gió</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 8)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_9.webp" alt="Hồ Bơi & Không Gian Thư Giãn Trong Hoàng Hôn Ven Hồ" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 10)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_12.webp" alt="Bậc Thềm Gỗ Vươn Ra Mặt Nước Lộng Gió" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">11</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Bậc Thềm Gỗ Vươn Ra Hồ</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Hồ Bơi & Không Gian Thư Giãn Trong Hoàng Hôn Ven Hồ</div>
-                  <div class="amenity-photo-desc">Điểm ngắm hoàng hôn buông xuống mặt hồ lộng gió bên làn nước trong lành.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 9)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_11.webp" alt="Không Gian Thư Giãn Chiều Hoàng Hôn" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Không Gian Thư Giãn Chiều Hoàng Hôn</div>
-                  <div class="amenity-photo-desc">Tầm nhìn không giới hạn ôm trọn cảnh sắc hoàng hôn buông xuống mặt hồ.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 10)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_12.webp" alt="Bậc Thềm Gỗ Vươn Ra Mặt Nước Lộng Gió" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Bậc Thềm Gỗ Vươn Ra Mặt Nước Lộng Gió</div>
-                  <div class="amenity-photo-desc">Nơi thời gian lắng đọng giữa không gian bao la của đất trời và mặt nước lộng gió.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('clubhouse', 11)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_14.webp" alt="Bến Thuyền Kayak & Thể Thao Dưới Nước" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Bến Thuyền Kayak & Thể Thao Dưới Nước</div>
-                  <div class="amenity-photo-desc">Trải nghiệm chèo thuyền trên mặt hồ Lồ Ồ 100ha nước ngọt trong lành.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('clubhouse', 11)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_14.webp" alt="Bến Thuyền Kayak & Thể Thao Dưới Nước" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">12</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Bến Thuyền Kayak Mặt Nước</div>
                 </div>
               </div>
             </div>
@@ -3960,35 +4346,54 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Việt Mã Viên quy mô 6.800 m²:</strong> Câu lạc bộ cưỡi ngựa quý tộc đẳng cấp thượng lưu, đào tạo kỹ năng cưỡi ngựa và tôi luyện bản lĩnh vững vàng.</span></li>
               </ul>
             </div>
-            <div class="amenity-pane-grid">
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('facilities', 0)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.webp" alt="Hồ bơi trung tâm" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Hồ Bơi Vô Cực Điện Phân Muối Khoáng</div>
-                  <div class="amenity-photo-desc">Công nghệ điện phân muối tự nhiên khử trùng sinh học, an toàn tuyệt đối cho mắt và làn da.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('facilities', 1)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/San_PickleBall.webp" alt="Sân Pickleball" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Cụm Sân Pickleball Có Mái Che All-Weather</div>
-                  <div class="amenity-photo-desc">Sân thể thao thời thượng đạt chuẩn thi đấu, mái che all-weather phục vụ tập luyện và thi đấu 24/7.</div>
+
+            <div class="amenity-gallery-showcase">
+              <div class="amenity-gallery-hero" onclick="openAmenityClusterLightbox('facilities', 0)" role="button" tabindex="0" aria-label="Xem trọn bộ ảnh Tiện ích trung tâm">
+                <div class="amenity-gallery-hero-frame">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.webp" alt="Hồ Bơi Vô Cực Điện Phân Muối Khoáng" loading="lazy" decoding="async">
+                  <div class="amenity-gallery-hero-overlay">
+                    <div class="amenity-gallery-hero-badge">
+                      <i class="fa-solid fa-images"></i> 3 Tiện Ích Trung Tâm
+                    </div>
+                    <div class="amenity-gallery-hero-info">
+                      <h5 class="amenity-gallery-hero-title">Hồ Bơi Vô Cực Điện Phân Muối Khoáng, Pickleball &amp; Việt Mã Viên</h5>
+                      <p class="amenity-gallery-hero-desc">Tổ hợp thể thao, rèn luyện sức khỏe và trải nghiệm cưỡi ngựa quý tộc chuẩn mực resort sinh thái 5 sao.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('facilities', 2)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Viet_Ma_Vien.webp" alt="Việt Mã Viên" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+
+              <div class="amenity-reel-header">
+                <span class="amenity-reel-header-title"><i class="fa-solid fa-photo-film"></i> Phối cảnh tiện ích trung tâm:</span>
+                <button class="amenity-reel-slide-btn" onclick="openAmenityClusterLightbox('facilities', 0)" type="button">
+                  <i class="fa-solid fa-expand"></i> Xem Toàn Bộ 3 Ảnh
+                </button>
+              </div>
+
+              <div class="amenity-gallery-reel">
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('facilities', 0)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.webp" alt="Hồ Bơi Vô Cực Điện Phân Muối" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">01</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Hồ Bơi Điện Phân Muối</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Việt Mã Viên (6.800 m²)</div>
-                  <div class="amenity-photo-desc">Khuôn viên huấn luyện cưỡi ngựa bài bản phong cách quý tộc, tôi luyện bản lĩnh và phong thái quý phái.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('facilities', 1)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/San_PickleBall.webp" alt="Cụm Sân Pickleball Có Mái Che" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">02</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Sân Pickleball Mái Che</div>
+                </div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('facilities', 2)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Viet_Ma_Vien.webp" alt="Việt Mã Viên Quý Tộc 6.800 m²" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">03</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Việt Mã Viên (6.800 m²)</div>
                 </div>
               </div>
             </div>
@@ -4006,165 +4411,158 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Dịch vụ Private Chef tận dinh thự:</strong> Đơn vị vận hành MDS Living bố trí đầu bếp thượng hạng phục vụ các bữa tiệc riêng tại khuôn viên biệt phủ của gia chủ.</span></li>
               </ul>
             </div>
-            <div class="amenity-pane-grid">
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 0)">
-                <div class="amenity-photo-thumb">
+
+            <div class="amenity-gallery-showcase">
+              <div class="amenity-gallery-hero" onclick="openAmenityClusterLightbox('restaurant', 0)" role="button" tabindex="0" aria-label="Xem trọn bộ ảnh Nhà Hàng Trung Tâm">
+                <div class="amenity-gallery-hero-frame">
                   <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_1.webp" alt="Nhà Hàng Sinh Thái Farm-To-Table (250 Chỗ)" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Nhà Hàng Sinh Thái Farm-To-Table (250 Chỗ)</div>
-                  <div class="amenity-photo-desc">Thực đơn ẩm thực 3 miền từ nguồn nông sản hữu cơ tươi sạch tại chỗ.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 1)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.webp" alt="Kiến Trúc Mái Vòm Gỗ Mộc Độc Bản" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Kiến Trúc Mái Vòm Gỗ Mộc Độc Bản</div>
-                  <div class="amenity-photo-desc">Hài hòa giữa nét mộc mạc điền trang và tiện nghi chuẩn 5 sao.</div>
+                  <div class="amenity-gallery-hero-overlay">
+                    <div class="amenity-gallery-hero-badge">
+                      <i class="fa-solid fa-images"></i> 16 Ảnh Phối Cảnh
+                    </div>
+                    <div class="amenity-gallery-hero-info">
+                      <h5 class="amenity-gallery-hero-title">Nhà Hàng Sinh Thái Farm-To-Table (250 Chỗ)</h5>
+                      <p class="amenity-gallery-hero-desc">Thực đơn ẩm thực 3 miền từ nguồn nông sản hữu cơ tươi sạch tại chỗ theo chuẩn Fine Dining cao cấp.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 2)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_3.webp" alt="Bàn Ăn Bán Lộ Thiên Đón Gió Mát Lành" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Bàn Ăn Bán Lộ Thiên Đón Gió Mát Lành</div>
-                  <div class="amenity-photo-desc">Thưởng thức ẩm thực trong không gian thoáng đãng giữa thiên nhiên.</div>
-                </div>
+
+              <div class="amenity-reel-header">
+                <span class="amenity-reel-header-title"><i class="fa-solid fa-photo-film"></i> Phối cảnh Nhà Hàng Trung Tâm:</span>
+                <button class="amenity-reel-slide-btn" onclick="openAmenityClusterLightbox('restaurant', 0)" type="button">
+                  <i class="fa-solid fa-expand"></i> Xem Toàn Bộ 16 Ảnh
+                </button>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 3)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_4.webp" alt="Bữa Tối Lãng Mạn Dưới Ánh Đèn Vàng" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+
+              <div class="amenity-gallery-reel">
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 0)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_1.webp" alt="Nhà Hàng Sinh Thái Farm-To-Table" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">01</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Nhà Hàng Farm-To-Table</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Bữa Tối Lãng Mạn Dưới Ánh Đèn Vàng</div>
-                  <div class="amenity-photo-desc">Không gian ấm cúng bên tiếng gió hồ rì rào êm dịu.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 1)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.webp" alt="Kiến Trúc Mái Vòm Gỗ Mộc Độc Bản" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">02</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Kiến Trúc Mái Vòm Gỗ</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 4)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_5.webp" alt="Bàn Tiệc Gia Đình Ấm Cúng & Gắn Kết" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 2)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_3.webp" alt="Bàn Ăn Bán Lộ Thiên Đón Gió" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">03</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Bàn Ăn Bán Lộ Thiên</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Bàn Tiệc Gia Đình Ấm Cúng & Gắn Kết</div>
-                  <div class="amenity-photo-desc">Nơi 3 thế hệ quây quần sum vầy bên những món ngon đậm đà bản sắc.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 3)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_4.webp" alt="Bữa Tối Lãng Mạn Dưới Ánh Đèn Vàng" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">04</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Bữa Tối Lãng Mạn Đèn Vàng</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 5)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_6.webp" alt="Phòng Tiệc VIP Kín Đáo & Đẳng Cấp" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 4)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_5.webp" alt="Bàn Tiệc Gia Đình Ấm Cúng" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">05</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Bàn Tiệc Gia Đình Ấm Cúng</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Phòng Tiệc VIP Kín Đáo & Đẳng Cấp</div>
-                  <div class="amenity-photo-desc">Không gian tiếp đón đối tác cao cấp và họp mặt gia tộc trang trọng.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 5)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_6.webp" alt="Phòng Tiệc VIP Kín Đáo & Đẳng Cấp" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">06</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Phòng Tiệc VIP Kín Đáo</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 6)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_7.webp" alt="Quầy Bar Thảo Mộc & Thức Uống Tự Nhiên" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 6)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_7.webp" alt="Quầy Bar Thảo Mộc Nông Trại" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">07</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Quầy Bar Thảo Mộc</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Quầy Bar Thảo Mộc & Thức Uống Tự Nhiên</div>
-                  <div class="amenity-photo-desc">Thức uống detox tươi sạch chiết xuất từ hoa quả và thảo mộc nông trại.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 7)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_8.webp" alt="Khu Vực Tiệc BBQ Ngoài Trời Bên Hồ" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">08</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Khu BBQ Ngoài Trời Bên Hồ</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 7)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_8.webp" alt="Khu Vực Tiệc BBQ Ngoài Trời Bên Hồ" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 8)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_9.webp" alt="Tầm Nhìn Ôm Trọn Cảnh Quan Sinh Thái" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">09</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Tầm Nhìn Sinh Thái Xanh</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Khu Vực Tiệc BBQ Ngoài Trời Bên Hồ</div>
-                  <div class="amenity-photo-desc">Điểm tụ hội lý tưởng cho những bữa tiệc nướng rộn rã cuối tuần.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 9)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_10.webp" alt="Góc Thưởng Trà & Đọc Sách Thư Thái" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">10</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Góc Thưởng Trà &amp; Đọc Sách</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 8)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_9.webp" alt="Tầm Nhìn Ôm Trọn Cảnh Quan Sinh Thái" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 10)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_11.webp" alt="Sảnh Đón Tiếp Ân Cần Chuẩn Quản Gia" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">11</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Sảnh Đón Tiếp Quản Gia</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Tầm Nhìn Ôm Trọn Cảnh Quan Sinh Thái</div>
-                  <div class="amenity-photo-desc">Góc nhìn xanh mát giúp thực khách thư thái trọn vẹn từng giác quan.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 11)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_12.webp" alt="Bàn Tiệc View Panorama Hướng Hồ" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">12</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Bàn Tiệc Panorama Hướng Hồ</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 9)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_10.webp" alt="Góc Thưởng Trà & Đọc Sách Thư Thái" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 12)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_13.webp" alt="Không Gian Tổ Chức Sự Kiện & Sinh Nhật" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">13</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Không Gian Tổ Chức Sự Kiện</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Góc Thưởng Trà & Đọc Sách Thư Thái</div>
-                  <div class="amenity-photo-desc">Không gian tĩnh lặng nhẹ nhàng đón luồng gió thanh khiết.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 13)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_14.webp" alt="Không Gian Điểm Tâm Sáng Thanh Khiết" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">14</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Điểm Tâm Sáng Thanh Khiết</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 10)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_11.webp" alt="Sảnh Đón Tiếp Ân Cần Chuẩn Quản Gia" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 14)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_15.webp" alt="Nhà Hàng Lung Linh Rực Rỡ Về Đêm" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">15</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Nhà Hàng Lung Linh Đêm</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Sảnh Đón Tiếp Ân Cần Chuẩn Quản Gia</div>
-                  <div class="amenity-photo-desc">Đội ngũ nhân viên chuyên nghiệp sẵn sàng đón tiếp tận tâm.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 11)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_12.webp" alt="Bàn Tiệc View Panorama Hướng Hồ" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Bàn Tiệc View Panorama Hướng Hồ</div>
-                  <div class="amenity-photo-desc">Vừa thưởng thức đặc sản vừa ngắm nhìn quang cảnh hồ Lồ Ồ 100ha.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 12)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_13.webp" alt="Không Gian Tổ Chức Sự Kiện & Sinh Nhật" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Không Gian Tổ Chức Sự Kiện & Sinh Nhật</div>
-                  <div class="amenity-photo-desc">Lưu giữ những kỷ niệm đáng nhớ cùng người thân và bạn bè.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 13)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_14.webp" alt="Không Gian Điểm Tâm Sáng Thanh Khiết" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Không Gian Điểm Tâm Sáng Thanh Khiết</div>
-                  <div class="amenity-photo-desc">Khởi đầu ngày mới an lành với hương vị thực dưỡng tinh tế.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 14)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_15.webp" alt="Nhà Hàng Lung Linh Rực Rỡ Về Đêm" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Nhà Hàng Lung Linh Rực Rỡ Về Đêm</div>
-                  <div class="amenity-photo-desc">Điểm hẹn ẩm thực tỏa sáng giữa miền sinh thái thanh bình.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('restaurant', 15)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_16.webp" alt="Dịch Vụ Private Chef Phục Vụ Tận Dinh Thự" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Dịch Vụ Private Chef Phục Vụ Tận Dinh Thự</div>
-                  <div class="amenity-photo-desc">Đầu bếp phục vụ bữa tiệc riêng tại khuôn viên biệt phủ của gia chủ.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('restaurant', 15)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_16.webp" alt="Dịch Vụ Private Chef Phục Vụ Tận Dinh Thự" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">16</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Private Chef Tận Dinh Thự</div>
                 </div>
               </div>
             </div>
@@ -4182,55 +4580,70 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Xe ô tô vào tận cổng từng dinh thự:</strong> Tuyến đường nội bộ rộng thoáng giúp gia chủ lái xe thuận tiện vào tận nơi, không gian trong lành, an toàn tuyệt đối cho người lớn tuổi tản bộ và trẻ thơ vui chơi.</span></li>
               </ul>
             </div>
-            <div class="amenity-pane-grid">
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 0)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.webp" alt="Trục đường chính" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Trục Đường Chính Cảnh Quan Rợp Bóng Cây</div>
-                  <div class="amenity-photo-desc">Đường nội khu rộng thoáng lát đá tự nhiên và vỉa hè cỏ xanh.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 1)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_2-2.webp" alt="Đường dạo bộ" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Tuyến Đường Dạo Bộ Kết Nối Các Phân Khu</div>
-                  <div class="amenity-photo-desc">Hàng rào xanh sinh thái đảm bảo sự riêng tư cho từng dinh thự.</div>
+
+            <div class="amenity-gallery-showcase">
+              <div class="amenity-gallery-hero" onclick="openAmenityClusterLightbox('duong-noi-bo', 0)" role="button" tabindex="0" aria-label="Xem trọn bộ ảnh Tuyến đường nội bộ">
+                <div class="amenity-gallery-hero-frame">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.webp" alt="Trục Đường Chính Cảnh Quan Rợp Bóng Cây" loading="lazy" decoding="async">
+                  <div class="amenity-gallery-hero-overlay">
+                    <div class="amenity-gallery-hero-badge">
+                      <i class="fa-solid fa-images"></i> 5 Phối Cảnh Tuyến Đường
+                    </div>
+                    <div class="amenity-gallery-hero-info">
+                      <h5 class="amenity-gallery-hero-title">Trục Đường Chính Cảnh Quan Rợp Bóng Cây</h5>
+                      <p class="amenity-gallery-hero-desc">Lộ giới rộng thoáng lát đá tự nhiên, vỉa hè cỏ xanh và ngầm hóa toàn bộ hạ tầng kỹ thuật sinh thái.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 2)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_3.webp" alt="Hạ tầng đồng bộ" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Hạ Tầng Giao Thông Đồng Bộ &amp; Ranh Rõ Ràng</div>
-                  <div class="amenity-photo-desc">Hệ thống điện ngầm và thoát nước sinh thái tự thấm bền vững.</div>
-                </div>
+
+              <div class="amenity-reel-header">
+                <span class="amenity-reel-header-title"><i class="fa-solid fa-photo-film"></i> Phối cảnh Tuyến Đường:</span>
+                <button class="amenity-reel-slide-btn" onclick="openAmenityClusterLightbox('duong-noi-bo', 0)" type="button">
+                  <i class="fa-solid fa-expand"></i> Xem Toàn Bộ 5 Ảnh
+                </button>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 3)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_4.webp" alt="Đường ven kênh" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+
+              <div class="amenity-gallery-reel">
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('duong-noi-bo', 0)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.webp" alt="Trục Đường Chính Cảnh Quan" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">01</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Trục Đường Chính Cảnh Quan</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Lối Đi Dọc Theo Dòng Kênh Sinh Thái</div>
-                  <div class="amenity-photo-desc">Không gian tĩnh lặng cho cư dân tản bộ và hít thở khí trời.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('duong-noi-bo', 1)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_2-2.webp" alt="Tuyến Đường Dạo Bộ Vườn Cây" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">02</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Tuyến Dạo Bộ Vườn Cây</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('duong-noi-bo', 4)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_6.webp" alt="Lối dẫn vào dinh thự" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('duong-noi-bo', 2)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_3.webp" alt="Hạ Tầng Ngầm Đồng Bộ & Ranh Rõ Ràng" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">03</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Hạ Tầng Ngầm Đồng Bộ</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Lối Dẫn Vào Từng Khuôn Viên Dinh Thự</div>
-                  <div class="amenity-photo-desc">Cổng chào mộc mạc mang dấu ấn điền trang truyền thống quý phái.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('duong-noi-bo', 3)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_4.webp" alt="Lối Đi Dọc Dòng Kênh Sinh Thái" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">04</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Lối Dọc Kênh Sinh Thái</div>
+                </div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('duong-noi-bo', 4)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_6.webp" alt="Lối Dẫn Vào Từng Dinh Thự" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">05</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Lối Dẫn Vào Từng Dinh Thự</div>
                 </div>
               </div>
             </div>
@@ -4248,75 +4661,86 @@
                 <li><i class="fa-solid fa-circle-check"></i> <span><strong>Khai thác lưu trú sinh lời vượt trội:</strong> Phục vụ các gia đình chuyên gia nước ngoài và giới trung lưu tìm về chốn bình yên, tỷ lệ lấp đầy đạt 65–70%.</span></li>
               </ul>
             </div>
-            <div class="amenity-pane-grid">
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 0)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/S03_Final_Fix_001.webp" alt="Dinh thự ven ruộng lúa" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Tổng Thể Phối Cảnh Dinh Thự Ven Ruộng Lúa</div>
-                  <div class="amenity-photo-desc">Mẫu dinh thự sinh thái với tầm nhìn ôm trọn cánh đồng lúa bát ngát.</div>
-                </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 1)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/1.webp" alt="Hiên nhà gỗ mộc" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Hiên Nhà Gỗ Mộc Đón Gió Đồng Nội</div>
-                  <div class="amenity-photo-desc">Nơi uống trà, đọc sách và tận hưởng bầu không khí trong lành.</div>
+
+            <div class="amenity-gallery-showcase">
+              <div class="amenity-gallery-hero" onclick="openAmenityClusterLightbox('ruong-lua', 0)" role="button" tabindex="0" aria-label="Xem trọn bộ ảnh Dinh thự ven ruộng lúa">
+                <div class="amenity-gallery-hero-frame">
+                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/S03_Final_Fix_001.webp" alt="Tổng Thể Phối Cảnh Dinh Thự Ven Ruộng Lúa" loading="lazy" decoding="async">
+                  <div class="amenity-gallery-hero-overlay">
+                    <div class="amenity-gallery-hero-badge">
+                      <i class="fa-solid fa-images"></i> 7 Phối Cảnh Dinh Thự
+                    </div>
+                    <div class="amenity-gallery-hero-info">
+                      <h5 class="amenity-gallery-hero-title">Tổng Thể Phối Cảnh Dinh Thự Sinh Thái Ven Ruộng Lúa</h5>
+                      <p class="amenity-gallery-hero-desc">Mẫu dinh thự sinh thái với tầm nhìn ôm trọn thung lũng lúa vàng bát ngát, giao hòa trọn vẹn với thiên nhiên.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 2)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/2.webp" alt="Mặt tiền kiến trúc mộc" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Mặt Tiền Kiến Trúc Sắc Việt Đương Đại</div>
-                  <div class="amenity-photo-desc">Hài hòa giữa mái ngói đỏ truyền thống và tiện nghi sống cao cấp.</div>
-                </div>
+
+              <div class="amenity-reel-header">
+                <span class="amenity-reel-header-title"><i class="fa-solid fa-photo-film"></i> Phối cảnh Dinh Thự Ruộng Lúa:</span>
+                <button class="amenity-reel-slide-btn" onclick="openAmenityClusterLightbox('ruong-lua', 0)" type="button">
+                  <i class="fa-solid fa-expand"></i> Xem Toàn Bộ 7 Ảnh
+                </button>
               </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 3)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/6.webp" alt="Khuôn viên sân vườn" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+
+              <div class="amenity-gallery-reel">
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('ruong-lua', 0)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/S03_Final_Fix_001.webp" alt="Phối Cảnh Toàn Khu Dinh Thự" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">01</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Phối Cảnh Toàn Khu Dinh Thự</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Khuôn Viên Sân Vườn Điền Trang Rộng Rãi</div>
-                  <div class="amenity-photo-desc">Không gian trồng hoa và cây ăn trái xanh tươi quanh năm.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('ruong-lua', 1)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/1.webp" alt="Hiên Nhà Gỗ Mộc Đón Gió Đồng Nội" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">02</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Hiên Nhà Gỗ Mộc Đón Gió</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 4)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/7.webp" alt="Không gian mở" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('ruong-lua', 2)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/2.webp" alt="Mặt Tiền Kiến Trúc Sắc Việt Đương Đại" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">03</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Mặt Tiền Sắc Việt Đương Đại</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Sự Giao Hòa Giữa Ngôi Nhà &amp; Ruộng Lúa</div>
-                  <div class="amenity-photo-desc">Ranh giới tự nhiên êm dịu, không bị che chắn tầm nhìn.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('ruong-lua', 3)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/6.webp" alt="Khuôn Viên Sân Vườn Điền Trang Rộng Rãi" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">04</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Sân Vườn Điền Trang</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 5)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/8.webp" alt="Bình minh trên ruộng lúa" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('ruong-lua', 4)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/7.webp" alt="Sự Giao Hòa Giữa Ngôi Nhà & Ruộng Lúa" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">05</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Giao Hòa Giữa Nhà &amp; Ruộng Lúa</div>
                 </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Bình Minh Rạng Rỡ Trên Cánh Đồng Lúa</div>
-                  <div class="amenity-photo-desc">Khoảnh khắc đón ngày mới an nhiên cùng tiếng chim muông.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('ruong-lua', 5)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/8.webp" alt="Bình Minh Rạng Rỡ Trên Cánh Đồng Lúa" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">06</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Bình Minh Trên Cánh Đồng Lúa</div>
                 </div>
-              </div>
-              <div class="amenity-photo-card" onclick="openAmenityClusterLightbox('ruong-lua', 6)">
-                <div class="amenity-photo-thumb">
-                  <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/9.webp" alt="Hoàng hôn bên hiên nhà ven lúa" loading="lazy" decoding="async">
-                  <span class="amenity-photo-zoom"><i class="fa-solid fa-expand"></i></span>
-                </div>
-                <div class="amenity-photo-info">
-                  <div class="amenity-photo-title">Hoàng Hôn Lãng Mạn Bên Hiên Nhà Ven Lúa</div>
-                  <div class="amenity-photo-desc">Tận hưởng khoảnh khắc thanh bình buông xuống thung lũng lúa vàng.</div>
+                <div class="amenity-reel-item" onclick="openAmenityClusterLightbox('ruong-lua', 6)" role="button" tabindex="0">
+                  <div class="amenity-reel-thumb">
+                    <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/9.webp" alt="Hoàng Hôn Lãng Mạn Bên Hiên Nhà Ven Lúa" loading="lazy" decoding="async">
+                    <span class="amenity-reel-num">07</span>
+                    <span class="amenity-reel-zoom"><i class="fa-solid fa-expand"></i></span>
+                  </div>
+                  <div class="amenity-reel-caption">Hoàng Hôn Lãng Mạn Ven Lúa</div>
                 </div>
               </div>
             </div>
@@ -4573,7 +4997,7 @@
         <div class="financial-card-box">
           <h4><i class="fa-solid fa-scale-balanced" style="color: var(--color-gold);"></i> Bảng Chiết Tính Thực Tế: 2 Phương Án Đầu Tư 1.000 m² Điền Sản</h4>
           <p style="font-size: 0.92rem; color: #444; line-height: 1.6; margin-bottom: 18px;">
-            Giá niêm yết: <strong>12 Tỷ Đồng</strong> (đơn giá <strong>12 Triệu/m²</strong>). Áp dụng chính sách thanh toán sớm: <strong>Giảm trực tiếp 800 Triệu Đồng</strong> vào giá bán khi chọn phương thức thanh toán sớm 70% (hoặc giảm <strong>1 Tỷ Đồng</strong> khi thanh toán 100%). Khách hàng thanh toán 70% nhận sổ hồng riêng ngay; 30% còn lại thanh toán tại thời điểm bàn giao sổ (sau 1 năm) là <strong>cơ sở để Chủ đầu tư đồng hành hỗ trợ ra hàng áp dụng riêng cho các sản phẩm Điền Sản</strong> (sản phẩm được duyệt chính sách đầu tư), bảo đảm an toàn và lợi ích tối đa cho cả đôi bên.
+            Giá niêm yết: <strong>11,2 Tỷ Đồng</strong> (đơn giá <strong>11,2 Triệu/m²</strong>). Áp dụng chính sách thanh toán sớm 70%: <strong>Giảm trực tiếp 800 Triệu Đồng</strong> vào giá bán, giá vốn thực mua chỉ còn <strong>10,4 Tỷ Đồng</strong> (đơn giá thực tế <strong>10,4 Triệu/m²</strong>). Khách hàng thanh toán 70% nhận sổ hồng riêng 100% thổ cư ngay; 30% còn lại giãn 1 năm lãi suất 0% kèm cam kết Chủ đầu tư đồng hành hỗ trợ ra hàng, bảo đảm tối đa lợi ích và tỷ suất sinh lời vượt trội.
           </p>
           
           <div class="table-scroll-hint"><i class="fa-solid fa-arrows-left-right"></i> Vuốt ngang để xem chi tiết 2 phương án</div>
@@ -4587,20 +5011,20 @@
                     <span style="font-size: 0.76rem; font-weight: 400; color: #c8ddd2;">Tích sản dài hạn</span>
                   </th>
                   <th style="width: 28%; text-align: right; background: #234d38; color: #ffffff; font-weight: 700; white-space: nowrap;">
-                    PA2 — BÁN NGUYÊN LÔ<br>
-                    <span style="font-size: 0.76rem; font-weight: 400; color: #f5e6c8;">Thanh khoản đón sóng</span>
+                    PA2 — BÁN RA ĐÓN SÓNG<br>
+                    <span style="font-size: 0.76rem; font-weight: 400; color: #f5e6c8;">CĐT đồng hành ra hàng</span>
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>1. Giá niêm yết ban đầu (HĐMB — 12 Tr/m²)</strong></td>
-                  <td style="text-align: right; font-weight: 700; white-space: nowrap;">12 Tỷ</td>
-                  <td style="text-align: right; font-weight: 700; white-space: nowrap;">12 Tỷ</td>
+                  <td><strong>1. Giá niêm yết ban đầu (11,2 Tr/m²)</strong></td>
+                  <td style="text-align: right; font-weight: 700; white-space: nowrap;">11,2 Tỷ</td>
+                  <td style="text-align: right; font-weight: 700; white-space: nowrap;">11,2 Tỷ</td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>2. Ưu đãi thanh toán sớm 70%</strong><br>
+                    <strong>2. Ưu đãi thanh toán sớm</strong><br>
                     <small style="color: #666;">(Giảm trực tiếp vào giá bán niêm yết)</small>
                   </td>
                   <td style="text-align: right; color: #2e7d32; font-weight: 700; white-space: nowrap;">-800 Triệu</td>
@@ -4608,156 +5032,96 @@
                 </tr>
                 <tr style="background: #faf6ef;">
                   <td>
-                    <strong>3. Tổng giá bán thực tế (sau ưu đãi)</strong><br>
-                    <small style="color: #666;">(Đơn giá vốn thực tế: ~11,2 Triệu/m²)</small>
+                    <strong>3. Tổng giá vốn thực mua (Giá Net)</strong><br>
+                    <small style="color: #666;">(Đơn giá vốn thực tế: 10,4 Triệu/m²)</small>
                   </td>
-                  <td style="text-align: right; font-weight: 700; color: #183024; white-space: nowrap;">11,2 Tỷ</td>
-                  <td style="text-align: right; font-weight: 700; color: #183024; white-space: nowrap;">11,2 Tỷ</td>
+                  <td style="text-align: right; font-weight: 800; color: #183024; font-size: 1.02rem; white-space: nowrap;">10,4 Tỷ</td>
+                  <td style="text-align: right; font-weight: 800; color: #183024; font-size: 1.02rem; white-space: nowrap;">10,4 Tỷ</td>
                 </tr>
                 <tr style="background: #fdfaf4;">
                   <td>
                     <strong>4. Vốn thực nộp ban đầu (70%)</strong><br>
-                    <small style="color: #666;">(Công chứng nhận sổ hồng riêng ngay; 30% giãn 1 năm LS 0%)</small>
+                    <small style="color: #666;">(Công chứng nhận sổ hồng riêng ngay; 100% thổ cư)</small>
                   </td>
-                  <td style="text-align: right; font-weight: 800; color: #1b5e20; font-size: 1.02rem; white-space: nowrap;">7,84 Tỷ</td>
-                  <td style="text-align: right; font-weight: 800; color: #1b5e20; font-size: 1.02rem; white-space: nowrap;">7,84 Tỷ</td>
+                  <td style="text-align: right; font-weight: 800; color: #1b5e20; font-size: 1.05rem; white-space: nowrap;">7,28 Tỷ</td>
+                  <td style="text-align: right; font-weight: 800; color: #1b5e20; font-size: 1.05rem; white-space: nowrap;">7,28 Tỷ</td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>5. Khoản 30% còn lại thanh toán tại T+360</strong><br>
+                    <strong>5. Khoản 30% còn lại (Giãn 1 năm LS 0%)</strong><br>
                     <small style="color: #666;">(CĐT đồng hành hỗ trợ ra hàng áp dụng cho Điền Sản)</small>
                   </td>
-                  <td style="text-align: right; font-weight: 700; color: #8c6b32; white-space: nowrap;">3,36 Tỷ</td>
-                  <td style="text-align: right; font-weight: 700; color: #8c6b32; white-space: nowrap;">3,36 Tỷ</td>
+                  <td style="text-align: right; font-weight: 700; color: #8c6b32; white-space: nowrap;">3,12 Tỷ</td>
+                  <td style="text-align: right; font-weight: 700; color: #8c6b32; white-space: nowrap;">3,12 Tỷ<br><small style="color: #777;">(Quyết toán khi ra hàng)</small></td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>7. Đơn giá bán ra dự kiến (VNĐ/m²)</strong><br>
-                    <small style="color: #666;">(Mức giá CĐT hỗ trợ ra hàng đón sóng hạ tầng 2027)</small>
+                    <strong>6. Đơn giá bán ra dự kiến (2026 – 2027)</strong><br>
+                    <small style="color: #666;">(Mức giá CĐT hỗ trợ ra hàng đón sóng Sân bay &amp; Cao tốc)</small>
                   </td>
                   <td style="text-align: right; font-style: italic; color: #777;">Chưa bán</td>
-                  <td style="text-align: right; font-weight: 700; color: #b26a00; font-size: 1.02rem; white-space: nowrap;">13,8 Tr/m²</td>
-                </tr>
-                <tr>
-                  <td><strong>8. Tổng doanh thu bán ra dự kiến (1.000 m²)</strong></td>
-                  <td style="text-align: right;">—</td>
-                  <td style="text-align: right; font-weight: 700; white-space: nowrap;">13,8 Tỷ</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>9. Chi phí bán hàng &amp; chuyển nhượng (5.5%)</strong><br>
-                    <small style="color: #666;">(Thuế TNCN 2%, phí môi giới đại lý, công chứng sang tên)</small>
-                  </td>
-                  <td style="text-align: right;">—</td>
-                  <td style="text-align: right; color: #c62828; font-weight: 600; white-space: nowrap;">759 Triệu</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>10. Chi phí lãi vay phát sinh</strong><br>
-                    <small style="color: #666;">(Chính sách CĐT tài trợ 0% lãi suất suốt thời gian giãn)</small>
-                  </td>
-                  <td style="text-align: right;">—</td>
-                  <td style="text-align: right; color: #2e7d32; font-weight: 700; white-space: nowrap;">0 đ</td>
-                </tr>
-                <tr>
-                  <td><strong>11. Doanh thu thuần thực nhận sau chi phí</strong></td>
-                  <td style="text-align: right;">—</td>
-                  <td style="text-align: right; font-weight: 700; color: #183024; font-size: 1.02rem; white-space: nowrap;">13,04 Tỷ</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>10. Quyết toán 30% còn lại cho CĐT</strong><br>
-                    <small style="color: #666;">(Thanh toán dứt điểm khi CĐT hỗ trợ ra hàng thành công)</small>
-                  </td>
-                  <td style="text-align: right;">—</td>
-                  <td style="text-align: right; color: #8c6b32; font-weight: 600; white-space: nowrap;">-3,36 Tỷ</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>11. Số tiền thực thu về tài khoản khách hàng</strong><br>
-                    <small style="color: #666;">(Sau khi trừ mọi chi phí và hoàn tất hợp đồng CĐT)</small>
-                  </td>
-                  <td style="text-align: right;">—</td>
-                  <td style="text-align: right; font-weight: 700; color: #183024; font-size: 1.05rem; white-space: nowrap;">9,68 Tỷ</td>
+                  <td style="text-align: right; font-weight: 800; color: #b26a00; font-size: 1.05rem; white-space: nowrap;">13,8 – 14,5 Tr/m²<br><small style="color: #777;">(Tổng: 13,8 Tỷ – 14,5 Tỷ)</small></td>
                 </tr>
                 <tr style="background: #fff8e1; border-top: 2px solid #dfc89f; border-bottom: 2px solid #dfc89f;">
                   <td style="font-size: 0.95rem; font-weight: 800; color: #183024;">
-                    12. LỢI NHUẬN RÒNG THỰC NHẬN
+                    7. LỢI NHUẬN DỰ KIẾN (VNĐ)
                   </td>
                   <td style="text-align: right; font-weight: 700; color: #2e7d32; font-size: 0.95rem; white-space: nowrap;">
-                    0 đ<br>
-                    <small style="color: #666;">(Tích sản)</small>
+                    Tích sản dài hạn<br>
+                    <small style="color: #666;">(Tăng x2 – x3)</small>
                   </td>
-                  <td style="text-align: right; font-weight: 800; color: #2e7d32; font-size: 1.18rem; white-space: nowrap;">
-                    +1,84 Tỷ
+                  <td style="text-align: right; font-weight: 800; color: #2e7d32; font-size: 1.2rem; white-space: nowrap;">
+                    +3,4 Tỷ – +4,1 Tỷ
                   </td>
                 </tr>
                 <tr style="background: #fdf3d8; border-bottom: 2px solid #dfc89f;">
-                  <td style="font-size: 0.92rem; font-weight: 800; color: #183024;">
-                    13. TỶ SUẤT LỢI NHUẬN TRÊN VỐN THỰC NỘP (ROE)
+                  <td style="font-size: 0.95rem; font-weight: 800; color: #183024;">
+                    8. TỶ SUẤT SINH LỜI / VỐN THỰC NỘP (ROE)
                   </td>
                   <td style="text-align: right; font-weight: 700; color: #5c472d;">
-                    Dài hạn<br>
-                    <small style="color: #666;">(Tăng x2 - x3)</small>
+                    Bền vững dài hạn
                   </td>
-                  <td style="text-align: right; font-weight: 800; color: #b26a00; font-size: 1.2rem; white-space: nowrap;">
-                    23,5%/năm
+                  <td style="text-align: right; font-weight: 900; color: #b26a00; font-size: 1.25rem; white-space: nowrap;">
+                    46,7% – 56,3%/năm
                   </td>
-                </tr>
-                <tr style="background: #faf6ef;">
-                  <td>
-                    <strong>14. Đơn giá hòa vốn an toàn (Break-even)</strong><br>
-                    <small style="color: #666;">(Giá bán tối thiểu để hòa vốn sau khi trừ toàn bộ thuế phí)</small>
-                  </td>
-                  <td style="text-align: right;">—</td>
-                  <td style="text-align: right; font-weight: 700; color: #183024; font-size: 1.02rem; white-space: nowrap;">~11,85 Tr/m²</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <!-- Phân Tích Chuyên Sâu 3 Lợi Thế Đột Phá Của Bài Toán Đầu Tư -->
-          <div class="callout-leverage" style="background: #fcfaf6; border-left: 4px solid #8c6b32; padding: 22px 24px; border-radius: 8px; margin-top: 20px;">
-            <h5 style="font-family: var(--font-brand); font-size: 1.08rem; color: #183024; margin-bottom: 12px; font-weight: 800;">
-              <i class="fa-solid fa-chart-line" style="color: #8c6b32; margin-right: 6px;"></i> Giải Mã 3 Điểm Tựa Đột Phá Giúp Nhà Đầu Tư Điền Sản Đạt Lợi Nhuận Vững Chắc:
+          <!-- 3 Điểm Tựa Đòn Bẩy Chiến Lược (Rút gọn súc tích, không rườm rà) -->
+          <div class="callout-leverage" style="background: #fcfaf6; border-left: 4px solid #8c6b32; padding: 20px 22px; border-radius: 8px; margin-top: 20px;">
+            <h5 style="font-family: var(--font-brand); font-size: 1.05rem; color: #183024; margin-bottom: 14px; font-weight: 800;">
+              <i class="fa-solid fa-chart-line" style="color: #8c6b32; margin-right: 6px;"></i> 3 Điểm Tựa Đột Phá Giúp Nhà Đầu Tư Đạt Hiệu Quả Vượt Trội:
             </h5>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 14px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
               <div style="background: #fff; border: 1px solid #ebdcc5; border-radius: 8px; padding: 16px;">
-                <div style="font-weight: 800; color: #8c6b32; font-size: 0.95rem; margin-bottom: 6px;">
-                  <i class="fa-solid fa-handshake-angle" style="margin-right: 4px;"></i> 1. Cơ Chế Giữ Lại 30% — CĐT Cam Kết Đồng Hành Ra Hàng
+                <div style="font-weight: 800; color: #8c6b32; font-size: 0.92rem; margin-bottom: 6px;">
+                  <i class="fa-solid fa-shield-halved" style="margin-right: 4px;"></i> 1. Đòn Bẩy 70% — Cầm Sổ Đỏ Trao Tay
                 </div>
-                <p style="font-size: 0.86rem; color: #555; line-height: 1.55; margin: 0;">
-                  Việc khách hàng giữ lại 30% (<strong>3,36 Tỷ</strong>) chưa thanh toán là <strong>mỏ neo trách nhiệm cao nhất của Chủ đầu tư</strong>. Đây là cơ chế CĐT trực tiếp đồng hành hỗ trợ ra hàng áp dụng riêng cho các sản phẩm <strong>Điền Sản</strong> (sản phẩm được duyệt chính sách đầu tư). Mô hình này tạo sự an toàn tuyệt đối cho khách hàng và bảo chứng lợi ích tốt nhất cho cả đôi bên.
+                <p style="font-size: 0.85rem; color: #555; line-height: 1.55; margin: 0;">
+                  Chỉ cần thanh toán 70% (<strong>7,28 Tỷ</strong>) là ký công chứng nhận ngay sổ hồng riêng 100% thổ cư. Khoản 30% còn lại (<strong>3,12 Tỷ</strong>) giãn 1 năm với lãi suất 0%, Chủ đầu tư cam kết trực tiếp đồng hành hỗ trợ ra hàng cho khách.
                 </p>
               </div>
 
               <div style="background: #fff; border: 1px solid #ebdcc5; border-radius: 8px; padding: 16px;">
-                <div style="font-weight: 800; color: #2e7d32; font-size: 0.95rem; margin-bottom: 6px;">
-                  <i class="fa-solid fa-tags" style="margin-right: 4px;"></i> 2. Giá Vốn Thực Mua Cực Tốt (~10,48 Triệu/m²)
+                <div style="font-weight: 800; color: #2e7d32; font-size: 0.92rem; margin-bottom: 6px;">
+                  <i class="fa-solid fa-tags" style="margin-right: 4px;"></i> 2. Giá Vốn Đợt 1 Cực Tốt (10,4 Triệu/m²)
                 </div>
-                <p style="font-size: 0.86rem; color: #555; line-height: 1.55; margin: 0;">
-                  Nhờ ưu đãi thanh toán sớm: <strong>Giảm trực tiếp 800 Triệu Đồng</strong> vào giá bán, đơn giá thực tế chỉ còn <strong>11,2 Triệu/m²</strong>. Vốn thực nộp 70% ban đầu chỉ <strong>7,84 Tỷ</strong> là đã cầm sổ hồng riêng 100% thổ cư trao tay.
+                <p style="font-size: 0.85rem; color: #555; line-height: 1.55; margin: 0;">
+                  Nhờ ưu đãi giảm trực tiếp <strong>800 Triệu Đồng</strong> vào giá bán, đơn giá thực tế chỉ còn <strong>10,4 Triệu/m²</strong> — thấp hơn đáng kể so với mặt bằng đất nền sinh thái ven hồ khu vực Đất Đỏ – Hồ Tràm (hiện 14 – 18 Triệu/m²).
                 </p>
               </div>
 
               <div style="background: #fff; border: 1px solid #ebdcc5; border-radius: 8px; padding: 16px;">
-                <div style="font-weight: 800; color: #1f5f7a; font-size: 0.95rem; margin-bottom: 6px;">
-                  <i class="fa-solid fa-arrow-trend-up" style="margin-right: 4px;"></i> 3. Mức Bán Ra 13,8 Triệu/m² Cực Kỳ Khả Thi
+                <div style="font-weight: 800; color: #1f5f7a; font-size: 0.92rem; margin-bottom: 6px;">
+                  <i class="fa-solid fa-arrow-trend-up" style="margin-right: 4px;"></i> 3. Mức Bán Ra 13,8 – 14,5 Tr/m² Cực Kỳ Khả Thi
                 </div>
-                <p style="font-size: 0.86rem; color: #555; line-height: 1.55; margin: 0;">
-                  Hiện tại đất nền khu vực Đất Đỏ – Hồ Tràm đang giao dịch 14 – 18 triệu/m². Khi Cao tốc Biên Hòa – Vũng Tàu thông xe và Sân bay Long Thành vận hành (2026 – 2027), mức giá bán lại <strong>13,8 triệu/m²</strong> là con số rất mềm và thanh khoản tức thì. Đơn giá hòa vốn sau mọi chi phí chỉ <strong>11,09 Triệu/m²</strong> — biên an toàn bảo vệ dòng vốn trọn vẹn.
+                <p style="font-size: 0.85rem; color: #555; line-height: 1.55; margin: 0;">
+                  Khi Cao tốc Biên Hòa – Vũng Tàu thông xe và Sân bay Long Thành vận hành (2026), mức giá bán lại <strong>13,8 – 14,5 Triệu/m²</strong> hoàn toàn nằm trong biên độ thanh khoản an toàn của khu vực, mang lại lợi nhuận dự kiến <strong>+3,4 Tỷ đến +4,1 Tỷ Đồng</strong> (ROE đạt <strong>46,7% – 56,3%</strong>) vững chắc và dễ dàng ra hàng.
                 </p>
               </div>
-            </div>
-
-            <!-- Tổng kết ROE -->
-            <div style="background: #faf4e8; border: 1px solid #dfc89f; border-radius: 8px; padding: 14px 18px; margin-top: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-              <div>
-                <span style="font-size: 0.88rem; color: #5c472d;">Hiệu quả đầu tư PA2 (CĐT hỗ trợ ra hàng ở giá 13,8 Triệu/m²):</span>
-                <div style="font-size: 1.15rem; font-weight: 800; color: #183024;">Lãi ròng thực nhận: <span style="color: #2e7d32;">+2.561.000.000 đ (~2,56 Tỷ)</span> • Tỷ suất sinh lời: <span style="color: #b26a00;">ROE = 37,2%</span></div>
-              </div>
-              <div style="font-size: 0.82rem; color: #777;">(Công thức: 2.561.000.000 đ / 6.880.000.000 đ vốn thực nộp ban đầu)</div>
             </div>
           </div>
 
@@ -5032,6 +5396,8 @@
                 <li>• <strong>Chủ nhà nhận 50%: +260.000.000 đ / năm cộng thêm vào tài khoản!</strong> (dao động 195 – 325 triệu)</li>
               </ul>
             </div>
+          </div>
+
           <!-- Bằng Chứng Chính Sách Ủy Thác MDS Living -->
           <div style="margin: 22px 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openImageDirect('assets/Index_asset/editorial_photo/Chinh_sach_uy_thac_van_hanh.webp', 'Biệt Phủ Điền Trang — Chính Sách Ủy Thác Vận Hành MDS Living 4* (Cam Kết Mua Lại 4Tr/Đêm)')">
             <img src="assets/Index_asset/editorial_photo/Chinh_sach_uy_thac_van_hanh.webp" alt="Chính sách ủy thác vận hành MDS Living" style="width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
@@ -5330,8 +5696,11 @@
   <div id="gallery-3d-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh toàn màn hình">
     <div class="lightbox-top-bar">
       <div class="lightbox-info">
-        <span class="lightbox-counter" id="lightbox-counter">01 / 01</span>
-        <span class="lightbox-title" id="lightbox-title">Xem Chi Tiết Phối Cảnh</span>
+        <div class="lightbox-info-row">
+          <span class="lightbox-counter" id="lightbox-counter">01 / 01</span>
+          <span class="lightbox-title" id="lightbox-title">Xem Chi Tiết Phối Cảnh</span>
+        </div>
+        <div class="lightbox-desc" id="lightbox-desc"></div>
       </div>
       <button class="lightbox-btn-close" onclick="close3DLightbox()" aria-label="Đóng (Phím Esc)">
         <i class="fa-solid fa-xmark"></i>
@@ -5464,7 +5833,8 @@
     window.openLakeLightbox = function(startIdx) {
       currentGallery = lakePhotos.map(p => ({
         src: p.src,
-        title: p.title
+        title: p.title,
+        desc: p.desc
       }));
       currentIdx = (typeof startIdx === 'number') ? startIdx : 0;
       prevBtn.style.display = 'flex';
@@ -5475,8 +5845,8 @@
     };
 
     // Mở trực tiếp 1 ảnh đơn (dùng cho các sơ đồ mặt bằng, tiện ích khác)
-    window.openImageDirect = function(src, title) {
-      currentGallery = [{ src: src, title: title || "Hình ảnh chi tiết" }];
+    window.openImageDirect = function(src, title, desc) {
+      currentGallery = [{ src: src, title: title || "Hình ảnh chi tiết", desc: desc || "" }];
       currentIdx = 0;
       prevBtn.style.display = 'none';
       nextBtn.style.display = 'none';
@@ -5530,7 +5900,7 @@
           desc: 'Điểm hẹn của những buổi dạ tiệc âm nhạc và giao lưu tinh hoa.'
         },        {
           src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_8.webp',
-          title: 'Góc Thư Giãn Tĩnh Tại Bên Bờ Nước',
+          title: 'Góc Th thư Giãn Tĩnh Tại Bên Bờ Nước',
           desc: 'Nơi tái tạo năng lượng với hương thơm cỏ cây và gió mát tự nhiên.'
         },        {
           src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_9.webp',
@@ -5569,82 +5939,82 @@
       ],
       'restaurant': [
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_1.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_1.webp',
           title: 'Nhà Hàng Sinh Thái Farm-To-Table (250 Chỗ)',
           desc: 'Thực đơn ẩm thực 3 miền từ nguồn nông sản hữu cơ tươi sạch tại chỗ.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.webp',
           title: 'Kiến Trúc Mái Vòm Gỗ Mộc Độc Bản',
           desc: 'Hài hòa giữa nét mộc mạc điền trang và tiện nghi chuẩn 5 sao.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_3.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_3.webp',
           title: 'Bàn Ăn Bán Lộ Thiên Đón Gió Mát Lành',
           desc: 'Thưởng thức ẩm thực trong không gian thoáng đãng giữa thiên nhiên.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_4.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_4.webp',
           title: 'Bữa Tối Lãng Mạn Dưới Ánh Đèn Vàng',
           desc: 'Không gian ấm cúng bên tiếng gió hồ rì rào êm dịu.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_5.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_5.webp',
           title: 'Bàn Tiệc Gia Đình Ấm Cúng & Gắn Kết',
           desc: 'Nơi 3 thế hệ quây quần sum vầy bên những món ngon đậm đà bản sắc.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_6.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_6.webp',
           title: 'Phòng Tiệc VIP Kín Đáo & Đẳng Cấp',
           desc: 'Không gian tiếp đón đối tác cao cấp và họp mặt gia tộc trang trọng.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_7.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_7.webp',
           title: 'Quầy Bar Thảo Mộc & Thức Uống Tự Nhiên',
           desc: 'Thức uống detox tươi sạch chiết xuất từ hoa quả và thảo mộc nông trại.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_8.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_8.webp',
           title: 'Khu Vực Tiệc BBQ Ngoài Trời Bên Hồ',
           desc: 'Điểm tụ hội lý tưởng cho những bữa tiệc nướng rộn rã cuối tuần.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_9.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_9.webp',
           title: 'Tầm Nhìn Ôm Trọn Cảnh Quan Sinh Thái',
           desc: 'Góc nhìn xanh mát giúp thực khách thư thái trọn vẹn từng giác quan.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_10.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_10.webp',
           title: 'Góc Thưởng Trà & Đọc Sách Thư Thái',
           desc: 'Không gian tĩnh lặng nhẹ nhàng đón luồng gió thanh khiết.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_11.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_11.webp',
           title: 'Sảnh Đón Tiếp Ân Cần Chuẩn Quản Gia',
           desc: 'Đội ngũ nhân viên chuyên nghiệp sẵn sàng đón tiếp tận tâm.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_12.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_12.webp',
           title: 'Bàn Tiệc View Panorama Hướng Hồ',
           desc: 'Vừa thưởng thức đặc sản vừa ngắm nhìn quang cảnh hồ Lồ Ồ 100ha.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_13.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_13.webp',
           title: 'Không Gian Tổ Chức Sự Kiện & Sinh Nhật',
           desc: 'Lưu giữ những kỷ niệm đáng nhớ cùng người thân và bạn bè.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_14.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_14.webp',
           title: 'Không Gian Điểm Tâm Sáng Thanh Khiết',
           desc: 'Khởi đầu ngày mới an lành với hương vị thực dưỡng tinh tế.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_15.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_15.webp',
           title: 'Nhà Hàng Lung Linh Rực Rỡ Về Đêm',
           desc: 'Điểm hẹn ẩm thực tỏa sáng giữa miền sinh thái thanh bình.'
         },
         {
-          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_16.avif',
+          src: 'assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_16.webp',
           title: 'Dịch Vụ Private Chef Phục Vụ Tận Dinh Thự',
           desc: 'Đầu bếp phục vụ bữa tiệc riêng tại khuôn viên biệt phủ của gia chủ.'
         }
@@ -5745,7 +6115,8 @@
       if (!cluster || !cluster.length) return;
       currentGallery = cluster.map(item => ({
         src: item.src,
-        title: item.title
+        title: item.title,
+        desc: item.desc
       }));
       currentIdx = (typeof startIdx === 'number') ? startIdx : 0;
       prevBtn.style.display = cluster.length > 1 ? 'flex' : 'none';
@@ -5755,13 +6126,32 @@
       openLightboxUI();
     };
 
-    function showCurrentLightboxItem() {
+    function showCurrentLightboxItem(direction) {
       if (!currentGallery.length) return;
       const item = currentGallery[currentIdx];
+
+      // Áp dụng animation trượt mượt mà theo chiều lướt
+      imgEl.classList.remove('anim-next', 'anim-prev');
+      void imgEl.offsetWidth; // Trigger reflow
+      if (direction === 1) {
+        imgEl.classList.add('anim-next');
+      } else if (direction === -1) {
+        imgEl.classList.add('anim-prev');
+      }
+
       imgEl.src = item.src;
-      imgEl.alt = item.title;
-      titleEl.textContent = item.title;
-      counterEl.textContent = `${String(currentIdx + 1).padStart(2, '0')} / ${String(currentGallery.length).padStart(2, '0')}`;
+      imgEl.alt = item.title || 'Hình ảnh chi tiết';
+      if (titleEl) titleEl.textContent = item.title || '';
+      
+      const descEl = document.getElementById('lightbox-desc');
+      if (descEl) {
+        descEl.textContent = item.desc || '';
+        descEl.style.display = item.desc ? 'block' : 'none';
+      }
+      
+      if (counterEl) {
+        counterEl.textContent = `${String(currentIdx + 1).padStart(2, '0')} / ${String(currentGallery.length).padStart(2, '0')}`;
+      }
       updateLightboxThumbnails();
     }
 
@@ -5780,8 +6170,9 @@
         thumb.innerHTML = `<img src="${item.src}" alt="${item.title}" loading="lazy" decoding="async">`;
         thumb.onclick = function(e) {
           e.stopPropagation();
+          const dir = idx > currentIdx ? 1 : (idx < currentIdx ? -1 : 0);
           currentIdx = idx;
-          showCurrentLightboxItem();
+          showCurrentLightboxItem(dir);
         };
         strip.appendChild(thumb);
       });
@@ -5814,7 +6205,7 @@
     window.nav3DLightbox = function(dir) {
       if (!currentGallery.length) return;
       currentIdx = (currentIdx + dir + currentGallery.length) % currentGallery.length;
-      showCurrentLightboxItem();
+      showCurrentLightboxItem(dir);
     };
 
     // Đóng khi click ngoài backdrop và phím Escape
@@ -5834,21 +6225,31 @@
       if (e.key === 'ArrowRight') nav3DLightbox(1);
     });
 
-    // Hỗ trợ cảm ứng vuốt (Touch Swipe) trong Lightbox toàn màn hình
+    // Hỗ trợ cảm ứng vuốt mượt mà (Touch Swipe Gestures) toàn màn hình
     (function initTouchGestures() {
-      const lbBody = document.querySelector('.lightbox-body');
-      if (lbBody) {
-        let lbStartX = 0;
-        lbBody.addEventListener('touchstart', function(e) {
-          lbStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        lbBody.addEventListener('touchend', function(e) {
-          const diff = e.changedTouches[0].screenX - lbStartX;
-          if (Math.abs(diff) > 40) {
-            nav3DLightbox(diff < 0 ? 1 : -1);
-          }
-        }, { passive: true });
-      }
+      if (!lightbox) return;
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let touchStartTime = 0;
+
+      lightbox.addEventListener('touchstart', function(e) {
+        if (e.target.closest('.lightbox-btn-close') || e.target.closest('#lightbox-thumb-strip')) return;
+        touchStartX = e.changedTouches[0].clientX;
+        touchStartY = e.changedTouches[0].clientY;
+        touchStartTime = Date.now();
+      }, { passive: true });
+
+      lightbox.addEventListener('touchend', function(e) {
+        if (e.target.closest('.lightbox-btn-close') || e.target.closest('#lightbox-thumb-strip')) return;
+        const diffX = e.changedTouches[0].clientX - touchStartX;
+        const diffY = e.changedTouches[0].clientY - touchStartY;
+        const timeDiff = Date.now() - touchStartTime;
+
+        // Phát hiện lướt ngang rõ ràng (khoảng cách ngang > khoảng cách dọc và > 35px)
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 35 && timeDiff < 600) {
+          nav3DLightbox(diffX < 0 ? 1 : -1);
+        }
+      }, { passive: true });
     })();
 
     // 4. MODAL HƯỚNG DẪN LIÊN HỆ ĐẠI LÝ / CHUYÊN VIÊN TƯ VẤN

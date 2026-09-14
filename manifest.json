@@ -9,12 +9,12 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "assets/Index_asset/logo/logo-sfr.png",
+      "src": "assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/Index_asset/logo/logo-sfr.png",
+      "src": "assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png",
       "sizes": "512x512",
       "type": "image/png"
     }
