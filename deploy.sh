@@ -38,7 +38,15 @@ echo "⛅ [3/3] Đang bắn trực tiếp lên Cloudflare Pages ($PROJECT_NAME).
 # wrangler sẽ tự so khớp mã băm và chỉ upload những file có thay đổi
 npx -y wrangler pages deploy . --project-name="$PROJECT_NAME" --commit-dirty=true
 
+# Đồng bộ luôn trang thư mời (invitation.saigonfarmresort.com)
+if [ -f "deploy-invitation.sh" ]; then
+    echo "📬 Đồng bộ trang thư mời (invitation.saigonfarmresort.com)..."
+    bash deploy-invitation.sh
+fi
+
 echo "✅ Deploy hoàn tất siêu tốc!"
 if [ -n "$CUSTOM_DOMAIN" ]; then
     echo "🌐 Website trực tuyến: https://$CUSTOM_DOMAIN"
+    echo "🌐 Thư mời trực tuyến: https://invitation.saigonfarmresort.com"
 fi
+
