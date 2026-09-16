@@ -1325,6 +1325,114 @@ header.main-header .menu-toggle-btn {
       flex-shrink: 0;
     }
 
+  
+    /* ================================================================
+       CHUẨN HÓA QUY TẮC ĐỒNG CẤP & TYPOGRAPHY TOÀN BỘ TRANG (EDITORIAL)
+       ================================================================ */
+    :root {
+      --editorial-title-size: clamp(1.6rem, 3.2vw, 2.25rem);
+      --editorial-sub-size: clamp(0.92rem, 1.4vw, 1.02rem);
+      --editorial-line-height: 1.32;
+    }
+
+    /* Khung Header Cấp 1 — Thống nhất 100% CANH TRÁI toàn bộ trang */
+    .editorial-section-header {
+      text-align: left !important;
+      margin-bottom: 24px !important;
+      margin-top: 10px !important;
+      max-width: 900px !important;
+    }
+
+    /* Eyebrow / Category Tag Cấp 1 */
+    .editorial-eyebrow {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 7px !important;
+      font-size: 0.72rem !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      color: #8c6b32 !important;
+      background: #faf3e6 !important;
+      border: 1px solid #dfc89f !important;
+      padding: 4px 12px !important;
+      border-radius: 20px !important;
+      margin-bottom: 12px !important;
+      line-height: 1.2 !important;
+    }
+
+    /* Tiêu đề Section Cấp 1 — Đồng nhất font Playfair, kích thước chuẩn */
+    .editorial-section-title {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      font-size: var(--editorial-title-size) !important;
+      font-weight: 700 !important;
+      color: #183024 !important;
+      line-height: var(--editorial-line-height) !important;
+      margin: 0 0 10px 0 !important;
+      letter-spacing: -0.015em !important;
+      text-align: left !important;
+      text-transform: none !important;
+    }
+
+    /* Đoạn văn mô tả dưới Tiêu đề Section Cấp 1 */
+    .editorial-section-sub {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+      font-size: var(--editorial-sub-size) !important;
+      color: #555555 !important;
+      line-height: 1.68 !important;
+      margin: 0 !important;
+      max-width: 860px !important;
+      font-weight: 400 !important;
+      text-align: left !important;
+    }
+
+    /* Tiêu đề Phân mục Cấp 2 (Sub-sections) */
+    .editorial-sub-header {
+      margin-top: 36px !important;
+      margin-bottom: 22px !important;
+      text-align: left !important;
+    }
+
+    .editorial-sub-title {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem) !important;
+      font-weight: 700 !important;
+      color: #183024 !important;
+      margin: 6px 0 8px 0 !important;
+      line-height: 1.35 !important;
+      text-align: left !important;
+      text-transform: none !important;
+    }
+
+    /* Bảng danh mục trải nghiệm — Responsive không bao giờ vỡ trên mobile */
+    .heritage-table-card {
+      background: #ffffff;
+      border: 1px solid #dfc89f;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 30px 0;
+      box-shadow: 0 8px 24px rgba(194, 155, 83, 0.08);
+      overflow: hidden;
+    }
+
+    .heritage-table-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .heritage-table-card {
+        padding: 18px 14px;
+        margin: 20px 0;
+      }
+      .heritage-table-card h4 {
+        font-size: 1.15rem !important;
+        line-height: 1.4 !important;
+      }
+    }
+
   </style>
 <!-- FontAwesome Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
@@ -1476,14 +1584,16 @@ header.main-header .menu-toggle-btn {
 <section class="partner-toolkit-section" id="partner-toolkit" style="background: linear-gradient(180deg, #fffdfa 0%, #f9f4ec 100%); padding: 50px 0 35px; border-bottom: 1px solid #e7ded0;">
   <div class="container">
     
-    <!-- Header Block -->
-    <div style="text-align: center; max-width: 860px; margin: 0 auto 32px;">
-      <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.15rem; color: #1a1a1a; margin-bottom: 18px; line-height: 1.3;">
-        Cấu Trúc 3 Dòng Sản Phẩm &amp; Lối Sống Việt Đương Đại
-      </h2>
+    <!-- Header Block (Đồng Cấp Chuẩn Mực - Canh Trái) -->
+    <div class="editorial-section-header">
+      <span class="editorial-eyebrow"><i class="fa-solid fa-crown"></i> DÒNG SẢN PHẨM ĐIỀN TRANG</span>
+      <h2 class="editorial-section-title">Cấu Trúc 3 Dòng Sản Phẩm &amp; Lối Sống Việt Đương Đại</h2>
+      <p class="editorial-section-sub">
+        Quần thể điền trang nghỉ dưỡng sinh thái ven hồ 100ha liền kề Hồ Tràm, tích hợp bộ 3 giải pháp độc bản dành cho gia đình thượng lưu.
+      </p>
       
       <!-- 3 Điểm Trọng Tâm Hàng Ngang (Desktop & Mobile) -->
-      <div style="display: flex; justify-content: center; align-items: stretch; gap: 10px; max-width: 720px; margin: 0 auto;">
+      <div style="display: flex; justify-content: flex-start; align-items: stretch; gap: 10px; max-width: 680px; margin: 18px 0 0;">
         <div style="flex: 1; min-width: 0; background: #faf5ec; border: 1px solid #dfc89f; border-radius: 8px; padding: 12px 8px; text-align: center; box-shadow: 0 2px 8px rgba(194, 155, 83, 0.08); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;">
           <i class="fa-solid fa-shield-halved" style="color: #8c6b32; font-size: 0.95rem;"></i>
           <span style="font-size: 0.84rem; font-weight: 700; color: #183024; line-height: 1.35;">Tích sản an toàn</span>
@@ -1608,14 +1718,15 @@ header.main-header .menu-toggle-btn {
 <section class="story-section story-section-alt" id="ban-sac">
 <div class="container">
 <!-- Header: Điền Trang Nghỉ Dưỡng Bản Sắc Việt Đương Đại (Chữ đen nền trắng, không khung, canh trái editorial) -->
-<div style="margin-bottom: 22px; margin-top: 12px;">
-  <h2 class="section-title" style="margin-bottom: 8px;">Điền Trang Nghỉ Dưỡng Bản Sắc Việt Đương Đại</h2>
-  <p style="font-size: 1.02rem; color: #666; line-height: 1.6; margin: 0; max-width: 980px;">
-    Nơi tinh hoa văn hóa truyền thống 4.000 năm hòa quyện cùng chuẩn sống thượng lưu quốc tế, hệ tiện ích resort độc đáo, nhịp sống lễ hội bốn mùa sống động.
-  </p>
-</div>
+<div class="editorial-section-header">
+      <span class="editorial-eyebrow"><i class="fa-solid fa-feather-pointed"></i> DI SẢN BẢN SẮC VIỆT</span>
+      <h2 class="editorial-section-title">Điền Trang Nghỉ Dưỡng Bản Sắc Việt Đương Đại</h2>
+      <p class="editorial-section-sub">
+        Nơi tinh hoa văn hóa truyền thống 4.000 năm hòa quyện cùng chuẩn sống thượng lưu quốc tế, hệ tiện ích resort độc đáo, nhịp sống lễ hội bốn mùa sống động.
+      </p>
+    </div>
 
-<!-- Top 3 Featured Heritage Cards -->
+    <!-- Top 3 Featured Heritage Cards -->
 <div class="top-listing">
 <!-- Top 1: Hệ Thống Không Gian Bản Sắc Việt -->
 <a class="top-listing-card" href="article.html?id=204" style="text-decoration: none; color: inherit; display: block; position: relative;">
@@ -1652,15 +1763,16 @@ header.main-header .menu-toggle-btn {
 </a>
 </div>
 <!-- Interactive Spaces Heritage Table -->
-<div style="background: #ffffff; border: 1px solid #dfc89f; border-radius: 12px; padding: 25px 22px; margin: 30px 0; overflow-x: auto; box-shadow: 0 8px 24px rgba(194, 155, 83, 0.08);">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+    <div class="heritage-table-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
 <div>
 <h4 style="font-family: var(--font-serif); color: #8c6b32; font-size: 1.35rem; margin-bottom: 4px; font-weight: 700;">Danh Mục Các Không Gian Trải Nghiệm Bản Sắc Việt</h4>
 <p style="font-size: 0.88rem; color: #666; margin: 0;">Chuẩn mực kiến trúc cảnh quan &amp; vận hành văn hóa do MDS Living phụ trách</p>
 </div>
 <a href="article.html?id=204" style="background: #faf4e8; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: all 0.2s ease;">Xem Chi Tiết Các Không Gian →</a>
 </div>
-<table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; min-width: 650px;">
+      <div class="heritage-table-scroll">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; min-width: 650px;">
 <thead>
 <tr style="border-bottom: 2px solid #dfc89f; color: #8c6b32; background: #faf4e8;">
 <th style="padding: 12px 14px; width: 24%; font-weight: 700;">ĐIỂM ĐẾN</th>
@@ -1710,8 +1822,10 @@ header.main-header .menu-toggle-btn {
 <td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Sound &amp; Silk House</td>
 </tr>
 </tbody>
-</table>
-</div>
+
+      </table>
+      </div>
+    </div>
 <!-- Heritage Grid Listing (6 cards) -->
 <div class="grid-listing">
 <!-- Item 1: Bến Thuyền, SUP & Kayak -->
@@ -1788,12 +1902,11 @@ header.main-header .menu-toggle-btn {
 </a>
 </div>
 <!-- 10 Chuyên Đề Văn Hóa & Bản Sắc Việt Showcase -->
-<div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(201,169,110,0.25);">
-<div style="text-align: center; margin-bottom: 26px;">
-<span style="background: #c9a96e; color: #000; font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em;">CHUYÊN ĐỀ ĐẶC SẮC</span>
-<h3 style="font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 1.9rem); color: #121212; margin: 12px 0 6px;">BỘ SƯU TẬP 10 CHUYÊN ĐỀ VĂN HÓA &amp; PHONG CÁCH SỐNG ĐIỀN TRANG</h3>
-<p style="font-size: 0.92rem; color: #666; max-width: 750px; margin: 0 auto;">Chuỗi bài viết chuyên sâu đúc kết triết lý sống, giá trị di sản và phong cách thụ hưởng đích thực của người Việt đương đại.</p>
-</div>
+    <div class="editorial-sub-header" style="padding-top: 32px; border-top: 1px solid rgba(201,169,110,0.3);">
+      <span class="editorial-eyebrow"><i class="fa-solid fa-book-bookmark"></i> ẤN PHẨM CHUYÊN ĐỀ</span>
+      <h3 class="editorial-sub-title">10 Chuyên Đề Văn Hóa &amp; Phong Cách Sống Điền Trang</h3>
+      <p class="editorial-section-sub">Chuỗi bài viết chuyên sâu đúc kết triết lý sống, giá trị di sản và phong cách thụ hưởng đích thực của người Việt đương đại.</p>
+    </div>
 <div class="grid-listing" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
 <!-- 401 -->
 <a class="grid-card" href="article.html?id=401" style="text-decoration: none; color: inherit; display: block;">
@@ -1926,17 +2039,15 @@ header.main-header .menu-toggle-btn {
      ==================================================================== -->
 <section class="story-section" id="tien-ich">
 <div class="container">
-<div style="margin-bottom: 24px; margin-top: 12px; text-align: left;">
-  <div style="display: inline-flex; align-items: center; gap: 8px; background: #faf2e4; border: 1px solid #dfc89f; color: #8c6b32; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px;">
-    <i class="fa-solid fa-spa"></i> ĐẶC QUYỀN THƯỢNG LƯU KHÉP KÍN
-  </div>
-  <h2 class="section-title" style="margin-bottom: 8px;">Quần Thể Tiện Ích Sinh Thái Quy Mô Lên Đến 30.000 m²</h2>
-  <p style="font-size: 1.02rem; color: #666; line-height: 1.6; margin: 0;">
-    Dành trọn hơn 30.000m² không gian xanh và mặt nước cho hệ sinh thái 76 tiện ích đa tầng khép kín (50 tiện ích Phân khu Trung Tâm &amp; 26 tiện ích Phân khu Ven Hồ): từ tổ hợp thể thao mặt nước hồ 100ha, cụm sân Pickleball &amp; Bóng rổ, Việt Mã Viên đến Bờ Sen (Spa, Hồ bơi &amp; Thiền), Nhà hàng Nếp Nhà Việt và Nhà hàng Vị Thủy.
-  </p>
-</div>
+<div class="editorial-section-header">
+      <span class="editorial-eyebrow"><i class="fa-solid fa-spa"></i> ĐẶC QUYỀN THƯỢNG LƯU KHÉP KÍN</span>
+      <h2 class="editorial-section-title">Quần Thể Tiện Ích Sinh Thái Quy Mô Lên Đến 30.000 m²</h2>
+      <p class="editorial-section-sub">
+        Dành trọn hơn 30.000m² không gian xanh và mặt nước cho hệ sinh thái 76 tiện ích đa tầng khép kín (50 tiện ích Phân khu Trung Tâm &amp; 26 tiện ích Phân khu Ven Hồ): từ tổ hợp thể thao mặt nước hồ 100ha, cụm sân Pickleball &amp; Bóng rổ, Việt Mã Viên đến Bờ Sen (Spa, Hồ bơi &amp; Thiền), Nhà hàng Nếp Nhà Việt và Nhà hàng Vị Thủy.
+      </p>
+    </div>
 
-<!-- Sơ Đồ Phân Bổ 2 Phân Khu Tiện Ích -->
+    <!-- Sơ Đồ Phân Bổ 2 Phân Khu Tiện Ích -->
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 30px;">
   <!-- Card 1: Tiện Ích Trung Tâm -->
   <div style="background: #fff; border: 1px solid #e2d8c5; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column;">
@@ -2565,9 +2676,10 @@ function filterAmenityDrawer(query) {
     <div class="hht-mag-wrapper">
       
       <!-- Section Header -->
-      <div class="hht-mag-header">
-        <h2 class="hht-mag-title">Tạp Chí &amp; Nhận Định</h2>
-        <p class="hht-mag-subtitle">
+      <div class="editorial-section-header">
+        <span class="editorial-eyebrow"><i class="fa-solid fa-newspaper"></i> GÓC NHÌN &amp; TÍCH SẢN</span>
+        <h2 class="editorial-section-title">Tạp Chí &amp; Nhận Định</h2>
+        <p class="editorial-section-sub">
           Những ấn phẩm chuyên sâu về tài sản, phong cách sống và nghệ thuật thưởng lãm tinh hoa.
         </p>
       </div>
@@ -2853,10 +2965,10 @@ function filterAmenityDrawer(query) {
 <section class="location-section story-section" id="vi-tri">
 <div id="location-section" style="scroll-margin-top: 80px;"></div>
   <div class="container">
-    <div class="section-header-wrap" style="text-align: left; max-width: 860px; margin: 0 0 32px 0;">
-      <span style="display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; color: #8a6d3b; text-transform: uppercase; background: #fdf8ee; padding: 5px 14px; border-radius: 20px; border: 1px solid #ebd9b8; margin-bottom: 12px;">TÂM ĐIỂM KẾT NỐI VÙNG</span>
-      <h2 class="section-title" style="margin-bottom: 14px;">Vị Trí &amp; Hướng Dẫn Đường Đi</h2>
-      <p style="font-size: 1.02rem; color: #666; line-height: 1.7; margin: 0;">
+    <div class="editorial-section-header">
+      <span class="editorial-eyebrow"><i class="fa-solid fa-map-location-dot"></i> TÂM ĐIỂM KẾT NỐI VÙNG</span>
+      <h2 class="editorial-section-title">Vị Trí &amp; Hướng Dẫn Đường Đi</h2>
+      <p class="editorial-section-sub">
         Saigon Farm Resort tọa lạc bên mặt hồ sinh thái 100ha tự nhiên tại Đất Đỏ – Liền kề cung đường biển Hồ Tràm, đón đầu các trục cao tốc huyết mạch và Sân bay Quốc tế Long Thành.
       </p>
     </div>

@@ -282,7 +282,7 @@
 
   /* Section */
   :root { --section-padding: 48px 0; }
-  .section-title { font-size: 1.6rem !important; margin-bottom: 20px !important; }
+  .section-title { font-size: clamp(1.6rem, 3.2vw, 2.1rem) !important; margin-bottom: 20px !important; }
   .section-header-flex { flex-wrap: wrap !important; gap: 12px !important; }
 
   /* Tab Intro Banners — Pure luxury dark card without photo overlay clash */
@@ -477,7 +477,7 @@
   .brand-tagline { font-size: 0.48rem; }
 
   /* Section */
-  .section-title { font-size: 1.25rem !important; }
+  .section-title { font-size: clamp(1.45rem, 4.5vw, 1.85rem) !important; }
 
   /* Tab Intro Banners */
   .tab-intro-banner { padding: 18px 14px !important; }
