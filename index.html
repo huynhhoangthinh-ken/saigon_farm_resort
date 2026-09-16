@@ -875,11 +875,12 @@ header.main-header .menu-toggle-btn {
 </a>
 <!-- Navigation Menu Links -->
 <nav class="nav-menu-links">
-<a class="nav-link active" data-target="tab-villas-market" href="#tabs-section">Biệt Phủ Điền Trang</a>
-<a class="nav-link" data-target="tab-heritage" href="#tabs-section">Bản Sắc Việt</a>
-<a class="nav-link" data-target="tab-amenities" href="#tabs-section">Tiện Ích Điền Trang</a>
-<a class="nav-link" data-target="tab-masterplan" href="#tabs-section">Mặt Bằng &amp; Quy Hoạch</a>
-<a class="nav-link" data-target="tab-editorial" href="#tabs-section">Tạp Chí Nghỉ Dưỡng</a>
+<a class="nav-link active" href="#biet-phu">Biệt Phủ Điền Trang</a>
+<a class="nav-link" href="#ban-sac">Bản Sắc Việt</a>
+<a class="nav-link" href="#tien-ich">Tiện Ích 30.000m²</a>
+<a class="nav-link" href="#quy-hoach">Quy Hoạch &amp; Pháp Lý</a>
+<a class="nav-link" href="#tap-chi">Tạp Chí &amp; Nhận Định</a>
+<a class="nav-link" href="#vi-tri">Vị Trí &amp; Bản Đồ</a>
 </nav>
 <!-- Hamburger — visible on mobile only -->
 <button aria-label="Mở menu" class="menu-toggle-btn" id="mobileMenuBtn" style="display:none;">
@@ -900,13 +901,13 @@ header.main-header .menu-toggle-btn {
 </button>
 </div>
 <div class="mobile-menu-links">
-<a data-tab="tab-villas-market" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-landmark-dome" style="width:20px;margin-right:8px;"></i>Biệt Phủ Điền Trang</a>
-<a data-tab="tab-heritage" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-landmark" style="width:20px;margin-right:8px;"></i>Bản Sắc Việt</a>
-<a data-tab="tab-amenities" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-spa" style="width:20px;margin-right:8px;"></i>Tiện Ích Điền Trang</a>
-<a data-tab="tab-masterplan" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-map-location-dot" style="width:20px;margin-right:8px;"></i>Mặt Bằng &amp; Quy Hoạch</a>
-<a data-tab="tab-editorial" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-newspaper" style="width:20px;margin-right:8px;"></i>Tạp Chí &amp; Nhận Định</a>
+<a href="#biet-phu" onclick="closeMobileMenu()"><i class="fa-solid fa-landmark-dome" style="width:20px;margin-right:8px;"></i>Biệt Phủ Điền Trang</a>
+<a href="#ban-sac" onclick="closeMobileMenu()"><i class="fa-solid fa-landmark" style="width:20px;margin-right:8px;"></i>Bản Sắc Việt</a>
+<a href="#tien-ich" onclick="closeMobileMenu()"><i class="fa-solid fa-spa" style="width:20px;margin-right:8px;"></i>Tiện Ích 30.000m²</a>
+<a href="#quy-hoach" onclick="closeMobileMenu()"><i class="fa-solid fa-map-location-dot" style="width:20px;margin-right:8px;"></i>Quy Hoạch &amp; Pháp Lý</a>
+<a href="#tap-chi" onclick="closeMobileMenu()"><i class="fa-solid fa-newspaper" style="width:20px;margin-right:8px;"></i>Tạp Chí &amp; Nhận Định</a>
+<a href="#vi-tri" onclick="closeMobileMenu()"><i class="fa-solid fa-map-pin" style="width:20px;margin-right:8px; color:#c9a96e;"></i>Vị Trí &amp; Chỉ Đường Maps</a>
 <a href="story" onclick="closeMobileMenu()" style="color: #c9a96e; font-weight: 700;"><i class="fa-solid fa-book-open" style="width:20px;margin-right:8px; color:#c9a96e;"></i>Tạp Chí Story (98 Trang Lật Mở)</a>
-<a href="#location-section" onclick="closeMobileMenu()"><i class="fa-solid fa-map-pin" style="width:20px;margin-right:8px; color:#c9a96e;"></i>Vị Trí &amp; Chỉ Đường Maps</a>
 <a href="article.html?id=304" onclick="closeMobileMenu()"><i class="fa-solid fa-phone" style="width:20px;margin-right:8px;"></i>Liên Hệ Ban Quản Lý</a>
 </div>
 <div class="mobile-menu-footer">© 2026 Saigon Farm Resort • Chủ đầu tư: MDS Living. Tất cả quyền được bảo lưu.</div>
@@ -1111,24 +1112,14 @@ header.main-header .menu-toggle-btn {
   </div>
 </section>
 
-<!-- Main Tabs Section -->
-<section class="tabs-section" id="tabs-section">
+<!-- Backward Compatibility Anchor -->
+<div id="tabs-section" style="scroll-margin-top: 80px;"></div>
+
+<!-- ====================================================================
+     SECTION 1: BỘ SƯU TẬP BIỆT PHỦ ĐIỀN TRANG (#biet-phu)
+     ==================================================================== -->
+<section class="story-section" id="biet-phu">
 <div class="container">
-<div class="tabs-header">
-<button class="tab-btn active" data-tab="tab-villas-market">
-  Biệt Phủ Điền Trang
-  <span style="background:#c9a96e; color:#000; font-size:0.65rem; font-weight:700; padding:2px 6px; border-radius:3px; margin-left:6px;">HOT</span>
-</button>
-<button class="tab-btn" data-tab="tab-heritage">
-  Bản Sắc Việt
-  <span style="background:#2e7d32; color:#fff; font-size:0.65rem; font-weight:700; padding:2px 6px; border-radius:3px; margin-left:6px;">ĐẶC QUYỀN</span>
-</button>
-<button class="tab-btn" data-tab="tab-amenities">Tiện Ích Điền Trang</button>
-<button class="tab-btn" data-tab="tab-masterplan">Mặt Bằng &amp; Quy Hoạch</button>
-<button class="tab-btn" data-tab="tab-editorial">Xu Hướng &amp; Tạp Chí</button>
-</div>
-<!-- Tab 1: Biệt Phủ Điền Trang (tab-villas-market) -->
-<div class="tab-content active" id="tab-villas-market">
 <div style="margin-bottom: 22px; margin-top: 12px; text-align: left;">
   <div style="display: inline-flex; align-items: center; gap: 8px; background: #faf2e4; border: 1px solid #dfc89f; color: #8c6b32; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px;">
     <i class="fa-solid fa-crown"></i> BỘ SƯU TẬP BIỆT PHỦ ĐỘC BẢN
@@ -1559,8 +1550,13 @@ header.main-header .menu-toggle-btn {
 
 <div style="text-align: right; margin-top: 14px; font-size: 0.78rem; color: #888; font-style: italic;">* Lưu ý: Toàn bộ thông tin, mặt bằng kiến trúc và hình ảnh tiện ích mang tính chất minh họa theo định hướng phát triển thực tế của quần thể điền trang.</div>
 </div>
-<!-- Tab: Bản Sắc Việt (tab-heritage) -->
-<div class="tab-content" id="tab-heritage">
+</section>
+
+<!-- ====================================================================
+     SECTION 2: BẢN SẮC VIỆT ĐƯƠNG ĐẠI (#ban-sac)
+     ==================================================================== -->
+<section class="story-section story-section-alt" id="ban-sac">
+<div class="container">
 <!-- Header: Điền Trang Nghỉ Dưỡng Bản Sắc Việt Đương Đại (Chữ đen nền trắng, không khung, canh trái editorial) -->
 <div style="margin-bottom: 22px; margin-top: 12px;">
   <h2 class="section-title" style="margin-bottom: 8px;">Điền Trang Nghỉ Dưỡng Bản Sắc Việt Đương Đại</h2>
@@ -1573,13 +1569,13 @@ header.main-header .menu-toggle-btn {
 <div class="top-listing">
 <!-- Top 1: 9 Không Gian Bản Sắc Việt -->
 <a class="top-listing-card" href="article.html?id=204" style="text-decoration: none; color: inherit; display: block; position: relative;">
-<div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.jpg');"></div>
+<div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Cung_tuong_Su_Viet.webp');"></div>
 <div class="top-listing-info">
 <div style="margin-bottom: 8px;">
 <span style="background: #c9a96e; color: #000; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.05em; display: inline-block;">MDS LIVING • 9 KHÔNG GIAN</span>
 </div>
 <h4>Hệ Thống 9 Không Gian Bản Sắc Việt</h4>
-<p>Hiên Việt • Giáo Trí Việt • Bờ Sen • Việt Mã Viên • Nếp Nhà Việt</p>
+<p>Hiên Việt • Cung tường Sử Việt • Spa Dưỡng An Mộc • Việt Mã Viên • Nếp Nhà Việt</p>
 </div>
 </a>
 <!-- Top 2: Chuỗi Hoạt Động Lễ Hội Bốn Mùa -->
@@ -1590,7 +1586,7 @@ header.main-header .menu-toggle-btn {
 <span style="background: #2e7d32; color: #fff; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.05em; display: inline-block;">HOẠT ĐỘNG 4 MÙA</span>
 </div>
 <h4>Chuỗi Hoạt Động Lễ Hội Bản Sắc</h4>
-<p>Lễ hội mùa lúa chín • Đêm trăng rằm hoa đăng • Tết Trung Thu • Tết xưa</p>
+<p>Lễ hội mùa lúa chín • Đêm trăng rằm hoa đăng • Tết Trung Thu • Tết xưa truyền thống</p>
 </div>
 </a>
 <!-- Top 3: Việt Mã Viên -->
@@ -1598,10 +1594,10 @@ header.main-header .menu-toggle-btn {
 <div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Viet_Ma_Vien.jpg');"></div>
 <div class="top-listing-info">
 <div style="margin-bottom: 8px;">
-<span style="background: #0068FF; color: #fff; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.05em; display: inline-block;">THE EQUESTRIAN ESTATE</span>
+<span style="background: #0068FF; color: #fff; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.05em; display: inline-block;">THE EQUESTRIAN ACADEMY</span>
 </div>
-<h4>Việt Mã Viên (Câu Lạc Bộ Cưỡi Ngựa)</h4>
-<p>Cưỡi ngựa quý tộc • Lớp ngựa con • Trình diễn nghệ thuật cuối tuần</p>
+<h4>Việt Mã Viên &amp; Học Viện Cưỡi Ngựa</h4>
+<p>Học viện cưỡi ngựa quý tộc • Lớp ngựa con • Trình diễn nghệ thuật cuối tuần</p>
 </div>
 </a>
 </div>
@@ -1609,7 +1605,7 @@ header.main-header .menu-toggle-btn {
 <div style="background: #ffffff; border: 1px solid #dfc89f; border-radius: 12px; padding: 25px 22px; margin: 30px 0; overflow-x: auto; box-shadow: 0 8px 24px rgba(194, 155, 83, 0.08);">
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
 <div>
-<h4 style="font-family: var(--font-serif); color: #8c6b32; font-size: 1.35rem; margin-bottom: 4px; font-weight: 700;">Danh Mục 9 Không Gian Trải Nghiệm Bản Sắc Việt</h4>
+<h4 style="font-family: var(--font-serif); color: #8c6b32; font-size: 1.35rem; margin-bottom: 4px; font-weight: 700;">Danh Mục 9 Không Gian Trải Nghiệm Bản Sắc Việt Đương Đại</h4>
 <p style="font-size: 0.88rem; color: #666; margin: 0;">Chuẩn mực kiến trúc cảnh quan &amp; vận hành văn hóa do MDS Living phụ trách</p>
 </div>
 <a href="article.html?id=204" style="background: #faf4e8; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: all 0.2s ease;">Xem Chi Tiết 9 Không Gian →</a>
@@ -1617,56 +1613,56 @@ header.main-header .menu-toggle-btn {
 <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; min-width: 650px;">
 <thead>
 <tr style="border-bottom: 2px solid #dfc89f; color: #8c6b32; background: #faf4e8;">
-<th style="padding: 12px 14px; width: 22%; font-weight: 700;">ĐIỂM ĐẾN</th>
-<th style="padding: 12px 14px; width: 56%; font-weight: 700;">NỘI DUNG TRẢI NGHIỆM</th>
+<th style="padding: 12px 14px; width: 24%; font-weight: 700;">ĐIỂM ĐẾN</th>
+<th style="padding: 12px 14px; width: 54%; font-weight: 700;">NỘI DUNG TRẢI NGHIỆM</th>
 <th style="padding: 12px 14px; width: 22%; font-weight: 700;">TÊN QUỐC TẾ</th>
 </tr>
 </thead>
 <tbody>
 <tr style="border-bottom: 1px solid #f0e6d6;">
-<td style="padding: 12px 14px; font-weight: 700; color: #183024;">HIÊN VIỆT</td>
-<td style="padding: 12px 14px; color: #444;">Phòng khách chung của cả khu: sảnh đón, phòng trà, thư phòng, phòng khách doanh nhân, câu lạc bộ trẻ em</td>
-<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Veranda</td>
+<td style="padding: 12px 14px; font-weight: 700; color: #183024;">HIÊN VIỆT - NƠI GIÁO TRÍ</td>
+<td style="padding: 12px 14px; color: #444;">Nơi sáng tạo văn hóa bằng đôi tay: làm gốm thủ công, vẽ tranh dân gian, thư pháp, nặn tò he truyền thống</td>
+<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Maker's House &amp; Veranda</td>
 </tr>
 <tr style="border-bottom: 1px solid #f0e6d6;">
-<td style="padding: 12px 14px; font-weight: 700; color: #183024;">GIÁO TRÍ VIỆT</td>
-<td style="padding: 12px 14px; color: #444;">Nơi trẻ học bằng đôi tay: gốm, vẽ, thư pháp, lá dừa, tò he</td>
-<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Maker's House</td>
+<td style="padding: 12px 14px; font-weight: 700; color: #183024;">HIÊN ÂM SẮC &amp; RẠP PHIM</td>
+<td style="padding: 12px 14px; color: #444;">Trang phục &amp; nhạc cụ 54 dân tộc, gallery sống, hòa nhạc acoustic mộc và rạp chiếu phim nghệ thuật ngoài trời</td>
+<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Sound &amp; Cinema Veranda</td>
 </tr>
 <tr style="border-bottom: 1px solid #f0e6d6;">
-<td style="padding: 12px 14px; font-weight: 700; color: #183024;">BỜ SEN</td>
-<td style="padding: 12px 14px; color: #444;">Hồ sen, hồ bơi, spa, tắm thảo mộc, trà Việt, thiền</td>
-<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Lotus Shore</td>
+<td style="padding: 12px 14px; font-weight: 700; color: #183024;">SPA DƯỠNG AN MỘC</td>
+<td style="padding: 12px 14px; color: #444;">Trị liệu thảo mộc tự nhiên, hồ bơi điện phân muối, bể sục Jacuzzi, Onsen thảo dược và thiền tĩnh tâm</td>
+<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">Duong An Moc Wellness &amp; Spa</td>
 </tr>
 <tr style="border-bottom: 1px solid #f0e6d6;">
 <td style="padding: 12px 14px; font-weight: 700; color: #183024;">VIỆT MÃ VIÊN</td>
-<td style="padding: 12px 14px; color: #444;">Nơi gặp gỡ giữa người, ngựa và thiên nhiên: cưỡi ngựa, lớp ngựa con, chăm ngựa, trình diễn cuối tuần</td>
-<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Equestrian Estate</td>
+<td style="padding: 12px 14px; color: #444;">Nơi gặp gỡ giữa người, ngựa và thiên nhiên: học viện cưỡi ngựa quý tộc, khu chăm sóc ngựa và biểu diễn nghệ thuật</td>
+<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Equestrian Academy</td>
 </tr>
 <tr style="border-bottom: 1px solid #f0e6d6;">
-<td style="padding: 12px 14px; font-weight: 700; color: #183024;">NẾP NHÀ VIỆT</td>
-<td style="padding: 12px 14px; color: #444;">Nhà hàng — từ khu vườn đến bàn ăn, bàn ăn cùng bếp trưởng, tiệc giữa đồng lúa, tiệc bên hồ sen</td>
+<td style="padding: 12px 14px; font-weight: 700; color: #183024;">NHÀ HÀNG NẾP NHÀ VIỆT</td>
+<td style="padding: 12px 14px; color: #444;">Ẩm thực mộc Farm-to-Table từ vườn hữu cơ, bàn ăn cùng bếp trưởng, tiệc giữa đồng lúa chín và hồ sen</td>
 <td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Vietnamese Table</td>
 </tr>
 <tr style="border-bottom: 1px solid #f0e6d6;">
-<td style="padding: 12px 14px; font-weight: 700; color: #183024;">DÒNG SỬ VIỆT – VỀ NGUỒN</td>
-<td style="padding: 12px 14px; color: #444;">Bốn nghìn năm kể bằng cảnh quan: đá, đồng, phù điêu, ánh sáng, mặt nước</td>
-<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The River of Time</td>
+<td style="padding: 12px 14px; font-weight: 700; color: #183024;">CUNG TƯỜNG SỬ VIỆT</td>
+<td style="padding: 12px 14px; color: #444;">Bốn nghìn năm hào khí kể bằng nghệ thuật cảnh quan: đá ngọc, đồng, phù điêu điêu khắc, ánh sáng và mặt nước</td>
+<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Heritage Wall of Time</td>
 </tr>
 <tr style="border-bottom: 1px solid #f0e6d6;">
 <td style="padding: 12px 14px; font-weight: 700; color: #183024;">QUẢNG TRƯỜNG HỘI VIỆT</td>
-<td style="padding: 12px 14px; color: #444;">Lễ hội, sân khấu, chợ phiên, hoà nhạc, chiếu phim ngoài trời</td>
-<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Village Green</td>
+<td style="padding: 12px 14px; color: #444;">Không gian lễ hội bốn mùa, sân khấu biểu diễn dân gian, chợ phiên nông sản hữu cơ và chiếu phim cộng đồng</td>
+<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Village Green Square</td>
 </tr>
 <tr style="border-bottom: 1px solid #f0e6d6;">
-<td style="padding: 12px 14px; font-weight: 700; color: #183024;">VƯỜN CỘI</td>
-<td style="padding: 12px 14px; color: #444;">Cây gia đình, bảng tên, ký ức truyền đời</td>
-<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Roots Garden</td>
+<td style="padding: 12px 14px; font-weight: 700; color: #183024;">VƯỜN THƯỞNG NGUYỆT &amp; CHỐN HÀN HUYÊN</td>
+<td style="padding: 12px 14px; color: #444;">Vườn ngắm trăng rằm, hiên tâm giao, thưởng trà hoa sen cổ thụ và đàm đạo tao nhã giữa không gian tĩnh tại</td>
+<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Moonlight Garden &amp; Lounge</td>
 </tr>
 <tr>
-<td style="padding: 12px 14px; font-weight: 700; color: #183024;">NHÀ ÂM SẮC VIỆT</td>
-<td style="padding: 12px 14px; color: #444;">Trang phục và nhạc cụ 54 dân tộc, gallery sống, sân khấu nhỏ</td>
-<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Sound &amp; Silk House</td>
+<td style="padding: 12px 14px; font-weight: 700; color: #183024;">HỒ THỦY TẠ &amp; ĐÀI VỌNG CẢNH</td>
+<td style="padding: 12px 14px; color: #444;">Đài vọng cảnh đón hoàng hôn tuyệt mỹ, ngắm nhìn mặt hồ phẳng lặng giao hòa cùng mây trời</td>
+<td style="padding: 12px 14px; font-style: italic; color: #8c6b32; font-weight: 600;">The Sunset Pavilion &amp; Lake</td>
 </tr>
 </tbody>
 </table>
@@ -1685,51 +1681,51 @@ header.main-header .menu-toggle-btn {
 <p class="grid-price">Thể Thao &amp; Thủy Lực</p>
 </div>
 </a>
-<!-- Item 2: Bờ Sen & Herbal Spa -->
+<!-- Item 2: Spa & Wellness Dưỡng An Mộc -->
 <a class="grid-card" href="article.html?id=124" style="text-decoration: none; color: inherit; display: block;">
 <div class="grid-img">
-<img alt="Bờ Sen Spa &amp; Thiền" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.jpg"/>
+<img alt="Spa &amp; Wellness Dưỡng An Mộc" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.jpg"/>
 </div>
 <div class="grid-card-info">
-<div style="margin-bottom: 6px;"><span style="background: #2e7d32; color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; display: inline-block;">THE LOTUS SHORE</span></div>
-<h5>Bờ Sen &amp; Herbal Spa (Dưỡng Sinh)</h5>
-<p class="grid-card-subtitle">Hồ sen ngát hương, ngâm khoáng thảo mộc, trà Việt &amp; thiền định</p>
+<div style="margin-bottom: 6px;"><span style="background: #2e7d32; color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; display: inline-block;">DƯỠNG AN MỘC</span></div>
+<h5>Spa &amp; Wellness Dưỡng An Mộc</h5>
+<p class="grid-card-subtitle">Hồ Thủy Tạ, ngâm khoáng thảo mộc, Onsen điện phân muối &amp; thiền định</p>
 <p class="grid-price">Tái Tạo Năng Lượng</p>
 </div>
 </a>
-<!-- Item 3: Nếp Nhà Việt & Organic Farm -->
+<!-- Item 3: Nhà Hàng Nếp Nhà Việt & Organic Farm -->
 <a class="grid-card" href="article.html?id=121" style="text-decoration: none; color: inherit; display: block;">
 <div class="grid-img">
-<img alt="Nếp Nhà Việt" decoding="async" loading="lazy" src="assets/Index_asset/Tien_ich_minh_hoa/Nong_trai_huu_co.png"/>
+<img alt="Nhà Hàng Nếp Nhà Việt" decoding="async" loading="lazy" src="assets/Index_asset/Tien_ich_minh_hoa/Nong_trai_huu_co.png"/>
 </div>
 <div class="grid-card-info">
 <div style="margin-bottom: 6px;"><span style="background: #c9a96e; color: #000; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; display: inline-block;">FARM-TO-TABLE</span></div>
-<h5>Nếp Nhà Việt &amp; Organic Farm</h5>
-<p class="grid-card-subtitle">Bữa ăn sum vầy, tiệc giữa đồng lúa chín, tiệc bên hồ sen thơ mộng</p>
+<h5>Nhà Hàng Nếp Nhà Việt &amp; Vườn Organic</h5>
+<p class="grid-card-subtitle">Bữa ăn sum vầy, tiệc nông sản giữa đồng lúa chín và hồ sen thơ mộng</p>
 <p class="grid-price">Ẩm Thực Bản Sắc</p>
 </div>
 </a>
-<!-- Item 4: Giáo Trí Việt & Vườn Cội -->
+<!-- Item 4: Hiên Việt - Nơi Giáo Trí & Cung Tường Sử Việt -->
 <a class="grid-card" href="article.html?id=128" style="text-decoration: none; color: inherit; display: block;">
 <div class="grid-img">
-<img alt="Giáo Trí Việt" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.avif"/>
+<img alt="Hiên Việt - Nơi Giáo Trí" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.avif"/>
 </div>
 <div class="grid-card-info">
-<div style="margin-bottom: 6px;"><span style="background: #e65100; color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; display: inline-block;">GIÁO TRÍ &amp; KÝ ỨC</span></div>
-<h5>Giáo Trí Việt &amp; Vườn Cội</h5>
-<p class="grid-card-subtitle">Trẻ học làm gốm, nặn tò he, viết thư pháp &amp; trồng cây gia đình</p>
+<div style="margin-bottom: 6px;"><span style="background: #e65100; color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; display: inline-block;">GIÁO TRÍ &amp; SỬ VIỆT</span></div>
+<h5>Hiên Việt - Nơi Giáo Trí &amp; Cung Tường Sử Việt</h5>
+<p class="grid-card-subtitle">Trẻ học làm gốm, nặn tò he, viết thư pháp &amp; cảm thụ lịch sử ngàn năm</p>
 <p class="grid-price">Di Sản Truyền Đời</p>
 </div>
 </a>
-<!-- Item 5: Nhà Âm Sắc Việt & Quảng Trường -->
+<!-- Item 5: Hiên Âm Sắc, Thanh Âm Cát & Quảng Trường Hội Việt -->
 <a class="grid-card" href="article.html?id=204" style="text-decoration: none; color: inherit; display: block;">
 <div class="grid-img">
-<img alt="Nhà Âm Sắc Việt" decoding="async" loading="lazy" src="assets/Index_asset/Tien_ich_minh_hoa/Nha_am_sac_viet.png"/>
+<img alt="Hiên Âm Sắc &amp; Quảng Trường Hội Việt" decoding="async" loading="lazy" src="assets/Index_asset/Tien_ich_minh_hoa/Nha_am_sac_viet.png"/>
 </div>
 <div class="grid-card-info">
-<div style="margin-bottom: 6px;"><span style="background: #d4af37; color: #000; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; display: inline-block;">ÂM SẮC &amp; LỄ HỘI</span></div>
-<h5>Nhà Âm Sắc Việt &amp; Quảng Trường</h5>
-<p class="grid-card-subtitle">Trang phục &amp; nhạc cụ 54 dân tộc, chợ phiên quê &amp; sân khấu âm nhạc</p>
+<div style="margin-bottom: 6px;"><span style="background: #d4af37; color: #000; font-size: 0.65rem; font-weight: 700; padding: 2px 7px; border-radius: 3px; display: inline-block;">ÂM SẮC &amp; HỘI VIỆT</span></div>
+<h5>Hiên Âm Sắc, Thanh Âm Cát &amp; Hội Việt</h5>
+<p class="grid-card-subtitle">Trang phục &amp; nhạc cụ 54 dân tộc, rạp phim ngoài trời &amp; chợ phiên</p>
 <p class="grid-price">Văn Hóa Sống Động</p>
 </div>
 </a>
@@ -1878,97 +1874,278 @@ header.main-header .menu-toggle-btn {
 </div>
 <div style="text-align: right; margin-top: 18px; font-size: 0.78rem; color: #888; font-style: italic;">* Lưu ý: Toàn bộ thông tin, mặt bằng kiến trúc và hình ảnh tiện ích mang tính chất minh họa theo định hướng phát triển thực tế của khu nghỉ dưỡng điền trang.</div>
 </div>
-<!-- Tab 3: Tiện Ích Điền Trang (tab-amenities) -->
-<div class="tab-content" id="tab-amenities">
+</section>
+
+<!-- ====================================================================
+     SECTION 3: QUẦN THỂ TIỆN ÍCH SINH THÁI 30.000M² (#tien-ich)
+     ==================================================================== -->
+<section class="story-section" id="tien-ich">
+<div class="container">
+<div style="margin-bottom: 24px; margin-top: 12px; text-align: left;">
+  <div style="display: inline-flex; align-items: center; gap: 8px; background: #faf2e4; border: 1px solid #dfc89f; color: #8c6b32; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px;">
+    <i class="fa-solid fa-spa"></i> ĐẶC QUYỀN THƯỢNG LƯU KHÉP KÍN
+  </div>
+  <h2 class="section-title" style="margin-bottom: 8px;">Quần Thể Tiện Ích Sinh Thái Quy Mô Lên Đến 30.000 m²</h2>
+  <p style="font-size: 1.02rem; color: #666; line-height: 1.6; margin: 0;">
+    Dành trọn hơn 30.000m² không gian xanh và mặt nước cho hệ sinh thái 76 tiện ích đa tầng khép kín (50 tiện ích Phân khu Trung Tâm &amp; 26 tiện ích Phân khu Ven Hồ): từ tổ hợp thể thao mặt nước hồ 100ha, cụm sân Pickleball &amp; Bóng rổ, Học viện cưỡi ngựa Việt Mã Viên đến trung tâm Dưỡng An Mộc Spa, Nhà hàng Nếp Nhà Việt và Nhà hàng Vị Thủy.
+  </p>
+</div>
+
+<!-- Sơ Đồ Phân Bổ 2 Phân Khu Tiện Ích -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 30px;">
+  <!-- Card 1: Tiện Ích Trung Tâm -->
+  <div style="background: #fff; border: 1px solid #e2d8c5; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column;">
+    <a href="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.png" target="_blank" style="display: block; position: relative; overflow: hidden;">
+      <img src="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.webp" alt="Sơ đồ tiện ích khu vực trung tâm Saigon Farm Resort" style="width: 100%; height: auto; display: block;">
+      <span style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); color: #fff; padding: 6px 12px; border-radius: 16px; font-size: 0.78rem; font-weight: 600; backdrop-filter: blur(4px);"><i class="fa-solid fa-expand"></i> Nhấp xem ảnh gốc</span>
+    </a>
+    <div style="padding: 18px 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <span style="font-size: 0.75rem; font-weight: 700; color: #8a6d3b; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">PHÂN KHU TRUNG TÂM (50 HẠNG MỤC)</span>
+        <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: #111; margin: 0 0 8px;">Sơ Đồ Phân Bổ Tiện Ích Khu Vực Trung Tâm</h4>
+        <p style="font-size: 0.88rem; color: #666; line-height: 1.65; margin: 0;">Học viện cưỡi ngựa Việt Mã Viên, cụm sân Pickleball &amp; Bóng rổ, Hồ bơi điện phân muối &amp; Jacuzzi, Spa Dưỡng An Mộc, Nhà hàng Nếp Nhà Việt, Hiên Việt - Nơi giáo trí, Cung tường Sử Việt &amp; Vườn Yên tĩnh tại.</p>
+      </div>
+      <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #f0ebe1; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.82rem; font-weight: 700; color: #2e7d32;"><i class="fa-solid fa-circle-check" style="margin-right: 4px;"></i> 50 Tiện ích đa tầng</span>
+        <a href="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.png" target="_blank" style="font-size: 0.82rem; color: #0068FF; font-weight: 600; text-decoration: none;">Phóng to <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2: Tiện Ích Ven Hồ -->
+  <div style="background: #fff; border: 1px solid #e2d8c5; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column;">
+    <a href="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.png" target="_blank" style="display: block; position: relative; overflow: hidden;">
+      <img src="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.webp" alt="Sơ đồ tiện ích ven hồ Saigon Farm Resort" style="width: 100%; height: auto; display: block;">
+      <span style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); color: #fff; padding: 6px 12px; border-radius: 16px; font-size: 0.78rem; font-weight: 600; backdrop-filter: blur(4px);"><i class="fa-solid fa-expand"></i> Nhấp xem ảnh gốc</span>
+    </a>
+    <div style="padding: 18px 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <span style="font-size: 0.75rem; font-weight: 700; color: #8a6d3b; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">PHÂN KHU VEN HỒ 100HA (26 HẠNG MỤC)</span>
+        <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: #111; margin: 0 0 8px;">Sơ Đồ Phân Bổ Tiện Ích Ven Hồ Sinh Thái</h4>
+        <p style="font-size: 0.88rem; color: #666; line-height: 1.65; margin: 0;">Sảnh Nghinh Phong &amp; Wine Lounge, Nhà hàng Vị Thủy bên hồ, Hồ bơi vô cực, Bến thuyền du ngoạn, chèo Kayak &amp; SUP, Trà đạo bên hồ, Góc thư giãn &amp; Điểm câu cá giải trí.</p>
+      </div>
+      <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #f0ebe1; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.82rem; font-weight: 700; color: #2e7d32;"><i class="fa-solid fa-circle-check" style="margin-right: 4px;"></i> 26 Tiện ích mặt nước</span>
+        <a href="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.png" target="_blank" style="font-size: 0.82rem; color: #0068FF; font-weight: 600; text-decoration: none;">Phóng to <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================================================================
+     DANH MỤC TRA CỨU CHI TIẾT 76 HẠNG MỤC TIỆN ÍCH (INTERACTIVE DIRECTORY)
+     ==================================================================== -->
+<div class="amenity-dir-box">
+  <div class="amenity-dir-header">
+    <div class="amenity-zone-tabs">
+      <button class="amenity-zone-btn active" data-zone="central" onclick="switchAmenityZone('central')">
+        <i class="fa-solid fa-compass"></i> Phân Khu Trung Tâm <span class="zone-count">50 Hạng Mục</span>
+      </button>
+      <button class="amenity-zone-btn" data-zone="lake" onclick="switchAmenityZone('lake')">
+        <i class="fa-solid fa-water"></i> Phân Khu Ven Hồ <span class="zone-count">26 Hạng Mục</span>
+      </button>
+    </div>
+    <div class="amenity-search-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="amenitySearchInput" placeholder="Tìm nhanh tiện ích (VD: Ngựa, bơi, spa...)" oninput="filterAmenities(this.value)">
+    </div>
+  </div>
+
+  <!-- Panel 1: 50 Tiện Ích Trung Tâm -->
+  <div id="zone-central-panel" class="amenity-grid-list">
+    <div class="amenity-pill-item"><span class="amenity-pill-num">01</span><span class="amenity-pill-name">Cổng làng</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">02</span><span class="amenity-pill-name">Vườn thảnh thơi</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">03</span><span class="amenity-pill-name">Vườn trí tuệ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">04</span><span class="amenity-pill-name">Hiên âm sắc - Rạp phim ngoài trời</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">05</span><span class="amenity-pill-name">Vườn dưỡng sinh</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">06</span><span class="amenity-pill-name">Vườn thể chất</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">07</span><span class="amenity-pill-name">Vườn cờ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">08</span><span class="amenity-pill-name">Khu trò chơi dân gian</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">09</span><span class="amenity-pill-name">Cung tường Sử Việt</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">10</span><span class="amenity-pill-name">Vườn đọc sách</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">11</span><span class="amenity-pill-name">Vườn thú cưng</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">12</span><span class="amenity-pill-name">Vườn Yên</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">13</span><span class="amenity-pill-name">Vườn Yoga</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">14</span><span class="amenity-pill-name">Vườn thiền</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">15</span><span class="amenity-pill-name">Vườn thưởng nguyệt</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">16</span><span class="amenity-pill-name">Việt Mã Viên</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">17</span><span class="amenity-pill-name">Học viện cưỡi ngựa</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">18</span><span class="amenity-pill-name">Khu chăm sóc ngựa</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">19</span><span class="amenity-pill-name">Hồ Thủy Tạ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">20</span><span class="amenity-pill-name">Đài vọng cảnh hoàng hôn</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">21</span><span class="amenity-pill-name">Đường dạo bộ Lúa Nếp</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">22</span><span class="amenity-pill-name">Đường chạy bộ Bình Minh</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">23</span><span class="amenity-pill-name">Hồ bơi điện phân muối</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">24</span><span class="amenity-pill-name">Bể sục Jacuzzi</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">25</span><span class="amenity-pill-name">Hồ bơi trẻ em</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">26</span><span class="amenity-pill-name">Khu vui chơi nước trẻ em</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">27</span><span class="amenity-pill-name">Ghế nằm thư giãn</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">28</span><span class="amenity-pill-name">Pool Bar</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">29</span><span class="amenity-pill-name">Khu BBQ ngoài trời</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">30</span><span class="amenity-pill-name">Phòng họp doanh nhân</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">31</span><span class="amenity-pill-name">Sảnh tiếp khách</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">32</span><span class="amenity-pill-name">Quảng trường điêu khắc nghệ thuật</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">33</span><span class="amenity-pill-name">Khu vực Picnic &amp; Vườn cây organic</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">34</span><span class="amenity-pill-name">Vườn trái cây</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">35</span><span class="amenity-pill-name">Đường chạy bộ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">36</span><span class="amenity-pill-name">Đường đạp xe</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">37</span><span class="amenity-pill-name">Chốn hàn huyên</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">38</span><span class="amenity-pill-name">Hiên tâm giao</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">39</span><span class="amenity-pill-name">Rừng trị liệu</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">40</span><span class="amenity-pill-name">Sân Pickleball</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">41</span><span class="amenity-pill-name">Sân bóng rổ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">42</span><span class="amenity-pill-name">Nhà quản gia</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">43</span><span class="amenity-pill-name">Đường dạo cảm quan</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">44</span><span class="amenity-pill-name">Đường thư thái</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">45</span><span class="amenity-pill-name">Nhà hàng Nếp Nhà Việt</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">46</span><span class="amenity-pill-name">Hiên Việt - Nơi giáo trí</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">47</span><span class="amenity-pill-name">Thanh Âm Cát</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">48</span><span class="amenity-pill-name">Spa &amp; Wellness Dưỡng An Mộc</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">49</span><span class="amenity-pill-name">Quảng trường Hội Việt</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">50</span><span class="amenity-pill-name">Đường dạo bộ chuông reo</span></div>
+  </div>
+
+  <!-- Panel 2: 26 Tiện Ích Ven Hồ (Mặc định ẩn, bật khi click tab) -->
+  <div id="zone-lake-panel" class="amenity-grid-list" style="display: none;">
+    <div class="amenity-pill-item"><span class="amenity-pill-num">01</span><span class="amenity-pill-name">Cổng chào</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">02</span><span class="amenity-pill-name">Bãi đậu xe</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">03</span><span class="amenity-pill-name">Sảnh đón / trà khách</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">04</span><span class="amenity-pill-name">Lối vào nội bộ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">05</span><span class="amenity-pill-name">Sảnh Nghinh Phong</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">06</span><span class="amenity-pill-name">Wine Lounge</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">07</span><span class="amenity-pill-name">Nhà hàng Vị Thủy</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">08</span><span class="amenity-pill-name">WC thay đồ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">09</span><span class="amenity-pill-name">Khu ghế thư giãn hồ bơi</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">10</span><span class="amenity-pill-name">Hồ bơi vô cực</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">11</span><span class="amenity-pill-name">Khu làm việc ngoài trời</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">12</span><span class="amenity-pill-name">Khu ngồi thư giãn</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">13</span><span class="amenity-pill-name">Khu đọc sách bên hồ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">14</span><span class="amenity-pill-name">Trà đạo bên hồ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">15</span><span class="amenity-pill-name">Khu ăn uống bờ hồ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">16</span><span class="amenity-pill-name">Bến thuyền</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">17</span><span class="amenity-pill-name">Cafe bên hồ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">18</span><span class="amenity-pill-name">Bãi cỏ thư giãn</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">19</span><span class="amenity-pill-name">Đường dạo ven hồ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">20</span><span class="amenity-pill-name">Đường chạy bộ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">21</span><span class="amenity-pill-name">Sân chơi thiên nhiên</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">22</span><span class="amenity-pill-name">Bãi cỏ đa năng</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">23</span><span class="amenity-pill-name">Góc thư giãn</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">24</span><span class="amenity-pill-name">Sân chơi ven hồ</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">25</span><span class="amenity-pill-name">Điểm câu cá giải trí</span></div>
+    <div class="amenity-pill-item"><span class="amenity-pill-num">26</span><span class="amenity-pill-name">Chèo thuyền Kayak</span></div>
+  </div>
+</div>
+
+<div style="margin: 30px 0 16px;">
+  <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #111; margin-bottom: 4px;">
+    <i class="fa-solid fa-crown" style="color: #c9a96e; margin-right: 8px;"></i>HẠNG MỤC TIỆN ÍCH BIỂU TƯỢNG ĐẲNG CẤP
+  </h3>
+  <p style="color: #666; font-size: 0.92rem; margin: 0;">Trải nghiệm sống nghỉ dưỡng trọn vẹn dành riêng cho các chủ nhân điền trang.</p>
+</div>
 <div class="top-listing">
-<!-- Feature 1: Clubhouse -->
+<!-- Feature 1: Sảnh Nghinh Phong & Nhà Hàng Vị Thủy -->
 <a class="top-listing-card" href="article.html?id=122" style="text-decoration: none; color: inherit; display: block;">
 <div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg');"></div>
 <span class="top-listing-minh-hoa">* Hình ảnh minh họa</span>
 <div class="top-listing-info">
-<h4>Clubhouse &amp; Nhà Hàng Ven Hồ</h4>
-<p>Ẩm thực Fine Dining Farm-to-Table giao hòa thiên nhiên</p>
+<h4>Sảnh Nghinh Phong &amp; Nhà Hàng Vị Thủy (Ven Hồ)</h4>
+<p>Ẩm thực Fine Dining, Wine Lounge &amp; Thưởng trà bên mặt nước hồ 100ha</p>
 </div>
 </a>
-<!-- Feature 2: Bến Thuyền -->
+<!-- Feature 2: Bến Thuyền & Thể Thao Mặt Nước -->
 <a class="top-listing-card" href="article.html?id=120" style="text-decoration: none; color: inherit; display: block;">
 <div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.jpg');"></div>
 <span class="top-listing-minh-hoa">* Hình ảnh minh họa</span>
 <div class="top-listing-info">
-<h4>Bến Thuyền &amp; Thể Thao Mặt Nước</h4>
-<p>Chèo SUP, Kayak &amp; Du ngoạn ngắm hoàng hôn trên hồ 100ha</p>
+<h4>Bến Thuyền &amp; Thể Thao Mặt Nước Ven Hồ</h4>
+<p>Chèo Kayak, SUP &amp; Điểm câu cá giải trí đón hoàng hôn trên hồ 100ha</p>
 </div>
 </a>
-<!-- Feature 3: Bờ Sen Spa -->
+<!-- Feature 3: Spa Dưỡng An Mộc -->
 <a class="top-listing-card" href="article.html?id=124" style="text-decoration: none; color: inherit; display: block;">
 <div class="top-listing-img" style="background-image: url('assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.jpg');"></div>
 <span class="top-listing-minh-hoa">* Hình ảnh minh họa</span>
 <div class="top-listing-info">
-<h4>Bờ Sen &amp; Herbal Spa (Dưỡng Sinh)</h4>
-<p>Ngâm khoáng Onsen thảo dược, thưởng trà Việt và thiền tịnh</p>
+<h4>Spa &amp; Wellness Dưỡng An Mộc (Trung Tâm)</h4>
+<p>Hồ Thủy Tạ, Onsen thảo mộc thiên nhiên, hồ bơi điện phân muối &amp; thiền tịnh</p>
 </div>
 </a>
 </div>
 <div class="grid-listing">
 <!-- Item 1: Horse Riding -->
 <a class="grid-card" href="article.html?id=123" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Horse Riding Club" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Viet_Ma_Vien.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+<div class="grid-img"><img alt="Việt Mã Viên &amp; Học Viện Cưỡi Ngựa" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Viet_Ma_Vien.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
 <div class="grid-card-info">
-<h5>Horse Riding Club Quý Tộc</h5>
-<p class="grid-card-subtitle">Bộ môn cưỡi ngựa quý tộc đầu tiên ven biển với HLV chuyên nghiệp</p>
-<p class="grid-price">Đặc Quyền Cư Dân</p>
+<h5>Việt Mã Viên &amp; Học Viện Cưỡi Ngựa</h5>
+<p class="grid-card-subtitle">Bộ môn thể thao cưỡi ngựa quý tộc với huấn luyện viên chuyên nghiệp</p>
+<p class="grid-price">Mục 16, 17, 18 Trung Tâm</p>
 </div>
 </a>
-<!-- Item 2: Herbal Spa -->
+<!-- Item 2: Hồ Bơi Vô Cực & Bể Sục Jacuzzi -->
 <a class="grid-card" href="article.html?id=124" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Herbal Spa" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+<div class="grid-img"><img alt="Hồ Bơi Vô Cực &amp; Jacuzzi" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
 <div class="grid-card-info">
-<h5>Herbal Spa &amp; Zen Zone</h5>
-<p class="grid-card-subtitle">Tắm khoáng Onsen thảo dược tự nhiên, thiền định và Yoga ven hồ</p>
-<p class="grid-price">Tái Tạo Thân - Tâm - Trí</p>
+<h5>Hồ Bơi Vô Cực &amp; Bể Sục Jacuzzi</h5>
+<p class="grid-card-subtitle">Hồ bơi điện phân muối khoáng, bể sục Jacuzzi và Pool Bar thư giãn</p>
+<p class="grid-price">Mục 23, 24 Trung Tâm &amp; Ven Hồ</p>
 </div>
 </a>
-<!-- Item 3: Pickleball -->
+<!-- Item 3: Pickleball & Sân Bóng Rổ -->
 <a class="grid-card" href="article.html?id=126" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Sân Pickleball &amp; Gym" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/San_PickleBall.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+<div class="grid-img"><img alt="Sân Pickleball &amp; Sân Bóng Rổ" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/San_PickleBall.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
 <div class="grid-card-info">
-<h5>Cụm Sân Pickleball &amp; Gym</h5>
-<p class="grid-card-subtitle">Sân chơi Pickleball thời thượng, phòng Gym panorama hướng hồ</p>
-<p class="grid-price">Phong Cách Sống Năng Động</p>
+<h5>Sân Pickleball &amp; Sân Bóng Rổ</h5>
+<p class="grid-card-subtitle">Tổ hợp sân thể thao tiêu chuẩn hiện đại, rèn luyện thể chất đa thế hệ</p>
+<p class="grid-price">Mục 40, 41 Trung Tâm</p>
 </div>
 </a>
-<!-- Item 4: Glamping -->
+<!-- Item 4: Khu BBQ & Vườn Organic -->
 <a class="grid-card" href="article.html?id=127" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Glamping &amp; BBQ" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+<div class="grid-img"><img alt="Khu BBQ Ngoài Trời &amp; Vườn Organic" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.jpg"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
 <div class="grid-card-info">
-<h5>Cắm Trại Glamping &amp; Tiệc BBQ</h5>
-<p class="grid-card-subtitle">Lều trại phong cách Bohemian ven hồ và tiệc nướng nông sản ấm cúng</p>
-<p class="grid-price">Trải Nghiệm Gia Đình</p>
+<h5>Khu BBQ Ngoài Trời &amp; Vườn Organic</h5>
+<p class="grid-card-subtitle">Vườn cây ăn trái, nông trại rau sạch và tiệc nướng BBQ ấm cúng gia đình</p>
+<p class="grid-price">Mục 29, 33, 34 Trung Tâm</p>
 </div>
 </a>
-<!-- Item 5: Giáo Trí Việt -->
+<!-- Item 5: Hiên Việt & Cung Tường Sử Việt -->
 <a class="grid-card" href="article.html?id=128" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Giáo Trí Việt" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.avif"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+<div class="grid-img"><img alt="Hiên Việt - Nơi Giáo Trí &amp; Cung Tường Sử Việt" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.avif"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
 <div class="grid-card-info">
-<h5>Giáo Trí Việt &amp; Vườn Cội</h5>
-<p class="grid-card-subtitle">Trẻ học làm gốm, nặn tò he, viết thư pháp &amp; thả diều ven hồ</p>
-<p class="grid-price">Gắn Kết Tuổi Thơ</p>
+<h5>Hiên Việt - Nơi Giáo Trí &amp; Sử Việt</h5>
+<p class="grid-card-subtitle">Trẻ học làm gốm, nặn tò he, viết thư pháp &amp; cảm thụ lịch sử ngàn năm</p>
+<p class="grid-price">Mục 9, 46 Trung Tâm</p>
 </div>
 </a>
-<!-- Item 6: MDS Living -->
+<!-- Item 6: Nhà Quản Gia MDS Living -->
 <a class="grid-card" href="article.html?id=506" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Dịch vụ quản gia" decoding="async" loading="lazy" src="assets/Index_asset/MatBang/QuanLy_MDS_Living.png"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
+<div class="grid-img"><img alt="Nhà Quản Gia MDS Living" decoding="async" loading="lazy" src="assets/Index_asset/MatBang/QuanLy_MDS_Living.png"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
 <div class="grid-card-info">
-<h5>Dịch Vụ Quản Gia MDS Living</h5>
+<h5>Nhà Quản Gia &amp; Dịch Vụ MDS Living</h5>
 <p class="grid-card-subtitle">Quản gia chăm sóc điền trang, an ninh 24/7 và ủy thác cho thuê sinh lời</p>
-<p class="grid-price">Vận Hành Chuyên Nghiệp</p>
+<p class="grid-price">Mục 42 Trung Tâm</p>
 </div>
 </a>
 </div>
 <div style="text-align: right; margin-top: 18px; font-size: 0.78rem; color: #888; font-style: italic;">* Lưu ý: Toàn bộ thông tin, mặt bằng kiến trúc và hình ảnh tiện ích mang tính chất minh họa theo định hướng phát triển thực tế của khu nghỉ dưỡng điền trang.</div>
 </div>
-<!-- Tab 4: Mặt Bằng & Quy Hoạch (tab-masterplan) -->
-<div class="tab-content" id="tab-masterplan">
+</section>
+
+<!-- ====================================================================
+     SECTION 4: QUY HOẠCH TOÀN CẢNH 100HA & PHÁP LÝ (#quy-hoach)
+     ==================================================================== -->
+<section class="story-section story-section-alt" id="quy-hoach">
+<div class="container">
+<div style="margin-bottom: 26px; margin-top: 12px; text-align: left;">
+  <div style="display: inline-flex; align-items: center; gap: 8px; background: #faf2e4; border: 1px solid #dfc89f; color: #8c6b32; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px;">
+    <i class="fa-solid fa-map-location-dot"></i> QUY HOẠCH VĨ MÔ &amp; SỞ HỮU BỀN VỮNG
+  </div>
+  <h2 class="section-title" style="margin-bottom: 8px;">Quy Hoạch Toàn Cảnh &amp; Pháp Lý Minh Bạch</h2>
+  <p style="font-size: 1.02rem; color: #666; line-height: 1.6; margin: 0;">
+    Tọa lạc bên mặt nước hồ sinh thái tự nhiên 100ha, Saigon Farm Resort kiến tạo một không gian sống sinh thái bền vững với mật độ xây dựng giới hạn dưới 20%, 100% khuôn viên điền trang sở hữu sổ hồng riêng và vận hành chuyên nghiệp bởi MDS Living.
+  </p>
+</div>
+
 <!-- Phối Cảnh & Quy Hoạch Tổng Thể -->
 <div class="top-listing">
 <!-- Top 1: Phối cảnh tổng thể -->
@@ -1998,101 +2175,9 @@ header.main-header .menu-toggle-btn {
 </div>
 </a>
 </div>
-<!-- SƠ ĐỒ HỆ THỐNG TIỆN ÍCH LÊN ĐẾN 30.000 M² -->
-<div style="margin: 40px 0 24px;">
-  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-    <h3 style="font-family: var(--font-serif); font-size: 1.45rem; color: #111; margin: 0;">
-      <i class="fa-solid fa-spa" style="color: #c9a96e; margin-right: 8px;"></i>QUẦN THỂ TIỆN ÍCH QUY MÔ LÊN ĐẾN 30.000 M²
-    </h3>
-    <span style="background: #18221b; color: #c9a96e; border: 1px solid #c9a96e; padding: 4px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">2 Phân Khu Trọng Điểm</span>
-  </div>
-  <p style="color: #666; font-size: 0.92rem; margin: 0;">Bản đồ định vị và sơ đồ phân bổ 2 đại phân khu tiện ích: Phân khu Trung Tâm và Phân khu Ven Hồ phục vụ giới hạn 47 chủ nhân tinh hoa.</p>
-</div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 45px;">
-  <!-- Card 1: Tiện Ích Trung Tâm -->
-  <div style="background: #fff; border: 1px solid #e2d8c5; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column;">
-    <a href="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.png" target="_blank" style="display: block; position: relative; overflow: hidden;">
-      <img src="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.webp" alt="Sơ đồ tiện ích khu vực trung tâm Saigon Farm Resort" style="width: 100%; height: auto; display: block;">
-      <span style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); color: #fff; padding: 6px 12px; border-radius: 16px; font-size: 0.78rem; font-weight: 600; backdrop-filter: blur(4px);"><i class="fa-solid fa-expand"></i> Nhấp xem ảnh gốc</span>
-    </a>
-    <div style="padding: 18px 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
-      <div>
-        <span style="font-size: 0.75rem; font-weight: 700; color: #8a6d3b; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">PHÂN KHU TRUNG TÂM</span>
-        <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: #111; margin: 0 0 8px;">Sơ Đồ Phân Bổ Tiện Ích Khu Vực Trung Tâm</h4>
-        <p style="font-size: 0.88rem; color: #666; line-height: 1.65; margin: 0;">Cụm sân Pickleball có mái che All-Weather, Làng ngựa quý tộc Việt Mã Viên, Hiên Việt Clubhouse, Nhà hàng Fine Dining, Nông trại hữu cơ &amp; Đầm sen dưỡng sinh.</p>
-      </div>
-      <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #f0ebe1; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.82rem; font-weight: 700; color: #2e7d32;"><i class="fa-solid fa-circle-check" style="margin-right: 4px;"></i> Quy mô lên đến 30.000 m²</span>
-        <a href="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.png" target="_blank" style="font-size: 0.82rem; color: #0068FF; font-weight: 600; text-decoration: none;">Phóng to <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 2: Tiện Ích Ven Hồ -->
-  <div style="background: #fff; border: 1px solid #e2d8c5; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06); display: flex; flex-direction: column;">
-    <a href="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.png" target="_blank" style="display: block; position: relative; overflow: hidden;">
-      <img src="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.webp" alt="Sơ đồ tiện ích ven hồ Saigon Farm Resort" style="width: 100%; height: auto; display: block;">
-      <span style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.75); color: #fff; padding: 6px 12px; border-radius: 16px; font-size: 0.78rem; font-weight: 600; backdrop-filter: blur(4px);"><i class="fa-solid fa-expand"></i> Nhấp xem ảnh gốc</span>
-    </a>
-    <div style="padding: 18px 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
-      <div>
-        <span style="font-size: 0.75rem; font-weight: 700; color: #8a6d3b; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">PHÂN KHU VEN HỒ 100HA</span>
-        <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: #111; margin: 0 0 8px;">Sơ Đồ Phân Bổ Tiện Ích Ven Hồ</h4>
-        <p style="font-size: 0.88rem; color: #666; line-height: 1.65; margin: 0;">Clubhouse ven hồ phong cách mộc cao cấp, Bến thuyền Kayak &amp; SUP độc quyền, Hồ bơi vô cực điện phân khoáng muối bên mặt nước hồ sinh thái 100ha.</p>
-      </div>
-      <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #f0ebe1; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.82rem; font-weight: 700; color: #2e7d32;"><i class="fa-solid fa-circle-check" style="margin-right: 4px;"></i> Khai thác mặt hồ 100ha</span>
-        <a href="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.png" target="_blank" style="font-size: 0.82rem; color: #0068FF; font-weight: 600; text-decoration: none;">Phóng to <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Mặt Bằng 4 Loại Hình Điền Trang Chi Tiết -->
-<div style="margin: 35px 0 20px;">
-<h3 style="font-family: var(--font-serif); font-size: 1.45rem; color: #111; margin-bottom: 6px;">
-<i class="fa-solid fa-layer-group" style="color: #c9a96e; margin-right: 8px;"></i>MẶT BẰNG CÔNG NĂNG 4 LOẠI HÌNH ĐIỀN TRANG
-    </h3>
-<p style="color: #666; font-size: 0.92rem;">Chi tiết bố cục không gian, giao thông và công năng nội khu của từng mẫu biệt phủ điền trang.</p>
-</div>
-<div class="grid-listing">
-<!-- MB Sunrise 1 -->
-<a class="grid-card" href="article.html?id=103" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Mặt bằng Điền Trang Sunrise 1" decoding="async" loading="lazy" src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_1.png"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
-<div class="grid-card-info">
-<h5>Mặt Bằng Điền Trang Sunrise 1 (1 Tầng Trệt)</h5>
-<p class="grid-card-subtitle">Khuôn viên 1.000m² - 1.200m², layout trải ngang đón nắng bình minh</p>
-<p class="grid-price">Xem Chi Tiết Công Năng</p>
-</div>
-</a>
-<!-- MB Sunrise 2 -->
-<a class="grid-card" href="article.html?id=104" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Mặt bằng Dinh Thự Sunrise 2" decoding="async" loading="lazy" src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_2.png"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
-<div class="grid-card-info">
-<h5>Mặt Bằng Dinh Thự Sunrise 2 (Đại Điền Trang VIP)</h5>
-<p class="grid-card-subtitle">Đại sảnh gỗ quý trần cao 6m, 4PN Master, Sky Deck 40m²</p>
-<p class="grid-price">Xem Chi Tiết Công Năng</p>
-</div>
-</a>
-<!-- MB Sunset 1 -->
-<a class="grid-card" href="article.html?id=101" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Mặt bằng Điền Trang Sunset 1" decoding="async" loading="lazy" src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_1.png"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
-<div class="grid-card-info">
-<h5>Mặt Bằng Điền Trang Sunset 1 (Sân Trong)</h5>
-<p class="grid-card-subtitle">Khuôn viên 1.000m², sân trong 38m², vườn cây ăn trái 260m²</p>
-<p class="grid-price">Xem Chi Tiết Công Năng</p>
-</div>
-</a>
-<!-- MB Sunset 2 -->
-<a class="grid-card" href="article.html?id=102" style="text-decoration: none; color: inherit; display: block;">
-<div class="grid-img"><img alt="Mặt bằng Điền Trang Sunset 2" decoding="async" loading="lazy" src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_2.png"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
-<div class="grid-card-info">
-<h5>Mặt Bằng Điền Trang Sunset 2 (2 Tầng)</h5>
-<p class="grid-card-subtitle">Khuôn viên 1.200m², vườn ăn trái 482m², ban công ngắm hoàng hôn</p>
-<p class="grid-price">Xem Chi Tiết Công Năng</p>
-</div>
-</a>
+<!-- Trụ cột vận hành MDS & Quy mô phân khu -->
+<div class="grid-listing" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 20px;">
 <!-- Vận hành MDS -->
 <a class="grid-card" href="article.html?id=506" style="text-decoration: none; color: inherit; display: block;">
 <div class="grid-img"><img alt="Vận hành MDS" decoding="async" loading="lazy" src="assets/Index_asset/MatBang/QuanLy_MDS_Living.png"/><span class="minh-hoa-tag">* Hình ảnh minh họa</span></div>
@@ -2112,8 +2197,27 @@ header.main-header .menu-toggle-btn {
 </div>
 </a>
 </div>
-<!-- 48 CHUYÊN ĐỀ PHÂN TÍCH SECTION (MẶT BẰNG & QUY HOẠCH) -->
-<div style="background: #fdfbf7; border: 1px solid #e0d5c1; border-radius: 10px; padding: 34px 22px; margin-top: 45px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+<div style="text-align: right; margin-top: 18px; font-size: 0.78rem; color: #888; font-style: italic;">* Lưu ý: Toàn bộ thông tin, mặt bằng kiến trúc và hình ảnh tiện ích mang tính chất minh họa theo định hướng phát triển thực tế của quần thể điền trang.</div>
+</div>
+</section>
+
+<!-- ====================================================================
+     SECTION 5: TẠP CHÍ & GÓC NHÌN CHUYÊN GIA (#tap-chi)
+     ==================================================================== -->
+<section class="story-section" id="tap-chi">
+<div class="container">
+<div style="margin-bottom: 24px; margin-top: 12px; text-align: left;">
+  <div style="display: inline-flex; align-items: center; gap: 8px; background: #faf2e4; border: 1px solid #dfc89f; color: #8c6b32; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px;">
+    <i class="fa-solid fa-newspaper"></i> TẠP CHÍ &amp; GÓC NHÌN CHUYÊN GIA
+  </div>
+  <h2 class="section-title" style="margin-bottom: 8px;">Xu Hướng, Nhận Định &amp; 48 Chuyên Đề Điền Trang</h2>
+  <p style="font-size: 1.02rem; color: #666; line-height: 1.6; margin: 0;">
+    Tuyển tập các bài phân tích sâu sắc về giá trị văn hóa bản sắc, kinh tế học điền trang, chuẩn sống Eco-Luxury và 48 chuyên đề bóc tách đa chiều của giới chuyên gia.
+  </p>
+</div>
+
+<!-- 48 CHUYÊN ĐỀ PHÂN TÍCH SECTION -->
+<div style="background: #fdfbf7; border: 1px solid #e0d5c1; border-radius: 10px; padding: 34px 22px; margin-top: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
 <div style="text-align: center; margin-bottom: 26px;">
 <span style="background: #c9a96e; color: #000; font-size: 0.72rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">GÓC NHÌN CHUYÊN GIA &amp; PHÂN TÍCH MẶT BẰNG</span>
 <h3 style="font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 1.95rem); margin-top: 10px; color: #111;">
@@ -2764,17 +2868,13 @@ header.main-header .menu-toggle-btn {
 </div>
 </div>
 <div style="text-align: right; margin-top: 18px; font-size: 0.78rem; color: #888; font-style: italic;">* Lưu ý: Toàn bộ thông tin, mặt bằng kiến trúc và hình ảnh tiện ích mang tính chất minh họa theo định hướng phát triển thực tế của quần thể điền trang.</div>
-</div>
-<!-- Tab 5: Editorial (JSON Auto-Publishing) -->
-<div class="tab-content" id="tab-editorial">
-<div style="margin-bottom: 22px; margin-top: 12px; text-align: left;">
-  <div style="display: inline-flex; align-items: center; gap: 8px; background: #faf2e4; border: 1px solid #dfc89f; color: #8c6b32; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px;">
-    <i class="fa-solid fa-newspaper"></i> TẠP CHÍ &amp; GÓC NHÌN CHUYÊN GIA
-  </div>
-  <h2 class="section-title" style="margin-bottom: 8px;">Xu Hướng &amp; Nhận Định Thị Trường Điền Trang</h2>
-  <p style="font-size: 1.02rem; color: #666; line-height: 1.6; margin: 0;">
-    Tuyển tập các bài phân tích sâu sắc về giá trị văn hóa bản sắc, kinh tế học điền trang, chuẩn sống Eco-Luxury và tiềm năng đón sóng hạ tầng Sân bay Long Thành 2026.
-  </p>
+
+<!-- Các Bài Viết Tiêu Biểu & Kinh Tế Học Điền Trang -->
+<div style="margin: 45px 0 20px;">
+  <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #111; margin-bottom: 4px;">
+    <i class="fa-solid fa-bookmark" style="color: #c9a96e; margin-right: 8px;"></i>BÀI VIẾT TIÊU BIỂU &amp; KINH TẾ HỌC ĐIỀN TRANG
+  </h3>
+  <p style="color: #666; font-size: 0.92rem; margin: 0;">Góc nhìn sâu sắc về giá trị văn hóa bản sắc, cấu phần kinh tế học điền trang và tiềm năng tăng trưởng bền vững.</p>
 </div>
 <div class="grid-listing editorial-grid" id="editorial-grid">
           <div class="grid-card">
@@ -2818,7 +2918,7 @@ header.main-header .menu-toggle-btn {
           <div class="grid-card">
             <a href="bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet.html" style="display: block; text-decoration: none; color: inherit;">
               <div class="grid-img">
-                 <img src="assets/posts/xa_xi_ban_sac/hien_viet.jpg" alt="Hệ Thống 9 Không Gian Bản Sắc Việt Đương Đại Tại Saigon Farm Resort: Từ Hiên Việt Đến Dòng Sử Việt" loading="lazy">
+                 <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Cung_tuong_Su_Viet.webp" alt="Hệ Thống 9 Không Gian Bản Sắc Việt Đương Đại Tại Saigon Farm Resort: Từ Hiên Việt Đến Dòng Sử Việt" loading="lazy">
                  <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
               </div>
             </a>
@@ -3012,11 +3112,13 @@ header.main-header .menu-toggle-btn {
   </button>
 </div>
 </div>
-</div>
 </section>
 
-<!-- Location & Maps Section -->
-<section class="location-section" id="location-section">
+<!-- ====================================================================
+     SECTION 6: VỊ TRÍ & TÂM ĐIỂM KẾT NỐI VÙNG (#vi-tri)
+     ==================================================================== -->
+<section class="location-section story-section" id="vi-tri">
+<div id="location-section" style="scroll-margin-top: 80px;"></div>
   <div class="container">
     <div class="section-header-wrap" style="text-align: left; max-width: 860px; margin: 0 0 32px 0;">
       <span style="display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; color: #8a6d3b; text-transform: uppercase; background: #fdf8ee; padding: 5px 14px; border-radius: 20px; border: 1px solid #ebd9b8; margin-bottom: 12px;">TÂM ĐIỂM KẾT NỐI VÙNG</span>
@@ -3128,14 +3230,14 @@ header.main-header .menu-toggle-btn {
 <div>
 <h4 class="footer-col-heading">Danh mục</h4>
 <ul class="footer-links-list">
-<li><a href="#tabs-section" onclick="activateTab('tab-villas-market')">Biệt Phủ Điền Trang</a></li>
+<li><a href="#biet-phu">Biệt Phủ Điền Trang</a></li>
+<li><a href="#ban-sac">Bản Sắc Việt</a></li>
+<li><a href="#tien-ich">Tiện Ích Điền Trang 30.000m²</a></li>
+<li><a href="#quy-hoach">Quy Hoạch &amp; Pháp Lý</a></li>
+<li><a href="#tap-chi">Tạp Chí &amp; Nhận Định</a></li>
+<li><a href="#vi-tri">Vị Trí &amp; Bản Đồ</a></li>
 <li><a href="gioithieu#buoc-5-dien-an">Điền An (Lưu trú sinh thái)</a></li>
 <li><a href="gioithieu#buoc-6-dien-san">Điền Sản (Tích sản tăng trưởng)</a></li>
-<li><a href="#tabs-section" onclick="activateTab('tab-heritage')">Bản sắc Việt</a></li>
-<li><a href="#tabs-section" onclick="activateTab('tab-amenities')">Tiện ích điền trang</a></li>
-<li><a href="#tabs-section" onclick="activateTab('tab-masterplan')">Mặt bằng &amp; Quy hoạch</a></li>
-<li><a href="#tabs-section" onclick="activateTab('tab-editorial')">Tạp chí nghỉ dưỡng</a></li>
-<li><a href="#location-section">Vị trí &amp; Bản đồ</a></li>
 </ul>
 </div>
 <div>
