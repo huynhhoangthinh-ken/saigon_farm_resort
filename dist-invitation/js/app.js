@@ -44,19 +44,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-// Global Tab Activation Function
+// // Global Tab Activation Function (Backward Compatibility & Anchor Scroll)
 window.activateTab = function(tabId) {
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  tabBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-tab') === tabId));
-  tabContents.forEach(c => c.classList.toggle('active', c.id === tabId));
-  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('data-target') === tabId));
-
-  const tabsSection = document.querySelector('.tabs-section');
-  if (tabsSection) {
-    tabsSection.scrollIntoView({ behavior: 'smooth' });
+  const map = {
+    'tab-villas-market': 'biet-phu',
+    'tab-heritage': 'ban-sac',
+    'tab-amenities': 'tien-ich',
+    'tab-masterplan': 'quy-hoach',
+    'tab-editorial': 'tap-chi'
+  };
+  const targetId = map[tabId] || tabId;
+  const targetElem = document.getElementById(targetId);
+  if (targetElem) {
+    const headerOffset = 75;
+    const elementPosition = targetElem.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
   }
 };
 
@@ -127,49 +130,70 @@ window.activateTab = function(tabId) {
     });
   });
 
-  // Sub-tabs Switching Logic
+  // Sub-tabs Switching Logic (Cho 48 Chuyên Đề Phân Tích & Sub-sections)
   const subTabBtns = document.querySelectorAll('.sub-tab-btn');
   const subTabContents = document.querySelectorAll('.sub-tab-content');
 
   subTabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const parentTab = btn.closest('.tab-content');
-      const btnsInParent = parentTab.querySelectorAll('.sub-tab-btn');
-      const contentsInParent = parentTab.querySelectorAll('.sub-tab-content');
+      const parentContainer = btn.closest('.story-section') || btn.closest('.tab-content') || document;
+      const btnsInParent = parentContainer.querySelectorAll('.sub-tab-btn');
+      const contentsInParent = parentContainer.querySelectorAll('.sub-tab-content');
       
       btnsInParent.forEach(b => b.classList.remove('active'));
       contentsInParent.forEach(c => c.classList.remove('active'));
       
       btn.classList.add('active');
       const targetId = btn.getAttribute('data-subtab');
-      document.getElementById(targetId).classList.add('active');
+      const targetElem = document.getElementById(targetId);
+      if (targetElem) {
+        targetElem.classList.add('active');
+      }
     });
   });
 
-  // Main Navigation Links Logic
-  const navLinks = document.querySelectorAll('.nav-link');
-  const tabsSection = document.querySelector('.tabs-section');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      if (tabsSection) {
-        tabsSection.scrollIntoView({ behavior: 'smooth' });
-      }
+  // Smooth Scroll with Header Offset for Navigation & In-page Anchors
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href === '#!') return;
+      const targetElem = document.querySelector(href);
+      if (targetElem) {
+        e.preventDefault();
+        const headerOffset = 75;
+        const elementPosition = targetElem.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
 
-      const targetTabId = link.getAttribute('data-target');
-      if(targetTabId) {
-        const targetTabBtn = document.querySelector(`.tab-btn[data-tab="${targetTabId}"]`);
-        if(targetTabBtn) {
-           targetTabBtn.click();
+        if (typeof closeMobileMenu === 'function') {
+          closeMobileMenu();
         }
       }
-      
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
     });
   });
+
+  // Scrollspy: Highlight Active Nav Link on Scroll
+  const spySections = document.querySelectorAll('.story-section[id], .location-section[id]');
+  const mainNavLinks = document.querySelectorAll('.nav-menu-links .nav-link');
+
+  function updateActiveNavOnScroll() {
+    const scrollY = window.pageYOffset;
+    spySections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120;
+      const sectionId = current.getAttribute('id');
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        mainNavLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }
+  window.addEventListener('scroll', updateActiveNavOnScroll, { passive: true });
 
   // Fetch JSON and render Editorial Posts
   const editorialGrid = document.getElementById('editorial-grid');
@@ -325,4 +349,49 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }, true);
+
+  // Amenities Directory Zone Switcher & Search
+  window.switchAmenityZone = function(zone) {
+    var btns = document.querySelectorAll('.amenity-zone-btn');
+    btns.forEach(function(b) {
+      if (b.dataset.zone === zone) b.classList.add('active');
+      else b.classList.remove('active');
+    });
+
+    var panelCentral = document.getElementById('zone-central-panel');
+    var panelLake = document.getElementById('zone-lake-panel');
+    if (panelCentral && panelLake) {
+      if (zone === 'central') {
+        panelCentral.style.display = 'grid';
+        panelLake.style.display = 'none';
+      } else {
+        panelCentral.style.display = 'none';
+        panelLake.style.display = 'grid';
+      }
+    }
+    // Re-apply filter if search box has value
+    var searchInput = document.getElementById('amenitySearchInput');
+    if (searchInput && searchInput.value.trim() !== '') {
+      window.filterAmenities(searchInput.value);
+    }
+  };
+
+  window.filterAmenities = function(query) {
+    var q = (query || '').toLowerCase().trim();
+    var activeZone = document.querySelector('.amenity-zone-btn.active');
+    var currentZone = activeZone ? activeZone.dataset.zone : 'central';
+    var targetPanel = currentZone === 'central' ? document.getElementById('zone-central-panel') : document.getElementById('zone-lake-panel');
+    if (!targetPanel) return;
+
+    var items = targetPanel.querySelectorAll('.amenity-pill-item');
+    items.forEach(function(item) {
+      var text = item.textContent.toLowerCase();
+      if (!q || text.indexOf(q) !== -1) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  };
 });
+

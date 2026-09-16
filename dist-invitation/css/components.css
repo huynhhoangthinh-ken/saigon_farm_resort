@@ -1137,6 +1137,199 @@ audio {
   display: block;
 }
 
+/* Storytelling Flow Sections */
+.story-section {
+  padding: 65px 0 50px;
+  position: relative;
+  scroll-margin-top: 75px;
+  border-top: 1px solid #eee5d8;
+  background: #ffffff;
+}
+
+.story-section.story-section-alt {
+  background: #fcfaf6;
+}
+
+.story-section-header {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.story-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #faf2e4;
+  border: 1px solid #dfc89f;
+  color: #8c6b32;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ========================================
+   AMENITIES DIRECTORY & MASTERPLAN COMPONENT
+   ======================================== */
+.amenity-dir-box {
+  background: #fdfaf5;
+  border: 1px solid #e5d8bf;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 35px 0 45px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+}
+.amenity-dir-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #ebe0cc;
+  padding-bottom: 18px;
+}
+.amenity-zone-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.amenity-zone-btn {
+  background: #f3ece0;
+  border: 1px solid #d5c3a3;
+  color: #554428;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 9px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.amenity-zone-btn:hover {
+  background: #e8dbbe;
+  color: #183024;
+}
+.amenity-zone-btn.active {
+  background: #183024;
+  border-color: #183024;
+  color: #c9a96e;
+  box-shadow: 0 4px 12px rgba(24,48,36,0.25);
+}
+.amenity-zone-btn .zone-count {
+  background: rgba(201,169,110,0.22);
+  color: inherit;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.76rem;
+}
+.amenity-zone-btn.active .zone-count {
+  background: #c9a96e;
+  color: #183024;
+  font-weight: 800;
+}
+.amenity-search-wrap {
+  position: relative;
+  min-width: 260px;
+}
+.amenity-search-wrap input {
+  width: 100%;
+  padding: 9px 14px 9px 36px;
+  border-radius: 20px;
+  border: 1px solid #d5c3a3;
+  background: #fff;
+  font-size: 0.85rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.amenity-search-wrap input:focus {
+  border-color: #8c6b32;
+  box-shadow: 0 0 0 3px rgba(140,107,50,0.15);
+}
+.amenity-search-wrap i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #99836a;
+  font-size: 0.85rem;
+}
+.amenity-grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: 10px;
+}
+.amenity-pill-item {
+  background: #ffffff;
+  border: 1px solid #e7ddca;
+  border-radius: 8px;
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #2c2925;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+}
+.amenity-pill-item:hover {
+  transform: translateY(-2px);
+  border-color: #c9a96e;
+  box-shadow: 0 4px 10px rgba(201,169,110,0.18);
+  background: #fffdf9;
+}
+.amenity-pill-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f5eedf;
+  color: #8c6b32;
+  font-weight: 800;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2d2b4;
+}
+.amenity-pill-item:hover .amenity-pill-num {
+  background: #8c6b32;
+  color: #fff;
+  border-color: #8c6b32;
+}
+.amenity-pill-name {
+  line-height: 1.35;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .amenity-dir-box {
+    padding: 18px 16px;
+  }
+  .amenity-dir-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .amenity-search-wrap {
+    min-width: 100%;
+  }
+  .amenity-grid-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  .amenity-pill-item {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
