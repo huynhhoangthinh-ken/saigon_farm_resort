@@ -16,9 +16,9 @@
 <title>Bán Biệt Phủ & Đất Nền Điền Trang | Saigon Farm Resort</title>
 <meta name="description" content="Mở bán biệt phủ điền trang và đất nền sổ đỏ 646,5m² – 1.452m² ven hồ Đất Đỏ - Hồ Tràm. Thổ cư 100%, sổ đỏ riêng từng nền, công chứng sang tên ngay."/>
 <!-- CSS Stylesheets -->
-<link href="css/main.css?v=20260908_light_v1" rel="stylesheet"/>
-<link href="css/components.css?v=20260908_light_v1" rel="stylesheet"/>
-<link href="css/responsive.css?v=20260908_light_v1" rel="stylesheet"/>
+<link href="css/main.css?v=20260916_v2" rel="stylesheet"/>
+<link href="css/components.css?v=20260916_v2" rel="stylesheet"/>
+<link href="css/responsive.css?v=20260916_v2" rel="stylesheet"/>
 <style>
 
 /* ---- VILLA CONSULTATION GALLERY STYLES ---- */
@@ -1928,108 +1928,488 @@ header.main-header .menu-toggle-btn {
 </div>
 
 <!-- ====================================================================
-     DANH MỤC TRA CỨU CHI TIẾT 76 HẠNG MỤC TIỆN ÍCH (INTERACTIVE DIRECTORY)
+     DANH MỤC TRA CỨU CHI TIẾT 76 HẠNG MỤC TIỆN ÍCH (LUXURY INTERACTIVE DRAWER)
      ==================================================================== -->
-<div class="amenity-dir-box">
-  <div class="amenity-dir-header">
-    <div class="amenity-zone-tabs">
-      <button class="amenity-zone-btn active" data-zone="central" onclick="switchAmenityZone('central')">
-        <i class="fa-solid fa-compass"></i> Phân Khu Trung Tâm <span class="zone-count">50 Hạng Mục</span>
-      </button>
-      <button class="amenity-zone-btn" data-zone="lake" onclick="switchAmenityZone('lake')">
-        <i class="fa-solid fa-water"></i> Phân Khu Ven Hồ <span class="zone-count">26 Hạng Mục</span>
-      </button>
+<style>
+.amenity-hub-wrap {
+  margin: 28px 0 40px;
+}
+.amenity-hub-banner {
+  background: linear-gradient(135deg, #183024 0%, #102219 100%);
+  border: 1px solid #c9a96e;
+  border-radius: 12px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  box-shadow: 0 8px 24px rgba(24, 48, 36, 0.12);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.amenity-hub-banner:hover {
+  border-color: #dfc89f;
+  box-shadow: 0 10px 28px rgba(201, 169, 110, 0.2);
+}
+.amenity-hub-lead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.amenity-hub-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: rgba(201, 169, 110, 0.15);
+  border: 1px solid #c9a96e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a96e;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.amenity-hub-title {
+  color: #ffffff;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+}
+.amenity-hub-sub {
+  color: #d5cbbe;
+  font-size: 0.84rem;
+  margin: 0;
+}
+.amenity-hub-btn {
+  background: #c9a96e;
+  color: #183024;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+.amenity-hub-btn:hover {
+  background: #dfc89f;
+  transform: translateY(-1px);
+}
+.amenity-hub-content {
+  display: none;
+  background: #fdfaf5;
+  border: 1px solid #e2d7c3;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  animation: fadeInDown 0.3s ease;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.amenity-hub-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ebe1cf;
+}
+.amenity-hub-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.amenity-hub-tab {
+  background: #f0e6d6;
+  border: 1px solid #d8c8b0;
+  color: #4a3c28;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+.amenity-hub-tab:hover {
+  background: #e5d7c0;
+}
+.amenity-hub-tab.active {
+  background: #183024;
+  border-color: #183024;
+  color: #c9a96e;
+  box-shadow: 0 4px 10px rgba(24, 48, 36, 0.2);
+}
+.amenity-hub-tab .tab-badge {
+  background: rgba(201, 169, 110, 0.2);
+  color: inherit;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-size: 0.72rem;
+}
+.amenity-hub-tab.active .tab-badge {
+  background: #c9a96e;
+  color: #183024;
+  font-weight: 800;
+}
+.amenity-hub-search {
+  position: relative;
+  min-width: 250px;
+  flex: 1;
+  max-width: 340px;
+}
+.amenity-hub-search input {
+  width: 100%;
+  padding: 8px 12px 8px 34px;
+  border-radius: 20px;
+  border: 1px solid #d5c3a3;
+  background: #ffffff;
+  font-size: 0.84rem;
+  color: #333;
+  outline: none;
+}
+.amenity-hub-search input:focus {
+  border-color: #8c6b32;
+  box-shadow: 0 0 0 3px rgba(140, 107, 50, 0.12);
+}
+.amenity-hub-search i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #99836a;
+  font-size: 0.8rem;
+}
+.amenity-hub-scrollbox {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.amenity-hub-scrollbox::-webkit-scrollbar {
+  width: 6px;
+}
+.amenity-hub-scrollbox::-webkit-scrollbar-track {
+  background: #f0e6d6;
+  border-radius: 4px;
+}
+.amenity-hub-scrollbox::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+  border-radius: 4px;
+}
+.amenity-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 10px;
+}
+.amenity-card-item {
+  background: #ffffff;
+  border: 1px solid #e7ddca;
+  border-radius: 8px;
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: #2c2925;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+.amenity-card-item:hover {
+  transform: translateY(-2px);
+  border-color: #c9a96e;
+  background: #fffdf9;
+  box-shadow: 0 4px 10px rgba(201, 169, 110, 0.15);
+}
+.amenity-card-item.featured-item {
+  background: #fdfaf2;
+  border-color: #dfc89f;
+}
+.amenity-card-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f5eedf;
+  color: #8c6b32;
+  font-weight: 800;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2d2b4;
+}
+.amenity-card-item:hover .amenity-card-num,
+.amenity-card-item.featured-item .amenity-card-num {
+  background: #8c6b32;
+  color: #ffffff;
+  border-color: #8c6b32;
+}
+.amenity-card-name {
+  line-height: 1.35;
+  font-weight: 500;
+  flex: 1;
+}
+.amenity-card-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #f2e9db;
+  color: #8c6b32;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.amenity-card-item.featured-item .amenity-card-tag {
+  background: #c9a96e;
+  color: #183024;
+}
+.amenity-hub-close-bar {
+  text-align: center;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #ebe1cf;
+}
+.amenity-hub-close-btn {
+  background: transparent;
+  border: 1px solid #d5c3a3;
+  color: #8c6b32;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.amenity-hub-close-btn:hover {
+  background: #f0e6d6;
+  color: #183024;
+}
+@media (max-width: 768px) {
+  .amenity-hub-banner {
+    padding: 16px;
+  }
+  .amenity-hub-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .amenity-hub-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .amenity-hub-search {
+    max-width: 100%;
+  }
+  .amenity-hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="amenity-hub-wrap">
+  <!-- Banner Toggle Bar -->
+  <div class="amenity-hub-banner" onclick="toggleAmenityDirectory()">
+    <div class="amenity-hub-lead">
+      <div class="amenity-hub-icon">
+        <i class="fa-solid fa-map-location-dot"></i>
+      </div>
+      <div>
+        <div style="color: #c9a96e; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;">TRA CỨU MẶT BẰNG &amp; TIỆN ÍCH</div>
+        <h4 class="amenity-hub-title">Danh Mục 76 Hạng Mục Tiện Ích Đa Tầng</h4>
+        <p class="amenity-hub-sub">50 Tiện ích Phân khu Trung Tâm &amp; 26 Tiện ích Phân khu Ven Hồ 100ha</p>
+      </div>
     </div>
-    <div class="amenity-search-wrap">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" id="amenitySearchInput" placeholder="Tìm nhanh tiện ích (VD: Ngựa, bơi, spa...)" oninput="filterAmenities(this.value)">
-    </div>
+    <button class="amenity-hub-btn" type="button" onclick="event.stopPropagation(); toggleAmenityDirectory();">
+      <span id="amenityHubToggleText">Tra Cứu Chi Tiết</span>
+      <i id="amenityHubToggleIcon" class="fa-solid fa-chevron-down"></i>
+    </button>
   </div>
 
-  <!-- Panel 1: 50 Tiện Ích Trung Tâm -->
-  <div id="zone-central-panel" class="amenity-grid-list">
-    <div class="amenity-pill-item"><span class="amenity-pill-num">01</span><span class="amenity-pill-name">Cổng làng</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">02</span><span class="amenity-pill-name">Vườn thảnh thơi</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">03</span><span class="amenity-pill-name">Vườn trí tuệ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">04</span><span class="amenity-pill-name">Thanh Âm Các - Rạp phim ngoài trời</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">05</span><span class="amenity-pill-name">Vườn dưỡng sinh</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">06</span><span class="amenity-pill-name">Vườn thể chất</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">07</span><span class="amenity-pill-name">Vườn cờ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">08</span><span class="amenity-pill-name">Khu trò chơi dân gian</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">09</span><span class="amenity-pill-name">Cung Tường Sử Việt</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">10</span><span class="amenity-pill-name">Vườn đọc sách</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">11</span><span class="amenity-pill-name">Vườn thú cưng</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">12</span><span class="amenity-pill-name">Vườn Yên</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">13</span><span class="amenity-pill-name">Vườn Yoga</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">14</span><span class="amenity-pill-name">Vườn thiền</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">15</span><span class="amenity-pill-name">Vườn thưởng nguyệt</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">16</span><span class="amenity-pill-name">Việt Mã Viên</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">17</span><span class="amenity-pill-name">Học viện cưỡi ngựa</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">18</span><span class="amenity-pill-name">Khu chăm sóc ngựa</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">19</span><span class="amenity-pill-name">Hồ Thủy Tạ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">20</span><span class="amenity-pill-name">Đài vọng cảnh hoàng hôn</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">21</span><span class="amenity-pill-name">Đường dạo bộ Lúa Nếp</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">22</span><span class="amenity-pill-name">Đường chạy bộ Bình Minh</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">23</span><span class="amenity-pill-name">Hồ bơi điện phân muối</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">24</span><span class="amenity-pill-name">Bể sục Jacuzzi</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">25</span><span class="amenity-pill-name">Hồ bơi trẻ em</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">26</span><span class="amenity-pill-name">Khu vui chơi nước trẻ em</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">27</span><span class="amenity-pill-name">Ghế nằm thư giãn</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">28</span><span class="amenity-pill-name">Pool Bar</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">29</span><span class="amenity-pill-name">Khu BBQ ngoài trời</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">30</span><span class="amenity-pill-name">Phòng họp doanh nhân</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">31</span><span class="amenity-pill-name">Sảnh tiếp khách</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">32</span><span class="amenity-pill-name">Quảng trường điêu khắc nghệ thuật</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">33</span><span class="amenity-pill-name">Khu vực Picnic &amp; Vườn cây organic</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">34</span><span class="amenity-pill-name">Vườn trái cây</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">35</span><span class="amenity-pill-name">Đường chạy bộ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">36</span><span class="amenity-pill-name">Đường đạp xe</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">37</span><span class="amenity-pill-name">Chốn hàn huyên</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">38</span><span class="amenity-pill-name">Hiên tâm giao</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">39</span><span class="amenity-pill-name">Rừng trị liệu</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">40</span><span class="amenity-pill-name">Sân Pickleball</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">41</span><span class="amenity-pill-name">Sân bóng rổ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">42</span><span class="amenity-pill-name">Nhà quản gia</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">43</span><span class="amenity-pill-name">Đường dạo cảm quan</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">44</span><span class="amenity-pill-name">Đường thư thái</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">45</span><span class="amenity-pill-name">Nhà hàng Nếp Nhà Việt</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">46</span><span class="amenity-pill-name">Hiên Việt - Giáo Trí Việt</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">47</span><span class="amenity-pill-name">Thanh Âm Các</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">48</span><span class="amenity-pill-name">Bờ Sen - Hồ Thủy An Viên (Spa &amp; Tắm thảo mộc)</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">49</span><span class="amenity-pill-name">Quảng trường Hội Việt</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">50</span><span class="amenity-pill-name">Đường dạo bộ chuông reo</span></div>
-  </div>
+  <!-- Expandable Content Drawer -->
+  <div id="amenityHubDrawer" class="amenity-hub-content">
+    <div class="amenity-hub-controls">
+      <div class="amenity-hub-tabs">
+        <button class="amenity-hub-tab active" data-zone="central" onclick="switchAmenityDrawerZone('central')">
+          <i class="fa-solid fa-compass"></i> Phân Khu Trung Tâm <span class="tab-badge">50 Hạng Mục</span>
+        </button>
+        <button class="amenity-hub-tab" data-zone="lake" onclick="switchAmenityDrawerZone('lake')">
+          <i class="fa-solid fa-water"></i> Phân Khu Ven Hồ <span class="tab-badge">26 Hạng Mục</span>
+        </button>
+      </div>
+      <div class="amenity-hub-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="amenityDrawerSearch" placeholder="Tìm nhanh tiện ích (VD: Ngựa, bơi, spa...)" oninput="filterAmenityDrawer(this.value)">
+      </div>
+    </div>
 
-  <!-- Panel 2: 26 Tiện Ích Ven Hồ (Mặc định ẩn, bật khi click tab) -->
-  <div id="zone-lake-panel" class="amenity-grid-list" style="display: none;">
-    <div class="amenity-pill-item"><span class="amenity-pill-num">01</span><span class="amenity-pill-name">Cổng chào</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">02</span><span class="amenity-pill-name">Bãi đậu xe</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">03</span><span class="amenity-pill-name">Sảnh đón / trà khách</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">04</span><span class="amenity-pill-name">Lối vào nội bộ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">05</span><span class="amenity-pill-name">Sảnh Nghinh Phong</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">06</span><span class="amenity-pill-name">Wine Lounge</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">07</span><span class="amenity-pill-name">Nhà hàng Vị Thủy</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">08</span><span class="amenity-pill-name">WC thay đồ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">09</span><span class="amenity-pill-name">Khu ghế thư giãn hồ bơi</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">10</span><span class="amenity-pill-name">Hồ bơi vô cực</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">11</span><span class="amenity-pill-name">Khu làm việc ngoài trời</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">12</span><span class="amenity-pill-name">Khu ngồi thư giãn</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">13</span><span class="amenity-pill-name">Khu đọc sách bên hồ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">14</span><span class="amenity-pill-name">Trà đạo bên hồ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">15</span><span class="amenity-pill-name">Khu ăn uống bờ hồ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">16</span><span class="amenity-pill-name">Bến thuyền</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">17</span><span class="amenity-pill-name">Cafe bên hồ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">18</span><span class="amenity-pill-name">Bãi cỏ thư giãn</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">19</span><span class="amenity-pill-name">Đường dạo ven hồ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">20</span><span class="amenity-pill-name">Đường chạy bộ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">21</span><span class="amenity-pill-name">Sân chơi thiên nhiên</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">22</span><span class="amenity-pill-name">Bãi cỏ đa năng</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">23</span><span class="amenity-pill-name">Góc thư giãn</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">24</span><span class="amenity-pill-name">Sân chơi ven hồ</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">25</span><span class="amenity-pill-name">Điểm câu cá giải trí</span></div>
-    <div class="amenity-pill-item"><span class="amenity-pill-num">26</span><span class="amenity-pill-name">Chèo thuyền Kayak</span></div>
+    <div class="amenity-hub-scrollbox">
+      <!-- Panel 1: 50 Tiện Ích Trung Tâm -->
+      <div id="drawer-central-panel" class="amenity-hub-grid">
+        <div class="amenity-card-item"><span class="amenity-card-num">01</span><span class="amenity-card-name">Cổng làng</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">02</span><span class="amenity-card-name">Vườn thảnh thơi</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">03</span><span class="amenity-card-name">Vườn trí tuệ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">04</span><span class="amenity-card-name">Thanh Âm Các - Rạp phim ngoài trời</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">05</span><span class="amenity-card-name">Vườn dưỡng sinh</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">06</span><span class="amenity-card-name">Vườn thể chất</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">07</span><span class="amenity-card-name">Vườn cờ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">08</span><span class="amenity-card-name">Khu trò chơi dân gian</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">09</span><span class="amenity-card-name"><strong>Cung Tường Sử Việt</strong></span><span class="amenity-card-tag">Sử Việt</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">10</span><span class="amenity-card-name">Vườn đọc sách</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">11</span><span class="amenity-card-name">Vườn thú cưng</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">12</span><span class="amenity-card-name">Vườn Yên</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">13</span><span class="amenity-card-name">Vườn Yoga</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">14</span><span class="amenity-card-name">Vườn thiền</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">15</span><span class="amenity-card-name">Vườn thưởng nguyệt</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">16</span><span class="amenity-card-name"><strong>Việt Mã Viên</strong></span><span class="amenity-card-tag">Kỵ Mã</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">17</span><span class="amenity-card-name">Học viện cưỡi ngựa</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">18</span><span class="amenity-card-name">Khu chăm sóc ngựa</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">19</span><span class="amenity-card-name">Hồ Thủy Tạ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">20</span><span class="amenity-card-name">Đài vọng cảnh hoàng hôn</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">21</span><span class="amenity-card-name">Đường dạo bộ Lúa Nếp</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">22</span><span class="amenity-card-name">Đường chạy bộ Bình Minh</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">23</span><span class="amenity-card-name">Hồ bơi điện phân muối</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">24</span><span class="amenity-card-name">Bể sục Jacuzzi</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">25</span><span class="amenity-card-name">Hồ bơi trẻ em</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">26</span><span class="amenity-card-name">Khu vui chơi nước trẻ em</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">27</span><span class="amenity-card-name">Ghế nằm thư giãn</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">28</span><span class="amenity-card-name">Pool Bar</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">29</span><span class="amenity-card-name">Khu BBQ ngoài trời</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">30</span><span class="amenity-card-name">Phòng họp doanh nhân</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">31</span><span class="amenity-card-name">Sảnh tiếp khách</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">32</span><span class="amenity-card-name">Quảng trường điêu khắc nghệ thuật</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">33</span><span class="amenity-card-name">Khu vực Picnic &amp; Vườn organic</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">34</span><span class="amenity-card-name">Vườn trái cây</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">35</span><span class="amenity-card-name">Đường chạy bộ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">36</span><span class="amenity-card-name">Đường đạp xe</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">37</span><span class="amenity-card-name">Chốn hàn huyên</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">38</span><span class="amenity-card-name">Hiên tâm giao</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">39</span><span class="amenity-card-name">Rừng trị liệu</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">40</span><span class="amenity-card-name">Sân Pickleball</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">41</span><span class="amenity-card-name">Sân bóng rổ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">42</span><span class="amenity-card-name">Nhà quản gia MDS Living</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">43</span><span class="amenity-card-name">Đường dạo cảm quan</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">44</span><span class="amenity-card-name">Đường thư thái</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">45</span><span class="amenity-card-name"><strong>Nhà hàng Nếp Nhà Việt</strong></span><span class="amenity-card-tag">Ẩm Thực</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">46</span><span class="amenity-card-name"><strong>Hiên Việt - Giáo Trí Việt</strong></span><span class="amenity-card-tag">Giáo Trí</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">47</span><span class="amenity-card-name"><strong>Thanh Âm Các</strong></span><span class="amenity-card-tag">Âm Sắc</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">48</span><span class="amenity-card-name"><strong>Bờ Sen - Hồ Thủy An Viên</strong></span><span class="amenity-card-tag">Wellness</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">49</span><span class="amenity-card-name"><strong>Quảng trường Hội Việt</strong></span><span class="amenity-card-tag">Lễ Hội</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">50</span><span class="amenity-card-name">Đường dạo bộ chuông reo</span></div>
+      </div>
+
+      <!-- Panel 2: 26 Tiện Ích Ven Hồ -->
+      <div id="drawer-lake-panel" class="amenity-hub-grid" style="display: none;">
+        <div class="amenity-card-item"><span class="amenity-card-num">01</span><span class="amenity-card-name">Cổng chào</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">02</span><span class="amenity-card-name">Bãi đậu xe</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">03</span><span class="amenity-card-name">Sảnh đón / trà khách</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">04</span><span class="amenity-card-name">Lối vào nội bộ</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">05</span><span class="amenity-card-name"><strong>Sảnh Nghinh Phong</strong></span><span class="amenity-card-tag">Lounge</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">06</span><span class="amenity-card-name"><strong>Wine Lounge</strong></span><span class="amenity-card-tag">Thượng Lưu</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">07</span><span class="amenity-card-name"><strong>Nhà hàng Vị Thủy</strong></span><span class="amenity-card-tag">Fine Dining</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">08</span><span class="amenity-card-name">WC thay đồ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">09</span><span class="amenity-card-name">Khu ghế thư giãn hồ bơi</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">10</span><span class="amenity-card-name"><strong>Hồ bơi vô cực</strong></span><span class="amenity-card-tag">Ven Hồ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">11</span><span class="amenity-card-name">Khu làm việc ngoài trời</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">12</span><span class="amenity-card-name">Khu ngồi thư giãn</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">13</span><span class="amenity-card-name">Khu đọc sách bên hồ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">14</span><span class="amenity-card-name">Trà đạo bên hồ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">15</span><span class="amenity-card-name">Khu ăn uống bờ hồ</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">16</span><span class="amenity-card-name"><strong>Bến thuyền</strong></span><span class="amenity-card-tag">Mặt Nước</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">17</span><span class="amenity-card-name">Cafe bên hồ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">18</span><span class="amenity-card-name">Bãi cỏ thư giãn</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">19</span><span class="amenity-card-name">Đường dạo ven hồ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">20</span><span class="amenity-card-name">Đường chạy bộ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">21</span><span class="amenity-card-name">Sân chơi thiên nhiên</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">22</span><span class="amenity-card-name">Bãi cỏ đa năng</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">23</span><span class="amenity-card-name">Góc thư giãn</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">24</span><span class="amenity-card-name">Sân chơi ven hồ</span></div>
+        <div class="amenity-card-item"><span class="amenity-card-num">25</span><span class="amenity-card-name">Điểm câu cá giải trí</span></div>
+        <div class="amenity-card-item featured-item"><span class="amenity-card-num">26</span><span class="amenity-card-name"><strong>Chèo thuyền Kayak &amp; SUP</strong></span><span class="amenity-card-tag">Thể Thao</span></div>
+      </div>
+    </div>
+
+    <div class="amenity-hub-close-bar">
+      <button type="button" class="amenity-hub-close-btn" onclick="toggleAmenityDirectory()">
+        <i class="fa-solid fa-chevron-up"></i> Thu Gọn Danh Mục
+      </button>
+    </div>
   </div>
 </div>
+
+<script>
+function toggleAmenityDirectory() {
+  var drawer = document.getElementById('amenityHubDrawer');
+  var btnText = document.getElementById('amenityHubToggleText');
+  var btnIcon = document.getElementById('amenityHubToggleIcon');
+  if (!drawer) return;
+  var isExpanded = drawer.style.display === 'block';
+  if (isExpanded) {
+    drawer.style.display = 'none';
+    if (btnText) btnText.textContent = 'Tra Cứu Chi Tiết';
+    if (btnIcon) { btnIcon.className = 'fa-solid fa-chevron-down'; }
+  } else {
+    drawer.style.display = 'block';
+    if (btnText) btnText.textContent = 'Thu Gọn';
+    if (btnIcon) { btnIcon.className = 'fa-solid fa-chevron-up'; }
+  }
+}
+
+function switchAmenityDrawerZone(zone) {
+  var tabs = document.querySelectorAll('.amenity-hub-tab');
+  tabs.forEach(function(t) {
+    if (t.dataset.zone === zone) t.classList.add('active');
+    else t.classList.remove('active');
+  });
+  var pCentral = document.getElementById('drawer-central-panel');
+  var pLake = document.getElementById('drawer-lake-panel');
+  if (pCentral && pLake) {
+    if (zone === 'central') {
+      pCentral.style.display = 'grid';
+      pLake.style.display = 'none';
+    } else {
+      pCentral.style.display = 'none';
+      pLake.style.display = 'grid';
+    }
+  }
+  var input = document.getElementById('amenityDrawerSearch');
+  if (input && input.value.trim() !== '') {
+    filterAmenityDrawer(input.value);
+  }
+}
+
+function filterAmenityDrawer(query) {
+  var q = (query || '').toLowerCase().trim();
+  var activeTab = document.querySelector('.amenity-hub-tab.active');
+  var currentZone = activeTab ? activeTab.dataset.zone : 'central';
+  var targetPanel = currentZone === 'central' ? document.getElementById('drawer-central-panel') : document.getElementById('drawer-lake-panel');
+  if (!targetPanel) return;
+  var items = targetPanel.querySelectorAll('.amenity-card-item');
+  items.forEach(function(item) {
+    var text = item.textContent.toLowerCase();
+    if (!q || text.indexOf(q) !== -1) {
+      item.style.display = 'flex';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
 
 <div style="margin: 30px 0 16px;">
   <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #111; margin-bottom: 4px;">
@@ -3260,8 +3640,8 @@ header.main-header .menu-toggle-btn {
 </div>
 </footer>
 <!-- JavaScript -->
-<script src="js/posts-data.js?v=20260908_light_v1"></script>
-<script src="js/app.js?v=20260908_light_v1"></script>
+<script src="js/posts-data.js?v=20260916_v2"></script>
+<script src="js/app.js?v=20260916_v2"></script>
 
 <!-- Lightbox Modal Cho Gallery Tư Vấn Villa (Chia Theo 4 Mẫu Biệt Phủ) -->
 <div class="vg-lightbox-modal" id="homeVillaLightboxModal" role="dialog" aria-modal="true" onclick="handleModalBackdropClick(event)">
