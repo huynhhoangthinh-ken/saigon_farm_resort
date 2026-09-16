@@ -170,16 +170,25 @@
 
 .vg-hero-thumb {
   position: relative;
-  background: #000;
+  background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  aspect-ratio: 16/10;
   cursor: pointer;
   border: 1px solid #ebdcc5;
   box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
 }
 
-.vg-hero-thumb img {
+.vg-hero-img-box {
+  position: relative;
+  flex: 1;
+  min-height: 220px;
+  overflow: hidden;
+  background: #f8f6f2;
+}
+
+.vg-hero-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -187,44 +196,37 @@
   transition: transform 0.4s ease;
 }
 
-.vg-hero-thumb:hover img {
+.vg-hero-thumb:hover .vg-hero-img-box img {
   transform: scale(1.03);
 }
 
-.vg-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 16px;
-  color: #fff;
-  transition: opacity 0.2s ease;
+.vg-hero-caption {
+  padding: 14px 18px;
+  background: #fdfaf4;
+  border-top: 1px solid #ebdcc5;
 }
 
 .vg-hero-badge {
-  align-self: flex-start;
-  background: #c9a96e;
-  color: #000;
+  display: inline-block;
+  color: #8c6b32;
   font-size: 0.72rem;
   font-weight: 800;
-  padding: 3px 8px;
-  border-radius: 4px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .vg-hero-title {
-  font-size: 1.1rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.12rem;
   font-weight: 700;
   margin: 0 0 4px;
-  color: #fff;
+  color: #183024;
 }
 
 .vg-hero-desc {
-  font-size: 0.82rem;
-  color: #ddd;
+  font-size: 0.83rem;
+  color: #666;
   margin: 0;
   line-height: 1.45;
 }
@@ -243,6 +245,378 @@
   justify-content: center;
   font-size: 0.85rem;
   backdrop-filter: blur(4px);
+}
+
+/* ================================================================
+   TẠP CHÍ & NHẬN ĐỊNH — LUXURY EDITORIAL (HUYNHHOANGTHINH.COM)
+   ================================================================ */
+.hht-mag-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hht-mag-header {
+  margin-bottom: 28px;
+}
+
+.hht-mag-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.hht-mag-subtitle {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* Featured Hero Article */
+.hht-featured-card {
+  background: #ffffff;
+  border: 1px solid #ebdcc5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 38px;
+}
+
+.hht-featured-card:hover {
+  box-shadow: 0 12px 36px rgba(140, 107, 50, 0.12);
+}
+
+.hht-featured-img-wrap {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f5f2eb;
+  position: relative;
+}
+
+.hht-featured-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.hht-featured-card:hover .hht-featured-img-wrap img {
+  transform: scale(1.03);
+}
+
+.hht-featured-body {
+  padding: 24px 28px 28px;
+}
+
+.hht-mag-cat {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8c6b32;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.hht-featured-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1a1a1a;
+  margin: 0 0 12px;
+}
+
+.hht-featured-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.hht-featured-title a:hover {
+  color: #8c6b32;
+}
+
+.hht-featured-excerpt {
+  font-size: 0.94rem;
+  color: #555555;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.hht-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #8c6b32;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hht-read-link:hover {
+  color: #634a1e;
+  transform: translateX(3px);
+}
+
+/* Latest Section (Mới Nhất) */
+.hht-latest-section {
+  margin-top: 10px;
+}
+
+.hht-latest-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 16px;
+}
+
+.hht-latest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hht-latest-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #ebdcc5;
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.hht-latest-item:hover {
+  transform: translateY(-2px);
+  border-color: #c9a96e;
+  box-shadow: 0 6px 18px rgba(140, 107, 50, 0.1);
+}
+
+.hht-latest-thumb {
+  width: 100px;
+  height: 76px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0ebe1;
+}
+
+.hht-latest-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hht-latest-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.hht-latest-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 4px 0 0;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hht-latest-item:hover .hht-latest-title {
+  color: #8c6b32;
+}
+
+.hht-latest-arrow {
+  color: #8c6b32;
+  font-size: 1rem;
+  padding-left: 8px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.hht-latest-item:hover .hht-latest-arrow {
+  transform: translateX(4px);
+}
+
+/* Secondary Drawer for deep 48 analyses */
+.chuyende-drawer-box {
+  background: #fdfbf7;
+  border: 1px solid #e0d5c1;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 28px;
+  display: none;
+}
+
+.chuyende-drawer-box.active {
+  display: block;
+  animation: modalSlideUp 0.3s ease;
+}
+
+/* ================================================================
+   ELEGANT BOOKING & VISIT CONSULTATION MODAL
+   ================================================================ */
+.booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(14, 26, 20, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.booking-modal-overlay.active {
+  display: flex;
+}
+
+.booking-modal-box {
+  background: #fffdf9;
+  border: 1px solid #e4dac8;
+  border-radius: 20px;
+  max-width: 540px;
+  width: 100%;
+  padding: 30px 28px 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  position: relative;
+  animation: modalSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f0ebe1;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: #e2d7c5;
+  color: #111;
+}
+
+.modal-emblem {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, #f5e6c8 0%, #ecdcb9 100%);
+  color: #8c6b32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 14px rgba(201, 169, 110, 0.25);
+}
+
+.modal-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  color: #183024;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.modal-subtitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #8c6b32;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.modal-unit-tag {
+  display: inline-block;
+  background: #edf5f0;
+  color: #183024;
+  border: 1px solid #c8e4d2;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.modal-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #38453e;
+  margin-bottom: 18px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.modal-notice-box {
+  background: #fbf9f4;
+  border-left: 3px solid #c9a96e;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.86rem;
+  color: #5c6961;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.modal-btn-confirm {
+  background: #183024;
+  color: #ffffff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(24, 48, 36, 0.25);
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.modal-btn-confirm:hover {
+  background: #254a37;
+  transform: translateY(-1px);
 }
 
 /* Floorplan preview card next to hero */
@@ -858,7 +1232,7 @@ header.main-header .menu-toggle-btn {
 <div style="display: flex; gap: 16px; align-items: center; flex-wrap: nowrap; white-space: nowrap;">
 <a href="story" style="color: #c9a96e; font-weight: 700;"><i class="fa-solid fa-book-open" style="font-size:0.75rem; margin-right:4px;"></i> Tạp Chí Story (98 Trang)</a>
 <a href="gioithieu"><i class="fa-solid fa-file-lines" style="font-size:0.75rem; color:#8c6b32;"></i> Bản Giới Thiệu Điền Trang</a>
-<a href="article.html?id=304" style="background: linear-gradient(135deg, #c9a96e 0%, #a88448 100%); color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px rgba(201, 169, 110, 0.3);"><i class="fa-solid fa-calendar-check" style="font-size:0.75rem; margin-right:4px;"></i> Đăng Ký Khảo Sát</a>
+<a href="javascript:void(0)" onclick="openBookingModal('', '', 'Đăng Ký Khảo Sát Thực Địa')" style="background: linear-gradient(135deg, #c9a96e 0%, #a88448 100%); color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px rgba(201, 169, 110, 0.3);"><i class="fa-solid fa-calendar-check" style="font-size:0.75rem; margin-right:4px;"></i> Đăng Ký Khảo Sát</a>
 </div>
 </div>
 </div>
@@ -908,7 +1282,7 @@ header.main-header .menu-toggle-btn {
 <a href="#tap-chi" onclick="closeMobileMenu()"><i class="fa-solid fa-newspaper" style="width:20px;margin-right:8px;"></i>Tạp Chí &amp; Nhận Định</a>
 <a href="#vi-tri" onclick="closeMobileMenu()"><i class="fa-solid fa-map-pin" style="width:20px;margin-right:8px; color:#c9a96e;"></i>Vị Trí &amp; Chỉ Đường Maps</a>
 <a href="story" onclick="closeMobileMenu()" style="color: #c9a96e; font-weight: 700;"><i class="fa-solid fa-book-open" style="width:20px;margin-right:8px; color:#c9a96e;"></i>Tạp Chí Story (98 Trang Lật Mở)</a>
-<a href="article.html?id=304" onclick="closeMobileMenu()"><i class="fa-solid fa-phone" style="width:20px;margin-right:8px;"></i>Liên Hệ Ban Quản Lý</a>
+<a href="javascript:void(0)" onclick="closeMobileMenu(); openBookingModal('', '', 'Liên Hệ Ban Quản Lý')" style="color: #8c6b32; font-weight: 700;"><i class="fa-solid fa-phone" style="width:20px;margin-right:8px;"></i>Liên Hệ Ban Quản Lý</a>
 </div>
 <div class="mobile-menu-footer">© 2026 Saigon Farm Resort • Chủ đầu tư: MDS Living. Tất cả quyền được bảo lưu.</div>
 </nav>
@@ -938,7 +1312,7 @@ header.main-header .menu-toggle-btn {
 <a class="editorial-btn hero-cta-zalo" href="gioithieu">
 <i class="fa-solid fa-book-open"></i> Khám Phá Bản Giới Thiệu Điền Trang
     </a>
-<a class="editorial-btn hero-cta-car" href="article.html?id=304">
+<a class="editorial-btn hero-cta-car" href="javascript:void(0)" onclick="openBookingModal('', '', 'Đặt Lịch Tham Quan Trải Nghiệm')">
 <i class="fa-solid fa-calendar-check"></i> Đặt Lịch Tham Quan Trải Nghiệm
     </a>
 </div>
@@ -1094,19 +1468,11 @@ header.main-header .menu-toggle-btn {
       <p style="font-size: 0.82rem; color: rgba(255,255,255,0.7); margin: 12px 0 0; font-style: italic;">
         * Dòng tiền cộng thêm chuyển thẳng vào tài khoản của chủ nhân ngoài 150 đêm nghỉ dưỡng gia đình trọn vẹn mỗi năm.
       </p>
-    </div>
-
-    <!-- Quick Action Buttons (Dành Riêng Cho Khách Hàng) -->
-    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-      <a href="gioithieu" style="display: inline-flex; align-items: center; gap: 8px; background: #8c6b32; color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 0.92rem; text-decoration: none; box-shadow: 0 4px 12px rgba(140, 107, 50, 0.25);">
-        <i class="fa-solid fa-book-open"></i> Khám Phá Bản Giới Thiệu Điền Trang
-      </a>
-      <a href="#location-section" style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; color: #183024; border: 1.5px solid #183024; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 0.92rem; text-decoration: none;">
-        <i class="fa-solid fa-map-location-dot"></i> Vị Trí &amp; Chỉ Đường Maps
-      </a>
-      <a href="article.html?id=304" style="display: inline-flex; align-items: center; gap: 8px; background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 0.92rem; text-decoration: none;">
-        <i class="fa-solid fa-calendar-check"></i> Đăng Ký Tham Quan Trải Nghiệm
-      </a>
+      <div style="text-align: center; margin-top: 14px; border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 12px;">
+        <a href="gioithieu#buoc-4-mds-living" style="color: #e5be75; font-size: 0.88rem; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+          Khám phá chi tiết giải pháp quản trị &amp; dòng tiền MDS Living <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
 
   </div>
@@ -1182,13 +1548,15 @@ header.main-header .menu-toggle-btn {
     <div class="vg-main-showcase">
       <!-- Hero Photo -->
       <div class="vg-hero-thumb" onclick="openHomeVillaLightbox('sunrise-1', 0)">
-        <img src="assets/Index_asset/villa_gallery/sunrise_1_ext_1.webp" alt="Phối cảnh ngoại thất mặt chính Sunrise 1" loading="lazy">
-        <div class="vg-hero-overlay">
+        <div class="vg-hero-img-box">
+          <img src="assets/Index_asset/villa_gallery/sunrise_1_ext_1.webp" alt="Phối cảnh ngoại thất mặt chính Sunrise 1" loading="lazy">
+          <div class="vg-hero-zoom"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="vg-hero-caption">
           <span class="vg-hero-badge">NGOẠI THẤT CHÍNH • HƯỚNG ĐÔNG</span>
           <h4 class="vg-hero-title">Sunrise 1 — Biệt Phủ 1 Tầng Trệt Đón Bình Minh</h4>
-          <p class="vg-hero-desc">Kiến trúc nhà vườn gỗ trải rộng, mái ngói âm dương hòa quyện thiên nhiên.</p>
+          <p class="vg-hero-desc">Kiến trúc nhà vườn gỗ trải ngang, mái dốc vươn xa hòa cùng vườn xanh ven hồ 100ha.</p>
         </div>
-        <div class="vg-hero-zoom"><i class="fa-solid fa-expand"></i></div>
       </div>
 
       <!-- Floor Plan Card -->
@@ -1246,15 +1614,12 @@ header.main-header .menu-toggle-btn {
       </div>
     </div>
     <div class="vg-pane-actions" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
-      <button type="button" onclick="openHomeVillaLightbox('sunrise-1', 0)" style="background: #c29b53; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+      <button type="button" onclick="openHomeVillaLightbox('sunrise-1', 0)" style="background: #8c6b32; color: #fff; border: none; padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(140,107,50,0.2);">
         <i class="fa-solid fa-images"></i> Xem Toàn Bộ Gallery &amp; Bản Vẽ (7 Ảnh)
       </button>
-      <a href="article.html?id=103" style="background: #faf3e6; color: #8c6b32; border: 1px solid #dfc89f; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-file-lines"></i> Đọc Bài Viết Phân Tích Sunrise 1 →
-      </a>
-      <a href="#location-section" onclick="if(window.openModal) openModal('consultationModal')" style="background: #183024; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-phone-volume"></i> Nhận Bảng Giá &amp; Ưu Đãi Đợt 1
-      </a>
+      <button type="button" onclick="openBookingModal('Sunrise 1', '1.000m² – 1.200m²', 'Biệt Phủ Sunrise 1')" style="background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-calendar-check"></i> Đăng Ký Tư Vấn &amp; Báo Giá
+      </button>
     </div>
   </div>
 
@@ -1285,13 +1650,15 @@ header.main-header .menu-toggle-btn {
 
     <div class="vg-main-showcase">
       <div class="vg-hero-thumb" onclick="openHomeVillaLightbox('sunrise-2', 0)">
-        <img src="assets/Index_asset/villa_gallery/sunrise_2_ext_1.webp" alt="Phối cảnh ngoại thất đại dinh thự Sunrise 2" loading="lazy">
-        <div class="vg-hero-overlay">
+        <div class="vg-hero-img-box">
+          <img src="assets/Index_asset/villa_gallery/sunrise_2_ext_1.webp" alt="Phối cảnh ngoại thất đại dinh thự Sunrise 2" loading="lazy">
+          <div class="vg-hero-zoom"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="vg-hero-caption">
           <span class="vg-hero-badge">ĐẠI DINH THỰ VIP • 1.452M²</span>
           <h4 class="vg-hero-title">Sunrise 2 — Dinh Thự Gỗ 4 Gian Bản Sắc Việt Đương Đại</h4>
-          <p class="vg-hero-desc">Đại sảnh trần cao gỗ quý 6m, biểu tượng uy nghi và thịnh vượng gia tộc.</p>
+          <p class="vg-hero-desc">Đại sảnh trần cao gỗ quý 6m, biểu tượng uy nghi và thịnh vượng gia tộc truyền đời.</p>
         </div>
-        <div class="vg-hero-zoom"><i class="fa-solid fa-expand"></i></div>
       </div>
 
       <div class="vg-floorplan-card" onclick="openHomeVillaLightbox('sunrise-2', 1)">
@@ -1340,15 +1707,12 @@ header.main-header .menu-toggle-btn {
       </div>
     </div>
     <div class="vg-pane-actions" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
-      <button type="button" onclick="openHomeVillaLightbox('sunrise-2', 0)" style="background: #c29b53; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+      <button type="button" onclick="openHomeVillaLightbox('sunrise-2', 0)" style="background: #8c6b32; color: #fff; border: none; padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(140,107,50,0.2);">
         <i class="fa-solid fa-images"></i> Xem Toàn Bộ Gallery &amp; Bản Vẽ (6 Ảnh)
       </button>
-      <a href="article.html?id=104" style="background: #faf3e6; color: #8c6b32; border: 1px solid #dfc89f; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-file-lines"></i> Đọc Bài Viết Phân Tích Sunrise 2 →
-      </a>
-      <a href="#location-section" onclick="if(window.openModal) openModal('consultationModal')" style="background: #183024; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-phone-volume"></i> Nhận Bảng Giá &amp; Ưu Đãi Đợt 1
-      </a>
+      <button type="button" onclick="openBookingModal('Sunrise 2', 'Tới 1.452m²', 'Đại Dinh Thự Sunrise 2')" style="background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-calendar-check"></i> Đăng Ký Tư Vấn &amp; Báo Giá
+      </button>
     </div>
   </div>
 
@@ -1379,13 +1743,15 @@ header.main-header .menu-toggle-btn {
 
     <div class="vg-main-showcase">
       <div class="vg-hero-thumb" onclick="openHomeVillaLightbox('sunset-1', 0)">
-        <img src="assets/Index_asset/villa_gallery/sunset_1_lake_1.webp" alt="Phối cảnh Sunset 1 view hồ hoàng hôn" loading="lazy">
-        <div class="vg-hero-overlay">
+        <div class="vg-hero-img-box">
+          <img src="assets/Index_asset/villa_gallery/sunset_1_lake_1.webp" alt="Phối cảnh Sunset 1 view hồ hoàng hôn" loading="lazy">
+          <div class="vg-hero-zoom"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="vg-hero-caption">
           <span class="vg-hero-badge">DINH THỰ VIEW HỒ • HOÀNG HÔN</span>
           <h4 class="vg-hero-title">Sunset 1 — Biệt Phủ Sân Trong View Hồ 100ha</h4>
-          <p class="vg-hero-desc">Tầm nhìn trực diện mặt hồ tự nhiên lộng gió, ngắm trọn vẹn ánh hoàng hôn rực rỡ.</p>
+          <p class="vg-hero-desc">Tầm nhìn trực diện mặt hồ tự nhiên lộng gió, ngắm trọn vẹn ánh hoàng hôn rực rỡ bên sân trong tĩnh tại.</p>
         </div>
-        <div class="vg-hero-zoom"><i class="fa-solid fa-expand"></i></div>
       </div>
 
       <div class="vg-floorplan-card" onclick="openHomeVillaLightbox('sunset-1', 1)">
@@ -1441,15 +1807,12 @@ header.main-header .menu-toggle-btn {
       </div>
     </div>
     <div class="vg-pane-actions" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
-      <button type="button" onclick="openHomeVillaLightbox('sunset-1', 0)" style="background: #c29b53; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+      <button type="button" onclick="openHomeVillaLightbox('sunset-1', 0)" style="background: #8c6b32; color: #fff; border: none; padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(140,107,50,0.2);">
         <i class="fa-solid fa-images"></i> Xem Toàn Bộ Gallery &amp; Bản Vẽ (7 Ảnh)
       </button>
-      <a href="article.html?id=101" style="background: #faf3e6; color: #8c6b32; border: 1px solid #dfc89f; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-file-lines"></i> Đọc Bài Viết Phân Tích Sunset 1 →
-      </a>
-      <a href="#location-section" onclick="if(window.openModal) openModal('consultationModal')" style="background: #183024; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-phone-volume"></i> Nhận Bảng Giá &amp; Ưu Đãi Đợt 1
-      </a>
+      <button type="button" onclick="openBookingModal('Sunset 1', '~1.000m²', 'Biệt Phủ Sunset 1')" style="background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-calendar-check"></i> Đăng Ký Tư Vấn &amp; Báo Giá
+      </button>
     </div>
   </div>
 
@@ -1480,13 +1843,15 @@ header.main-header .menu-toggle-btn {
 
     <div class="vg-main-showcase">
       <div class="vg-hero-thumb" onclick="openHomeVillaLightbox('sunset-2', 0)">
-        <img src="assets/Index_asset/villa_gallery/sunset_2_ext_1.webp" alt="Phối cảnh dinh thự 2 tầng Sunset 2" loading="lazy">
-        <div class="vg-hero-overlay">
+        <div class="vg-hero-img-box">
+          <img src="assets/Index_asset/villa_gallery/sunset_2_ext_1.webp" alt="Phối cảnh dinh thự 2 tầng Sunset 2" loading="lazy">
+          <div class="vg-hero-zoom"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="vg-hero-caption">
           <span class="vg-hero-badge">DINH THỰ 2 TẦNG • SUNSET LOUNGE</span>
           <h4 class="vg-hero-title">Sunset 2 — Dinh Thự Hoàng Hôn 2 Tầng Bề Thế</h4>
-          <p class="vg-hero-desc">Kiến trúc đương đại kết hợp tinh hoa Việt, sở hữu hồ bơi vô cực và Sunset Lounge ngắm hồ.</p>
+          <p class="vg-hero-desc">Kiến trúc đương đại kết hợp tinh hoa Việt, hồ bơi vô cực và Sunset Lounge ngắm trọn hoàng hôn lầu 1.</p>
         </div>
-        <div class="vg-hero-zoom"><i class="fa-solid fa-expand"></i></div>
       </div>
 
       <div class="vg-floorplan-card" onclick="openHomeVillaLightbox('sunset-2', 1)">
@@ -1535,15 +1900,12 @@ header.main-header .menu-toggle-btn {
       </div>
     </div>
     <div class="vg-pane-actions" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
-      <button type="button" onclick="openHomeVillaLightbox('sunset-2', 0)" style="background: #c29b53; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+      <button type="button" onclick="openHomeVillaLightbox('sunset-2', 0)" style="background: #8c6b32; color: #fff; border: none; padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(140,107,50,0.2);">
         <i class="fa-solid fa-images"></i> Xem Toàn Bộ Gallery &amp; Bản Vẽ (6 Ảnh)
       </button>
-      <a href="article.html?id=102" style="background: #faf3e6; color: #8c6b32; border: 1px solid #dfc89f; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-file-lines"></i> Đọc Bài Viết Phân Tích Sunset 2 →
-      </a>
-      <a href="#location-section" onclick="if(window.openModal) openModal('consultationModal')" style="background: #183024; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-phone-volume"></i> Nhận Bảng Giá &amp; Ưu Đãi Đợt 1
-      </a>
+      <button type="button" onclick="openBookingModal('Sunset 2', '1.200m² – 1.350m²', 'Dinh Thự Sunset 2')" style="background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 11px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-calendar-check"></i> Đăng Ký Tư Vấn &amp; Báo Giá
+      </button>
     </div>
   </div>
 </div>
@@ -2577,916 +2939,294 @@ function filterAmenityDrawer(query) {
 </section>
 
 <!-- ====================================================================
-     SECTION 5: TẠP CHÍ & GÓC NHÌN CHUYÊN GIA (#tap-chi)
+     SECTION 5: TẠP CHÍ & NHẬN ĐỊNH (#tap-chi)
+     Phong cách Luxury Editorial chuẩn Huỳnh Hoàng Thịnh (Ảnh bìa không đè chữ)
      ==================================================================== -->
-<section class="story-section" id="tap-chi">
-<div class="container">
-<div style="margin-bottom: 24px; margin-top: 12px; text-align: left;">
-  <div style="display: inline-flex; align-items: center; gap: 8px; background: #faf2e4; border: 1px solid #dfc89f; color: #8c6b32; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px;">
-    <i class="fa-solid fa-newspaper"></i> TẠP CHÍ &amp; GÓC NHÌN CHUYÊN GIA
+<section class="story-section" id="tap-chi" style="background: #fffdfa; padding: 60px 0 50px; border-top: 1px solid #e7ded0;">
+  <div class="container">
+    <div class="hht-mag-wrapper">
+      
+      <!-- Section Header -->
+      <div class="hht-mag-header">
+        <h2 class="hht-mag-title">Tạp Chí &amp; Nhận Định</h2>
+        <p class="hht-mag-subtitle">
+          Những ấn phẩm chuyên sâu về tài sản, phong cách sống và nghệ thuật thưởng lãm tinh hoa.
+        </p>
+      </div>
+
+      <!-- Featured Hero Article Card -->
+      <div class="hht-featured-card">
+        <a href="bai-viet/mot-met-vuong-o-saigon-farm-resort-mua-duoc-gi-bai-phan-tich-cau-phan-gia-tri-kinh-te-hoc-dien-trang.html" class="hht-featured-img-wrap">
+          <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg" alt="Một Mét Vuông Ở Saigon Farm Resort Mua Được Gì?" loading="lazy">
+        </a>
+        <div class="hht-featured-body">
+          <div class="hht-mag-cat">KINH TẾ HỌC ĐIỀN TRANG &amp; TÍCH SẢN</div>
+          <h3 class="hht-featured-title">
+            <a href="bai-viet/mot-met-vuong-o-saigon-farm-resort-mua-duoc-gi-bai-phan-tich-cau-phan-gia-tri-kinh-te-hoc-dien-trang.html">
+              Một Mét Vuông Ở Saigon Farm Resort Mua Được Gì? Bài Phân Tích Cấu Phần Giá Trị &amp; Kinh Tế Học Điền Trang
+            </a>
+          </h3>
+          <p class="hht-featured-excerpt">
+            Khi tiếp cận bất động sản điền trang, câu hỏi đúng không phải là bao nhiêu tiền một mét vuông, mà là một mét vuông mua được những đặc quyền gì? Bóc tách 5 thành phần giá trị cốt lõi: 100% thổ cư sổ đỏ riêng, ~638m² tiện ích đặc quyền trong khuôn viên 30.000m², dịch vụ quản gia MDS Living 24/7 và bối cảnh sinh thái ven hồ 100ha không thể tái tạo.
+          </p>
+          <a href="bai-viet/mot-met-vuong-o-saigon-farm-resort-mua-duoc-gi-bai-phan-tich-cau-phan-gia-tri-kinh-te-hoc-dien-trang.html" class="hht-read-link">
+            Đọc 5 phút <i class="fa-solid fa-arrow-right-long" style="margin-left: 4px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Latest Sub-section (Mới nhất) -->
+      <div class="hht-latest-section">
+        <h3 class="hht-latest-heading">Mới nhất</h3>
+        <div class="hht-latest-list">
+
+          <!-- Item 1: Xa Xỉ Bản Sắc -->
+          <a href="bai-viet/xa-xi-den-tu-ban-sac-khi-su-sang-trong-cua-nguoi-viet-la-tro-ve-voi-nhung-dieu-thuoc-ve-minh.html" class="hht-latest-item">
+            <div class="hht-latest-thumb">
+              <img src="assets/posts/xa_xi_ban_sac/cover.jpg" alt="Xa Xỉ Đến Từ Bản Sắc" loading="lazy">
+            </div>
+            <div class="hht-latest-info">
+              <span class="hht-mag-cat">TRIẾT LÝ BẢN SẮC</span>
+              <h4 class="hht-latest-title">Xa Xỉ Đến Từ Bản Sắc: Khi Sự Sang Trọng Của Người Việt Là Trở Về Với Những Điều Thuộc Về Mình</h4>
+            </div>
+            <div class="hht-latest-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <!-- Item 2: Hệ Thống Không Gian Bản Sắc -->
+          <a href="bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet.html" class="hht-latest-item">
+            <div class="hht-latest-thumb">
+              <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Cung_tuong_Su_Viet.webp" alt="Hệ Thống Không Gian Bản Sắc Việt Đương Đại" loading="lazy">
+            </div>
+            <div class="hht-latest-info">
+              <span class="hht-mag-cat">KHÔNG GIAN VĂN HÓA</span>
+              <h4 class="hht-latest-title">Hệ Thống Không Gian Bản Sắc Việt Đương Đại: Từ Hiên Việt, Giáo Trí Việt Đến Cung Tường Sử Việt</h4>
+            </div>
+            <div class="hht-latest-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <!-- Item 3: Dinh Thự Sunrise 2 -->
+          <a href="article.html?id=104" class="hht-latest-item">
+            <div class="hht-latest-thumb">
+              <img src="assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg" alt="Dinh Thự Sunrise 2" loading="lazy">
+            </div>
+            <div class="hht-latest-info">
+              <span class="hht-mag-cat">KIẾN TRÚC DINH THỰ</span>
+              <h4 class="hht-latest-title">Dinh Thự Sunrise 2: Đỉnh Cao Kiến Trúc Đại Điền Trang Tới 1.452m² – Đại Sảnh Trần Cao &amp; Sky Deck 360°</h4>
+            </div>
+            <div class="hht-latest-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <!-- Item 4: Chuỗi Hoạt Động Lễ Hội -->
+          <a href="bai-viet/chuoi-hoat-dong-le-hoi-ban-sac-viet-khi-dien-trang-la-noi-tro-ve-cua-ky-uc-gan-ket-gia-dinh.html" class="hht-latest-item">
+            <div class="hht-latest-thumb">
+              <img src="assets/Index_asset/editorial_photo/Canh_dong_lua.png" alt="Chuỗi Hoạt Động Lễ Hội Bản Sắc Việt" loading="lazy">
+            </div>
+            <div class="hht-latest-info">
+              <span class="hht-mag-cat">TRẢI NGHIỆM GIA ĐÌNH</span>
+              <h4 class="hht-latest-title">Chuỗi Hoạt Động Lễ Hội Bản Sắc Việt: Khi Điền Trang Là Nơi Trở Về Của Ký Ức &amp; Gắn Kết Gia Đình</h4>
+            </div>
+            <div class="hht-latest-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <!-- Item 5: Kiến Trúc Thuần Việt & Sân Trong -->
+          <a href="bai-viet/kien-truc-dien-trang-thuan-viet-su-giao-thoa-giua-ky-thuat-duong-dai-nep-nha-truyen-thong.html" class="hht-latest-item">
+            <div class="hht-latest-thumb">
+              <img src="assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg" alt="Kiến Trúc Điền Trang Thuần Việt" loading="lazy">
+            </div>
+            <div class="hht-latest-info">
+              <span class="hht-mag-cat">KIẾN TRÚC SINH THÁI</span>
+              <h4 class="hht-latest-title">Kiến Trúc Điền Trang Thuần Việt: Sự Giao Thoa Giữa Kỹ Thuật Đương Đại &amp; Nếp Nhà Truyền Thống</h4>
+            </div>
+            <div class="hht-latest-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Footer Action Strip of Magazine -->
+      <div style="margin-top: 36px; padding: 22px; background: #faf5eb; border: 1px solid #e2d3b8; border-radius: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; font-weight: 700; color: #183024; margin-bottom: 3px;">
+            <i class="fa-solid fa-book-open" style="color: #8c6b32; margin-right: 8px;"></i> Ấn Bản Tạp Chí Story (98 Trang Lật Mở)
+          </div>
+          <div style="font-size: 0.85rem; color: #666;">Khám phá toàn bộ hồ sơ thiết kế, triết lý phong thủy và ảnh thực tế qua ấn phẩm số tương tác.</div>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="story" target="_blank" style="background: #8c6b32; color: #fff; text-decoration: none; padding: 10px 22px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(140, 107, 50, 0.2);">
+            Lật Mở Tạp Chí Story <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <button type="button" onclick="toggleChuyenDeDrawer()" id="btnToggleChuyenDe" style="background: #ffffff; color: #183024; border: 1.5px solid #183024; padding: 10px 18px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+            <span>Tra Cứu 48 Chuyên Đề Phân Tích</span> <i class="fa-solid fa-chevron-down" id="iconToggleChuyenDe"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Collapsible Drawer for 48 specialized layout & fengshui analyses -->
+      <div class="chuyende-drawer-box" id="chuyenDeDrawerBox">
+        <div style="text-align: center; margin-bottom: 22px;">
+          <span style="background: #c9a96e; color: #000; font-size: 0.72rem; font-weight: 700; padding: 3px 12px; border-radius: 20px; text-transform: uppercase;">THƯ VIỆN KỸ THUẬT &amp; PHONG THỦY</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.45rem; margin-top: 8px; color: #111;">
+            48 Chuyên Đề Bóc Tách Mặt Bằng &amp; Suất Đầu Tư Điền Trang
+          </h3>
+          <p style="color: #666; font-size: 0.88rem; max-width: 680px; margin: 4px auto 0;">
+            4 góc độ chuyên sâu: Mặt Bằng &amp; Kiến Trúc • Phong Thủy &amp; Vi Khí Hậu • Trải Nghiệm &amp; Dưỡng Sinh • Suất Đầu Tư &amp; Tích Sản.
+          </p>
+        </div>
+        <div class="sub-tabs-header" style="justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+          <button class="sub-tab-btn active" data-subtab="subtab-villa-layout">
+            <i class="fa-solid fa-ruler-combined" style="margin-right:6px;"></i>1. Mặt Bằng (12 Bài)
+          </button>
+          <button class="sub-tab-btn" data-subtab="subtab-villa-fengshui">
+            <i class="fa-solid fa-compass" style="margin-right:6px;"></i>2. Phong Thủy (12 Bài)
+          </button>
+          <button class="sub-tab-btn" data-subtab="subtab-villa-experience">
+            <i class="fa-solid fa-spa" style="margin-right:6px;"></i>3. Trải Nghiệm (12 Bài)
+          </button>
+          <button class="sub-tab-btn" data-subtab="subtab-villa-investment">
+            <i class="fa-solid fa-chart-line" style="margin-right:6px;"></i>4. Đầu Tư (12 Bài)
+          </button>
+        </div>
+
+        <!-- Sub-tab 1: Mặt Bằng -->
+        <div class="sub-tab-content active" id="subtab-villa-layout">
+          <div class="grid-listing" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+            <a class="grid-card" href="article.html?id=103" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">SUNRISE 1 • MẶT BẰNG</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Giải Mã Mặt Bằng 1 Tầng Trệt Trải Rộng – Sự Tiện Nghi Mở Đón Nắng Mai</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Khuôn viên 1.000m² - 1.200m², layout trải ngang đón nắng bình minh →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=104" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">SUNRISE 2 • DINH THỰ</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Đỉnh Cao Kiến Trúc Đại Điền Trang Tới 1.452m² – Đại Sảnh Trần Cao &amp; Sky Deck</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Đại sảnh gỗ quý trần cao 6m, 4PN Master, Sky Deck 40m² →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=101" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">SUNSET 1 • SÂN TRONG</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Bố Cục Sân Trong (Courtyard) – Gắn Kết Đa Thế Hệ Trong Nếp Nhà 1 Tầng</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Khuôn viên 1.000m², sân trong 38m², vườn cây ăn trái 260m² →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=102" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">SUNSET 2 • PANORAMA</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Bố Cục Không Gian 2 Tầng – Tầm Nhìn Panorama Ôm Trọn Hoàng Hôn Hồ 100ha</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Khuôn viên 1.200m², vườn ăn trái 482m², ban công ngắm hoàng hôn →</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sub-tab 2: Phong Thủy -->
+        <div class="sub-tab-content" id="subtab-villa-fengshui">
+          <div class="grid-listing" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+            <a class="grid-card" href="article.html?id=111" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">PHONG THỦY HƯỚNG ĐÔNG</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Phong Thủy Hướng Đông (Sunrise 1 &amp; 2): Đón Vượng Khí Nắng Sớm &amp; Năng Lượng Tái Sinh</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Thanh Long bão hòa sinh khí, khởi đầu ngày mới ngập tràn năng lượng →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=112" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">VI KHÍ HẬU HƯỚNG TÂY</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Giải Pháp Vi Khí Hậu Hướng Tây (Sunset 1 &amp; 2): Đón Gió Nam Mát Lành &amp; Lọc Nắng Chiều</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Hệ lam chắn nắng, mái hiên đua sâu và luồng gió mặt hồ 100ha →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=114" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">THỦY KHÍ HỒ 100HA</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Thủy Khí Hồ 100ha &amp; Cây Xanh: Trụ Cột Nuôi Dưỡng Sức Khỏe Gia Chủ</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Nồng độ ion âm cực đại, không khí sạch và hiệu ứng Blue Mind giảm stress →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=143" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">TỰA SƠN HƯỚNG THỦY</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Thế Đất 'Tựa Sơn Hướng Thủy' &amp; Trục Năng Lượng Sinh Khí Của Dinh Thự Sunrise 2</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Địa thế đắc địa mang lại phú quý trường tồn cho gia tộc →</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sub-tab 3: Trải Nghiệm -->
+        <div class="sub-tab-content" id="subtab-villa-experience">
+          <div class="grid-listing" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+            <a class="grid-card" href="article.html?id=154" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">VIỆT MÃ VIÊN</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Việt Mã Viên Liền Kề Cụm Điền Trang</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Bộ môn thể thao thượng lưu rèn luyện phong thái đĩnh đạc và sức khỏe →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=155" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">BỜ SEN DƯỠNG SINH</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Liệu Trình Onsen Bờ Sen &amp; Thảo Mộc Dưỡng Sinh: Đặc Quyền Cho Cư Dân Điền Trang</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Hương sen thanh khiết và nước khoáng ấm phục hồi năng lượng sống →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=156" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">THỂ THAO MẶT NƯỚC</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Thể Thao Mặt Nước &amp; Chèo SUP Đón Bình Minh Trên Mặt Hồ 100ha</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Cảm giác lướt nhẹ trên mặt gương nước phẳng lặng lúc rạng đông →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=158" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">GIÁO TRÍ VIỆT</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Ký Ức Tuổi Thơ &amp; Trải Nghiệm Giáo Trí Dân Gian Cho Con Trẻ Tại Điền Trang</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Rời xa màn hình điện tử, trở về với thiên nhiên, gốm mộc và thả diều →</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sub-tab 4: Đầu Tư -->
+        <div class="sub-tab-content" id="subtab-villa-investment">
+          <div class="grid-listing" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+            <a class="grid-card" href="article.html?id=119" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">TỶ SUẤT DÒNG TIỀN</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Bài Toán Dòng Tiền &amp; Suất Đầu Tư Cho Thuê Mẫu 3PN: So Sánh Cơ Hội Giữa Sunrise 1 &amp; Sunset 1</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">So sánh chi phí đầu tư và lợi nhuận ròng hàng năm qua MDS Living →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=130" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">TÍCH SẢN TRƯỜNG TỒN</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Dinh Thự Sunrise 2 - Bất Động Sản Di Sản Tới 1.452m²: Tính Khan Hiếm &amp; Tiềm Năng Tăng Trưởng</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Giá trị thặng dư quỹ đất lớn ven hồ 100ha, khả năng chống lạm phát →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=159" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">ỦY THÁC VẬN HÀNH</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Mô Hình Quản Lý Ủy Thác MDS Living: Tối Ưu Hóa Công Suất Cho Thuê &amp; Bảo Dưỡng</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Giải pháp 'Chìa khóa trao tay' giúp tài sản tự sinh lời khi gia chủ vắng nhà →</p>
+              </div>
+            </a>
+            <a class="grid-card" href="article.html?id=160" style="text-decoration:none; color:inherit;">
+              <div class="grid-card-info" style="padding: 14px;">
+                <span style="font-size:0.7rem; color:#8c6b32; font-weight:800; text-transform:uppercase;">HẠ TẦNG KẾT NỐI</span>
+                <h5 style="margin: 4px 0 6px; font-size: 0.95rem; line-height: 1.4;">Đòn Bẩy Hạ Tầng: Cao Tốc Biên Hòa - Vũng Tàu &amp; Sân Bay Long Thành Tác Động Ra Sao?</h5>
+                <p style="font-size: 0.8rem; color: #666; margin: 0;">Rút ngắn thời gian di chuyển từ TP.HCM chỉ còn ~60 – 75 phút →</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
-  <h2 class="section-title" style="margin-bottom: 8px;">Xu Hướng, Nhận Định &amp; 48 Chuyên Đề Điền Trang</h2>
-  <p style="font-size: 1.02rem; color: #666; line-height: 1.6; margin: 0;">
-    Tuyển tập các bài phân tích sâu sắc về giá trị văn hóa bản sắc, kinh tế học điền trang, chuẩn sống Eco-Luxury và 48 chuyên đề bóc tách đa chiều của giới chuyên gia.
-  </p>
-</div>
-
-<!-- 48 CHUYÊN ĐỀ PHÂN TÍCH SECTION -->
-<div style="background: #fdfbf7; border: 1px solid #e0d5c1; border-radius: 10px; padding: 34px 22px; margin-top: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
-<div style="text-align: center; margin-bottom: 26px;">
-<span style="background: #c9a96e; color: #000; font-size: 0.72rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">GÓC NHÌN CHUYÊN GIA &amp; PHÂN TÍCH MẶT BẰNG</span>
-<h3 style="font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 1.95rem); margin-top: 10px; color: #111;">
-        48 CHUYÊN ĐỀ PHÂN TÍCH MẶT BẰNG &amp; GÓC NHÌN ĐIỀN TRANG
-      </h3>
-<p style="color: #666; font-size: 0.93rem; max-width: 780px; margin: 6px auto 0;">
-        Bóc tách toàn diện 4 góc độ chuyên sâu của 4 mẫu điền trang (Sunrise 1, Sunrise 2, Sunset 1, Sunset 2): Mặt bằng &amp; Kiến trúc • Phong thủy &amp; Vi khí hậu • Trải nghiệm &amp; Dưỡng sinh • Suất đầu tư &amp; Tích sản.
-      </p>
-</div>
-<!-- Sub tabs navigation -->
-<div class="sub-tabs-header" style="justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 25px;">
-<button class="sub-tab-btn active" data-subtab="subtab-villa-layout">
-<i class="fa-solid fa-ruler-combined" style="margin-right:6px;"></i>1. Mặt Bằng &amp; Kiến Trúc (12 Bài)
-      </button>
-<button class="sub-tab-btn" data-subtab="subtab-villa-fengshui">
-<i class="fa-solid fa-compass" style="margin-right:6px;"></i>2. Phong Thủy &amp; Vi Khí Hậu (12 Bài)
-      </button>
-<button class="sub-tab-btn" data-subtab="subtab-villa-experience">
-<i class="fa-solid fa-spa" style="margin-right:6px;"></i>3. Trải Nghiệm &amp; Dưỡng Sinh (12 Bài)
-      </button>
-<button class="sub-tab-btn" data-subtab="subtab-villa-investment">
-<i class="fa-solid fa-chart-line" style="margin-right:6px;"></i>4. Đầu Tư &amp; Tích Sản (12 Bài)
-      </button>
-</div>
-<!-- Sub-tab 1: Mặt Bằng & Kiến Trúc (12 Bài) -->
-<div class="sub-tab-content active" id="subtab-villa-layout">
-<div class="grid-listing">
-<!-- Article 103: Điền Trang Sunrise 1: Giải Mã Mặt Bằng 1 Tầng Trệt Trải Rộng – Sự Tiện Nghi Mở Đón Nắng Mai -->
-<a class="grid-card" href="article.html?id=103">
-<div class="grid-img">
-<img alt="Điền Trang Sunrise 1: Giải Mã Mặt Bằng 1 Tầng Trệt Trải Rộng – Sự Tiện Nghi Mở Đón Nắng Mai" decoding="async" loading="lazy" src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_1.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Điền Trang Sunrise 1: Giải Mã Mặt Bằng 1 Tầng Trệt Trải Rộng – Sự Tiện Nghi Mở Đón Nắng Mai</h5>
-<p class="grid-card-subtitle">Khuôn viên 1.000m² - 1.200m², layout trải ngang đón nắng bình minh</p>
-<p class="grid-price">CHUYÊN ĐỀ KIẾN TRÚC</p>
-</div>
-</a>
-<!-- Article 104: Dinh Thự Sunrise 2: Đỉnh Cao Kiến Trúc Đại Điền Trang Tới 1.452m² – Đại Sảnh Trần Cao & Sky Deck 360° -->
-<a class="grid-card" href="article.html?id=104">
-<div class="grid-img">
-<img alt="Dinh Thự Sunrise 2: Đỉnh Cao Kiến Trúc Đại Điền Trang Tới 1.452m² – Đại Sảnh Trần Cao &amp; Sky Deck 360°" decoding="async" loading="lazy" src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_2.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Dinh Thự Sunrise 2: Đỉnh Cao Kiến Trúc Đại Điền Trang Tới 1.452m² – Đại Sảnh Trần Cao &amp; Sky Deck 360°</h5>
-<p class="grid-card-subtitle">Đại sảnh gỗ quý trần cao 6m, 4PN Master, Sky Deck 40m²</p>
-<p class="grid-price">DINH THỰ ĐẲNG CẤP</p>
-</div>
-</a>
-<!-- Article 101: Điền Trang Sunset 1: Bố Cục Sân Trong (Courtyard) – Gắn Kết Đa Thế Hệ Trong Nếp Nhà 1 Tầng -->
-<a class="grid-card" href="article.html?id=101">
-<div class="grid-img">
-<img alt="Điền Trang Sunset 1: Bố Cục Sân Trong (Courtyard) – Gắn Kết Đa Thế Hệ Trong Nếp Nhà 1 Tầng" decoding="async" loading="lazy" src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_1.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Điền Trang Sunset 1: Bố Cục Sân Trong (Courtyard) – Gắn Kết Đa Thế Hệ Trong Nếp Nhà 1 Tầng</h5>
-<p class="grid-card-subtitle">Khuôn viên 1.000m², sân trong 38m², vườn cây ăn trái 260m²</p>
-<p class="grid-price">SÂN TRONG ĐỘC BẢN</p>
-</div>
-</a>
-</div><!-- /grid-listing 3 bài đầu -->
-<div id="more-subtab-layout" class="grid-listing" style="display: none; margin-top: 18px;">
-<!-- Article 102: Điền Trang Sunset 2: Bố Cục Không Gian 2 Tầng – Tầm Nhìn Panorama Ôm Trọn Hoàng Hôn Hồ 100ha -->
-<a class="grid-card" href="article.html?id=102">
-<div class="grid-img">
-<img alt="Điền Trang Sunset 2: Bố Cục Không Gian 2 Tầng – Tầm Nhìn Panorama Ôm Trọn Hoàng Hôn Hồ 100ha" decoding="async" loading="lazy" src="assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_2.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Điền Trang Sunset 2: Bố Cục Không Gian 2 Tầng – Tầm Nhìn Panorama Ôm Trọn Hoàng Hôn Hồ 100ha</h5>
-<p class="grid-card-subtitle">Khuôn viên 1.200m², vườn ăn trái 482m², ban công ngắm hoàng hôn</p>
-<p class="grid-price">TẦM NHÌN TUYỆT MỸ</p>
-</div>
-</a>
-<!-- Article 105: Giải Pháp Phân Tách Không Gian Động & Tĩnh Trong Mặt Bằng Điền Trang Sunrise 1 -->
-<a class="grid-card" href="article.html?id=105">
-<div class="grid-img">
-<img alt="Giải Pháp Phân Tách Không Gian Động &amp; Tĩnh Trong Mặt Bằng Điền Trang Sunrise 1" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Giải Pháp Phân Tách Không Gian Động &amp; Tĩnh Trong Mặt Bằng Điền Trang Sunrise 1</h5>
-<p class="grid-card-subtitle">Bố trí khoa học giữa phòng khách mở và khu nghỉ ngơi khép kín</p>
-<p class="grid-price">CÔNG NĂNG MẶT BẰNG</p>
-</div>
-</a>
-<!-- Article 106: Nghệ Thuật Kết Nối Gỗ Tự Nhiên & Hệ Kính Khổ Lớn Trong Dinh Thự Sunrise 2 -->
-<a class="grid-card" href="article.html?id=106">
-<div class="grid-img">
-<img alt="Nghệ Thuật Kết Nối Gỗ Tự Nhiên &amp; Hệ Kính Khổ Lớn Trong Dinh Thự Sunrise 2" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_2_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Nghệ Thuật Kết Nối Gỗ Tự Nhiên &amp; Hệ Kính Khổ Lớn Trong Dinh Thự Sunrise 2</h5>
-<p class="grid-card-subtitle">Sự giao hòa giữa vật liệu mộc truyền thống và kiến trúc đương đại</p>
-<p class="grid-price">VẬT LIỆU CAO CẤP</p>
-</div>
-</a>
-<!-- Article 107: Triết Lý Thiết Kế Giếng Trời Sân Trong 38m² Của Điền Trang Sunset 1 -->
-<a class="grid-card" href="article.html?id=107">
-<div class="grid-img">
-<img alt="Triết Lý Thiết Kế Giếng Trời Sân Trong 38m² Của Điền Trang Sunset 1" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Triết Lý Thiết Kế Giếng Trời Sân Trong 38m² Của Điền Trang Sunset 1</h5>
-<p class="grid-card-subtitle">Trái tim xanh điều hòa nhiệt độ và hút gió mát tự nhiên</p>
-<p class="grid-price">KIẾN TRÚC XANH</p>
-</div>
-</a>
-<!-- Article 108: Ban Công Sky Lounge 35m² Tầng 2 Sunset 2: Điểm Hẹn Thưởng Lãm Hoàng Hôn -->
-<a class="grid-card" href="article.html?id=108">
-<div class="grid-img">
-<img alt="Ban Công Sky Lounge 35m² Tầng 2 Sunset 2: Điểm Hẹn Thưởng Lãm Hoàng Hôn" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_2_living.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Ban Công Sky Lounge 35m² Tầng 2 Sunset 2: Điểm Hẹn Thưởng Lãm Hoàng Hôn</h5>
-<p class="grid-card-subtitle">Không gian thưởng trà và ngắm chiều tà trên tầng cao</p>
-<p class="grid-price">SKY LOUNGE</p>
-</div>
-</a>
-<!-- Article 109: Phân Tích Mặt Bằng Sân Vườn > 700m² & Hồ Bơi Khoáng Muối Điền Trang Sunrise 1 -->
-<a class="grid-card" href="article.html?id=109">
-<div class="grid-img">
-<img alt="Phân Tích Mặt Bằng Sân Vườn &gt; 700m² &amp; Hồ Bơi Khoáng Muối Điền Trang Sunrise 1" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_1_ext_2.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Phân Tích Mặt Bằng Sân Vườn &gt; 700m² &amp; Hồ Bơi Khoáng Muối Điền Trang Sunrise 1</h5>
-<p class="grid-card-subtitle">Quy hoạch cảnh quan sinh thái và hồ bơi thư giãn chuẩn resort</p>
-<p class="grid-price">CẢNH QUAN SÂN VƯỜN</p>
-</div>
-</a>
-<!-- Article 110: Thiết Kế Đại Sảnh Trần Cao 6m & Không Gian Tiếp Khách Ngoại Giao Tại Dinh Thự Sunrise 2 -->
-<a class="grid-card" href="article.html?id=110">
-<div class="grid-img">
-<img alt="Thiết Kế Đại Sảnh Trần Cao 6m &amp; Không Gian Tiếp Khách Ngoại Giao Tại Dinh Thự Sunrise 2" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Thiết Kế Đại Sảnh Trần Cao 6m &amp; Không Gian Tiếp Khách Ngoại Giao Tại Dinh Thự Sunrise 2</h5>
-<p class="grid-card-subtitle">Quy chuẩn thiết kế dành riêng cho giới tinh hoa và doanh nhân</p>
-<p class="grid-price">ĐẠI SẢNH QUÝ TỘC</p>
-</div>
-</a>
-<!-- Article 141: Tối Ưu Hóa Giao Thông Nội Khu & Không Gian Riêng Tư Khép Kín Cho Gia Đình Đa Thế Hệ -->
-<a class="grid-card" href="article.html?id=141">
-<div class="grid-img">
-<img alt="Tối Ưu Hóa Giao Thông Nội Khu &amp; Không Gian Riêng Tư Khép Kín Cho Gia Đình Đa Thế Hệ" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_1_lake_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Tối Ưu Hóa Giao Thông Nội Khu &amp; Không Gian Riêng Tư Khép Kín Cho Gia Đình Đa Thế Hệ</h5>
-<p class="grid-card-subtitle">Mặt bằng phẳng không bậc tam cấp, an toàn cho người cao tuổi và trẻ nhỏ</p>
-<p class="grid-price">ĐA THẾ HỆ</p>
-</div>
-</a>
-<!-- Article 142: Kiến Trúc 2 Tầng Sinh Thái: Sự Chuyển Tiếp Mềm Mại Giữa Sân Vườn, Hồ Bơi & Tầng Cao -->
-<a class="grid-card" href="article.html?id=142">
-<div class="grid-img">
-<img alt="Kiến Trúc 2 Tầng Sinh Thái: Sự Chuyển Tiếp Mềm Mại Giữa Sân Vườn, Hồ Bơi &amp; Tầng Cao" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_2_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Kiến Trúc 2 Tầng Sinh Thái: Sự Chuyển Tiếp Mềm Mại Giữa Sân Vườn, Hồ Bơi &amp; Tầng Cao</h5>
-<p class="grid-card-subtitle">Kỹ thuật phân khối kiến trúc giúp công trình hòa vào thiên nhiên hồ nước</p>
-<p class="grid-price">KIẾN TRÚC ĐƯƠNG ĐẠI</p>
-</div>
-</a>
-</div><!-- /more-subtab-layout -->
-<div style="text-align: center; margin-top: 22px;">
-  <button type="button" onclick="toggleSubtabMore('more-subtab-layout', this)" class="editorial-btn" style="background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 10px 24px; border-radius: 30px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">
-    Xem thêm 9 bài phân tích kiến trúc khác <i class="fa-solid fa-chevron-down" style="margin-left: 6px;"></i>
-  </button>
-</div>
-</div>
-<!-- Sub-tab 2: Phong Thủy & Vi Khí Hậu (12 Bài) -->
-<div class="sub-tab-content" id="subtab-villa-fengshui">
-<div class="grid-listing">
-<!-- Article 111: Phong Thủy Điền Trang Hướng Đông (Sunrise 1 & 2): Đón Vượng Khí Nắng Sớm & Năng Lượng Tái Sinh -->
-<a class="grid-card" href="article.html?id=111">
-<div class="grid-img">
-<img alt="Phong Thủy Điền Trang Hướng Đông (Sunrise 1 &amp; 2): Đón Vượng Khí Nắng Sớm &amp; Năng Lượng Tái Sinh" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Phong Thủy Điền Trang Hướng Đông (Sunrise 1 &amp; 2): Đón Vượng Khí Nắng Sớm &amp; Năng Lượng Tái Sinh</h5>
-<p class="grid-card-subtitle">Thanh Long bão hòa sinh khí, khởi đầu ngày mới ngập tràn năng lượng</p>
-<p class="grid-price">PHONG THỦY HƯỚNG ĐÔNG</p>
-</div>
-</a>
-<!-- Article 112: Giải Pháp Vi Khí Hậu Điền Trang Hướng Tây (Sunset 1 & 2): Đón Gió Nam Mát Lành & Lọc Nắng Chiều -->
-<a class="grid-card" href="article.html?id=112">
-<div class="grid-img">
-<img alt="Giải Pháp Vi Khí Hậu Điền Trang Hướng Tây (Sunset 1 &amp; 2): Đón Gió Nam Mát Lành &amp; Lọc Nắng Chiều" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Giải Pháp Vi Khí Hậu Điền Trang Hướng Tây (Sunset 1 &amp; 2): Đón Gió Nam Mát Lành &amp; Lọc Nắng Chiều</h5>
-<p class="grid-card-subtitle">Hệ lam chắn nắng, mái hiên đua sâu và luồng gió mặt hồ 100ha</p>
-<p class="grid-price">VI KHÍ HẬU HƯỚNG TÂY</p>
-</div>
-</a>
-<!-- Article 113: Trải Nghiệm 24 Giờ Vi Khí Hậu: So Sánh Nhịp Thở Sinh Thái Giữa Cụm Sunrise & Sunset -->
-<a class="grid-card" href="article.html?id=113">
-<div class="grid-img">
-<img alt="Trải Nghiệm 24 Giờ Vi Khí Hậu: So Sánh Nhịp Thở Sinh Thái Giữa Cụm Sunrise &amp; Sunset" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Trải Nghiệm 24 Giờ Vi Khí Hậu: So Sánh Nhịp Thở Sinh Thái Giữa Cụm Sunrise &amp; Sunset</h5>
-<p class="grid-card-subtitle">Theo dõi biểu đồ nhiệt độ, độ ẩm và sự luân chuyển ánh sáng qua từng giờ</p>
-<p class="grid-price">NHỊP THỞ SINH THÁI</p>
-</div>
-</a>
-</div><!-- /grid-listing 3 bài đầu -->
-<div id="more-subtab-fengshui" class="grid-listing" style="display: none; margin-top: 18px;">
-<!-- Article 114: Thủy Khí Hồ 100ha & Không Gian Cây Xanh: Trụ Cột Nuôi Dưỡng Sức Khỏe Gia Chủ -->
-<a class="grid-card" href="article.html?id=114">
-<div class="grid-img">
-<img alt="Thủy Khí Hồ 100ha &amp; Không Gian Cây Xanh: Trụ Cột Nuôi Dưỡng Sức Khỏe Gia Chủ" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Thủy Khí Hồ 100ha &amp; Không Gian Cây Xanh: Trụ Cột Nuôi Dưỡng Sức Khỏe Gia Chủ</h5>
-<p class="grid-card-subtitle">Nồng độ ion âm cực đại, không khí sạch và hiệu ứng Blue Mind giảm stress</p>
-<p class="grid-price">DƯỠNG SINH SINH THÁI</p>
-</div>
-</a>
-<!-- Article 143: Thế Đất 'Tựa Sơn Hướng Thủy' & Trục Năng Lượng Sinh Khí Của Dinh Thự Sunrise 2 -->
-<a class="grid-card" href="article.html?id=143">
-<div class="grid-img">
-<img alt="Thế Đất 'Tựa Sơn Hướng Thủy' &amp; Trục Năng Lượng Sinh Khí Của Dinh Thự Sunrise 2" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_2_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Thế Đất 'Tựa Sơn Hướng Thủy' &amp; Trục Năng Lượng Sinh Khí Của Dinh Thự Sunrise 2</h5>
-<p class="grid-card-subtitle">Địa thế đắc địa mang lại phú quý trường tồn cho gia tộc</p>
-<p class="grid-price">ĐỊA LÝ PHONG THỦY</p>
-</div>
-</a>
-<!-- Article 144: Đón Gió Hồ Tự Nhiên Qua Sân Trong: Khí Đạo Lưu Thông Của Điền Trang Sunset 1 -->
-<a class="grid-card" href="article.html?id=144">
-<div class="grid-img">
-<img alt="Đón Gió Hồ Tự Nhiên Qua Sân Trong: Khí Đạo Lưu Thông Của Điền Trang Sunset 1" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Đón Gió Hồ Tự Nhiên Qua Sân Trong: Khí Đạo Lưu Thông Của Điền Trang Sunset 1</h5>
-<p class="grid-card-subtitle">Quy luật tụ khí - tán nhiệt và dòng luân chuyển năng lượng tuần hoàn</p>
-<p class="grid-price">KHÍ ĐẠO SÂN TRONG</p>
-</div>
-</a>
-<!-- Article 145: Phong Thủy Vườn Cây Ăn Trái & Thảo Mộc: Cân Bằng Âm Dương Cho Gia Chủ Sunrise 1 -->
-<a class="grid-card" href="article.html?id=145">
-<div class="grid-img">
-<img alt="Phong Thủy Vườn Cây Ăn Trái &amp; Thảo Mộc: Cân Bằng Âm Dương Cho Gia Chủ Sunrise 1" decoding="async" loading="lazy" src="assets/Index_asset/Tien_ich_minh_hoa/Nong_trai_huu_co.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Phong Thủy Vườn Cây Ăn Trái &amp; Thảo Mộc: Cân Bằng Âm Dương Cho Gia Chủ Sunrise 1</h5>
-<p class="grid-card-subtitle">Lựa chọn các giống cây bản địa mang ý nghĩa tài lộc và thanh lọc không khí</p>
-<p class="grid-price">MỘC KHÍ PHONG THỦY</p>
-</div>
-</a>
-<!-- Article 146: Tầm Nhìn Hoàng Hôn Mặt Hồ & Ý Nghĩa Chiêu Tài Đắc Lộc Cho Điền Trang Sunset 2 -->
-<a class="grid-card" href="article.html?id=146">
-<div class="grid-img">
-<img alt="Tầm Nhìn Hoàng Hôn Mặt Hồ &amp; Ý Nghĩa Chiêu Tài Đắc Lộc Cho Điền Trang Sunset 2" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_2_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Tầm Nhìn Hoàng Hôn Mặt Hồ &amp; Ý Nghĩa Chiêu Tài Đắc Lộc Cho Điền Trang Sunset 2</h5>
-<p class="grid-card-subtitle">Khoảnh khắc hoàng hôn vàng rực chiếu rọi mặt nước hồ</p>
-<p class="grid-price">HOÀNG HÔN CHIÊU TÀI</p>
-</div>
-</a>
-<!-- Article 147: Đo Lường Nồng Độ Ion Âm & Vi Khí Hậu Ven Hồ 100ha Tại Saigon Farm Resort -->
-<a class="grid-card" href="article.html?id=147">
-<div class="grid-img">
-<img alt="Đo Lường Nồng Độ Ion Âm &amp; Vi Khí Hậu Ven Hồ 100ha Tại Saigon Farm Resort" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Đo Lường Nồng Độ Ion Âm &amp; Vi Khí Hậu Ven Hồ 100ha Tại Saigon Farm Resort</h5>
-<p class="grid-card-subtitle">Số liệu thực nghiệm so sánh với các đô thị trung tâm và vùng biển</p>
-<p class="grid-price">KHOA HỌC MÔI TRƯỜNG</p>
-</div>
-</a>
-<!-- Article 148: Cây Bản Địa & Thảm Thực Vật Tự Nhiên Trong Quy Hoạch Vi Khí Hậu Quần Thể -->
-<a class="grid-card" href="article.html?id=148">
-<div class="grid-img">
-<img alt="Cây Bản Địa &amp; Thảm Thực Vật Tự Nhiên Trong Quy Hoạch Vi Khí Hậu Quần Thể" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Cây Bản Địa &amp; Thảm Thực Vật Tự Nhiên Trong Quy Hoạch Vi Khí Hậu Quần Thể</h5>
-<p class="grid-card-subtitle">Hệ thống 3 tầng tán cây xanh giúp chắn gió bão và điều hòa độ ẩm</p>
-<p class="grid-price">SINH THÁI HỌC</p>
-</div>
-</a>
-<!-- Article 149: Nghệ Thuật Xử Lý Nắng Hướng Tây Bằng Lam Gỗ & Mái Hiên Rộng Trong Kiến Trúc Sunset -->
-<a class="grid-card" href="article.html?id=149">
-<div class="grid-img">
-<img alt="Nghệ Thuật Xử Lý Nắng Hướng Tây Bằng Lam Gỗ &amp; Mái Hiên Rộng Trong Kiến Trúc Sunset" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_1_lake_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Nghệ Thuật Xử Lý Nắng Hướng Tây Bằng Lam Gỗ &amp; Mái Hiên Rộng Trong Kiến Trúc Sunset</h5>
-<p class="grid-card-subtitle">Kế thừa trí tuệ kiến trúc nhà rường truyền thống xứ nhiệt đới</p>
-<p class="grid-price">CHỐNG NẮNG TỰ NHIÊN</p>
-</div>
-</a>
-<!-- Article 150: Sự Tương Hợp Ngũ Hành Trong Bố Trí Mặt Bằng & Cảnh Quan Nước Dinh Thự Sunrise 2 -->
-<a class="grid-card" href="article.html?id=150">
-<div class="grid-img">
-<img alt="Sự Tương Hợp Ngũ Hành Trong Bố Trí Mặt Bằng &amp; Cảnh Quan Nước Dinh Thự Sunrise 2" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Sự Tương Hợp Ngũ Hành Trong Bố Trí Mặt Bằng &amp; Cảnh Quan Nước Dinh Thự Sunrise 2</h5>
-<p class="grid-card-subtitle">Sắp đặt hồ bơi, tiểu cảnh đá và vườn phong thủy theo quy chuẩn cổ truyền</p>
-<p class="grid-price">NGŨ HÀNH TƯƠNG SINH</p>
-</div>
-</a>
-</div><!-- /more-subtab-fengshui -->
-<div style="text-align: center; margin-top: 22px;">
-  <button type="button" onclick="toggleSubtabMore('more-subtab-fengshui', this)" class="editorial-btn" style="background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 10px 24px; border-radius: 30px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">
-    Xem thêm 9 bài phân tích phong thủy khác <i class="fa-solid fa-chevron-down" style="margin-left: 6px;"></i>
-  </button>
-</div>
-</div>
-<!-- Sub-tab 3: Trải Nghiệm Sống, Tiện Ích & Dưỡng Sinh (12 Bài) -->
-<div class="sub-tab-content" id="subtab-villa-experience">
-<div class="grid-listing">
-<!-- Article 115: Đặc Quyền Hồ Bơi Vô Cực & Vườn Nông Trại Riêng: Chuẩn Sống Xanh Sunrise 1 & Sunset 1 -->
-<a class="grid-card" href="article.html?id=115">
-<div class="grid-img">
-<img alt="Đặc Quyền Hồ Bơi Vô Cực &amp; Vườn Nông Trại Riêng: Chuẩn Sống Xanh Sunrise 1 &amp; Sunset 1" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_1_ext_2.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Đặc Quyền Hồ Bơi Vô Cực &amp; Vườn Nông Trại Riêng: Chuẩn Sống Xanh Sunrise 1 &amp; Sunset 1</h5>
-<p class="grid-card-subtitle">Bể bơi khoáng muối 45m² và mảnh vườn rau củ quả tự thu hoạch Farm-to-Table</p>
-<p class="grid-price">RESORT TẠI GIA</p>
-</div>
-</a>
-<!-- Article 116: Đẳng Cấp Thượng Lưu Tại Dinh Thự Sunrise 2: Không Gian Gala Sân Vườn Rộng Lớn Tới 1.452m² & Tiếp Khách VIP Kín Đáo -->
-<a class="grid-card" href="article.html?id=116">
-<div class="grid-img">
-<img alt="Đẳng Cấp Thượng Lưu Tại Dinh Thự Sunrise 2: Không Gian Gala Sân Vườn Rộng Lớn Tới 1.452m² &amp; Tiếp Khách VIP Kín Đáo" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_2_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Đẳng Cấp Thượng Lưu Tại Dinh Thự Sunrise 2: Không Gian Gala Sân Vườn Rộng Lớn Tới 1.452m² &amp; Tiếp Khách VIP Kín Đáo</h5>
-<p class="grid-card-subtitle">Không gian tiếp khách ngoại giao bí mật, tiệc sân vườn 80 khách và dịch vụ quản gia MDS Living</p>
-<p class="grid-price">TIẾP KHÁCH THƯỢNG LƯU</p>
-</div>
-</a>
-<!-- Article 117: Phong Cách Sống 'Sunset Lounge': Trải Nghiệm Tiệc Trà Hoàng Hôn & Thưởng Rượu Tầng Thượng Sunset 2 -->
-<a class="grid-card" href="article.html?id=117">
-<div class="grid-img">
-<img alt="Phong Cách Sống 'Sunset Lounge': Trải Nghiệm Tiệc Trà Hoàng Hôn &amp; Thưởng Rượu Tầng Thượng Sunset 2" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_2_living.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Phong Cách Sống 'Sunset Lounge': Trải Nghiệm Tiệc Trà Hoàng Hôn &amp; Thưởng Rượu Tầng Thượng Sunset 2</h5>
-<p class="grid-card-subtitle">Tiệc trà hoàng hôn kiểu Anh, thưởng rượu vang trên ban công 35m² ngắm mặt hồ chuyển màu</p>
-<p class="grid-price">LỐI SỐNG THỜI THƯỢNG</p>
-</div>
-</a>
-</div><!-- /grid-listing 3 bài đầu -->
-<div id="more-subtab-experience" class="grid-listing" style="display: none; margin-top: 18px;">
-<!-- Article 118: Lối Sống Chữa Lành & Dưỡng Sinh Thân - Tâm - Trí: Một Ngày Hoàn Hảo Tại Saigon Farm Resort -->
-<a class="grid-card" href="article.html?id=118">
-<div class="grid-img">
-<img alt="Lối Sống Chữa Lành &amp; Dưỡng Sinh Thân - Tâm - Trí: Một Ngày Hoàn Hảo Tại Saigon Farm Resort" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Lối Sống Chữa Lành &amp; Dưỡng Sinh Thân - Tâm - Trí: Một Ngày Hoàn Hảo Tại Saigon Farm Resort</h5>
-<p class="grid-card-subtitle">Lịch trình dưỡng sinh mẫu: Thiền đón bình minh, cưỡi ngựa, Onsen Bờ Sen và thực dưỡng thuần khiết</p>
-<p class="grid-price">CHĂM SÓC TOÀN DIỆN</p>
-</div>
-</a>
-<!-- Article 151: Trải Nghiệm 'Farm-to-Table' Ngay Tại Vườn Nhà: Thu Hoạch Nông Sản Sạch Mỗi Ngày (Sunrise 1) -->
-<a class="grid-card" href="article.html?id=151">
-<div class="grid-img">
-<img alt="Trải Nghiệm 'Farm-to-Table' Ngay Tại Vườn Nhà: Thu Hoạch Nông Sản Sạch Mỗi Ngày (Sunrise 1)" decoding="async" loading="lazy" src="assets/Index_asset/Tien_ich_minh_hoa/Nong_trai_huu_co.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Trải Nghiệm 'Farm-to-Table' Ngay Tại Vườn Nhà: Thu Hoạch Nông Sản Sạch Mỗi Ngày (Sunrise 1)</h5>
-<p class="grid-card-subtitle">Bữa cơm gia đình thuần khiết từ vườn rau hữu cơ do quản gia chăm sóc</p>
-<p class="grid-price">FARM-TO-TABLE</p>
-</div>
-</a>
-<!-- Article 152: Nghệ Thuật Tiếp Đón Doanh Nhân & Tiệc Private 80 Khách Tại Dinh Thự Sunrise 2 -->
-<a class="grid-card" href="article.html?id=152">
-<div class="grid-img">
-<img alt="Nghệ Thuật Tiếp Đón Doanh Nhân &amp; Tiệc Private 80 Khách Tại Dinh Thự Sunrise 2" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Nghệ Thuật Tiếp Đón Doanh Nhân &amp; Tiệc Private 80 Khách Tại Dinh Thự Sunrise 2</h5>
-<p class="grid-card-subtitle">Quy chuẩn lễ tân ngoại giao và ẩm thực Fine Dining độc bản</p>
-<p class="grid-price">YẾN TIỆC VIP</p>
-</div>
-</a>
-<!-- Article 153: Nếp Sống Gia Đình Đa Thế Hệ Trong Không Gian Sân Trong Yên Bình Của Sunset 1 -->
-<a class="grid-card" href="article.html?id=153">
-<div class="grid-img">
-<img alt="Nếp Sống Gia Đình Đa Thế Hệ Trong Không Gian Sân Trong Yên Bình Của Sunset 1" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Nếp Sống Gia Đình Đa Thế Hệ Trong Không Gian Sân Trong Yên Bình Của Sunset 1</h5>
-<p class="grid-card-subtitle">Nơi ông bà thưởng trà đàm đạo, con cháu quây quần vui chơi</p>
-<p class="grid-price">GẮN KẾT GIA ĐÌNH</p>
-</div>
-</a>
-<!-- Article 154: Khám Phá Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Việt Mã Viên Liền Kề Cụm Điền Trang -->
-<a class="grid-card" href="article.html?id=154">
-<div class="grid-img">
-<img alt="Khám Phá Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Việt Mã Viên Liền Kề Cụm Điền Trang" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Viet_Ma_Vien.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Khám Phá Câu Lạc Bộ Cưỡi Ngựa Quý Tộc Việt Mã Viên Liền Kề Cụm Điền Trang</h5>
-<p class="grid-card-subtitle">Bộ môn thể thao thượng lưu rèn luyện phong thái đĩnh đạc và sức khỏe</p>
-<p class="grid-price">VIỆT MÃ VIÊN</p>
-</div>
-</a>
-<!-- Article 155: Liệu Trình Onsen Bờ Sen & Thảo Mộc Dưỡng Sinh: Đặc Quyền Cho Cư Dân Điền Trang -->
-<a class="grid-card" href="article.html?id=155">
-<div class="grid-img">
-<img alt="Liệu Trình Onsen Bờ Sen &amp; Thảo Mộc Dưỡng Sinh: Đặc Quyền Cho Cư Dân Điền Trang" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Liệu Trình Onsen Bờ Sen &amp; Thảo Mộc Dưỡng Sinh: Đặc Quyền Cho Cư Dân Điền Trang</h5>
-<p class="grid-card-subtitle">Hương sen thanh khiết và nước khoáng ấm phục hồi năng lượng sống</p>
-<p class="grid-price">BỜ SEN ONSEN</p>
-</div>
-</a>
-<!-- Article 156: Thể Thao Mặt Nước & Chèo SUP Đón Bình Minh Trên Mặt Hồ 100ha -->
-<a class="grid-card" href="article.html?id=156">
-<div class="grid-img">
-<img alt="Thể Thao Mặt Nước &amp; Chèo SUP Đón Bình Minh Trên Mặt Hồ 100ha" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Thể Thao Mặt Nước &amp; Chèo SUP Đón Bình Minh Trên Mặt Hồ 100ha</h5>
-<p class="grid-card-subtitle">Cảm giác lướt nhẹ trên mặt gương nước phẳng lặng lúc rạng đông</p>
-<p class="grid-price">THỂ THAO MẶT NƯỚC</p>
-</div>
-</a>
-<!-- Article 157: Một Ngày Dưỡng Sinh Toàn Diện Thân - Tâm - Trí Cùng Dịch Vụ Quản Gia MDS Living -->
-<a class="grid-card" href="article.html?id=157">
-<div class="grid-img">
-<img alt="Một Ngày Dưỡng Sinh Toàn Diện Thân - Tâm - Trí Cùng Dịch Vụ Quản Gia MDS Living" decoding="async" loading="lazy" src="assets/Index_asset/MatBang/QuanLy_MDS_Living.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Một Ngày Dưỡng Sinh Toàn Diện Thân - Tâm - Trí Cùng Dịch Vụ Quản Gia MDS Living</h5>
-<p class="grid-card-subtitle">Chăm sóc từng bữa ăn dinh dưỡng, giấc ngủ ngon và lịch trình vận động</p>
-<p class="grid-price">QUẢN GIA MDS LIVING</p>
-</div>
-</a>
-<!-- Article 158: Ký Ức Tuổi Thơ & Trải Nghiệm Giáo Trí Dân Gian Cho Con Trẻ Tại Điền Trang -->
-<a class="grid-card" href="article.html?id=158">
-<div class="grid-img">
-<img alt="Ký Ức Tuổi Thơ &amp; Trải Nghiệm Giáo Trí Dân Gian Cho Con Trẻ Tại Điền Trang" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.avif"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Ký Ức Tuổi Thơ &amp; Trải Nghiệm Giáo Trí Dân Gian Cho Con Trẻ Tại Điền Trang</h5>
-<p class="grid-card-subtitle">Rời xa màn hình điện tử, trở về với thiên nhiên, gốm mộc và thả diều</p>
-<p class="grid-price">GIÁO TRÍ VIỆT</p>
-</div>
-</a>
-</div><!-- /more-subtab-experience -->
-<div style="text-align: center; margin-top: 22px;">
-  <button type="button" onclick="toggleSubtabMore('more-subtab-experience', this)" class="editorial-btn" style="background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 10px 24px; border-radius: 30px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">
-    Xem thêm 9 bài phân tích trải nghiệm khác <i class="fa-solid fa-chevron-down" style="margin-left: 6px;"></i>
-  </button>
-</div>
-</div>
-<!-- Sub-tab 4: Suất Đầu Tư, Hiệu Quả & Tích Sản (12 Bài) -->
-<div class="sub-tab-content" id="subtab-villa-investment">
-<div class="grid-listing">
-<!-- Article 119: Bài Toán Dòng Tiền & Suất Đầu Tư Cho Thuê Mẫu 3PN: So Sánh Cơ Hội Giữa Sunrise 1 và Sunset 1 -->
-<a class="grid-card" href="article.html?id=119">
-<div class="grid-img">
-<img alt="Bài Toán Dòng Tiền &amp; Suất Đầu Tư Cho Thuê Mẫu 3PN: So Sánh Cơ Hội Giữa Sunrise 1 và Sunset 1" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_1_lake_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Bài Toán Dòng Tiền &amp; Suất Đầu Tư Cho Thuê Mẫu 3PN: So Sánh Cơ Hội Giữa Sunrise 1 và Sunset 1</h5>
-<p class="grid-card-subtitle">So sánh chi phí đầu tư và lợi nhuận ròng hàng năm qua MDS Living</p>
-<p class="grid-price">TỶ SUẤT SINH LỜI CAO</p>
-</div>
-</a>
-<!-- Article 130: Dinh Thự Sunrise 2 - Bất Động Sản Di Sản Tới 1.452m²: Tính Khan Hiếm & Tiềm Năng Tăng Trưởng -->
-<a class="grid-card" href="article.html?id=130">
-<div class="grid-img">
-<img alt="Dinh Thự Sunrise 2 - Bất Động Sản Di Sản Tới 1.452m²: Tính Khan Hiếm &amp; Tiềm Năng Tăng Trưởng" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Dinh Thự Sunrise 2 - Bất Động Sản Di Sản Tới 1.452m²: Tính Khan Hiếm &amp; Tiềm Năng Tăng Trưởng</h5>
-<p class="grid-card-subtitle">Giá trị thặng dư quỹ đất lớn ven hồ 100ha, khả năng chống lạm phát và truyền đời</p>
-<p class="grid-price">TÍCH SẢN TRƯỜNG TỒN</p>
-</div>
-</a>
-<!-- Article 131: Tiềm Năng Khai Thác Lưu Trú Cao Cấp Của Điền Trang Sunset 2: Sức Hút Khách Quốc Tế & Chuyên Gia -->
-<a class="grid-card" href="article.html?id=131">
-<div class="grid-img">
-<img alt="Tiềm Năng Khai Thác Lưu Trú Cao Cấp Của Điền Trang Sunset 2: Sức Hút Khách Quốc Tế &amp; Chuyên Gia" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunset_2_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Tiềm Năng Khai Thác Lưu Trú Cao Cấp Của Điền Trang Sunset 2: Sức Hút Khách Quốc Tế &amp; Chuyên Gia</h5>
-<p class="grid-card-subtitle">Khai thác nguồn khách chuyên gia Sân bay Quốc tế Long Thành và du khách quốc tế</p>
-<p class="grid-price">ĐÓN SÓNG HẠ TẦNG</p>
-</div>
-</a>
-</div><!-- /grid-listing 3 bài đầu -->
-<div id="more-subtab-investment" class="grid-listing" style="display: none; margin-top: 18px;">
-<!-- Article 132: Ma Trận Đối Sánh Toàn Diện 4 Mẫu Điền Trang (Sunrise 1, 2 & Sunset 1, 2): Cẩm Nang Chọn Căn -->
-<a class="grid-card" href="article.html?id=132">
-<div class="grid-img">
-<img alt="Ma Trận Đối Sánh Toàn Diện 4 Mẫu Điền Trang (Sunrise 1, 2 &amp; Sunset 1, 2): Cẩm Nang Chọn Căn" decoding="async" loading="lazy" src="assets/Index_asset/MatBang/TongQuan_QuyMo.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Ma Trận Đối Sánh Toàn Diện 4 Mẫu Điền Trang (Sunrise 1, 2 &amp; Sunset 1, 2): Cẩm Nang Chọn Căn</h5>
-<p class="grid-card-subtitle">Bảng đối chiếu 12 tiêu chí chuyên sâu giúp gia chủ chọn đúng mẫu căn phù hợp nhất</p>
-<p class="grid-price">CẨM NANG ĐẦU TƯ</p>
-</div>
-</a>
-<!-- Article 159: Mô Hình Quản Lý Ủy Thác MDS Living: Tối Ưu Hóa Công Suất Cho Thuê & Bảo Dưỡng -->
-<a class="grid-card" href="article.html?id=159">
-<div class="grid-img">
-<img alt="Mô Hình Quản Lý Ủy Thác MDS Living: Tối Ưu Hóa Công Suất Cho Thuê &amp; Bảo Dưỡng" decoding="async" loading="lazy" src="assets/Index_asset/MatBang/QuanLy_MDS_Living.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Mô Hình Quản Lý Ủy Thác MDS Living: Tối Ưu Hóa Công Suất Cho Thuê &amp; Bảo Dưỡng</h5>
-<p class="grid-card-subtitle">Giải pháp 'Chìa khóa trao tay' giúp tài sản tự sinh lời khi gia chủ vắng nhà</p>
-<p class="grid-price">ỦY THÁC MDS LIVING</p>
-</div>
-</a>
-<!-- Article 160: Đòn Bẩy Hạ Tầng: Cao Tốc Biên Hòa - Vũng Tàu & Sân Bay Long Thành Tác Động Ra Sao? -->
-<a class="grid-card" href="article.html?id=160">
-<div class="grid-img">
-<img alt="Đòn Bẩy Hạ Tầng: Cao Tốc Biên Hòa - Vũng Tàu &amp; Sân Bay Long Thành Tác Động Ra Sao?" decoding="async" loading="lazy" src="assets/Index_asset/MatBang/SoDo_LienKet_Vung.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Đòn Bẩy Hạ Tầng: Cao Tốc Biên Hòa - Vũng Tàu &amp; Sân Bay Long Thành Tác Động Ra Sao?</h5>
-<p class="grid-card-subtitle">Rút ngắn thời gian di chuyển từ TP.HCM chỉ còn ~60 – 75 phút</p>
-<p class="grid-price">HẠ TẦNG LIÊN KẾT</p>
-</div>
-</a>
-<!-- Article 161: Phân Tích Suất Đầu Tư Điền Trang Nghỉ Dưỡng So Với Biệt Thự Ven Biển Hồ Tràm -->
-<a class="grid-card" href="article.html?id=161">
-<div class="grid-img">
-<img alt="Phân Tích Suất Đầu Tư Điền Trang Nghỉ Dưỡng So Với Biệt Thự Ven Biển Hồ Tràm" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Phân Tích Suất Đầu Tư Điền Trang Nghỉ Dưỡng So Với Biệt Thự Ven Biển Hồ Tràm</h5>
-<p class="grid-card-subtitle">So sánh chi phí trên m² đất, quyền sở hữu và trải nghiệm sinh thái thực tế</p>
-<p class="grid-price">SO SÁNH THỊ TRƯỜNG</p>
-</div>
-</a>
-<!-- Article 162: Giá Trị Tích Sản Gia Tộc Của Quỹ Đất Điền Trang Đơn Lập Tới 1.452m² Có Sổ Riêng -->
-<a class="grid-card" href="article.html?id=162">
-<div class="grid-img">
-<img alt="Giá Trị Tích Sản Gia Tộc Của Quỹ Đất Điền Trang Đơn Lập Tới 1.452m² Có Sổ Riêng" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_2_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Giá Trị Tích Sản Gia Tộc Của Quỹ Đất Điền Trang Đơn Lập Tới 1.452m² Có Sổ Riêng</h5>
-<p class="grid-card-subtitle">Tài sản lưu giữ giá trị qua nhiều thế hệ cho các dòng họ doanh nhân</p>
-<p class="grid-price">DI SẢN GIA TỘC</p>
-</div>
-</a>
-<!-- Article 163: Chiến Lược Cho Thuê Lưu Trú Retreat & Wellness Cao Cấp Cho Điền Trang 3PN Trệt -->
-<a class="grid-card" href="article.html?id=163">
-<div class="grid-img">
-<img alt="Chiến Lược Cho Thuê Lưu Trú Retreat &amp; Wellness Cao Cấp Cho Điền Trang 3PN Trệt" decoding="async" loading="lazy" src="assets/Index_asset/villa_gallery/sunrise_1_ext_1.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Chiến Lược Cho Thuê Lưu Trú Retreat &amp; Wellness Cao Cấp Cho Điền Trang 3PN Trệt</h5>
-<p class="grid-card-subtitle">Khai thác xu hướng nghỉ dưỡng chữa lành của giới văn phòng cao cấp Sài Gòn</p>
-<p class="grid-price">RETREAT &amp; WELLNESS</p>
-</div>
-</a>
-<!-- Article 164: Khả Năng Sinh Lời Kép: Dòng Tiền Vận Hành Đều Đặn & Tiềm Năng Tăng Giá Đất -->
-<a class="grid-card" href="article.html?id=164">
-<div class="grid-img">
-<img alt="Khả Năng Sinh Lời Kép: Dòng Tiền Vận Hành Đều Đặn &amp; Tiềm Năng Tăng Giá Đất" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/NEW_S02.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Khả Năng Sinh Lời Kép: Dòng Tiền Vận Hành Đều Đặn &amp; Tiềm Năng Tăng Giá Đất</h5>
-<p class="grid-card-subtitle">Mô hình đầu tư 2 trong 1: Vừa nghỉ dưỡng hưởng thụ, vừa thu lợi nhuận kép</p>
-<p class="grid-price">LỢI NHUẬN KÉP</p>
-</div>
-</a>
-<!-- Article 165: Pháp Lý Sở Hữu & Quy Chuẩn Xây Dựng Điền Trang: Cơ Sở Vững Chắc Cho Nhà Đầu Tư -->
-<a class="grid-card" href="article.html?id=165">
-<div class="grid-img">
-<img alt="Pháp Lý Sở Hữu &amp; Quy Chuẩn Xây Dựng Điền Trang: Cơ Sở Vững Chắc Cho Nhà Đầu Tư" decoding="async" loading="lazy" src="assets/Index_asset/MatBang/TongQuan_QuyMo.png"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Pháp Lý Sở Hữu &amp; Quy Chuẩn Xây Dựng Điền Trang: Cơ Sở Vững Chắc Cho Nhà Đầu Tư</h5>
-<p class="grid-card-subtitle">Sổ hồng riêng từng nền lâu dài, đất ở thổ cư 100%, xây dựng tự do</p>
-<p class="grid-price">PHÁP LÝ MINH BẠCH</p>
-</div>
-</a>
-<!-- Article 166: Dự Báo Thị Trường Điền Trang Nghỉ Dưỡng Sinh Thái Ven Sài Gòn Giai Đoạn 2026 - 2030 -->
-<a class="grid-card" href="article.html?id=166">
-<div class="grid-img">
-<img alt="Dự Báo Thị Trường Điền Trang Nghỉ Dưỡng Sinh Thái Ven Sài Gòn Giai Đoạn 2026 - 2030" decoding="async" loading="lazy" src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg"/>
-<span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-</div>
-<div class="grid-card-info">
-<h5>Dự Báo Thị Trường Điền Trang Nghỉ Dưỡng Sinh Thái Ven Sài Gòn Giai Đoạn 2026 - 2030</h5>
-<p class="grid-card-subtitle">Báo cáo phân tích cung - cầu phân khúc Second Home sinh thái ven hồ</p>
-<p class="grid-price">DỰ BÁO THỊ TRƯỜNG</p>
-</div>
-</a>
-</div><!-- /more-subtab-investment -->
-<div style="text-align: center; margin-top: 22px;">
-  <button type="button" onclick="toggleSubtabMore('more-subtab-investment', this)" class="editorial-btn" style="background: #faf3e6; color: #8c6b32; border: 1.5px solid #dfc89f; padding: 10px 24px; border-radius: 30px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">
-    Xem thêm 9 bài phân tích đầu tư khác <i class="fa-solid fa-chevron-down" style="margin-left: 6px;"></i>
-  </button>
-</div>
-</div>
-</div>
-<div style="text-align: right; margin-top: 18px; font-size: 0.78rem; color: #888; font-style: italic;">* Lưu ý: Toàn bộ thông tin, mặt bằng kiến trúc và hình ảnh tiện ích mang tính chất minh họa theo định hướng phát triển thực tế của quần thể điền trang.</div>
-
-<!-- Các Bài Viết Tiêu Biểu & Kinh Tế Học Điền Trang -->
-<div style="margin: 45px 0 20px;">
-  <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #111; margin-bottom: 4px;">
-    <i class="fa-solid fa-bookmark" style="color: #c9a96e; margin-right: 8px;"></i>BÀI VIẾT TIÊU BIỂU &amp; KINH TẾ HỌC ĐIỀN TRANG
-  </h3>
-  <p style="color: #666; font-size: 0.92rem; margin: 0;">Góc nhìn sâu sắc về giá trị văn hóa bản sắc, cấu phần kinh tế học điền trang và tiềm năng tăng trưởng bền vững.</p>
-</div>
-<div class="grid-listing editorial-grid" id="editorial-grid">
-          <div class="grid-card">
-            <a href="bai-viet/mot-met-vuong-o-saigon-farm-resort-mua-duoc-gi-bai-phan-tich-cau-phan-gia-tri-kinh-te-hoc-dien-trang.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Một Mét Vuông Ở Saigon Farm Resort Mua Được Gì? Bài Phân Tích Cấu Phần Giá Trị &amp; Kinh Tế Học Điền Trang" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/mot-met-vuong-o-saigon-farm-resort-mua-duoc-gi-bai-phan-tich-cau-phan-gia-tri-kinh-te-hoc-dien-trang.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Một Mét Vuông Ở Saigon Farm Resort Mua Được Gì? Bài Phân Tích Cấu Phần Giá Trị &amp; Kinh Tế Học Điền Trang</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Khi xem bất động sản, câu hỏi đúng không phải là bao nhiêu tiền một mét vuông, mà là một mét vuông mua được những gì? Bóc tách 5 thành phần giá trị cốt lõi: 100% thổ cư sổ đỏ riêng, ~638m² tiện ích đặc quyền (tổng diện tích tiện ích lên đến 30.000 m²), dịch vụ quản gia &amp; bảo vệ 24/7, dòng tiền cho thuê thụ động hàng tháng và bối cảnh sinh thái không thể tái tạo.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/mot-met-vuong-o-saigon-farm-resort-mua-duoc-gi-bai-phan-tich-cau-phan-gia-tri-kinh-te-hoc-dien-trang.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/xa-xi-den-tu-ban-sac-khi-su-sang-trong-cua-nguoi-viet-la-tro-ve-voi-nhung-dieu-thuoc-ve-minh.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/posts/xa_xi_ban_sac/cover.jpg" alt="Xa Xỉ Đến Từ Bản Sắc: Khi Sự Sang Trọng Của Người Việt Là Trở Về Với Những Điều Thuộc Về Mình" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/xa-xi-den-tu-ban-sac-khi-su-sang-trong-cua-nguoi-viet-la-tro-ve-voi-nhung-dieu-thuoc-ve-minh.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Xa Xỉ Đến Từ Bản Sắc: Khi Sự Sang Trọng Của Người Việt Là Trở Về Với Những Điều Thuộc Về Mình</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Một ngôi nhà Việt Nam không nhất thiết phải mang hình hài Tuscany hay Kyoto để được xem là sang trọng. Đã đến lúc chúng ta tự hào với một điền trang mang bản sắc, câu chuyện và ký ức của chính mình.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/xa-xi-den-tu-ban-sac-khi-su-sang-trong-cua-nguoi-viet-la-tro-ve-voi-nhung-dieu-thuoc-ve-minh.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Cung_tuong_Su_Viet.webp" alt="Hệ Thống 9 Không Gian Bản Sắc Việt Đương Đại Tại Saigon Farm Resort: Từ Hiên Việt Đến Dòng Sử Việt" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Hệ Thống Không Gian Bản Sắc Việt Đương Đại Tại Saigon Farm Resort: Từ Hiên Việt Đến Cung Tường Sử Việt</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Hệ sinh thái không gian văn hóa đặc quyền: Hiên Việt, Giáo Trí Việt, Bờ Sen, Việt Mã Viên, Nếp Nhà Việt, Cung Tường Sử Việt, Quảng Trường Hội Việt và Thanh Âm Các. Lịch trình trải nghiệm Chủ nhật trọn vẹn cho gia đình 3 thế hệ.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/chuoi-hoat-dong-le-hoi-ban-sac-viet-khi-dien-trang-la-noi-tro-ve-cua-ky-uc-gan-ket-gia-dinh.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/editorial_photo/Canh_dong_lua.png" alt="Chuỗi Hoạt Động Lễ Hội Bản Sắc Việt: Khi Điền Trang Là Nơi Trở Về Của Ký Ức &amp; Gắn Kết Gia Đình" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/chuoi-hoat-dong-le-hoi-ban-sac-viet-khi-dien-trang-la-noi-tro-ve-cua-ky-uc-gan-ket-gia-dinh.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Chuỗi Hoạt Động Lễ Hội Bản Sắc Việt: Khi Điền Trang Là Nơi Trở Về Của Ký Ức &amp; Gắn Kết Gia Đình</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Không gian sống động quanh năm với chuỗi 4 đại lễ hội mùa vụ đậm đà bản sắc Việt: Lễ Hội Tết Quê, Lễ Hội Đầm Sen, Lễ Hội Mùa Lúa Chín và Lễ Hội Lửa Trại Giao Thừa — Nơi gắn kết tam đại đồng đường và lưu giữ ký ức gia tộc.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/chuoi-hoat-dong-le-hoi-ban-sac-viet-khi-dien-trang-la-noi-tro-ve-cua-ky-uc-gan-ket-gia-dinh.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/tai-sao-giu-gin-ban-sac-van-hoa-lai-duoc-quan-tam-trong-thoi-dai-moi.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Duong_noi_bo/SFR_1.jpg" alt="Tại Sao Giữ Gìn Bản Sắc Văn Hóa Lại Được Quan Tâm Trong Thời Đại Mới?" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/tai-sao-giu-gin-ban-sac-van-hoa-lai-duoc-quan-tam-trong-thoi-dai-moi.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Tại Sao Giữ Gìn Bản Sắc Văn Hóa Lại Được Quan Tâm Trong Thời Đại Mới?</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Khi sự phát triển kinh tế và toàn cầu hóa khiến mọi không gian trở nên đồng dạng, bản sắc văn hóa không chỉ là ký ức nguồn cội mà trở thành đỉnh cao mới của phong cách sống xa xỉ và chiều sâu tâm thức người Việt.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/tai-sao-giu-gin-ban-sac-van-hoa-lai-duoc-quan-tam-trong-thoi-dai-moi.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/kien-truc-dien-trang-thuan-viet-su-giao-thoa-giua-ky-thuat-duong-dai-nep-nha-truyen-thong.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg" alt="Kiến Trúc Điền Trang Thuần Việt: Sự Giao Thoa Giữa Kỹ Thuật Đương Đại &amp; Nếp Nhà Truyền Thống" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/kien-truc-dien-trang-thuan-viet-su-giao-thoa-giua-ky-thuat-duong-dai-nep-nha-truyen-thong.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Kiến Trúc Điền Trang Thuần Việt: Sự Giao Thoa Giữa Kỹ Thuật Đương Đại &amp; Nếp Nhà Truyền Thống</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Khám phá ngôn ngữ kiến trúc độc bản tại Saigon Farm Resort: Mái ngói dốc vươn xa, hàng hiên thoáng đãng, sân trong đối lưu gió và vật liệu mộc mạc bản địa được nâng tầm thành tác phẩm nghệ thuật sống.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/kien-truc-dien-trang-thuan-viet-su-giao-thoa-giua-ky-thuat-duong-dai-nep-nha-truyen-thong.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/am-thuc-ban-sac-triet-ly-farm-to-table-bua-com-sum-vay-ben-mai-hien-dien-trang.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/Tien_ich_minh_hoa/Nong_trai_huu_co.png" alt="Ẩm Thực Bản Sắc &amp; Triết Lý Farm-To-Table: Bữa Cơm Sum Vầy Bên Mái Hiên Điền Trang" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/am-thuc-ban-sac-triet-ly-farm-to-table-bua-com-sum-vay-ben-mai-hien-dien-trang.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Ẩm Thực Bản Sắc &amp; Triết Lý Farm-To-Table: Bữa Cơm Sum Vầy Bên Mái Hiên Điền Trang</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Nghệ thuật ẩm thực Farm-to-Table đỉnh cao từ cánh đồng lúa hữu cơ, vườn rau sạch Organic Garden và thủy sản hồ 100ha. Nguồn thực phẩm tinh sạch chuẩn bị tận tâm cho chủ nhân điền trang và du khách lưu trú.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/am-thuc-ban-sac-triet-ly-farm-to-table-bua-com-sum-vay-ben-mai-hien-dien-trang.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/lieu-phap-duong-sinh-thao-moc-ban-dia-khi-huong-sen-tra-co-thu-chua-lanh-than-tam-tri.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.jpg" alt="Liệu Pháp Dưỡng Sinh Thảo Mộc Bản Địa: Khi Hương Sen &amp; Trà Cổ Thụ Chữa Lành Thân Tâm Trí" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/lieu-phap-duong-sinh-thao-moc-ban-dia-khi-huong-sen-tra-co-thu-chua-lanh-than-tam-tri.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Liệu Pháp Dưỡng Sinh Thảo Mộc Bản Địa: Khi Hương Sen &amp; Trà Cổ Thụ Chữa Lành Thân Tâm Trí</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Nghệ thuật trị liệu Đông y dưỡng sinh tại Bờ Sen Spa: Ngâm khoáng nóng thảo dược vườn nhà, thiền tịnh ven hồ sen đón bình minh và văn hóa thưởng trà Việt thuần khiết.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/lieu-phap-duong-sinh-thao-moc-ban-dia-khi-huong-sen-tra-co-thu-chua-lanh-than-tam-tri.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/giao-tri-dan-gian-cho-the-he-tre-tho-trao-truyen-di-san-bang-doi-tay-ky-uc-tuoi-tho.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_2.avif" alt="Giáo Trí Dân Gian Cho Thế Hệ Trẻ Thơ: Trao Truyền Di Sản Bằng Đôi Tay &amp; Ký Ức Tuổi Thơ" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/giao-tri-dan-gian-cho-the-he-tre-tho-trao-truyen-di-san-bang-doi-tay-ky-uc-tuoi-tho.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Giáo Trí Dân Gian Cho Thế Hệ Trẻ Thơ: Trao Truyền Di Sản Bằng Đôi Tay &amp; Ký Ức Tuổi Thơ</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Ở nơi khác trẻ con được trông, tại Saigon Farm Resort trẻ con được dạy — mà không hề biết mình đang học. Khám phá 16 hoạt động giáo trí dân gian toàn diện: từ gốm, cào cào lá dừa, cưỡi ngựa đến thả diều và chợ phiên nhí.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/giao-tri-dan-gian-cho-the-he-tre-tho-trao-truyen-di-san-bang-doi-tay-ky-uc-tuoi-tho.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/am-sac-viet-khong-gian-sinh-hoat-cong-dong-danh-thuc-hon-dan-toc-trong-nhip-song-duong-dai.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/Tien_ich_minh_hoa/Nha_am_sac_viet.png" alt="Âm Sắc Việt &amp; Không Gian Sinh Hoạt Cộng Đồng: Đánh Thức Hồn Dân Tộc Trong Nhịp Sống Đương Đại" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/am-sac-viet-khong-gian-sinh-hoat-cong-dong-danh-thuc-hon-dan-toc-trong-nhip-song-duong-dai.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Âm Sắc Việt &amp; Không Gian Sinh Hoạt Cộng Đồng: Đánh Thức Hồn Dân Tộc Trong Nhịp Sống Đương Đại</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Không gian Nhà Âm Sắc Việt và Quảng Trường Hội Việt mang đến trải nghiệm văn hóa Truly Việt cho du khách lưu trú: tìm hiểu trang phục 54 dân tộc, tương tác nhạc cụ dân gian Đàn Đá, Đàn Tranh, Sáo Trúc và các đêm nhạc mộc bên bờ sen.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/am-sac-viet-khong-gian-sinh-hoat-cong-dong-danh-thuc-hon-dan-toc-trong-nhip-song-duong-dai.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/he-sinh-thai-tien-ich-da-tang-hon-2-4ha-clubhouse-ben-thuyen-organic-farm-herbal-spa.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Hệ Sinh Thái Tiện Ích Đa Tầng Lên Đến 30.000 m²: Clubhouse, Bến Thuyền, Organic Farm &amp; Herbal Spa" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/he-sinh-thai-tien-ich-da-tang-hon-2-4ha-clubhouse-ben-thuyen-organic-farm-herbal-spa.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Hệ Sinh Thái Tiện Ích Đa Tầng Lên Đến 30.000 m²: Clubhouse, Bến Thuyền, Organic Farm &amp; Herbal Spa</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Dành trọn lên đến 30.000 m² (3ha) cho cảnh quan và hệ tiện ích đặc quyền: Nông trại Organic Farm-to-Table, CLB cưỡi ngựa Horse Riding, sân thể thao Pickleball, Spa thảo dược và Bến thuyền chèo SUP &amp; Kayak hồ 100ha.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/he-sinh-thai-tien-ich-da-tang-hon-2-4ha-clubhouse-ben-thuyen-organic-farm-herbal-spa.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-          <div class="grid-card">
-            <a href="bai-viet/ben-thuyen-cheo-sup-kayak-the-thao-mat-nuoc-ben-ho-100ha.html" style="display: block; text-decoration: none; color: inherit;">
-              <div class="grid-img">
-                 <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_3.jpg" alt="Bến Thuyền, Chèo SUP &amp; Kayak Thể Thao Mặt Nước Bên Hồ 100ha" loading="lazy">
-                 <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
-              </div>
-            </a>
-            <div class="grid-card-info">
-              <a href="bai-viet/ben-thuyen-cheo-sup-kayak-the-thao-mat-nuoc-ben-ho-100ha.html" style="text-decoration: none; color: inherit;">
-                <h5 style="margin-bottom: 8px; line-height: 1.4;">Bến Thuyền, Chèo SUP &amp; Kayak Thể Thao Mặt Nước Bên Hồ 100ha</h5>
-              </a>
-              <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
-                Trải nghiệm thể thao mặt nước thượng lưu giữa mặt hồ tự nhiên 100ha tại Saigon Farm Resort. Khám phá bến thuyền kayak, chèo SUP đón bình minh và hoàng hôn rực rỡ bên Clubhouse ven hồ đẳng cấp.
-              </p>
-              <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-                <a href="bai-viet/ben-thuyen-cheo-sup-kayak-the-thao-mat-nuoc-ben-ho-100ha.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-</div>
-<div id="load-more-editorial-wrap" style="text-align: center; margin-top: 36px; margin-bottom: 20px;">
-  <button id="loadMoreEditorialBtn" onclick="loadMoreEditorialPosts()" class="editorial-btn" style="cursor: pointer; padding: 12px 32px; border-radius: 30px; font-size: 0.95rem;">
-    Xem Thêm Các Bài Viết Khác
-  </button>
-</div>
-</div>
 </section>
 
 <!-- ====================================================================
@@ -3578,7 +3318,7 @@ function filterAmenityDrawer(query) {
             <i class="fa-solid fa-diamond-turn-right"></i>
             <span>Mở Chỉ Đường Google Maps</span>
           </a>
-          <a href="article.html?id=304" class="btn-book-tour">
+          <a href="javascript:void(0)" onclick="openBookingModal('', '', 'Đăng Ký Xe Khảo Sát Thực Địa')" class="btn-book-tour">
             <i class="fa-solid fa-van-shuttle"></i>
             <span>Đăng Ký Xe Khảo Sát Thực Địa</span>
           </a>
@@ -3620,7 +3360,7 @@ function filterAmenityDrawer(query) {
 <ul class="footer-links-list">
 <li><a href="gioithieu">Tổng quan khu điền trang</a></li>
 <li><a href="article.html?id=303">Báo chí &amp; Pháp lý</a></li>
-<li><a href="article.html?id=304">Đăng ký tham quan</a></li>
+<li><a href="javascript:void(0)" onclick="openBookingModal('', '', 'Đăng Ký Tham Quan')">Đăng ký tham quan</a></li>
 </ul>
 </div>
 <div>
@@ -3628,7 +3368,7 @@ function filterAmenityDrawer(query) {
 <ul class="footer-links-list">
 <li><a href="story"><i class="fa-solid fa-book-open" style="margin-right:6px; color:#c9a96e;"></i>Tạp Chí Story (98 Trang Lật Mở)</a></li>
 <li><a href="gioithieu"><i class="fa-solid fa-file-lines" style="margin-right:6px; color:#c9a96e;"></i>Bản Giới Thiệu Đặc Quyền</a></li>
-<li><a href="article.html?id=304"><i class="fa-solid fa-calendar-check" style="margin-right:6px; color:#2e7d32;"></i>Đăng Ký Khảo Sát Điền Trang</a></li>
+<li><a href="javascript:void(0)" onclick="openBookingModal('', '', 'Đăng Ký Khảo Sát Điền Trang')"><i class="fa-solid fa-calendar-check" style="margin-right:6px; color:#2e7d32;"></i>Đăng Ký Khảo Sát Điền Trang</a></li>
 
 </ul>
 </div>
@@ -3642,6 +3382,42 @@ function filterAmenityDrawer(query) {
 <!-- JavaScript -->
 <script src="js/posts-data.js?v=20260916_v2"></script>
 <script src="js/app.js?v=20260916_v2"></script>
+
+<!-- ================================================================
+     ELEGANT BOOKING & VISIT CONSULTATION MODAL
+     ================================================================ -->
+<div id="booking-modal" class="booking-modal-overlay" onclick="closeBookingModal()">
+  <div class="booking-modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Đóng">&times;</button>
+    
+    <div class="modal-emblem">
+      <i class="fa-solid fa-compass"></i>
+    </div>
+    
+    <h3 class="modal-title">Đặt Lịch Tham Quan &amp; Trải Nghiệm</h3>
+    <div class="modal-subtitle">Quần Thể Điền Trang Nghỉ Dưỡng Sinh Thái Ven Hồ 100ha</div>
+    
+    <div id="modal-unit-tag" class="modal-unit-tag" style="display:none;"></div>
+    
+    <p class="modal-desc">
+      Để nhận trọn bộ hồ sơ pháp lý, bảng giá niêm yết chính thức từ Chủ đầu tư MDS Living và được sắp xếp <strong>chuyến xe riêng đưa đón gia đình tham quan thực địa ven hồ 100ha</strong>, kính mời Quý khách liên hệ trực tiếp với Đơn vị Đại lý hoặc Chuyên viên tư vấn đã trân trọng gửi Quý khách thông tin này.
+    </p>
+    
+    <div class="modal-notice-box">
+      <i class="fa-solid fa-circle-info" style="color: #8c6b32; margin-top: 3px; font-size: 0.95rem; flex-shrink: 0;"></i>
+      <span>Chuyên viên tư vấn sẽ chuẩn bị chu đáo lịch trình trải nghiệm thực tế: thưởng trà ven hồ, chèo SUP, ẩm thực farm-to-table và xem từng mã lô thực địa.</span>
+    </div>
+    
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="gioithieu" class="modal-btn-confirm" style="background: #8c6b32; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+        <i class="fa-solid fa-book-open"></i> Xem Bản Giới Thiệu Dự Án
+      </a>
+      <button type="button" class="modal-btn-confirm" onclick="closeBookingModal()" style="background: #faf3e6; color: #8c6b32; border: 1px solid #dfc89f;">
+        Đóng Lại
+      </button>
+    </div>
+  </div>
+</div>
 
 <!-- Lightbox Modal Cho Gallery Tư Vấn Villa (Chia Theo 4 Mẫu Biệt Phủ) -->
 <div class="vg-lightbox-modal" id="homeVillaLightboxModal" role="dialog" aria-modal="true" onclick="handleModalBackdropClick(event)">
@@ -3890,6 +3666,56 @@ function renderHomeVillaLightbox() {
 }
 
 // Keyboard shortcuts for lightbox
+
+// Toggle Collapsible Drawer 48 Chuyên Đề
+window.toggleChuyenDeDrawer = function() {
+  const box = document.getElementById('chuyenDeDrawerBox');
+  const icon = document.getElementById('iconToggleChuyenDe');
+  if (box) {
+    box.classList.toggle('active');
+    if (icon) {
+      if (box.classList.contains('active')) {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      } else {
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      }
+    }
+  }
+};
+
+// Booking / Visit Consultation Modal Handlers
+window.openBookingModal = function(code, area, catTitle) {
+  const modal = document.getElementById('booking-modal');
+  const unitTag = document.getElementById('modal-unit-tag');
+  if (modal) {
+    if (code && code.trim() !== '') {
+      unitTag.style.display = 'inline-block';
+      unitTag.innerHTML = `<i class="fa-solid fa-tag" style="margin-right:4px;"></i> Quý khách đang quan tâm: <strong>${code}</strong> ${area ? '· ' + area : ''} ${catTitle ? '(' + catTitle + ')' : ''}`;
+    } else if (catTitle && catTitle.trim() !== '') {
+      unitTag.style.display = 'inline-block';
+      unitTag.innerHTML = `<i class="fa-solid fa-calendar-check" style="margin-right:4px;"></i> Đăng ký: <strong>${catTitle}</strong>`;
+    } else {
+      unitTag.style.display = 'none';
+    }
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeBookingModal = function() {
+  const modal = document.getElementById('booking-modal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+};
+
+window.openModal = function(modalId) {
+  window.openBookingModal('', '', 'Tư Vấn Điền Trang & Đặt Lịch Tham Quan');
+};
+
 window.addEventListener('keydown', function(e) {
   const modal = document.getElementById('homeVillaLightboxModal');
   if (modal && modal.classList.contains('open')) {
