@@ -847,6 +847,73 @@ def build_investment_page():
   </div>"""
         html = html.replace(old_modal.group(0), new_modal)
 
+    # 8.5 Streamline for Fast Loading & High Ad Conversion
+    # a. Remove Pane 1: Tong The
+    p1_match = re.search(r'(\s*<!-- PANE 1: TỔNG THỂ QUY HOẠCH.*?)(<!-- PANE 2: CLUBHOUSE)', html, re.DOTALL)
+    if p1_match:
+        html = html[:p1_match.start(1)] + '\n          ' + html[p1_match.start(2):]
+        html = html.replace('<div class="amenity-layer-pane" id="amenity-pane-clubhouse">', '<div class="amenity-layer-pane active" id="amenity-pane-clubhouse">', 1)
+        html = html.replace('<h4 class="pitch-guide-title">2. Clubhouse 3.000 m²', '<h4 class="pitch-guide-title">1. Clubhouse 3.000 m²', 1)
+        html = html.replace('<h4 class="pitch-guide-title">3. Hồ Bơi Vô Cực', '<h4 class="pitch-guide-title">2. Hồ Bơi Vô Cực', 1)
+        html = html.replace('<h4 class="pitch-guide-title">4. Tổ Hợp Ẩm Thực', '<h4 class="pitch-guide-title">3. Tổ Hợp Ẩm Thực', 1)
+
+    # b. Remove Pane 5 and Pane 6
+    p5_6_match = re.search(r'(\s*<!-- PANE 5: TRỤC ĐƯỜNG NỘI BỘ.*?)(</div>\s*</section>\s*<!-- ================================================================\s*BƯỚC 4)', html, re.DOTALL)
+    if p5_6_match:
+        html = html[:p5_6_match.start(1)] + '\n        ' + html[p5_6_match.start(2):]
+
+    # c. In Buoc 6: Remove the financial table card and replace with streamlined CTA
+    buoc6_table_match = re.search(
+        r'(<h4><i class="fa-solid fa-scale-balanced".*?Bảng Chiết Tính Thực Tế: 2 Phương Án Đầu Tư 1.000 m² Điền Sản</h4>.*?</table>\s*</div>)',
+        html,
+        re.DOTALL
+    )
+    if buoc6_table_match:
+        buoc6_replacement = '''<div style="background: linear-gradient(135deg, #fbf7ee 0%, #f4ece0 100%); border: 1px solid #dfc89f; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div style="flex: 1; min-width: 260px;">
+              <div style="font-weight: 800; color: #183024; font-size: 1.05rem; margin-bottom: 4px;">
+                <i class="fa-solid fa-file-invoice-dollar" style="color: var(--color-gold); margin-right: 6px;"></i> Bảng Chiết Tính Thực Tế 2 Phương Án Đầu Tư 1.000 m² Điền Sản
+              </div>
+              <p style="font-size: 0.88rem; color: #555; line-height: 1.5; margin: 0;">
+                Chi tiết phương án giữ đất tích sản vs bán ra đón sóng hạ tầng (Sân bay Long Thành &amp; Cao tốc) cùng chính sách thanh toán 70% nhận sổ hồng riêng ngay được chuyên viên hỗ trợ trực tiếp.
+              </p>
+            </div>
+            <button type="button" class="inline-submit-btn" style="padding: 11px 22px; font-size: 0.88rem; white-space: nowrap; margin: 0;" onclick="openBookingModal('', '', 'Bảng Chiết Tính Điền Sản')">
+              <i class="fa-solid fa-calculator"></i> Nhận Bảng Tính Qua Zalo
+            </button>
+          </div>'''
+        html = html[:buoc6_table_match.start(1)] + buoc6_replacement + html[buoc6_table_match.end(1):]
+
+    # d. In Buoc 7: Remove the villa tabs gallery
+    villa_tabs_match = re.search(
+        r'(<!-- Navigation Tabs: Các Mẫu Nhà -->.*?)(<!-- ================================================================\s*BÀI TOÁN DÒNG TIỀN VẬN HÀNH 365 NGÀY)',
+        html,
+        re.DOTALL
+    )
+    if villa_tabs_match:
+        buoc7_cta = '''<div style="background: linear-gradient(135deg, #fbf7ee 0%, #f4ece0 100%); border: 1px solid #dfc89f; border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+          <div style="flex: 1; min-width: 240px;">
+            <div style="font-weight: 800; color: #183024; font-size: 1rem; margin-bottom: 4px;">
+              <i class="fa-solid fa-book-open" style="color: var(--color-gold); margin-right: 6px;"></i> Trọn Bộ Phối Cảnh 3D &amp; Bản Vẽ Kiến Trúc 4 Mẫu Biệt Phủ
+            </div>
+            <p style="font-size: 0.86rem; color: #555; line-height: 1.5; margin: 0;">
+              Bao gồm Sunrise 1 (Nhà vườn gỗ), Sunrise 2 (Bản sắc Việt đương đại), Sunset 1 &amp; 2 (Dinh thự view hoàng hôn hồ 100ha).
+            </p>
+          </div>
+          <button type="button" class="inline-submit-btn" style="padding: 10px 20px; font-size: 0.86rem; white-space: nowrap; margin: 0;" onclick="openBookingModal('', '', 'Bộ Sưu Tập Thiết Kế Biệt Phủ')">
+            <i class="fa-solid fa-file-pdf"></i> Nhận Bản Vẽ &amp; Phối Cảnh Qua Zalo
+          </button>
+        </div>\n\n        '''
+        html = html[:villa_tabs_match.start(1)] + buoc7_cta + html[villa_tabs_match.start(2):]
+        html = html.replace(
+            '<h3 class="sheet-section-title">Bộ Sưu Tập Mẫu Biệt Phủ &amp; Bài Toán Dòng Tiền 150 + 215 Đêm</h3>',
+            '<h3 class="sheet-section-title">Biệt Phủ Nghỉ Dưỡng: Bài Toán Dòng Tiền 150 + 215 Đêm</h3>'
+        )
+        html = html.replace(
+            'Khám phá bộ sưu tập mẫu thiết kế dinh thự gỗ sinh thái và view hồ hoàng hôn tinh tế (hơn 20 hình ảnh kiến trúc thực tế), cùng cơ chế vận hành từ MDS Living: 150 đêm cố định (600 triệu) + 215 đêm chia sẻ 50%.',
+            'Cơ chế ủy thác vận hành từ đơn vị quản lý chuyên nghiệp MDS Living: 150 đêm cố định (600 triệu đồng/năm) + 215 đêm chia sẻ 50% doanh thu phòng, đảm bảo tài sản sinh dòng tiền an nhàn và gia tăng giá trị vượt bậc.'
+        )
+
     # 9. Add Sticky Mobile Bar, Desktop Floating Widget, and Conversion Event Tracking before </body>
     mobile_and_floating_cta = """
   <!-- ================================================================
