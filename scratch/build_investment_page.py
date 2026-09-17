@@ -949,6 +949,105 @@ def build_investment_page():
             'Cơ chế ủy thác vận hành từ đơn vị quản lý chuyên nghiệp MDS Living: 150 đêm cố định (600 triệu đồng/năm) + 215 đêm chia sẻ 50% doanh thu phòng, đảm bảo tài sản sinh dòng tiền an nhàn và gia tăng giá trị vượt bậc.'
         )
 
+    # 8.6 Reorder sections as requested by User:
+    # 1. Vị Trí (buoc-1-vi-tri)
+    # 2. Cảnh Hồ Lồ Ồ Flycam (buoc-2-flycam)
+    # 3. 3 Dòng Sản Phẩm & Mặt Bằng (buoc-3-mat-bang)
+    # 4. Điền Sản (buoc-4-dien-san)
+    # 5. Điền An (buoc-5-dien-an)
+    # 6. Biệt Phủ (buoc-6-biet-phu)
+    # 7. Tiềm Năng Đầu Tư & Lợi Nhuận (buoc-7-loi-nhuan)
+    # 8. Hệ Tiện Ích 30.000 m2 (buoc-8-tien-ich)
+    # 9. Chính Sách Bán Hàng (chinh-sach-ban-hang)
+
+    m1 = re.search(r'(<!-- ===+\s*BƯỚC 1:.*?<section class="pitch-step-section" id="buoc-1-vi-tri">.*?</section>)', html, re.DOTALL).group(1)
+    m2 = re.search(r'(<!-- ===+\s*BƯỚC 2:.*?<section class="pitch-step-section" id="buoc-2-flycam">.*?</section>)', html, re.DOTALL).group(1)
+    m3_tienich = re.search(r'(<!-- ===+\s*BƯỚC 3:.*?<section class="pitch-step-section" id="buoc-3-tien-ich">.*?</section>)', html, re.DOTALL).group(1)
+    m4_matbang = re.search(r'(<!-- ===+\s*BƯỚC 4:.*?<section class="pitch-step-section" id="buoc-4-mat-bang">.*?</section>)', html, re.DOTALL).group(1)
+    m5_dienan = re.search(r'(<!-- ===+\s*BƯỚC 5:.*?<section class="pitch-step-section" id="buoc-5-dien-an">.*?</section>)', html, re.DOTALL).group(1)
+    m6_diensan = re.search(r'(<!-- ===+\s*BƯỚC 6:.*?<section class="pitch-step-section" id="buoc-6-dien-san">.*?</section>)', html, re.DOTALL).group(1)
+    m7_bietphu = re.search(r'(<!-- ===+\s*BƯỚC 7:.*?<section class="pitch-step-section" id="buoc-7-biet-phu">.*?</section>)', html, re.DOTALL).group(1)
+    m8_loinhuan = re.search(r'(<!-- ===+\s*BƯỚC 8:.*?<section class="pitch-step-section" id="buoc-8-loi-nhuan">.*?</section>)', html, re.DOTALL).group(1)
+    m9_chinhsach = re.search(r'(<!-- ===+\s*CHÍNH SÁCH BÁN HÀNG.*?<section class="pitch-step-section" id="chinh-sach-ban-hang">.*?</section>)', html, re.DOTALL).group(1)
+
+    # Transform Section 3: Mat bang
+    new_m3 = m4_matbang
+    new_m3 = new_m3.replace('BƯỚC 4: TỔNG MẶT BẰNG & 3 DÒNG SẢN PHẨM', 'BƯỚC 3: TỔNG MẶT BẰNG & 3 DÒNG SẢN PHẨM ĐỘC ĐÁO')
+    new_m3 = new_m3.replace('id="buoc-4-mat-bang"', 'id="buoc-3-mat-bang"')
+    new_m3 = new_m3.replace('04 • TỔNG MẶT BẰNG PHÂN KHU', '03 • TỔNG MẶT BẰNG &amp; 3 DÒNG SẢN PHẨM ĐỘC ĐÁO')
+
+    # Transform Section 4: Dien san
+    new_m4 = m6_diensan
+    new_m4 = new_m4.replace('BƯỚC 6: ĐIỀN SẢN — BÀI TOÁN TÀI CHÍNH 1.000 m²', 'BƯỚC 4: ĐIỀN SẢN — BÀI TOÁN TÀI CHÍNH 1.000 m²')
+    new_m4 = new_m4.replace('id="buoc-6-dien-san"', 'id="buoc-4-dien-san"')
+    new_m4 = new_m4.replace('06 • BÀI TOÁN TÀI CHÍNH ĐIỀN SẢN', '04 • BÀI TOÁN TÀI CHÍNH ĐIỀN SẢN (1.000 m²)')
+
+    # Transform Section 5: Dien an
+    new_m5 = m5_dienan
+
+    # Transform Section 6: Biet phu
+    new_m6 = m7_bietphu
+    new_m6 = new_m6.replace('BƯỚC 7: BIỆT PHỦ NGHỈ DƯỠNG', 'BƯỚC 6: BIỆT PHỦ NGHỈ DƯỠNG')
+    new_m6 = new_m6.replace('id="buoc-7-biet-phu"', 'id="buoc-6-biet-phu"')
+    new_m6 = new_m6.replace('07 • BIỆT PHỦ NGHỈ DƯỠNG', '06 • BIỆT PHỦ NGHỈ DƯỠNG (150 + 215 ĐÊM)')
+
+    # Transform Section 7: Loi nhuan & Form
+    new_m7 = m8_loinhuan
+    new_m7 = new_m7.replace('BƯỚC 8: 4 TRỤ CỘT ĐỘT PHÁ TĂNG GIÁ TRỊ & DÒNG TIỀN THỰC TẾ', 'BƯỚC 7: 4 TRỤ CỘT ĐỘT PHÁ TĂNG GIÁ TRỊ & DÒNG TIỀN THỰC TẾ')
+    new_m7 = new_m7.replace('id="buoc-8-loi-nhuan"', 'id="buoc-7-loi-nhuan"')
+    new_m7 = new_m7.replace('08 • TIỀM NĂNG TĂNG TRƯỞNG TÀI SẢN', '07 • TIỀM NĂNG TĂNG TRƯỞNG TÀI SẢN &amp; LỢI NHUẬN')
+
+    # Transform Section 8: Tien ich 30.000 m2
+    new_m8 = m3_tienich
+    new_m8 = new_m8.replace('BƯỚC 3: HỆ THỐNG TIỆN ÍCH LÊN ĐẾN 30.000 m²', 'BƯỚC 8: HỆ THỐNG TIỆN ÍCH LÊN ĐẾN 30.000 m²')
+    new_m8 = new_m8.replace('id="buoc-3-tien-ich"', 'id="buoc-8-tien-ich"')
+    new_m8 = new_m8.replace('03 • HỆ THỐNG TIỆN ÍCH LÊN ĐẾN 30.000 m²', '08 • HỆ THỐNG TIỆN ÍCH LÊN ĐẾN 30.000 m²')
+
+    # Transform Section 9: Chinh sach ban hang
+    new_m9 = m9_chinhsach
+
+    combined_sections = '\n\n\n      '.join([m1, m2, new_m3, new_m4, new_m5, new_m6, new_m7, new_m8, new_m9])
+
+    idx_start = html.find('id="buoc-1-vi-tri"')
+    orig_block_start = html.rfind('<!-- ================================================================', 0, idx_start)
+    idx_end = html.find('id="chinh-sach-ban-hang"')
+    orig_block_end = html.find('</section>', idx_end) + len('</section>')
+    assert orig_block_start != -1 and orig_block_end != -1, "Failed to find section block boundaries"
+    html = html[:orig_block_start] + combined_sections + html[orig_block_end:]
+
+    # Update Pitch Nav Bar items
+    new_pitch_nav = """<nav class="pitch-nav-bar" aria-label="Lộ trình tư vấn 8 bước">
+      <div class="pitch-nav-label"><i class="fa-solid fa-compass"></i> Lộ Trình:</div>
+      <a href="#buoc-1-vi-tri" class="pitch-nav-item"><span class="step-badge">1</span> Vị Trí</a>
+      <a href="#buoc-2-flycam" class="pitch-nav-item"><span class="step-badge">2</span> Flycam</a>
+      <a href="#buoc-3-mat-bang" class="pitch-nav-item"><span class="step-badge">3</span> 3 Sản Phẩm</a>
+      <a href="#buoc-4-dien-san" class="pitch-nav-item"><span class="step-badge">4</span> Điền Sản</a>
+      <a href="#buoc-5-dien-an" class="pitch-nav-item"><span class="step-badge">5</span> Điền An</a>
+      <a href="#buoc-6-biet-phu" class="pitch-nav-item"><span class="step-badge">6</span> Biệt Phủ</a>
+      <a href="#buoc-7-loi-nhuan" class="pitch-nav-item"><span class="step-badge">7</span> Tiềm Năng</a>
+      <a href="#buoc-8-tien-ich" class="pitch-nav-item"><span class="step-badge">8</span> Tiện Ích</a>
+      <a href="#chinh-sach-ban-hang" class="pitch-nav-item"><span class="step-badge">★</span> Giao Dịch</a>
+    </nav>"""
+    html = re.sub(r'<nav class="pitch-nav-bar".*?</nav>', new_pitch_nav, html, flags=re.DOTALL)
+
+    # Update Action Bar
+    new_action_bar = """<aside class="action-bar" aria-label="Thanh công cụ trang web">
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+      <a href="#buoc-3-mat-bang"><i class="fa-solid fa-shapes"></i> 3 Dòng Sản Phẩm</a>
+      <a href="#buoc-4-dien-san"><i class="fa-solid fa-chart-line"></i> Điền Sản</a>
+      <a href="#buoc-5-dien-an"><i class="fa-solid fa-house-chimney-user"></i> Điền An</a>
+      <a href="#buoc-6-biet-phu"><i class="fa-solid fa-landmark"></i> Biệt Phủ</a>
+      <a href="#buoc-7-loi-nhuan" style="color: var(--color-gold-dark); font-weight: 700;"><i class="fa-solid fa-arrow-trend-up"></i> Tiềm Năng Đầu Tư</a>
+      <a href="#buoc-8-tien-ich"><i class="fa-solid fa-spa"></i> Tiện Ích 30.000 m²</a>
+    </div>
+    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+      <a href="tel:0909000712" class="btn-action-hotline"><i class="fa-solid fa-phone-volume"></i> 0909 000 712</a>
+      <a href="https://zalo.me/0909000712" target="_blank" rel="noopener noreferrer" class="btn-action-zalo"><i class="fa-solid fa-comment-dots"></i> Chat Zalo</a>
+      <button type="button" class="btn-action-tour" onclick="openBookingModal('', '', 'Đăng Ký Site Tour VIP')"><i class="fa-solid fa-car-side"></i> Đăng Ký Site Tour</button>
+    </div>
+  </aside>"""
+    html = re.sub(r'<aside class="action-bar".*?</aside>', new_action_bar, html, flags=re.DOTALL)
+
     # 9. Add Sticky Mobile Bar, Desktop Floating Widget, and Conversion Event Tracking before </body>
     mobile_and_floating_cta = """
   <!-- ================================================================
