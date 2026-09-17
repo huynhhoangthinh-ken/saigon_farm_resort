@@ -976,6 +976,66 @@ def build_investment_page():
     new_m3 = new_m3.replace('id="buoc-4-mat-bang"', 'id="buoc-3-mat-bang"')
     new_m3 = new_m3.replace('04 • TỔNG MẶT BẰNG PHÂN KHU', '03 • TỔNG MẶT BẰNG &amp; 3 DÒNG SẢN PHẨM ĐỘC ĐÁO')
 
+    # Add distinctive header and clean product cards ordered: Điền Sản -> Điền An -> Biệt Phủ
+    product_showcase_block = """<!-- Tiêu Đề 3 Dòng Sản Phẩm Độc Đáo Chưa Từng Có Mặt Trên Thị Trường -->
+        <div style="margin: 40px 0 24px; text-align: center;">
+          <span class="pitch-badge-tag" style="background: rgba(194, 155, 83, 0.12); color: var(--color-gold-dark); border: 1px solid rgba(194, 155, 83, 0.3); padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-gem"></i> BỘ SƯU TẬP ĐỘC BẢN
+          </span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.65rem; color: var(--color-accent-green); margin: 10px 0 8px; font-weight: 700; line-height: 1.35;">
+            3 Dòng Sản Phẩm Độc Đáo Chưa Từng Có Mặt Trên Thị Trường
+          </h4>
+          <p style="font-size: 0.95rem; color: var(--color-muted); max-width: 780px; margin: 0 auto; line-height: 1.6;">
+            Saigon Farm Resort tiên phong kiến tạo 3 mô hình sở hữu chuyên biệt: <strong>Điền Sản</strong> (Tích sản &amp; đón sóng hạ tầng), <strong>Điền An</strong> (Dòng tiền cho thuê 120 tr/tháng) và <strong>Biệt Phủ</strong> (Nghỉ dưỡng &amp; ủy thác MDS Living).
+          </p>
+        </div>
+
+        <!-- 3 Dòng Sản Phẩm Card Showcase (Thứ tự: Điền Sản -> Điền An -> Biệt Phủ) -->
+        <div class="product-lines-showcase">
+          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp', 'Điền Sản (Founders) — Dòng Đầu Tư Sớm Đón Sóng')">
+            <div class="line-card__img-wrap">
+              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp" alt="Điền Sản Đầu Tư" class="line-card__img" loading="lazy" decoding="async">
+              <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
+            </div>
+            <div class="line-card__body">
+              <span class="line-card__tag">DÒNG ĐẦU TƯ SỚM ĐÓN SÓNG</span>
+              <div class="line-card__name">ĐIỀN SẢN (FOUNDERS)</div>
+              <div class="line-card__qty"><i class="fa-solid fa-coins"></i> Số lượng: <strong>12 sản phẩm</strong></div>
+              <p class="line-card__desc">Vào tiền sớm đợt 1, thanh toán 70% nhận sổ, 30% giãn lãi suất 0% tới cuối 2027. Lợi nhuận kỳ vọng <strong>23% – 35%/vốn tự có</strong> trong 1 năm.</p>
+            </div>
+          </div>
+
+          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp', 'Điền An (Haven) — Dòng Tiền Cho Thuê Bền Vững')">
+            <div class="line-card__img-wrap">
+              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp" alt="Điền An Dòng Tiền Lưu Trú" class="line-card__img" loading="lazy" decoding="async">
+              <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
+            </div>
+            <div class="line-card__body">
+              <span class="line-card__tag">DÒNG TIỀN CHO THUÊ BỀN VỮNG</span>
+              <div class="line-card__name">ĐIỀN AN (HAVEN)</div>
+              <div class="line-card__qty"><i class="fa-solid fa-house-circle-check"></i> Số lượng: <strong>07 sản phẩm</strong></div>
+              <p class="line-card__desc">Cụm 30 phòng linh hoạt 2 phương án: <strong>80 – 120 triệu/tháng++</strong> (PA1: 30 phòng chuyên gia = 120 tr/th; PA2: 20 phòng chuyên gia = 80 tr/th + 10 phòng thuê ngày thu nhập cao hơn).</p>
+            </div>
+          </div>
+
+          <div class="line-card" onclick="openImageDirect('assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.webp', 'Biệt Phủ Điền Trang — Dòng Nghỉ Dưỡng Sum Họp Đa Thế Hệ')">
+            <div class="line-card__img-wrap">
+              <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.webp" alt="Biệt Phủ Điền Trang" class="line-card__img" loading="lazy" decoding="async">
+              <span class="line-card__zoom-hint"><i class="fa-solid fa-expand"></i></span>
+            </div>
+            <div class="line-card__body">
+              <span class="line-card__tag">DÒNG NGHỈ DƯỠNG SUM HỌP</span>
+              <div class="line-card__name">BIỆT PHỦ ĐIỀN TRANG</div>
+              <div class="line-card__qty"><i class="fa-solid fa-landmark"></i> Số lượng: <strong>17 sản phẩm</strong></div>
+              <p class="line-card__desc">Dinh thự sum họp gia đình đa thế hệ. Khi không ở, đưa vào chương trình ủy thác MDS Living, mang lại <strong>doanh thu từ 600 – 860+ triệu/năm</strong>.</p>
+            </div>
+          </div>
+        </div>"""
+
+    showcase_match = re.search(r'<div class="product-lines-showcase">.*?</div>\s*(<!-- Hồ Sơ)', new_m3, re.DOTALL)
+    if showcase_match:
+        new_m3 = new_m3[:showcase_match.start(0)] + product_showcase_block + '\n\n        ' + showcase_match.group(1) + new_m3[showcase_match.end(1):]
+
     # Transform Section 4: Dien san
     new_m4 = m6_diensan
     new_m4 = new_m4.replace('BƯỚC 6: ĐIỀN SẢN — BÀI TOÁN TÀI CHÍNH 1.000 m²', 'BƯỚC 4: ĐIỀN SẢN — BÀI TOÁN TÀI CHÍNH 1.000 m²')
