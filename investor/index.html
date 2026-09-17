@@ -722,6 +722,133 @@
     }
 
     /* ================================================================
+       KHỐI VỊ TRÍ & KẾT NỐI VÙNG
+       ================================================================ */
+    .location-section {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .travel-nodes-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .travel-nodes-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .travel-nodes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+    }
+
+    .travel-node-item {
+      background: var(--bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 14px 10px;
+      text-align: center;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .travel-node-item.highlight-node {
+      border-color: var(--color-gold-border);
+      background: var(--color-gold-subtle);
+    }
+
+    .travel-time-badge {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--color-gold-dark);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .travel-dest-name {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-forest);
+      line-height: 1.35;
+    }
+
+    .location-map-wrap {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1.5px solid var(--color-border);
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .map-iframe-container {
+      width: 100%;
+      height: 320px;
+      background: #e5e3df;
+    }
+
+    .map-iframe-elem {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .map-action-bar {
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: #ffffff;
+      border-top: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+
+    .map-coords-info {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--color-forest);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-open-maps {
+      background: var(--color-forest);
+      color: #ffd885 !important;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-open-maps:hover {
+      background: #0f2e20;
+      color: #ffffff !important;
+      transform: translateY(-1px);
+    }
+
+    /* ================================================================
        KHỐI 4 — BA LÝ DO ĐỂ TIN (CAM KẾT THỰC TẾ)
        ================================================================ */
     .trust-section {
@@ -1530,53 +1657,78 @@
         </a>
       </div>
 
-      <!-- Khung Ảnh Thực Tế Hồ Lồ Ồ (Hình Độc Lập, Không Chữ Đè Lên Hình) -->
+      <!-- Khung Ảnh Phối Cảnh Tương Lai Khu Resort 5 Sao (Hình Độc Lập, Không Chữ Đè Lên Hình) -->
       <div class="hero-showcase-frame">
-        <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp" alt="Mặt hồ Lồ Ồ 100 ha tự nhiên tại Saigon Farm Resort" loading="eager">
+        <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.webp" alt="Phối cảnh tổng thể 3D Saigon Farm Resort" loading="eager">
       </div>
       <div class="hero-photo-caption">
-        Góc nhìn thực tế từ flycam: Quần thể điền trang ôm trọn mặt nước tự nhiên hồ Lồ Ồ 100 ha và dải đồng lúa xanh mát.
+        Phối cảnh 3D tổng thể: Quần thể Biệt Phủ Điền Trang quy hoạch nghỉ dưỡng 5 sao ôm trọn mặt hồ Lồ Ồ 100 ha và cánh đồng lúa xanh ngát.
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       KHỐI 2 — ẢNH THẬT FLYCAM (ĐÃ BỎ ĐOẠN DẪN DƯ THỪA & NÚT GỠ BỎ)
+       KHỐI VỊ TRÍ CHIẾN LƯỢC & KẾT NỐI VÙNG (GOOGLE MAPS & THỜI GIAN DI CHUYỂN)
        ================================================================ -->
-  <section class="real-photos-section" id="anh-that">
+  <section class="location-section section-spacing" id="vi-tri">
     <div class="container">
-      <!-- Lưới 4 ảnh flycam thực tế, chữ nằm riêng biệt dưới ảnh -->
-      <div class="flycam-gallery-grid">
-        <div class="flycam-item" onclick="openLightbox(0)">
-          <div class="flycam-img-wrap">
-            <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp" alt="Mặt nước hồ Lồ Ồ 100 ha tự nhiên" loading="eager">
-            <div class="flycam-expand-icon"><i class="fa-solid fa-expand"></i></div>
-          </div>
-          <div class="flycam-caption">Góc 1: Mặt nước tự nhiên hồ Lồ Ồ 100 ha</div>
+      <div class="section-header">
+        <div class="heritage-ornament-center">
+          <span class="heritage-ornament-line"></span>
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="heritage-lotus-icon">
+          <span class="heritage-ornament-line"></span>
         </div>
+        <span class="section-tag">VỊ TRÍ CHIẾN LƯỢC</span>
+        <h2 class="section-title">Tâm Điểm Kết Nối Hạ Tầng Trọng Điểm</h2>
+        <p class="section-desc">
+          Tọa lạc tại Xã Đất Đỏ, TP. Hồ Chí Minh — Saigon Farm Resort sở hữu tọa độ vàng kết nối nhanh chóng đến các trung tâm kinh tế, du lịch và hạ tầng giao thông quốc gia:
+        </p>
+      </div>
 
-        <div class="flycam-item" onclick="openLightbox(1)">
-          <div class="flycam-img-wrap">
-            <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_2.webp" alt="Địa thế bán đảo ven hồ" loading="eager">
-            <div class="flycam-expand-icon"><i class="fa-solid fa-expand"></i></div>
-          </div>
-          <div class="flycam-caption">Góc 2: Bờ bán đảo và dải sinh thái xanh</div>
+      <!-- Lưới các mốc thời gian di chuyển (chỉ ghi địa danh và thời gian di chuyển) -->
+      <div class="travel-nodes-grid">
+        <div class="travel-node-item">
+          <div class="travel-time-badge"><i class="fa-solid fa-clock"></i> ~05 PHÚT</div>
+          <div class="travel-dest-name">KCN Đất Đỏ</div>
         </div>
-
-        <div class="flycam-item" onclick="openLightbox(2)">
-          <div class="flycam-img-wrap">
-            <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_3.webp" alt="Không gian đồng lúa bao quanh" loading="eager">
-            <div class="flycam-expand-icon"><i class="fa-solid fa-expand"></i></div>
-          </div>
-          <div class="flycam-caption">Góc 3: Cánh đồng lúa ba mặt ôm trọn dự án</div>
+        <div class="travel-node-item">
+          <div class="travel-time-badge"><i class="fa-solid fa-umbrella-beach"></i> ~15 PHÚT</div>
+          <div class="travel-dest-name">Biển &amp; Casino Hồ Tràm</div>
         </div>
+        <div class="travel-node-item">
+          <div class="travel-time-badge"><i class="fa-solid fa-water"></i> ~20 PHÚT</div>
+          <div class="travel-dest-name">Suối nước nóng Bình Châu</div>
+        </div>
+        <div class="travel-node-item highlight-node">
+          <div class="travel-time-badge"><i class="fa-solid fa-plane-departure"></i> ~30 PHÚT</div>
+          <div class="travel-dest-name">Sân bay Quốc tế Long Thành</div>
+        </div>
+        <div class="travel-node-item highlight-node">
+          <div class="travel-time-badge"><i class="fa-solid fa-car"></i> ~60 PHÚT</div>
+          <div class="travel-dest-name">TP. Hồ Chí Minh (Cao tốc)</div>
+        </div>
+      </div>
 
-        <div class="flycam-item" onclick="openLightbox(3)">
-          <div class="flycam-img-wrap">
-            <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_4.webp" alt="Quần thể thực tế tại chỗ" loading="eager">
-            <div class="flycam-expand-icon"><i class="fa-solid fa-expand"></i></div>
+      <!-- Google Maps Box -->
+      <div class="location-map-wrap">
+        <div class="map-iframe-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10546.45749938832!2d107.31304917184532!3d10.552185196294168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175a10072d7d27f%3A0x352f099442591fd7!2zU2FpZ29uIEZhcm0gUmVzb3J0IC0gxJBp4buBbiB0cmFuZyBi4bqjbiBz4bqvYyBWaeG7h3Q!5e1!3m2!1svi!2s!4v1788421691294!5m2!1svi!2s" 
+            class="map-iframe-elem"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Vị trí thực tế Saigon Farm Resort trên Google Maps">
+          </iframe>
+        </div>
+        <div class="map-action-bar">
+          <div class="map-coords-info">
+            <i class="fa-solid fa-location-dot" style="color: var(--color-gold);"></i>
+            <span>Mặt hồ tự nhiên Lồ Ồ 100ha, Xã Đất Đỏ, TP. Hồ Chí Minh</span>
           </div>
-          <div class="flycam-caption">Góc 4: Mặt bằng và địa thế đất cao ráo</div>
+          <a href="https://maps.app.goo.gl/LUnjKV4tpYHkc7kG6" target="_blank" rel="noopener noreferrer" class="btn-open-maps">
+            <i class="fa-solid fa-diamond-turn-right"></i> Mở chỉ đường trên Google Maps
+          </a>
         </div>
       </div>
     </div>
@@ -1880,6 +2032,61 @@
               <i class="fa-solid fa-calendar-check"></i> Đăng ký xem thực địa
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       KHỐI KHẢO SÁT THỰC ĐỊA FLYCAM HỒ LỒ Ồ 100HA & HIỆN TRẠNG
+       ================================================================ -->
+  <section class="real-photos-section section-spacing" id="anh-that">
+    <div class="container">
+      <div class="section-header">
+        <div class="heritage-ornament-center">
+          <span class="heritage-ornament-line"></span>
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="heritage-lotus-icon">
+          <span class="heritage-ornament-line"></span>
+        </div>
+        <span class="section-tag">KHẢO SÁT THỰC ĐỊA TẠI CHỖ</span>
+        <h2 class="section-title">Hiện Trạng Thực Tế Mặt Hồ Lồ Ồ 100ha</h2>
+        <p class="section-desc">
+          Góc nhìn thực tế từ flycam: Quần thể điền trang ôm trọn mặt nước tự nhiên hồ Lồ Ồ 100 ha và dải đồng lúa xanh mát. Đất cao ráo, sẵn sàng công chứng sang tên sổ đỏ ngay.
+        </p>
+      </div>
+
+      <!-- Lưới 4 ảnh flycam thực tế, chữ nằm riêng biệt dưới ảnh -->
+      <div class="flycam-gallery-grid">
+        <div class="flycam-item" onclick="openLightbox(0)">
+          <div class="flycam-img-wrap">
+            <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp" alt="Mặt nước hồ Lồ Ồ 100 ha tự nhiên" loading="lazy">
+            <div class="flycam-expand-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+          <div class="flycam-caption">Góc 1: Mặt nước tự nhiên hồ Lồ Ồ 100 ha</div>
+        </div>
+
+        <div class="flycam-item" onclick="openLightbox(1)">
+          <div class="flycam-img-wrap">
+            <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_2.webp" alt="Địa thế bán đảo ven hồ" loading="lazy">
+            <div class="flycam-expand-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+          <div class="flycam-caption">Góc 2: Bờ bán đảo và dải sinh thái xanh</div>
+        </div>
+
+        <div class="flycam-item" onclick="openLightbox(2)">
+          <div class="flycam-img-wrap">
+            <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_3.webp" alt="Không gian đồng lúa bao quanh" loading="lazy">
+            <div class="flycam-expand-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+          <div class="flycam-caption">Góc 3: Cánh đồng lúa ba mặt ôm trọn dự án</div>
+        </div>
+
+        <div class="flycam-item" onclick="openLightbox(3)">
+          <div class="flycam-img-wrap">
+            <img src="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_4.webp" alt="Quần thể thực tế tại chỗ" loading="lazy">
+            <div class="flycam-expand-icon"><i class="fa-solid fa-expand"></i></div>
+          </div>
+          <div class="flycam-caption">Góc 4: Mặt bằng và địa thế đất cao ráo</div>
         </div>
       </div>
     </div>
