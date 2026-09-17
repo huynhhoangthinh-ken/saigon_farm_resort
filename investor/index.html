@@ -89,6 +89,36 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
       padding-bottom: 84px; /* Space for mobile sticky bar */
+      position: relative;
+    }
+
+    /* Fixed Heritage Watermark Ambient (Trống Đồng Đông Sơn Chìm Mờ Sang Trọng) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -100px;
+      right: -100px;
+      width: 620px;
+      height: 620px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat center;
+      background-size: contain;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      bottom: -80px;
+      left: -80px;
+      width: 560px;
+      height: 560px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat center;
+      background-size: contain;
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 0;
     }
 
     @media (min-width: 769px) {
@@ -112,6 +142,8 @@
       max-width: 980px;
       margin: 0 auto;
       padding: 0 20px;
+      position: relative;
+      z-index: 2;
     }
 
     .section-spacing {
@@ -191,6 +223,35 @@
       border-bottom: 1px solid var(--color-border);
       padding: 44px 0 36px;
       position: relative;
+      overflow: hidden;
+    }
+
+    .hero-editorial::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -20px;
+      width: 340px;
+      height: 220px;
+      background: url('assets/vector_vietnam_patern/05_may_ngu_sac_viet.webp') no-repeat left top;
+      background-size: contain;
+      opacity: 0.085;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-editorial::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      right: -25px;
+      width: 290px;
+      height: 290px;
+      background: url('assets/vector_vietnam_patern/01_hoa_sen_viet.webp') no-repeat right bottom;
+      background-size: contain;
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 1;
     }
 
     .hero-brand-top {
@@ -330,7 +391,37 @@
        ================================================================ */
     .real-photos-section {
       background-color: var(--bg-page);
-      padding: 32px 0 44px;
+      padding: 56px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .real-photos-section::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -30px;
+      width: 320px;
+      height: 320px;
+      background: url('assets/vector_vietnam_patern/04_thuy_dinh_ho_sen.webp') no-repeat left top;
+      background-size: contain;
+      opacity: 0.055;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .real-photos-section::after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 340px;
+      height: 340px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat right bottom;
+      background-size: contain;
+      opacity: 0.045;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .flycam-gallery-grid {
@@ -432,13 +523,28 @@
       overflow: hidden;
     }
 
+    .unique-value-section::before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      bottom: -20px;
+      width: 340px;
+      height: 340px;
+      background: url('assets/vector_vietnam_patern/03_cong_biet_phu_viet.webp') no-repeat left bottom;
+      background-size: contain;
+      opacity: 0.065;
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .watermark-motif {
       position: absolute;
-      right: -30px;
-      bottom: -20px;
-      width: 260px;
-      opacity: 0.08;
+      right: -40px;
+      top: -20px;
+      width: 380px;
+      opacity: 0.06;
       pointer-events: none;
+      z-index: 0;
     }
 
     .usp-grid {
@@ -545,6 +651,36 @@
        ================================================================ */
     .segment-section {
       background-color: var(--bg-page);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .segment-section::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: -30px;
+      width: 320px;
+      height: 320px;
+      background: url('assets/vector_vietnam_patern/04_thuy_dinh_ho_sen.webp') no-repeat left top;
+      background-size: contain;
+      opacity: 0.055;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .segment-section::after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 280px;
+      height: 280px;
+      background: url('assets/vector_vietnam_patern/07_hoa_tiet_goc_san_vuon.webp') no-repeat right bottom;
+      background-size: contain;
+      opacity: 0.065;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .segment-grid {
@@ -727,6 +863,36 @@
     .location-section {
       background-color: #ffffff;
       border-bottom: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .location-section::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: -60px;
+      width: 380px;
+      height: 380px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat center;
+      background-size: contain;
+      opacity: 0.045;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .location-section::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: -20px;
+      width: 250px;
+      height: 170px;
+      background: url('assets/vector_vietnam_patern/05_may_ngu_sac_viet.webp') no-repeat left bottom;
+      background-size: contain;
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .travel-nodes-grid {
@@ -855,6 +1021,37 @@
       background-color: #ffffff;
       border-top: 1px solid var(--color-border);
       border-bottom: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust-section::before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 360px;
+      height: 360px;
+      background: url('assets/vector_vietnam_patern/09_song_hac_tung_sen.webp') no-repeat center;
+      background-size: contain;
+      opacity: 0.055;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .trust-section::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -20px;
+      width: 250px;
+      height: 250px;
+      background: url('assets/vector_vietnam_patern/01_hoa_sen_viet.webp') no-repeat right bottom;
+      background-size: contain;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .trust-grid {
@@ -940,6 +1137,36 @@
        ================================================================ */
     .products-section {
       background-color: var(--bg-page);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .products-section::before {
+      content: "";
+      position: absolute;
+      top: 12%;
+      right: -50px;
+      width: 380px;
+      height: 420px;
+      background: url('assets/vector_vietnam_patern/06_cot_dinh_cham_khac.webp') no-repeat right center;
+      background-size: contain;
+      opacity: 0.055;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .products-section::after {
+      content: "";
+      position: absolute;
+      bottom: 5%;
+      left: -60px;
+      width: 440px;
+      height: 280px;
+      background: url('assets/vector_vietnam_patern/08_panorama_dien_trang_viet.webp') no-repeat left bottom;
+      background-size: contain;
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .product-block {
@@ -1062,6 +1289,36 @@
       background-color: #ffffff;
       border-top: 1px solid var(--color-border);
       border-bottom: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .policy-section::before {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      right: -40px;
+      width: 380px;
+      height: 380px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat right bottom;
+      background-size: contain;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .policy-section::after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -20px;
+      width: 280px;
+      height: 200px;
+      background: url('assets/vector_vietnam_patern/05_may_ngu_sac_viet.webp') no-repeat left top;
+      background-size: contain;
+      opacity: 0.065;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .policy-cards-grid {
@@ -1205,6 +1462,35 @@
       color: #ffffff;
       padding: 64px 0;
       position: relative;
+      overflow: hidden;
+    }
+
+    .lead-form-section::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 440px;
+      height: 440px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat right top;
+      background-size: contain;
+      opacity: 0.075;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .lead-form-section::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      width: 320px;
+      height: 220px;
+      background: url('assets/vector_vietnam_patern/05_may_ngu_sac_viet.webp') no-repeat left bottom;
+      background-size: contain;
+      opacity: 0.085;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .form-wrapper-box {
@@ -1215,6 +1501,39 @@
       max-width: 580px;
       margin: 0 auto;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      border: 1.5px solid var(--color-gold-border);
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .form-wrapper-box::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 120px;
+      height: 120px;
+      background: url('assets/vector_vietnam_patern/07_hoa_tiet_goc_san_vuon.webp') no-repeat left top;
+      background-size: contain;
+      opacity: 0.14;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .form-wrapper-box::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 120px;
+      height: 120px;
+      background: url('assets/vector_vietnam_patern/07_hoa_tiet_goc_san_vuon.webp') no-repeat right bottom;
+      background-size: contain;
+      transform: rotate(180deg);
+      opacity: 0.14;
+      pointer-events: none;
+      z-index: 0;
     }
 
     @media (max-width: 600px) {
@@ -1472,9 +1791,40 @@
     .site-footer {
       background: #0c1812;
       color: #98a59f;
-      padding: 44px 0 28px;
+      padding: 50px 0 32px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       font-size: 13.5px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .site-footer::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 520px;
+      height: 520px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat center;
+      background-size: contain;
+      opacity: 0.065;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .site-footer::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      right: -20px;
+      width: 240px;
+      height: 240px;
+      background: url('assets/vector_vietnam_patern/01_hoa_sen_viet.webp') no-repeat right bottom;
+      background-size: contain;
+      opacity: 0.055;
+      pointer-events: none;
+      z-index: 0;
     }
 
     .footer-brand {
