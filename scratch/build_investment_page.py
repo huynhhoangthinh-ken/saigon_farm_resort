@@ -50,43 +50,79 @@ def build_investment_page():
     /* ================================================================
        INVESTMENT LANDING PAGE SPECIFIC ENHANCEMENTS
        ================================================================ */
-    .btn-hotline-nav {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      background: #b22222;
-      color: #fff !important;
-      font-weight: 700;
-      font-size: 0.82rem;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 2px 8px rgba(178,34,34,0.35);
+    /* Utility Action Bar Buttons (High Specificity to prevent any override) */
+    .action-bar a.btn-action-hotline,
+    a.btn-action-hotline {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 7px 16px !important;
+      border-radius: 20px !important;
+      background: #b22222 !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      font-size: 0.84rem !important;
+      text-decoration: none !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 2px 8px rgba(178,34,34,0.35) !important;
+      border: 1px solid #8b0000 !important;
+      line-height: 1 !important;
     }
-    .btn-hotline-nav:hover {
-      background: #8b0000;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(178,34,34,0.5);
+    .action-bar a.btn-action-hotline:hover,
+    a.btn-action-hotline:hover {
+      background: #8b0000 !important;
+      color: #ffffff !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 4px 12px rgba(178,34,34,0.5) !important;
     }
-    .btn-zalo-nav {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      background: #0068ff;
-      color: #fff !important;
-      font-weight: 700;
-      font-size: 0.82rem;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 2px 8px rgba(0,104,255,0.35);
+    .action-bar a.btn-action-zalo,
+    a.btn-action-zalo {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 7px 16px !important;
+      border-radius: 20px !important;
+      background: #0068ff !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      font-size: 0.84rem !important;
+      text-decoration: none !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 2px 8px rgba(0,104,255,0.35) !important;
+      border: 1px solid #0052cc !important;
+      line-height: 1 !important;
     }
-    .btn-zalo-nav:hover {
-      background: #0052cc;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0,104,255,0.5);
+    .action-bar a.btn-action-zalo:hover,
+    a.btn-action-zalo:hover {
+      background: #0052cc !important;
+      color: #ffffff !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 4px 12px rgba(0,104,255,0.5) !important;
+    }
+    .action-bar button.btn-action-tour,
+    button.btn-action-tour {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 7px 18px !important;
+      border-radius: 20px !important;
+      background: #183024 !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      font-size: 0.84rem !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 1px solid #0f2018 !important;
+      box-shadow: 0 2px 8px rgba(24,48,36,0.3) !important;
+      transition: all 0.25s ease !important;
+      line-height: 1 !important;
+    }
+    .action-bar button.btn-action-tour:hover,
+    button.btn-action-tour:hover {
+      background: #0f2018 !important;
+      color: #ffd166 !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 4px 12px rgba(24,48,36,0.45) !important;
     }
 
     /* 4 Trụ Cột Tăng Giá Trị */
@@ -590,16 +626,15 @@ def build_investment_page():
     if old_action_bar:
         new_action_bar = """<aside class="action-bar" aria-label="Thanh công cụ trang web">
     <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Trang Chủ</a>
       <a href="#buoc-6-dien-san"><i class="fa-solid fa-chart-line"></i> Bài Toán Điền Sản</a>
       <a href="#buoc-7-biet-phu"><i class="fa-solid fa-landmark"></i> Biệt Phủ</a>
       <a href="#buoc-5-dien-an"><i class="fa-solid fa-house-chimney-user"></i> Điền An</a>
       <a href="#buoc-8-loi-nhuan" style="color: var(--color-gold-dark); font-weight: 700;"><i class="fa-solid fa-arrow-trend-up"></i> Tiềm Năng Đầu Tư</a>
     </div>
     <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-      <a href="tel:0909000712" class="btn-hotline-nav"><i class="fa-solid fa-phone-volume"></i> 0909 000 712</a>
-      <a href="https://zalo.me/0909000712" target="_blank" rel="noopener noreferrer" class="btn-zalo-nav"><i class="fa-solid fa-comment-dots"></i> Zalo</a>
-      <button type="button" class="btn-cta-top" onclick="openBookingModal('', '', 'Đăng Ký Site Tour VIP')"><i class="fa-solid fa-car-side"></i> Đăng Ký Site Tour</button>
+      <a href="tel:0909000712" class="btn-action-hotline"><i class="fa-solid fa-phone-volume"></i> 0909 000 712</a>
+      <a href="https://zalo.me/0909000712" target="_blank" rel="noopener noreferrer" class="btn-action-zalo"><i class="fa-solid fa-comment-dots"></i> Chat Zalo</a>
+      <button type="button" class="btn-action-tour" onclick="openBookingModal('', '', 'Đăng Ký Site Tour VIP')"><i class="fa-solid fa-car-side"></i> Đăng Ký Site Tour</button>
     </div>
   </aside>"""
         html = html.replace(old_action_bar.group(0), new_action_bar)
@@ -705,7 +740,7 @@ def build_investment_page():
                 </div>
                 <div class="inline-input-group">
                   <i class="fa-solid fa-phone input-icon"></i>
-                  <input type="tel" id="inline-phone" placeholder="Số điện thoại / Zalo" required pattern="[0-9]{9,11}" class="inline-form-input">
+                  <input type="tel" id="inline-phone" placeholder="Số điện thoại / Zalo" required pattern="[0-9+\\s.-]{9,15}" class="inline-form-input">
                 </div>
                 <div class="inline-input-group">
                   <i class="fa-solid fa-shapes input-icon"></i>
@@ -780,7 +815,7 @@ def build_investment_page():
           <i class="fa-solid fa-location-dot" style="color: var(--color-gold-dark); margin-right: 4px;"></i> Xã Đất Đỏ, TP. Hồ Chí Minh<br>
           <i class="fa-solid fa-phone-volume" style="color: var(--color-gold-dark); margin-right: 4px;"></i> Hotline: <a href="tel:0909000712" style="color: inherit; font-weight: 700;">0909 000 712</a><br>
           <i class="fa-solid fa-comment-dots" style="color: var(--color-gold-dark); margin-right: 4px;"></i> Zalo: <a href="https://zalo.me/0909000712" target="_blank" rel="noopener noreferrer" style="color: inherit; font-weight: 700;">0909 000 712</a><br>
-          <i class="fa-solid fa-globe" style="color: var(--color-gold-dark); margin-right: 4px;"></i> Website: <a href="https://www.saigonfarmresort.com" style="color: inherit; text-decoration: underline;">www.saigonfarmresort.com</a>
+          <i class="fa-solid fa-globe" style="color: var(--color-gold-dark); margin-right: 4px;"></i> Website: <a href="https://saigonfarmresort.com/investment" style="color: inherit; text-decoration: underline;">saigonfarmresort.com/investment</a>
         </div>"""
         html = html.replace(old_footer_company.group(0), new_footer_company)
 
@@ -811,7 +846,7 @@ def build_investment_page():
         
         <div class="lead-form-group">
           <label for="lead-phone">Số điện thoại / Zalo (Bắt buộc):</label>
-          <input type="tel" id="lead-phone" class="lead-form-control" placeholder="Ví dụ: 0909 000 712" required pattern="[0-9]{9,11}">
+          <input type="tel" id="lead-phone" class="lead-form-control" placeholder="Ví dụ: 0909 000 712" required pattern="[0-9+\\s.-]{9,15}">
         </div>
 
         <div class="lead-form-group">
