@@ -12,12 +12,12 @@
   <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>Saigon Farm Resort | Điền Trang Nghỉ Dưỡng Bên Hồ — Nhận Bảng Giá & Đặt Lịch Đi Xem</title>
-  <meta name="description" content="Quần thể điền trang nghỉ dưỡng sinh thái ven hồ Lồ Ồ 100 ha, Đất Đỏ, TP.HCM (liền kề Hồ Tràm). 100% thổ cư sổ đỏ riêng từng nền, công chứng sang tên trong 10-20 ngày. Mở bán tháng 9/2026.">
+  <title>Saigon Farm Resort | Điền Trang Nghỉ Dưỡng Bên Hồ — Bản Sắc Việt Đương Đại</title>
+  <meta name="description" content="Quần thể điền trang nghỉ dưỡng sinh thái ven hồ Lồ Ồ 100 ha, Đất Đỏ (liền kề Hồ Tràm). Sở hữu diện tích đất lớn với tiện ích 5 sao, an ninh, y tế, quản gia và bản sắc Việt trường tồn. Sổ đỏ 100% thổ cư trao tay.">
   
   <!-- Open Graph & Social -->
   <meta property="og:title" content="Saigon Farm Resort | Điền Trang Nghỉ Dưỡng Bên Hồ 100ha">
-  <meta property="og:description" content="Khuôn viên điền trang sinh thái ven hồ Lồ Ồ, Đất Đỏ. 100% thổ cư sổ đỏ riêng trao tay. Đăng ký nhận bảng giá và xe riêng đưa đón xem thực địa.">
+  <meta property="og:description" content="Khuôn viên điền trang sinh thái ven hồ Lồ Ồ, Đất Đỏ. Diện tích lớn, tiện ích 5 sao, quản gia vận hành và bản sắc Việt độc bản. Sổ đỏ thổ cư 100%.">
   <meta property="og:image" content="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp">
   <meta property="og:url" content="https://saigonfarmresort.com/investor">
   <meta property="og:type" content="website">
@@ -120,14 +120,35 @@
 
     @media (max-width: 768px) {
       .section-spacing {
-        padding: 42px 0;
+        padding: 40px 0;
       }
     }
 
     .section-header {
       text-align: center;
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto 32px;
+      position: relative;
+    }
+
+    .heritage-ornament-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 auto 10px;
+    }
+
+    .heritage-ornament-line {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    }
+
+    .heritage-lotus-icon {
+      height: 24px;
+      width: auto;
+      opacity: 0.85;
     }
 
     .section-tag {
@@ -138,7 +159,7 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--color-gold-dark);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .section-title {
@@ -163,13 +184,12 @@
     }
 
     /* ================================================================
-       KHỐI 1 — HERO SECTION (THIẾT KẾ BIÊN TẬP CAO CẤP: CHỮ TÁCH BẠCH,
-       TUYỆT ĐỐI KHÔNG ĐÈ LÊN HÌNH)
+       KHỐI 1 — HERO SECTION (BIÊN TẬP CAO CẤP, CHỮ VÀ HÌNH TÁCH BẠCH)
        ================================================================ */
     .hero-editorial {
       background: var(--bg-surface);
       border-bottom: 1px solid var(--color-border);
-      padding: 44px 0 40px;
+      padding: 44px 0 36px;
       position: relative;
     }
 
@@ -216,11 +236,11 @@
       font-weight: 400;
       color: var(--color-muted);
       text-align: center;
-      max-width: 620px;
+      max-width: 640px;
       margin: 0 auto 24px;
     }
 
-    /* Nhóm nút Hero */
+    /* Nút Hero */
     .hero-cta-group {
       display: flex;
       flex-wrap: wrap;
@@ -306,17 +326,17 @@
     }
 
     /* ================================================================
-       KHỐI 2 — ẢNH THẬT (FLYCAM THỰC ĐỊA, KHÔNG CHỮ ĐÈ TRÊN ẢNH)
+       KHỐI 2 — LƯỚI ẢNH FLYCAM THỰC TẾ (KHÔNG CÓ CHỮ DẪN DƯ THỪA)
        ================================================================ */
     .real-photos-section {
       background-color: var(--bg-page);
+      padding: 32px 0 44px;
     }
 
     .flycam-gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-bottom: 20px;
     }
 
     .flycam-item {
@@ -370,7 +390,6 @@
       font-size: 11px;
     }
 
-    /* Chữ đặt riêng biệt dưới ảnh, không đè lên hình */
     .flycam-caption {
       padding: 12px 14px;
       font-size: 13.5px;
@@ -381,38 +400,13 @@
       border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .gallery-caption-bar {
-      text-align: center;
-      padding-top: 6px;
-    }
-
-    .gallery-hint-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--color-forest);
-      background-color: var(--color-gold-subtle);
-      border: 1px dashed var(--color-gold);
-      padding: 8px 18px;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .gallery-hint-badge:hover {
-      background-color: #f7edd8;
-    }
-
-    /* Mobile Carousel vuốt ngang cho Khối 2 */
     @media (max-width: 768px) {
       .flycam-gallery-grid {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         gap: 12px;
-        padding: 4px 0 14px;
+        padding: 4px 0 8px;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
       }
@@ -428,12 +422,129 @@
     }
 
     /* ================================================================
-       KHỐI 3 — PHÂN LUỒNG (3 THẺ ĐỊNH HƯỚNG NHU CẦU)
+       KHỐI ĐẶC QUYỀN ĐỘC BẢN: DIỆN TÍCH LỚN, TIỆN ÍCH 5 SAO & BẢN SẮC VIỆT
        ================================================================ */
-    .segment-section {
-      background-color: var(--bg-surface);
+    .unique-value-section {
+      background-color: #ffffff;
       border-top: 1px solid var(--color-border);
       border-bottom: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .watermark-motif {
+      position: absolute;
+      right: -30px;
+      bottom: -20px;
+      width: 260px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .usp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .usp-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .usp-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 30px 26px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .usp-card:hover {
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+    }
+
+    .usp-card-icon-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .usp-icon-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-light) 100%);
+      color: #ffd885;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .usp-pill-tag {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-gold-dark);
+      background: var(--color-gold-subtle);
+      border: 1px solid var(--color-gold-border);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .usp-title {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--color-forest);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .usp-body {
+      font-size: 14.5px;
+      color: var(--color-body);
+      line-height: 1.7;
+    }
+
+    .usp-bullet-list {
+      list-style: none;
+      margin-top: 14px;
+    }
+
+    .usp-bullet-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--color-muted);
+    }
+
+    .usp-bullet-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--color-gold-dark);
+      font-weight: 800;
+    }
+
+    /* ================================================================
+       KHỐI 3 — SẢN PHẨM "MAY ĐO" THEO NHU CẦU
+       ================================================================ */
+    .segment-section {
+      background-color: var(--bg-page);
     }
 
     .segment-grid {
@@ -450,7 +561,7 @@
     }
 
     .segment-card {
-      background: var(--bg-card);
+      background: var(--bg-surface);
       border: 1.5px solid var(--color-border);
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -486,7 +597,7 @@
     }
 
     .segment-card-body {
-      padding: 20px;
+      padding: 22px 20px;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -508,7 +619,7 @@
 
     .segment-product-name {
       font-family: var(--font-serif);
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--color-forest);
       margin-bottom: 8px;
@@ -517,7 +628,7 @@
 
     .segment-card-desc {
       font-size: 14px;
-      color: var(--color-muted);
+      color: var(--color-body);
       line-height: 1.6;
       margin-bottom: 16px;
       flex: 1;
@@ -537,7 +648,9 @@
        KHỐI 4 — BA LÝ DO ĐỂ TIN (CAM KẾT THỰC TẾ)
        ================================================================ */
     .trust-section {
-      background-color: var(--bg-page);
+      background-color: #ffffff;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
     }
 
     .trust-grid {
@@ -555,7 +668,7 @@
     }
 
     .trust-card {
-      background: var(--bg-surface);
+      background: var(--bg-card);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
       padding: 26px 20px;
@@ -622,13 +735,11 @@
        KHỐI 5 — BA DÒNG SẢN PHẨM (ẢNH VÀ CHỮ TÁCH BẠCH)
        ================================================================ */
     .products-section {
-      background-color: var(--bg-surface);
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
+      background-color: var(--bg-page);
     }
 
     .product-block {
-      background: var(--bg-card);
+      background: var(--bg-surface);
       border-radius: var(--radius-md);
       border: 1px solid var(--color-border);
       overflow: hidden;
@@ -744,7 +855,9 @@
        KHỐI 6 — CHÍNH SÁCH ĐỢT MỞ BÁN
        ================================================================ */
     .policy-section {
-      background-color: var(--bg-page);
+      background-color: #ffffff;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
     }
 
     .policy-cards-grid {
@@ -763,7 +876,7 @@
     }
 
     .policy-card {
-      background: var(--bg-surface);
+      background: var(--bg-card);
       border: 1.5px solid var(--color-border);
       border-radius: var(--radius-md);
       padding: 26px 22px;
@@ -1351,20 +1464,11 @@
   </section>
 
   <!-- ================================================================
-       KHỐI 2 — ẢNH THẬT (FLYCAM THỰC TẾ, CHỮ ĐẶT DƯỚI ẢNH)
+       KHỐI 2 — ẢNH THẬT FLYCAM (ĐÃ BỎ ĐOẠN DẪN DƯ THỪA & NÚT GỠ BỎ)
        ================================================================ -->
-  <section class="real-photos-section section-spacing" id="anh-that">
+  <section class="real-photos-section" id="anh-that">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">THỰC ĐỊA 100% TẠI CHỖ</span>
-        <h2 class="section-title">Ảnh thật, bay flycam tại chỗ</h2>
-        <p class="section-desc">
-          Hồ Lồ Ồ rộng 100 ha, nước ngọt tự nhiên. Ba mặt là cánh đồng lúa.<br>
-          Toàn bộ ảnh dưới đây chụp tại thực địa, không phải phối cảnh.
-        </p>
-      </div>
-
-      <!-- Lưới 4 ảnh trên Desktop / Carousel vuốt ngang trên Mobile -->
+      <!-- Lưới 4 ảnh flycam thực tế, chữ nằm riêng biệt dưới ảnh -->
       <div class="flycam-gallery-grid">
         <div class="flycam-item" onclick="openLightbox(0)">
           <div class="flycam-img-wrap">
@@ -1398,23 +1502,82 @@
           <div class="flycam-caption">Góc 4: Mặt bằng và địa thế đất cao ráo</div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="gallery-caption-bar">
-        <div class="gallery-hint-badge" onclick="openLightbox(0)">
-          <i class="fa-solid fa-camera"></i> 8 góc flycam thực tế · Chạm để xem hết
+  <!-- ================================================================
+       KHỐI ĐẶC BIỆT: GIÁ TRỊ KHÁC BIỆT SO VỚI THỊ TRƯỜNG TOÀN KHU VỰC
+       (DIỆN TÍCH LỚN, TIỆN ÍCH 5 SAO & NỀN TẢNG BẢN SẮC VIỆT TRƯỜNG TỒN)
+       ================================================================ -->
+  <section class="unique-value-section section-spacing">
+    <img src="assets/vector_vietnam_patern/02_trong_dong_dong_son.webp" alt="Họa tiết Trống Đồng Đông Sơn" class="watermark-motif">
+    <div class="container">
+      <div class="section-header">
+        <div class="heritage-ornament-center">
+          <span class="heritage-ornament-line"></span>
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="heritage-lotus-icon">
+          <span class="heritage-ornament-line"></span>
+        </div>
+        <span class="section-tag">GIÁ TRỊ KHÁC BIỆT ĐỘC BẢN</span>
+        <h2 class="section-title">Tại Sao Saigon Farm Resort Khác Biệt Hoàn Toàn Với Phần Còn Lại Của Thị Trường?</h2>
+        <p class="section-desc">
+          Sự kết hợp chưa từng có giữa không gian điền trang riêng tư diện tích lớn và chuỗi dịch vụ vận hành chuẩn Resort 5 sao, kiến tạo trên nền tảng Bản Sắc Việt trường tồn độc đáo.
+        </p>
+      </div>
+
+      <div class="usp-grid">
+        <!-- Cột 1: Đất lớn + Vận hành 5 sao -->
+        <div class="usp-card">
+          <div class="usp-card-icon-bar">
+            <div class="usp-icon-badge"><i class="fa-solid fa-shield-halved"></i></div>
+            <span class="usp-pill-tag">VẬN HÀNH CHUẨN RESORT 5 SAO</span>
+          </div>
+          <h3 class="usp-title">Khuôn Viên Đất Lớn Đầy Đủ Dịch Vụ Khép Kín</h3>
+          <p class="usp-body">
+            Khác biệt với đất nền phân lô truyền thống hay khu nghỉ dưỡng chỉ có đất trống, tại Saigon Farm Resort, mỗi chủ nhân sở hữu khuôn viên điền trang rộng rãi nhưng được thụ hưởng trọn vẹn đặc quyền dịch vụ cao cấp:
+          </p>
+          <ul class="usp-bullet-list">
+            <li>Hệ thống an ninh bảo vệ đa lớp chuyên nghiệp 24/7.</li>
+            <li>Đội ngũ y tế chăm sóc sức khỏe và quản gia riêng (Butler Service).</li>
+            <li>Đơn vị MDS Living trực tiếp quản lý, vận hành và khai thác nghỉ dưỡng trọn gói, giúp chủ nhân an nhàn thảnh thơi.</li>
+          </ul>
+        </div>
+
+        <!-- Cột 2: Bản sắc Việt trường tồn -->
+        <div class="usp-card">
+          <div class="usp-card-icon-bar">
+            <div class="usp-icon-badge" style="background: linear-gradient(135deg, #8c6b32 0%, #c29b53 100%); color: #121815;">
+              <i class="fa-solid fa-landmark-dome"></i>
+            </div>
+            <span class="usp-pill-tag">DI SẢN TRUYỀN ĐỜI</span>
+          </div>
+          <h3 class="usp-title">Nền Tảng Bản Sắc Việt Trường Tồn Độc Đáo</h3>
+          <p class="usp-body">
+            Sản phẩm Biệt Phủ Điền Trang được định hình với triết lý kiến trúc mang đậm hồn cốt văn hóa Việt đương đại, hòa mình giữa thiên nhiên mặt nước và cánh đồng lúa:
+          </p>
+          <ul class="usp-bullet-list">
+            <li>Giá trị tài sản gia tăng bền vững cùng thời gian, không bị lỗi thời như các mô hình kiến trúc lai tạp.</li>
+            <li>Thu hút mạnh mẽ tệp khách hàng thượng lưu trong nước, kiều bào và du khách quốc tế cao cấp tìm kiếm trải nghiệm văn hóa bản địa tinh tế.</li>
+            <li>Bảo chứng cho tiềm năng khai thác du lịch văn hóa - sinh thái sinh lời vượt trội và lâu dài trong tương lai.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       KHỐI 3 — PHÂN LUỒNG (3 THẺ ĐỊNH HƯỚNG NHU CẦU)
+       KHỐI 3 — SẢN PHẨM "MAY ĐO" THEO NHU CẦU
        ================================================================ -->
   <section class="segment-section section-spacing" id="phan-luong">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">ĐỊNH HƯỚNG NHU CẦU</span>
-        <h2 class="section-title">Anh chị đang tìm gì?</h2>
+        <div class="heritage-ornament-center">
+          <span class="heritage-ornament-line"></span>
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="heritage-lotus-icon">
+          <span class="heritage-ornament-line"></span>
+        </div>
+        <span class="section-tag">ĐỊNH HƯỚNG MỤC TIÊU</span>
+        <h2 class="section-title">Sản phẩm "may đo" theo nhu cầu</h2>
         <p class="section-desc">
           Mỗi dòng sản phẩm được may đo cho một mục đích rõ ràng. Chạm để chọn đúng mục anh chị quan tâm:
         </p>
@@ -1429,7 +1592,7 @@
           <div class="segment-card-body">
             <span class="segment-intent-tag">NHÀ ĐỂ CẢ GIA ĐÌNH VỀ CUỐI TUẦN</span>
             <h3 class="segment-product-name">Biệt Phủ Điền Trang</h3>
-            <p class="segment-card-desc">Dinh thự cho ba thế hệ, nhìn ra hồ và cánh đồng lúa</p>
+            <p class="segment-card-desc">Dinh thự cho ba thế hệ.</p>
             <span class="segment-action-link">Xem chi tiết dòng này <i class="fa-solid fa-arrow-down"></i></span>
           </div>
         </div>
@@ -1442,7 +1605,7 @@
           <div class="segment-card-body">
             <span class="segment-intent-tag">TÀI SẢN CÓ TIỀN VỀ MỖI THÁNG</span>
             <h3 class="segment-product-name">Điền An</h3>
-            <p class="segment-card-desc">Cụm 30 phòng cho thuê, 80 đến 120 triệu một tháng</p>
+            <p class="segment-card-desc">Cụm 30 phòng cho thuê, 80 đến 120 triệu một tháng, 1,4 tỷ/năm trong 5 - 10 năm liên tiếp.</p>
             <span class="segment-action-link">Xem chi tiết dòng này <i class="fa-solid fa-arrow-down"></i></span>
           </div>
         </div>
@@ -1455,7 +1618,7 @@
           <div class="segment-card-body">
             <span class="segment-intent-tag">ĐẦU TƯ ĐÓN SÓNG HẠ TẦNG</span>
             <h3 class="segment-product-name">Điền Sản</h3>
-            <p class="segment-card-desc">Trả 70% là nhận sổ, 30% giãn một năm không lãi</p>
+            <p class="segment-card-desc">Thanh toán 70% , 30% thanh toán năm 2027 khi chuyển nhượng thành công cho khách hàng mới.</p>
             <span class="segment-action-link">Xem chi tiết dòng này <i class="fa-solid fa-arrow-down"></i></span>
           </div>
         </div>
@@ -1524,6 +1687,11 @@
   <section class="products-section section-spacing" id="san-pham">
     <div class="container">
       <div class="section-header">
+        <div class="heritage-ornament-center">
+          <span class="heritage-ornament-line"></span>
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="heritage-lotus-icon">
+          <span class="heritage-ornament-line"></span>
+        </div>
         <span class="section-tag">BỘ SƯU TẬP KHUÔN VIÊN ĐIỀN TRANG</span>
         <h2 class="section-title">Ba dòng sản phẩm</h2>
       </div>
@@ -1537,7 +1705,7 @@
           <div class="product-tag-inline">DÒNG NGHỈ DƯỠNG SUM HỌP GIA ĐÌNH</div>
           <h3 class="product-block-title">5.1 · BIỆT PHỦ ĐIỀN TRANG</h3>
           <p class="product-block-text">
-            Dinh thự cho gia đình nhiều thế hệ. Khuôn viên rộng rãi, có hồ bơi riêng, sân vườn, nhìn ra mặt hồ hoặc cánh đồng lúa xanh ngát.
+            Dinh thự cho ba thế hệ sum họp giữa thiên nhiên tĩnh tại bên hồ và đồng lúa.
           </p>
           <p class="product-block-text">
             Những lúc gia đình không dùng, anh chị gửi vào chương trình vận hành của MDS Living. Nhà vẫn có người chăm, tháng nào cũng có tiền về, mà phần lớn thời gian trong năm vẫn là của mình.
@@ -1557,9 +1725,9 @@
           <div class="product-tag-inline">TÀI SẢN DÒNG TIỀN CHO THUÊ BỀN VỮNG</div>
           <h3 class="product-block-title">5.2 · ĐIỀN AN</h3>
           <p class="product-block-text">
-            Khuôn viên quy mô lớn, đủ đất dựng cụm 30 phòng lưu trú sinh thái khép kín.
+            Khuôn viên quy mô lớn, dựng cụm 30 phòng lưu trú cho thuê, đạt 80 đến 120 triệu một tháng (khoảng 1,4 tỷ/năm trong 5 - 10 năm liên tiếp).
           </p>
-          <p class="product-block-text" style="margin-bottom: 6px; font-weight: 600;">Hai cách khai thác linh hoạt:</p>
+          <p class="product-block-text" style="margin-bottom: 6px; font-weight: 600;">Hai phương án khai thác:</p>
           <ul class="product-block-list">
             <li>Cho thuê trọn 30 phòng cho chuyên gia, 120 triệu một tháng</li>
             <li>Hoặc 20 phòng cho thuê dài hạn, 10 phòng còn lại cho khách du lịch thuê theo ngày</li>
@@ -1585,7 +1753,7 @@
             Dành cho nhà đầu tư vào tiền ngay đợt đầu. Không cần xây.
           </p>
           <p class="product-block-text">
-            Trả 70% là công chứng nhận sổ đỏ riêng. 30% còn lại giãn một năm, lãi suất 0%. Chủ đầu tư đồng hành hỗ trợ ra hàng.
+            Thanh toán 70% là công chứng nhận sổ đỏ riêng, 30% thanh toán năm 2027 khi chuyển nhượng thành công cho khách hàng mới. Chủ đầu tư đồng hành hỗ trợ ra hàng.
           </p>
           <a href="/investment#dien-san" class="btn btn-product-detail" style="margin-top: 8px;">
             Xem chi tiết Điền Sản <i class="fa-solid fa-arrow-right"></i>
@@ -1626,7 +1794,7 @@
           <ul class="policy-feature-list">
             <li><i class="fa-solid fa-check" style="color: #c29b53;"></i> Cọc 200 triệu</li>
             <li><i class="fa-solid fa-check" style="color: #c29b53;"></i> Trả 70% trong 10 ngày, ký hợp đồng chuyển nhượng và nhận sổ</li>
-            <li><i class="fa-solid fa-check" style="color: #c29b53;"></i> 30% còn lại giãn 12 tháng, lãi suất 0%</li>
+            <li><i class="fa-solid fa-check" style="color: #c29b53;"></i> 30% còn lại giãn tới 2027, lãi suất 0%</li>
           </ul>
           <div class="discount-highlight-badge">
             ★ GIẢM 800 TRIỆU trừ thẳng vào giá
@@ -1755,7 +1923,7 @@
   </footer>
 
   <!-- ================================================================
-       THANH CTA DÍNH (STICKY BOTTOM BAR)
+       THANH CTA DÍNH (STICKY BOTTOM BAR CHO DI ĐỘNG)
        ================================================================ -->
   <div class="sticky-bottom-bar" id="stickyBottomBar">
     <a href="tel:0909000712" class="sticky-btn sticky-btn-tel">
