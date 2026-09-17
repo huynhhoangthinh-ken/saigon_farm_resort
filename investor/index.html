@@ -229,11 +229,11 @@
     .hero-editorial::before {
       content: "";
       position: absolute;
-      top: -10px;
-      left: -20px;
-      width: 340px;
-      height: 220px;
-      background: url('assets/vector_vietnam_patern/05_may_ngu_sac_viet.webp') no-repeat left top;
+      top: -30px;
+      left: -30px;
+      width: 320px;
+      height: 320px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat center;
       background-size: contain;
       opacity: 0.085;
       pointer-events: none;
@@ -243,15 +243,47 @@
     .hero-editorial::after {
       content: "";
       position: absolute;
-      bottom: -20px;
+      top: -20px;
       right: -25px;
       width: 290px;
       height: 290px;
-      background: url('assets/vector_vietnam_patern/01_hoa_sen_viet.webp') no-repeat right bottom;
+      background: url('assets/vector_vietnam_patern/01_hoa_sen_viet.webp') no-repeat center;
       background-size: contain;
-      opacity: 0.07;
+      opacity: 0.08;
       pointer-events: none;
       z-index: 1;
+    }
+
+    .hero-heritage-ornament {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto 10px;
+    }
+
+    .hero-heritage-icon {
+      height: 22px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    .hero-heritage-icon.flip-h {
+      transform: scaleX(-1);
+    }
+
+    .hero-heritage-icon-drum {
+      height: 24px;
+      width: auto;
+      opacity: 0.9;
+    }
+
+    .capsule-lotus-icon {
+      height: 13px;
+      width: auto;
+      vertical-align: middle;
+      display: inline-block;
+      opacity: 0.9;
     }
 
     .hero-brand-top {
@@ -1994,10 +2026,18 @@
   <section class="hero-editorial" id="hero">
     <div class="container">
       <div class="hero-brand-top">
+        <!-- Hoa văn di sản: Trống đồng Đông Sơn & Hoa Sen Việt trên cùng -->
+        <div class="hero-heritage-ornament">
+          <span class="heritage-ornament-line"></span>
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="hero-heritage-icon">
+          <img src="assets/vector_vietnam_patern/02_trong_dong_dong_son.webp" alt="Trống Đồng Đông Sơn" class="hero-heritage-icon-drum">
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="hero-heritage-icon flip-h">
+          <span class="heritage-ornament-line"></span>
+        </div>
         <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" class="hero-logo-img">
         <br>
         <div class="hero-badge-capsule">
-          <i class="fa-solid fa-leaf"></i> MDS LAND &amp; LIVING &nbsp;·&nbsp; MỞ BÁN THÁNG 9/2026
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="" class="capsule-lotus-icon"> MDS LAND &amp; LIVING &nbsp;·&nbsp; MỞ BÁN THÁNG 9/2026
         </div>
       </div>
 
