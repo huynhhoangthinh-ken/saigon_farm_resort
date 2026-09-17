@@ -1063,6 +1063,40 @@ def build_investment_page():
     new_m8 = new_m8.replace('id="buoc-3-tien-ich"', 'id="buoc-8-tien-ich"')
     new_m8 = new_m8.replace('03 • HỆ THỐNG TIỆN ÍCH LÊN ĐẾN 30.000 m²', '08 • HỆ THỐNG TIỆN ÍCH LÊN ĐẾN 30.000 m²')
 
+    # Bỏ phần timeline và toàn bộ trình khám phá tiện ích chuyên sâu (Clubhouse, Nhà hàng, Hồ bơi, Tuyến đường...)
+    # Theo yêu cầu: trang quảng cáo cần gọn, nhanh, tập trung quyền lợi khách hàng; chi tiết gửi file giới thiệu sau
+    timeline_marker = '<!-- Timeline: Đang Có & Tương Lai -->'
+    t_idx = new_m8.find(timeline_marker)
+    if t_idx == -1:
+        t_idx = new_m8.find('<div class="amenity-timeline-grid">')
+
+    if t_idx != -1:
+        lead_magnet_amenity_block = """<!-- Khối CTA Đăng Ký Nhận Trọn Bộ Hồ Sơ & File Giới Thiệu Tiện Ích Chi Tiết -->
+        <div style="background: linear-gradient(135deg, #f7faf8 0%, #edf5f0 100%); border: 1.5px solid rgba(27, 94, 32, 0.25); border-radius: 16px; padding: 32px 24px; margin-top: 30px; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.04);">
+          <span style="background: rgba(201, 169, 110, 0.2); color: #8c6b32; font-size: 0.8rem; font-weight: 800; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.06em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-file-pdf"></i> TÀI LIỆU CHUYÊN SÂU DÀNH CHO NHÀ ĐẦU TƯ
+          </span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-accent-green); margin: 14px 0 8px; font-weight: 700; line-height: 1.35;">
+            Nhận Trọn Bộ File Giới Thiệu &amp; Phối Cảnh Chi Tiết Các Tiện Ích
+          </h4>
+          <p style="font-size: 0.94rem; color: #4b6354; max-width: 720px; margin: 0 auto 22px; line-height: 1.65;">
+            Bản vẽ thiết kế, hình ảnh 3D phân khu <strong>Clubhouse 3.000m² sàn</strong>, <strong>Bến thuyền Kayak</strong>, <strong>Cụm sân Pickleball có mái che</strong>, <strong>Việt Mã Viên</strong> cùng hồ sơ pháp lý được tổng hợp đầy đủ trong file Brochure chất lượng cao. Quý khách vui lòng kết nối Zalo hoặc đăng ký để nhận ngay tài liệu.
+          </p>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; align-items: center;">
+            <button type="button" class="btn-action-tour" onclick="openBookingModal('Tải File Giới Thiệu Tiện Ích', 'Nhận tài liệu phối cảnh & hồ sơ tiện ích chi tiết', 'Tải File Giới Thiệu Tiện Ích')" style="padding: 13px 26px; font-size: 0.96rem; border-radius: 30px; font-weight: 700; background: var(--color-accent-green); color: #fff; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(27,94,32,0.3);">
+              <i class="fa-solid fa-file-arrow-down"></i> Nhận File Giới Thiệu Qua Zalo
+            </button>
+            <a href="https://zalo.me/0909000712" target="_blank" rel="noopener noreferrer" style="padding: 13px 22px; font-size: 0.96rem; border-radius: 30px; font-weight: 700; background: #0068ff; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,104,255,0.25);">
+              <i class="fa-solid fa-comment-dots"></i> Chat Zalo 0909 000 712
+            </a>
+            <a href="tel:0909000712" style="padding: 13px 22px; font-size: 0.96rem; border-radius: 30px; font-weight: 700; background: #fff; color: #183024; border: 1.5px solid #c9a96e; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-phone-volume" style="color: #c9a96e;"></i> Hotline: 0909 000 712
+            </a>
+          </div>
+        </div>
+      </section>"""
+        new_m8 = new_m8[:t_idx] + lead_magnet_amenity_block
+
     # Transform Section 9: Chinh sach ban hang
     new_m9 = m9_chinhsach
 
