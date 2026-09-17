@@ -567,13 +567,12 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      cursor: pointer;
+      cursor: default;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
     }
 
     .segment-card:hover {
-      transform: translateY(-4px);
       border-color: var(--color-gold);
       box-shadow: var(--shadow-card);
     }
@@ -634,14 +633,92 @@
       flex: 1;
     }
 
-    .segment-action-link {
+    .segment-card-cta-row {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 480px) {
+      .segment-card-cta-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .btn-segment-zalo {
+      background: linear-gradient(135deg, #0068ff 0%, #0052cc 100%);
+      color: #ffffff !important;
       font-family: var(--font-heading);
       font-size: 12.5px;
       font-weight: 700;
-      color: var(--color-gold-dark);
+      padding: 9px 10px;
+      border-radius: 7px;
+      text-align: center;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+    }
+
+    .btn-segment-zalo:hover {
+      background: #004ecc;
+      transform: translateY(-1px);
+    }
+
+    .btn-segment-phone {
+      background: var(--color-gold-subtle);
+      border: 1px solid var(--color-gold-border);
+      color: var(--color-forest) !important;
+      font-family: var(--font-heading);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 9px 10px;
+      border-radius: 7px;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-segment-phone:hover {
+      background: var(--color-gold);
+      color: #121815 !important;
+      transform: translateY(-1px);
+    }
+
+    .product-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn-form-anchor {
+      background: transparent;
+      border: 1.5px solid var(--color-gold);
+      color: var(--color-gold-dark) !important;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-form-anchor:hover {
+      background: var(--color-gold-subtle);
+      border-color: var(--color-gold-dark);
     }
 
     /* ================================================================
@@ -1585,7 +1662,7 @@
 
       <div class="segment-grid">
         <!-- Thẻ 1 -->
-        <div class="segment-card" onclick="scrollToSection('biet-phu')">
+        <div class="segment-card">
           <div class="segment-card-img-wrap">
             <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.webp" alt="Biệt Phủ Điền Trang" class="segment-card-img" loading="lazy">
           </div>
@@ -1593,12 +1670,19 @@
             <span class="segment-intent-tag">NHÀ ĐỂ CẢ GIA ĐÌNH VỀ CUỐI TUẦN</span>
             <h3 class="segment-product-name">Biệt Phủ Điền Trang</h3>
             <p class="segment-card-desc">Dinh thự cho ba thế hệ.</p>
-            <span class="segment-action-link">Xem chi tiết dòng này <i class="fa-solid fa-arrow-down"></i></span>
+            <div class="segment-card-cta-row">
+              <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
+                <i class="fa-brands fa-zalo"></i> Nhắn Zalo
+              </a>
+              <a href="tel:0909000712" class="btn-segment-phone">
+                <i class="fa-solid fa-phone"></i> Gọi hotline
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Thẻ 2 -->
-        <div class="segment-card" onclick="scrollToSection('dien-an')">
+        <div class="segment-card">
           <div class="segment-card-img-wrap">
             <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp" alt="Điền An" class="segment-card-img" loading="lazy">
           </div>
@@ -1606,12 +1690,19 @@
             <span class="segment-intent-tag">TÀI SẢN CÓ TIỀN VỀ MỖI THÁNG</span>
             <h3 class="segment-product-name">Điền An</h3>
             <p class="segment-card-desc">Cụm 30 phòng cho thuê, 80 đến 120 triệu một tháng, 1,4 tỷ/năm trong 5 - 10 năm liên tiếp.</p>
-            <span class="segment-action-link">Xem chi tiết dòng này <i class="fa-solid fa-arrow-down"></i></span>
+            <div class="segment-card-cta-row">
+              <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
+                <i class="fa-brands fa-zalo"></i> Nhắn Zalo
+              </a>
+              <a href="tel:0909000712" class="btn-segment-phone">
+                <i class="fa-solid fa-phone"></i> Gọi hotline
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Thẻ 3 -->
-        <div class="segment-card" onclick="scrollToSection('dien-san')">
+        <div class="segment-card">
           <div class="segment-card-img-wrap">
             <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp" alt="Điền Sản" class="segment-card-img" loading="lazy">
           </div>
@@ -1619,7 +1710,14 @@
             <span class="segment-intent-tag">ĐẦU TƯ ĐÓN SÓNG HẠ TẦNG</span>
             <h3 class="segment-product-name">Điền Sản</h3>
             <p class="segment-card-desc">Thanh toán 70% , 30% thanh toán năm 2027 khi chuyển nhượng thành công cho khách hàng mới.</p>
-            <span class="segment-action-link">Xem chi tiết dòng này <i class="fa-solid fa-arrow-down"></i></span>
+            <div class="segment-card-cta-row">
+              <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
+                <i class="fa-brands fa-zalo"></i> Nhắn Zalo
+              </a>
+              <a href="tel:0909000712" class="btn-segment-phone">
+                <i class="fa-solid fa-phone"></i> Gọi hotline
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1710,9 +1808,17 @@
           <p class="product-block-text">
             Những lúc gia đình không dùng, anh chị gửi vào chương trình vận hành của MDS Living. Nhà vẫn có người chăm, tháng nào cũng có tiền về, mà phần lớn thời gian trong năm vẫn là của mình.
           </p>
-          <a href="/investment#biet-phu" class="btn btn-product-detail">
-            Xem chi tiết Biệt Phủ <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <div class="product-cta-group">
+            <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
+              <i class="fa-brands fa-zalo"></i> Nhận tư vấn Biệt Phủ qua Zalo
+            </a>
+            <a href="tel:0909000712" class="btn btn-outline-forest">
+              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
+            </a>
+            <a href="#form-dang-ky" class="btn btn-form-anchor">
+              <i class="fa-solid fa-calendar-check"></i> Đăng ký xem thực địa
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1735,9 +1841,17 @@
           <p class="product-block-text" style="font-size: 13.5px; color: var(--color-muted); margin-bottom: 18px;">
             Bên thuê tự vận hành, tự trả điện nước. Anh chị không phải quản lý gì.
           </p>
-          <a href="/investment#dien-an" class="btn btn-product-detail">
-            Xem chi tiết Điền An <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <div class="product-cta-group">
+            <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
+              <i class="fa-brands fa-zalo"></i> Nhận bài toán Điền An qua Zalo
+            </a>
+            <a href="tel:0909000712" class="btn btn-outline-forest">
+              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
+            </a>
+            <a href="#form-dang-ky" class="btn btn-form-anchor">
+              <i class="fa-solid fa-calendar-check"></i> Đăng ký xem thực địa
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1755,9 +1869,17 @@
           <p class="product-block-text">
             Thanh toán 70% là công chứng nhận sổ đỏ riêng, 30% thanh toán năm 2027 khi chuyển nhượng thành công cho khách hàng mới. Chủ đầu tư đồng hành hỗ trợ ra hàng.
           </p>
-          <a href="/investment#dien-san" class="btn btn-product-detail" style="margin-top: 8px;">
-            Xem chi tiết Điền Sản <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <div class="product-cta-group">
+            <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
+              <i class="fa-brands fa-zalo"></i> Nhận chính sách Điền Sản qua Zalo
+            </a>
+            <a href="tel:0909000712" class="btn btn-outline-forest">
+              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
+            </a>
+            <a href="#form-dang-ky" class="btn btn-form-anchor">
+              <i class="fa-solid fa-calendar-check"></i> Đăng ký xem thực địa
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1908,8 +2030,8 @@
       <div class="footer-brand">MDS LAND &amp; LIVING · SAIGON FARM RESORT</div>
       <div class="footer-address">Xã Đất Đỏ, TP. Hồ Chí Minh</div>
       <div class="footer-contact">
-        Hotline / Zalo: <a href="tel:0909000712" style="color: #ffd885;">0909 000 712</a> &nbsp;·&nbsp;
-        <a href="https://saigonfarmresort.com" style="color: #ffd885;">saigonfarmresort.com</a>
+        Hotline / Zalo hỗ trợ: <a href="tel:0909000712" style="color: #ffd885;">0909 000 712</a> &nbsp;·&nbsp;
+        <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" style="color: #ffd885;"><i class="fa-brands fa-zalo"></i> Chat Zalo trực tiếp</a>
       </div>
       <div class="footer-distributors">
         Phân phối: Đại Chúng Properties &nbsp;·&nbsp; AZ Property Group
