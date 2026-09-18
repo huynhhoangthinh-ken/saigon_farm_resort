@@ -432,7 +432,6 @@
     .hero-slide img {
       width: 100%;
       height: auto;
-      max-height: 520px;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       display: block;
@@ -440,7 +439,7 @@
     }
 
     .hero-slide.active img {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
     .hero-slider-nav-btn {
@@ -537,20 +536,21 @@
       line-height: 1.45;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .hero-slider-container {
         border-radius: 12px;
       }
       .hero-slide img {
-        aspect-ratio: 16 / 10;
-        max-height: 340px;
-        min-height: 210px;
-        object-fit: cover;
+        aspect-ratio: 4 / 3 !important;
+        max-height: none !important;
+        height: auto !important;
+        object-fit: cover !important;
+        object-position: center center !important;
       }
       .hero-photo-caption {
         font-size: 12.5px;
-        padding: 8px 10px 2px;
-        min-height: 34px;
+        padding: 8px 8px 2px;
+        min-height: 32px;
       }
       .hero-slider-dots {
         bottom: 8px;
