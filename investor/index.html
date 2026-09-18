@@ -405,29 +405,135 @@
       }
     }
 
-    /* Khung ảnh Hero rõ ràng, không có chữ đè */
-    .hero-showcase-frame {
+    /* Khung Slider Hero tự động chạy ngang tinh tế */
+    .hero-slider-container {
       border-radius: var(--radius-md);
       overflow: hidden;
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-card);
       background: #e8e2d8;
+      position: relative;
     }
 
-    .hero-showcase-frame img {
+    .hero-slider-track {
+      display: flex;
+      width: 100%;
+      transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: transform;
+    }
+
+    .hero-slide {
+      min-width: 100%;
+      flex-shrink: 0;
+      position: relative;
+      background: #183024;
+    }
+
+    .hero-slide img {
       width: 100%;
       height: auto;
-      max-height: 460px;
+      max-height: 520px;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       display: block;
+      transition: transform 6s ease-out;
+    }
+
+    .hero-slide.active img {
+      transform: scale(1.03);
+    }
+
+    .hero-slider-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(18, 36, 26, 0.55);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      transition: var(--transition);
+      z-index: 4;
+      opacity: 0;
+    }
+
+    .hero-slider-container:hover .hero-slider-nav-btn {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hero-slider-nav-btn {
+        opacity: 0.85;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+      }
+    }
+
+    .hero-slider-prev {
+      left: 12px;
+    }
+
+    .hero-slider-next {
+      right: 12px;
+    }
+
+    .hero-slider-nav-btn:hover {
+      background: rgba(18, 36, 26, 0.9);
+      color: #ffd885;
+      border-color: #ffd885;
+    }
+
+    .hero-slider-dots {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 4;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+
+    .hero-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      padding: 0;
+    }
+
+    .hero-dot.active {
+      width: 22px;
+      border-radius: 10px;
+      background: #ffd885;
     }
 
     .hero-photo-caption {
       text-align: center;
-      font-size: 13px;
-      color: var(--color-muted);
-      padding: 10px 14px 4px;
-      font-style: italic;
+      font-size: 13.5px;
+      color: var(--color-forest);
+      padding: 12px 14px 4px;
+      font-weight: 600;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     /* ================================================================
@@ -2351,12 +2457,51 @@
         </a>
       </div>
 
-      <!-- Khung Ảnh Phối Cảnh Tương Lai Khu Resort 5 Sao (Hình Độc Lập, Không Chữ Đè Lên Hình) -->
-      <div class="hero-showcase-frame">
-        <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.webp" alt="Phối cảnh tổng thể 3D Saigon Farm Resort" loading="eager">
+      <!-- Khung Slider Phối Cảnh Nghỉ Dưỡng 5 Sao Tự Động Chạy Ngang Tinh Tế -->
+      <div class="hero-slider-container" id="heroSlider">
+        <div class="hero-slider-track" id="heroSliderTrack">
+          <!-- Slide 1: Biệt phủ bình minh bên cánh đồng lúa vàng -->
+          <div class="hero-slide active">
+            <img src="assets/Index_asset/Hero_Slider/hero_slide_1.jpg" alt="Biệt Phủ Điền Trang đón bình minh bên cánh đồng lúa chín" loading="eager">
+          </div>
+          <!-- Slide 2: Panorama toàn cảnh mặt hồ Lồ Ồ 100 ha và quần thể điền trang hoàng hôn -->
+          <div class="hero-slide">
+            <img src="assets/Index_asset/Hero_Slider/hero_slide_2.jpg" alt="Panorama toàn cảnh quần thể điền trang bên hồ Lồ Ồ 100 ha" loading="lazy">
+          </div>
+          <!-- Slide 3: Hồ bơi vô cực điện phân khoáng view cánh đồng lúa xanh ngát -->
+          <div class="hero-slide">
+            <img src="assets/Index_asset/Hero_Slider/hero_slide_3.jpg" alt="Hồ bơi vô cực khoáng muối hướng trọn cánh đồng lúa xanh ngát" loading="lazy">
+          </div>
+          <!-- Slide 4: Thảo nguyên xanh và câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên -->
+          <div class="hero-slide">
+            <img src="assets/Index_asset/Hero_Slider/hero_slide_4.jpg" alt="Câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên bên dòng suối mát" loading="lazy">
+          </div>
+          <!-- Slide 5: Clubhouse ven hồ và bến thuyền kayak hoàng hôn -->
+          <div class="hero-slide">
+            <img src="assets/Index_asset/Hero_Slider/hero_slide_5.jpg" alt="Clubhouse hoàng hôn ven hồ Lồ Ồ và bến chèo thuyền Kayak" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Nút chuyển slide ngang -->
+        <button type="button" class="hero-slider-nav-btn hero-slider-prev" onclick="prevHeroSlide()" aria-label="Hình trước">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button type="button" class="hero-slider-nav-btn hero-slider-next" onclick="nextHeroSlide()" aria-label="Hình tiếp theo">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Dots điều hướng -->
+        <div class="hero-slider-dots" id="heroSliderDots">
+          <button type="button" class="hero-dot active" onclick="goToHeroSlide(0)" aria-label="Slide 1"></button>
+          <button type="button" class="hero-dot" onclick="goToHeroSlide(1)" aria-label="Slide 2"></button>
+          <button type="button" class="hero-dot" onclick="goToHeroSlide(2)" aria-label="Slide 3"></button>
+          <button type="button" class="hero-dot" onclick="goToHeroSlide(3)" aria-label="Slide 4"></button>
+          <button type="button" class="hero-dot" onclick="goToHeroSlide(4)" aria-label="Slide 5"></button>
+        </div>
       </div>
-      <div class="hero-photo-caption">
-        Phối cảnh 3D tổng thể: Quần thể Biệt Phủ Điền Trang quy hoạch nghỉ dưỡng 5 sao ôm trọn mặt hồ Lồ Ồ 100 ha và cánh đồng lúa xanh ngát.
+
+      <div class="hero-photo-caption" id="heroSlideCaption">
+        Biệt Phủ Điền Trang đón ánh bình minh ấm áp bên cánh đồng lúa vàng ngát hương.
       </div>
     </div>
   </section>
@@ -3334,6 +3479,115 @@
       if (activeBtn) activeBtn.classList.add('active');
       if (activePane) activePane.classList.add('active');
     }
+
+    // ================================================================
+    // HERO SLIDER CONTROLLER (TỰ ĐỘNG CHẠY NGANG TINH TẾ)
+    // ================================================================
+    const heroSlideCaptions = [
+      'Biệt Phủ Điền Trang đón ánh bình minh ấm áp bên cánh đồng lúa chín vàng ngát hương.',
+      'Panorama toàn cảnh: Quần thể điền trang nghỉ dưỡng ôm trọn mặt nước tự nhiên hồ Lồ Ồ 100 ha lúc hoàng hôn.',
+      'Hồ bơi vô cực điện phân khoáng muối trung tâm — phóng tầm mắt ngắm trọn dải lúa xanh ngát chân trời.',
+      'Việt Mã Viên — Câu lạc bộ cưỡi ngựa quý tộc đẳng cấp trên đồi cỏ xanh ven suối.',
+      'Clubhouse hoàng hôn ven hồ Lồ Ồ, bến thuyền Kayak & SUP giữa cảnh sắc thiên nhiên nguyên bản.'
+    ];
+
+    let currentHeroSlide = 0;
+    const totalHeroSlides = 5;
+    let heroSliderTimer = null;
+
+    function updateHeroSlider(index) {
+      currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
+      const track = document.getElementById('heroSliderTrack');
+      const captionEl = document.getElementById('heroSlideCaption');
+      const dots = document.querySelectorAll('#heroSliderDots .hero-dot');
+      const slides = document.querySelectorAll('.hero-slide');
+
+      if (track) {
+        track.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
+      }
+
+      slides.forEach((s, idx) => {
+        if (idx === currentHeroSlide) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+
+      dots.forEach((dot, idx) => {
+        if (idx === currentHeroSlide) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+
+      if (captionEl) {
+        captionEl.style.opacity = '0';
+        setTimeout(() => {
+          captionEl.textContent = heroSlideCaptions[currentHeroSlide] || '';
+          captionEl.style.opacity = '1';
+        }, 220);
+      }
+    }
+
+    function nextHeroSlide() {
+      updateHeroSlider(currentHeroSlide + 1);
+      resetHeroSliderTimer();
+    }
+
+    function prevHeroSlide() {
+      updateHeroSlider(currentHeroSlide - 1);
+      resetHeroSliderTimer();
+    }
+
+    function goToHeroSlide(index) {
+      updateHeroSlider(index);
+      resetHeroSliderTimer();
+    }
+
+    function startHeroSliderTimer() {
+      if (heroSliderTimer) clearInterval(heroSliderTimer);
+      heroSliderTimer = setInterval(() => {
+        updateHeroSlider(currentHeroSlide + 1);
+      }, 4500); // Chuyển slide êm ái mỗi 4.5 giây
+    }
+
+    function resetHeroSliderTimer() {
+      startHeroSliderTimer();
+    }
+
+    // Touch swipe support cho Hero Slider trên Mobile
+    const heroSliderElem = document.getElementById('heroSlider');
+    if (heroSliderElem) {
+      let heroTouchStartX = 0;
+      let heroTouchEndX = 0;
+
+      heroSliderElem.addEventListener('touchstart', (e) => {
+        heroTouchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      heroSliderElem.addEventListener('touchend', (e) => {
+        heroTouchEndX = e.changedTouches[0].screenX;
+        const diff = heroTouchStartX - heroTouchEndX;
+        if (diff > 45) {
+          nextHeroSlide();
+        } else if (diff < -45) {
+          prevHeroSlide();
+        }
+      }, { passive: true });
+
+      // Tạm dừng khi rê chuột trên desktop
+      heroSliderElem.addEventListener('mouseenter', () => {
+        if (heroSliderTimer) clearInterval(heroSliderTimer);
+      });
+      heroSliderElem.addEventListener('mouseleave', () => {
+        startHeroSliderTimer();
+      });
+    }
+
+    // Khởi động slider
+    startHeroSliderTimer();
   </script>
 </body>
 </html>
