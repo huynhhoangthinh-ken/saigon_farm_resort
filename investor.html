@@ -19,10 +19,10 @@
   <meta property="og:title" content="Saigon Farm Resort | Điền Trang Nghỉ Dưỡng Bên Hồ 100ha">
   <meta property="og:description" content="Khuôn viên điền trang sinh thái ven hồ Lồ Ồ, Đất Đỏ. Diện tích lớn, tiện ích 5 sao, quản gia vận hành và bản sắc Việt độc bản. Sổ đỏ thổ cư 100%.">
   <meta property="og:image" content="assets/Index_asset/Flycam/Flycam_Tong_quan_SGFR/Flycam_SGFR_1.webp">
-  <meta property="og:url" content="https://saigonfarmresort.com/investor">
+  <meta property="og:url" content="https://saigonfarmresort.com/investment">
   <meta property="og:type" content="website">
 
-  <link rel="canonical" href="https://saigonfarmresort.com/investor">
+  <link rel="canonical" href="https://saigonfarmresort.com/investment">
   <link rel="icon" type="image/x-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
   <link rel="apple-touch-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
   <meta name="theme-color" content="#183024">
@@ -196,23 +196,41 @@
 
     .section-title {
       font-family: var(--font-serif);
-      font-size: 27px;
+      font-size: clamp(19px, 5vw, 26px);
       line-height: 1.35;
       color: var(--color-forest);
       font-weight: 700;
       margin-bottom: 12px;
+      text-wrap: balance;
     }
 
     @media (min-width: 768px) {
       .section-title {
         font-size: 33px;
+        line-height: 1.3;
       }
+    }
+
+    .br-mobile {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .br-mobile {
+        display: none;
+      }
+    }
+
+    .text-phrase {
+      display: inline-block;
+      white-space: nowrap;
     }
 
     .section-desc {
       color: var(--color-muted);
       font-size: 15px;
       line-height: 1.7;
+      text-wrap: pretty;
     }
 
     /* ================================================================
@@ -2067,11 +2085,12 @@
 
     .form-heading-title {
       font-family: var(--font-serif);
-      font-size: clamp(23px, 3.8vw, 28px);
+      font-size: clamp(20px, 4.8vw, 28px);
       font-weight: 700;
       color: var(--color-forest);
       margin-bottom: 8px;
       line-height: 1.3;
+      text-wrap: balance;
     }
 
     .form-heading-sub {
@@ -2602,7 +2621,7 @@
           <span class="heritage-ornament-line"></span>
         </div>
         <span class="section-tag">VỊ TRÍ CHIẾN LƯỢC</span>
-        <h2 class="section-title">Tâm Điểm Kết Nối Hạ Tầng Trọng Điểm</h2>
+        <h2 class="section-title"><span class="text-phrase">Tâm&nbsp;Điểm Kết&nbsp;Nối</span><br class="br-mobile"><span class="text-phrase">Hạ&nbsp;Tầng Trọng&nbsp;Điểm</span></h2>
         <p class="section-desc">
           Tọa lạc tại Xã Đất Đỏ, TP. Hồ Chí Minh — Saigon Farm Resort sở hữu tọa độ vàng kết nối nhanh chóng đến các trung tâm kinh tế, du lịch và hạ tầng giao thông quốc gia:
         </p>
@@ -2671,7 +2690,7 @@
           <span class="heritage-ornament-line"></span>
         </div>
         <span class="section-tag">GIÁ TRỊ KHÁC BIỆT ĐỘC BẢN</span>
-        <h2 class="section-title">Tại Sao Saigon Farm Resort Khác Biệt Hoàn Toàn Với Phần Còn Lại Của Thị Trường?</h2>
+        <h2 class="section-title"><span class="text-phrase">Tại&nbsp;Sao Saigon&nbsp;Farm&nbsp;Resort</span><br class="br-mobile"><span class="text-phrase">Khác&nbsp;Biệt Hoàn&nbsp;Toàn Với&nbsp;Thị&nbsp;Trường?</span></h2>
         <p class="section-desc">
           Sự kết hợp chưa từng có giữa không gian điền trang riêng tư diện tích lớn và chuỗi dịch vụ vận hành chuẩn Resort 5 sao, kiến tạo trên nền tảng Bản Sắc Việt trường tồn độc đáo.
         </p>
@@ -2729,7 +2748,7 @@
           <span class="heritage-ornament-line"></span>
         </div>
         <span class="section-tag">HỆ THỐNG TIỆN ÍCH ĐỈNH CAO</span>
-        <h2 class="section-title">Quần Thể Tiện Ích Nghỉ Dưỡng 5 Sao Quy Mô 30.000 m²</h2>
+        <h2 class="section-title"><span class="text-phrase">Quần&nbsp;Thể Tiện&nbsp;Ích Nghỉ&nbsp;Dưỡng</span><br class="br-mobile"><span class="text-phrase">5&nbsp;Sao Quy&nbsp;Mô 30.000&nbsp;m²</span></h2>
         <p class="section-desc">
           Mỗi không gian tiện ích được thiết kế công phu để vừa nâng niu phong cách sống thượng lưu, vừa bảo tồn trọn vẹn văn hóa Việt cho 3 thế hệ.
         </p>
@@ -2863,7 +2882,7 @@
           <span class="heritage-ornament-line"></span>
         </div>
         <span class="section-tag">ĐỊNH HƯỚNG MỤC TIÊU</span>
-        <h2 class="section-title">Sản phẩm "may đo" theo nhu cầu</h2>
+        <h2 class="section-title"><span class="text-phrase">Sản&nbsp;Phẩm "May&nbsp;Đo"</span> <span class="text-phrase">Theo&nbsp;Nhu&nbsp;Cầu</span></h2>
         <p class="section-desc">
           Mỗi dòng sản phẩm được may đo cho một mục đích rõ ràng. Chạm để chọn đúng mục anh chị quan tâm:
         </p>
@@ -2922,7 +2941,7 @@
   <section class="trust-section section-spacing" id="ly-do">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Lợi ích đầu tư</h2>
+        <h2 class="section-title"><span class="text-phrase">Lợi&nbsp;Ích Đầu&nbsp;Tư</span></h2>
       </div>
 
       <div class="trust-grid">
@@ -2982,7 +3001,7 @@
           <span class="heritage-ornament-line"></span>
         </div>
         <span class="section-tag">BỘ SƯU TẬP KHUÔN VIÊN ĐIỀN TRANG</span>
-        <h2 class="section-title">Ba dòng sản phẩm</h2>
+        <h2 class="section-title"><span class="text-phrase">Ba&nbsp;Dòng Sản&nbsp;Phẩm</span></h2>
       </div>
 
       <!-- 5.1 Biệt Phủ Điền Trang -->
@@ -3149,7 +3168,7 @@
           <span class="heritage-ornament-line"></span>
         </div>
         <span class="section-tag">KHẢO SÁT THỰC ĐỊA TẠI CHỖ</span>
-        <h2 class="section-title">Hiện Trạng Thực Tế Mặt Hồ Lồ Ồ 100ha</h2>
+        <h2 class="section-title"><span class="text-phrase">Hiện&nbsp;Trạng Thực&nbsp;Tế</span><br class="br-mobile"><span class="text-phrase">Mặt&nbsp;Hồ Lồ&nbsp;Ồ 100ha</span></h2>
         <p class="section-desc">
           Góc nhìn thực tế từ flycam: Quần thể điền trang ôm trọn mặt nước tự nhiên hồ Lồ Ồ 100 ha và dải đồng lúa xanh mát. Đất cao ráo, sẵn sàng công chứng sang tên sổ đỏ ngay.
         </p>
@@ -3199,7 +3218,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">ƯU ĐÃI ĐẶC QUYỀN ĐỢT 1</span>
-        <h2 class="section-title">Ba cách thanh toán, ưu đãi tới 1 tỷ đồng</h2>
+        <h2 class="section-title"><span class="text-phrase">Ba&nbsp;Cách Thanh&nbsp;Toán,</span><br class="br-mobile"><span class="text-phrase">Ưu&nbsp;Đãi Tới 1&nbsp;Tỷ&nbsp;Đồng</span></h2>
       </div>
 
       <div class="policy-cards-grid">
@@ -3261,7 +3280,7 @@
     <div class="container">
       <div class="form-wrapper-box">
         <div class="form-heading">
-          <h2 class="form-heading-title">Nhận bảng giá và đặt lịch đi xem</h2>
+          <h2 class="form-heading-title"><span class="text-phrase">Nhận&nbsp;Bảng&nbsp;Giá</span><br class="br-mobile"><span class="text-phrase">&amp; Đặt&nbsp;Lịch Đi&nbsp;Xem</span></h2>
           <p class="form-heading-sub">
             Bảng giá từng mã nền và bảng tính dòng tiền do chuyên viên gửi riêng.<br>
             Anh chị đăng ký đi xem thì bên em đưa đón bằng xe riêng từ Sài Gòn, ra tận nơi coi mốc ranh và hồ sơ sổ đỏ.
