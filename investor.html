@@ -147,12 +147,12 @@
     }
 
     .section-spacing {
-      padding: 56px 0;
+      padding: 50px 0;
     }
 
     @media (max-width: 768px) {
       .section-spacing {
-        padding: 40px 0;
+        padding: 28px 0;
       }
     }
 
@@ -1115,7 +1115,7 @@
       background: var(--bg-card);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      padding: 26px 20px;
+      padding: 18px 20px;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
     }
@@ -1125,34 +1125,42 @@
       box-shadow: var(--shadow-card);
     }
 
-    .trust-icon-box {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-light) 100%);
-      color: #ffd885;
+    .trust-card-header {
       display: flex;
       align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .trust-icon-mini {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-light) 100%);
+      color: #ffd885;
+      display: inline-flex;
+      align-items: center;
       justify-content: center;
-      font-size: 20px;
-      margin-bottom: 16px;
+      font-size: 14px;
+      flex-shrink: 0;
     }
 
     .trust-card-title {
       font-family: var(--font-heading);
-      font-size: 14.5px;
+      font-size: 13.5px;
       font-weight: 800;
-      line-height: 1.45;
+      line-height: 1.35;
       color: var(--color-forest);
       text-transform: uppercase;
-      letter-spacing: 0.4px;
-      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+      margin: 0;
     }
 
     .trust-card-desc {
       font-size: 14px;
       color: var(--color-muted);
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
     .infra-banner {
@@ -2647,14 +2655,6 @@
             <p class="segment-card-desc">
               Dinh thự cho gia đình, đối tác, khách hàng. Ủy thác vận hành an nhàn: <strong>Cam kết thuê lại 150 đêm × 4 triệu = 600 triệu/năm</strong>, <strong>215 đêm sử dụng/cho thuê tự do</strong> trong năm. Một nơi sinh dòng tiền, gia đình và sức khỏe.
             </p>
-            <div class="segment-card-cta-row">
-              <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
-                <i class="fa-brands fa-zalo"></i> Nhắn Zalo
-              </a>
-              <a href="tel:0909000712" class="btn-segment-phone">
-                <i class="fa-solid fa-phone"></i> Gọi hotline
-              </a>
-            </div>
           </div>
         </div>
 
@@ -2670,14 +2670,6 @@
               Khách thuê chuyên gia cao cấp có sẵn: <strong>4 triệu/phòng × 30 phòng = 120 triệu/tháng → 1,44 tỷ/năm</strong>.<br>
               <strong>Hợp đồng thuê có sẵn từ 5 - 10 năm liên tiếp</strong>. MDS Living vận hành cho quý vị.
             </p>
-            <div class="segment-card-cta-row">
-              <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
-                <i class="fa-brands fa-zalo"></i> Nhắn Zalo
-              </a>
-              <a href="tel:0909000712" class="btn-segment-phone">
-                <i class="fa-solid fa-phone"></i> Gọi hotline
-              </a>
-            </div>
           </div>
         </div>
 
@@ -2692,14 +2684,6 @@
             <p class="segment-card-desc">
               Dành cho nhà đầu tư đồng hành, <strong>không cần xây</strong>. Thanh toán <strong>70% công chứng mua bán</strong>, <strong>30% thanh toán năm 2027</strong> khi chuyển nhượng cho khách mới. <strong>CĐT đồng hành đầu tư</strong>.
             </p>
-            <div class="segment-card-cta-row">
-              <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
-                <i class="fa-brands fa-zalo"></i> Nhắn Zalo
-              </a>
-              <a href="tel:0909000712" class="btn-segment-phone">
-                <i class="fa-solid fa-phone"></i> Gọi hotline
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -2712,17 +2696,16 @@
   <section class="trust-section section-spacing" id="ly-do">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">CAM KẾT THỰC CHẤT</span>
-        <h2 class="section-title">Ba thứ anh chị nhận được ngay khi ký</h2>
+        <h2 class="section-title">Lợi ích đầu tư</h2>
       </div>
 
       <div class="trust-grid">
         <!-- Lý do 1 -->
         <div class="trust-card">
-          <div class="trust-icon-box">
-            <i class="fa-solid fa-certificate"></i>
+          <div class="trust-card-header">
+            <span class="trust-icon-mini"><i class="fa-solid fa-certificate"></i></span>
+            <h3 class="trust-card-title">SỔ ĐỎ TRAO TAY TRONG 10 ĐẾN 20 NGÀY</h3>
           </div>
-          <h3 class="trust-card-title">SỔ ĐỎ TRAO TAY TRONG 10 ĐẾN 20 NGÀY</h3>
           <p class="trust-card-desc">
             Đất ở lâu dài 100% thổ cư, sổ đỏ riêng từng nền.<br>
             Ký hợp đồng là ra công chứng sang tên luôn.
@@ -2731,10 +2714,10 @@
 
         <!-- Lý do 2 -->
         <div class="trust-card">
-          <div class="trust-icon-box">
-            <i class="fa-solid fa-gem"></i>
+          <div class="trust-card-header">
+            <span class="trust-icon-mini"><i class="fa-solid fa-gem"></i></span>
+            <h3 class="trust-card-title">MẬT ĐỘ SINH THÁI TỐI ĐA</h3>
           </div>
-          <h3 class="trust-card-title">MẬT ĐỘ SINH THÁI TỐI ĐA</h3>
           <p class="trust-card-desc">
             Toàn khu hữu hạn, không có giai đoạn hai.<br>
             Mật độ xây dựng tối đa 20%, hơn nửa diện tích để làm cây xanh và mặt nước.
@@ -2743,10 +2726,10 @@
 
         <!-- Lý do 3 -->
         <div class="trust-card">
-          <div class="trust-icon-box">
-            <i class="fa-solid fa-tree"></i>
+          <div class="trust-card-header">
+            <span class="trust-icon-mini"><i class="fa-solid fa-tree"></i></span>
+            <h3 class="trust-card-title">TIỆN ÍCH HOÀN CHỈNH, CĐT LO HẾT</h3>
           </div>
-          <h3 class="trust-card-title">TIỆN ÍCH HOÀN CHỈNH, CHỦ ĐẦU TƯ LO HẾT</h3>
           <p class="trust-card-desc">
             Clubhouse ven hồ, hồ bơi vô cực, bến thuyền kayak, câu lạc bộ cưỡi ngựa, sân pickleball có mái che, nông trại hữu cơ.<br>
             Toàn bộ vận hành khép kín, chủ nhân thảnh thơi hưởng thụ.
@@ -2820,14 +2803,8 @@
           </div>
 
           <div class="product-cta-group">
-            <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
-              <i class="fa-brands fa-zalo"></i> Nhận tư vấn Biệt Phủ qua Zalo
-            </a>
-            <a href="tel:0909000712" class="btn btn-outline-forest">
-              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
-            </a>
-            <a href="#form-dang-ky" class="btn btn-form-anchor">
-              <i class="fa-solid fa-calendar-check"></i> Đăng ký xem thực địa
+            <a href="#form-dang-ky" class="btn btn-gold">
+              <i class="fa-solid fa-calendar-check"></i> Đăng ký tham quan thực địa &amp; Nhận bảng giá
             </a>
           </div>
         </div>
@@ -2876,14 +2853,8 @@
           </div>
 
           <div class="product-cta-group">
-            <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
-              <i class="fa-brands fa-zalo"></i> Nhận bài toán Điền An qua Zalo
-            </a>
-            <a href="tel:0909000712" class="btn btn-outline-forest">
-              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
-            </a>
-            <a href="#form-dang-ky" class="btn btn-form-anchor">
-              <i class="fa-solid fa-calendar-check"></i> Đăng ký xem thực địa
+            <a href="#form-dang-ky" class="btn btn-gold">
+              <i class="fa-solid fa-calendar-check"></i> Đăng ký tham quan thực địa &amp; Nhận bảng giá
             </a>
           </div>
         </div>
@@ -2931,14 +2902,8 @@
           </div>
 
           <div class="product-cta-group">
-            <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
-              <i class="fa-brands fa-zalo"></i> Nhận chính sách Điền Sản qua Zalo
-            </a>
-            <a href="tel:0909000712" class="btn btn-outline-forest">
-              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
-            </a>
-            <a href="#form-dang-ky" class="btn btn-form-anchor">
-              <i class="fa-solid fa-calendar-check"></i> Đăng ký xem thực địa
+            <a href="#form-dang-ky" class="btn btn-gold">
+              <i class="fa-solid fa-calendar-check"></i> Đăng ký tham quan thực địa &amp; Nhận bảng giá
             </a>
           </div>
         </div>
