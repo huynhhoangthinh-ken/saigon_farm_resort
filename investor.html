@@ -2349,9 +2349,6 @@
         <a href="#form-dang-ky" class="btn btn-gold">
           <i class="fa-solid fa-file-invoice-dollar"></i> NHẬN BẢNG GIÁ &amp; ĐẶT LỊCH ĐI XEM
         </a>
-        <a href="tel:0909000712" class="btn btn-outline-forest">
-          <i class="fa-solid fa-phone"></i> Gọi ngay 0909 000 712
-        </a>
       </div>
 
       <!-- Khung Ảnh Phối Cảnh Tương Lai Khu Resort 5 Sao (Hình Độc Lập, Không Chữ Đè Lên Hình) -->
@@ -3078,11 +3075,6 @@
           <button type="submit" class="btn-submit-lead" id="btnSubmit">
             <i class="fa-solid fa-paper-plane"></i> GỬI THÔNG TIN &amp; NHẬN BẢNG GIÁ
           </button>
-
-          <!-- Dưới nút -->
-          <div class="form-direct-links">
-            Hoặc gọi thẳng <a href="tel:0909000712">0909 000 712</a> · <a href="https://zalo.me/0909000712" target="_blank" rel="noopener">Chat Zalo</a>
-          </div>
         </form>
 
         <!-- Báo sau khi gửi -->
@@ -3327,8 +3319,10 @@
       const successBanner = document.getElementById('formSuccess');
       successBanner.style.display = 'block';
 
-      // Scroll form wrapper smoothly into center view
-      successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Chuyển hướng sang trang cảm ơn để track conversion (Google Ads / FB Pixel / TikTok Ads)
+      setTimeout(() => {
+        window.location.href = '/cam-on';
+      }, 800);
     }
 
     // Chuyển Tab Tiện Ích (Phối Cảnh 3D / Sơ Đồ Quy Hoạch)

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!-- Google Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L9EZXY66G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8L9EZXY66G');
+    // Event tracking: Generate Lead Conversion
+    gtag('event', 'conversion', {'send_to': 'G-8L9EZXY66G/lead_submitted'});
+  </script>
+
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Cảm Ơn Quý Khách | Saigon Farm Resort</title>
+  <meta name="description" content="Cảm ơn quý khách đã đăng ký nhận thông tin và bảng giá dự án Saigon Farm Resort. Chuyên viên sẽ liên hệ và gửi tài liệu chi tiết qua Zalo trong ít phút.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="canonical" href="https://saigonfarmresort.com/cam-on">
+  <link rel="icon" type="image/x-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
+  <link rel="apple-touch-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
+  <meta name="theme-color" content="#183024">
+
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-page: #f6f1ea;
+      --bg-surface: #ffffff;
+      --bg-card: #fffdfa;
+      --color-forest: #183024;
+      --color-forest-dark: #0f2018;
+      --color-forest-light: #244836;
+      --color-gold: #c29b53;
+      --color-gold-hover: #aa843f;
+      --color-gold-dark: #8c6b32;
+      --color-gold-light: #ecdcb9;
+      --color-gold-subtle: #fcf8ef;
+      --color-gold-border: #dfc89f;
+      --color-dark: #141a17;
+      --color-body: #28322c;
+      --color-muted: #57645d;
+      --color-border: #e3dacb;
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Montserrat', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-card: 0 8px 30px rgba(24, 48, 36, 0.08);
+      --transition: all 0.28s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-page);
+      color: var(--color-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Vietnamese Pattern */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -60px;
+      right: -60px;
+      width: 420px;
+      height: 420px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat center;
+      background-size: contain;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      bottom: -60px;
+      left: -60px;
+      width: 380px;
+      height: 380px;
+      background: url('assets/vector_vietnam_patern/01_hoa_sen_viet.webp') no-repeat center;
+      background-size: contain;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .thankyou-card {
+      background: #ffffff;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .thankyou-card::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      width: 110px;
+      height: 110px;
+      background: url('assets/vector_vietnam_patern/07_hoa_tiet_goc_san_vuon.webp') no-repeat left top;
+      background-size: contain;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .thankyou-card::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      right: -15px;
+      width: 110px;
+      height: 110px;
+      background: url('assets/vector_vietnam_patern/07_hoa_tiet_goc_san_vuon.webp') no-repeat right bottom;
+      background-size: contain;
+      transform: rotate(180deg);
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .brand-top {
+      margin-bottom: 24px;
+    }
+
+    .brand-logo {
+      height: 60px;
+      width: auto;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .success-icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: #eef7f1;
+      border: 2px solid #84c79f;
+      color: #278c52;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 16px rgba(39, 140, 82, 0.15);
+      animation: pulseSuccess 2s infinite;
+    }
+
+    @keyframes pulseSuccess {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 16px rgba(39, 140, 82, 0.15);
+      }
+      50% {
+        transform: scale(1.04);
+        box-shadow: 0 6px 22px rgba(39, 140, 82, 0.25);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 16px rgba(39, 140, 82, 0.15);
+      }
+    }
+
+    .thankyou-title {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 4.5vw, 30px);
+      font-weight: 700;
+      color: var(--color-forest);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .thankyou-desc {
+      font-size: 15px;
+      color: var(--color-body);
+      line-height: 1.7;
+      margin-bottom: 26px;
+    }
+
+    .lead-summary-box {
+      background: var(--bg-card);
+      border: 1px dashed var(--color-gold-border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .lead-summary-title {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lead-summary-list {
+      list-style: none;
+      font-size: 14px;
+      color: var(--color-forest);
+    }
+
+    .lead-summary-list li {
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted rgba(0, 0, 0, 0.08);
+      padding-bottom: 4px;
+    }
+
+    .lead-summary-list li:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .lead-summary-label {
+      color: var(--color-muted);
+    }
+
+    .lead-summary-value {
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .thankyou-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      border-radius: 35px;
+      padding: 13px 24px;
+      text-decoration: none;
+      transition: var(--transition);
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .btn-zalo {
+      background: #0068ff;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(0, 104, 255, 0.3);
+    }
+
+    .btn-zalo:hover {
+      background: #0056d6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 104, 255, 0.45);
+    }
+
+    .btn-phone {
+      background: #ffffff;
+      border: 1.5px solid var(--color-forest);
+      color: var(--color-forest) !important;
+    }
+
+    .btn-phone:hover {
+      background: var(--color-forest);
+      color: #ffffff !important;
+      transform: translateY(-2px);
+    }
+
+    .btn-back-home {
+      color: var(--color-muted);
+      font-size: 13.5px;
+      margin-top: 14px;
+      text-decoration: underline;
+      display: inline-block;
+      transition: var(--transition);
+    }
+
+    .btn-back-home:hover {
+      color: var(--color-gold-dark);
+    }
+
+    .site-footer-mini {
+      text-align: center;
+      padding: 20px;
+      font-size: 12.5px;
+      color: var(--color-muted);
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 480px) {
+      .thankyou-card {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <div class="thankyou-card">
+      <div class="brand-top">
+        <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" class="brand-logo">
+      </div>
+
+      <div class="success-icon-wrap">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <h1 class="thankyou-title">Cảm Ơn Quý Khách!</h1>
+
+      <p class="thankyou-desc">
+        Hệ thống đã ghi nhận thông tin đăng ký nhận bảng giá dự án <strong>Saigon Farm Resort</strong>.<br>
+        Chuyên viên tư vấn cấp cao của Chủ đầu tư sẽ gửi bảng giá chi tiết từng mã nền qua Zalo trong ít phút.
+      </p>
+
+      <div class="lead-summary-box" id="leadSummaryBox" style="display: none;">
+        <div class="lead-summary-title">
+          <i class="fa-solid fa-file-lines"></i> THÔNG TIN ĐÃ ĐĂNG KÝ
+        </div>
+        <ul class="lead-summary-list">
+          <li>
+            <span class="lead-summary-label">Khách hàng:</span>
+            <span class="lead-summary-value" id="summaryName">--</span>
+          </li>
+          <li>
+            <span class="lead-summary-label">Số điện thoại / Zalo:</span>
+            <span class="lead-summary-value" id="summaryPhone">--</span>
+          </li>
+          <li>
+            <span class="lead-summary-label">Dòng sản phẩm:</span>
+            <span class="lead-summary-value" id="summaryInterest">--</span>
+          </li>
+          <li>
+            <span class="lead-summary-label">Thời gian tiếp nhận:</span>
+            <span class="lead-summary-value" id="summaryTime">Vừa xong</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="thankyou-actions">
+        <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-zalo">
+          <i class="fa-brands fa-zalo"></i> Nhận Bảng Giá Trực Tiếp Qua Zalo Ngay
+        </a>
+        <a href="tel:0909000712" class="btn btn-phone">
+          <i class="fa-solid fa-phone"></i> Kết nối hotline 0909 000 712
+        </a>
+      </div>
+
+      <a href="/investor" class="btn-back-home">
+        <i class="fa-solid fa-arrow-left"></i> Quay lại trang thông tin dự án
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer-mini">
+    © 2026 MDS LAND &amp; LIVING · SAIGON FARM RESORT. All rights reserved.
+  </footer>
+
+  <script>
+    // Đọc thông tin lead vừa gửi từ localStorage để cá nhân hóa
+    try {
+      const leads = JSON.parse(localStorage.getItem('sgfr_ads_leads') || '[]');
+      if (leads.length > 0) {
+        const lastLead = leads[leads.length - 1];
+        if (lastLead && lastLead.phone) {
+          document.getElementById('summaryName').textContent = lastLead.name || 'Quý khách';
+          document.getElementById('summaryPhone').textContent = lastLead.phone;
+          document.getElementById('summaryInterest').textContent = lastLead.interest || 'Chưa rõ, cần tư vấn';
+          document.getElementById('leadSummaryBox').style.display = 'block';
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  </script>
+</body>
+</html>
