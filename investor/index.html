@@ -817,61 +817,57 @@
     }
 
     .segment-card-cta-row {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      display: inline-flex;
+      align-items: center;
       gap: 8px;
       margin-top: auto;
-    }
-
-    @media (max-width: 480px) {
-      .segment-card-cta-row {
-        grid-template-columns: 1fr;
-      }
+      padding-top: 10px;
     }
 
     .btn-segment-zalo {
-      background: linear-gradient(135deg, #0068ff 0%, #0052cc 100%);
+      background: #0068ff;
       color: #ffffff !important;
       font-family: var(--font-heading);
-      font-size: 12.5px;
-      font-weight: 700;
-      padding: 9px 10px;
-      border-radius: 7px;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 6px 13px;
+      border-radius: 20px;
       text-align: center;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 5px;
       text-decoration: none;
       transition: var(--transition);
       border: none;
     }
 
     .btn-segment-zalo:hover {
-      background: #004ecc;
+      background: #0052cc;
       transform: translateY(-1px);
     }
 
     .btn-segment-phone {
-      background: var(--color-gold-subtle);
+      background: #ffffff;
       border: 1px solid var(--color-gold-border);
       color: var(--color-forest) !important;
       font-family: var(--font-heading);
-      font-size: 12.5px;
-      font-weight: 700;
-      padding: 9px 10px;
-      border-radius: 7px;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
       text-align: center;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 5px;
       text-decoration: none;
       transition: var(--transition);
     }
 
     .btn-segment-phone:hover {
-      background: var(--color-gold);
+      background: var(--color-gold-subtle);
+      border-color: var(--color-gold);
       color: #121815 !important;
       transform: translateY(-1px);
     }
@@ -2649,7 +2645,7 @@
             <span class="segment-intent-tag">NHÀ ĐỂ CẢ GIA ĐÌNH VỀ CUỐI TUẦN</span>
             <h3 class="segment-product-name">Biệt Phủ Điền Trang</h3>
             <p class="segment-card-desc">
-              Dinh thự cho ba thế hệ. Ủy thác vận hành an nhàn: <strong>Cam kết thuê lại 150 đêm × 4 triệu = 600 triệu/năm</strong> (+260 triệu đêm linh hoạt). Vẫn còn <strong>150 đêm nghỉ dưỡng tự do</strong> trong năm cho gia đình.
+              Dinh thự cho gia đình, đối tác, khách hàng. Ủy thác vận hành an nhàn: <strong>Cam kết thuê lại 150 đêm × 4 triệu = 600 triệu/năm</strong>, <strong>215 đêm sử dụng/cho thuê tự do</strong> trong năm. Một nơi sinh dòng tiền, gia đình và sức khỏe.
             </p>
             <div class="segment-card-cta-row">
               <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
@@ -2671,8 +2667,8 @@
             <span class="segment-intent-tag">TÀI SẢN CÓ TIỀN VỀ MỖI THÁNG</span>
             <h3 class="segment-product-name">Điền An</h3>
             <p class="segment-card-desc">
-              Đã có khách thuê sẵn: <strong>4 triệu/ngày × 30 ngày = 120 triệu/tháng</strong> → <strong>1,44 tỷ/năm</strong>.<br>
-              <strong style="color: var(--color-forest);">Doanh thu cam kết từ CĐT: từ 600 triệu đồng/năm trong 3 – 10 năm</strong>.
+              Khách thuê chuyên gia cao cấp có sẵn: <strong>4 triệu/phòng × 30 phòng = 120 triệu/tháng → 1,44 tỷ/năm</strong>.<br>
+              <strong>Hợp đồng thuê có sẵn từ 5 - 10 năm liên tiếp</strong>. MDS Living vận hành cho quý vị.
             </p>
             <div class="segment-card-cta-row">
               <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
@@ -2694,7 +2690,7 @@
             <span class="segment-intent-tag">ĐẦU TƯ ĐÓN SÓNG HẠ TẦNG</span>
             <h3 class="segment-product-name">Điền Sản</h3>
             <p class="segment-card-desc">
-              Dành cho nhà đầu tư đợt đầu, <strong>không cần xây</strong>. Thanh toán <strong>70% công chứng nhận sổ</strong>, <strong>30% thanh toán năm 2027</strong> khi chuyển nhượng cho khách mới. <strong>CĐT đồng hành đầu tư</strong>.
+              Dành cho nhà đầu tư đồng hành, <strong>không cần xây</strong>. Thanh toán <strong>70% công chứng mua bán</strong>, <strong>30% thanh toán năm 2027</strong> khi chuyển nhượng cho khách mới. <strong>CĐT đồng hành đầu tư</strong>.
             </p>
             <div class="segment-card-cta-row">
               <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
@@ -2789,37 +2785,36 @@
           <div class="product-tag-inline">DÒNG NGHỈ DƯỠNG SUM HỌP GIA ĐÌNH</div>
           <h3 class="product-block-title">5.1 · BIỆT PHỦ ĐIỀN TRANG</h3>
           <p class="product-block-text">
-            Dinh thự cho ba thế hệ sum họp giữa thiên nhiên tĩnh tại bên hồ và đồng lúa. Khi gia đình không dùng, ủy thác vận hành an nhàn cho MDS Living theo <strong>phương pháp dòng tiền thực tế</strong>:
+            Dinh thự cho gia đình, đối tác, khách hàng. Ủy thác vận hành an nhàn cùng MDS Living:
           </p>
 
           <!-- Hộp logic thực tế Biệt Phủ -->
           <div class="product-logic-box">
             <div class="logic-header">
               <i class="fa-solid fa-coins" style="color: var(--color-gold);"></i>
-              BÀI TOÁN DÒNG TIỀN THỰC TẾ (MDS LIVING VẬN HÀNH)
+              BÀI TOÁN DÒNG TIỀN THỰC TẾ (ỦY THÁC MDS LIVING)
             </div>
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
-                <strong>Giai đoạn 1 — Cam kết thuê lại 150 đêm cao điểm:</strong><br>
-                MDS Living cam kết thuê lại bao tiêu với đơn giá cố định <strong>4.000.000 đ / đêm</strong> (cuối tuần, lễ, tết, hè).<br>
-                <span class="logic-calc">150 đêm × 4.000.000 đ = <strong>600 triệu đồng / năm</strong></span><br>
+                <strong>Cam kết thuê lại 150 đêm cao điểm:</strong><br>
+                MDS Living cam kết thuê lại bao tiêu với đơn giá cố định <strong>4.000.000 đ / đêm</strong>.<br>
+                <span class="logic-calc">150 đêm × 4 triệu = <strong>600 triệu đồng / năm</strong></span><br>
                 <small style="color: var(--color-muted);">Chủ nhà thực nhận cố định ~50 triệu/tháng. MDS Living chịu mọi chi phí dọn dẹp, bảo dưỡng và quản gia 24/7.</small>
               </div>
             </div>
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
-                <strong>Giai đoạn 2 — Khai thác 215 đêm linh hoạt còn lại:</strong><br>
-                Khai thác khách du lịch ngày trong tuần (giả định tỷ lệ lấp đầy khiêm tốn 30% = 65 đêm), chia sẻ 50% doanh thu phòng thực tế.<br>
-                <span class="logic-calc">Cộng thêm <strong>+260 triệu đồng / năm</strong> vào tài khoản</span>
+                <strong>215 đêm sử dụng / cho thuê tự do trong năm:</strong><br>
+                Chủ nhân tự do sử dụng hoặc gửi cho thuê thêm (chia sẻ 50% doanh thu phòng thực tế, cộng thêm <strong>+260 triệu đồng / năm</strong>).
               </div>
             </div>
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
-                <strong>Vẫn còn trọn vẹn 150 đêm nghỉ dưỡng tự do trong năm cho gia đình:</strong><br>
-                Tổng thu nhập cho thuê thụ động đạt <strong>~860 triệu đồng / năm</strong>, nhà cửa luôn được chăm sóc tinh tươm và giá trị đất tăng đều.
+                <strong>Một nơi sinh dòng tiền, gia đình và sức khỏe:</strong><br>
+                Tổng thu nhập thụ động đạt <strong>~860 triệu đồng / năm</strong>, đại gia đình sở hữu không gian nghỉ dưỡng tĩnh tại bên hồ trọn đời.
               </div>
             </div>
           </div>
@@ -2847,7 +2842,7 @@
           <div class="product-tag-inline">TÀI SẢN DÒNG TIỀN CHO THUÊ BỀN VỮNG</div>
           <h3 class="product-block-title">5.2 · ĐIỀN AN</h3>
           <p class="product-block-text">
-            Dòng tài sản cho thuê sinh lời đón đầu nguồn cầu có sẵn từ hàng nghìn chuyên gia, quản lý cấp cao tại KCN Đất Đỏ (1.000 ha), KCN Sonadezi Châu Đức và dòng khách nghỉ dưỡng cao cấp Hồ Tràm:
+            Khách thuê chuyên gia cao cấp có sẵn từ KCN Đất Đỏ (1.000 ha), KCN Sonadezi Châu Đức và du khách Hồ Tràm:
           </p>
 
           <!-- Hộp logic thực tế Điền An -->
@@ -2859,25 +2854,23 @@
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
-                <strong>Công thức khai thác thực tế:</strong><br>
-                Khuôn viên dựng cụm phòng lưu trú chuyên gia, đơn giá cho thuê thực tế:<br>
-                <span class="logic-calc">4 triệu / ngày × 30 ngày = <strong>120 triệu đồng / tháng</strong></span>
+                <strong>Công thức dòng tiền thực tế:</strong><br>
+                Khai thác cụm 30 phòng lưu trú chuyên gia cao cấp có sẵn:<br>
+                <span class="logic-calc">4 triệu/phòng × 30 phòng = <strong>120 triệu / tháng</strong> → <strong>1,44 tỷ đồng / năm</strong></span>
               </div>
             </div>
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
-                <strong>Số tiền thu về thực tế mỗi năm:</strong><br>
-                Dòng tiền đều đặn 12 tháng liên tục:<br>
-                <span class="logic-calc">120 triệu × 12 tháng = <strong>1,44 tỷ đồng / năm</strong></span>
+                <strong>Hợp đồng thuê có sẵn từ 5 – 10 năm liên tiếp:</strong><br>
+                Đảm bảo tính liên tục và bền vững của dòng tiền, không lo rủi ro trống phòng.
               </div>
             </div>
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
-                <strong>Doanh thu cam kết từ Chủ đầu tư:</strong><br>
-                Chính sách cam kết thuê lại tối thiểu: <strong>từ 600 triệu đồng / năm trong 3 – 10 năm liên tiếp</strong>.<br>
-                <small style="color: var(--color-muted);">Bên thuê tự vận hành, tự chi trả toàn bộ điện nước. Chủ nhà hoàn toàn thảnh thơi nhận tiền chuyển khoản định kỳ.</small>
+                <strong>MDS Living vận hành cho quý vị:</strong><br>
+                Bên thuê tự vận hành, tự chi trả toàn bộ điện nước. Quý vị hoàn toàn thảnh thơi nhận tiền chuyển khoản định kỳ.
               </div>
             </div>
           </div>
@@ -2905,7 +2898,7 @@
           <div class="product-tag-inline">ĐẦU TƯ ĐÓN SÓNG HẠ TẦNG CHIẾN LƯỢC</div>
           <h3 class="product-block-title">5.3 · ĐIỀN SẢN</h3>
           <p class="product-block-text">
-            Dành riêng cho nhà đầu tư vào tiền ngay đợt đầu. <strong>Không cần bỏ vốn xây dựng</strong>:
+            Dành cho nhà đầu tư đồng hành. <strong>Không cần bỏ vốn xây dựng</strong>:
           </p>
 
           <!-- Hộp logic thực tế Điền Sản -->
@@ -2917,22 +2910,22 @@
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
-                <strong>Thanh toán 70% là công chứng mua bán:</strong><br>
-                Nhận ngay sổ đỏ thổ cư 100% trao tay, tài sản pháp lý hoàn chỉnh đứng tên chủ nhân.
+                <strong>Thanh toán 70% công chứng mua bán:</strong><br>
+                Nhận ngay sổ đỏ thổ cư 100% trao tay, đứng tên chính chủ, pháp lý minh bạch tuyệt đối.
               </div>
             </div>
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
-                <strong>30% còn lại chỉ thanh toán vào năm 2027:</strong><br>
-                Chỉ thanh toán khi đã chuyển nhượng thành công cho khách hàng mới với biên độ lợi nhuận kỳ vọng.
+                <strong>30% thanh toán năm 2027:</strong><br>
+                Chỉ thanh toán khi chuyển nhượng thành công cho khách hàng mới với biên độ lợi nhuận kỳ vọng.
               </div>
             </div>
             <div class="logic-item">
               <span class="logic-bullet">★</span>
               <div>
                 <strong>Chủ đầu tư đồng hành đầu tư cùng khách hàng:</strong><br>
-                Giảm 30% áp lực dòng vốn ban đầu, đón trọn biên độ tăng giá khi <strong>Cao tốc Biên Hòa – Vũng Tàu</strong> thông xe và <strong>Sân bay Quốc tế Long Thành</strong> vận hành (2026 – 2027).
+                Tối ưu dòng vốn, cùng đón trọn sóng hạ tầng lớn khi <strong>Cao tốc Biên Hòa – Vũng Tàu</strong> thông xe và <strong>Sân bay Long Thành</strong> đi vào vận hành (2026 – 2027).
               </div>
             </div>
           </div>
