@@ -229,13 +229,13 @@
     .hero-editorial::before {
       content: "";
       position: absolute;
-      top: -30px;
-      left: -30px;
-      width: 320px;
-      height: 320px;
-      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat center;
+      top: -40px;
+      left: -40px;
+      width: 280px;
+      height: 280px;
+      background: url('assets/vector_vietnam_patern/02_trong_dong_dong_son.webp') no-repeat left top;
       background-size: contain;
-      opacity: 0.085;
+      opacity: 0.07;
       pointer-events: none;
       z-index: 1;
     }
@@ -243,15 +243,32 @@
     .hero-editorial::after {
       content: "";
       position: absolute;
-      top: -20px;
-      right: -25px;
-      width: 290px;
-      height: 290px;
-      background: url('assets/vector_vietnam_patern/01_hoa_sen_viet.webp') no-repeat center;
+      bottom: -30px;
+      right: -30px;
+      width: 240px;
+      height: 240px;
+      background: url('assets/vector_vietnam_patern/01_hoa_sen_viet.webp') no-repeat right bottom;
       background-size: contain;
-      opacity: 0.08;
+      opacity: 0.065;
       pointer-events: none;
       z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .hero-editorial::before {
+        width: 180px;
+        height: 180px;
+        top: -20px;
+        left: -30px;
+        opacity: 0.055;
+      }
+      .hero-editorial::after {
+        width: 160px;
+        height: 160px;
+        bottom: -20px;
+        right: -25px;
+        opacity: 0.05;
+      }
     }
 
     .hero-heritage-ornament {
@@ -2483,25 +2500,21 @@
   <section class="hero-editorial" id="hero">
     <div class="container">
       <div class="hero-brand-top">
-        <!-- Hoa văn di sản: Trống đồng Đông Sơn phía trên & Cụm Hoa Sen Việt phía dưới có khoảng cách rõ ràng -->
+        <!-- Biểu tượng Di sản Trống Đồng & Hoa Sen được thiết kế trang trọng, cách khoảng trên dưới -->
         <div class="hero-heritage-ornament">
-          <!-- Hàng 1: Trống Đồng Đông Sơn độc lập -->
           <div class="hero-drum-wrapper">
             <img src="assets/vector_vietnam_patern/02_trong_dong_dong_son.webp" alt="Trống Đồng Đông Sơn" class="hero-heritage-icon-drum">
           </div>
-          <!-- Hàng 2: Cặp Hoa Sen Việt đối xứng có đường chỉ vàng -->
           <div class="hero-heritage-icons-row">
             <span class="heritage-ornament-line"></span>
             <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="hero-heritage-icon">
-            <span class="heritage-lotus-dot">❖</span>
-            <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="hero-heritage-icon flip-h">
             <span class="heritage-ornament-line"></span>
           </div>
         </div>
         <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" class="hero-logo-img">
         <br>
         <div class="hero-badge-capsule">
-          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="" class="capsule-lotus-icon"> MDS LAND &amp; LIVING &nbsp;·&nbsp; MỞ BÁN THÁNG 9/2026
+          MDS LAND &amp; LIVING &nbsp;·&nbsp; MỞ BÁN THÁNG 9/2026
         </div>
       </div>
 
@@ -2512,13 +2525,6 @@
       <p class="hero-sub">
         Xã Đất Đỏ, TP. Hồ Chí Minh &nbsp;·&nbsp; Liền kề Hồ Tràm &amp; Bình Châu
       </p>
-
-      <!-- Nút Bấm Trong Màn Hình Đầu -->
-      <div class="hero-cta-group">
-        <a href="#form-dang-ky" class="btn btn-gold">
-          <i class="fa-solid fa-file-invoice-dollar"></i> NHẬN BẢNG GIÁ &amp; ĐẶT LỊCH ĐI XEM
-        </a>
-      </div>
 
       <!-- Khung Slider Phối Cảnh Nghỉ Dưỡng 5 Sao Tự Động Chạy Ngang Tinh Tế -->
       <div class="hero-slider-container" id="heroSlider">
