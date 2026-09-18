@@ -17,4 +17,5 @@ https://www.saigonfarmresort.com/* https://saigonfarmresort.com/:splat 301
 /investor/ /investment 301
 /investor.html /investment 301
 /investment.html /investment 301
-
+# 5. Short Landing Page for Sales
+/short.html /short 301
