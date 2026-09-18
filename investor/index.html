@@ -758,21 +758,24 @@
     }
 
     .segment-card-img-wrap {
-      height: 190px;
       width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
       overflow: hidden;
-      background: #e2ddd5;
+      background: #ede8df;
     }
 
     .segment-card-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      display: block;
       transition: transform 0.4s ease;
+      background: #ede8df;
     }
 
     .segment-card:hover .segment-card-img {
-      transform: scale(1.04);
+      transform: scale(1.02);
     }
 
     .segment-card-body {
@@ -1216,35 +1219,37 @@
     .product-block {
       background: var(--bg-surface);
       border-radius: var(--radius-md);
-      border: 1px solid var(--color-border);
+      border: 1.5px solid var(--color-border);
       overflow: hidden;
-      margin-bottom: 30px;
+      margin-bottom: 36px;
       box-shadow: var(--shadow-sm);
-      display: grid;
-      grid-template-columns: 46% 54%;
+      display: flex;
+      flex-direction: column;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
       transition: var(--transition);
     }
 
     .product-block:hover {
       box-shadow: var(--shadow-card);
-    }
-
-    @media (max-width: 820px) {
-      .product-block {
-        grid-template-columns: 1fr;
-      }
+      border-color: var(--color-gold);
     }
 
     .product-block-media {
-      background: #ded9d0;
-      min-height: 270px;
+      background: #ede8df;
+      width: 100%;
+      aspect-ratio: 16 / 9;
       position: relative;
+      overflow: hidden;
     }
 
     .product-block-media img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      display: block;
+      background: #ede8df;
     }
 
     .product-block-content {
@@ -1286,6 +1291,61 @@
       margin-bottom: 14px;
     }
 
+    /* Hộp logic thực tế dòng tiền */
+    .product-logic-box {
+      background: #fdfbf7;
+      border: 1px solid var(--color-gold-border);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      margin: 14px 0 22px;
+    }
+
+    .logic-header {
+      font-family: var(--font-heading);
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: var(--color-forest);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(194, 155, 83, 0.25);
+    }
+
+    .logic-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--color-body);
+      margin-bottom: 10px;
+    }
+
+    .logic-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .logic-bullet {
+      color: var(--color-gold-dark);
+      font-size: 13px;
+      line-height: 1.6;
+      flex-shrink: 0;
+    }
+
+    .logic-calc {
+      display: inline-block;
+      background: var(--color-gold-subtle);
+      border: 1px solid var(--color-gold-border);
+      color: var(--color-forest);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      margin: 3px 0;
+    }
+
     .product-block-list {
       list-style: none;
       margin-bottom: 20px;
@@ -1324,6 +1384,237 @@
       background: var(--color-gold);
       color: #ffffff !important;
       transform: translateX(3px);
+    }
+
+    /* ================================================================
+       KHỐI TIỆN ÍCH NGHỈ DƯỠNG 5 SAO & SƠ ĐỒ MẶT BẰNG
+       ================================================================ */
+    .amenities-section {
+      background: #ffffff;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .amenity-tabs-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 0 auto 32px;
+      max-width: 680px;
+      padding: 4px;
+      background: #f3eee5;
+      border-radius: 40px;
+      border: 1px solid var(--color-border);
+    }
+
+    .amenity-tab-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-family: var(--font-heading);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--color-muted);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .amenity-tab-btn.active {
+      background: var(--color-forest);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(18, 53, 36, 0.25);
+    }
+
+    .amenity-tab-btn:hover:not(.active) {
+      color: var(--color-forest);
+    }
+
+    .amenity-tab-pane {
+      display: none;
+      animation: fadeInAmenity 0.35s ease;
+    }
+
+    .amenity-tab-pane.active {
+      display: block;
+    }
+
+    @keyframes fadeInAmenity {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Gallery Grid 6 items */
+    .amenity-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 960px) {
+      .amenity-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .amenity-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .amenity-tabs-nav {
+        flex-direction: column;
+        border-radius: 16px;
+        gap: 6px;
+      }
+      .amenity-tab-btn {
+        width: 100%;
+        border-radius: 12px;
+        padding: 10px 14px;
+        font-size: 12.5px;
+      }
+    }
+
+    .amenity-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .amenity-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--color-gold);
+    }
+
+    .amenity-card-img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #ded9d0;
+      position: relative;
+    }
+
+    .amenity-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .amenity-card:hover .amenity-card-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .amenity-badge-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(18, 53, 36, 0.88);
+      color: var(--color-gold-light);
+      backdrop-filter: blur(4px);
+      font-family: var(--font-heading);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(194, 155, 83, 0.4);
+    }
+
+    .amenity-card-body {
+      padding: 18px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .amenity-card-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-forest);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .amenity-card-desc {
+      font-size: 13.5px;
+      color: var(--color-muted);
+      line-height: 1.55;
+    }
+
+    /* Tab 2: 2 Diagram Cards */
+    .amenity-maps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 820px) {
+      .amenity-maps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .amenity-map-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1.5px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .amenity-map-media {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: #ded9d0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .amenity-map-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .amenity-map-caption {
+      padding: 18px 20px;
+      border-top: 1px solid var(--color-border);
+      background: #faf7f2;
+    }
+
+    .amenity-map-caption h4 {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      color: var(--color-forest);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .amenity-map-caption p {
+      font-size: 13.5px;
+      color: var(--color-muted);
+      line-height: 1.55;
+      margin: 0;
     }
 
     /* ================================================================
@@ -2197,6 +2488,140 @@
   </section>
 
   <!-- ================================================================
+       KHỐI TIỆN ÍCH NGHỈ DƯỠNG 5 SAO & SƠ ĐỒ MẶT BẰNG
+       ================================================================ -->
+  <section class="amenities-section section-spacing" id="tien-ich">
+    <div class="container">
+      <div class="section-header">
+        <div class="heritage-ornament-center">
+          <span class="heritage-ornament-line"></span>
+          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="heritage-lotus-icon">
+          <span class="heritage-ornament-line"></span>
+        </div>
+        <span class="section-tag">HỆ THỐNG TIỆN ÍCH ĐỈNH CAO</span>
+        <h2 class="section-title">Quần Thể Tiện Ích Nghỉ Dưỡng 5 Sao Quy Mô 30.000 m²</h2>
+        <p class="section-desc">
+          Mỗi không gian tiện ích được thiết kế công phu để vừa nâng niu phong cách sống thượng lưu, vừa bảo tồn trọn vẹn văn hóa Việt cho 3 thế hệ.
+        </p>
+      </div>
+
+      <!-- Điều Hướng Tab Tiện Ích -->
+      <div class="amenity-tabs-nav">
+        <button type="button" class="amenity-tab-btn active" data-tab="tab-amenity-gallery" onclick="switchAmenityTab('tab-amenity-gallery')">
+          <i class="fa-solid fa-camera-retro"></i> Phối Cảnh Tiện Ích 5 Sao
+        </button>
+        <button type="button" class="amenity-tab-btn" data-tab="tab-amenity-maps" onclick="switchAmenityTab('tab-amenity-maps')">
+          <i class="fa-solid fa-map-location-dot"></i> Sơ Đồ Quy Hoạch Tiện Ích
+        </button>
+      </div>
+
+      <!-- Tab 1: Gallery Phối Cảnh Tiện Ích -->
+      <div class="amenity-tab-pane active" id="tab-amenity-gallery">
+        <div class="amenity-gallery-grid">
+          <!-- Card 1: Hồ Bơi Khoáng Muối -->
+          <div class="amenity-card">
+            <div class="amenity-card-img-wrap">
+              <span class="amenity-badge-tag">THỦY LIỆU PHÁP NGHỈ DƯỠNG</span>
+              <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Ho_boi_trung_tam.webp" alt="Hồ bơi điện phân khoáng muối trung tâm" loading="lazy">
+            </div>
+            <div class="amenity-card-body">
+              <h3 class="amenity-card-title">Hồ Bơi Điện Phân Khoáng Muối</h3>
+              <p class="amenity-card-desc">Công nghệ điện phân muối khoáng tự nhiên, an toàn tuyệt đối cho làn da của trẻ nhỏ và sức khỏe người lớn tuổi.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Làng Ngựa Quý Tộc -->
+          <div class="amenity-card">
+            <div class="amenity-card-img-wrap">
+              <span class="amenity-badge-tag">THỂ THAO THƯỢNG LƯU</span>
+              <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/Viet_Ma_Vien.webp" alt="Việt Mã Viên - Câu lạc bộ cưỡi ngựa quý tộc" loading="lazy">
+            </div>
+            <div class="amenity-card-body">
+              <h3 class="amenity-card-title">Việt Mã Viên — CLB Cưỡi Ngựa</h3>
+              <p class="amenity-card-desc">Không gian huấn luyện và trải nghiệm cưỡi ngựa quý tộc đẳng cấp, tôi luyện bản lĩnh và phong thái quý ông cho thế hệ kế thừa.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Clubhouse Ven Hồ Lồ Ồ -->
+          <div class="amenity-card">
+            <div class="amenity-card-img-wrap">
+              <span class="amenity-badge-tag">MẶT NƯỚC 100 HA</span>
+              <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.webp" alt="Clubhouse hoàng hôn ven hồ Lồ Ồ 100 ha" loading="lazy">
+            </div>
+            <div class="amenity-card-body">
+              <h3 class="amenity-card-title">Clubhouse Ven Hồ Lồ Ồ</h3>
+              <p class="amenity-card-desc">Điểm hẹn thượng lưu ngắm trọn hoàng hôn buông xuống mặt nước 100 ha, thưởng trà chiều và gắn kết bạn bè, đối tác.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Bến Thuyền Kayak & SUP -->
+          <div class="amenity-card">
+            <div class="amenity-card-img-wrap">
+              <span class="amenity-badge-tag">THỂ THAO MẶT NƯỚC</span>
+              <img src="assets/Index_asset/tien_ich_3D/Tien_ich_ben_ho_Kayak.webp" alt="Bến thuyền Kayak và SUP ven hồ" loading="lazy">
+            </div>
+            <div class="amenity-card-body">
+              <h3 class="amenity-card-title">Bến Thuyền Kayak &amp; SUP</h3>
+              <p class="amenity-card-desc">Hoạt động thể thao mặt nước thư thái, chèo thuyền kayak và lướt SUP giữa không gian hồ nước trong lành, khoáng đạt.</p>
+            </div>
+          </div>
+
+          <!-- Card 5: Sân Thể Thao Pickleball -->
+          <div class="amenity-card">
+            <div class="amenity-card-img-wrap">
+              <span class="amenity-badge-tag">XU HƯỚNG QUỐC TẾ</span>
+              <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Facilities/San_PickleBall.webp" alt="Cụm sân Pickleball tiêu chuẩn" loading="lazy">
+            </div>
+            <div class="amenity-card-body">
+              <h3 class="amenity-card-title">Sân Pickleball Chuẩn Quốc Tế</h3>
+              <p class="amenity-card-desc">Cụm sân Pickleball và bóng rổ ngoài trời đạt chuẩn, nơi rèn luyện thể lực và giao lưu cùng cộng đồng cư dân tinh hoa.</p>
+            </div>
+          </div>
+
+          <!-- Card 6: Nhà Hàng Sinh Thái Farm-To-Table -->
+          <div class="amenity-card">
+            <div class="amenity-card-img-wrap">
+              <span class="amenity-badge-tag">ẨM THỰC NGUYÊN BẢN</span>
+              <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Central_Restaurant/Central_Restaurant_1.webp" alt="Nhà hàng sinh thái Farm-to-Table" loading="lazy">
+            </div>
+            <div class="amenity-card-body">
+              <h3 class="amenity-card-title">Nhà Hàng Nếp Nhà Việt (250 Chỗ)</h3>
+              <p class="amenity-card-desc">Tinh hoa ẩm thực 3 miền chuẩn vị với nguồn nông sản tươi sạch 100% thu hoạch trực tiếp từ nông trại hữu cơ resort.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: 2 Sơ Đồ Tiện Ích -->
+      <div class="amenity-tab-pane" id="tab-amenity-maps">
+        <div class="amenity-maps-grid">
+          <!-- Sơ Đồ 1: Khu Vực Trung Tâm -->
+          <div class="amenity-map-card">
+            <div class="amenity-map-media">
+              <img src="assets/Index_asset/MatBang/SGFR_tien_ich_trung_tam.webp" alt="Sơ đồ tiện ích khu vực trung tâm Saigon Farm Resort" loading="lazy">
+            </div>
+            <div class="amenity-map-caption">
+              <h4>1. Sơ Đồ Tiện Ích Khu Trung Tâm (Quy Mô 30.000 m²)</h4>
+              <p>Quy tụ cụm sân Pickleball có mái che, sân bóng rổ ngoài trời, Làng ngựa quý tộc Việt Mã Viên, Clubhouse trung tâm, Nhà hàng sinh thái, Nông trại hữu cơ và Cung tường sử Việt.</p>
+            </div>
+          </div>
+
+          <!-- Sơ Đồ 2: Phân Khu Ven Hồ -->
+          <div class="amenity-map-card">
+            <div class="amenity-map-media">
+              <img src="assets/Index_asset/MatBang/SGFR_Tien_ich_Ven_ho.webp" alt="Sơ đồ tiện ích phân khu ven hồ Saigon Farm Resort" loading="lazy">
+            </div>
+            <div class="amenity-map-caption">
+              <h4>2. Sơ Đồ Phân Khu Ven Hồ Lồ Ồ (Quy Mô 30.000 m²)</h4>
+              <p>Tọa độ nghỉ dưỡng ven mặt hồ 100 ha: Clubhouse ven hồ, Bến thuyền Kayak &amp; SUP, Hồ bơi vô cực điện phân khoáng muối và đường dạo bộ ven hồ dài 1,2 km ngắm hoàng hôn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
        KHỐI 3 — SẢN PHẨM "MAY ĐO" THEO NHU CẦU
        ================================================================ -->
   <section class="segment-section section-spacing" id="phan-luong">
@@ -2223,7 +2648,9 @@
           <div class="segment-card-body">
             <span class="segment-intent-tag">NHÀ ĐỂ CẢ GIA ĐÌNH VỀ CUỐI TUẦN</span>
             <h3 class="segment-product-name">Biệt Phủ Điền Trang</h3>
-            <p class="segment-card-desc">Dinh thự cho ba thế hệ.</p>
+            <p class="segment-card-desc">
+              Dinh thự cho ba thế hệ. Ủy thác vận hành an nhàn: <strong>Cam kết thuê lại 150 đêm × 4 triệu = 600 triệu/năm</strong> (+260 triệu đêm linh hoạt). Vẫn còn <strong>150 đêm nghỉ dưỡng tự do</strong> trong năm cho gia đình.
+            </p>
             <div class="segment-card-cta-row">
               <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
                 <i class="fa-brands fa-zalo"></i> Nhắn Zalo
@@ -2244,8 +2671,8 @@
             <span class="segment-intent-tag">TÀI SẢN CÓ TIỀN VỀ MỖI THÁNG</span>
             <h3 class="segment-product-name">Điền An</h3>
             <p class="segment-card-desc">
-              <strong style="color: var(--color-forest);">Doanh thu cam kết: từ 600 triệu đồng/năm trong 3 - 10 năm</strong>.<br>
-              Cụm 30 phòng cho thuê, đạt <strong>80 đến 120 triệu một tháng</strong> (khoảng <strong>1,4 tỷ/năm trong 5 - 10 năm liên tiếp</strong>).
+              Đã có khách thuê sẵn: <strong>4 triệu/ngày × 30 ngày = 120 triệu/tháng</strong> → <strong>1,44 tỷ/năm</strong>.<br>
+              <strong style="color: var(--color-forest);">Doanh thu cam kết từ CĐT: từ 600 triệu đồng/năm trong 3 – 10 năm</strong>.
             </p>
             <div class="segment-card-cta-row">
               <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
@@ -2267,7 +2694,7 @@
             <span class="segment-intent-tag">ĐẦU TƯ ĐÓN SÓNG HẠ TẦNG</span>
             <h3 class="segment-product-name">Điền Sản</h3>
             <p class="segment-card-desc">
-              Dành cho nhà đầu tư đợt đầu, <strong>không cần xây</strong>. Thanh toán <strong>70% là công chứng mua bán</strong>, <strong>30% thanh toán năm 2027</strong> khi chuyển nhượng thành công cho khách hàng mới. <strong>Chủ đầu tư đồng hành đầu tư cùng khách hàng</strong>.
+              Dành cho nhà đầu tư đợt đầu, <strong>không cần xây</strong>. Thanh toán <strong>70% công chứng nhận sổ</strong>, <strong>30% thanh toán năm 2027</strong> khi chuyển nhượng cho khách mới. <strong>CĐT đồng hành đầu tư</strong>.
             </p>
             <div class="segment-card-cta-row">
               <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn-segment-zalo">
@@ -2356,17 +2783,47 @@
       <!-- 5.1 Biệt Phủ Điền Trang -->
       <div class="product-block" id="biet-phu">
         <div class="product-block-media">
-          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.webp" alt="Biệt Phủ Điền Trang" loading="lazy">
+          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_trang_17.webp" alt="Biệt Phủ Điền Trang — Dinh thự cho ba thế hệ" loading="lazy">
         </div>
         <div class="product-block-content">
           <div class="product-tag-inline">DÒNG NGHỈ DƯỠNG SUM HỌP GIA ĐÌNH</div>
           <h3 class="product-block-title">5.1 · BIỆT PHỦ ĐIỀN TRANG</h3>
           <p class="product-block-text">
-            Dinh thự cho ba thế hệ sum họp giữa thiên nhiên tĩnh tại bên hồ và đồng lúa.
+            Dinh thự cho ba thế hệ sum họp giữa thiên nhiên tĩnh tại bên hồ và đồng lúa. Khi gia đình không dùng, ủy thác vận hành an nhàn cho MDS Living theo <strong>phương pháp dòng tiền thực tế</strong>:
           </p>
-          <p class="product-block-text">
-            Những lúc gia đình không dùng, anh chị gửi vào chương trình vận hành của MDS Living. Nhà vẫn có người chăm, tháng nào cũng có tiền về, mà phần lớn thời gian trong năm vẫn là của mình.
-          </p>
+
+          <!-- Hộp logic thực tế Biệt Phủ -->
+          <div class="product-logic-box">
+            <div class="logic-header">
+              <i class="fa-solid fa-coins" style="color: var(--color-gold);"></i>
+              BÀI TOÁN DÒNG TIỀN THỰC TẾ (MDS LIVING VẬN HÀNH)
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>Giai đoạn 1 — Cam kết thuê lại 150 đêm cao điểm:</strong><br>
+                MDS Living cam kết thuê lại bao tiêu với đơn giá cố định <strong>4.000.000 đ / đêm</strong> (cuối tuần, lễ, tết, hè).<br>
+                <span class="logic-calc">150 đêm × 4.000.000 đ = <strong>600 triệu đồng / năm</strong></span><br>
+                <small style="color: var(--color-muted);">Chủ nhà thực nhận cố định ~50 triệu/tháng. MDS Living chịu mọi chi phí dọn dẹp, bảo dưỡng và quản gia 24/7.</small>
+              </div>
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>Giai đoạn 2 — Khai thác 215 đêm linh hoạt còn lại:</strong><br>
+                Khai thác khách du lịch ngày trong tuần (giả định tỷ lệ lấp đầy khiêm tốn 30% = 65 đêm), chia sẻ 50% doanh thu phòng thực tế.<br>
+                <span class="logic-calc">Cộng thêm <strong>+260 triệu đồng / năm</strong> vào tài khoản</span>
+              </div>
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>Vẫn còn trọn vẹn 150 đêm nghỉ dưỡng tự do trong năm cho gia đình:</strong><br>
+                Tổng thu nhập cho thuê thụ động đạt <strong>~860 triệu đồng / năm</strong>, nhà cửa luôn được chăm sóc tinh tươm và giá trị đất tăng đều.
+              </div>
+            </div>
+          </div>
+
           <div class="product-cta-group">
             <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
               <i class="fa-brands fa-zalo"></i> Nhận tư vấn Biệt Phủ qua Zalo
@@ -2384,25 +2841,47 @@
       <!-- 5.2 Điền An -->
       <div class="product-block" id="dien-an">
         <div class="product-block-media">
-          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp" alt="Điền An" loading="lazy">
+          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp" alt="Điền An — Bất động sản dòng tiền cho thuê bền vững" loading="lazy">
         </div>
         <div class="product-block-content">
           <div class="product-tag-inline">TÀI SẢN DÒNG TIỀN CHO THUÊ BỀN VỮNG</div>
           <h3 class="product-block-title">5.2 · ĐIỀN AN</h3>
-          <p class="product-block-text" style="font-weight: 700; color: var(--color-gold-dark); font-size: 15px; margin-bottom: 8px;">
-            ★ Doanh thu cam kết: từ 600 triệu đồng/năm trong 3 - 10 năm.
-          </p>
           <p class="product-block-text">
-            Khuôn viên quy mô lớn, dựng cụm <strong>30 phòng lưu trú cho thuê</strong>, đạt <strong>80 đến 120 triệu một tháng</strong> (khoảng <strong>1,4 tỷ/năm trong 5 - 10 năm liên tiếp</strong>).
+            Dòng tài sản cho thuê sinh lời đón đầu nguồn cầu có sẵn từ hàng nghìn chuyên gia, quản lý cấp cao tại KCN Đất Đỏ (1.000 ha), KCN Sonadezi Châu Đức và dòng khách nghỉ dưỡng cao cấp Hồ Tràm:
           </p>
-          <p class="product-block-text" style="margin-bottom: 6px; font-weight: 600;">Hai phương án khai thác:</p>
-          <ul class="product-block-list">
-            <li>Cho thuê trọn 30 phòng cho chuyên gia, <strong>120 triệu một tháng</strong></li>
-            <li>Hoặc 20 phòng cho thuê dài hạn, 10 phòng còn lại cho khách du lịch thuê theo ngày</li>
-          </ul>
-          <p class="product-block-text" style="font-size: 13.5px; color: var(--color-muted); margin-bottom: 18px;">
-            Bên thuê tự vận hành, tự trả điện nước. Anh chị không phải quản lý gì.
-          </p>
+
+          <!-- Hộp logic thực tế Điền An -->
+          <div class="product-logic-box">
+            <div class="logic-header">
+              <i class="fa-solid fa-sack-dollar" style="color: var(--color-gold);"></i>
+              PHƯƠNG PHÁP LOGIC THỰC TẾ — ĐÃ CÓ KHÁCH THUÊ SẴN
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>Công thức khai thác thực tế:</strong><br>
+                Khuôn viên dựng cụm phòng lưu trú chuyên gia, đơn giá cho thuê thực tế:<br>
+                <span class="logic-calc">4 triệu / ngày × 30 ngày = <strong>120 triệu đồng / tháng</strong></span>
+              </div>
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>Số tiền thu về thực tế mỗi năm:</strong><br>
+                Dòng tiền đều đặn 12 tháng liên tục:<br>
+                <span class="logic-calc">120 triệu × 12 tháng = <strong>1,44 tỷ đồng / năm</strong></span>
+              </div>
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>Doanh thu cam kết từ Chủ đầu tư:</strong><br>
+                Chính sách cam kết thuê lại tối thiểu: <strong>từ 600 triệu đồng / năm trong 3 – 10 năm liên tiếp</strong>.<br>
+                <small style="color: var(--color-muted);">Bên thuê tự vận hành, tự chi trả toàn bộ điện nước. Chủ nhà hoàn toàn thảnh thơi nhận tiền chuyển khoản định kỳ.</small>
+              </div>
+            </div>
+          </div>
+
           <div class="product-cta-group">
             <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
               <i class="fa-brands fa-zalo"></i> Nhận bài toán Điền An qua Zalo
@@ -2420,17 +2899,44 @@
       <!-- 5.3 Điền Sản -->
       <div class="product-block" id="dien-san">
         <div class="product-block-media">
-          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp" alt="Điền Sản" loading="lazy">
+          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp" alt="Điền Sản — Đầu tư đón sóng hạ tầng chiến lược" loading="lazy">
         </div>
         <div class="product-block-content">
           <div class="product-tag-inline">ĐẦU TƯ ĐÓN SÓNG HẠ TẦNG CHIẾN LƯỢC</div>
           <h3 class="product-block-title">5.3 · ĐIỀN SẢN</h3>
           <p class="product-block-text">
-            Dành cho nhà đầu tư vào tiền ngay đợt đầu. <strong>Không cần xây</strong>.
+            Dành riêng cho nhà đầu tư vào tiền ngay đợt đầu. <strong>Không cần bỏ vốn xây dựng</strong>:
           </p>
-          <p class="product-block-text">
-            Thanh toán <strong>70% là công chứng mua bán</strong>, <strong>30% thanh toán năm 2027</strong> khi chuyển nhượng thành công cho khách hàng mới. <strong>Chủ đầu tư đồng hành đầu tư cùng khách hàng</strong>.
-          </p>
+
+          <!-- Hộp logic thực tế Điền Sản -->
+          <div class="product-logic-box">
+            <div class="logic-header">
+              <i class="fa-solid fa-handshake" style="color: var(--color-gold);"></i>
+              BÀI TOÁN DÒNG TIỀN — CHỦ ĐẦU TƯ ĐỒNG HÀNH ĐẦU TƯ
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>Thanh toán 70% là công chứng mua bán:</strong><br>
+                Nhận ngay sổ đỏ thổ cư 100% trao tay, tài sản pháp lý hoàn chỉnh đứng tên chủ nhân.
+              </div>
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>30% còn lại chỉ thanh toán vào năm 2027:</strong><br>
+                Chỉ thanh toán khi đã chuyển nhượng thành công cho khách hàng mới với biên độ lợi nhuận kỳ vọng.
+              </div>
+            </div>
+            <div class="logic-item">
+              <span class="logic-bullet">★</span>
+              <div>
+                <strong>Chủ đầu tư đồng hành đầu tư cùng khách hàng:</strong><br>
+                Giảm 30% áp lực dòng vốn ban đầu, đón trọn biên độ tăng giá khi <strong>Cao tốc Biên Hòa – Vũng Tàu</strong> thông xe và <strong>Sân bay Quốc tế Long Thành</strong> vận hành (2026 – 2027).
+              </div>
+            </div>
+          </div>
+
           <div class="product-cta-group">
             <a href="https://zalo.me/0909000712" target="_blank" rel="noopener" class="btn btn-gold">
               <i class="fa-brands fa-zalo"></i> Nhận chính sách Điền Sản qua Zalo
@@ -2865,6 +3371,16 @@
 
       // Scroll form wrapper smoothly into center view
       successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Chuyển Tab Tiện Ích (Phối Cảnh 3D / Sơ Đồ Quy Hoạch)
+    function switchAmenityTab(tabId) {
+      document.querySelectorAll('.amenity-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.amenity-tab-pane').forEach(pane => pane.classList.remove('active'));
+      const activeBtn = document.querySelector(`[data-tab="${tabId}"]`);
+      const activePane = document.getElementById(tabId);
+      if (activeBtn) activeBtn.classList.add('active');
+      if (activePane) activePane.classList.add('active');
     }
   </script>
 </body>
