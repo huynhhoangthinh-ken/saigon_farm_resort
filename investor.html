@@ -528,12 +528,42 @@
       text-align: center;
       font-size: 13.5px;
       color: var(--color-forest);
-      padding: 12px 14px 4px;
+      padding: 10px 14px 4px;
       font-weight: 600;
-      min-height: 42px;
+      min-height: 38px;
       display: flex;
       align-items: center;
       justify-content: center;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 600px) {
+      .hero-slider-container {
+        border-radius: 12px;
+      }
+      .hero-slide img {
+        aspect-ratio: 16 / 10;
+        max-height: 340px;
+        min-height: 210px;
+        object-fit: cover;
+      }
+      .hero-photo-caption {
+        font-size: 12.5px;
+        padding: 8px 10px 2px;
+        min-height: 34px;
+      }
+      .hero-slider-dots {
+        bottom: 8px;
+        padding: 4px 8px;
+        gap: 5px;
+      }
+      .hero-dot {
+        width: 6px;
+        height: 6px;
+      }
+      .hero-dot.active {
+        width: 16px;
+      }
     }
 
     /* ================================================================
@@ -2462,23 +2492,38 @@
         <div class="hero-slider-track" id="heroSliderTrack">
           <!-- Slide 1: Biệt phủ bình minh bên cánh đồng lúa vàng -->
           <div class="hero-slide active">
-            <img src="assets/Index_asset/Hero_Slider/hero_slide_1.jpg" alt="Biệt Phủ Điền Trang đón bình minh bên cánh đồng lúa chín" loading="eager">
+            <picture>
+              <source srcset="assets/Index_asset/Hero_Slider/hero_slide_1.webp" type="image/webp">
+              <img src="assets/Index_asset/Hero_Slider/hero_slide_1.jpg" alt="Biệt Phủ Điền Trang đón bình minh bên cánh đồng lúa chín" width="1024" height="576" fetchpriority="high" loading="eager">
+            </picture>
           </div>
           <!-- Slide 2: Panorama toàn cảnh mặt hồ Lồ Ồ 100 ha và quần thể điền trang hoàng hôn -->
           <div class="hero-slide">
-            <img src="assets/Index_asset/Hero_Slider/hero_slide_2.jpg" alt="Panorama toàn cảnh quần thể điền trang bên hồ Lồ Ồ 100 ha" loading="lazy">
+            <picture>
+              <source srcset="assets/Index_asset/Hero_Slider/hero_slide_2.webp" type="image/webp">
+              <img src="assets/Index_asset/Hero_Slider/hero_slide_2.jpg" alt="Panorama toàn cảnh quần thể điền trang bên hồ Lồ Ồ 100 ha" width="1024" height="576" loading="lazy">
+            </picture>
           </div>
           <!-- Slide 3: Hồ bơi vô cực điện phân khoáng view cánh đồng lúa xanh ngát -->
           <div class="hero-slide">
-            <img src="assets/Index_asset/Hero_Slider/hero_slide_3.jpg" alt="Hồ bơi vô cực khoáng muối hướng trọn cánh đồng lúa xanh ngát" loading="lazy">
+            <picture>
+              <source srcset="assets/Index_asset/Hero_Slider/hero_slide_3.webp" type="image/webp">
+              <img src="assets/Index_asset/Hero_Slider/hero_slide_3.jpg" alt="Hồ bơi vô cực khoáng muối hướng trọn cánh đồng lúa xanh ngát" width="1024" height="573" loading="lazy">
+            </picture>
           </div>
           <!-- Slide 4: Thảo nguyên xanh và câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên -->
           <div class="hero-slide">
-            <img src="assets/Index_asset/Hero_Slider/hero_slide_4.jpg" alt="Câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên bên dòng suối mát" loading="lazy">
+            <picture>
+              <source srcset="assets/Index_asset/Hero_Slider/hero_slide_4.webp" type="image/webp">
+              <img src="assets/Index_asset/Hero_Slider/hero_slide_4.jpg" alt="Câu lạc bộ cưỡi ngựa quý tộc Việt Mã Viên bên dòng suối mát" width="1024" height="575" loading="lazy">
+            </picture>
           </div>
           <!-- Slide 5: Clubhouse ven hồ và bến thuyền kayak hoàng hôn -->
           <div class="hero-slide">
-            <img src="assets/Index_asset/Hero_Slider/hero_slide_5.jpg" alt="Clubhouse hoàng hôn ven hồ Lồ Ồ và bến chèo thuyền Kayak" loading="lazy">
+            <picture>
+              <source srcset="assets/Index_asset/Hero_Slider/hero_slide_5.webp" type="image/webp">
+              <img src="assets/Index_asset/Hero_Slider/hero_slide_5.jpg" alt="Clubhouse hoàng hôn ven hồ Lồ Ồ và bến chèo thuyền Kayak" width="1024" height="573" loading="lazy">
+            </picture>
           </div>
         </div>
 
