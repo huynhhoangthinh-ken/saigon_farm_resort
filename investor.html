@@ -255,15 +255,37 @@
     }
 
     .hero-heritage-ornament {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 auto 12px;
+    }
+
+    .hero-drum-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .hero-heritage-icon-drum {
+      height: 38px;
+      width: auto;
+      opacity: 0.95;
+      display: block;
+    }
+
+    .hero-heritage-icons-row {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin: 0 auto 10px;
+      gap: 12px;
     }
 
     .hero-heritage-icon {
-      height: 22px;
+      height: 20px;
       width: auto;
       opacity: 0.85;
     }
@@ -272,10 +294,10 @@
       transform: scaleX(-1);
     }
 
-    .hero-heritage-icon-drum {
-      height: 24px;
-      width: auto;
-      opacity: 0.9;
+    .heritage-lotus-dot {
+      color: var(--color-gold);
+      font-size: 11px;
+      opacity: 0.7;
     }
 
     .capsule-lotus-icon {
@@ -527,13 +549,15 @@
       text-align: center;
       font-size: 13.5px;
       color: var(--color-forest);
-      padding: 10px 14px 4px;
+      padding: 12px 14px 4px;
       font-weight: 600;
-      min-height: 38px;
+      min-height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
       line-height: 1.45;
+      background: transparent;
+      margin-top: 4px;
     }
 
     @media (max-width: 768px) {
@@ -541,16 +565,18 @@
         border-radius: 12px;
       }
       .hero-slide img {
-        aspect-ratio: 4 / 3 !important;
-        max-height: none !important;
+        aspect-ratio: 16 / 9 !important;
+        width: 100% !important;
         height: auto !important;
+        max-height: 250px !important;
         object-fit: cover !important;
         object-position: center center !important;
       }
       .hero-photo-caption {
-        font-size: 12.5px;
-        padding: 8px 8px 2px;
+        font-size: 12px;
+        padding: 8px 8px 0;
         min-height: 32px;
+        line-height: 1.4;
       }
       .hero-slider-dots {
         bottom: 8px;
@@ -2457,13 +2483,20 @@
   <section class="hero-editorial" id="hero">
     <div class="container">
       <div class="hero-brand-top">
-        <!-- Hoa văn di sản: Trống đồng Đông Sơn & Hoa Sen Việt trên cùng -->
+        <!-- Hoa văn di sản: Trống đồng Đông Sơn phía trên & Cụm Hoa Sen Việt phía dưới có khoảng cách rõ ràng -->
         <div class="hero-heritage-ornament">
-          <span class="heritage-ornament-line"></span>
-          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="hero-heritage-icon">
-          <img src="assets/vector_vietnam_patern/02_trong_dong_dong_son.webp" alt="Trống Đồng Đông Sơn" class="hero-heritage-icon-drum">
-          <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="hero-heritage-icon flip-h">
-          <span class="heritage-ornament-line"></span>
+          <!-- Hàng 1: Trống Đồng Đông Sơn độc lập -->
+          <div class="hero-drum-wrapper">
+            <img src="assets/vector_vietnam_patern/02_trong_dong_dong_son.webp" alt="Trống Đồng Đông Sơn" class="hero-heritage-icon-drum">
+          </div>
+          <!-- Hàng 2: Cặp Hoa Sen Việt đối xứng có đường chỉ vàng -->
+          <div class="hero-heritage-icons-row">
+            <span class="heritage-ornament-line"></span>
+            <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="hero-heritage-icon">
+            <span class="heritage-lotus-dot">❖</span>
+            <img src="assets/vector_vietnam_patern/01_hoa_sen_viet.webp" alt="Hoa Sen Bản Sắc Việt" class="hero-heritage-icon flip-h">
+            <span class="heritage-ornament-line"></span>
+          </div>
         </div>
         <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" class="hero-logo-img">
         <br>
