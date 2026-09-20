@@ -1,0 +1,10 @@
+{
+  "name": "saigonfarmresort-cron",
+  "main": "index.js",
+  "compatibility_date": "2024-09-23",
+  "triggers": {
+    "crons": [
+      "0 * * * *"
+    ]
+  }
+}
