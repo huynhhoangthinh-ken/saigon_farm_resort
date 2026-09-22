@@ -692,7 +692,7 @@ def build_investment_page():
             <div class="growth-pillar-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
             <div class="growth-pillar-content">
               <h4>4. Dòng Tiền Khai Thác Kép Bền Vững Cùng MDS Living</h4>
-              <p>Khách hàng có thể lựa chọn nhận dòng tiền cho thuê thụ động từ <strong>80 – 120 Triệu/tháng (1,44 Tỷ/năm)</strong> với cụm phòng chuyên gia dòng Điền An, hoặc tham gia chương trình <strong>MDS Living cam kết mua lại 90 – 150 đêm lưu trú/năm</strong> với dòng Biệt Phủ.</p>
+              <p>Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên nhận dòng tiền cam kết tối thiểu <strong>80 Triệu/tháng (960 Triệu/năm)</strong> với dòng Điền An, hoặc tham gia chương trình <strong>MDS Living cam kết mua lại 90 – 150 đêm lưu trú/năm</strong> với dòng Biệt Phủ.</p>
             </div>
           </div>
         </div>
@@ -1014,7 +1014,7 @@ def build_investment_page():
               <span class="line-card__tag">DÒNG TIỀN CHO THUÊ BỀN VỮNG</span>
               <div class="line-card__name">ĐIỀN AN (HAVEN)</div>
               <div class="line-card__qty"><i class="fa-solid fa-house-circle-check"></i> Số lượng: <strong>07 sản phẩm</strong></div>
-              <p class="line-card__desc">Cụm 30 phòng linh hoạt 2 phương án: <strong>80 – 120 triệu/tháng++</strong> (PA1: 30 phòng chuyên gia = 120 tr/th; PA2: 20 phòng chuyên gia = 80 tr/th + 10 phòng thuê ngày thu nhập cao hơn).</p>
+              <p class="line-card__desc">Xây dựng khu lưu trú chuyên gia từ 20 phòng trở lên: <strong>cam kết thuê tối thiểu 80 triệu/tháng</strong> (960 tr/năm). Các phòng khác được MDS Living khai thác vận hành dài hạn hoặc ngắn hạn.</p>
             </div>
           </div>
 

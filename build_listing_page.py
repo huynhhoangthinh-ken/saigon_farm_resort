@@ -129,7 +129,7 @@ def update_listing():
         elif cat_slug == "dien-an":
             special_note = """
             <div class="card-policy-tag" style="background:#e8f4fd; color:#125b96; border-color:#bcdcf5;">
-              <i class="fa-solid fa-hand-holding-dollar"></i> Khai thác 80 - 120 Tr/tháng++ (2 PA: 30 phòng chuyên gia hoặc 20 chuyên gia + 10 thuê ngày)
+              <i class="fa-solid fa-hand-holding-dollar"></i> Xây từ 20 phòng, cam kết thuê tối thiểu 80 Tr/tháng · MDS Living vận hành phòng khác
             </div>
             """
         else:

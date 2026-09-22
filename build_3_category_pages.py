@@ -56,9 +56,9 @@ categories = [
         "slug": "dien-an",
         "title": "Điền An",
         "sub_title": "The Haven Collection",
-        "tagline": "Khai Thác Lưu Trú Nghỉ Dưỡng & An Cư Tĩnh Tại",
+        "tagline": "Khu Lưu Trú Chuyên Gia & Dòng Tiền Vận Hành Bền Vững",
         "badge": "7 Vị Trí Tĩnh Lặng Nhất Khu",
-        "desc": "Đầu tư khai thác lưu trú. Chủ nhân phát triển cụm lưu trú cho thuê dài hạn, hoặc khai thác ngắn ngày với các vị trí có hướng nhìn đẹp. Bảy vị trí riêng tư nhất khu điền trang.",
+        "desc": "Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu là 80 triệu/đồng. Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.",
         "table_idx": 2,
         "default_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg",
         "hero_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg"
@@ -109,8 +109,8 @@ def render_page(cat, all_cats):
         benefits = [
             {
                 "icon": "fa-house-chimney-window",
-                "title": "Khai Thác Lưu Trú Kép Đa Năng",
-                "desc": "Chủ nhân vừa có thể sử dụng làm chốn an trú tĩnh dưỡng riêng tư cho gia đình, vừa linh hoạt ủy thác vận hành cụm homestay/boutique retreat cao cấp tạo dòng tiền cho thuê thụ động hàng tháng."
+                "title": "Khu Lưu Trú Từ 20 Phòng: Cam Kết Thuê Tối Thiểu 80 Tr/Tháng",
+                "desc": "Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu là 80 triệu đồng/tháng. Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn."
             },
             {
                 "icon": "fa-water-ladder",

@@ -92,9 +92,9 @@ Mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chiến lượ
 | **Định vị** | Flagship Nghỉ Dưỡng Thượng Lưu | Tích Sản Gia Tộc & Đón Sóng Đợt 1 | Bất Động Sản Dòng Tiền Thụ Động |
 | **Số lượng mở bán** | **17 Dinh thự VIP** | **12 Nền độc bản** | **07 Cụm giới hạn** |
 | **Diện tích khuôn viên** | **1.000 m² – 1.452 m²** | **646,5 m² – 1.000 m²** | **600 m² – 800 m²** |
-| **Kiến trúc xây dựng** | Biệt phủ 1 – 2 tầng, hồ bơi khoáng muối, sân vườn >700m² | Đất điền trang ven hồ, xây dựng theo mẫu kiến trúc resort | Cụm 30 phòng lưu trú chuyên gia sinh thái hoàn chỉnh |
+| **Kiến trúc xây dựng** | Biệt phủ 1 – 2 tầng, hồ bơi khoáng muối, sân vườn >700m² | Đất điền trang ven hồ, xây dựng theo mẫu kiến trúc resort | Khu lưu trú chuyên gia sinh thái ít nhất từ 20 phòng trở lên |
 | **Quyền lợi thụ hưởng** | **150 đêm nghỉ dưỡng/năm** cho gia đình | Tự do nghỉ dưỡng & tích trữ gia sản giá gốc đợt 1 | Cụm phòng sinh thái lưu trú dài hạn & an cư |
-| **Cơ chế tài chính** | Khai thác du lịch nghỉ dưỡng cao cấp MDS Living | Thanh toán sớm giảm 800Tr - 1 Tỷ; 30% CĐT hỗ trợ ra hàng | 2 phương án linh hoạt: **80 – 120 Tr/tháng++** (PA1: 30 chuyên gia = 120 Tr/th; PA2: 20 chuyên gia = 80 Tr/th + 10 thuê ngày) |
+| **Cơ chế tài chính** | Khai thác du lịch nghỉ dưỡng cao cấp MDS Living | Thanh toán sớm giảm 800Tr - 1 Tỷ; 30% CĐT hỗ trợ ra hàng | Khách hàng xây từ 20 phòng trở lên, **cam kết thuê tối thiểu 80 Tr/tháng**; các phòng khác MDS Living khai thác vận hành |
 | **Đối tượng phù hợp** | Gia đình đa thế hệ, lãnh đạo, giới thượng lưu | Nhà đầu tư chiến lược, gom đất ven hồ đón cao tốc | Nhà đầu tư chuộng dòng tiền thụ động an toàn |
 
 ---
@@ -133,10 +133,10 @@ Mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chiến lượ
 > 3. **Bán ra 13,8 – 14,5 Triệu/m² khả thi & Tỷ suất ROE ~46% – 56%:** Mức giá bán lại 13,8 – 14,5 triệu/m² hoàn toàn nằm trong biên độ thanh khoản an toàn của khu vực khi cao tốc Biên Hòa - Vũng Tàu và Sân bay Long Thành thông xe. Khách hàng thu về lợi nhuận dự kiến **+3,4 Tỷ đến +4,1 Tỷ Đồng**, mang lại tỷ suất sinh lời vượt trội trên vốn thực nộp ban đầu mà không bị áp lực ra hàng.
 
 ### 4.3. Điền An (Haven) (07 Cụm Giới Hạn)
-- **Mô tả:** Mô hình cụm 30 phòng lưu trú sinh thái tiện nghi trên khuôn viên 1.100m² – 1.350m² với **2 phương án khai thác linh hoạt**:
-- **Chi tiết 2 phương án dòng tiền:**
-  - **Phương án 1 (Cho thuê trọn gói 30 phòng chuyên gia):** Cho thuê toàn bộ 30 phòng cho chuyên gia làm việc tại các KCN lân cận (Hợp đồng thuê 5 năm, ~4 tr/phòng/tháng) &rarr; Dòng tiền cố định vững chắc **120.000.000 đ / tháng (~1,44 tỷ đồng / năm)**.
-  - **Phương án 2 (Khai thác kết hợp 20 + 10):** 20 phòng cho chuyên gia thuê dài hạn đảm bảo dòng tiền cốt lõi **80.000.000 đ / tháng (~960 triệu đồng / năm)**; cộng với 10 phòng cho thuê du lịch & workation theo ngày đón khách nghỉ dưỡng ven hồ, mang lại tỷ suất lợi nhuận và tổng thu nhập cao hơn hẳn (**80 triệu/tháng++**).
+- **Mô tả:** Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên trên khuôn viên 1.100m² – 1.350m².
+- **Phương án kinh doanh & Dòng tiền:**
+  - **Cam kết thuê tối thiểu:** Cam kết thuê tối thiểu **80.000.000 đ / tháng (~960 triệu đồng / năm)** khi khách hàng xây dựng từ 20 phòng trở lên.
+  - **MDS Living khai thác vận hành phòng khác:** Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.
 
 ---
 
@@ -224,7 +224,7 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
    - Ký HĐXD: 30% &rarr; Xong móng: 15% &rarr; Hoàn thiện phần thô: 20% &rarr; Hoàn thiện cơ bản: 20% &rarr; Bàn giao nhà: 15%.
 3. **Đặc quyền kiến tạo:** Ưu đãi **800 triệu đồng** dành cho khách hàng hoàn thiện công trình kiến trúc trước Quý 4/2027.
 4. **Bộ 3 đặc quyền 24 tháng:** Miễn phí Quản lý vận hành chuẩn Resort 24 tháng; Tặng dịch vụ Quản gia Resort 24 tháng; Cung cấp định kỳ nguồn nông sản sạch chuẩn Organic trong 24 tháng.
-5. **Ủy thác khai thác Điền An:** 2 phương án khai thác linh hoạt với dòng tiền **80 – 120 triệu/tháng++** (PA1: 30 phòng chuyên gia thu 120 tr/tháng; PA2: 20 phòng chuyên gia thu 80 tr/tháng + 10 phòng thuê theo ngày thu nhập và tỷ suất cao hơn).
+5. **Ủy thác khai thác Điền An:** Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu **80 triệu/tháng**; khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.
 
 ---
 

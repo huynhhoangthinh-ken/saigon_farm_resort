@@ -101,9 +101,9 @@ Mở bán **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng tr
 | **Định vị** | Flagship Nghỉ Dưỡng Thượng Lưu | Tích Sản Gia Tộc & Đón Sóng Đợt 1 | Bất Động Sản Dòng Tiền Thụ Động |
 | **Số lượng mở bán** | **17 Dinh thự VIP** | **12 Nền độc bản** | **07 Cụm giới hạn** |
 | **Diện tích khuôn viên** | Trên 1.000 m² | Trên 1.000 m² | Trên 1.100 m² |
-| **Kiến trúc xây dựng** | Biệt phủ 1 – 2 tầng, hồ bơi khoáng muối, sân vườn >700m² | Đất điền trang ven hồ, xây dựng theo mẫu kiến trúc resort | Cụm 30 phòng lưu trú chuyên gia sinh thái hoàn chỉnh |
+| **Kiến trúc xây dựng** | Biệt phủ 1 – 2 tầng, hồ bơi khoáng muối, sân vườn >700m² | Đất điền trang ven hồ, xây dựng theo mẫu kiến trúc resort | Khu lưu trú chuyên gia sinh thái ít nhất từ 20 phòng trở lên |
 | **Quyền lợi thụ hưởng** | Phần thời gian còn lại trong năm dành cho gia đình sử dụng | Tự do nghỉ dưỡng & tích trữ gia sản giá gốc đợt 1 | Cụm phòng sinh thái lưu trú dài hạn & an cư |
-| **Cơ chế tài chính** | MDS Living mua lại **90 – 150 đêm lưu trú/năm**; phần thời gian còn lại chủ nhân sử dụng hoặc đưa vào khai thác chia sẻ doanh thu | Khai thác chênh lệch giá trị theo lộ trình phát triển quần thể — xem mục 4.2 | Hợp đồng thuê dài hạn tối thiểu 5 năm, **120 tr/tháng (1,44 tỷ/năm)** sau khi hoàn thiện cụm phòng |
+| **Cơ chế tài chính** | MDS Living mua lại **90 – 150 đêm lưu trú/năm**; phần thời gian còn lại chủ nhân sử dụng hoặc đưa vào khai thác chia sẻ doanh thu | Khai thác chênh lệch giá trị theo lộ trình phát triển quần thể — xem mục 4.2 | Khách hàng xây từ 20 phòng trở lên, **cam kết thuê tối thiểu 80 tr/tháng**; các phòng khác MDS Living khai thác vận hành dài hạn hoặc ngắn hạn |
 | **Đối tượng phù hợp** | Gia đình đa thế hệ, lãnh đạo, giới thượng lưu | Nhà đầu tư chiến lược, đón đầu hạ tầng cao tốc | Nhà đầu tư chuộng dòng tiền thụ động an toàn |
 
 ---
@@ -141,11 +141,11 @@ Dòng Điền Sản dành cho nhà đầu tư vào dòng vốn ở đợt mở b
 
 ### 4.3. Điền An (Haven) (07 Cụm Giới Hạn)
 - **Mã lô:** A13 · A14 · A15 · A22 · B22 · B23 · B24
-- **Mô tả:** Bảy khuôn viên lớn nhất quần thể, đủ quỹ đất phát triển cụm 30 phòng lưu trú sinh thái tiện nghi, đáp ứng nhu cầu an cư dài hạn cho các chuyên gia quốc tế, nhân sự cấp cao tại các khu công nghiệp công nghệ cao lân cận (KCN Đất Đỏ) và du khách theo đuổi lối sống Workation.
-- **Hiệu quả dòng tiền:**
-  - Ký kết hợp đồng quản lý & thuê vận hành tối thiểu 5 năm cùng MDS Living.
-  - Đơn giá cho thuê bình quân: 4.000.000 đ / phòng / tháng.
-  - Doanh thu gộp thực tế: **120.000.000 đ / tháng (tương đương 1,44 tỷ đồng / năm)** sau khi hoàn thiện cụm phòng lưu trú.
+- **Mô tả:** Bảy khuôn viên lớn nhất quần thể, đủ quỹ đất phát triển khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, đáp ứng nhu cầu an cư dài hạn cho các chuyên gia quốc tế, nhân sự cấp cao tại các khu công nghiệp công nghệ cao lân cận (KCN Đất Đỏ) và du khách theo đuổi lối sống Workation.
+- **Phương án kinh doanh & dòng tiền:**
+  - Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên.
+  - Hợp đồng cam kết thuê tối thiểu: **80.000.000 đ / tháng (tương đương 960 triệu đồng / năm)**.
+  - Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.
 
 ---
 
