@@ -35,9 +35,34 @@ else
     git push origin main
 fi
 
-echo "⛅ [3/3] Đang bắn trực tiếp lên Cloudflare Pages ($PROJECT_NAME)..."
+echo "📦 [3/4] Đóng gói website chuẩn hóa (dist-site)..."
+python3 -c "
+import os, shutil
+
+dist = 'dist-site'
+if os.path.exists(dist):
+    shutil.rmtree(dist)
+os.makedirs(dist, exist_ok=True)
+
+# Copy root html & meta files
+for f in os.listdir('.'):
+    if f.endswith('.html') or f in ['_redirects', '_headers', 'robots.txt', 'sitemap.xml', 'favicon.ico', 'app_icon_1024.png', 'app_icon_1024.jpg']:
+        shutil.copy2(f, os.path.join(dist, f))
+
+# Copy essential static web folders
+folders = [
+    'assets', 'css', 'js', 'data', 'bai-viet', 'listing', 'short',
+    'introduction', 'gioi-thieu', 'investment', 'investor', 'dien-an',
+    'dien-san', 'biet-phu-dien-trang', 'story', 'article', 'animation'
+]
+for folder in folders:
+    if os.path.exists(folder):
+        shutil.copytree(folder, os.path.join(dist, folder))
+"
+
+echo "⛅ [4/4] Đang bắn trực tiếp lên Cloudflare Pages ($PROJECT_NAME)..."
 # wrangler sẽ tự so khớp mã băm và chỉ upload những file có thay đổi
-npx -y wrangler pages deploy . --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true
+npx -y wrangler pages deploy dist-site --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true
 
 # Đồng bộ luôn trang thư mời (invitation.saigonfarmresort.com)
 if [ -f "deploy-invitation.sh" ]; then

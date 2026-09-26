@@ -19,4 +19,6 @@ public/videos/
 .env
 .env.*
 *.env
+.raw_assets/
+dist-site/
 ai_agent_bot/.env
