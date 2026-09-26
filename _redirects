@@ -6,16 +6,38 @@ https://www.saigonfarmresort.com/* https://saigonfarmresort.com/:splat 301
 # 2. Redirect Old Hyphenated Introduction to Clean gioithieu
 /gioi-thieu /gioithieu 301
 /gioi-thieu.html /gioithieu 301
+/introduction /gioithieu 301
+/introduction.html /gioithieu 301
 /Saigon_Farm_Resort_Introduction.html /gioithieu 301
 
 # 3. Empty Article Root to Homepage Tabs Section
 /article /index.html#tabs-section 301
 /article/ /index.html#tabs-section 301
+/article.html /index.html#tabs-section 301
 
 # 4. Investor & Investment Landing Page
 /investor /investment 301
 /investor/ /investment 301
 /investor.html /investment 301
 /investment.html /investment 301
+
 # 5. Short Landing Page for Sales
 /short.html /short 301
+
+# 6. Animation Experience Page
+/animation.html /animation 301
+
+# 6. Renamed Articles 301 Redirects
+/bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet.html /bai-viet/he-thong-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-cung-tuong-su-viet.html 301
+/bai-viet/he-sinh-thai-tien-ich-da-tang-hon-2-4ha-clubhouse-ben-thuyen-organic-farm-herbal-spa.html /bai-viet/he-sinh-thai-tien-ich-da-tang-len-den-30-000-m-clubhouse-ben-thuyen-organic-farm-herbal-spa.html 301
+
+# 7. Shopping Cart & Inventory Aliases
+/gio-hang /listing 301
+/gio-hang/ /listing 301
+/giohang /listing 301
+/giohang/ /listing 301
+/bang-hang /listing 301
+/bang-gia /listing 301
+/bang-hang/ /listing 301
+/bang-gia/ /listing 301
+

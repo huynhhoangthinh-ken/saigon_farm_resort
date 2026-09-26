@@ -165,12 +165,24 @@ def generate_article_html(post, slug, related_posts):
     return f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
+  <!-- Google Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L9EZXY66G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-8L9EZXY66G');
+  </script>
+  <!-- SFR Real-Time Visitor Live Tracker -->
+  <script defer src="/js/sfr-tracker.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{html.escape(page_title)}</title>
   <meta name="description" content="{html.escape(page_desc)}">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="{canonical_url}">
+  <link rel="icon" type="image/x-icon" href="../assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
@@ -405,32 +417,44 @@ def main():
     print(f"Successfully generated {len(generated_slugs)} static article HTML files in bai-viet/.")
 
     # Generate sitemap.xml
-    # Exactly 8 main canonical URLs + 83 articles = 91 URLs
-    main_urls = [
-        "https://saigonfarmresort.com/",
-        "https://saigonfarmresort.com/biet-phu-dien-trang.html",
-        "https://saigonfarmresort.com/dien-san.html",
-        "https://saigonfarmresort.com/dien-an.html",
-        "https://saigonfarmresort.com/gioi-thieu.html",
-        "https://saigonfarmresort.com/story.html",
-        "https://saigonfarmresort.com/listing.html",
-        "https://saigonfarmresort.com/lien-he.html"
+    # 10 core canonical URLs + 83 articles = 93 URLs
+    main_pages = [
+        {"url": "https://saigonfarmresort.com/", "changefreq": "daily", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/biet-phu-dien-trang.html", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/dien-san.html", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/dien-an.html", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/gioithieu", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/investment", "changefreq": "daily", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/listing.html", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/story.html", "changefreq": "weekly", "priority": "0.9"},
+        {"url": "https://saigonfarmresort.com/lien-he.html", "changefreq": "weekly", "priority": "0.9"},
+        {"url": "https://saigonfarmresort.com/short", "changefreq": "weekly", "priority": "0.8"},
     ]
 
     sitemap_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
     ]
-    for url in main_urls:
-        sitemap_lines.append(f"  <url>\n    <loc>{url}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>")
+    for page in main_pages:
+        sitemap_lines.append(f"""  <url>
+    <loc>{page['url']}</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>{page['changefreq']}</changefreq>
+    <priority>{page['priority']}</priority>
+  </url>""")
     for slug in generated_slugs:
         url = f"https://saigonfarmresort.com/bai-viet/{slug}.html"
-        sitemap_lines.append(f"  <url>\n    <loc>{url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>")
+        sitemap_lines.append(f"""  <url>
+    <loc>{url}</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
     sitemap_lines.append("</urlset>\n")
 
     with open("sitemap.xml", "w", encoding="utf-8") as f:
         f.write("\n".join(sitemap_lines))
-    print(f"Generated sitemap.xml with {len(main_urls) + len(generated_slugs)} URLs.")
+    print(f"Generated sitemap.xml with {len(main_pages) + len(generated_slugs)} URLs.")
 
 if __name__ == "__main__":
     main()

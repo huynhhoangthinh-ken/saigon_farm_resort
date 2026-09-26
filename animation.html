@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L9EZXY66G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8L9EZXY66G');
+  </script>
+  <!-- SFR Real-Time Visitor Live Tracker -->
+  <script defer src="/js/sfr-tracker.js"></script>
+  <base href="/">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>Saigon Farm Resort - Animation Experience</title>
+  <link rel="canonical" href="https://saigonfarmresort.com/animation">
+  <meta name="description" content="Trải nghiệm hoạt ảnh & không gian tương tác nghệ thuật tại Saigon Farm Resort.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="icon" type="image/x-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #07130f;
+      --bg-card: rgba(14, 30, 24, 0.7);
+      --gold-primary: #d4af37;
+      --gold-light: #f7e7a9;
+      --emerald-dark: #0b1e17;
+      --emerald-light: #164032;
+      --text-light: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border-gold: rgba(212, 175, 55, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 50% 20%, rgba(22, 64, 50, 0.45) 0%, transparent 70%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+    }
+
+    /* Header Nav */
+    header {
+      width: 100%;
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-logo img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-logo span {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--gold-light);
+      text-transform: uppercase;
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-gold);
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      background: rgba(212, 175, 55, 0.06);
+    }
+
+    .back-home:hover {
+      background: rgba(212, 175, 55, 0.2);
+      border-color: var(--gold-primary);
+      transform: translateY(-1px);
+    }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1100px;
+      padding: 60px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-primary);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.75; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.03); }
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.25;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #f7e7a9 0%, #d4af37 60%, #aa8318 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .status-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 36px 40px;
+      max-width: 640px;
+      width: 100%;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .status-card .icon-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .status-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
+    .status-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      width: 100%;
+      padding: 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="brand-logo">
+      <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo">
+      <span>Saigon Farm Resort</span>
+    </a>
+    <a href="/" class="back-home">
+      ← Về Trang Chủ
+    </a>
+  </header>
+
+  <main>
+    <div class="badge">Đường Dẫn Hoạt Động • /animation</div>
+    <h1>Trải Nghiệm <span>Animation</span></h1>
+    <p class="subtitle">
+      Trang đích dành cho các hiệu ứng hoạt ảnh sống động & không gian tương tác nghệ thuật của Saigon Farm Resort.
+    </p>
+
+    <div class="status-card">
+      <div class="icon-wrapper">✨</div>
+      <h2 class="status-title">Sẵn Sàng Tiếp Nhận Yêu Cầu Thiết Kế</h2>
+      <p class="status-desc">
+        Đường dẫn <code>/animation</code> đã được khởi tạo hoàn tất. Bạn có thể gửi toàn bộ nội dung, kịch bản animation, ý tưởng giao diện và hiệu ứng để triển khai ngay tại đây!
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Saigon Farm Resort. Tuyệt tác điền trang ven hồ Lồ Ồ.
+  </footer>
+
+</body>
+</html>

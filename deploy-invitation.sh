@@ -29,7 +29,14 @@ for folder in ['assets', 'css', 'js']:
 with open(os.path.join(dist, 'CNAME'), 'w') as f:
     f.write('$CUSTOM_DOMAIN\n')
 
-print('  -> Đóng gói thành công!')
+# 4. Chặn hoàn toàn Google Bot & công cụ tìm kiếm
+with open(os.path.join(dist, 'robots.txt'), 'w') as f:
+    f.write('User-agent: *\nDisallow: /\n')
+
+with open(os.path.join(dist, '_headers'), 'w') as f:
+    f.write('/*\n  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex\n')
+
+print('  -> Đóng gói thành công (Đã gắn bảo vệ chặn Google Search 100%)!')
 "
 
 echo "⛅ [2/3] Bắn trực tiếp lên Cloudflare Pages ($PROJECT_NAME)..."

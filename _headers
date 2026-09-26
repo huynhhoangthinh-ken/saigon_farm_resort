@@ -11,3 +11,9 @@
 
 /js/*
   Cache-Control: public, max-age=0, must-revalidate
+
+/thu-moi.html
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+
+/dist-invitation/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex

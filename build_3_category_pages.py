@@ -27,79 +27,8 @@ verified_images = [
     "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
 ]
 
-doc = docx.Document("./data/Listing_3_category/SFR_Listing_Gio_Hang_9_2026'.docx")
-
-categories = [
-    {
-        "slug": "biet-phu-dien-trang",
-        "title": "Biệt Phủ Điền Trang",
-        "sub_title": "The Manor Collection",
-        "tagline": "Dinh Thự Gia Tộc Sum Họp Đa Thế Hệ & Nghỉ Dưỡng Thượng Lưu",
-        "badge": "17 Sản Phẩm Giới Hạn",
-        "desc": "Biệt phủ gia đình cho kỳ nghỉ và sum họp nhiều thế hệ. Không gian khuôn viên rộng lớn từ 646,5m² đến 1.452m² với 100% thổ cư sổ đỏ riêng. Chủ nhân có thể đưa vào chương trình khai thác cho thuê của MDS Living khi không sử dụng.",
-        "table_idx": 0,
-        "default_image": "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg",
-        "hero_image": "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg"
-    },
-    {
-        "slug": "dien-san",
-        "title": "Điền Sản",
-        "sub_title": "The Founders Collection",
-        "tagline": "Tích Sản Tài Chính & Quyền Ưu Tiên Ra Hàng Đón Sóng Hạ Tầng",
-        "badge": "12 Sản Phẩm Tiên Phong",
-        "desc": "Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của chủ đầu tư. Không bắt buộc xây dựng ngay.",
-        "table_idx": 1,
-        "default_image": "assets/Index_asset/tien_ich_3D/Tong_Quan_1.jpg",
-        "hero_image": "assets/Index_asset/tien_ich_3D/Tong_quan.jpg"
-    },
-    {
-        "slug": "dien-an",
-        "title": "Điền An",
-        "sub_title": "The Haven Collection",
-        "tagline": "Khu Lưu Trú Chuyên Gia & Dòng Tiền Vận Hành Bền Vững",
-        "badge": "7 Vị Trí Tĩnh Lặng Nhất Khu",
-        "desc": "Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu là 80 triệu/đồng. Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.",
-        "table_idx": 2,
-        "default_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg",
-        "hero_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg"
-    }
-]
-
-# Build category items
-for c in categories:
-    t = doc.tables[c["table_idx"]]
-    items = []
-    for r_idx, row in enumerate(t.rows[1:]):
-        cells = [clean_text(cell.text.replace("\n", " ").strip()) for cell in row.cells]
-        code = cells[0]
-        area = cells[1]
-        features = cells[2]
-        suitable_for = cells[3]
-        
-        img_idx = (r_idx + c["table_idx"] * 5) % len(verified_images)
-        img = verified_images[img_idx]
-        
-        status = "Còn hàng"
-        status_type = "available"
-        if r_idx in [1, 5]:
-            status = "Đang giữ chỗ"
-            status_type = "reserved"
-            
-        items.append({
-            "code": code,
-            "area": area,
-            "features": features,
-            "suitable_for": suitable_for,
-            "price": "Liên hệ nhận bảng giá",
-            "status": status,
-            "status_type": status_type,
-            "image": img
-        })
-    c["items"] = items
-
-# Save clean json
-with open("data/listing_categories.json", "w", encoding="utf-8") as f:
-    json.dump(categories, f, ensure_ascii=False, indent=2)
+with open("data/listing_categories.json", "r", encoding="utf-8") as f:
+    categories = json.load(f)
 
 def render_page(cat, all_cats):
     other_cats = [c for c in all_cats if c["slug"] != cat["slug"]]
@@ -206,8 +135,9 @@ def render_page(cat, all_cats):
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết CĐT:</span>
-                <span class="price-val">Liên hệ nhận bảng giá</span>
+                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
+                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">{item.get('price_billion', 'Liên hệ')}</span>
+                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: {item.get('unit_price_million', '')}</span>
               </div>
               <button type="button" class="card-btn-action" onclick="openBookingModal('{item['code']}', '{item['area']}', '{cat['title']}')" title="Đặt lịch / Giữ chỗ lô {item['code']}">
                 <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
@@ -236,14 +166,80 @@ def render_page(cat, all_cats):
     html = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
+  <!-- Google Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L9EZXY66G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-8L9EZXY66G');
+  </script>
+  <!-- SFR Real-Time Visitor Live Tracker -->
+  <script defer src="/js/sfr-tracker.js"></script>
+
   <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{cat['title']} ({cat['sub_title']}) | Saigon Farm Resort - Giỏ Hàng Mở Bán 2026</title>
   <meta name="description" content="{cat['title']} ({cat['sub_title']}) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay. {cat['desc']}">
   <meta name="keywords" content="Saigon Farm Resort, {cat['title']}, {cat['sub_title']}, điền trang sinh thái, đất nghỉ dưỡng hồ tràm, đất đỏ TP Hồ Chí Minh">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://saigonfarmresort.com/{cat['slug']}.html">
   
-  <link rel="icon" type="image/x-icon" href="assets/Index_asset/Logo/Logo_SGFR.png">
+  <link rel="icon" type="image/x-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saigonfarmresort.com/{cat['slug']}.html">
+  <meta property="og:title" content="{cat['title']} ({cat['sub_title']}) | Saigon Farm Resort">
+  <meta property="og:description" content="{cat['title']} ({cat['sub_title']}) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay.">
+  <meta property="og:image" content="https://saigonfarmresort.com/{cat['hero_image']}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{cat['title']} ({cat['sub_title']}) | Saigon Farm Resort">
+  <meta name="twitter:description" content="{cat['title']} ({cat['sub_title']}) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay.">
+  <meta name="twitter:image" content="https://saigonfarmresort.com/{cat['hero_image']}">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@graph": [
+      {{
+        "@type": "RealEstateListing",
+        "@id": "https://saigonfarmresort.com/{cat['slug']}.html#listing",
+        "name": "{cat['title']} ({cat['sub_title']}) - Saigon Farm Resort",
+        "description": "{cat['desc']}",
+        "url": "https://saigonfarmresort.com/{cat['slug']}.html",
+        "image": "https://saigonfarmresort.com/{cat['hero_image']}",
+        "provider": {{
+          "@type": "Organization",
+          "name": "Saigon Farm Resort",
+          "url": "https://saigonfarmresort.com"
+        }}
+      }},
+      {{
+        "@type": "BreadcrumbList",
+        "@id": "https://saigonfarmresort.com/{cat['slug']}.html#breadcrumb",
+        "itemListElement": [
+          {{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Trang Chủ",
+            "item": "https://saigonfarmresort.com/"
+          }},
+          {{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "{cat['title']}",
+            "item": "https://saigonfarmresort.com/{cat['slug']}.html"
+          }}
+        ]
+      }}
+    ]
+  }}
+  </script>
   
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
