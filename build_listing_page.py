@@ -217,6 +217,7 @@ def update_listing():
         card = f"""
         <div class="listing-card"
              id="card-{code.lower()}"
+             onclick="openBookingModal('{code}', '{cat_title}', '{area_str}', '{unit_price_str}', '{price_str}', '{price_bil}')"
              data-stt="{stt}"
              data-code="{code.lower()}"
              data-block="{block.lower()}"
@@ -238,7 +239,7 @@ def update_listing():
                  loading="lazy" 
                  class="card-thumb" 
                  onerror="this.onerror=null; this.src='/assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg'">
-            <span class="card-badge-code">MÃ CĂN {code}</span>
+            <span class="card-badge-code">MÃ {code}</span>
             <span class="card-badge-cat">{cat_title}</span>
             <span class="card-badge-status {status_class}">
               <i class="fa-solid {status_icon}"></i> {status_text}
@@ -251,11 +252,12 @@ def update_listing():
                 <span class="area-val"><strong>{area_str}</strong> m²</span>
               </div>
               <div class="card-legal-pill">
-                <i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng
+                <i class="fa-solid fa-shield-halved"></i> 100% Sổ Riêng
               </div>
             </div>
 
-            <h4 class="card-title">Mã Lô {code} · Dãy {block} ({direction})</h4>
+            <h4 class="card-title">Căn {code} · Dãy {block} ({direction})</h4>
+            <div class="card-mobile-meta"><span class="cm-tag">{pos}</span> • <span class="cm-tag">{road}</span></div>
 
             <!-- Specs Grid -->
             <div class="card-specs-grid">
@@ -296,7 +298,7 @@ def update_listing():
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
-                <span class="price-type-tag">GIÁ GỐC NIÊM YẾT ĐỢT 1 (ORIGINAL PRICE)</span>
+                <span class="price-type-tag">GIÁ GỐC NIÊM YẾT ĐỢT 1</span>
                 <span class="unit-price-tag">Đơn giá: <strong>{unit_price_mil}</strong></span>
               </div>
               <div class="price-main-row">
@@ -310,16 +312,16 @@ def update_listing():
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="openBookingModal('{code}', '{cat_title}', '{area_str}', '{unit_price_str}', '{price_str}', '{price_bil}')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá & CSBH
+              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('{code}', '{cat_title}', '{area_str}', '{unit_price_str}', '{price_str}', '{price_bil}')">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
               </button>
-              <button type="button" class="btn-view-map-action" onclick="locateOnMap('{code}')" title="Định vị lô {code} trên bản đồ">
+              <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('{code}')" title="Định vị lô {code} trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô {code}">
+              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô {code}">
                 <i class="fa-solid fa-phone"></i>
               </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô {code}">
+              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô {code}">
                 <i class="fa-solid fa-comment-dots"></i>
               </a>
             </div>
@@ -426,17 +428,17 @@ def update_listing():
   <meta charset="utf-8"/>
   <base href="/">
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Giỏ Hàng & Mặt Bằng Phân Lô Tương Tác | Saigon Farm Resort</title>
+  <title>Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 | Saigon Farm Resort</title>
   <meta content="Bản đồ mặt bằng tương tác và giỏ hàng 34 sản phẩm mở bán Đợt 1 tại Saigon Farm Resort: Biệt Phủ Điền Trang, Điền Sản và Điền An. Xem vị trí thực địa, đơn giá và giá niêm yết gốc (Original Price Listing) trực tiếp từ Chủ đầu tư MDS Living." name="description"/>
   <meta name="keywords" content="mặt bằng saigon farm resort, sơ đồ phân lô saigon farm resort, giỏ hàng saigon farm resort, bảng giá saigon farm resort, biệt phủ điền trang, điền sản mds living, điền an lưu trú"/>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
-  <link rel="canonical" href="https://saigonfarmresort.com/listing.html">
+  <link rel="canonical" href="https://saigonfarmresort.com/giohang">
   <link rel="icon" type="image/x-icon" href="/assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://saigonfarmresort.com/listing.html">
-  <meta property="og:title" content="Giỏ Hàng & Mặt Bằng Phân Lô Tương Tác | Saigon Farm Resort">
+  <meta property="og:url" content="https://saigonfarmresort.com/giohang">
+  <meta property="og:title" content="Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 | Saigon Farm Resort">
   <meta property="og:description" content="34 sản phẩm đất nền biệt phủ & điền trang sinh thái ven hồ 100ha. Bản đồ phân lô tương tác và bảng giá niêm yết gốc từ Chủ đầu tư MDS Living.">
   <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/masterplan_tmb_sales.webp">
 
@@ -1998,9 +2000,98 @@ def update_listing():
       color: #999;
     }}
 
-    /* Mobile Responsive */
+    /* View Switcher */
+    .view-switcher {{
+      display: inline-flex;
+      background: #f1ebd8;
+      border-radius: 8px;
+      padding: 4px;
+      gap: 4px;
+    }}
+    .view-btn {{
+      border: none;
+      background: transparent;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }}
+    .view-btn.active {{
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(24,48,36,0.2);
+    }}
+    .view-btn.active i {{
+      color: var(--gold);
+    }}
+
+    /* List mode (Compact Rows) */
+    .listings-grid.view-list-mode {{
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
+    }}
+    .listings-grid.view-list-mode .listing-card {{
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: stretch !important;
+      border-radius: 10px;
+      cursor: pointer;
+    }}
+    .listings-grid.view-list-mode .card-thumb-wrap {{
+      width: 130px !important;
+      min-width: 130px !important;
+      height: auto !important;
+      min-height: 110px !important;
+    }}
+    .listings-grid.view-list-mode .card-body {{
+      padding: 10px 14px !important;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }}
+    .listings-grid.view-list-mode .card-specs-grid,
+    .listings-grid.view-list-mode .card-features,
+    .listings-grid.view-list-mode .card-fit,
+    .listings-grid.view-list-mode .card-policy-box,
+    .listings-grid.view-list-mode .card-chips-row {{
+      display: none !important;
+    }}
+    .listings-grid.view-list-mode .card-price-section {{
+      padding: 4px 8px !important;
+      margin: 4px 0 !important;
+      background: transparent !important;
+      border: none !important;
+    }}
+    .listings-grid.view-list-mode .card-actions {{
+      display: flex !important;
+      gap: 8px !important;
+      align-items: center !important;
+    }}
+    .listings-grid.view-list-mode .btn-primary-action {{
+      padding: 7px 12px !important;
+      font-size: 0.78rem !important;
+    }}
+
+    .card-mobile-meta {{
+      display: none;
+    }}
+
+    /* Mobile Fixed Bottom Dock */
+    .mobile-bottom-dock {{
+      display: none;
+    }}
+
+    /* Tablet Responsive */
     @media (max-width: 1100px) {{
-      .listings-grid {{
+      .listings-grid:not(.view-list-mode) {{
         grid-template-columns: repeat(2, 1fr);
       }}
       .hero-stats-grid {{
@@ -2013,18 +2104,27 @@ def update_listing():
         height: 520px;
       }}
     }}
+
+    /* Mobile Responsive (Super Friendly & Square Grid) */
     @media (max-width: 768px) {{
+      body {{
+        padding-bottom: 75px !important;
+      }}
       .nav-links {{
         display: none;
       }}
-      .listings-grid {{
-        grid-template-columns: 1fr;
-      }}
       .hero-title {{
-        font-size: 1.8rem;
+        font-size: 1.6rem !important;
       }}
       .hero-stats-grid {{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+      }}
+      .stat-pill {{
+        padding: 10px 12px !important;
+      }}
+      .stat-pill-val {{
+        font-size: 1.3rem !important;
       }}
       .footer-container {{
         grid-template-columns: 1fr;
@@ -2032,15 +2132,301 @@ def update_listing():
       .toolbar-row-top {{
         flex-direction: column;
         align-items: stretch;
+        gap: 10px;
       }}
       .search-box-wrap {{
         max-width: 100%;
       }}
       .map-viewport {{
-        height: 400px;
+        height: 380px;
       }}
       .map-header {{
         flex-direction: column;
+        gap: 10px;
+      }}
+      .floating-sales-cta {{
+        display: none !important;
+      }}
+
+      /* Fixed bottom dock */
+      .mobile-bottom-dock {{
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(15, 31, 23, 0.98);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        padding: 8px 12px;
+        gap: 8px;
+        z-index: 9999;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+        border-top: 1px solid rgba(201,169,110,0.4);
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+      }}
+      .dock-btn {{
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 11px 8px;
+        border-radius: 8px;
+        font-size: 0.84rem;
+        font-weight: 700;
+        text-decoration: none;
+      }}
+      .dock-btn-call {{
+        background: linear-gradient(135deg, #c9a96e, #a88448);
+        color: #183024;
+      }}
+      .dock-btn-zalo {{
+        background: #0068FF;
+        color: #ffffff;
+      }}
+
+      /* Category Pills Touch Carousel */
+      .category-pills {{
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px !important;
+        padding: 4px 0 8px !important;
+        margin-bottom: 10px !important;
+        scrollbar-width: none;
+      }}
+      .category-pills::-webkit-scrollbar {{
+        display: none;
+      }}
+      .cat-btn {{
+        flex-shrink: 0 !important;
+        padding: 7px 14px !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+      }}
+
+      /* Filter Dropdowns Horizontal Strip */
+      .filters-row-secondary {{
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+      }}
+      .filter-dropdowns-group {{
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 6px !important;
+        padding-bottom: 6px !important;
+        width: 100% !important;
+        scrollbar-width: none;
+      }}
+      .filter-dropdowns-group::-webkit-scrollbar {{
+        display: none;
+      }}
+      .select-filter {{
+        flex-shrink: 0 !important;
+        padding: 6px 10px !important;
+        font-size: 0.78rem !important;
+        background-color: #ffffff;
+        border: 1px solid #dcd3c2;
+      }}
+      .sort-group {{
+        justify-content: flex-end;
+      }}
+      .sort-group select {{
+        font-size: 0.78rem;
+        padding: 6px 10px;
+      }}
+
+      /* 2-Column Square Grid on Mobile ("Hàng ngang ô vuông") */
+      .listings-grid:not(.view-list-mode) {{
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 25px !important;
+      }}
+      .listings-grid:not(.view-list-mode) .listing-card {{
+        border-radius: 10px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }}
+      .listings-grid:not(.view-list-mode) .listing-card:active {{
+        transform: scale(0.98);
+      }}
+      .listings-grid:not(.view-list-mode) .card-thumb-wrap {{
+        height: 120px !important;
+        position: relative;
+      }}
+      .listings-grid:not(.view-list-mode) .card-badge-code {{
+        top: 6px !important;
+        left: 6px !important;
+        font-size: 0.7rem !important;
+        padding: 3px 6px !important;
+        font-weight: 800;
+        letter-spacing: 0;
+      }}
+      .listings-grid:not(.view-list-mode) .card-badge-cat {{
+        bottom: 6px !important;
+        left: 6px !important;
+        font-size: 0.62rem !important;
+        padding: 2px 6px !important;
+      }}
+      .listings-grid:not(.view-list-mode) .card-badge-status {{
+        top: 6px !important;
+        right: 6px !important;
+        font-size: 0.62rem !important;
+        padding: 2px 6px !important;
+      }}
+      .listings-grid:not(.view-list-mode) .card-body {{
+        padding: 8px !important;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }}
+      .listings-grid:not(.view-list-mode) .card-top-info {{
+        margin-bottom: 4px !important;
+      }}
+      .listings-grid:not(.view-list-mode) .area-label {{
+        display: none !important;
+      }}
+      .listings-grid:not(.view-list-mode) .area-val {{
+        font-size: 0.95rem !important;
+        font-weight: 800;
+        color: var(--primary);
+      }}
+      .listings-grid:not(.view-list-mode) .area-val strong {{
+        font-size: 1.05rem !important;
+        color: var(--gold-dark);
+      }}
+      .listings-grid:not(.view-list-mode) .card-legal-pill {{
+        display: none !important;
+      }}
+      .listings-grid:not(.view-list-mode) .card-title {{
+        font-size: 0.84rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 4px !important;
+        line-height: 1.3 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }}
+      .card-mobile-meta {{
+        display: flex !important;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.68rem;
+        color: var(--text-muted);
+        margin-bottom: 4px;
+      }}
+      .cm-tag {{
+        background: #f4ecdc;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-weight: 600;
+        color: #7d6f5d;
+      }}
+
+      /* Hide dense text fields on 2-col mobile cards so they stay neat and square */
+      .listings-grid:not(.view-list-mode) .card-specs-grid,
+      .listings-grid:not(.view-list-mode) .card-features,
+      .listings-grid:not(.view-list-mode) .card-fit,
+      .listings-grid:not(.view-list-mode) .card-policy-box,
+      .listings-grid:not(.view-list-mode) .card-chips-row {{
+        display: none !important;
+      }}
+      /* Compact Price box */
+      .listings-grid:not(.view-list-mode) .card-price-section {{
+        padding: 6px 8px !important;
+        margin-top: auto !important;
+        margin-bottom: 6px !important;
+        border-radius: 6px !important;
+        background: #fdfaf4 !important;
+      }}
+      .listings-grid:not(.view-list-mode) .price-type-tag,
+      .listings-grid:not(.view-list-mode) .price-exact,
+      .listings-grid:not(.view-list-mode) .price-note-badge {{
+        display: none !important;
+      }}
+      .listings-grid:not(.view-list-mode) .unit-price-tag {{
+        font-size: 0.68rem !important;
+        color: #777;
+      }}
+      .listings-grid:not(.view-list-mode) .price-billion {{
+        font-size: 1.12rem !important;
+        font-weight: 800 !important;
+        color: #b91c1c !important;
+      }}
+      /* Dual Quick Action Buttons on 2-col card */
+      .listings-grid:not(.view-list-mode) .card-actions {{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 6px !important;
+      }}
+      .listings-grid:not(.view-list-mode) .btn-primary-action,
+      .listings-grid:not(.view-list-mode) .btn-view-map-action {{
+        display: none !important;
+      }}
+      .listings-grid:not(.view-list-mode) .btn-call-action {{
+        width: 100% !important;
+        height: 32px !important;
+        border-radius: 5px !important;
+        background: #183024 !important;
+        color: #ffffff !important;
+        font-size: 0.74rem !important;
+        font-weight: 700 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 4px !important;
+        text-decoration: none !important;
+        border: none !important;
+      }}
+      .listings-grid:not(.view-list-mode) .btn-call-action::after {{
+        content: "Gọi";
+      }}
+      .listings-grid:not(.view-list-mode) .btn-zalo-action {{
+        width: 100% !important;
+        height: 32px !important;
+        border-radius: 5px !important;
+        background: #0068FF !important;
+        color: #ffffff !important;
+        font-size: 0.74rem !important;
+        font-weight: 700 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 4px !important;
+        text-decoration: none !important;
+        border: none !important;
+      }}
+      .listings-grid:not(.view-list-mode) .btn-zalo-action::after {{
+        content: "Zalo";
+      }}
+
+      /* Mobile Modal Polish */
+      .modal-overlay {{
+        padding: 10px;
+        align-items: flex-end;
+      }}
+      .modal-card {{
+        max-height: 88vh;
+        overflow-y: auto;
+        border-radius: 16px 16px 0 0;
+      }}
+      .modal-body {{
+        padding: 16px;
+      }}
+      .form-group {{
+        margin-bottom: 10px;
+      }}
+      .form-control {{
+        padding: 8px 12px;
+        font-size: 0.85rem;
       }}
     }}
 
@@ -2348,7 +2734,7 @@ def update_listing():
   <!-- Navbar -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="listing.html" class="nav-brand">
+      <a href="giohang.html" class="nav-brand">
         <img src="/assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo">
         <div class="nav-brand-text">
           <span class="nav-brand-title">SAIGON FARM RESORT</span>
@@ -2360,7 +2746,7 @@ def update_listing():
         <li><a href="biet-phu-dien-trang.html">Biệt Phủ Điền Trang</a></li>
         <li><a href="dien-san.html">Điền Sản</a></li>
         <li><a href="dien-an.html">Điền An</a></li>
-        <li><a href="#products-grid" class="active"><i class="fa-solid fa-cart-shopping" style="color:var(--gold-dark);"></i> Giỏ Hàng Mở Bán</a></li>
+        <li><a href="giohang.html" class="active"><i class="fa-solid fa-cart-shopping" style="color:var(--gold-dark);"></i> Giỏ Hàng Mở Bán</a></li>
         <li><a href="javascript:void(0)" onclick="openBookingModal('TƯ VẤN CHUNG', 'Đợt 1', '', '', '', '')" class="nav-cta"><i class="fa-solid fa-paper-plane"></i> Nhận Báo Giá Đợt 1</a></li>
       </ul>
     </div>
@@ -2521,11 +2907,14 @@ def update_listing():
         </div>
 
         <div class="view-switcher">
-          <button type="button" id="btnViewCard" class="view-btn active" onclick="switchView('card')">
-            <i class="fa-solid fa-grip"></i> Dạng Thẻ ({total_count})
+          <button type="button" id="btnViewGrid" class="view-btn active" onclick="switchView('grid')" title="Dạng lưới ô vuông tiện lợi">
+            <i class="fa-solid fa-grip"></i> Ô Vuông ({total_count})
           </button>
-          <button type="button" id="btnViewTable" class="view-btn" onclick="switchView('table')">
-            <i class="fa-solid fa-table-list"></i> Bảng Chi Tiết (11 Cột)
+          <button type="button" id="btnViewList" class="view-btn" onclick="switchView('list')" title="Dạng hàng ngang nhỏ gọn">
+            <i class="fa-solid fa-bars"></i> Hàng Ngang
+          </button>
+          <button type="button" id="btnViewTable" class="view-btn" onclick="switchView('table')" title="Bảng thông số chi tiết 11 cột">
+            <i class="fa-solid fa-table-list"></i> Bảng Chi Tiết
           </button>
         </div>
       </div>
@@ -2726,6 +3115,16 @@ def update_listing():
     </div>
   </div>
 
+  <!-- Mobile Fixed Bottom Dock -->
+  <div class="mobile-bottom-dock">
+    <a href="tel:0909000712" class="dock-btn dock-btn-call">
+      <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
+    </a>
+    <a href="https://zalo.me/0909000712" target="_blank" class="dock-btn dock-btn-zalo">
+      <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc
+    </a>
+  </div>
+
   <!-- Floating Sales CTA Bar -->
   <div class="floating-sales-cta">
     <a href="tel:0909000712" class="float-sales-btn float-call" title="Gọi kiểm tra giỏ hàng 0909 000 712">
@@ -2757,7 +3156,7 @@ def update_listing():
           <li><a href="biet-phu-dien-trang.html">Biệt Phủ Điền Trang (16 Căn)</a></li>
           <li><a href="dien-san.html">Điền Sản - Founders (11 Căn)</a></li>
           <li><a href="dien-an.html">Điền An - Haven (7 Cụm)</a></li>
-          <li><a href="listing.html">Giỏ Hàng & Bảng Giá Mở Bán</a></li>
+          <li><a href="giohang.html">Giỏ Hàng & Bảng Giá Mở Bán</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -2790,7 +3189,7 @@ def update_listing():
   <!-- Scripts -->
   <script>
     let currentCategory = 'all';
-    let currentView = 'card';
+    let currentView = 'grid';
 
     // ==============================================================
     // MAP INTERACTION ENGINE (PAN & ZOOM)
@@ -2934,7 +3333,7 @@ def update_listing():
       const card = document.getElementById('card-' + c);
       const row = document.getElementById('row-' + c);
 
-      if (currentView === 'card' && card) {{
+      if ((currentView === 'grid' || currentView === 'list') && card) {{
         card.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
         card.classList.add('card-highlighted');
         setTimeout(() => card.classList.remove('card-highlighted'), 2500);
@@ -2978,19 +3377,25 @@ def update_listing():
     // ==============================================================
     function switchView(view) {{
       currentView = view;
-      const btnCard = document.getElementById('btnViewCard');
+      const btnGrid = document.getElementById('btnViewGrid');
+      const btnList = document.getElementById('btnViewList');
       const btnTable = document.getElementById('btnViewTable');
       const grid = document.getElementById('listingsGrid');
       const table = document.getElementById('tableViewContainer');
 
-      if (view === 'card') {{
-        btnCard.classList.add('active');
-        btnTable.classList.remove('active');
+      if (btnGrid) btnGrid.classList.toggle('active', view === 'grid');
+      if (btnList) btnList.classList.toggle('active', view === 'list');
+      if (btnTable) btnTable.classList.toggle('active', view === 'table');
+
+      if (view === 'grid') {{
         grid.style.display = 'grid';
+        grid.classList.remove('view-list-mode');
+        table.style.display = 'none';
+      }} else if (view === 'list') {{
+        grid.style.display = 'flex';
+        grid.classList.add('view-list-mode');
         table.style.display = 'none';
       }} else {{
-        btnCard.classList.remove('active');
-        btnTable.classList.add('active');
         grid.style.display = 'none';
         table.style.display = 'block';
       }}
@@ -3105,8 +3510,17 @@ def update_listing():
         if (table) table.style.display = 'none';
       }} else {{
         noResults.style.display = 'none';
-        if (currentView === 'card') {{
-          if (grid) grid.style.display = 'grid';
+        if (currentView === 'grid') {{
+          if (grid) {{
+            grid.style.display = 'grid';
+            grid.classList.remove('view-list-mode');
+          }}
+          if (table) table.style.display = 'none';
+        }} else if (currentView === 'list') {{
+          if (grid) {{
+            grid.style.display = 'flex';
+            grid.classList.add('view-list-mode');
+          }}
           if (table) table.style.display = 'none';
         }} else {{
           if (grid) grid.style.display = 'none';
@@ -3218,6 +3632,17 @@ def update_listing():
 </html>
 """
 
+    # Write primary /giohang files
+    with open("giohang.html", "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print("Generated giohang.html successfully!")
+
+    os.makedirs("giohang", exist_ok=True)
+    with open("giohang/index.html", "w", encoding="utf-8") as f:
+        f.write(html_content.replace("<head>", '<head>\n  <base href="../">'))
+    print("Generated giohang/index.html successfully with base href!")
+
+    # Also keep listing.html and listing/index.html updated as legacy fallback
     with open("listing.html", "w", encoding="utf-8") as f:
         f.write(html_content)
     print("Generated listing.html successfully!")

@@ -51,7 +51,7 @@ for f in os.listdir('.'):
 
 # Copy essential static web folders
 folders = [
-    'assets', 'css', 'js', 'data', 'bai-viet', 'listing', 'short',
+    'assets', 'css', 'js', 'data', 'bai-viet', 'listing', 'giohang', 'short',
     'introduction', 'gioi-thieu', 'investment', 'investor', 'dien-an',
     'dien-san', 'biet-phu-dien-trang', 'story', 'article', 'animation'
 ]
