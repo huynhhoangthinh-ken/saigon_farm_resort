@@ -6,6 +6,7 @@
 PROJECT_NAME="invitation-saigonfarmresort"
 CUSTOM_DOMAIN="invitation.saigonfarmresort.com"
 DIST="dist-invitation"
+export CLOUDFLARE_ACCOUNT_ID="3f8e9f507373cd9d315b6efbb8bfb026"
 
 echo "📦 [1/3] Đóng gói trang thư mời độc lập vào $DIST..."
 python3 -c "

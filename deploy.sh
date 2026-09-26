@@ -6,6 +6,7 @@
 # 1. Đặt tên project Cloudflare Pages của website
 PROJECT_NAME="saigonfarmresort"
 CUSTOM_DOMAIN="saigonfarmresort.com"
+export CLOUDFLARE_ACCOUNT_ID="3f8e9f507373cd9d315b6efbb8bfb026"
 
 # 2. Lấy thông điệp commit (mặc định nếu không truyền tham số)
 COMMIT_MSG="${1:-Auto update and deploy website}"
@@ -36,7 +37,7 @@ fi
 
 echo "⛅ [3/3] Đang bắn trực tiếp lên Cloudflare Pages ($PROJECT_NAME)..."
 # wrangler sẽ tự so khớp mã băm và chỉ upload những file có thay đổi
-npx -y wrangler pages deploy . --project-name="$PROJECT_NAME" --commit-dirty=true
+npx -y wrangler pages deploy . --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true
 
 # Đồng bộ luôn trang thư mời (invitation.saigonfarmresort.com)
 if [ -f "deploy-invitation.sh" ]; then
