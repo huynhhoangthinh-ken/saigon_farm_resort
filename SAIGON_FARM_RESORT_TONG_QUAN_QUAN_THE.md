@@ -121,7 +121,7 @@ Mở bán **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng tr
 - **Mô tả:** Dòng sản phẩm đất nền điền trang nghỉ dưỡng sổ đỏ ven hồ dành riêng cho 12 nhà đầu tư đồng hành đầu tiên (Founders Club).
 - **Lợi thế:**
   - Sở hữu mức giá gốc đợt 1 từ Chủ đầu tư với quyền chọn vị trí ưu tiên.
-  - Thanh toán 70% công chứng sang tên cho khách hàng, 30% được giãn tiến độ với lãi suất 0% cho tới cuối năm 2027 khi toàn khu đi vào vận hành.
+  - Thanh toán 50% ký công chứng HĐ chuyển nhượng QSDĐ (tiến độ 100% đứng sổ đỏ riêng), 50% được giãn tiến độ với lãi suất 0% trong 12 tháng (hoặc tới cuối năm 2027), CĐT cam kết đồng hành hỗ trợ ra hàng với giá dự kiến 13,8 – 15 triệu/m² (tỷ suất sinh lời ~60% – 83%/vốn tự có).
   - Quy hoạch phân lô đột phá: 1 khuôn viên điền trang có thể thiết kế tách thành cụm 3 căn riêng biệt giúp tối ưu hóa thanh khoản.
 
 #### Cơ chế đầu tư của dòng Điền Sản
@@ -266,11 +266,11 @@ Khởi đầu hành trình sở hữu chỉ với **200 triệu đồng** đặt
 | **Đợt 5** | 08 tháng kể từ Đợt 1 | 10% | Tiến độ cảnh quan |
 | **Đợt cuối** | 12 tháng kể từ Đợt 1 | 40% | Ký Hợp đồng chuyển nhượng QSDĐ & Công chứng |
 
-#### Phương án 2 — Thanh Toán Ưu Việt 70%
+#### Phương án 2 — Thanh Toán Ưu Việt 50/50
 - Đặt cọc: 200 triệu đồng.
-- Thanh toán **70%** trong vòng 10 ngày và **ký Hợp đồng chuyển nhượng QSDĐ công chứng ngay tại thời điểm này**.
-- Phần **30%** còn lại thanh toán sau 12 tháng khi bàn giao Giấy chứng nhận quyền sử dụng đất.
-- Khách hàng nhận **đặc quyền chiết khấu 800 triệu đồng**, khấu trừ trực tiếp vào giá bán.
+- Thanh toán **50%** trong vòng 7 – 10 ngày và **ký Hợp đồng chuyển nhượng QSDĐ công chứng ngay tại thời điểm này** (sổ đỏ chung, tiến độ thanh toán 100% mới đứng sổ đỏ riêng).
+- Phần **50%** còn lại thanh toán sau 12 tháng với lãi suất 0% (Chủ đầu tư đồng hành hỗ trợ ra hàng đối với dòng Điền Sản với giá dự kiến 13,8 – 15 triệu/m²).
+- Khách hàng nhận **đặc quyền chiết khấu 600 triệu đồng**, khấu trừ trực tiếp vào giá bán.
 
 #### Phương án 3 — Thanh Toán Ưu Việt 100%
 - Đặt cọc: 500 triệu đồng.
@@ -351,6 +351,6 @@ Sở hữu biệt phủ tại Saigon Farm Resort không chỉ để nghỉ dư�
 - Cơ cấu 36 sản phẩm mở bán đợt 1: 17 Biệt Phủ · 12 Điền Sản · 07 Điền An. Toàn bộ quần thể giới hạn 47 sản phẩm độc bản.
 - **Tài liệu này KHÔNG công bố giá bán cố định.** Bảng giá chi tiết theo từng mã nền, đơn giá xây dựng và phương án dòng tiền cụ thể được tư vấn viên cung cấp theo từng giao dịch thực tế.
 - Diện tích nêu trong tài liệu là diện tích trên Giấy chứng nhận quyền sử dụng đất (Sổ đỏ).
-- Mức chiết khấu 800 triệu đồng và 1 tỷ đồng là chính sách đặc quyền cố định theo phương án thanh toán ưu việt, khấu trừ trực tiếp vào giá bán.
+- Mức chiết khấu 600 triệu đồng (PA 50/50) và 1 tỷ đồng (PA 100%) là chính sách đặc quyền cố định theo phương án thanh toán ưu việt, khấu trừ trực tiếp vào giá bán.
 - Mốc vận hành hạ tầng giao thông vùng (Cao tốc Biên Hòa – Vũng Tàu, Sân bay Long Thành, Đường ĐT994) căn cứ theo tiến độ công bố của các cơ quan quản lý Nhà nước có thẩm quyền.
 - Chương trình đồng hành khai thác lưu trú (mua lại 90 – 150 đêm/năm hoặc phân chia doanh thu) được cụ thể hóa bằng Hợp đồng hợp tác khai thác ký trực tiếp với đơn vị vận hành MDS Living.

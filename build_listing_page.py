@@ -196,7 +196,7 @@ def update_listing():
             policy_html = """
             <div class="card-policy-box policy-founders">
               <i class="fa-solid fa-gift"></i>
-              <span><strong>CS Mở Bán:</strong> Ưu đãi TT sớm 70% giảm <strong>800Tr</strong> · TT sớm 100% giảm <strong>1 Tỷ</strong> · Giãn 30% tới cuối 2027 0% lãi</span>
+              <span><strong>CS Mở Bán:</strong> Ưu đãi TT sớm 50/50 giảm <strong>600Tr</strong> · TT sớm 100% giảm <strong>1 Tỷ</strong> · Giãn 50% trong 12 tháng 0% lãi</span>
             </div>
             """
         elif cat_slug == "dien-an":
@@ -2786,7 +2786,7 @@ def update_listing():
           <strong>LƯU Ý VỀ GIÁ NIÊM YẾT GỐC (ORIGINAL PRICE LISTING):</strong>
           <p>Bảng giá dưới đây là <strong>Giá Niêm Yết Công Bố Trước Chính Sách Bán Hàng</strong> của Chủ đầu tư. Khách hàng giao dịch trong Đợt 1 sẽ được áp dụng các chính sách ưu đãi đặc quyền:</p>
           <ul>
-            <li><strong>Điền Sản (11 nền):</strong> Thanh toán sớm 70% giảm ngay <strong>800 Triệu</strong> · Thanh toán 100% giảm <strong>1 Tỷ đồng</strong> · Giữ lại 30% CĐT hỗ trợ ra hàng hoặc giãn thanh toán tới cuối 2027 với lãi suất 0%.</li>
+            <li><strong>Điền Sản (11 nền):</strong> Thanh toán sớm 50/50 giảm ngay <strong>600 Triệu</strong> · Thanh toán 100% giảm <strong>1 Tỷ đồng</strong> · Giữ lại 50% CĐT hỗ trợ ra hàng giá 13,8 – 15 Tr/m² hoặc giãn thanh toán 12 tháng với lãi suất 0%.</li>
             <li><strong>Điền An (7 cụm):</strong> Hợp đồng thuê dài hạn từ MDS Living, cam kết thuê tối thiểu <strong>80 Tr/tháng (960 Tr/năm)</strong> với cụm từ 20 phòng trở lên.</li>
             <li><strong>Biệt Phủ Điền Trang (16 dinh thự):</strong> MDS Living cam kết thuê lại 150 đêm/năm (thu nhập 600 triệu/năm) và 215 đêm nghỉ dưỡng cho gia chủ + chia sẻ 50% doanh thu cùng MDS Living.</li>
           </ul>
@@ -3095,7 +3095,7 @@ def update_listing():
           <div class="form-group">
             <label for="formNeed">Nhu cầu tư vấn ưu tiên</label>
             <select id="formNeed" class="form-control">
-              <option value="Bảng tính thanh toán sớm (giảm 800Tr - 1 Tỷ)">Nhận bảng tính thanh toán sớm (giảm 800Tr - 1 Tỷ)</option>
+              <option value="Bảng tính thanh toán sớm (giảm 600Tr - 1 Tỷ)">Nhận bảng tính thanh toán sớm (giảm 600Tr - 1 Tỷ)</option>
               <option value="Chính sách cam kết thuê 80Tr/tháng">Chính sách cam kết thuê 80Tr/tháng</option>
               <option value="Đăng ký đi xe đưa đón khảo sát thực tế">Đăng ký đi xe đưa đón khảo sát thực tế</option>
               <option value="Nhận toàn bộ hồ sơ pháp lý 1/500 & sổ đỏ">Nhận toàn bộ hồ sơ pháp lý 1/500 & sổ đỏ</option>
