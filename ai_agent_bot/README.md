@@ -1,6 +1,6 @@
 # HƯỚNG DẪN KÍCH HOẠT AI AGENT BOT CHO FANPAGE SAIGON FARM RESORT
 > **Fanpage:** [https://www.facebook.com/farmresort.sg](https://www.facebook.com/farmresort.sg)  
-> **Chủ đầu tư & Vận hành:** MDS Living
+> **Đơn vị Phát triển:** MDS Land | **Đơn vị Vận hành:** MDS Living
 
 ---
 

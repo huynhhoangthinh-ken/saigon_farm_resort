@@ -33,7 +33,7 @@ async def send_telegram_alert(
     
     msg_lines = [
         f"<b>{icon}</b>",
-        f"<b>Dự án:</b> Saigon Farm Resort (MDS Living)",
+        f"<b>Dự án:</b> Saigon Farm Resort (MDS Land)",
         f"<b>Facebook ID khách:</b> <code>{sender_id}</code>",
     ]
 

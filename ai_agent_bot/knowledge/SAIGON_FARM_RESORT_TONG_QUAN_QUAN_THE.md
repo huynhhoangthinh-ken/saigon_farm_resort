@@ -32,7 +32,8 @@
 | Thông Số | Chi Tiết |
 | :--- | :--- |
 | **Tên thương mại** | **Saigon Farm Resort** |
-| **Chủ đầu tư & Đơn vị vận hành** | **MDS Living** (Đơn vị tiên phong phát triển và vận hành chuỗi khu nghỉ dưỡng sinh thái cao cấp) |
+| **Đơn vị phát triển** | **MDS Land** |
+| **Đơn vị vận hành** | **MDS Living** (Đơn vị quản lý và vận hành chuỗi khu nghỉ dưỡng sinh thái cao cấp) |
 | **Tổng đại lý tiếp thị & phân phối** | **Đại Chúng Properties** |
 | **Vị trí địa lý** | Hồ Lồ Ồ, Xã Đất Đỏ, TP. Hồ Chí Minh (Liền kề cung đường du lịch biển Hồ Tràm – Bình Châu) |
 | **Quy mô mặt nước & sinh thái** | Mặt hồ tự nhiên **100 ha**, 3 mặt giáp cánh đồng lúa hữu cơ và hệ sinh thái cây xanh tự nhiên |
@@ -120,8 +121,8 @@ Mở bán **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng tr
 - **Mã lô:** A8 · A9 · A10 · A11 · A12 · B5 · B8 · B9 · B10 · B17 · B18 · B19
 - **Mô tả:** Dòng sản phẩm đất nền điền trang nghỉ dưỡng sổ đỏ ven hồ dành riêng cho 12 nhà đầu tư đồng hành đầu tiên (Founders Club).
 - **Lợi thế:**
-  - Sở hữu mức giá gốc đợt 1 từ Chủ đầu tư với quyền chọn vị trí ưu tiên.
-  - Thanh toán 50% ký công chứng HĐ chuyển nhượng QSDĐ (tiến độ 100% đứng sổ đỏ riêng), 50% được giãn tiến độ với lãi suất 0% trong 12 tháng (hoặc tới cuối năm 2027), CĐT cam kết đồng hành hỗ trợ ra hàng với giá dự kiến 13,8 – 15 triệu/m² (tỷ suất sinh lời ~60% – 83%/vốn tự có).
+  - Sở hữu mức giá gốc đợt 1 từ Đơn vị Phát triển MDS Land với quyền chọn vị trí ưu tiên.
+  - Thanh toán 50% ký công chứng HĐ chuyển nhượng QSDĐ (tiến độ 100% đứng sổ đỏ riêng), 50% được giãn tiến độ với lãi suất 0% trong 12 tháng (hoặc tới cuối năm 2027), Đơn vị Phát triển MDS Land cam kết đồng hành hỗ trợ ra hàng với giá dự kiến 13,8 – 15 triệu/m² (tỷ suất sinh lời ~60% – 83%/vốn tự có).
   - Quy hoạch phân lô đột phá: 1 khuôn viên điền trang có thể thiết kế tách thành cụm 3 căn riêng biệt giúp tối ưu hóa thanh khoản.
 
 #### Cơ chế đầu tư của dòng Điền Sản
@@ -251,7 +252,7 @@ Mỗi hạng mục tiện ích trong sơ đồ tổng thể được thiết k�
 
 ### 7.1. Ba phương án sở hữu linh hoạt
 
-Chủ đầu tư thiết kế ba lộ trình thanh toán để khách hàng lựa chọn theo năng lực tài chính và kế hoạch dòng tiền. Mức ưu đãi cụ thể theo chính sách chính thức tại thời điểm giao dịch:
+Đơn vị Phát triển MDS Land thiết kế ba lộ trình thanh toán để khách hàng lựa chọn theo năng lực tài chính và kế hoạch dòng tiền. Mức ưu đãi cụ thể theo chính sách chính thức tại thời điểm giao dịch:
 
 #### Phương án 1 — Sở hữu An Nhàn
 Khởi đầu hành trình sở hữu chỉ với **200 triệu đồng** đặt cọc. Lộ trình thanh toán giãn đều trong 12 tháng:
@@ -269,7 +270,7 @@ Khởi đầu hành trình sở hữu chỉ với **200 triệu đồng** đặt
 #### Phương án 2 — Thanh Toán Ưu Việt 50/50
 - Đặt cọc: 200 triệu đồng.
 - Thanh toán **50%** trong vòng 7 – 10 ngày và **ký Hợp đồng chuyển nhượng QSDĐ công chứng ngay tại thời điểm này** (sổ đỏ chung, tiến độ thanh toán 100% mới đứng sổ đỏ riêng).
-- Phần **50%** còn lại thanh toán sau 12 tháng với lãi suất 0% (Chủ đầu tư đồng hành hỗ trợ ra hàng đối với dòng Điền Sản với giá dự kiến 13,8 – 15 triệu/m²).
+- Phần **50%** còn lại thanh toán sau 12 tháng với lãi suất 0% (Đơn vị Phát triển MDS Land đồng hành hỗ trợ ra hàng đối với dòng Điền Sản với giá dự kiến 13,8 – 15 triệu/m²).
 - Khách hàng nhận **đặc quyền chiết khấu 600 triệu đồng**, khấu trừ trực tiếp vào giá bán.
 
 #### Phương án 3 — Thanh Toán Ưu Việt 100%

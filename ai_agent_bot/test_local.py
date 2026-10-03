@@ -12,7 +12,7 @@ def test_system():
     knowledge = load_project_knowledge()
     print(f"✅ Đã nạp thành công {len(knowledge)} ký tự kiến thức dự án.")
     if "Hồ Lồ Ồ" in knowledge and "MDS Living" in knowledge:
-        print("✅ Dữ liệu chứa đầy đủ thông tin: Vị trí Hồ Lồ Ồ, CĐT MDS Living, các dòng sản phẩm.")
+        print("✅ Dữ liệu chứa đầy đủ thông tin: Vị trí Hồ Lồ Ồ, Đơn vị Phát triển MDS Land, các dòng sản phẩm.")
     
     # 2. Kiểm tra bộ bóc tách số điện thoại
     sample_texts = [

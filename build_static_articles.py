@@ -342,7 +342,7 @@ def generate_article_html(post, slug, related_posts):
           <div class="footer-nap-block" style="margin-top:0; padding-top:0; border-top:none;">
             <p style="font-size: 0.88rem; line-height: 1.6; max-width: 360px; color: #aaa;">
               Quần thể biệt phủ điền trang sinh thái và đất nền sổ đỏ ven hồ 100ha tại Xã Đất Đỏ, TP. Hồ Chí Minh.<br/>
-              <strong style="color: #c9a96e;">Chủ đầu tư:</strong> MDS Living
+              <strong style="color: #c9a96e;">Đơn vị Phát triển:</strong> MDS Land
             </p>
             <p style="margin-top: 12px; color: #aaa; font-size: 0.88rem; line-height: 1.5;">
               <i class="fa-solid fa-location-dot" style="color: #c9a96e; margin-right: 6px;"></i><strong>Địa chỉ:</strong> Xã Đất Đỏ, TP. Hồ Chí Minh (trước đây: huyện Đất Đỏ, tỉnh Bà Rịa – Vũng Tàu)
@@ -375,7 +375,7 @@ def generate_article_html(post, slug, related_posts):
         </div>
       </div>
       <div class="footer-bottom-bar">
-        <div>© 2026 Saigon Farm Resort • Chủ đầu tư: MDS Living. Tất cả quyền được bảo lưu.</div>
+        <div>© 2026 Saigon Farm Resort • Đơn vị Phát triển: MDS Land. Tất cả quyền được bảo lưu.</div>
       </div>
     </div>
   </footer>

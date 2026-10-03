@@ -63,7 +63,7 @@ def render_page(cat, all_cats):
             {
                 "icon": "fa-arrow-trend-up",
                 "title": "Biên Độ Gia Tăng Giá Trị Giai Đoạn 1",
-                "desc": "Nhà đầu tư đón đầu mức giá khởi điểm tốt nhất từ Chủ đầu tư trong đợt mở bán đầu tiên, đảm bảo biên lợi nhuận kỳ vọng cao nhất cho dòng vốn tích sản."
+                "desc": "Nhà đầu tư đón đầu mức giá khởi điểm tốt nhất từ Đơn vị Phát triển MDS Land trong đợt mở bán đầu tiên, đảm bảo biên lợi nhuận kỳ vọng cao nhất cho dòng vốn tích sản."
             },
             {
                 "icon": "fa-layer-group",
@@ -77,7 +77,7 @@ def render_page(cat, all_cats):
             },
             {
                 "icon": "fa-route",
-                "title": "Quyền Ưu Tiên Ra Hàng Theo Lộ Trình CĐT",
+                "title": "Quyền Ưu Tiên Ra Hàng Theo Lộ Trình Đơn Vị Phát Triển MDS Land",
                 "desc": "Được đội ngũ kinh doanh Ban Quản Lý Saigon Farm Resort đồng hành hỗ trợ ra hàng theo từng giai đoạn tăng giá mở bán tiếp theo của khu điền trang."
             }
         ]
@@ -1306,7 +1306,7 @@ def render_page(cat, all_cats):
       <div class="section-header">
         <span class="section-tag">DANH SÁCH MÃ CĂN MỞ BÁN</span>
         <h2 class="section-title">Bảng Giỏ Hàng {cat['title']}</h2>
-        <p class="section-sub">Tổng hợp chi tiết các mã lô, diện tích quy hoạch, đặc tính vị trí và mức độ phù hợp. Bảng giá chính thức do Chủ đầu tư công bố trước thời điểm mở bán.</p>
+        <p class="section-sub">Tổng hợp chi tiết các mã lô, diện tích quy hoạch, đặc tính vị trí và mức độ phù hợp. Bảng giá chính thức do Đơn vị Phát triển MDS Land công bố trước thời điểm mở bán.</p>
       </div>
 
       <!-- Controls & Filter -->
@@ -1387,7 +1387,7 @@ def render_page(cat, all_cats):
           <span style="font-family: var(--font-serif); font-size: 1.2rem; color: #fff; font-weight: 700;">Saigon Farm Resort</span>
         </div>
         <p style="font-size: 0.88rem; line-height: 1.7; color: #8e9e96; margin-bottom: 20px;">
-          Quần thể biệt phủ điền trang sinh thái tựa hồ 100ha - hướng biển. Đất 100% thổ cư, sổ đỏ riêng từng lô, phát triển bởi Ban Quản Lý Saigon Farm Resort &amp; MDS Living.
+          Quần thể biệt phủ điền trang sinh thái tựa hồ 100ha - hướng biển. Đất 100% thổ cư, sổ đỏ riêng từng lô, phát triển bởi Ban Quản Lý Saigon Farm Resort &amp; MDS Land.
         </p>
         <p style="font-size: 0.88rem; color: var(--gold-light);">
           📍 <strong>Địa chỉ:</strong> Xã Đất Đỏ, TP. Hồ Chí Minh.
@@ -1427,7 +1427,7 @@ def render_page(cat, all_cats):
 
     <div class="footer-bottom">
       <div>© 2026 Saigon Farm Resort. Bảo lưu mọi quyền.</div>
-      <div>Phát triển bởi: <strong>MDS Living &amp; Ban Quản Lý Saigon Farm Resort</strong></div>
+      <div>Phát triển bởi: <strong>MDS Land &amp; Ban Quản Lý Saigon Farm Resort</strong></div>
     </div>
   </footer>
 
@@ -1452,7 +1452,7 @@ def render_page(cat, all_cats):
       <div id="modal-unit-tag" class="modal-unit-tag" style="display:none;"></div>
       
       <p class="modal-desc">
-        Để nhận trọn bộ hồ sơ pháp lý, bảng giá niêm yết chính thức từ Chủ đầu tư và được hỗ trợ thủ tục giữ chỗ ưu tiên trong đợt mở bán tháng 9/2026, <strong>kính mời Quý khách liên hệ trực tiếp với Đơn vị Đại lý hoặc Chuyên viên tư vấn đã trân trọng gửi Quý khách đường link thông tin này.</strong>
+        Để nhận trọn bộ hồ sơ pháp lý, bảng giá niêm yết chính thức từ Đơn vị Phát triển MDS Land và được hỗ trợ thủ tục giữ chỗ ưu tiên trong đợt mở bán tháng 9/2026, <strong>kính mời Quý khách liên hệ trực tiếp với Đơn vị Đại lý hoặc Chuyên viên tư vấn đã trân trọng gửi Quý khách đường link thông tin này.</strong>
       </p>
       
       <div class="modal-notice-box">
