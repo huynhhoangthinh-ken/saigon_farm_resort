@@ -34,7 +34,7 @@
 | **Tên thương mại** | **Saigon Farm Resort** |
 | **Đơn vị phát triển** | **MDS Land** |
 | **Đơn vị vận hành** | **MDS Living** (Đơn vị quản lý và vận hành chuỗi khu nghỉ dưỡng sinh thái cao cấp) |
-| **Tổng đại lý tiếp thị & phân phối** | **Đại Chúng Properties** |
+| **Tổng đại lý tiếp thị & phân phối** | **Ban Quản Lý Saigon Farm Resort** |
 | **Vị trí địa lý** | Hồ Lồ Ồ, Xã Đất Đỏ, TP. Hồ Chí Minh (Liền kề cung đường du lịch biển Hồ Tràm – Bình Châu) |
 | **Quy mô mặt nước & sinh thái** | Mặt hồ tự nhiên **100 ha**, 3 mặt giáp cánh đồng lúa hữu cơ và hệ sinh thái cây xanh tự nhiên |
 | **Tổng quy mô tiện ích nội khu** | **Lên đến 30.000 m² (3ha)** — Tỷ lệ đặc quyền ~638 m² tiện ích/sản phẩm |
@@ -125,6 +125,25 @@ Mở bán **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng tr
   - Thanh toán 50% ký công chứng HĐ chuyển nhượng QSDĐ (tiến độ 100% đứng sổ đỏ riêng), 50% được giãn tiến độ với lãi suất 0% trong 12 tháng (hoặc tới cuối năm 2027), Đơn vị Phát triển MDS Land cam kết đồng hành hỗ trợ ra hàng với giá dự kiến 13,8 – 15 triệu/m² (tỷ suất sinh lời ~60% – 83%/vốn tự có).
   - Quy hoạch phân lô đột phá: 1 khuôn viên điền trang có thể thiết kế tách thành cụm 3 căn riêng biệt giúp tối ưu hóa thanh khoản.
 
+#### 📊 Bảng Chiết Tính Tài Chính 1.000 m² Điền Sản: PA1 (Giữ Đất) vs PA2 (Bán Ra Đón Sóng 13,8 – 15 Tr/m²)
+*(Giá niêm yết: 11,2 Tỷ [11,2 Tr/m²]; Ưu đãi thanh toán sớm 50/50 giảm trực tiếp 600 Tr; Giá vốn thực mua: 10,6 Tỷ [10,6 Tr/m²]; Vốn thực nộp 50% = 5,3 Tỷ ký công chứng HĐCN QSDĐ; 50% còn lại = 5,3 Tỷ Đơn vị Phát triển MDS Land cam kết đồng hành ra hàng; Dự kiến bán lại 13,8 – 15 Tr/m²)*
+
+| Chỉ Số Tài Chính / Khoản Mục | PA1 — GIỮ ĐẤT (Tích sản dài hạn / An toàn) | PA2 — BÁN RA ĐÓN SÓNG (Thanh khoản nhanh / Đơn vị Phát triển hỗ trợ) |
+| :--- | :---: | :---: |
+| **1. Giá niêm yết ban đầu (11,2 Tr/m²)** | 11.200.000.000 đ | 11.200.000.000 đ |
+| **2. Ưu đãi thanh toán sớm** *(Giảm trừ trực tiếp vào giá bán)* | -600.000.000 đ | -600.000.000 đ |
+| **3. Tổng giá vốn thực mua (Net Value)** *(10,6 Tr/m²)* | **10.600.000.000 đ** | **10.600.000.000 đ** |
+| **4. VỐN THỰC NỘP BAN ĐẦU (50%)** *(Ký công chứng HĐCN QSDĐ)* | **5.300.000.000 đ** | **5.300.000.000 đ** |
+| **5. Khoản 50% còn lại (Giãn 1 năm LS 0%)** *(Đơn vị Phát triển hỗ trợ ra hàng)* | **5.300.000.000 đ** | **5.300.000.000 đ** *(Quyết toán khi ra hàng)* |
+| **6. Đơn giá bán ra dự kiến (2026 – 2027)** | *Chưa bán (Tích sản)* | **13.800.000 – 15.000.000 đ/m² (13,8 Tỷ – 15 Tỷ)** |
+| **7. LỢI NHUẬN DỰ KIẾN (VNĐ)** | **Tích sản sinh lời x2, x3** | **+3.200.000.000 đ – +4.400.000.000 đ** |
+| **8. TỶ SUẤT LỢI NHUẬN TRÊN VỐN NỘP (ROE)** | **Bền vững dài hạn** | **60,4% – 83,0%/năm** |
+
+> **3 Điểm tựa đột phá của bài toán đầu tư Điền Sản:**
+> 1. **Đòn bẩy 50% — Tối ưu vốn ban đầu:** Khách hàng thanh toán 50% (5,3 Tỷ) ký công chứng HĐ chuyển nhượng QSDĐ (sổ đỏ chung; tiến độ thanh toán 100% mới đứng sổ đỏ riêng). Khoản 50% còn lại (5,3 Tỷ) giãn 1 năm lãi suất 0%, Đơn vị Phát triển MDS Land cam kết đồng hành hỗ trợ ra hàng.
+> 2. **Giá vốn thực mua ưu đãi 10,6 Triệu/m²:** Sau khi giảm trừ trực tiếp 600 triệu từ giá niêm yết 11,2 Tỷ, giá vốn chỉ còn **10,6 Tỷ (10,6 Tr/m²)** — thấp hơn đáng kể so với mặt bằng đất sinh thái ven hồ tại khu vực (14 – 18 tr/m²).
+> 3. **Bán ra 13,8 – 15 Triệu/m² khả thi & Tỷ suất ROE tăng vọt ~60% – 83%:** Mức giá bán lại 13,8 – 15 triệu/m² hoàn toàn nằm trong biên độ thanh khoản an toàn của khu vực khi cao tốc Biên Hòa - Vũng Tàu và Sân bay Long Thành thông xe. Khách hàng thu về lợi nhuận dự kiến **+3,2 Tỷ đến +4,4 Tỷ Đồng** trên số vốn bỏ ra chỉ 5,3 Tỷ, mang lại tỷ suất sinh lời vượt bậc mà an toàn tuyệt đối.
+
 #### Cơ chế đầu tư của dòng Điền Sản
 Dòng Điền Sản dành cho nhà đầu tư vào dòng vốn ở đợt mở bán đầu tiên và khai thác chênh lệch giá trị theo lộ trình phát triển của quần thể. Nhà đầu tư không cần xây dựng ngay.
 
@@ -135,10 +154,8 @@ Dòng Điền Sản dành cho nhà đầu tư vào dòng vốn ở đợt mở b
 **Bốn yếu tố tạo nên biên an toàn cho nhà đầu tư:**
 - **Sổ đỏ riêng từng nền ngay từ ngày ký** — không có rủi ro pháp lý kéo dài, không phát sinh chi phí chuyển đổi mục đích sử dụng đất.
 - **Vào tiền ở mức giá gốc giai đoạn đầu của vòng đời quần thể** — giá đợt mở bán đầu tiên là mức thấp nhất, trước khi quần thể đi vào vận hành đồng bộ.
-- **Đòn bẩy không lãi suất** — phương án thanh toán nhanh cho phép nhận sổ ngay khi thanh toán phần lớn giá trị, phần còn lại giãn tới 12 tháng sau, không phát sinh lãi.
+- **Đòn bẩy không lãi suất** — phương án thanh toán 50/50 cho phép nhận công chứng HĐ chuyển nhượng ngay khi thanh toán 50%, phần 50% còn lại giãn 12 tháng sau với lãi suất 0%.
 - **Giá trị tăng theo tiến độ vận hành** — mỗi hạng mục tiện ích đi vào hoạt động là một lần mặt bằng giá của quần thể được thiết lập lại ở nấc thang mới.
-
-> *Bảng chiết tính chi tiết theo từng mã sản phẩm và từng phương án thanh toán được cung cấp riêng cho đội ngũ chuyên viên tư vấn. Vui lòng liên hệ trực tiếp.*
 
 ### 4.3. Điền An (Haven) (07 Cụm Giới Hạn)
 - **Mã lô:** A13 · A14 · A15 · A22 · B22 · B23 · B24
