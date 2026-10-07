@@ -18,6 +18,8 @@ public/videos/
 *.mp4
 .env
 .env.*
+dist-invitation/
+
 *.env
 .raw_assets/
 dist-site/
