@@ -151,7 +151,7 @@ def render_page(cat, all_cats):
     other_cards_html = ""
     for oc in other_cats:
         other_cards_html += f"""
-        <a href="{oc['slug']}.html" class="collection-switch-card">
+        <a href="/{oc['slug']}" class="collection-switch-card">
           <div class="switch-card-bg" style="background-image: url('{oc['hero_image']}');"></div>
           <div class="switch-card-content">
             <span class="switch-badge">{oc['badge']}</span>
@@ -184,13 +184,13 @@ def render_page(cat, all_cats):
   <meta name="description" content="{cat['title']} ({cat['sub_title']}) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay. {cat['desc']}">
   <meta name="keywords" content="Saigon Farm Resort, {cat['title']}, {cat['sub_title']}, điền trang sinh thái, đất nghỉ dưỡng hồ tràm, đất đỏ TP Hồ Chí Minh">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://saigonfarmresort.com/{cat['slug']}.html">
+  <link rel="canonical" href="https://saigonfarmresort.com/{cat['slug']}">
   
   <link rel="icon" type="image/x-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://saigonfarmresort.com/{cat['slug']}.html">
+  <meta property="og:url" content="https://saigonfarmresort.com/{cat['slug']}">
   <meta property="og:title" content="{cat['title']} ({cat['sub_title']}) | Saigon Farm Resort">
   <meta property="og:description" content="{cat['title']} ({cat['sub_title']}) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay.">
   <meta property="og:image" content="https://saigonfarmresort.com/{cat['hero_image']}">
@@ -208,10 +208,10 @@ def render_page(cat, all_cats):
     "@graph": [
       {{
         "@type": "RealEstateListing",
-        "@id": "https://saigonfarmresort.com/{cat['slug']}.html#listing",
+        "@id": "https://saigonfarmresort.com/{cat['slug']}#listing",
         "name": "{cat['title']} ({cat['sub_title']}) - Saigon Farm Resort",
         "description": "{cat['desc']}",
-        "url": "https://saigonfarmresort.com/{cat['slug']}.html",
+        "url": "https://saigonfarmresort.com/{cat['slug']}",
         "image": "https://saigonfarmresort.com/{cat['hero_image']}",
         "provider": {{
           "@type": "Organization",
@@ -1192,9 +1192,9 @@ def render_page(cat, all_cats):
   <div class="topbar">
     <div class="topbar-container">
       <div style="display: flex; gap: 16px; align-items: center;">
-        <a href="index.html">Trang Chủ</a>
-        <a href="gioi-thieu.html">Bản Giới Thiệu</a>
-        <a href="article.html?id=304" style="background: linear-gradient(135deg, #c9a96e 0%, #a88448 100%); color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px rgba(201, 169, 110, 0.3);"><i class="fa-solid fa-calendar-check" style="font-size:0.75rem; margin-right:4px;"></i> Đăng Ký Khảo Sát</a>
+        <a href="/">Trang Chủ</a>
+        <a href="/gioithieu">Bản Giới Thiệu</a>
+        <a href="/bai-viet/thong-tin-lien-he-huong-dan-dang-ky-khao-sat-thuc-dia-saigon-farm-resort" style="background: linear-gradient(135deg, #c9a96e 0%, #a88448 100%); color: #fff; padding: 4px 12px; border-radius: 4px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px rgba(201, 169, 110, 0.3);"><i class="fa-solid fa-calendar-check" style="font-size:0.75rem; margin-right:4px;"></i> Đăng Ký Khảo Sát</a>
       </div>
     </div>
   </div>
@@ -1202,7 +1202,7 @@ def render_page(cat, all_cats):
   <!-- Navbar -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="nav-brand">
+      <a href="/" class="nav-brand">
         <div class="brand-icon"><i class="fa-solid fa-tree"></i></div>
         <div class="brand-text">
           <span class="brand-name">Saigon Farm Resort</span>
@@ -1211,11 +1211,11 @@ def render_page(cat, all_cats):
       </a>
       
       <ul class="nav-links">
-        <li><a href="index.html">Trang Chủ</a></li>
-        <li><a href="dien-an.html" class="{'active' if cat['slug'] == 'dien-an' else ''}">Điền An</a></li>
-        <li><a href="dien-san.html" class="{'active' if cat['slug'] == 'dien-san' else ''}">Điền Sản</a></li>
-        <li><a href="biet-phu-dien-trang.html" class="{'active' if cat['slug'] == 'biet-phu-dien-trang' else ''}">Biệt Phủ Điền Trang</a></li>
-        <li><a href="gioi-thieu.html">Tổng Thể Điền Trang</a></li>
+        <li><a href="/">Trang Chủ</a></li>
+        <li><a href="/dien-an" class="{'active' if cat['slug'] == 'dien-an' else ''}">Điền An</a></li>
+        <li><a href="/dien-san" class="{'active' if cat['slug'] == 'dien-san' else ''}">Điền Sản</a></li>
+        <li><a href="/biet-phu-dien-trang" class="{'active' if cat['slug'] == 'biet-phu-dien-trang' else ''}">Biệt Phủ Điền Trang</a></li>
+        <li><a href="/gioithieu">Tổng Thể Điền Trang</a></li>
         <li>
           <button type="button" class="btn-nav-cta" onclick="openBookingModal('', '', '{cat['title']}')">
             <i class="fa-solid fa-file-signature"></i> Nhận Bảng Giá
@@ -1346,7 +1346,7 @@ def render_page(cat, all_cats):
             Saigon Farm Resort được quy hoạch bài bản với mật độ xây dựng thấp kỷ lục. Trung tâm là quần thể tiện ích sinh thái 5 sao: Clubhouse ven hồ, Hồ bơi điện phân khoáng muối, Sân Pickleball, Làng ngựa quý tộc Việt Mã Viên, Bến thuyền Kayak và Đầm sen ngát hương.
           </p>
           <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="gioi-thieu.html" class="btn-nav-cta" style="background: var(--gold); color: #111 !important;">
+            <a href="/gioithieu" class="btn-nav-cta" style="background: var(--gold); color: #111 !important;">
               <i class="fa-solid fa-book-open"></i> Xem Bản Giới Thiệu Đầy Đủ
             </a>
             <button onclick="openLightbox('assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png')" class="btn-nav-cta" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); cursor: pointer;">
@@ -1397,20 +1397,20 @@ def render_page(cat, all_cats):
       <div>
         <h4 class="footer-heading">Bộ Sưu Tập</h4>
         <ul class="footer-links">
-          <li><a href="dien-an.html">Điền An (The Haven Collection)</a></li>
-          <li><a href="dien-san.html">Điền Sản (The Founders Collection)</a></li>
-          <li><a href="biet-phu-dien-trang.html">Biệt Phủ Điền Trang (The Manor Collection)</a></li>
-          <li><a href="index.html#villas-section">Bộ Sưu Tập Dinh Thự Sunrise &amp; Sunset</a></li>
+          <li><a href="/dien-an">Điền An (The Haven Collection)</a></li>
+          <li><a href="/dien-san">Điền Sản (The Founders Collection)</a></li>
+          <li><a href="/biet-phu-dien-trang">Biệt Phủ Điền Trang (The Manor Collection)</a></li>
+          <li><a href="/#villas-section">Bộ Sưu Tập Dinh Thự Sunrise &amp; Sunset</a></li>
         </ul>
       </div>
 
       <div>
         <h4 class="footer-heading">Thông Tin Pháp Lý</h4>
         <ul class="footer-links">
-          <li><a href="gioi-thieu.html">Bản Giới Thiệu Điền Trang</a></li>
-          <li><a href="article.html?id=301">Về Ban Quản Lý Saigon Farm Resort</a></li>
-          <li><a href="article.html?id=303">Báo Chí &amp; Pháp Lý Minh Bạch</a></li>
-          <li><a href="article.html?id=304">Đăng Ký Khảo Sát Thực Địa</a></li>
+          <li><a href="/gioithieu">Bản Giới Thiệu Điền Trang</a></li>
+          <li><a href="/gioithieu">Về Ban Quản Lý Saigon Farm Resort</a></li>
+          <li><a href="/bai-viet/phap-ly-vung-vang-chuan-muc-phat-trien-cua-saigon-farm-resort">Báo Chí &amp; Pháp Lý Minh Bạch</a></li>
+          <li><a href="/bai-viet/thong-tin-lien-he-huong-dan-dang-ky-khao-sat-thuc-dia-saigon-farm-resort">Đăng Ký Khảo Sát Thực Địa</a></li>
         </ul>
       </div>
 

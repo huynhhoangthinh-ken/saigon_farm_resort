@@ -10,10 +10,15 @@ https://www.saigonfarmresort.com/* https://saigonfarmresort.com/:splat 301
 /introduction.html /gioithieu 301
 /Saigon_Farm_Resort_Introduction.html /gioithieu 301
 
-# 3. Empty Article Root to Homepage Tabs Section
+# 3. Empty Article Root & Bai-Viet Root to Homepage Tabs Section
 /article /index.html#tabs-section 301
 /article/ /index.html#tabs-section 301
 /article.html /index.html#tabs-section 301
+/bai-viet /index.html#tabs-section 301
+/bai-viet/ /index.html#tabs-section 301
+/bai-viet/index.html /index.html#tabs-section 301
+/bai-viet/gioi-thieu.html /gioithieu 301
+/bai-viet/gioi-thieu /gioithieu 301
 
 # 4. Investor & Investment Landing Page
 /investor /investment 301
@@ -27,11 +32,13 @@ https://www.saigonfarmresort.com/* https://saigonfarmresort.com/:splat 301
 # 6. Animation Experience Page
 /animation.html /animation 301
 
-# 6. Renamed Articles 301 Redirects
-/bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet.html /bai-viet/he-thong-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-cung-tuong-su-viet.html 301
-/bai-viet/he-sinh-thai-tien-ich-da-tang-hon-2-4ha-clubhouse-ben-thuyen-organic-farm-herbal-spa.html /bai-viet/he-sinh-thai-tien-ich-da-tang-len-den-30-000-m-clubhouse-ben-thuyen-organic-farm-herbal-spa.html 301
+# 7. Renamed Articles 301 Redirects
+/bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet.html /bai-viet/he-thong-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-cung-tuong-su-viet 301
+/bai-viet/he-thong-9-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-dong-su-viet /bai-viet/he-thong-khong-gian-ban-sac-viet-duong-dai-tai-saigon-farm-resort-tu-hien-viet-den-cung-tuong-su-viet 301
+/bai-viet/he-sinh-thai-tien-ich-da-tang-hon-2-4ha-clubhouse-ben-thuyen-organic-farm-herbal-spa.html /bai-viet/he-sinh-thai-tien-ich-da-tang-len-den-30-000-m-clubhouse-ben-thuyen-organic-farm-herbal-spa 301
+/bai-viet/he-sinh-thai-tien-ich-da-tang-hon-2-4ha-clubhouse-ben-thuyen-organic-farm-herbal-spa /bai-viet/he-sinh-thai-tien-ich-da-tang-len-den-30-000-m-clubhouse-ben-thuyen-organic-farm-herbal-spa 301
 
-# 7. Shopping Cart & Inventory Canonical Aliases (/giohang is primary)
+# 8. Shopping Cart & Inventory Canonical Aliases (/giohang is primary)
 /listing /giohang 301
 /listing/ /giohang 301
 /listing.html /giohang 301
@@ -43,3 +50,37 @@ https://www.saigonfarmresort.com/* https://saigonfarmresort.com/:splat 301
 /bang-hang/ /giohang 301
 /bang-gia/ /giohang 301
 
+# 9. Private Invitation Domain Redirect
+/thu-moi.html https://invitation.saigonfarmresort.com/ 301
+/thu-moi https://invitation.saigonfarmresort.com/ 301
+
+# 10. Subdirectory Legacy Rel Links Redirects
+/giohang/biet-phu-dien-trang.html /biet-phu-dien-trang 301
+/giohang/dien-san.html /dien-san 301
+/giohang/dien-an.html /dien-an 301
+/giohang/gioi-thieu.html /gioithieu 301
+/giohang/gioithieu /gioithieu 301
+/giohang/story /story 301
+/giohang/investment.html /investment 301
+/giohang/giohang.html /giohang 301
+/dien-san/biet-phu-dien-trang.html /biet-phu-dien-trang 301
+/dien-san/dien-san.html /dien-san 301
+/dien-san/dien-an.html /dien-an 301
+/dien-san/gioi-thieu.html /gioithieu 301
+/dien-san/article.html /bai-viet/thong-tin-lien-he-huong-dan-dang-ky-khao-sat-thuc-dia-saigon-farm-resort 301
+/dien-an/biet-phu-dien-trang.html /biet-phu-dien-trang 301
+/dien-an/dien-san.html /dien-san 301
+/dien-an/dien-an.html /dien-an 301
+/dien-an/gioi-thieu.html /gioithieu 301
+/dien-an/article.html /bai-viet/thong-tin-lien-he-huong-dan-dang-ky-khao-sat-thuc-dia-saigon-farm-resort 301
+/biet-phu-dien-trang/biet-phu-dien-trang.html /biet-phu-dien-trang 301
+/biet-phu-dien-trang/dien-san.html /dien-san 301
+/biet-phu-dien-trang/dien-an.html /dien-an 301
+/biet-phu-dien-trang/gioi-thieu.html /gioithieu 301
+/biet-phu-dien-trang/article.html /bai-viet/thong-tin-lien-he-huong-dan-dang-ky-khao-sat-thuc-dia-saigon-farm-resort 301
+/listing/biet-phu-dien-trang.html /biet-phu-dien-trang 301
+/listing/dien-san.html /dien-san 301
+/listing/dien-an.html /dien-an 301
+/listing/gioi-thieu.html /gioithieu 301
+/listing/gioithieu /gioithieu 301
+/listing/giohang.html /giohang 301

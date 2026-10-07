@@ -35,7 +35,7 @@
 | **Đơn vị phát triển** | **MDS Land** |
 | **Đơn vị vận hành** | **MDS Living** (Đơn vị quản lý và vận hành chuỗi khu nghỉ dưỡng sinh thái cao cấp) |
 | **Tổng đại lý tiếp thị & phân phối** | **Ban Quản Lý Saigon Farm Resort** |
-| **Vị trí địa lý** | Hồ Lồ Ồ, Xã Đất Đỏ, TP. Hồ Chí Minh (Liền kề cung đường du lịch biển Hồ Tràm – Bình Châu) |
+| **Vị trí địa lý** | Hồ Lồ Ồ, Xã Đất Đỏ, TP. Hồ Chí Minh (trước đây: huyện Đất Đỏ, tỉnh Bà Rịa – Vũng Tàu; Liền kề cung đường du lịch biển Hồ Tràm – Bình Châu) |
 | **Quy mô mặt nước & sinh thái** | Mặt hồ tự nhiên **100 ha**, 3 mặt giáp cánh đồng lúa hữu cơ và hệ sinh thái cây xanh tự nhiên |
 | **Tổng quy mô tiện ích nội khu** | **Lên đến 30.000 m² (3ha)** — Tỷ lệ đặc quyền ~638 m² tiện ích/sản phẩm |
 | **Tổng số sản phẩm toàn khu** | **47 sản phẩm điền trang** độc bản |
@@ -101,7 +101,7 @@ Mở bán **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng tr
 | :--- | :--- | :--- | :--- |
 | **Định vị** | Flagship Nghỉ Dưỡng Thượng Lưu | Tích Sản Gia Tộc & Đón Sóng Đợt 1 | Bất Động Sản Dòng Tiền Thụ Động |
 | **Số lượng mở bán** | **17 Dinh thự VIP** | **12 Nền độc bản** | **07 Cụm giới hạn** |
-| **Diện tích khuôn viên** | Trên 1.000 m² | Trên 1.000 m² | Trên 1.100 m² |
+| **Diện tích khuôn viên** | **1.000 m² – 1.452 m²** (Đại dinh thự tới 1.452 m²) | **646,5 m² – 1.300 m²** (Bình quân ~1.108 m²) | **1.012 m² – 1.336 m²** (Khuôn viên lớn >1.100 m²) |
 | **Kiến trúc xây dựng** | Biệt phủ 1 – 2 tầng, hồ bơi khoáng muối, sân vườn >700m² | Đất điền trang ven hồ, xây dựng theo mẫu kiến trúc resort | Cụm lưu trú chuyên gia sinh thái từ 20 – 30 phòng |
 | **Quyền lợi thụ hưởng** | Phần thời gian còn lại trong năm dành cho gia đình sử dụng | Tự do nghỉ dưỡng & tích trữ gia sản giá gốc đợt 1 | Cụm phòng sinh thái lưu trú dài hạn & an cư |
 | **Cơ chế tài chính** | MDS Living mua lại **90 – 150 đêm lưu trú/năm**; phần thời gian còn lại chủ nhân sử dụng hoặc đưa vào khai thác chia sẻ doanh thu | Khai thác chênh lệch giá trị theo lộ trình phát triển quần thể — xem mục 4.2 | Hợp đồng thuê dài hạn tối thiểu 5 năm, **cam kết thuê từ 20 phòng = 80 tr/tháng (960 tr/năm)**; các phòng xây thêm (lên đến 30 phòng) MDS Living khai thác đạt đến **120 tr/tháng (1,44 tỷ/năm)** |
@@ -114,8 +114,8 @@ Mở bán **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng tr
 - **Mô tả:** Biệt phủ sinh thái ven hồ với quy chuẩn xây dựng thống nhất. Khuôn viên trên 1.000 m² trên sổ đỏ, hướng nhìn ra mặt hồ 100 ha, cánh đồng lúa hoặc khu tiện ích trung tâm.
 - **Tiện ích riêng trong khuôn viên:** Hồ bơi tràn viền 45 m² – 53 m², sân vườn cảnh quan thảo mộc, sảnh đón trần cao gỗ quý, hiên thưởng trà.
 - **Hai lựa chọn khai thác cùng MDS Living:**
-  - **Đồng hành kinh doanh:** MDS Living trực tiếp quản lý vận hành, marketing, khai thác khách lưu trú, chăm sóc khách hàng và quản lý doanh thu. Doanh thu phân chia theo tỷ lệ thống nhất trong hợp đồng hợp tác khai thác.
-  - **Ủy thác vận hành an nhàn:** MDS Living mua lại **90 – 150 đêm lưu trú mỗi năm**. Chủ sở hữu nhận giá trị khai thác theo chương trình hợp tác, không phải vận hành, không phải tìm kiếm khách thuê. Thời gian còn lại trong năm thuộc quyền sử dụng của gia đình.
+  - **Đồng hành kinh doanh:** MDS Living trực tiếp quản lý vận hành, marketing, khai thác khách lưu trú, chăm sóc khách hàng và quản lý doanh thu. Doanh thu phân chia theo tỷ lệ thỏa thuận (chia sẻ 50% doanh thu thuần từ 6.000.000 đ – 10.000.000 đ/đêm).
+  - **Ủy thác vận hành an nhàn:** MDS Living mua lại **90 – 150 đêm lưu trú mỗi năm** (cam kết 150 đêm x 4 triệu = **600 triệu đồng/năm**). Chủ sở hữu nhận giá trị khai thác an nhàn định kỳ theo chương trình hợp tác, không phải vận hành, không phải tìm kiếm khách thuê. Thời gian còn lại trong năm (215 đêm) hoàn toàn thuộc quyền tự do sử dụng nghỉ dưỡng của gia đình hoặc tiếp tục ủy thác kinh doanh.
 
 ### 4.2. Điền Sản (Founders) (12 Nền Độc Bản)
 - **Mã lô:** A8 · A9 · A10 · A11 · A12 · B5 · B8 · B9 · B10 · B17 · B18 · B19
@@ -353,11 +353,15 @@ Sở hữu biệt phủ tại Saigon Farm Resort không chỉ để nghỉ dư�
 
 ## 9. HỆ THỐNG LIÊN KẾT TRỰC TUYẾN & CỔNG THÔNG TIN
 
-- **Cổng thông tin chính thức:** [https://saigonfarmresort.com](https://saigonfarmresort.com)
-- **Bản thuyết trình đề xuất & Chi tiết:** [https://saigonfarmresort.com/gioi-thieu.html](https://saigonfarmresort.com/gioi-thieu.html)
+- **Trang chủ chính thức:** [https://saigonfarmresort.com](https://saigonfarmresort.com)
+- **Giỏ hàng & Bảng giá mở bán trực tuyến:** [https://saigonfarmresort.com/giohang](https://saigonfarmresort.com/giohang)
+- **Cổng thông tin Thư mời Đối tác & Khảo sát:** [https://invitation.saigonfarmresort.com](https://invitation.saigonfarmresort.com)
+- **Bản thuyết trình đề xuất & Chi tiết:** [https://saigonfarmresort.com/gioi-thieu.html](https://saigonfarmresort.com/gioi-thieu.html) (hoặc [/gioithieu](https://saigonfarmresort.com/gioithieu))
 - **Trang chuyên đề Biệt Phủ Điền Trang:** [https://saigonfarmresort.com/biet-phu-dien-trang.html](https://saigonfarmresort.com/biet-phu-dien-trang.html)
 - **Trang chuyên đề Điền Sản (Founders):** [https://saigonfarmresort.com/dien-san.html](https://saigonfarmresort.com/dien-san.html)
 - **Trang chuyên đề Điền An (Haven):** [https://saigonfarmresort.com/dien-an.html](https://saigonfarmresort.com/dien-an.html)
+- **Hotline / Zalo Tiếp Nhận & Khóa Cọc:** [0909 000 712](tel:0909000712) · [Nhắn Zalo Trực Tiếp](https://zalo.me/0909000712)
+- **Địa chỉ đón tiếp thực địa:** Khuôn viên Hồ Lồ Ồ, Xã Đất Đỏ, TP. Hồ Chí Minh
 
 ---
 *Tài liệu chuẩn hóa phục vụ tư vấn thông tin sản phẩm và tích hợp cơ sở tri thức cho các hệ thống AI Agent — Cập nhật Tháng 9/2026.*

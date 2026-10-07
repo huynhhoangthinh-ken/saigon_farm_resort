@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /thu-moi.html
-Disallow: /dist-invitation/
 
 Sitemap: https://saigonfarmresort.com/sitemap.xml

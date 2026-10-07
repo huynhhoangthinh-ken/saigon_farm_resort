@@ -43,7 +43,7 @@ def clean_desc_for_seo(desc, max_len=155):
 def generate_article_html(post, slug, related_posts):
     page_title = clean_title_for_seo(post.get("title", ""))
     page_desc = clean_desc_for_seo(post.get("excerpt", "") or post.get("title", ""))
-    canonical_url = f"https://saigonfarmresort.com/bai-viet/{slug}.html"
+    canonical_url = f"https://saigonfarmresort.com/bai-viet/{slug}"
     image_url = post.get("image", "assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg")
     if not image_url.startswith("http"):
         image_url = f"https://saigonfarmresort.com/{image_url.lstrip('/')}"
@@ -59,21 +59,21 @@ def generate_article_html(post, slug, related_posts):
             rel_img = f"../{rel_img}"
         related_html += f"""
         <div class="grid-card">
-          <a href="{rel_slug}.html" style="display: block; text-decoration: none; color: inherit;">
+          <a href="/bai-viet/{rel_slug}" style="display: block; text-decoration: none; color: inherit;">
             <div class="grid-img">
               <img src="{rel_img}" alt="{html.escape(rel.get('title', ''))}" loading="lazy">
               <span class="minh-hoa-tag">* Hình ảnh minh họa</span>
             </div>
           </a>
           <div class="grid-card-info">
-            <a href="{rel_slug}.html" style="text-decoration: none; color: inherit;">
+            <a href="/bai-viet/{rel_slug}" style="text-decoration: none; color: inherit;">
               <h5 style="margin-bottom: 8px; line-height: 1.4;">{html.escape(rel.get('title', ''))}</h5>
             </a>
             <p style="font-weight: 400; font-size: 0.85rem; color: #555; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px;">
               {html.escape(rel.get('excerpt', ''))}
             </p>
             <div style="display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap;">
-              <a href="{rel_slug}.html" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
+              <a href="/bai-viet/{rel_slug}" class="editorial-btn" style="margin-top:0;">Đọc tiếp</a>
             </div>
           </div>
         </div>
@@ -296,18 +296,18 @@ def generate_article_html(post, slug, related_posts):
   <!-- Top Navigation Header -->
   <header class="article-page-header">
     <div class="container article-header-wrap">
-      <a href="../index.html" class="article-logo">
+      <a href="/" class="article-logo">
         <img src="../assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo">
       </a>
       <ul class="article-nav-links">
-        <li><a href="../index.html">Trang Chủ</a></li>
-        <li><a href="../biet-phu-dien-trang.html">Biệt Phủ Điền Trang</a></li>
-        <li><a href="../dien-san.html">Điền Sản (Sổ Đỏ)</a></li>
-        <li><a href="../dien-an.html">Điền An</a></li>
-        <li><a href="../listing.html">Bảng Giá</a></li>
-        <li><a href="../story.html">Tạp Chí Story</a></li>
-        <li><a href="../gioi-thieu.html">Giới Thiệu</a></li>
-        <li><a href="../lien-he.html">Liên Hệ</a></li>
+        <li><a href="/">Trang Chủ</a></li>
+        <li><a href="/biet-phu-dien-trang">Biệt Phủ Điền Trang</a></li>
+        <li><a href="/dien-san">Điền Sản (Sổ Đỏ)</a></li>
+        <li><a href="/dien-an">Điền An</a></li>
+        <li><a href="/giohang">Bảng Giá</a></li>
+        <li><a href="/story">Tạp Chí Story</a></li>
+        <li><a href="/gioithieu">Giới Thiệu</a></li>
+        <li><a href="/lien-he">Liên Hệ</a></li>
       </ul>
     </div>
   </header>
@@ -315,8 +315,8 @@ def generate_article_html(post, slug, related_posts):
   <!-- Main Article Body -->
   <main class="article-container">
     <nav class="article-breadcrumb" aria-label="Breadcrumb">
-      <a href="../index.html">Trang Chủ</a> &rsaquo; 
-      <a href="../index.html#tabs-section">Bài Viết</a> &rsaquo; 
+      <a href="/">Trang Chủ</a> &rsaquo; 
+      <a href="/#tabs-section">Bài Viết</a> &rsaquo; 
       <span>{html.escape(post.get("title", ""))}</span>
     </nav>
 
@@ -352,25 +352,25 @@ def generate_article_html(post, slug, related_posts):
         <div>
           <h4 class="footer-col-heading">Sản Phẩm Mở Bán</h4>
           <ul class="footer-links-list">
-            <li><a href="../biet-phu-dien-trang.html">Biệt Phủ Điền Trang (1.000m² – 1.452m²)</a></li>
-            <li><a href="../dien-san.html">Điền Sản (Đất Nền Sổ Đỏ Ven Hồ)</a></li>
-            <li><a href="../dien-an.html">Điền An (Khu Lưu Trú Chuyên Gia)</a></li>
-            <li><a href="../listing.html">Bảng Giá &amp; Giỏ Hàng Chi Tiết</a></li>
+            <li><a href="/biet-phu-dien-trang">Biệt Phủ Điền Trang (1.000m² – 1.452m²)</a></li>
+            <li><a href="/dien-san">Điền Sản (Đất Nền Sổ Đỏ Ven Hồ)</a></li>
+            <li><a href="/dien-an">Điền An (Khu Lưu Trú Chuyên Gia)</a></li>
+            <li><a href="/giohang">Bảng Giá &amp; Giỏ Hàng Chi Tiết</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-col-heading">Về Dự Án</h4>
           <ul class="footer-links-list">
-            <li><a href="../gioi-thieu.html">Hồ Sơ Quy Hoạch Dự Án</a></li>
-            <li><a href="../story.html">Tạp Chí Story (98 Trang)</a></li>
-            <li><a href="../lien-he.html">Liên Hệ Ban Quản Lý</a></li>
+            <li><a href="/gioithieu">Hồ Sơ Quy Hoạch Dự Án</a></li>
+            <li><a href="/story">Tạp Chí Story (98 Trang)</a></li>
+            <li><a href="/lien-he">Liên Hệ Ban Quản Lý</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-col-heading">Khảo Sát &amp; Đặt Chỗ</h4>
           <ul class="footer-links-list">
-            <li><a href="../lien-he.html"><i class="fa-solid fa-van-shuttle" style="margin-right:6px; color:#c9a96e;"></i>Đăng Ký Xe Tham Quan Thực Địa</a></li>
-            <li><a href="../gioi-thieu.html"><i class="fa-solid fa-file-lines" style="margin-right:6px; color:#c9a96e;"></i>Bản Giới Thiệu Đặc Quyền</a></li>
+            <li><a href="/lien-he"><i class="fa-solid fa-van-shuttle" style="margin-right:6px; color:#c9a96e;"></i>Đăng Ký Xe Tham Quan Thực Địa</a></li>
+            <li><a href="/gioithieu"><i class="fa-solid fa-file-lines" style="margin-right:6px; color:#c9a96e;"></i>Bản Giới Thiệu Đặc Quyền</a></li>
           </ul>
         </div>
       </div>
@@ -416,18 +416,18 @@ def main():
 
     print(f"Successfully generated {len(generated_slugs)} static article HTML files in bai-viet/.")
 
-    # Generate sitemap.xml
+    # Generate sitemap.xml with canonical 200 OK URLs (no .html extensions)
     # 10 core canonical URLs + 83 articles = 93 URLs
     main_pages = [
         {"url": "https://saigonfarmresort.com/", "changefreq": "daily", "priority": "1.0"},
-        {"url": "https://saigonfarmresort.com/biet-phu-dien-trang.html", "changefreq": "weekly", "priority": "1.0"},
-        {"url": "https://saigonfarmresort.com/dien-san.html", "changefreq": "weekly", "priority": "1.0"},
-        {"url": "https://saigonfarmresort.com/dien-an.html", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/biet-phu-dien-trang", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/dien-san", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/dien-an", "changefreq": "weekly", "priority": "1.0"},
         {"url": "https://saigonfarmresort.com/gioithieu", "changefreq": "weekly", "priority": "1.0"},
         {"url": "https://saigonfarmresort.com/investment", "changefreq": "daily", "priority": "1.0"},
-        {"url": "https://saigonfarmresort.com/listing.html", "changefreq": "weekly", "priority": "1.0"},
-        {"url": "https://saigonfarmresort.com/story.html", "changefreq": "weekly", "priority": "0.9"},
-        {"url": "https://saigonfarmresort.com/lien-he.html", "changefreq": "weekly", "priority": "0.9"},
+        {"url": "https://saigonfarmresort.com/giohang", "changefreq": "weekly", "priority": "1.0"},
+        {"url": "https://saigonfarmresort.com/story", "changefreq": "weekly", "priority": "0.9"},
+        {"url": "https://saigonfarmresort.com/lien-he", "changefreq": "weekly", "priority": "0.9"},
         {"url": "https://saigonfarmresort.com/short", "changefreq": "weekly", "priority": "0.8"},
     ]
 
@@ -438,15 +438,15 @@ def main():
     for page in main_pages:
         sitemap_lines.append(f"""  <url>
     <loc>{page['url']}</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>{page['changefreq']}</changefreq>
     <priority>{page['priority']}</priority>
   </url>""")
     for slug in generated_slugs:
-        url = f"https://saigonfarmresort.com/bai-viet/{slug}.html"
+        url = f"https://saigonfarmresort.com/bai-viet/{slug}"
         sitemap_lines.append(f"""  <url>
     <loc>{url}</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>""")

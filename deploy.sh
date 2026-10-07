@@ -44,9 +44,9 @@ if os.path.exists(dist):
     shutil.rmtree(dist)
 os.makedirs(dist, exist_ok=True)
 
-# Copy root html & meta files
+# Copy root html & meta files (thu-moi.html is deployed separately to invitation.saigonfarmresort.com)
 for f in os.listdir('.'):
-    if f.endswith('.html') or f in ['_redirects', '_headers', 'robots.txt', 'sitemap.xml', 'favicon.ico', 'app_icon_1024.png', 'app_icon_1024.jpg']:
+    if (f.endswith('.html') and f != 'thu-moi.html') or f in ['_redirects', '_headers', 'robots.txt', 'sitemap.xml', 'favicon.ico', 'app_icon_1024.png', 'app_icon_1024.jpg']:
         shutil.copy2(f, os.path.join(dist, f))
 
 # Copy essential static web folders

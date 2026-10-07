@@ -2743,10 +2743,10 @@ def update_listing():
       </a>
       <ul class="nav-links">
         <li><a href="#interactive-masterplan"><i class="fa-solid fa-map-location-dot"></i> Bản Đồ Phân Lô</a></li>
-        <li><a href="biet-phu-dien-trang.html">Biệt Phủ Điền Trang</a></li>
-        <li><a href="dien-san.html">Điền Sản</a></li>
-        <li><a href="dien-an.html">Điền An</a></li>
-        <li><a href="giohang.html" class="active"><i class="fa-solid fa-cart-shopping" style="color:var(--gold-dark);"></i> Giỏ Hàng Mở Bán</a></li>
+        <li><a href="/biet-phu-dien-trang">Biệt Phủ Điền Trang</a></li>
+        <li><a href="/dien-san">Điền Sản</a></li>
+        <li><a href="/dien-an">Điền An</a></li>
+        <li><a href="/giohang" class="active"><i class="fa-solid fa-cart-shopping" style="color:var(--gold-dark);"></i> Giỏ Hàng Mở Bán</a></li>
         <li><a href="javascript:void(0)" onclick="openBookingModal('TƯ VẤN CHUNG', 'Đợt 1', '', '', '', '')" class="nav-cta"><i class="fa-solid fa-paper-plane"></i> Nhận Báo Giá Đợt 1</a></li>
       </ul>
     </div>
@@ -3153,19 +3153,19 @@ def update_listing():
       <div class="footer-col">
         <h4>Bộ Sưu Tập Sản Phẩm</h4>
         <ul>
-          <li><a href="biet-phu-dien-trang.html">Biệt Phủ Điền Trang (16 Căn)</a></li>
-          <li><a href="dien-san.html">Điền Sản - Founders (11 Căn)</a></li>
-          <li><a href="dien-an.html">Điền An - Haven (7 Cụm)</a></li>
-          <li><a href="giohang.html">Giỏ Hàng & Bảng Giá Mở Bán</a></li>
+          <li><a href="/biet-phu-dien-trang">Biệt Phủ Điền Trang (16 Căn)</a></li>
+          <li><a href="/dien-san">Điền Sản - Founders (11 Căn)</a></li>
+          <li><a href="/dien-an">Điền An - Haven (7 Cụm)</a></li>
+          <li><a href="/giohang">Giỏ Hàng & Bảng Giá Mở Bán</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Tài Liệu & Báo Chí</h4>
         <ul>
-          <li><a href="gioithieu">Bản Giới Thiệu (Pitch Deck)</a></li>
-          <li><a href="story">Tạp Chí Story (98 Trang)</a></li>
-          <li><a href="investment.html">Chuyên Trang Đầu Tư</a></li>
-          <li><a href="index.html#ban-sac">9 Không Gian Bản Sắc</a></li>
+          <li><a href="/gioithieu">Bản Giới Thiệu (Pitch Deck)</a></li>
+          <li><a href="/story">Tạp Chí Story (98 Trang)</a></li>
+          <li><a href="/investment">Chuyên Trang Đầu Tư</a></li>
+          <li><a href="/#ban-sac">9 Không Gian Bản Sắc</a></li>
         </ul>
       </div>
       <div class="footer-col">
