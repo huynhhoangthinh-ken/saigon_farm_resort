@@ -1651,18 +1651,12 @@
         </div>
       </a>
       <div class="nav-actions">
-        <a href="/giohang" class="btn-nav btn-nav-outline" title="Xem tất cả giỏ hàng 34 căn">
-          <i class="fa-solid fa-layer-group"></i> <span class="hide-mobile">Toàn Bộ</span> Giỏ Hàng
-        </a>
         <button type="button" class="btn-nav btn-nav-gold" onclick="copyShareLink()" title="Sao chép link căn B19">
           <i class="fa-solid fa-share-nodes"></i> Chia Sẻ Link Căn
         </button>
-        <a href="tel:0909000712" class="btn-nav btn-nav-outline" title="Gọi Ban Quản Lý">
-          <i class="fa-solid fa-phone"></i> <span class="hide-mobile">0909 000 712</span>
-        </a>
-        <a href="https://zalo.me/0909000712" target="_blank" class="btn-nav btn-nav-zalo" title="Nhắn Zalo">
-          <i class="fa-solid fa-comment-dots"></i> Zalo
-        </a>
+        <button type="button" class="btn-nav btn-nav-outline" onclick="copyScheduleText()" title="Sao chép bảng tính gửi khách">
+          <i class="fa-solid fa-copy"></i> <span class="hide-mobile">Sao Chép</span> Bảng Tính
+        </button>
       </div>
     </div>
   </header>
@@ -1673,9 +1667,7 @@
       <ol class="breadcrumb-list">
         <li><a href="/"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
         <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-        <li><a href="/giohang">Giỏ Hàng Mở Bán</a></li>
-        <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-        <li><a href="/giohang#dien-san">Điền Sản</a></li>
+        <li><span>Phân Khu Điền Sản</span></li>
         <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
         <li class="breadcrumb-active" aria-current="page">Căn B19 (Dãy B)</li>
       </ol>
@@ -2000,14 +1992,14 @@
       <aside class="unit-right-col">
         <div class="sticky-card">
           <div class="sc-header">
-            <span class="sc-badge">TƯ VẤN TRỰC TIẾP TỪ BQL</span>
+            <span class="sc-badge">TÀI LIỆU DÀNH RIÊNG CHO KHÁCH HÀNG</span>
             <h3 class="sc-title">Căn B19 · Điền Sản</h3>
-            <p class="sc-sub">Hotline BQL hỗ trợ 24/7: <strong>0909 000 712</strong></p>
+            <p class="sc-sub">Chính sách ưu đãi & bảng tính dòng tiền tối ưu</p>
           </div>
 
           <ul class="sc-features">
             <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng nền, thổ cư lâu dài</li>
-            <li><i class="fa-solid fa-circle-check"></i> Độc quyền giữ chỗ & khóa cọc trực tiếp</li>
+            <li><i class="fa-solid fa-circle-check"></i> Độc quyền giữ chỗ & khóa vị trí căn B19</li>
             <li><i class="fa-solid fa-circle-check"></i> Giảm 800 Triệu khi xây dựng trước 12/2027</li>
             <li><i class="fa-solid fa-circle-check"></i> Đưa đón khảo sát thực địa xe riêng 5 sao</li>
           </ul>
@@ -2016,21 +2008,15 @@
             <button type="button" class="btn-cta-full btn-cta-primary" onclick="copyShareLink()">
               <i class="fa-solid fa-share-nodes"></i> Sao Chép Link Căn B19
             </button>
-            <a href="tel:0909000712" class="btn-cta-full btn-cta-phone">
-              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712 Nhận Giữ Chỗ
-            </a>
-            <a href="https://zalo.me/0909000712?text=Toi%20quan%20tam%20lo%20B19%20tai%20Saigon%20Farm%20Resort" target="_blank" class="btn-cta-full btn-cta-zalo">
-              <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc Căn B19
-            </a>
-            <a href="/giohang#card-b19" class="btn-action-tool" style="justify-content: center; width: 100%;">
-              <i class="fa-solid fa-map-location-dot"></i> Định Vị Trên Master Plan Giỏ Hàng
-            </a>
+            <button type="button" class="btn-cta-full btn-cta-gold" onclick="copyScheduleText()">
+              <i class="fa-solid fa-copy"></i> Sao Chép Bảng Tính Gửi Khách
+            </button>
           </div>
 
           <!-- Quick Form -->
           <div class="inquiry-form-card">
             <div class="ifc-title">
-              <i class="fa-solid fa-paper-plane" style="color: var(--gold-dark);"></i> Đăng Ký Nhận Bảng Tính Chính Thức
+              <i class="fa-solid fa-paper-plane" style="color: var(--gold-dark);"></i> Đăng Ký Tư Vấn & Nhận CSBH Căn B19
             </div>
             <form id="lotInquiryForm" onsubmit="handleInquirySubmit(event)">
               <div class="form-group">
@@ -2043,77 +2029,17 @@
                 <input type="text" id="custNote" class="form-input" placeholder="Ghi chú (Phương án thanh toán quan tâm)">
               </div>
               <button type="submit" class="btn-form-submit">
-                Gửi Yêu Cầu Nhận CSBH Căn B19
+                Gửi Yêu Cầu Cho Chuyên Viên Phụ Trách
               </button>
             </form>
           </div>
 
           <div class="sc-footer-note" style="margin-top: 14px;">
-            MDS Land cam kết bảo mật tuyệt đối thông tin khách hàng và phản hồi trong vòng 5 phút.
+            Chuyên viên tư vấn phụ trách căn B19 sẽ trực tiếp hỗ trợ và bảo mật tuyệt đối thông tin của Quý khách.
           </div>
         </div>
       </aside>
     </div>
-
-    <!-- Recommendations of other lots in same category -->
-    <section class="recommendations-section">
-      <span class="sec-badge">Tham Khảo Cùng Phân Khu</span>
-      <h3 class="sec-title">Các Căn Điền Trang Đang Mở Bán Cùng Phân Khu Điền Sản</h3>
-      <div class="rec-grid">
-
-        <div class="rec-card">
-          <div class="rec-thumb">
-            <img src="/assets/Index_asset/editorial_photo/3_product_type/Dien_san_12.webp" alt="Căn A08" loading="lazy">
-            <span class="rec-code-badge">MÃ A08</span>
-          </div>
-          <div class="rec-body">
-            <h4 class="rec-title">Căn A08 (1.298,93 m²)</h4>
-            <div class="rec-meta">Hướng Tây Nam • Đường nội bộ</div>
-            <div class="rec-price-row">
-              <span class="rec-price">15,65 Tỷ</span>
-              <a href="/a08" class="btn-action-tool" style="padding: 6px 12px; font-size: 0.8rem;">
-                Xem Căn <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="rec-card">
-          <div class="rec-thumb">
-            <img src="/assets/Index_asset/editorial_photo/3_product_type/Dien_san_Phan_lo.webp" alt="Căn A09" loading="lazy">
-            <span class="rec-code-badge">MÃ A09</span>
-          </div>
-          <div class="rec-body">
-            <h4 class="rec-title">Căn A09 (1.284,89 m²)</h4>
-            <div class="rec-meta">Hướng Tây Nam • Đường nội bộ</div>
-            <div class="rec-price-row">
-              <span class="rec-price">15,49 Tỷ</span>
-              <a href="/a09" class="btn-action-tool" style="padding: 6px 12px; font-size: 0.8rem;">
-                Xem Căn <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="rec-card">
-          <div class="rec-thumb">
-            <img src="/assets/Index_asset/editorial_photo/Canh_dong_lua.png" alt="Căn A11" loading="lazy">
-            <span class="rec-code-badge">MÃ A11</span>
-          </div>
-          <div class="rec-body">
-            <h4 class="rec-title">Căn A11 (1.255,40 m²)</h4>
-            <div class="rec-meta">Hướng Tây Nam • Đường nội bộ</div>
-            <div class="rec-price-row">
-              <span class="rec-price">15,13 Tỷ</span>
-              <a href="/a11" class="btn-action-tool" style="padding: 6px 12px; font-size: 0.8rem;">
-                Xem Căn <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
 
   </main>
 
@@ -2130,22 +2056,20 @@
         </p>
       </div>
       <div class="footer-col">
-        <h5>Liên Kết Nhanh</h5>
+        <h5>Thông Tin Dự Án</h5>
         <ul class="footer-links">
-          <li><a href="/"><i class="fa-solid fa-angle-right"></i> Trang Chủ</a></li>
-          <li><a href="/giohang"><i class="fa-solid fa-angle-right"></i> Giỏ Hàng Mở Bán</a></li>
-          <li><a href="/biet-phu-dien-trang"><i class="fa-solid fa-angle-right"></i> Biệt Phủ Điền Trang</a></li>
-          <li><a href="/dien-san"><i class="fa-solid fa-angle-right"></i> Điền Sản</a></li>
-          <li><a href="/dien-an"><i class="fa-solid fa-angle-right"></i> Điền An</a></li>
+          <li><a href="/"><i class="fa-solid fa-angle-right"></i> Trang Chủ Saigon Farm Resort</a></li>
+          <li><a href="/gioi-thieu.html"><i class="fa-solid fa-angle-right"></i> Thuyết Minh Quy Hoạch 100ha</a></li>
+          <li><a href="/biet-phu-dien-trang"><i class="fa-solid fa-angle-right"></i> Kiến Trúc Biệt Phủ Điền Trang</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Liên Hệ Ban Quản Lý</h5>
+        <h5>Vận Hành & Tiếp Đón</h5>
         <ul class="footer-links">
-          <li><i class="fa-solid fa-phone" style="color: var(--gold);"></i> Hotline: <strong>0909 000 712</strong></li>
-          <li><i class="fa-solid fa-comment-dots" style="color: var(--gold);"></i> Zalo BQL: <strong>0909 000 712</strong></li>
-          <li><i class="fa-solid fa-location-dot" style="color: var(--gold);"></i> Vị trí: Đất Đỏ, TP. Hồ Chí Minh</li>
-          <li><i class="fa-solid fa-clock" style="color: var(--gold);"></i> Hỗ trợ tiếp đón: 8:00 - 18:00 hàng ngày</li>
+          <li><i class="fa-solid fa-building" style="color: var(--gold);"></i> Đơn vị phát triển: <strong>MDS Land</strong></li>
+          <li><i class="fa-solid fa-shield-halved" style="color: var(--gold);"></i> Vận hành & Quản lý: <strong>MDS Living</strong></li>
+          <li><i class="fa-solid fa-location-dot" style="color: var(--gold);"></i> Địa chỉ: Đất Đỏ, TP. Hồ Chí Minh</li>
+          <li><i class="fa-solid fa-clock" style="color: var(--gold);"></i> Tiếp đón tham quan thực địa: 8:00 - 18:00</li>
         </ul>
       </div>
     </div>
@@ -2374,7 +2298,7 @@
 🎁 Ưu đãi xây dựng trước 12/2027: ${applyBonus ? '-800 Triệu đồng (Đã tính)' : 'Chưa áp dụng'}
 💎 TỔNG GIÁ THANH TOÁN SAU ƯU ĐÃI: ${finalPriceStr}
 🌐 Xem chi tiết trực tuyến: https://saigonfarmresort.com/${LOT_DATA.codeLower}
-📞 Hotline Ban Quản Lý: 0909 000 712`;
+📞 Liên hệ: Chuyên viên tư vấn gửi bảng tính này để nhận hỗ trợ & đăng ký xe đưa đón tham quan thực địa.`;
 
       if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(() => {
@@ -2402,7 +2326,7 @@
       const note = document.getElementById('custNote').value.trim();
       const applyBonus = document.getElementById('bonus800Toggle').checked ? 'Có (giảm 800Tr)' : 'Không';
 
-      alert(`Cảm ơn Quý khách ${name}! Yêu cầu nhận bảng tính Căn ${LOT_DATA.code} (${LOT_DATA.catTitle}) đã được tiếp nhận. Chuyên viên Ban Quản Lý sẽ liên hệ trực tiếp qua số ${phone} trong ít phút.`);
+      alert(`Cảm ơn Quý khách ${name}! Yêu cầu nhận bảng tính Căn ${LOT_DATA.code} (${LOT_DATA.catTitle}) đã được tiếp nhận. Chuyên viên tư vấn phụ trách sẽ liên hệ trực tiếp qua số ${phone} trong ít phút.`);
       document.getElementById('lotInquiryForm').reset();
     }
 

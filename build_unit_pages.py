@@ -1785,18 +1785,12 @@ def build_unit_page_html(item, all_items):
         </div>
       </a>
       <div class="nav-actions">
-        <a href="/giohang" class="btn-nav btn-nav-outline" title="Xem tất cả giỏ hàng 34 căn">
-          <i class="fa-solid fa-layer-group"></i> <span class="hide-mobile">Toàn Bộ</span> Giỏ Hàng
-        </a>
         <button type="button" class="btn-nav btn-nav-gold" onclick="copyShareLink()" title="Sao chép link căn {code}">
           <i class="fa-solid fa-share-nodes"></i> Chia Sẻ Link Căn
         </button>
-        <a href="tel:0909000712" class="btn-nav btn-nav-outline" title="Gọi Ban Quản Lý">
-          <i class="fa-solid fa-phone"></i> <span class="hide-mobile">0909 000 712</span>
-        </a>
-        <a href="https://zalo.me/0909000712" target="_blank" class="btn-nav btn-nav-zalo" title="Nhắn Zalo">
-          <i class="fa-solid fa-comment-dots"></i> Zalo
-        </a>
+        <button type="button" class="btn-nav btn-nav-outline" onclick="copyScheduleText()" title="Sao chép bảng tính gửi khách">
+          <i class="fa-solid fa-copy"></i> <span class="hide-mobile">Sao Chép</span> Bảng Tính
+        </button>
       </div>
     </div>
   </header>
@@ -1807,9 +1801,7 @@ def build_unit_page_html(item, all_items):
       <ol class="breadcrumb-list">
         <li><a href="/"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
         <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-        <li><a href="/giohang">Giỏ Hàng Mở Bán</a></li>
-        <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-        <li><a href="/giohang#{cat_slug}">{cat_title}</a></li>
+        <li><span>Phân Khu {cat_title}</span></li>
         <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
         <li class="breadcrumb-active" aria-current="page">Căn {code} (Dãy {block})</li>
       </ol>
@@ -2134,14 +2126,14 @@ def build_unit_page_html(item, all_items):
       <aside class="unit-right-col">
         <div class="sticky-card">
           <div class="sc-header">
-            <span class="sc-badge">TƯ VẤN TRỰC TIẾP TỪ BQL</span>
+            <span class="sc-badge">TÀI LIỆU DÀNH RIÊNG CHO KHÁCH HÀNG</span>
             <h3 class="sc-title">Căn {code} · {cat_title}</h3>
-            <p class="sc-sub">Hotline BQL hỗ trợ 24/7: <strong>0909 000 712</strong></p>
+            <p class="sc-sub">Chính sách ưu đãi & bảng tính dòng tiền tối ưu</p>
           </div>
 
           <ul class="sc-features">
             <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng nền, thổ cư lâu dài</li>
-            <li><i class="fa-solid fa-circle-check"></i> Độc quyền giữ chỗ & khóa cọc trực tiếp</li>
+            <li><i class="fa-solid fa-circle-check"></i> Độc quyền giữ chỗ & khóa vị trí căn {code}</li>
             <li><i class="fa-solid fa-circle-check"></i> Giảm 800 Triệu khi xây dựng trước 12/2027</li>
             <li><i class="fa-solid fa-circle-check"></i> Đưa đón khảo sát thực địa xe riêng 5 sao</li>
           </ul>
@@ -2150,21 +2142,15 @@ def build_unit_page_html(item, all_items):
             <button type="button" class="btn-cta-full btn-cta-primary" onclick="copyShareLink()">
               <i class="fa-solid fa-share-nodes"></i> Sao Chép Link Căn {code}
             </button>
-            <a href="tel:0909000712" class="btn-cta-full btn-cta-phone">
-              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712 Nhận Giữ Chỗ
-            </a>
-            <a href="https://zalo.me/0909000712?text=Toi%20quan%20tam%20lo%20{code}%20tai%20Saigon%20Farm%20Resort" target="_blank" class="btn-cta-full btn-cta-zalo">
-              <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc Căn {code}
-            </a>
-            <a href="/giohang#card-{code_lower}" class="btn-action-tool" style="justify-content: center; width: 100%;">
-              <i class="fa-solid fa-map-location-dot"></i> Định Vị Trên Master Plan Giỏ Hàng
-            </a>
+            <button type="button" class="btn-cta-full btn-cta-gold" onclick="copyScheduleText()">
+              <i class="fa-solid fa-copy"></i> Sao Chép Bảng Tính Gửi Khách
+            </button>
           </div>
 
           <!-- Quick Form -->
           <div class="inquiry-form-card">
             <div class="ifc-title">
-              <i class="fa-solid fa-paper-plane" style="color: var(--gold-dark);"></i> Đăng Ký Nhận Bảng Tính Chính Thức
+              <i class="fa-solid fa-paper-plane" style="color: var(--gold-dark);"></i> Đăng Ký Tư Vấn & Nhận CSBH Căn {code}
             </div>
             <form id="lotInquiryForm" onsubmit="handleInquirySubmit(event)">
               <div class="form-group">
@@ -2177,58 +2163,17 @@ def build_unit_page_html(item, all_items):
                 <input type="text" id="custNote" class="form-input" placeholder="Ghi chú (Phương án thanh toán quan tâm)">
               </div>
               <button type="submit" class="btn-form-submit">
-                Gửi Yêu Cầu Nhận CSBH Căn {code}
+                Gửi Yêu Cầu Cho Chuyên Viên Phụ Trách
               </button>
             </form>
           </div>
 
           <div class="sc-footer-note" style="margin-top: 14px;">
-            MDS Land cam kết bảo mật tuyệt đối thông tin khách hàng và phản hồi trong vòng 5 phút.
+            Chuyên viên tư vấn phụ trách căn {code} sẽ trực tiếp hỗ trợ và bảo mật tuyệt đối thông tin của Quý khách.
           </div>
         </div>
       </aside>
     </div>
-
-    <!-- Recommendations of other lots in same category -->
-    <section class="recommendations-section">
-      <span class="sec-badge">Tham Khảo Cùng Phân Khu</span>
-      <h3 class="sec-title">Các Căn Điền Trang Đang Mở Bán Cùng Phân Khu {cat_title}</h3>
-      <div class="rec-grid">
-"""
-
-    for sib in siblings:
-        s_code = sib.get("code", "")
-        s_code_lower = s_code.lower()
-        s_area = sib.get("area", "")
-        s_dir = sib.get("direction", "")
-        s_road = sib.get("road", "")
-        s_price_bil = sib.get("price_billion", "")
-        s_img = sib.get("image", "/assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg")
-        if s_img and not s_img.startswith('/') and not s_img.startswith('http'):
-            s_img = '/' + s_img
-
-        html += f"""
-        <div class="rec-card">
-          <div class="rec-thumb">
-            <img src="{s_img}" alt="Căn {s_code}" loading="lazy">
-            <span class="rec-code-badge">MÃ {s_code}</span>
-          </div>
-          <div class="rec-body">
-            <h4 class="rec-title">Căn {s_code} ({s_area} m²)</h4>
-            <div class="rec-meta">Hướng {s_dir} • {s_road}</div>
-            <div class="rec-price-row">
-              <span class="rec-price">{s_price_bil}</span>
-              <a href="/{s_code_lower}" class="btn-action-tool" style="padding: 6px 12px; font-size: 0.8rem;">
-                Xem Căn <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-"""
-
-    html += f"""
-      </div>
-    </section>
 
   </main>
 
@@ -2245,22 +2190,20 @@ def build_unit_page_html(item, all_items):
         </p>
       </div>
       <div class="footer-col">
-        <h5>Liên Kết Nhanh</h5>
+        <h5>Thông Tin Dự Án</h5>
         <ul class="footer-links">
-          <li><a href="/"><i class="fa-solid fa-angle-right"></i> Trang Chủ</a></li>
-          <li><a href="/giohang"><i class="fa-solid fa-angle-right"></i> Giỏ Hàng Mở Bán</a></li>
-          <li><a href="/biet-phu-dien-trang"><i class="fa-solid fa-angle-right"></i> Biệt Phủ Điền Trang</a></li>
-          <li><a href="/dien-san"><i class="fa-solid fa-angle-right"></i> Điền Sản</a></li>
-          <li><a href="/dien-an"><i class="fa-solid fa-angle-right"></i> Điền An</a></li>
+          <li><a href="/"><i class="fa-solid fa-angle-right"></i> Trang Chủ Saigon Farm Resort</a></li>
+          <li><a href="/gioi-thieu.html"><i class="fa-solid fa-angle-right"></i> Thuyết Minh Quy Hoạch 100ha</a></li>
+          <li><a href="/biet-phu-dien-trang"><i class="fa-solid fa-angle-right"></i> Kiến Trúc Biệt Phủ Điền Trang</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Liên Hệ Ban Quản Lý</h5>
+        <h5>Vận Hành & Tiếp Đón</h5>
         <ul class="footer-links">
-          <li><i class="fa-solid fa-phone" style="color: var(--gold);"></i> Hotline: <strong>0909 000 712</strong></li>
-          <li><i class="fa-solid fa-comment-dots" style="color: var(--gold);"></i> Zalo BQL: <strong>0909 000 712</strong></li>
-          <li><i class="fa-solid fa-location-dot" style="color: var(--gold);"></i> Vị trí: Đất Đỏ, TP. Hồ Chí Minh</li>
-          <li><i class="fa-solid fa-clock" style="color: var(--gold);"></i> Hỗ trợ tiếp đón: 8:00 - 18:00 hàng ngày</li>
+          <li><i class="fa-solid fa-building" style="color: var(--gold);"></i> Đơn vị phát triển: <strong>MDS Land</strong></li>
+          <li><i class="fa-solid fa-shield-halved" style="color: var(--gold);"></i> Vận hành & Quản lý: <strong>MDS Living</strong></li>
+          <li><i class="fa-solid fa-location-dot" style="color: var(--gold);"></i> Địa chỉ: Đất Đỏ, TP. Hồ Chí Minh</li>
+          <li><i class="fa-solid fa-clock" style="color: var(--gold);"></i> Tiếp đón tham quan thực địa: 8:00 - 18:00</li>
         </ul>
       </div>
     </div>
@@ -2489,7 +2432,7 @@ def build_unit_page_html(item, all_items):
 🎁 Ưu đãi xây dựng trước 12/2027: ${{applyBonus ? '-800 Triệu đồng (Đã tính)' : 'Chưa áp dụng'}}
 💎 TỔNG GIÁ THANH TOÁN SAU ƯU ĐÃI: ${{finalPriceStr}}
 🌐 Xem chi tiết trực tuyến: https://saigonfarmresort.com/${{LOT_DATA.codeLower}}
-📞 Hotline Ban Quản Lý: 0909 000 712`;
+📞 Liên hệ: Chuyên viên tư vấn gửi bảng tính này để nhận hỗ trợ & đăng ký xe đưa đón tham quan thực địa.`;
 
       if (navigator.clipboard) {{
         navigator.clipboard.writeText(text).then(() => {{
@@ -2517,7 +2460,7 @@ def build_unit_page_html(item, all_items):
       const note = document.getElementById('custNote').value.trim();
       const applyBonus = document.getElementById('bonus800Toggle').checked ? 'Có (giảm 800Tr)' : 'Không';
 
-      alert(`Cảm ơn Quý khách ${{name}}! Yêu cầu nhận bảng tính Căn ${{LOT_DATA.code}} (${{LOT_DATA.catTitle}}) đã được tiếp nhận. Chuyên viên Ban Quản Lý sẽ liên hệ trực tiếp qua số ${{phone}} trong ít phút.`);
+      alert(`Cảm ơn Quý khách ${{name}}! Yêu cầu nhận bảng tính Căn ${{LOT_DATA.code}} (${{LOT_DATA.catTitle}}) đã được tiếp nhận. Chuyên viên tư vấn phụ trách sẽ liên hệ trực tiếp qua số ${{phone}} trong ít phút.`);
       document.getElementById('lotInquiryForm').reset();
     }}
 
