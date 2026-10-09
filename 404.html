@@ -16,6 +16,17 @@
   <!-- SFR Real-Time Visitor Live Tracker -->
   <script defer src="/js/sfr-tracker.js"></script>
 
+  <!-- Auto Redirect for Unit Codes e.g. /A04, /giohang/a04 -> /a04 -->
+  <script>
+    (function() {
+      var path = window.location.pathname.replace(/^\/+|\/+$/g, '');
+      var match = path.match(/^(?:giohang\/|giong\/|listing\/)?([abAB]\d{2})(?:\.html)?$/i);
+      if (match) {
+        window.location.replace('/' + match[1].toLowerCase());
+      }
+    })();
+  </script>
+
   <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

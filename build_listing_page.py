@@ -129,9 +129,12 @@ def update_listing():
               <div class="tooltip-price-val">{price_bil}</div>
               <div class="tooltip-unit-val">{unit_price_mil}</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('{code}', '{cat_title}', '{area_str}', '{unit_price_str}', '{price_str}', '{price_bil}')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/{code.lower()}" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn {code}
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('{code}', '{code.lower()}')" title="Sao chép link căn {code}">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -217,7 +220,7 @@ def update_listing():
         card = f"""
         <div class="listing-card"
              id="card-{code.lower()}"
-             onclick="openBookingModal('{code}', '{cat_title}', '{area_str}', '{unit_price_str}', '{price_str}', '{price_bil}')"
+             onclick="window.location.href='/{code.lower()}'"
              data-stt="{stt}"
              data-code="{code.lower()}"
              data-block="{block.lower()}"
@@ -295,6 +298,12 @@ def update_listing():
 
             {policy_html}
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -310,10 +319,27 @@ def update_listing():
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN {code}:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/{code.lower()}" class="csb-url" title="Xem chi tiết căn {code}">saigonfarmresort.com/{code.lower()}</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('{code}', '{code.lower()}')" title="Sao chép link căn {code}">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('{code}', '{cat_title}', '{area_str}', '{unit_price_str}', '{price_str}', '{price_bil}')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/{code.lower()}" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn {code}">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('{code}', '{code.lower()}')" title="Sao chép link căn {code}">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('{code}')" title="Định vị lô {code} trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -394,8 +420,11 @@ def update_listing():
           <td class="col-status"><span class="table-status-pill {status_class}">{status_text}</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('{code}', '{cat_title}', '{area_str}', '{unit_price_str}', '{price_str}', '{price_bil}')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/{code.lower()}" class="btn-table-action" title="Xem chi tiết & CSBH căn {code}">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('{code}', '{code.lower()}')" title="Sao chép link căn {code}">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn {code}">
                 <i class="fa-solid fa-phone"></i>
@@ -1712,6 +1741,169 @@ def update_listing():
       background: var(--gold);
       color: #fff;
       border-color: var(--gold);
+    }}
+
+    /* Share URL Box on Listing Cards */
+    .card-share-box {{
+      background: #faf6ee;
+      border: 1.5px solid #e5d7be;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }}
+    .card-share-box:hover {{
+      border-color: var(--gold);
+      box-shadow: 0 2px 8px rgba(201, 169, 110, 0.15);
+    }}
+    .csb-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }}
+    .csb-label {{
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #7b5f2c;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.5px;
+    }}
+    .csb-badge-root {{
+      background: #183024;
+      color: #c9a96e;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }}
+    .csb-row {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      background: #ffffff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ebdcc5;
+    }}
+    .csb-url {{
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: #183024;
+      font-weight: 700;
+      word-break: break-all;
+      text-decoration: none;
+    }}
+    .csb-url:hover {{
+      color: #c9a96e;
+      text-decoration: underline;
+    }}
+    .btn-copy-share {{
+      background: linear-gradient(135deg, #dfc28d 0%, #c9a96e 50%, #9f7d43 100%);
+      border: none;
+      color: #1a1a1a;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(201, 169, 110, 0.3);
+    }}
+    .btn-copy-share:hover {{
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(201, 169, 110, 0.4);
+    }}
+    .card-bonus-construction-pill {{
+      background: linear-gradient(135deg, #fefbf5 0%, #f4ede1 100%);
+      border: 1px solid rgba(201, 169, 110, 0.5);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      color: #7b5921;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }}
+    .card-bonus-construction-pill i {{
+      color: #b91c1c;
+    }}
+    .btn-copy-action {{
+      width: 44px;
+      height: 44px;
+      background: #fdfaf4;
+      border: 1px solid #ded6c5;
+      color: #8c6b32;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }}
+    .btn-copy-action:hover {{
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold);
+    }}
+    .btn-table-copy {{
+      background: #ffffff;
+      border: 1px solid #ded6c5;
+      color: var(--primary);
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }}
+    .btn-table-copy:hover {{
+      background: #fbf9f5;
+      border-color: var(--gold);
+    }}
+    .toast-box {{
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #183024;
+      color: #ffffff;
+      border: 1px solid var(--gold);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }}
+    .toast-box.show {{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }}
+    .toast-box i {{
+      color: var(--gold);
+      font-size: 1.2rem;
     }}
 
     /* Table View Styles */
@@ -3627,6 +3819,68 @@ def update_listing():
       closeBookingModal();
       document.getElementById('bookingForm').reset();
     }}
+
+    // Lot Share Link Copy Handler
+    function copyLotShareLink(code, codeLower) {{
+      const shareUrl = 'https://saigonfarmresort.com/' + codeLower;
+      if (navigator.clipboard && window.isSecureContext) {{
+        navigator.clipboard.writeText(shareUrl).then(() => {{
+          showListingToast(`Đã sao chép liên kết căn ${{code}}: ${{shareUrl}}`);
+        }}).catch(() => {{
+          fallbackListingCopy(code, shareUrl);
+        }});
+      }} else {{
+        fallbackListingCopy(code, shareUrl);
+      }}
+    }}
+
+    function fallbackListingCopy(code, text) {{
+      const input = document.createElement('input');
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      try {{
+        document.execCommand('copy');
+        showListingToast(`Đã sao chép liên kết căn ${{code}}: ${{text}}`);
+      }} catch (err) {{
+        prompt(`Sao chép liên kết căn ${{code}}:`, text);
+      }}
+      document.body.removeChild(input);
+    }}
+
+    function showListingToast(msg) {{
+      let toast = document.getElementById('listingToast');
+      if (!toast) {{
+        toast = document.createElement('div');
+        toast.id = 'listingToast';
+        toast.className = 'toast-box';
+        toast.innerHTML = '<i class="fa-solid fa-circle-check"></i> <span id="listingToastMsg"></span>';
+        document.body.appendChild(toast);
+      }}
+      document.getElementById('listingToastMsg').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {{
+        toast.classList.remove('show');
+      }}, 3500);
+    }}
+
+    // Check for direct lot hash or query parameter
+    window.addEventListener('DOMContentLoaded', () => {{
+      const urlParams = new URLSearchParams(window.location.search);
+      const unitParam = urlParams.get('unit') || urlParams.get('lot');
+      if (unitParam) {{
+        setTimeout(() => {{
+          focusLot(unitParam.toUpperCase());
+        }}, 400);
+      }} else if (window.location.hash) {{
+        const hash = window.location.hash.replace('#', '').replace('card-', '').toUpperCase();
+        if (hash) {{
+          setTimeout(() => {{
+            focusLot(hash);
+          }}, 400);
+        }}
+      }}
+    }});
   </script>
 </body>
 </html>

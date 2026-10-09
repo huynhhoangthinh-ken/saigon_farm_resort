@@ -1301,6 +1301,169 @@
       border-color: var(--gold);
     }
 
+    /* Share URL Box on Listing Cards */
+    .card-share-box {
+      background: #faf6ee;
+      border: 1.5px solid #e5d7be;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .card-share-box:hover {
+      border-color: var(--gold);
+      box-shadow: 0 2px 8px rgba(201, 169, 110, 0.15);
+    }
+    .csb-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .csb-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #7b5f2c;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.5px;
+    }
+    .csb-badge-root {
+      background: #183024;
+      color: #c9a96e;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .csb-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      background: #ffffff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ebdcc5;
+    }
+    .csb-url {
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: #183024;
+      font-weight: 700;
+      word-break: break-all;
+      text-decoration: none;
+    }
+    .csb-url:hover {
+      color: #c9a96e;
+      text-decoration: underline;
+    }
+    .btn-copy-share {
+      background: linear-gradient(135deg, #dfc28d 0%, #c9a96e 50%, #9f7d43 100%);
+      border: none;
+      color: #1a1a1a;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(201, 169, 110, 0.3);
+    }
+    .btn-copy-share:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(201, 169, 110, 0.4);
+    }
+    .card-bonus-construction-pill {
+      background: linear-gradient(135deg, #fefbf5 0%, #f4ede1 100%);
+      border: 1px solid rgba(201, 169, 110, 0.5);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      color: #7b5921;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .card-bonus-construction-pill i {
+      color: #b91c1c;
+    }
+    .btn-copy-action {
+      width: 44px;
+      height: 44px;
+      background: #fdfaf4;
+      border: 1px solid #ded6c5;
+      color: #8c6b32;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .btn-copy-action:hover {
+      background: var(--gold);
+      color: #fff;
+      border-color: var(--gold);
+    }
+    .btn-table-copy {
+      background: #ffffff;
+      border: 1px solid #ded6c5;
+      color: var(--primary);
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .btn-table-copy:hover {
+      background: #fbf9f5;
+      border-color: var(--gold);
+    }
+    .toast-box {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #183024;
+      color: #ffffff;
+      border: 1px solid var(--gold);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast-box.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .toast-box i {
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+
     /* Table View Styles */
     .table-view-container {
       display: none;
@@ -2492,9 +2655,12 @@
               <div class="tooltip-price-val">13,85 Tỷ</div>
               <div class="tooltip-unit-val">12,71 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A04', 'Biệt Phủ Điền Trang', '1.089,62', '12.714.860 đ/m²', '13.854.365.753 đ', '13,85 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a04" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A04
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A04', 'a04')" title="Sao chép link căn A04">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2526,9 +2692,12 @@
               <div class="tooltip-price-val">16,37 Tỷ</div>
               <div class="tooltip-unit-val">12,65 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A06', 'Biệt Phủ Điền Trang', '1.293,93', '12.654.600 đ/m²', '16.374.166.578 đ', '16,37 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a06" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A06
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A06', 'a06')" title="Sao chép link căn A06">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2560,9 +2729,12 @@
               <div class="tooltip-price-val">15,65 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A08', 'Điền Sản', '1.298,93', '12.052.000 đ/m²', '15.654.704.360 đ', '15,65 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a08" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A08
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A08', 'a08')" title="Sao chép link căn A08">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2594,9 +2766,12 @@
               <div class="tooltip-price-val">15,49 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A09', 'Điền Sản', '1.284,89', '12.052.000 đ/m²', '15.485.494.280 đ', '15,49 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a09" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A09
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A09', 'a09')" title="Sao chép link căn A09">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2628,9 +2803,12 @@
               <div class="tooltip-price-val">15,13 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A11', 'Điền Sản', '1.255,40', '12.052.000 đ/m²', '15.130.080.800 đ', '15,13 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a11" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A11
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A11', 'a11')" title="Sao chép link căn A11">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2662,9 +2840,12 @@
               <div class="tooltip-price-val">15,02 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A12', 'Điền Sản', '1.246,02', '12.052.000 đ/m²', '15.017.033.040 đ', '15,02 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a12" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A12
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A12', 'a12')" title="Sao chép link căn A12">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2696,9 +2877,12 @@
               <div class="tooltip-price-val">15,30 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A13', 'Điền An', '1.269,38', '12.052.000 đ/m²', '15.298.567.760 đ', '15,30 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a13" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A13
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A13', 'a13')" title="Sao chép link căn A13">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2730,9 +2914,12 @@
               <div class="tooltip-price-val">15,36 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A14', 'Điền An', '1.274,69', '12.052.000 đ/m²', '15.362.563.880 đ', '15,36 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a14" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A14
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A14', 'a14')" title="Sao chép link căn A14">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2764,9 +2951,12 @@
               <div class="tooltip-price-val">12,98 Tỷ</div>
               <div class="tooltip-unit-val">11,63 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A15', 'Điền An', '1.115,70', '11.630.180 đ/m²', '12.975.791.826 đ', '12,98 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a15" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A15
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A15', 'a15')" title="Sao chép link căn A15">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2798,9 +2988,12 @@
               <div class="tooltip-price-val">12,35 Tỷ</div>
               <div class="tooltip-unit-val">12,78 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A16', 'Biệt Phủ Điền Trang', '966,37', '12.775.120 đ/m²', '12.345.492.714 đ', '12,35 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a16" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A16
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A16', 'a16')" title="Sao chép link căn A16">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2832,9 +3025,12 @@
               <div class="tooltip-price-val">10,49 Tỷ</div>
               <div class="tooltip-unit-val">12,53 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A17', 'Biệt Phủ Điền Trang', '836,77', '12.534.080 đ/m²', '10.488.142.122 đ', '10,49 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a17" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A17
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A17', 'a17')" title="Sao chép link căn A17">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2866,9 +3062,12 @@
               <div class="tooltip-price-val">12,41 Tỷ</div>
               <div class="tooltip-unit-val">14,94 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A18', 'Biệt Phủ Điền Trang', '830,73', '14.944.480 đ/m²', '12.414.827.870 đ', '12,41 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a18" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A18
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A18', 'a18')" title="Sao chép link căn A18">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2900,9 +3099,12 @@
               <div class="tooltip-price-val">17,08 Tỷ</div>
               <div class="tooltip-unit-val">14,88 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A21', 'Biệt Phủ Điền Trang', '1.147,21', '14.884.220 đ/m²', '17.075.326.026 đ', '17,08 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a21" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A21
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A21', 'a21')" title="Sao chép link căn A21">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2934,9 +3136,12 @@
               <div class="tooltip-price-val">15,07 Tỷ</div>
               <div class="tooltip-unit-val">14,88 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A22', 'Điền An', '1.012,53', '14.884.220 đ/m²', '15.070.719.277 đ', '15,07 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a22" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A22
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A22', 'a22')" title="Sao chép link căn A22">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -2968,9 +3173,12 @@
               <div class="tooltip-price-val">7,96 Tỷ</div>
               <div class="tooltip-unit-val">14,64 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A23', 'Biệt Phủ Điền Trang', '543,61', '14.643.180 đ/m²', '7.960.179.080 đ', '7,96 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a23" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A23
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A23', 'a23')" title="Sao chép link căn A23">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3002,9 +3210,12 @@
               <div class="tooltip-price-val">17,17 Tỷ</div>
               <div class="tooltip-unit-val">14,22 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('A24', 'Biệt Phủ Điền Trang', '1.207,29', '14.221.360 đ/m²', '17.169.305.714 đ', '17,17 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/a24" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn A24
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('A24', 'a24')" title="Sao chép link căn A24">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3036,9 +3247,12 @@
               <div class="tooltip-price-val">11,41 Tỷ</div>
               <div class="tooltip-unit-val">12,78 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B04', 'Biệt Phủ Điền Trang', '892,83', '12.775.120 đ/m²', '11.406.010.390 đ', '11,41 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b04" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B04
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B04', 'b04')" title="Sao chép link căn B04">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3070,9 +3284,12 @@
               <div class="tooltip-price-val">10,58 Tỷ</div>
               <div class="tooltip-unit-val">12,78 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B05', 'Điền Sản', '828,50', '12.775.120 đ/m²', '10.584.186.920 đ', '10,58 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b05" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B05
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B05', 'b05')" title="Sao chép link căn B05">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3104,9 +3321,12 @@
               <div class="tooltip-price-val">11,68 Tỷ</div>
               <div class="tooltip-unit-val">12,17 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B06', 'Biệt Phủ Điền Trang', '959,20', '12.172.520 đ/m²', '11.675.881.184 đ', '11,68 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b06" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B06
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B06', 'b06')" title="Sao chép link căn B06">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3138,9 +3358,12 @@
               <div class="tooltip-price-val">10,22 Tỷ</div>
               <div class="tooltip-unit-val">12,84 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B07', 'Biệt Phủ Điền Trang', '796,13', '12.835.380 đ/m²', '10.218.631.079 đ', '10,22 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b07" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B07
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B07', 'b07')" title="Sao chép link căn B07">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3172,9 +3395,12 @@
               <div class="tooltip-price-val">13,49 Tỷ</div>
               <div class="tooltip-unit-val">12,11 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B08', 'Điền Sản', '1.113,49', '12.112.260 đ/m²', '13.486.880.387 đ', '13,49 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b08" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B08
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B08', 'b08')" title="Sao chép link căn B08">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3206,9 +3432,12 @@
               <div class="tooltip-price-val">13,58 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B09', 'Điền Sản', '1.126,59', '12.052.000 đ/m²', '13.577.662.680 đ', '13,58 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b09" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B09
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B09', 'b09')" title="Sao chép link căn B09">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3240,9 +3469,12 @@
               <div class="tooltip-price-val">14,47 Tỷ</div>
               <div class="tooltip-unit-val">11,21 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B10', 'Điền Sản', '1.291,20', '11.208.360 đ/m²', '14.472.234.432 đ', '14,47 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b10" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B10
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B10', 'b10')" title="Sao chép link căn B10">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3274,9 +3506,12 @@
               <div class="tooltip-price-val">10,10 Tỷ</div>
               <div class="tooltip-unit-val">12,17 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B12', 'Biệt Phủ Điền Trang', '829,44', '12.172.520 đ/m²', '10.096.374.989 đ', '10,10 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b12" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B12
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B12', 'b12')" title="Sao chép link căn B12">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3308,9 +3543,12 @@
               <div class="tooltip-price-val">9,80 Tỷ</div>
               <div class="tooltip-unit-val">12,84 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B13', 'Biệt Phủ Điền Trang', '763,27', '12.835.380 đ/m²', '9.796.860.493 đ', '9,80 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b13" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B13
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B13', 'b13')" title="Sao chép link căn B13">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3342,9 +3580,12 @@
               <div class="tooltip-price-val">12,89 Tỷ</div>
               <div class="tooltip-unit-val">13,62 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B14', 'Biệt Phủ Điền Trang', '946,15', '13.618.760 đ/m²', '12.885.389.774 đ', '12,89 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b14" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B14
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B14', 'b14')" title="Sao chép link căn B14">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3376,9 +3617,12 @@
               <div class="tooltip-price-val">11,67 Tỷ</div>
               <div class="tooltip-unit-val">13,98 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B15', 'Biệt Phủ Điền Trang', '834,75', '13.980.320 đ/m²', '11.670.072.120 đ', '11,67 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b15" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B15
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B15', 'b15')" title="Sao chép link căn B15">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3410,9 +3654,12 @@
               <div class="tooltip-price-val">12,00 Tỷ</div>
               <div class="tooltip-unit-val">12,17 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B17', 'Điền Sản', '985,57', '12.172.520 đ/m²', '11.996.870.536 đ', '12,00 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b17" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B17
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B17', 'b17')" title="Sao chép link căn B17">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3444,9 +3691,12 @@
               <div class="tooltip-price-val">11,99 Tỷ</div>
               <div class="tooltip-unit-val">12,17 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B18', 'Điền Sản', '985,01', '12.172.520 đ/m²', '11.990.053.925 đ', '11,99 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b18" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B18
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B18', 'b18')" title="Sao chép link căn B18">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3478,9 +3728,12 @@
               <div class="tooltip-price-val">12,03 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B19', 'Điền Sản', '998,06', '12.052.000 đ/m²', '12.028.619.120 đ', '12,03 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b19" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B19
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B19', 'b19')" title="Sao chép link căn B19">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3512,9 +3765,12 @@
               <div class="tooltip-price-val">12,59 Tỷ</div>
               <div class="tooltip-unit-val">12,11 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B20', 'Biệt Phủ Điền Trang', '1.039,76', '12.112.260 đ/m²', '12.593.843.458 đ', '12,59 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b20" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B20
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B20', 'b20')" title="Sao chép link căn B20">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3546,9 +3802,12 @@
               <div class="tooltip-price-val">12,66 Tỷ</div>
               <div class="tooltip-unit-val">12,11 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B22', 'Điền An', '1.044,86', '12.112.260 đ/m²', '12.655.615.984 đ', '12,66 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b22" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B22
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B22', 'b22')" title="Sao chép link căn B22">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3580,9 +3839,12 @@
               <div class="tooltip-price-val">13,98 Tỷ</div>
               <div class="tooltip-unit-val">12,11 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B23', 'Điền An', '1.154,54', '12.112.260 đ/m²', '13.984.088.660 đ', '13,98 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b23" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B23
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B23', 'b23')" title="Sao chép link căn B23">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3614,9 +3876,12 @@
               <div class="tooltip-price-val">16,10 Tỷ</div>
               <div class="tooltip-unit-val">12,05 Tr/m²</div>
             </div>
-            <div class="tooltip-action-row">
-              <button type="button" class="btn-tooltip-booking" onclick="event.stopPropagation(); openBookingModal('B24', 'Điền An', '1.336,20', '12.052.000 đ/m²', '16.103.882.400 đ', '16,10 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+            <div class="tooltip-action-row" style="display: flex; gap: 6px;">
+              <a href="/b24" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn B24
+              </a>
+              <button type="button" class="btn-tooltip-booking" style="background:#5e6d65; padding: 6px 10px;" onclick="event.stopPropagation(); copyLotShareLink('B24', 'b24')" title="Sao chép link căn B24">
+                <i class="fa-solid fa-copy"></i> Link
               </button>
             </div>
           </div>
@@ -3757,7 +4022,7 @@
       
         <div class="listing-card"
              id="card-a04"
-             onclick="openBookingModal('A04', 'Biệt Phủ Điền Trang', '1.089,62', '12.714.860 đ/m²', '13.854.365.753 đ', '13,85 Tỷ')"
+             onclick="window.location.href='/a04'"
              data-stt="1"
              data-code="a04"
              data-block="a"
@@ -3840,6 +4105,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -3855,10 +4126,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A04:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a04" class="csb-url" title="Xem chi tiết căn A04">saigonfarmresort.com/a04</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A04', 'a04')" title="Sao chép link căn A04">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A04', 'Biệt Phủ Điền Trang', '1.089,62', '12.714.860 đ/m²', '13.854.365.753 đ', '13,85 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a04" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A04">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A04', 'a04')" title="Sao chép link căn A04">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A04')" title="Định vị lô A04 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -3876,7 +4164,7 @@
 
         <div class="listing-card"
              id="card-a06"
-             onclick="openBookingModal('A06', 'Biệt Phủ Điền Trang', '1.293,93', '12.654.600 đ/m²', '16.374.166.578 đ', '16,37 Tỷ')"
+             onclick="window.location.href='/a06'"
              data-stt="2"
              data-code="a06"
              data-block="a"
@@ -3959,6 +4247,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -3974,10 +4268,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A06:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a06" class="csb-url" title="Xem chi tiết căn A06">saigonfarmresort.com/a06</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A06', 'a06')" title="Sao chép link căn A06">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A06', 'Biệt Phủ Điền Trang', '1.293,93', '12.654.600 đ/m²', '16.374.166.578 đ', '16,37 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a06" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A06">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A06', 'a06')" title="Sao chép link căn A06">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A06')" title="Định vị lô A06 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -3995,7 +4306,7 @@
 
         <div class="listing-card"
              id="card-a08"
-             onclick="openBookingModal('A08', 'Điền Sản', '1.298,93', '12.052.000 đ/m²', '15.654.704.360 đ', '15,65 Tỷ')"
+             onclick="window.location.href='/a08'"
              data-stt="3"
              data-code="a08"
              data-block="a"
@@ -4078,6 +4389,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -4093,10 +4410,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A08:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a08" class="csb-url" title="Xem chi tiết căn A08">saigonfarmresort.com/a08</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A08', 'a08')" title="Sao chép link căn A08">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A08', 'Điền Sản', '1.298,93', '12.052.000 đ/m²', '15.654.704.360 đ', '15,65 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a08" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A08">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A08', 'a08')" title="Sao chép link căn A08">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A08')" title="Định vị lô A08 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -4114,7 +4448,7 @@
 
         <div class="listing-card"
              id="card-a09"
-             onclick="openBookingModal('A09', 'Điền Sản', '1.284,89', '12.052.000 đ/m²', '15.485.494.280 đ', '15,49 Tỷ')"
+             onclick="window.location.href='/a09'"
              data-stt="4"
              data-code="a09"
              data-block="a"
@@ -4197,6 +4531,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -4212,10 +4552,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A09:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a09" class="csb-url" title="Xem chi tiết căn A09">saigonfarmresort.com/a09</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A09', 'a09')" title="Sao chép link căn A09">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A09', 'Điền Sản', '1.284,89', '12.052.000 đ/m²', '15.485.494.280 đ', '15,49 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a09" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A09">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A09', 'a09')" title="Sao chép link căn A09">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A09')" title="Định vị lô A09 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -4233,7 +4590,7 @@
 
         <div class="listing-card"
              id="card-a11"
-             onclick="openBookingModal('A11', 'Điền Sản', '1.255,40', '12.052.000 đ/m²', '15.130.080.800 đ', '15,13 Tỷ')"
+             onclick="window.location.href='/a11'"
              data-stt="5"
              data-code="a11"
              data-block="a"
@@ -4316,6 +4673,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -4331,10 +4694,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A11:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a11" class="csb-url" title="Xem chi tiết căn A11">saigonfarmresort.com/a11</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A11', 'a11')" title="Sao chép link căn A11">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A11', 'Điền Sản', '1.255,40', '12.052.000 đ/m²', '15.130.080.800 đ', '15,13 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a11" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A11">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A11', 'a11')" title="Sao chép link căn A11">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A11')" title="Định vị lô A11 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -4352,7 +4732,7 @@
 
         <div class="listing-card"
              id="card-a12"
-             onclick="openBookingModal('A12', 'Điền Sản', '1.246,02', '12.052.000 đ/m²', '15.017.033.040 đ', '15,02 Tỷ')"
+             onclick="window.location.href='/a12'"
              data-stt="6"
              data-code="a12"
              data-block="a"
@@ -4435,6 +4815,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -4450,10 +4836,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A12:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a12" class="csb-url" title="Xem chi tiết căn A12">saigonfarmresort.com/a12</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A12', 'a12')" title="Sao chép link căn A12">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A12', 'Điền Sản', '1.246,02', '12.052.000 đ/m²', '15.017.033.040 đ', '15,02 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a12" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A12">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A12', 'a12')" title="Sao chép link căn A12">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A12')" title="Định vị lô A12 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -4471,7 +4874,7 @@
 
         <div class="listing-card"
              id="card-a13"
-             onclick="openBookingModal('A13', 'Điền An', '1.269,38', '12.052.000 đ/m²', '15.298.567.760 đ', '15,30 Tỷ')"
+             onclick="window.location.href='/a13'"
              data-stt="7"
              data-code="a13"
              data-block="a"
@@ -4554,6 +4957,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -4569,10 +4978,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A13:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a13" class="csb-url" title="Xem chi tiết căn A13">saigonfarmresort.com/a13</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A13', 'a13')" title="Sao chép link căn A13">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A13', 'Điền An', '1.269,38', '12.052.000 đ/m²', '15.298.567.760 đ', '15,30 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a13" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A13">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A13', 'a13')" title="Sao chép link căn A13">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A13')" title="Định vị lô A13 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -4590,7 +5016,7 @@
 
         <div class="listing-card"
              id="card-a14"
-             onclick="openBookingModal('A14', 'Điền An', '1.274,69', '12.052.000 đ/m²', '15.362.563.880 đ', '15,36 Tỷ')"
+             onclick="window.location.href='/a14'"
              data-stt="8"
              data-code="a14"
              data-block="a"
@@ -4673,6 +5099,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -4688,10 +5120,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A14:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a14" class="csb-url" title="Xem chi tiết căn A14">saigonfarmresort.com/a14</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A14', 'a14')" title="Sao chép link căn A14">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A14', 'Điền An', '1.274,69', '12.052.000 đ/m²', '15.362.563.880 đ', '15,36 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a14" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A14">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A14', 'a14')" title="Sao chép link căn A14">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A14')" title="Định vị lô A14 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -4709,7 +5158,7 @@
 
         <div class="listing-card"
              id="card-a15"
-             onclick="openBookingModal('A15', 'Điền An', '1.115,70', '11.630.180 đ/m²', '12.975.791.826 đ', '12,98 Tỷ')"
+             onclick="window.location.href='/a15'"
              data-stt="9"
              data-code="a15"
              data-block="a"
@@ -4792,6 +5241,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -4807,10 +5262,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A15:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a15" class="csb-url" title="Xem chi tiết căn A15">saigonfarmresort.com/a15</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A15', 'a15')" title="Sao chép link căn A15">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A15', 'Điền An', '1.115,70', '11.630.180 đ/m²', '12.975.791.826 đ', '12,98 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a15" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A15">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A15', 'a15')" title="Sao chép link căn A15">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A15')" title="Định vị lô A15 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -4828,7 +5300,7 @@
 
         <div class="listing-card"
              id="card-a16"
-             onclick="openBookingModal('A16', 'Biệt Phủ Điền Trang', '966,37', '12.775.120 đ/m²', '12.345.492.714 đ', '12,35 Tỷ')"
+             onclick="window.location.href='/a16'"
              data-stt="10"
              data-code="a16"
              data-block="a"
@@ -4911,6 +5383,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -4926,10 +5404,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A16:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a16" class="csb-url" title="Xem chi tiết căn A16">saigonfarmresort.com/a16</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A16', 'a16')" title="Sao chép link căn A16">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A16', 'Biệt Phủ Điền Trang', '966,37', '12.775.120 đ/m²', '12.345.492.714 đ', '12,35 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a16" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A16">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A16', 'a16')" title="Sao chép link căn A16">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A16')" title="Định vị lô A16 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -4947,7 +5442,7 @@
 
         <div class="listing-card"
              id="card-a17"
-             onclick="openBookingModal('A17', 'Biệt Phủ Điền Trang', '836,77', '12.534.080 đ/m²', '10.488.142.122 đ', '10,49 Tỷ')"
+             onclick="window.location.href='/a17'"
              data-stt="11"
              data-code="a17"
              data-block="a"
@@ -5030,6 +5525,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5045,10 +5546,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A17:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a17" class="csb-url" title="Xem chi tiết căn A17">saigonfarmresort.com/a17</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A17', 'a17')" title="Sao chép link căn A17">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A17', 'Biệt Phủ Điền Trang', '836,77', '12.534.080 đ/m²', '10.488.142.122 đ', '10,49 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a17" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A17">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A17', 'a17')" title="Sao chép link căn A17">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A17')" title="Định vị lô A17 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -5066,7 +5584,7 @@
 
         <div class="listing-card"
              id="card-a18"
-             onclick="openBookingModal('A18', 'Biệt Phủ Điền Trang', '830,73', '14.944.480 đ/m²', '12.414.827.870 đ', '12,41 Tỷ')"
+             onclick="window.location.href='/a18'"
              data-stt="12"
              data-code="a18"
              data-block="a"
@@ -5149,6 +5667,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5164,10 +5688,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A18:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a18" class="csb-url" title="Xem chi tiết căn A18">saigonfarmresort.com/a18</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A18', 'a18')" title="Sao chép link căn A18">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A18', 'Biệt Phủ Điền Trang', '830,73', '14.944.480 đ/m²', '12.414.827.870 đ', '12,41 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a18" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A18">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A18', 'a18')" title="Sao chép link căn A18">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A18')" title="Định vị lô A18 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -5185,7 +5726,7 @@
 
         <div class="listing-card"
              id="card-a21"
-             onclick="openBookingModal('A21', 'Biệt Phủ Điền Trang', '1.147,21', '14.884.220 đ/m²', '17.075.326.026 đ', '17,08 Tỷ')"
+             onclick="window.location.href='/a21'"
              data-stt="13"
              data-code="a21"
              data-block="a"
@@ -5268,6 +5809,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5283,10 +5830,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A21:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a21" class="csb-url" title="Xem chi tiết căn A21">saigonfarmresort.com/a21</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A21', 'a21')" title="Sao chép link căn A21">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A21', 'Biệt Phủ Điền Trang', '1.147,21', '14.884.220 đ/m²', '17.075.326.026 đ', '17,08 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a21" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A21">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A21', 'a21')" title="Sao chép link căn A21">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A21')" title="Định vị lô A21 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -5304,7 +5868,7 @@
 
         <div class="listing-card"
              id="card-a22"
-             onclick="openBookingModal('A22', 'Điền An', '1.012,53', '14.884.220 đ/m²', '15.070.719.277 đ', '15,07 Tỷ')"
+             onclick="window.location.href='/a22'"
              data-stt="14"
              data-code="a22"
              data-block="a"
@@ -5387,6 +5951,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5402,10 +5972,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A22:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a22" class="csb-url" title="Xem chi tiết căn A22">saigonfarmresort.com/a22</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A22', 'a22')" title="Sao chép link căn A22">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A22', 'Điền An', '1.012,53', '14.884.220 đ/m²', '15.070.719.277 đ', '15,07 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a22" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A22">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A22', 'a22')" title="Sao chép link căn A22">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A22')" title="Định vị lô A22 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -5423,7 +6010,7 @@
 
         <div class="listing-card"
              id="card-a23"
-             onclick="openBookingModal('A23', 'Biệt Phủ Điền Trang', '543,61', '14.643.180 đ/m²', '7.960.179.080 đ', '7,96 Tỷ')"
+             onclick="window.location.href='/a23'"
              data-stt="15"
              data-code="a23"
              data-block="a"
@@ -5506,6 +6093,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5521,10 +6114,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A23:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a23" class="csb-url" title="Xem chi tiết căn A23">saigonfarmresort.com/a23</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A23', 'a23')" title="Sao chép link căn A23">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A23', 'Biệt Phủ Điền Trang', '543,61', '14.643.180 đ/m²', '7.960.179.080 đ', '7,96 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a23" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A23">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A23', 'a23')" title="Sao chép link căn A23">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A23')" title="Định vị lô A23 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -5542,7 +6152,7 @@
 
         <div class="listing-card"
              id="card-a24"
-             onclick="openBookingModal('A24', 'Biệt Phủ Điền Trang', '1.207,29', '14.221.360 đ/m²', '17.169.305.714 đ', '17,17 Tỷ')"
+             onclick="window.location.href='/a24'"
              data-stt="16"
              data-code="a24"
              data-block="a"
@@ -5625,6 +6235,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5640,10 +6256,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN A24:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/a24" class="csb-url" title="Xem chi tiết căn A24">saigonfarmresort.com/a24</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('A24', 'a24')" title="Sao chép link căn A24">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('A24', 'Biệt Phủ Điền Trang', '1.207,29', '14.221.360 đ/m²', '17.169.305.714 đ', '17,17 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/a24" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A24">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A24', 'a24')" title="Sao chép link căn A24">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A24')" title="Định vị lô A24 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -5661,7 +6294,7 @@
 
         <div class="listing-card"
              id="card-b04"
-             onclick="openBookingModal('B04', 'Biệt Phủ Điền Trang', '892,83', '12.775.120 đ/m²', '11.406.010.390 đ', '11,41 Tỷ')"
+             onclick="window.location.href='/b04'"
              data-stt="17"
              data-code="b04"
              data-block="b"
@@ -5744,6 +6377,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5759,10 +6398,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B04:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b04" class="csb-url" title="Xem chi tiết căn B04">saigonfarmresort.com/b04</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B04', 'b04')" title="Sao chép link căn B04">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B04', 'Biệt Phủ Điền Trang', '892,83', '12.775.120 đ/m²', '11.406.010.390 đ', '11,41 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b04" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B04">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B04', 'b04')" title="Sao chép link căn B04">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B04')" title="Định vị lô B04 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -5780,7 +6436,7 @@
 
         <div class="listing-card"
              id="card-b05"
-             onclick="openBookingModal('B05', 'Điền Sản', '828,50', '12.775.120 đ/m²', '10.584.186.920 đ', '10,58 Tỷ')"
+             onclick="window.location.href='/b05'"
              data-stt="18"
              data-code="b05"
              data-block="b"
@@ -5863,6 +6519,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5878,10 +6540,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B05:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b05" class="csb-url" title="Xem chi tiết căn B05">saigonfarmresort.com/b05</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B05', 'b05')" title="Sao chép link căn B05">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B05', 'Điền Sản', '828,50', '12.775.120 đ/m²', '10.584.186.920 đ', '10,58 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b05" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B05">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B05', 'b05')" title="Sao chép link căn B05">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B05')" title="Định vị lô B05 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -5899,7 +6578,7 @@
 
         <div class="listing-card"
              id="card-b06"
-             onclick="openBookingModal('B06', 'Biệt Phủ Điền Trang', '959,20', '12.172.520 đ/m²', '11.675.881.184 đ', '11,68 Tỷ')"
+             onclick="window.location.href='/b06'"
              data-stt="19"
              data-code="b06"
              data-block="b"
@@ -5982,6 +6661,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -5997,10 +6682,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B06:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b06" class="csb-url" title="Xem chi tiết căn B06">saigonfarmresort.com/b06</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B06', 'b06')" title="Sao chép link căn B06">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B06', 'Biệt Phủ Điền Trang', '959,20', '12.172.520 đ/m²', '11.675.881.184 đ', '11,68 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b06" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B06">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B06', 'b06')" title="Sao chép link căn B06">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B06')" title="Định vị lô B06 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6018,7 +6720,7 @@
 
         <div class="listing-card"
              id="card-b07"
-             onclick="openBookingModal('B07', 'Biệt Phủ Điền Trang', '796,13', '12.835.380 đ/m²', '10.218.631.079 đ', '10,22 Tỷ')"
+             onclick="window.location.href='/b07'"
              data-stt="20"
              data-code="b07"
              data-block="b"
@@ -6101,6 +6803,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -6116,10 +6824,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B07:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b07" class="csb-url" title="Xem chi tiết căn B07">saigonfarmresort.com/b07</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B07', 'b07')" title="Sao chép link căn B07">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B07', 'Biệt Phủ Điền Trang', '796,13', '12.835.380 đ/m²', '10.218.631.079 đ', '10,22 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b07" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B07">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B07', 'b07')" title="Sao chép link căn B07">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B07')" title="Định vị lô B07 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6137,7 +6862,7 @@
 
         <div class="listing-card"
              id="card-b08"
-             onclick="openBookingModal('B08', 'Điền Sản', '1.113,49', '12.112.260 đ/m²', '13.486.880.387 đ', '13,49 Tỷ')"
+             onclick="window.location.href='/b08'"
              data-stt="21"
              data-code="b08"
              data-block="b"
@@ -6220,6 +6945,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -6235,10 +6966,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B08:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b08" class="csb-url" title="Xem chi tiết căn B08">saigonfarmresort.com/b08</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B08', 'b08')" title="Sao chép link căn B08">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B08', 'Điền Sản', '1.113,49', '12.112.260 đ/m²', '13.486.880.387 đ', '13,49 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b08" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B08">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B08', 'b08')" title="Sao chép link căn B08">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B08')" title="Định vị lô B08 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6256,7 +7004,7 @@
 
         <div class="listing-card"
              id="card-b09"
-             onclick="openBookingModal('B09', 'Điền Sản', '1.126,59', '12.052.000 đ/m²', '13.577.662.680 đ', '13,58 Tỷ')"
+             onclick="window.location.href='/b09'"
              data-stt="22"
              data-code="b09"
              data-block="b"
@@ -6339,6 +7087,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -6354,10 +7108,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B09:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b09" class="csb-url" title="Xem chi tiết căn B09">saigonfarmresort.com/b09</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B09', 'b09')" title="Sao chép link căn B09">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B09', 'Điền Sản', '1.126,59', '12.052.000 đ/m²', '13.577.662.680 đ', '13,58 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b09" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B09">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B09', 'b09')" title="Sao chép link căn B09">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B09')" title="Định vị lô B09 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6375,7 +7146,7 @@
 
         <div class="listing-card"
              id="card-b10"
-             onclick="openBookingModal('B10', 'Điền Sản', '1.291,20', '11.208.360 đ/m²', '14.472.234.432 đ', '14,47 Tỷ')"
+             onclick="window.location.href='/b10'"
              data-stt="23"
              data-code="b10"
              data-block="b"
@@ -6458,6 +7229,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -6473,10 +7250,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B10:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b10" class="csb-url" title="Xem chi tiết căn B10">saigonfarmresort.com/b10</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B10', 'b10')" title="Sao chép link căn B10">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B10', 'Điền Sản', '1.291,20', '11.208.360 đ/m²', '14.472.234.432 đ', '14,47 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b10" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B10">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B10', 'b10')" title="Sao chép link căn B10">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B10')" title="Định vị lô B10 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6494,7 +7288,7 @@
 
         <div class="listing-card"
              id="card-b12"
-             onclick="openBookingModal('B12', 'Biệt Phủ Điền Trang', '829,44', '12.172.520 đ/m²', '10.096.374.989 đ', '10,10 Tỷ')"
+             onclick="window.location.href='/b12'"
              data-stt="24"
              data-code="b12"
              data-block="b"
@@ -6577,6 +7371,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -6592,10 +7392,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B12:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b12" class="csb-url" title="Xem chi tiết căn B12">saigonfarmresort.com/b12</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B12', 'b12')" title="Sao chép link căn B12">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B12', 'Biệt Phủ Điền Trang', '829,44', '12.172.520 đ/m²', '10.096.374.989 đ', '10,10 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b12" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B12">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B12', 'b12')" title="Sao chép link căn B12">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B12')" title="Định vị lô B12 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6613,7 +7430,7 @@
 
         <div class="listing-card"
              id="card-b13"
-             onclick="openBookingModal('B13', 'Biệt Phủ Điền Trang', '763,27', '12.835.380 đ/m²', '9.796.860.493 đ', '9,80 Tỷ')"
+             onclick="window.location.href='/b13'"
              data-stt="25"
              data-code="b13"
              data-block="b"
@@ -6696,6 +7513,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -6711,10 +7534,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B13:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b13" class="csb-url" title="Xem chi tiết căn B13">saigonfarmresort.com/b13</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B13', 'b13')" title="Sao chép link căn B13">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B13', 'Biệt Phủ Điền Trang', '763,27', '12.835.380 đ/m²', '9.796.860.493 đ', '9,80 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b13" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B13">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B13', 'b13')" title="Sao chép link căn B13">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B13')" title="Định vị lô B13 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6732,7 +7572,7 @@
 
         <div class="listing-card"
              id="card-b14"
-             onclick="openBookingModal('B14', 'Biệt Phủ Điền Trang', '946,15', '13.618.760 đ/m²', '12.885.389.774 đ', '12,89 Tỷ')"
+             onclick="window.location.href='/b14'"
              data-stt="26"
              data-code="b14"
              data-block="b"
@@ -6815,6 +7655,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -6830,10 +7676,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B14:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b14" class="csb-url" title="Xem chi tiết căn B14">saigonfarmresort.com/b14</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B14', 'b14')" title="Sao chép link căn B14">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B14', 'Biệt Phủ Điền Trang', '946,15', '13.618.760 đ/m²', '12.885.389.774 đ', '12,89 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b14" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B14">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B14', 'b14')" title="Sao chép link căn B14">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B14')" title="Định vị lô B14 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6851,7 +7714,7 @@
 
         <div class="listing-card"
              id="card-b15"
-             onclick="openBookingModal('B15', 'Biệt Phủ Điền Trang', '834,75', '13.980.320 đ/m²', '11.670.072.120 đ', '11,67 Tỷ')"
+             onclick="window.location.href='/b15'"
              data-stt="27"
              data-code="b15"
              data-block="b"
@@ -6934,6 +7797,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -6949,10 +7818,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B15:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b15" class="csb-url" title="Xem chi tiết căn B15">saigonfarmresort.com/b15</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B15', 'b15')" title="Sao chép link căn B15">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B15', 'Biệt Phủ Điền Trang', '834,75', '13.980.320 đ/m²', '11.670.072.120 đ', '11,67 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b15" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B15">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B15', 'b15')" title="Sao chép link căn B15">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B15')" title="Định vị lô B15 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -6970,7 +7856,7 @@
 
         <div class="listing-card"
              id="card-b17"
-             onclick="openBookingModal('B17', 'Điền Sản', '985,57', '12.172.520 đ/m²', '11.996.870.536 đ', '12,00 Tỷ')"
+             onclick="window.location.href='/b17'"
              data-stt="28"
              data-code="b17"
              data-block="b"
@@ -7053,6 +7939,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -7068,10 +7960,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B17:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b17" class="csb-url" title="Xem chi tiết căn B17">saigonfarmresort.com/b17</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B17', 'b17')" title="Sao chép link căn B17">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B17', 'Điền Sản', '985,57', '12.172.520 đ/m²', '11.996.870.536 đ', '12,00 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b17" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B17">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B17', 'b17')" title="Sao chép link căn B17">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B17')" title="Định vị lô B17 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -7089,7 +7998,7 @@
 
         <div class="listing-card"
              id="card-b18"
-             onclick="openBookingModal('B18', 'Điền Sản', '985,01', '12.172.520 đ/m²', '11.990.053.925 đ', '11,99 Tỷ')"
+             onclick="window.location.href='/b18'"
              data-stt="29"
              data-code="b18"
              data-block="b"
@@ -7172,6 +8081,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -7187,10 +8102,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B18:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b18" class="csb-url" title="Xem chi tiết căn B18">saigonfarmresort.com/b18</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B18', 'b18')" title="Sao chép link căn B18">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B18', 'Điền Sản', '985,01', '12.172.520 đ/m²', '11.990.053.925 đ', '11,99 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b18" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B18">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B18', 'b18')" title="Sao chép link căn B18">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B18')" title="Định vị lô B18 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -7208,7 +8140,7 @@
 
         <div class="listing-card"
              id="card-b19"
-             onclick="openBookingModal('B19', 'Điền Sản', '998,06', '12.052.000 đ/m²', '12.028.619.120 đ', '12,03 Tỷ')"
+             onclick="window.location.href='/b19'"
              data-stt="30"
              data-code="b19"
              data-block="b"
@@ -7291,6 +8223,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -7306,10 +8244,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B19:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b19" class="csb-url" title="Xem chi tiết căn B19">saigonfarmresort.com/b19</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B19', 'b19')" title="Sao chép link căn B19">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B19', 'Điền Sản', '998,06', '12.052.000 đ/m²', '12.028.619.120 đ', '12,03 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b19" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B19">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B19', 'b19')" title="Sao chép link căn B19">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B19')" title="Định vị lô B19 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -7327,7 +8282,7 @@
 
         <div class="listing-card"
              id="card-b20"
-             onclick="openBookingModal('B20', 'Biệt Phủ Điền Trang', '1.039,76', '12.112.260 đ/m²', '12.593.843.458 đ', '12,59 Tỷ')"
+             onclick="window.location.href='/b20'"
              data-stt="31"
              data-code="b20"
              data-block="b"
@@ -7410,6 +8365,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -7425,10 +8386,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B20:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b20" class="csb-url" title="Xem chi tiết căn B20">saigonfarmresort.com/b20</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B20', 'b20')" title="Sao chép link căn B20">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B20', 'Biệt Phủ Điền Trang', '1.039,76', '12.112.260 đ/m²', '12.593.843.458 đ', '12,59 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b20" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B20">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B20', 'b20')" title="Sao chép link căn B20">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B20')" title="Định vị lô B20 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -7446,7 +8424,7 @@
 
         <div class="listing-card"
              id="card-b22"
-             onclick="openBookingModal('B22', 'Điền An', '1.044,86', '12.112.260 đ/m²', '12.655.615.984 đ', '12,66 Tỷ')"
+             onclick="window.location.href='/b22'"
              data-stt="32"
              data-code="b22"
              data-block="b"
@@ -7529,6 +8507,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -7544,10 +8528,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B22:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b22" class="csb-url" title="Xem chi tiết căn B22">saigonfarmresort.com/b22</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B22', 'b22')" title="Sao chép link căn B22">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B22', 'Điền An', '1.044,86', '12.112.260 đ/m²', '12.655.615.984 đ', '12,66 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b22" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B22">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B22', 'b22')" title="Sao chép link căn B22">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B22')" title="Định vị lô B22 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -7565,7 +8566,7 @@
 
         <div class="listing-card"
              id="card-b23"
-             onclick="openBookingModal('B23', 'Điền An', '1.154,54', '12.112.260 đ/m²', '13.984.088.660 đ', '13,98 Tỷ')"
+             onclick="window.location.href='/b23'"
              data-stt="33"
              data-code="b23"
              data-block="b"
@@ -7648,6 +8649,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -7663,10 +8670,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B23:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b23" class="csb-url" title="Xem chi tiết căn B23">saigonfarmresort.com/b23</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B23', 'b23')" title="Sao chép link căn B23">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B23', 'Điền An', '1.154,54', '12.112.260 đ/m²', '13.984.088.660 đ', '13,98 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b23" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B23">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B23', 'b23')" title="Sao chép link căn B23">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B23')" title="Định vị lô B23 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -7684,7 +8708,7 @@
 
         <div class="listing-card"
              id="card-b24"
-             onclick="openBookingModal('B24', 'Điền An', '1.336,20', '12.052.000 đ/m²', '16.103.882.400 đ', '16,10 Tỷ')"
+             onclick="window.location.href='/b24'"
              data-stt="34"
              data-code="b24"
              data-block="b"
@@ -7767,6 +8791,12 @@
             </div>
             
 
+            <!-- Construction 800M Bonus Callout -->
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+            </div>
+
             <!-- Price Block -->
             <div class="card-price-section">
               <div class="price-header-row">
@@ -7782,10 +8812,27 @@
               </div>
             </div>
 
+            <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
+            <div class="card-share-box" onclick="event.stopPropagation()">
+              <div class="csb-header">
+                <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN B24:</span>
+                <span class="csb-badge-root">Root Domain</span>
+              </div>
+              <div class="csb-row">
+                <a href="/b24" class="csb-url" title="Xem chi tiết căn B24">saigonfarmresort.com/b24</a>
+                <button type="button" class="btn-copy-share" onclick="copyLotShareLink('B24', 'b24')" title="Sao chép link căn B24">
+                  <i class="fa-solid fa-copy"></i> Sao chép link
+                </button>
+              </div>
+            </div>
+
             <!-- Footer Action -->
             <div class="card-actions">
-              <button type="button" class="btn-primary-action" onclick="event.stopPropagation(); openBookingModal('B24', 'Điền An', '1.336,20', '12.052.000 đ/m²', '16.103.882.400 đ', '16,10 Tỷ')">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Chi tiết
+              <a href="/b24" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B24">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              </a>
+              <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B24', 'b24')" title="Sao chép link căn B24">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B24')" title="Định vị lô B24 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -7861,8 +8908,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A04', 'Biệt Phủ Điền Trang', '1.089,62', '12.714.860 đ/m²', '13.854.365.753 đ', '13,85 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a04" class="btn-table-action" title="Xem chi tiết & CSBH căn A04">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A04', 'a04')" title="Sao chép link căn A04">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A04">
                 <i class="fa-solid fa-phone"></i>
@@ -7910,8 +8960,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A06', 'Biệt Phủ Điền Trang', '1.293,93', '12.654.600 đ/m²', '16.374.166.578 đ', '16,37 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a06" class="btn-table-action" title="Xem chi tiết & CSBH căn A06">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A06', 'a06')" title="Sao chép link căn A06">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A06">
                 <i class="fa-solid fa-phone"></i>
@@ -7959,8 +9012,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A08', 'Điền Sản', '1.298,93', '12.052.000 đ/m²', '15.654.704.360 đ', '15,65 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a08" class="btn-table-action" title="Xem chi tiết & CSBH căn A08">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A08', 'a08')" title="Sao chép link căn A08">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A08">
                 <i class="fa-solid fa-phone"></i>
@@ -8008,8 +9064,11 @@
           <td class="col-status"><span class="table-status-pill status-reserved">Đang giữ chỗ</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A09', 'Điền Sản', '1.284,89', '12.052.000 đ/m²', '15.485.494.280 đ', '15,49 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a09" class="btn-table-action" title="Xem chi tiết & CSBH căn A09">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A09', 'a09')" title="Sao chép link căn A09">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A09">
                 <i class="fa-solid fa-phone"></i>
@@ -8057,8 +9116,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A11', 'Điền Sản', '1.255,40', '12.052.000 đ/m²', '15.130.080.800 đ', '15,13 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a11" class="btn-table-action" title="Xem chi tiết & CSBH căn A11">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A11', 'a11')" title="Sao chép link căn A11">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A11">
                 <i class="fa-solid fa-phone"></i>
@@ -8106,8 +9168,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A12', 'Điền Sản', '1.246,02', '12.052.000 đ/m²', '15.017.033.040 đ', '15,02 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a12" class="btn-table-action" title="Xem chi tiết & CSBH căn A12">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A12', 'a12')" title="Sao chép link căn A12">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A12">
                 <i class="fa-solid fa-phone"></i>
@@ -8155,8 +9220,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A13', 'Điền An', '1.269,38', '12.052.000 đ/m²', '15.298.567.760 đ', '15,30 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a13" class="btn-table-action" title="Xem chi tiết & CSBH căn A13">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A13', 'a13')" title="Sao chép link căn A13">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A13">
                 <i class="fa-solid fa-phone"></i>
@@ -8204,8 +9272,11 @@
           <td class="col-status"><span class="table-status-pill status-reserved">Đang giữ chỗ</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A14', 'Điền An', '1.274,69', '12.052.000 đ/m²', '15.362.563.880 đ', '15,36 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a14" class="btn-table-action" title="Xem chi tiết & CSBH căn A14">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A14', 'a14')" title="Sao chép link căn A14">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A14">
                 <i class="fa-solid fa-phone"></i>
@@ -8253,8 +9324,11 @@
           <td class="col-status"><span class="table-status-pill status-reserved">Đang giữ chỗ</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A15', 'Điền An', '1.115,70', '11.630.180 đ/m²', '12.975.791.826 đ', '12,98 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a15" class="btn-table-action" title="Xem chi tiết & CSBH căn A15">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A15', 'a15')" title="Sao chép link căn A15">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A15">
                 <i class="fa-solid fa-phone"></i>
@@ -8302,8 +9376,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A16', 'Biệt Phủ Điền Trang', '966,37', '12.775.120 đ/m²', '12.345.492.714 đ', '12,35 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a16" class="btn-table-action" title="Xem chi tiết & CSBH căn A16">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A16', 'a16')" title="Sao chép link căn A16">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A16">
                 <i class="fa-solid fa-phone"></i>
@@ -8351,8 +9428,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A17', 'Biệt Phủ Điền Trang', '836,77', '12.534.080 đ/m²', '10.488.142.122 đ', '10,49 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a17" class="btn-table-action" title="Xem chi tiết & CSBH căn A17">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A17', 'a17')" title="Sao chép link căn A17">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A17">
                 <i class="fa-solid fa-phone"></i>
@@ -8400,8 +9480,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A18', 'Biệt Phủ Điền Trang', '830,73', '14.944.480 đ/m²', '12.414.827.870 đ', '12,41 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a18" class="btn-table-action" title="Xem chi tiết & CSBH căn A18">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A18', 'a18')" title="Sao chép link căn A18">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A18">
                 <i class="fa-solid fa-phone"></i>
@@ -8449,8 +9532,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A21', 'Biệt Phủ Điền Trang', '1.147,21', '14.884.220 đ/m²', '17.075.326.026 đ', '17,08 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a21" class="btn-table-action" title="Xem chi tiết & CSBH căn A21">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A21', 'a21')" title="Sao chép link căn A21">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A21">
                 <i class="fa-solid fa-phone"></i>
@@ -8498,8 +9584,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A22', 'Điền An', '1.012,53', '14.884.220 đ/m²', '15.070.719.277 đ', '15,07 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a22" class="btn-table-action" title="Xem chi tiết & CSBH căn A22">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A22', 'a22')" title="Sao chép link căn A22">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A22">
                 <i class="fa-solid fa-phone"></i>
@@ -8547,8 +9636,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A23', 'Biệt Phủ Điền Trang', '543,61', '14.643.180 đ/m²', '7.960.179.080 đ', '7,96 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a23" class="btn-table-action" title="Xem chi tiết & CSBH căn A23">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A23', 'a23')" title="Sao chép link căn A23">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A23">
                 <i class="fa-solid fa-phone"></i>
@@ -8596,8 +9688,11 @@
           <td class="col-status"><span class="table-status-pill status-reserved">Đang giữ chỗ</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('A24', 'Biệt Phủ Điền Trang', '1.207,29', '14.221.360 đ/m²', '17.169.305.714 đ', '17,17 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/a24" class="btn-table-action" title="Xem chi tiết & CSBH căn A24">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A24', 'a24')" title="Sao chép link căn A24">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A24">
                 <i class="fa-solid fa-phone"></i>
@@ -8645,8 +9740,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B04', 'Biệt Phủ Điền Trang', '892,83', '12.775.120 đ/m²', '11.406.010.390 đ', '11,41 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b04" class="btn-table-action" title="Xem chi tiết & CSBH căn B04">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B04', 'b04')" title="Sao chép link căn B04">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B04">
                 <i class="fa-solid fa-phone"></i>
@@ -8694,8 +9792,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B05', 'Điền Sản', '828,50', '12.775.120 đ/m²', '10.584.186.920 đ', '10,58 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b05" class="btn-table-action" title="Xem chi tiết & CSBH căn B05">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B05', 'b05')" title="Sao chép link căn B05">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B05">
                 <i class="fa-solid fa-phone"></i>
@@ -8743,8 +9844,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B06', 'Biệt Phủ Điền Trang', '959,20', '12.172.520 đ/m²', '11.675.881.184 đ', '11,68 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b06" class="btn-table-action" title="Xem chi tiết & CSBH căn B06">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B06', 'b06')" title="Sao chép link căn B06">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B06">
                 <i class="fa-solid fa-phone"></i>
@@ -8792,8 +9896,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B07', 'Biệt Phủ Điền Trang', '796,13', '12.835.380 đ/m²', '10.218.631.079 đ', '10,22 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b07" class="btn-table-action" title="Xem chi tiết & CSBH căn B07">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B07', 'b07')" title="Sao chép link căn B07">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B07">
                 <i class="fa-solid fa-phone"></i>
@@ -8841,8 +9948,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B08', 'Điền Sản', '1.113,49', '12.112.260 đ/m²', '13.486.880.387 đ', '13,49 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b08" class="btn-table-action" title="Xem chi tiết & CSBH căn B08">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B08', 'b08')" title="Sao chép link căn B08">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B08">
                 <i class="fa-solid fa-phone"></i>
@@ -8890,8 +10000,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B09', 'Điền Sản', '1.126,59', '12.052.000 đ/m²', '13.577.662.680 đ', '13,58 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b09" class="btn-table-action" title="Xem chi tiết & CSBH căn B09">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B09', 'b09')" title="Sao chép link căn B09">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B09">
                 <i class="fa-solid fa-phone"></i>
@@ -8939,8 +10052,11 @@
           <td class="col-status"><span class="table-status-pill status-reserved">Đang giữ chỗ</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B10', 'Điền Sản', '1.291,20', '11.208.360 đ/m²', '14.472.234.432 đ', '14,47 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b10" class="btn-table-action" title="Xem chi tiết & CSBH căn B10">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B10', 'b10')" title="Sao chép link căn B10">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B10">
                 <i class="fa-solid fa-phone"></i>
@@ -8988,8 +10104,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B12', 'Biệt Phủ Điền Trang', '829,44', '12.172.520 đ/m²', '10.096.374.989 đ', '10,10 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b12" class="btn-table-action" title="Xem chi tiết & CSBH căn B12">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B12', 'b12')" title="Sao chép link căn B12">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B12">
                 <i class="fa-solid fa-phone"></i>
@@ -9037,8 +10156,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B13', 'Biệt Phủ Điền Trang', '763,27', '12.835.380 đ/m²', '9.796.860.493 đ', '9,80 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b13" class="btn-table-action" title="Xem chi tiết & CSBH căn B13">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B13', 'b13')" title="Sao chép link căn B13">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B13">
                 <i class="fa-solid fa-phone"></i>
@@ -9086,8 +10208,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B14', 'Biệt Phủ Điền Trang', '946,15', '13.618.760 đ/m²', '12.885.389.774 đ', '12,89 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b14" class="btn-table-action" title="Xem chi tiết & CSBH căn B14">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B14', 'b14')" title="Sao chép link căn B14">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B14">
                 <i class="fa-solid fa-phone"></i>
@@ -9135,8 +10260,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B15', 'Biệt Phủ Điền Trang', '834,75', '13.980.320 đ/m²', '11.670.072.120 đ', '11,67 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b15" class="btn-table-action" title="Xem chi tiết & CSBH căn B15">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B15', 'b15')" title="Sao chép link căn B15">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B15">
                 <i class="fa-solid fa-phone"></i>
@@ -9184,8 +10312,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B17', 'Điền Sản', '985,57', '12.172.520 đ/m²', '11.996.870.536 đ', '12,00 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b17" class="btn-table-action" title="Xem chi tiết & CSBH căn B17">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B17', 'b17')" title="Sao chép link căn B17">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B17">
                 <i class="fa-solid fa-phone"></i>
@@ -9233,8 +10364,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B18', 'Điền Sản', '985,01', '12.172.520 đ/m²', '11.990.053.925 đ', '11,99 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b18" class="btn-table-action" title="Xem chi tiết & CSBH căn B18">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B18', 'b18')" title="Sao chép link căn B18">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B18">
                 <i class="fa-solid fa-phone"></i>
@@ -9282,8 +10416,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B19', 'Điền Sản', '998,06', '12.052.000 đ/m²', '12.028.619.120 đ', '12,03 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b19" class="btn-table-action" title="Xem chi tiết & CSBH căn B19">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B19', 'b19')" title="Sao chép link căn B19">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B19">
                 <i class="fa-solid fa-phone"></i>
@@ -9331,8 +10468,11 @@
           <td class="col-status"><span class="table-status-pill status-reserved">Đang giữ chỗ</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B20', 'Biệt Phủ Điền Trang', '1.039,76', '12.112.260 đ/m²', '12.593.843.458 đ', '12,59 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b20" class="btn-table-action" title="Xem chi tiết & CSBH căn B20">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B20', 'b20')" title="Sao chép link căn B20">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B20">
                 <i class="fa-solid fa-phone"></i>
@@ -9380,8 +10520,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B22', 'Điền An', '1.044,86', '12.112.260 đ/m²', '12.655.615.984 đ', '12,66 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b22" class="btn-table-action" title="Xem chi tiết & CSBH căn B22">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B22', 'b22')" title="Sao chép link căn B22">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B22">
                 <i class="fa-solid fa-phone"></i>
@@ -9429,8 +10572,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B23', 'Điền An', '1.154,54', '12.112.260 đ/m²', '13.984.088.660 đ', '13,98 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b23" class="btn-table-action" title="Xem chi tiết & CSBH căn B23">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B23', 'b23')" title="Sao chép link căn B23">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B23">
                 <i class="fa-solid fa-phone"></i>
@@ -9478,8 +10624,11 @@
           <td class="col-status"><span class="table-status-pill status-available">Còn hàng</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
-              <button type="button" class="btn-table-action" onclick="openBookingModal('B24', 'Điền An', '1.336,20', '12.052.000 đ/m²', '16.103.882.400 đ', '16,10 Tỷ')" title="Nhận bảng tính & CSBH">
-                <i class="fa-solid fa-file-invoice-dollar"></i> Báo Giá
+              <a href="/b24" class="btn-table-action" title="Xem chi tiết & CSBH căn B24">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
+              </a>
+              <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B24', 'b24')" title="Sao chép link căn B24">
+                <i class="fa-solid fa-copy"></i>
               </button>
               <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B24">
                 <i class="fa-solid fa-phone"></i>
@@ -10079,6 +11228,68 @@
       closeBookingModal();
       document.getElementById('bookingForm').reset();
     }
+
+    // Lot Share Link Copy Handler
+    function copyLotShareLink(code, codeLower) {
+      const shareUrl = 'https://saigonfarmresort.com/' + codeLower;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          showListingToast(`Đã sao chép liên kết căn ${code}: ${shareUrl}`);
+        }).catch(() => {
+          fallbackListingCopy(code, shareUrl);
+        });
+      } else {
+        fallbackListingCopy(code, shareUrl);
+      }
+    }
+
+    function fallbackListingCopy(code, text) {
+      const input = document.createElement('input');
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      try {
+        document.execCommand('copy');
+        showListingToast(`Đã sao chép liên kết căn ${code}: ${text}`);
+      } catch (err) {
+        prompt(`Sao chép liên kết căn ${code}:`, text);
+      }
+      document.body.removeChild(input);
+    }
+
+    function showListingToast(msg) {
+      let toast = document.getElementById('listingToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'listingToast';
+        toast.className = 'toast-box';
+        toast.innerHTML = '<i class="fa-solid fa-circle-check"></i> <span id="listingToastMsg"></span>';
+        document.body.appendChild(toast);
+      }
+      document.getElementById('listingToastMsg').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    // Check for direct lot hash or query parameter
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const unitParam = urlParams.get('unit') || urlParams.get('lot');
+      if (unitParam) {
+        setTimeout(() => {
+          focusLot(unitParam.toUpperCase());
+        }, 400);
+      } else if (window.location.hash) {
+        const hash = window.location.hash.replace('#', '').replace('card-', '').toUpperCase();
+        if (hash) {
+          setTimeout(() => {
+            focusLot(hash);
+          }, 400);
+        }
+      }
+    });
   </script>
 </body>
 </html>

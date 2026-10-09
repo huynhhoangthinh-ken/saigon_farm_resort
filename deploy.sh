@@ -23,6 +23,10 @@ with open("js/posts-data.js", "w") as f:
 ' 2>/dev/null
 fi
 
+# Tự động cập nhật giỏ hàng và 34 trang chi tiết căn hộ
+python3 build_listing_page.py 2>/dev/null
+python3 build_unit_pages.py 2>/dev/null
+
 echo "🚀 [1/3] Kiểm tra và gom tất cả thay đổi (Staging)..."
 git add -A
 
@@ -37,7 +41,7 @@ fi
 
 echo "📦 [3/4] Đóng gói website chuẩn hóa (dist-site)..."
 python3 -c "
-import os, shutil
+import os, shutil, json
 
 dist = 'dist-site'
 if os.path.exists(dist):
@@ -55,6 +59,17 @@ folders = [
     'introduction', 'gioi-thieu', 'investment', 'investor', 'dien-an',
     'dien-san', 'biet-phu-dien-trang', 'story', 'article', 'animation'
 ]
+
+# Include all 34 individual unit folders
+if os.path.exists('data/listing_categories.json'):
+    with open('data/listing_categories.json') as _lf:
+        _cats = json.load(_lf)
+    for _c in _cats:
+        for _it in _c.get('items', []):
+            _code = _it.get('code', '').lower()
+            if _code and os.path.exists(_code):
+                folders.append(_code)
+
 for folder in folders:
     if os.path.exists(folder):
         shutil.copytree(folder, os.path.join(dist, folder))
