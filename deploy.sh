@@ -24,6 +24,7 @@ with open("js/posts-data.js", "w") as f:
 fi
 
 # Tự động cập nhật giỏ hàng, 3 trang phân khu và 36 trang chi tiết căn hộ
+python3 update_listing_from_excel.py
 python3 build_listing_page.py
 python3 build_3_category_pages.py
 python3 build_unit_pages.py

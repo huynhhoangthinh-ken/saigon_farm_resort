@@ -9,7 +9,7 @@ import json
 import datetime
 import openpyxl
 
-EXCEL_PATH = "listing/20261013_SFR_PA GIÁ_ có nhà_V3.xlsx"
+EXCEL_PATH = "listing/4. SFR_PA GIÁ_ có nhà_V3_20261014_VBA.xlsm"
 JSON_PATH = "data/listing_categories.json"
 
 LOT_COORDINATES = {
@@ -71,7 +71,7 @@ def format_unit_str(val):
 
 def main():
     wb = openpyxl.load_workbook(EXCEL_PATH, data_only=True)
-    ws = wb['Bảng giá đất Farm Resort']
+    ws = wb['Bảng giá']
 
     # Read existing JSON
     with open(JSON_PATH, 'r', encoding='utf-8') as f:
@@ -89,7 +89,7 @@ def main():
         'dien-an': []
     }
 
-    for r in range(6, ws.max_row + 1):
+    for r in range(6, 42): # 36 items (rows 6 to 41)
         stt = ws.cell(r, 1).value
         if stt is None: continue
         block = str(ws.cell(r, 2).value or '').strip()
@@ -141,21 +141,18 @@ def main():
             cat_slug = 'dien-an'
             cat_title = 'Điền An'
 
+        # New Excel columns in sheet 'Bảng giá'
         dg_dat = ws.cell(r, 19).value
         tt_dat = ws.cell(r, 20).value
-        dg_nha_novat = ws.cell(r, 21).value
-        tt_nha_novat = ws.cell(r, 22).value
-        dg_nha_vat = ws.cell(r, 23).value
-        tt_nha_vat = ws.cell(r, 24).value
-        quy_sp = str(ws.cell(r, 25).value or 'GĐ1').strip()
-
-        # CSBH
-        csbh_dg_dat_std = ws.cell(r, 27).value
-        csbh_tt_dat_std = ws.cell(r, 28).value
-        csbh_dg_nha_novat_std = ws.cell(r, 29).value
-        csbh_tt_nha_novat_std = ws.cell(r, 30).value
-        csbh_dg_nha_vat_std = ws.cell(r, 31).value
-        csbh_tt_nha_vat_std = ws.cell(r, 32).value
+        dt_xd = ws.cell(r, 21).value
+        dg_xd = ws.cell(r, 22).value
+        tt_xd_novat = ws.cell(r, 23).value
+        tt_xd_vat = ws.cell(r, 24).value
+        dg_nha_novat = ws.cell(r, 25).value
+        tt_nha_novat = ws.cell(r, 26).value
+        dg_nha_vat = ws.cell(r, 27).value
+        tt_nha_vat = ws.cell(r, 28).value
+        quy_sp = str(ws.cell(r, 29).value or 'GĐ1').strip()
 
         # Existing metadata preservation
         old_it = existing_items_map.get(code, {})
@@ -185,6 +182,10 @@ def main():
             house_price_vat = None
             house_price_vat_str = None
             house_price_vat_billion = None
+            construction_area = 0
+            construction_price_vat = 0
+            construction_price_vat_str = None
+            construction_price_vat_billion = None
         else:
             unit_price = int(round(dg_dat))
             unit_price_str = format_unit_str(dg_dat)
@@ -204,7 +205,17 @@ def main():
             land_unit_price_str = unit_price_str
             land_unit_price_million = unit_price_million
 
-            if tt_nha_novat:
+            construction_area = int(round(dt_xd)) if dt_xd else 0
+            if tt_xd_vat and tt_xd_vat > 0:
+                construction_price_vat = int(round(tt_xd_vat))
+                construction_price_vat_str = format_vnd_str(tt_xd_vat)
+                construction_price_vat_billion = format_billion_str(tt_xd_vat)
+            else:
+                construction_price_vat = 0
+                construction_price_vat_str = None
+                construction_price_vat_billion = None
+
+            if tt_nha_novat and tt_nha_novat > 0:
                 house_price_novat = int(round(tt_nha_novat))
                 house_price_novat_str = format_vnd_str(tt_nha_novat)
                 house_price_novat_billion = format_billion_str(tt_nha_novat)
@@ -217,7 +228,7 @@ def main():
                 house_unit_price_novat = None
                 house_unit_price_novat_million = None
 
-            if tt_nha_vat:
+            if tt_nha_vat and tt_nha_vat > 0:
                 house_price_vat = int(round(tt_nha_vat))
                 house_price_vat_str = format_vnd_str(tt_nha_vat)
                 house_price_vat_billion = format_billion_str(tt_nha_vat)
@@ -280,6 +291,10 @@ def main():
             "house_price_vat": house_price_vat,
             "house_price_vat_str": house_price_vat_str,
             "house_price_vat_billion": house_price_vat_billion,
+            "construction_area": construction_area,
+            "construction_price_vat": construction_price_vat,
+            "construction_price_vat_str": construction_price_vat_str,
+            "construction_price_vat_billion": construction_price_vat_billion,
             "phase": quy_sp,
             "so_gcn": so_gcn,
             "so_thua": so_thua,

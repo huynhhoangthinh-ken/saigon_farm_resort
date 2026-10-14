@@ -3359,13 +3359,13 @@ def update_listing():
       <div class="hero-stats-grid">
         <div class="stat-pill">
           <span class="stat-pill-label">Tổng sản phẩm mở bán</span>
-          <span class="stat-pill-val">{total_count} Căn</span>
-          <span class="stat-pill-sub">16 Biệt Phủ • 11 Điền Sản • 7 Điền An</span>
+          <span class="stat-pill-val">{total_count} Sản Phẩm</span>
+          <span class="stat-pill-sub">{manor_count} Biệt Phủ • {founders_count} Điền Sản • {haven_count} Điền An</span>
         </div>
         <div class="stat-pill">
           <span class="stat-pill-label">Đơn giá đất chỉ từ</span>
-          <span class="stat-pill-val">11,21 Tr/m²</span>
-          <span class="stat-pill-sub">Giá gốc đợt 1 từ Đơn vị Phát triển MDS Land</span>
+          <span class="stat-pill-val">9,07 Tr/m²</span>
+          <span class="stat-pill-sub">Căn A15 (sau ưu đãi chỉ ~8,17 Tr/m²)</span>
         </div>
         <div class="stat-pill">
           <span class="stat-pill-label">Tổng giá niêm yết từ</span>

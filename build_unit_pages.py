@@ -128,10 +128,10 @@ def build_unit_page_html(item, all_items):
 
     if cat_slug == "dien-an":
         arch = {
-            "name": "Tổ Hợp 30 Suites Nghỉ Dưỡng Sinh Thái",
-            "tag": "DTXD 850m² · 30 Suites Khép Kín · Hoàn Thiện Full Nội Thất Liền Tường",
+            "name": "Tổ Hợp 30 Phòng Lưu Trú Sinh Thái",
+            "tag": "DTXD 850m² · 30 Phòng Khép Kín · Hoàn Thiện Full Nội Thất Chuẩn MDS Living",
             "layout_img": "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
-            "desc": "Phương án quy hoạch kiến trúc 30 suites lưu trú sinh thái cao cấp (diện tích sàn 850m²). Tối ưu hóa dòng tiền kinh doanh retreat/chữa lành giữa không gian thiên nhiên, bàn giao hoàn thiện full nội thất liền tường chuẩn resort cao cấp. Cam kết thuê tối thiểu 80 Tr/tháng từ MDS Living.",
+            "desc": "Phương án quy hoạch kiến trúc 30 phòng lưu trú sinh thái cao cấp (diện tích sàn 850m²). Tối ưu hóa dòng tiền kinh doanh retreat/chữa lành giữa không gian thiên nhiên, bàn giao hoàn thiện full nội thất theo tiêu chuẩn vận hành MDS Living. Chính sách thuê lại 120 Tr/tháng (30 phòng x 4 Tr/tháng) từ MDS Living mang lại dòng tiền an tâm thụ động.",
             "gallery": [
                 "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp",
                 "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
@@ -139,8 +139,8 @@ def build_unit_page_html(item, all_items):
                 "/assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg"
             ]
         }
-        page_title = f"Căn {code} ({area_str} m²) — Điền An | Đơn Giá Đất Từ {unit_price_mil} · Gói 30 Suites {house_vat_bil} | Saigon Farm Resort"
-        page_desc = f"Thông tin chi tiết Căn {code} dòng Điền An, diện tích {area_str}m². Đơn giá đất chỉ {unit_price_mil}, tiền đất {price_bil}, tổng gói đất và hoàn thiện 30 suites 850m² chỉ {house_vat_bil}. Sổ đỏ riêng, cam kết thuê tối thiểu 80 Tr/tháng từ MDS Living."
+        page_title = f"Căn {code} ({area_str} m²) — Điền An | Đơn Giá Đất Từ {unit_price_mil} · Gói 30 Phòng {house_vat_bil} | Saigon Farm Resort"
+        page_desc = f"Thông tin chi tiết Căn {code} dòng Điền An, diện tích {area_str}m². Đơn giá đất chỉ {unit_price_mil}, tiền đất {price_bil}, tổng gói đất và hoàn thiện 30 phòng 850m² chỉ {house_vat_bil}. Sổ đỏ riêng, chính sách thuê lại 120 Tr/tháng từ MDS Living."
         
         if phase == "GĐ2":
             price_hero_box_html = f"""
@@ -161,19 +161,19 @@ def build_unit_page_html(item, all_items):
               <div class="uph-billion" style="color:#0284c7; font-size:1.65rem;">{unit_price_mil}</div>
               <div style="font-size:0.82rem; color:#475569; margin-bottom:8px;">Tiền đất: <strong style="color:#0f172a;">{price_bil}</strong> <span style="font-size:0.75rem; color:#64748b;">({price_str})</span></div>
               <div style="padding-top:8px; border-top:1px dashed rgba(2, 132, 199, 0.3); font-size:0.88rem; color:#b91c1c; font-weight:700; display:flex; justify-content:space-between; align-items:center;">
-                <span><i class="fa-solid fa-hotel"></i> Cả Đất & Nhà 30 suites:</span>
+                <span><i class="fa-solid fa-hotel"></i> Cả Đất & Nhà 30 phòng:</span>
                 <span style="font-size:1.15rem;">{house_vat_bil}</span>
               </div>
-              <div style="font-size:0.72rem; color:#64748b; text-align:right;">(Gồm VAT & bàn giao full nội thất liền tường)</div>
+              <div style="font-size:0.72rem; color:#64748b; text-align:right;">(Gồm VAT & bàn giao full nội thất theo chuẩn MDS Living)</div>
             </div>
             """
             
         sticky_features_html = f"""
             <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng sản phẩm, thổ cư lâu dài</li>
             <li><i class="fa-solid fa-circle-check"></i> Đơn giá đất ưu đãi đột phá: <strong>{unit_price_mil}</strong></li>
-            <li><i class="fa-solid fa-circle-check"></i> Gói xây dựng 30 suites 850m² trọn gói: <strong>{house_vat_bil}</strong></li>
-            <li><i class="fa-solid fa-circle-check"></i> Tặng 24 tháng phí quản lý & Quản gia Farm Resort</li>
-            <li><i class="fa-solid fa-circle-check"></i> Cam kết thuê tối thiểu 80 Tr/tháng từ MDS Living</li>
+            <li><i class="fa-solid fa-circle-check"></i> Gói xây dựng 30 phòng 850m² trọn gói: <strong>{house_vat_bil}</strong></li>
+            <li><i class="fa-solid fa-circle-check"></i> Tặng 24 tháng phí quản lý Farm Resort</li>
+            <li><i class="fa-solid fa-circle-check"></i> Chính sách thuê lại 120 Tr/tháng (30 phòng x 4 Tr) từ MDS Living</li>
         """
         
         calc_section_html = f"""
@@ -2635,14 +2635,14 @@ def build_unit_page_html(item, all_items):
         const text = `🏡 BẢNG BÁO GIÁ THAM KHẢO CĂN ${{LOT_DATA.code}} (ĐIỀN AN) · SAIGON FARM RESORT
 📍 Dòng sản phẩm: Điền An (The Haven Collection) | Dãy ${{LOT_DATA.block}}
 📐 Diện tích đất: ${{LOT_DATA.areaStr}} m² (100% Sổ đỏ riêng)
-🏨 Loại hình xây dựng: Cụm 30 suites (DTXD 850 m²)
-✨ Tiêu chuẩn bàn giao: Hoàn thiện full nội thất liền tường
-💰 Đơn giá đất ưu đãi: ${{LOT_DATA.unitPriceMil}}
+🏨 Loại hình xây dựng: Cụm 30 phòng lưu trú (DTXD 850 m²)
+✨ Tiêu chuẩn bàn giao: Hoàn thiện full nội thất theo chuẩn MDS Living
+💰 Đơn giá đất niêm yết: ${{LOT_DATA.unitPriceMil}}
 💵 Giá trị QSDĐ (tiền đất): ${{LOT_DATA.originalPriceBil}} (${{LOT_DATA.originalPriceStr}})
-🏗️ Giá trị xây dựng 30 suites: 7,50 Tỷ (đã gồm 10% VAT)
-💎 TỔNG GIÁ BÁN TRỌN GÓI CẢ ĐẤT & NHÀ: ${{LOT_DATA.houseVatBil}} (đã gồm VAT)
-🎁 Ưu đãi: Tặng 24 tháng phí quản lý + 24 tháng Quản gia Farm Resort (MDS Living)
-💼 Cam kết: Thuê tối thiểu 80 Tr/tháng
+🏗️ Giá trị xây dựng 30 phòng: 7,48 Tỷ (đã gồm 10% VAT)
+💎 TỔNG GIÁ TRỌN GÓI CẢ ĐẤT & NHÀ: ${{LOT_DATA.houseVatBil}} (đã gồm VAT)
+🎁 Ưu đãi: Tặng 24 tháng phí quản lý Farm Resort
+💼 Chính sách thuê lại: 120 Tr/tháng (30 phòng x 4 Tr/tháng) từ MDS Living
 🌐 Chi tiết: https://saigonfarmresort.com/${{LOT_DATA.codeLower}}
 📞 Liên hệ chuyên viên tư vấn để nhận hỗ trợ thực địa!`;
 

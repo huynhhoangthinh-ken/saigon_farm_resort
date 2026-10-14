@@ -38,8 +38,8 @@ def render_page(cat, all_cats):
         benefits = [
             {
                 "icon": "fa-house-chimney-window",
-                "title": "Khu Lưu Trú Từ 20 Phòng: Cam Kết Thuê Tối Thiểu 80 Tr/Tháng",
-                "desc": "Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu là 80 triệu đồng/tháng. Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn."
+                "title": "Chính Sách Thuê Lại 120 Tr/Tháng (30 Phòng Lưu Trú)",
+                "desc": "MDS Living triển khai chương trình thuê lại tài sản lưu trú quy mô 30 phòng (DTXD 850m² hoàn thiện tiêu chuẩn MDS Living) với đơn giá 4.000.000 VNĐ/phòng/tháng, tổng tiền thuê đạt 120 triệu đồng/tháng (1,44 Tỷ/năm) mang lại dòng tiền an tâm tuyệt đối."
             },
             {
                 "icon": "fa-water-ladder",
@@ -111,20 +111,20 @@ def render_page(cat, all_cats):
     if cat["slug"] == "dien-an":
         hero_stats_html = f"""
         <div class="stat-item">
-          <span class="stat-num" style="color: #0284c7;">8,99 TR/M²</span>
-          <span class="stat-label">Đơn giá đất ưu đãi đột phá</span>
+          <span class="stat-num" style="color: #0284c7;">9,07 TR/M²</span>
+          <span class="stat-label">Đơn giá đất niêm yết (A15)</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">30 SUITES</span>
-          <span class="stat-label">Gói xây dựng 850m² full nội thất</span>
+          <span class="stat-num">30 PHÒNG</span>
+          <span class="stat-label">Gói XD 850m² full nội thất (7,48 Tỷ)</span>
         </div>
         <div class="stat-item">
           <span class="stat-num" style="color: #b91c1c;">17,60 TỶ</span>
-          <span class="stat-label">Tổng gói đất & nhà (gồm VAT)</span>
+          <span class="stat-label">Tổng trọn gói đất & nhà có VAT</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">100% THỔ CƯ</span>
-          <span class="stat-label">Sổ đỏ riêng từng khuôn viên</span>
+          <span class="stat-num" style="color: #059669;">120 TR/THÁNG</span>
+          <span class="stat-label">Chính sách thuê lại an tâm từ MDS Living</span>
         </div>
         """
     else:
