@@ -683,7 +683,7 @@ def build_investment_page():
             <div class="growth-pillar-icon"><i class="fa-solid fa-certificate"></i></div>
             <div class="growth-pillar-content">
               <h4>3. Quỹ Đất Thổ Cư Ven Hồ Độc Bản & Sổ Đỏ Lâu Dài</h4>
-              <p>Toàn khu giới hạn chỉ <strong>47 sản phẩm điền trang</strong>, 100% thổ cư với sổ đỏ riêng từng nền, sang tên công chứng nhận sổ ngay trong 10 – 20 ngày. Vị thế phong thủy ven hồ tự nhiên 100ha là tài sản di sản truyền đời có độ khan hiếm không thể tái tạo.</p>
+              <p>Toàn khu giới hạn chỉ <strong>47 sản phẩm điền trang</strong>, 100% thổ cư với sổ đỏ riêng từng sản phẩm, sang tên công chứng nhận sổ ngay trong 10 – 20 ngày. Vị thế phong thủy ven hồ tự nhiên 100ha là tài sản di sản truyền đời có độ khan hiếm không thể tái tạo.</p>
             </div>
           </div>
 
@@ -704,7 +704,7 @@ def build_investment_page():
           </div>
           <h4 class="sitetour-title">Đăng Ký Site Tour Khảo Sát Thực Địa &amp; Nhận Bảng Tính Suất Sinh Lời</h4>
           <p class="sitetour-desc">
-            Để bảo đảm quyền lợi tối đa và tính bảo mật của dữ liệu đầu tư, <strong>Bảng chiết tính tỷ suất sinh lời chi tiết theo từng mã nền, phương án tài chính tối ưu và kịch bản dòng tiền thực tế</strong> sẽ được chuyên viên cấp cao phân tích trực tiếp cho Quý khách trong chuyến khảo sát thực địa (Site Tour VIP).
+            Để bảo đảm quyền lợi tối đa và tính bảo mật của dữ liệu đầu tư, <strong>Bảng chiết tính tỷ suất sinh lời chi tiết theo từng mã sản phẩm, phương án tài chính tối ưu và kịch bản dòng tiền thực tế</strong> sẽ được chuyên viên cấp cao phân tích trực tiếp cho Quý khách trong chuyến khảo sát thực địa (Site Tour VIP).
           </p>
 
           <div class="sitetour-perks-list">
@@ -745,7 +745,7 @@ def build_investment_page():
                 <div class="inline-input-group">
                   <i class="fa-solid fa-shapes input-icon"></i>
                   <select id="inline-product" class="inline-form-input">
-                    <option value="Điền Sản (Founders)">Điền Sản (Founders) — Đất nền ven hồ</option>
+                    <option value="Điền Sản (Founders)">Điền Sản (Founders) — Sản phẩm ven hồ</option>
                     <option value="Biệt Phủ Điền Trang">Biệt Phủ Điền Trang — Dinh thự sinh thái</option>
                     <option value="Điền An (Haven)">Điền An (Haven) — Dòng tiền 120 tr/tháng</option>
                     <option value="Đăng ký Site Tour cuối tuần">Đăng ký Site Tour trải nghiệm thực tế</option>
@@ -852,7 +852,7 @@ def build_investment_page():
         <div class="lead-form-group">
           <label for="lead-product">Dòng sản phẩm Quý khách quan tâm:</label>
           <select id="lead-product" class="lead-form-control">
-            <option value="Điền Sản (Founders)">Điền Sản (Founders Club) — Đất nền điền trang ven hồ</option>
+            <option value="Điền Sản (Founders)">Điền Sản (Founders Club) — Sản phẩm điền trang ven hồ</option>
             <option value="Biệt Phủ Điền Trang">Biệt Phủ Điền Trang — Dinh thự sinh thái ven hồ</option>
             <option value="Điền An (Haven)">Điền An (Haven) — Dòng tiền 120 triệu/tháng</option>
             <option value="Đăng ký Site Tour cuối tuần">Đăng ký Site Tour trải nghiệm thực tế cuối tuần</option>

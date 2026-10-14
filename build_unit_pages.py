@@ -24,6 +24,7 @@ LOT_COORDINATES = {
     'A04': (54.75, 42.00), 'A06': (53.86, 49.97), 'A08': (49.61, 48.26), 'A09': (47.39, 46.97),
     'A11': (42.79, 44.83), 'A12': (40.52, 43.75), 'A13': (38.55, 42.62), 'A14': (36.31, 41.44),
     'A15': (34.11, 40.46), 'A16': (52.60, 56.83), 'A17': (50.40, 55.70), 'A18': (48.34, 54.84),
+    'A19': (46.49, 53.97), 'A20': (44.60, 53.36),
     'A21': (42.49, 52.45), 'A22': (40.10, 50.34), 'A23': (37.44, 48.40), 'A24': (51.32, 60.32),
     'B04': (60.93, 39.50), 'B05': (58.90, 44.44), 'B06': (59.00, 47.66), 'B07': (57.02, 51.34),
     'B08': (58.41, 52.40), 'B09': (60.78, 53.39), 'B10': (63.31, 55.15), 'B12': (57.41, 58.77),
@@ -115,22 +116,361 @@ def build_unit_page_html(item, all_items):
     price = item.get("price", 0)
     price_str = item.get("price_str", "")
     price_bil = item.get("price_billion", "")
+    house_vat_bil = item.get("house_price_vat_billion")
+    house_vat_str = item.get("house_price_vat_str")
+    house_vat_val = item.get("house_price_vat", 0) or 0
+    phase = item.get("phase", "GĐ1")
     features = item.get("features", "")
     suitable_for = item.get("suitable_for", "")
     main_img = item.get("image", "/assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg")
     if main_img and not main_img.startswith('/') and not main_img.startswith('http'):
         main_img = '/' + main_img
 
-    arch = get_villa_archetype(direction, area_val)
+    if cat_slug == "dien-an":
+        arch = {
+            "name": "Tổ Hợp 30 Suites Nghỉ Dưỡng Sinh Thái",
+            "tag": "DTXD 850m² · 30 Suites Khép Kín · Hoàn Thiện Full Nội Thất Liền Tường",
+            "layout_img": "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
+            "desc": "Phương án quy hoạch kiến trúc 30 suites lưu trú sinh thái cao cấp (diện tích sàn 850m²). Tối ưu hóa dòng tiền kinh doanh retreat/chữa lành giữa không gian thiên nhiên, bàn giao hoàn thiện full nội thất liền tường chuẩn resort cao cấp. Cam kết thuê tối thiểu 80 Tr/tháng từ MDS Living.",
+            "gallery": [
+                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp",
+                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
+                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp",
+                "/assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg"
+            ]
+        }
+        page_title = f"Căn {code} ({area_str} m²) — Điền An | Đơn Giá Đất Từ {unit_price_mil} · Gói 30 Suites {house_vat_bil} | Saigon Farm Resort"
+        page_desc = f"Thông tin chi tiết Căn {code} dòng Điền An, diện tích {area_str}m². Đơn giá đất chỉ {unit_price_mil}, tiền đất {price_bil}, tổng gói đất và hoàn thiện 30 suites 850m² chỉ {house_vat_bil}. Sổ đỏ riêng, cam kết thuê tối thiểu 80 Tr/tháng từ MDS Living."
+        
+        if phase == "GĐ2":
+            price_hero_box_html = f"""
+            <div class="unit-price-hero-box" style="background: rgba(180, 83, 9, 0.08); border: 1px dashed rgba(180, 83, 9, 0.35);">
+              <div class="uph-label" style="color: #b45309;">QUỸ GIAI ĐOẠN 2</div>
+              <div class="uph-billion" style="color: #b45309;">Quỹ GĐ2</div>
+              <div class="uph-exact" style="color: #92400e;">(Đăng ký ưu tiên vị trí GĐ2)</div>
+              <div class="uph-m2" style="color: #777;">Chưa mở bán chính thức</div>
+            </div>
+            """
+        else:
+            price_hero_box_html = f"""
+            <div class="unit-price-hero-box" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.06), rgba(12, 74, 110, 0.03)); border: 1px solid rgba(2, 132, 199, 0.35); min-width: 270px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <span class="uph-label" style="margin:0; color:#0369a1; font-weight:700;">ĐƠN GIÁ ĐẤT</span>
+                <span style="background:#0284c7; color:#fff; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:12px;">Đợt 1</span>
+              </div>
+              <div class="uph-billion" style="color:#0284c7; font-size:1.65rem;">{unit_price_mil}</div>
+              <div style="font-size:0.82rem; color:#475569; margin-bottom:8px;">Tiền đất: <strong style="color:#0f172a;">{price_bil}</strong> <span style="font-size:0.75rem; color:#64748b;">({price_str})</span></div>
+              <div style="padding-top:8px; border-top:1px dashed rgba(2, 132, 199, 0.3); font-size:0.88rem; color:#b91c1c; font-weight:700; display:flex; justify-content:space-between; align-items:center;">
+                <span><i class="fa-solid fa-hotel"></i> Cả Đất & Nhà 30 suites:</span>
+                <span style="font-size:1.15rem;">{house_vat_bil}</span>
+              </div>
+              <div style="font-size:0.72rem; color:#64748b; text-align:right;">(Gồm VAT & bàn giao full nội thất liền tường)</div>
+            </div>
+            """
+            
+        sticky_features_html = f"""
+            <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng sản phẩm, thổ cư lâu dài</li>
+            <li><i class="fa-solid fa-circle-check"></i> Đơn giá đất ưu đãi đột phá: <strong>{unit_price_mil}</strong></li>
+            <li><i class="fa-solid fa-circle-check"></i> Gói xây dựng 30 suites 850m² trọn gói: <strong>{house_vat_bil}</strong></li>
+            <li><i class="fa-solid fa-circle-check"></i> Tặng 24 tháng phí quản lý & Quản gia Farm Resort</li>
+            <li><i class="fa-solid fa-circle-check"></i> Cam kết thuê tối thiểu 80 Tr/tháng từ MDS Living</li>
+        """
+        
+        calc_section_html = f"""
+        <section class="calculator-section" id="payment-schedule-section">
+          <div class="calc-header">
+            <span class="sec-badge">Phiếu Tính Giá & Tiến Độ Thanh Toán</span>
+            <h2>Phương Thức & Tiến Độ Thanh Toán Trọn Gói Căn {code}</h2>
+            <p>Hợp đồng trọn gói bao gồm Quyền sử dụng đất & Hợp đồng xây dựng cụm 30 suites (850 m²) hoàn thiện full nội thất liền tường.</p>
+          </div>
+
+          <!-- Construction Package Card -->
+          <div class="construction-bonus-card" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(12, 74, 110, 0.04)); border: 1px solid rgba(2, 132, 199, 0.3);">
+            <div class="cbc-left">
+              <div class="cbc-badge" style="background: #0284c7; color: #fff;">
+                <i class="fa-solid fa-hotel"></i> Tiêu Chuẩn Bàn Giao 30 Suites
+              </div>
+              <div class="cbc-title" style="color: #0c4a6e;">
+                Bàn Giao Hoàn Thiện Full Nội Thất Liền Tường: <span>DTXD 850 m²</span>
+              </div>
+              <div class="cbc-desc" style="color: #334155;">
+                Đơn giá đất ưu đãi đặc biệt: <strong>{unit_price_mil}</strong> (Tiền đất: {price_bil}). Gói xây dựng 30 suites cao cấp: <strong>7,50 Tỷ</strong> (đã gồm 10% VAT). Bàn giao chìa khóa trao tay vận hành khai thác ngay.
+              </div>
+            </div>
+            <div style="background: #fff; padding: 12px 18px; border-radius: 8px; border: 1px dashed #0284c7; text-align: right; min-width: 180px;">
+              <span style="font-size: 0.76rem; color: #64748b; display: block;">TỔNG GÓI CẢ ĐẤT & NHÀ:</span>
+              <strong style="color: #b91c1c; font-size: 1.35rem; font-weight: 800;">{house_vat_bil}</strong>
+              <small style="display: block; font-size: 0.72rem; color: #64748b;">(Đã gồm 10% VAT xây dựng)</small>
+            </div>
+          </div>
+
+          <!-- Financial Summary Card -->
+          <div class="financial-summary-card">
+            <div class="fsc-detail-row">
+              <div class="fsc-item">
+                <span class="fsc-label">Giá Trị QSDĐ (Tiền Đất)</span>
+                <span class="fsc-val" style="color: #0c4a6e;">{price_bil}</span>
+              </div>
+              <div class="fsc-item">
+                <span class="fsc-label">Giá Trị Xây Dựng 30 Suites</span>
+                <span class="fsc-val" style="color: #0c4a6e;">7,50 Tỷ <small style="font-size:0.75rem; font-weight:normal; color:#64748b;">(gồm VAT)</small></span>
+              </div>
+              <div class="fsc-item">
+                <span class="fsc-label">Quà Tặng Vận Hành 24 Tháng</span>
+                <span class="fsc-val discount" style="color: #15803d;">Miễn Phí 100%</span>
+              </div>
+            </div>
+
+            <div class="fsc-total-box" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(12, 74, 110, 0.06));">
+              <div class="fsc-total-text">
+                <span class="fsc-total-label">Tổng Giá Trị Hợp Đồng Trọn Gói</span>
+                <span class="fsc-total-sub">Bao gồm Giá trị QSDĐ & Giá trị xây dựng hoàn thiện bàn giao full nội thất liền tường</span>
+              </div>
+              <div class="fsc-total-val" style="color: #b91c1c;">{house_vat_bil}</div>
+            </div>
+
+            <div class="fsc-savings-badge" style="display: flex; background: rgba(34, 197, 94, 0.08); border-color: rgba(34, 197, 94, 0.3);">
+              <i class="fa-solid fa-gift" style="color: #15803d;"></i>
+              <span style="color: #15803d;">Đặc quyền: <strong>Tặng gói Phí Quản Lý 24 tháng & Quản Gia Farm Resort 24 tháng</strong> (MDS Living vận hành)</span>
+            </div>
+          </div>
+
+          <!-- Installment Schedule Table -->
+          <div class="installment-table-wrap">
+            <table class="installment-table">
+              <thead>
+                <tr>
+                  <th style="min-width: 120px;">Đợt Thanh Toán</th>
+                  <th style="min-width: 160px;">Thời Gian / Tiến Độ</th>
+                  <th style="min-width: 120px; text-align: center;">Tỷ Lệ (%)</th>
+                  <th style="min-width: 180px; text-align: right;">Số Tiền (VNĐ)</th>
+                  <th style="min-width: 250px;">Nội Dung & Mốc Pháp Lý</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Đặt Cọc</strong></td>
+                  <td>Ngày ký Phiếu cọc</td>
+                  <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">200 Triệu</span></td>
+                  <td style="text-align: right; font-weight: 700; color:#0c4a6e;">200.000.000 đ</td>
+                  <td>Ký Phiếu Đặt Cọc giữ vị trí độc quyền Căn {code}</td>
+                </tr>
+                <tr>
+                  <td><strong>Lần 1 (Đợt 1)</strong></td>
+                  <td>10 ngày sau đặt cọc (T)</td>
+                  <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30% (trừ cọc)</span></td>
+                  <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr((house_vat_val * 0.30) - 200000000)}</td>
+                  <td>Ký HĐCN QSDĐ và Thương Mại + Hợp đồng xây dựng 30 suites</td>
+                </tr>
+                <tr>
+                  <td><strong>Lần 2 (Đợt 2)</strong></td>
+                  <td>T + 120 ngày</td>
+                  <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30%</span></td>
+                  <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(house_vat_val * 0.30)}</td>
+                  <td>Thanh toán theo tiến độ thi công hạ tầng & móng hầm cụm lưu trú</td>
+                </tr>
+                <tr>
+                  <td><strong>Lần 3 (Đợt 3)</strong></td>
+                  <td>T + 240 ngày (Xong thô)</td>
+                  <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
+                  <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(house_vat_val * 0.20)}</td>
+                  <td>Hoàn thành cất nóc & xây thô cụm 30 suites</td>
+                </tr>
+                <tr>
+                  <td><strong>Lần 4 (Đợt 4)</strong></td>
+                  <td>Bàn giao hoàn thiện</td>
+                  <td style="text-align: center;"><span class="badge" style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
+                  <td style="text-align: right; font-weight: 700; color:#b91c1c;">{format_curr(house_vat_val * 0.20)}</td>
+                  <td>Bàn giao hoàn thiện full nội thất liền tường, kích hoạt vận hành cùng MDS Living</td>
+                </tr>
+                <tr style="background: #f8fafc; font-weight: 800;">
+                  <td colspan="2"><strong>TỔNG THANH TOÁN (GỒM VAT)</strong></td>
+                  <td style="text-align: center; color:#b91c1c;">100%</td>
+                  <td style="text-align: right; color:#b91c1c; font-size:1.05rem;">{format_curr(house_vat_val)}</td>
+                  <td><strong>{house_vat_bil}</strong> (Đã gồm 10% VAT xây dựng)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Table Toolbar -->
+          <div class="table-toolbar">
+            <div style="font-size: 0.82rem; color: var(--text-muted);">
+              * Bảng tính dòng tiền chuẩn xác theo Bảng Báo Giá Tham Khảo Căn {code} (Điền An). Bàn giao 30 suites chìa khóa trao tay.
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <button type="button" class="btn-action-tool" onclick="copyScheduleText()">
+                <i class="fa-solid fa-copy"></i> Sao Chép Bảng Tính Gửi Khách
+              </button>
+              <button type="button" class="btn-action-tool" onclick="window.print()">
+                <i class="fa-solid fa-print"></i> In / Tải PDF Bảng Tính
+              </button>
+            </div>
+          </div>
+        </section>
+        """
+    else:
+        arch = get_villa_archetype(direction, area_val)
+        page_title = f"Căn {code} ({area_str} m²) — {cat_title} | Bảng Giá & Tiến Độ Thanh Toán Saigon Farm Resort"
+        page_desc = f"Thông tin chi tiết Căn {code} ({cat_title}), diện tích {area_str}m², hướng {direction}, mặt đường {road}. Xem chính sách thanh toán chuẩn, nhanh 70%, nhanh 100% và ưu đãi giảm 800 triệu khi xây dựng trước 12/2027."
+        
+        price_hero_box_html = f"""
+        <div class="unit-price-hero-box" {"style='background: rgba(180, 83, 9, 0.08); border: 1px dashed rgba(180, 83, 9, 0.35);'" if phase == "GĐ2" else ""}>
+          <div class="uph-label" {"style='color: #b45309;'" if phase == "GĐ2" else ""}>{"QUỸ GIAI ĐOẠN 2" if phase == "GĐ2" else "Giá Đất Niêm Yết Gốc"}</div>
+          <div class="uph-billion" {"style='color: #b45309;'" if phase == "GĐ2" else ""}>{price_bil}</div>
+          <div class="uph-exact" {"style='color: #92400e;'" if phase == "GĐ2" else ""}>{"(Đăng ký ưu tiên vị trí GĐ2)" if phase == "GĐ2" else f"({price_str})"}</div>
+          <div class="uph-m2" {"style='color: #777;'" if phase == "GĐ2" else ""}>{"Chưa mở bán chính thức" if phase == "GĐ2" else f"Đơn giá đất: {unit_price_mil}"}</div>
+          {f'<div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(201, 169, 110, 0.35); font-size: 0.86rem; color: #b91c1c; font-weight: 700;"><i class="fa-solid fa-house-chimney"></i> Cả Nhà: {house_vat_bil} <small style="color: #666; font-weight: 400;">(gồm VAT & XD)</small></div>' if house_vat_bil and phase != "GĐ2" else ""}
+        </div>
+        """
+        
+        sticky_features_html = f"""
+            <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng sản phẩm, thổ cư lâu dài</li>
+            <li><i class="fa-solid fa-circle-check"></i> Độc quyền giữ chỗ & khóa vị trí căn {code}</li>
+            <li><i class="fa-solid fa-circle-check"></i> Giảm 800 Triệu khi xây dựng trước 12/2027</li>
+            <li><i class="fa-solid fa-circle-check"></i> Đưa đón khảo sát thực địa xe riêng 5 sao</li>
+        """
+        
+        calc_section_html = f"""
+        <section class="calculator-section" id="payment-schedule-section">
+          <div class="calc-header">
+            <span class="sec-badge">Bảng Tính & Tiến Độ Thanh Toán</span>
+            <h2>Phương Thức & Tiến Độ Thanh Toán Căn {code}</h2>
+            <p>Hệ thống tự động tính toán chính xác dòng tiền từng đợt theo 3 phương thức linh hoạt và khấu trừ ưu đãi xây dựng theo thời gian thực.</p>
+          </div>
+
+          <!-- Construction 800M Bonus Card with Toggle -->
+          <div class="construction-bonus-card">
+            <div class="cbc-left">
+              <div class="cbc-badge">
+                <i class="fa-solid fa-gift"></i> Đặc Quyền Xây Dựng Hoàn Thiện
+              </div>
+              <div class="cbc-title">
+                Ưu Đãi Xây Dựng Hoàn Tất Trước 12/2027: <span>GIẢM NGAY 800 TRIỆU ĐỒNG</span>
+              </div>
+              <div class="cbc-desc">
+                Khách hàng ký cam kết hoàn thành xây dựng điền trang trước tháng 12/2027 được giảm trực tiếp <strong>800.000.000 đ</strong> vào tổng giá trị thanh toán, phân bổ đều vào dòng tiền thực tế.
+              </div>
+            </div>
+            <div class="cbc-toggle-wrap">
+              <label class="toggle-switch">
+                <input type="checkbox" id="bonus800Toggle" checked onchange="updatePaymentCalculations()">
+                <span class="toggle-slider"></span>
+              </label>
+              <label for="bonus800Toggle" class="toggle-label" id="bonusToggleStatus">
+                Đang áp dụng (-800 Tr)
+              </label>
+            </div>
+          </div>
+
+          <!-- 3 Scheme Tabs -->
+          <div class="scheme-tabs">
+            <div class="scheme-tab-btn active" id="tabBtn1" onclick="selectScheme(1)">
+              <div class="stb-header">
+                <span class="stb-title">1. Chuẩn 12 Tháng</span>
+                <span class="stb-badge stb-badge-standard">12 Tháng</span>
+              </div>
+              <div class="stb-sub">Giãn tiến độ thanh toán thảnh thơi trong 12 tháng, không áp lực tài chính.</div>
+              <div class="stb-discount">
+                <i class="fa-solid fa-gift"></i> <span>Chiết khấu: <strong>-200 Triệu</strong></span>
+              </div>
+            </div>
+
+            <div class="scheme-tab-btn" id="tabBtn2" onclick="selectScheme(2)">
+              <div class="stb-header">
+                <span class="stb-title">2. Nhanh 70%</span>
+                <span class="stb-badge stb-badge-fast">Công Chứng Ngay</span>
+              </div>
+              <div class="stb-sub">Thanh toán 70% trong 10 ngày, ký công chứng HĐ chuyển nhượng QSDĐ ngay.</div>
+              <div class="stb-discount">
+                <i class="fa-solid fa-tag"></i> <span>Chiết khấu: <strong>-800 Triệu</strong></span>
+              </div>
+            </div>
+
+            <div class="scheme-tab-btn" id="tabBtn3" onclick="selectScheme(3)">
+              <div class="stb-header">
+                <span class="stb-title">3. Nhanh 100%</span>
+                <span class="stb-badge stb-badge-full">Sang Tên Ngay</span>
+              </div>
+              <div class="stb-sub">Thanh toán 100% trong 20 ngày, công chứng sang tên sổ hồng riêng trao tay ngay.</div>
+              <div class="stb-discount">
+                <i class="fa-solid fa-crown"></i> <span>Đặc quyền: <strong>-1 TỶ ĐỒNG</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Financial Summary Card -->
+          <div class="financial-summary-card">
+            <div class="fsc-detail-row">
+              <div class="fsc-item">
+                <span class="fsc-label">Giá Gốc Niêm Yết</span>
+                <span class="fsc-val" id="summaryOriginalPrice">{price_str}</span>
+              </div>
+              <div class="fsc-item">
+                <span class="fsc-label" id="summarySchemeDiscountLabel">Chiết Khấu Phương Thức</span>
+                <span class="fsc-val discount" id="summarySchemeDiscount">0 đ</span>
+              </div>
+              <div class="fsc-item">
+                <span class="fsc-label">Ưu Đãi Xây Dựng (12/2027)</span>
+                <span class="fsc-val discount" id="summaryBuildBonus">-800.000.000 đ</span>
+              </div>
+            </div>
+
+            <div class="fsc-total-box">
+              <div class="fsc-total-text">
+                <span class="fsc-total-label">Tổng Giá Thanh Toán Sau Ưu Đãi</span>
+                <span class="fsc-total-sub">Đã áp dụng toàn bộ chiết khấu phương thức & ưu đãi xây dựng</span>
+              </div>
+              <div class="fsc-total-val" id="summaryFinalPrice">0 đ</div>
+            </div>
+
+            <div class="fsc-savings-badge" id="summarySavingsBadge">
+              <i class="fa-solid fa-piggy-bank"></i>
+              <span id="summarySavingsText">Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>800 Triệu đồng</strong></span>
+            </div>
+          </div>
+
+          <!-- Installment Schedule Table -->
+          <div class="installment-table-wrap">
+            <table class="installment-table">
+              <thead>
+                <tr>
+                  <th style="min-width: 120px;">Đợt Thanh Toán</th>
+                  <th style="min-width: 160px;">Thời Gian / Tiến Độ</th>
+                  <th style="min-width: 110px; text-align: center;">Tỷ Lệ (%)</th>
+                  <th style="min-width: 180px; text-align: right;">Số Tiền Thanh Toán (VNĐ)</th>
+                  <th style="min-width: 250px;">Nội Dung & Mốc Pháp Lý</th>
+                </tr>
+              </thead>
+              <tbody id="installmentTableBody">
+                <!-- Dynamically injected via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Table Toolbar -->
+          <div class="table-toolbar">
+            <div style="font-size: 0.82rem; color: var(--text-muted);">
+              * Số tiền trên đã bao gồm VAT & các ưu đãi tương ứng. Bảng tính có giá trị tham khảo theo chính sách hiện hành.
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <button type="button" class="btn-action-tool" onclick="copyScheduleText()">
+                <i class="fa-solid fa-copy"></i> Sao Chép Bảng Tính Gửi Khách
+              </button>
+              <button type="button" class="btn-action-tool" onclick="window.print()">
+                <i class="fa-solid fa-print"></i> In / Tải PDF Bảng Tính
+              </button>
+            </div>
+          </div>
+
+        </section>
+        """
 
     # Siblings in the same category for recommendation
     siblings = [i for i in all_items if i.get("category_slug") == cat_slug and i.get("code") != code][:3]
 
     canonical_url = f"https://saigonfarmresort.com/{code_lower}"
     short_display_url = f"saigonfarmresort.com/{code_lower}"
-
-    page_title = f"Căn {code} ({area_str} m²) — {cat_title} | Bảng Giá & Tiến Độ Thanh Toán Saigon Farm Resort"
-    page_desc = f"Thông tin chi tiết Căn {code} ({cat_title}), diện tích {area_str}m², hướng {direction}, mặt đường {road}. Xem chính sách thanh toán chuẩn, nhanh 70%, nhanh 100% và ưu đãi giảm 800 triệu khi xây dựng trước 12/2027."
 
     html = f"""<!DOCTYPE html>
 <html lang="vi">
@@ -1869,12 +2209,7 @@ def build_unit_page_html(item, all_items):
                 <h1 class="unit-main-heading">Căn {code} · Dãy {block}</h1>
                 <div class="unit-sub-heading">{cat_title} — {arch['name']}</div>
               </div>
-              <div class="unit-price-hero-box">
-                <div class="uph-label">Giá Niêm Yết Gốc (Đợt 1)</div>
-                <div class="uph-billion">{price_bil}</div>
-                <div class="uph-exact">({price_str})</div>
-                <div class="uph-m2">Đơn giá: {unit_price_mil}</div>
-              </div>
+              {price_hero_box_html}
             </div>
 
             <!-- Specs Matrix -->
@@ -1936,7 +2271,7 @@ def build_unit_page_html(item, all_items):
                   <div class="hl-icon"><i class="fa-solid fa-scale-balanced"></i></div>
                   <div class="hl-text">
                     <h4>Pháp Lý Sổ Đỏ Trao Tay</h4>
-                    <p>100% thổ cư từng nền, công chứng chuyển nhượng ngay trong 10-20 ngày. Triệt tiêu rủi ro pháp lý & thuế chuyển đổi.</p>
+                    <p>100% thổ cư từng sản phẩm, công chứng chuyển nhượng ngay trong 10-20 ngày. Triệt tiêu rủi ro pháp lý & thuế chuyển đổi.</p>
                   </div>
                 </div>
                 <div class="hl-card">
@@ -1988,138 +2323,7 @@ def build_unit_page_html(item, all_items):
         <!-- ===================================================================
              INTERACTIVE PAYMENT ENGINE & SCHEDULE CALCULATOR
              =================================================================== -->
-        <section class="calculator-section" id="payment-schedule-section">
-          <div class="calc-header">
-            <span class="sec-badge">Bảng Tính & Tiến Độ Thanh Toán</span>
-            <h2>Phương Thức & Tiến Độ Thanh Toán Căn {code}</h2>
-            <p>Hệ thống tự động tính toán chính xác dòng tiền từng đợt theo 3 phương thức linh hoạt và khấu trừ ưu đãi xây dựng theo thời gian thực.</p>
-          </div>
-
-          <!-- Construction 800M Bonus Card with Toggle -->
-          <div class="construction-bonus-card">
-            <div class="cbc-left">
-              <div class="cbc-badge">
-                <i class="fa-solid fa-gift"></i> Đặc Quyền Xây Dựng Hoàn Thiện
-              </div>
-              <div class="cbc-title">
-                Ưu Đãi Xây Dựng Hoàn Tất Trước 12/2027: <span>GIẢM NGAY 800 TRIỆU ĐỒNG</span>
-              </div>
-              <div class="cbc-desc">
-                Khách hàng ký cam kết hoàn thành xây dựng điền trang trước tháng 12/2027 được giảm trực tiếp <strong>800.000.000 đ</strong> vào tổng giá trị thanh toán, phân bổ đều vào dòng tiền thực tế.
-              </div>
-            </div>
-            <div class="cbc-toggle-wrap">
-              <label class="toggle-switch">
-                <input type="checkbox" id="bonus800Toggle" checked onchange="updatePaymentCalculations()">
-                <span class="toggle-slider"></span>
-              </label>
-              <label for="bonus800Toggle" class="toggle-label" id="bonusToggleStatus">
-                Đang áp dụng (-800 Tr)
-              </label>
-            </div>
-          </div>
-
-          <!-- 3 Scheme Tabs -->
-          <div class="scheme-tabs">
-            <div class="scheme-tab-btn active" id="tabBtn1" onclick="selectScheme(1)">
-              <div class="stb-header">
-                <span class="stb-title">1. Chuẩn 12 Tháng</span>
-                <span class="stb-badge stb-badge-standard">12 Tháng</span>
-              </div>
-              <div class="stb-sub">Giãn tiến độ thanh toán thảnh thơi trong 12 tháng, không áp lực tài chính.</div>
-              <div class="stb-discount" style="color: var(--text-muted);">
-                <i class="fa-solid fa-circle-info"></i> <span>Giá niêm yết chuẩn</span>
-              </div>
-            </div>
-
-            <div class="scheme-tab-btn" id="tabBtn2" onclick="selectScheme(2)">
-              <div class="stb-header">
-                <span class="stb-title">2. Nhanh 70%</span>
-                <span class="stb-badge stb-badge-fast">Công Chứng Ngay</span>
-              </div>
-              <div class="stb-sub">Thanh toán 70% trong 10 ngày, ký công chứng HĐ chuyển nhượng QSDĐ ngay.</div>
-              <div class="stb-discount">
-                <i class="fa-solid fa-tag"></i> <span>Chiết khấu: <strong>-600 Triệu</strong></span>
-              </div>
-            </div>
-
-            <div class="scheme-tab-btn" id="tabBtn3" onclick="selectScheme(3)">
-              <div class="stb-header">
-                <span class="stb-title">3. Nhanh 100%</span>
-                <span class="stb-badge stb-badge-full">Sang Tên Ngay</span>
-              </div>
-              <div class="stb-sub">Thanh toán 100% trong 20 ngày, công chứng sang tên sổ hồng riêng trao tay ngay.</div>
-              <div class="stb-discount">
-                <i class="fa-solid fa-crown"></i> <span>Đặc quyền: <strong>-1 TỶ ĐỒNG</strong></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Financial Summary Card -->
-          <div class="financial-summary-card">
-            <div class="fsc-detail-row">
-              <div class="fsc-item">
-                <span class="fsc-label">Giá Gốc Niêm Yết</span>
-                <span class="fsc-val" id="summaryOriginalPrice">{price_str}</span>
-              </div>
-              <div class="fsc-item">
-                <span class="fsc-label" id="summarySchemeDiscountLabel">Chiết Khấu Phương Thức</span>
-                <span class="fsc-val discount" id="summarySchemeDiscount">0 đ</span>
-              </div>
-              <div class="fsc-item">
-                <span class="fsc-label">Ưu Đãi Xây Dựng (12/2027)</span>
-                <span class="fsc-val discount" id="summaryBuildBonus">-800.000.000 đ</span>
-              </div>
-            </div>
-
-            <div class="fsc-total-box">
-              <div class="fsc-total-text">
-                <span class="fsc-total-label">Tổng Giá Thanh Toán Sau Ưu Đãi</span>
-                <span class="fsc-total-sub">Đã áp dụng toàn bộ chiết khấu phương thức & ưu đãi xây dựng</span>
-              </div>
-              <div class="fsc-total-val" id="summaryFinalPrice">0 đ</div>
-            </div>
-
-            <div class="fsc-savings-badge" id="summarySavingsBadge">
-              <i class="fa-solid fa-piggy-bank"></i>
-              <span id="summarySavingsText">Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>800 Triệu đồng</strong></span>
-            </div>
-          </div>
-
-          <!-- Installment Schedule Table -->
-          <div class="installment-table-wrap">
-            <table class="installment-table">
-              <thead>
-                <tr>
-                  <th style="min-width: 120px;">Đợt Thanh Toán</th>
-                  <th style="min-width: 160px;">Thời Gian / Tiến Độ</th>
-                  <th style="min-width: 110px; text-align: center;">Tỷ Lệ (%)</th>
-                  <th style="min-width: 180px; text-align: right;">Số Tiền Thanh Toán (VNĐ)</th>
-                  <th style="min-width: 250px;">Nội Dung & Mốc Pháp Lý</th>
-                </tr>
-              </thead>
-              <tbody id="installmentTableBody">
-                <!-- Dynamically injected via JavaScript -->
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Table Toolbar -->
-          <div class="table-toolbar">
-            <div style="font-size: 0.82rem; color: var(--text-muted);">
-              * Số tiền trên đã bao gồm VAT & các ưu đãi tương ứng. Bảng tính có giá trị tham khảo theo chính sách hiện hành.
-            </div>
-            <div style="display: flex; gap: 10px;">
-              <button type="button" class="btn-action-tool" onclick="copyScheduleText()">
-                <i class="fa-solid fa-copy"></i> Sao Chép Bảng Tính Gửi Khách
-              </button>
-              <button type="button" class="btn-action-tool" onclick="window.print()">
-                <i class="fa-solid fa-print"></i> In / Tải PDF Bảng Tính
-              </button>
-            </div>
-          </div>
-
-        </section>
+        {calc_section_html}
       </div>
 
       <!-- Right Column: Sticky Action Card -->
@@ -2132,10 +2336,7 @@ def build_unit_page_html(item, all_items):
           </div>
 
           <ul class="sc-features">
-            <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng nền, thổ cư lâu dài</li>
-            <li><i class="fa-solid fa-circle-check"></i> Độc quyền giữ chỗ & khóa vị trí căn {code}</li>
-            <li><i class="fa-solid fa-circle-check"></i> Giảm 800 Triệu khi xây dựng trước 12/2027</li>
-            <li><i class="fa-solid fa-circle-check"></i> Đưa đón khảo sát thực địa xe riêng 5 sao</li>
+            {sticky_features_html}
           </ul>
 
           <div class="sc-cta-stack">
@@ -2183,7 +2384,7 @@ def build_unit_page_html(item, all_items):
       <div class="footer-brand">
         <h4>SAIGON FARM RESORT</h4>
         <p>
-          Quần thể điền trang sinh thái thượng lưu quy mô 100ha ven hồ, sở hữu 100% sổ đỏ riêng từng nền lâu dài. Nơi hội tụ các giá trị dưỡng sinh, di sản truyền đời và dòng tiền sinh lời bền vững.
+          Quần thể điền trang sinh thái thượng lưu quy mô 100ha ven hồ, sở hữu 100% sổ đỏ riêng từng sản phẩm lâu dài. Nơi hội tụ các giá trị dưỡng sinh, di sản truyền đời và dòng tiền sinh lời bền vững.
         </p>
         <p style="margin-top: 10px; font-size: 0.82rem; color: #8fa097;">
           Đơn vị phát triển: <strong>MDS Land</strong> · Vận hành quản lý: <strong>MDS Living</strong>
@@ -2219,6 +2420,8 @@ def build_unit_page_html(item, all_items):
       codeLower: '{code_lower}',
       block: '{block}',
       catTitle: '{cat_title}',
+      catSlug: '{cat_slug}',
+      houseVatBil: '{house_vat_bil}',
       areaStr: '{area_str}',
       areaVal: {area_val},
       direction: '{direction}',
@@ -2232,9 +2435,10 @@ def build_unit_page_html(item, all_items):
       unitPriceMil: '{unit_price_mil}'
     }};
 
-    let currentScheme = 1; // 1: Standard, 2: Fast 70%, 3: Fast 100%
-    const BONUS_BUILD_AMOUNT = 800000000; // 800 triệu hoàn tất xây dựng trước 12/2027
-    const DISCOUNT_SCHEME_2 = 600000000;  // 600 triệu cho phương thức nhanh 70%
+    let currentScheme = 1; // 1: Standard (-200Tr), 2: Fast 70% (-800Tr), 3: Fast 100% (-1 Tỷ)
+    const BONUS_BUILD_AMOUNT = 800000000; // 800 triệu hoàn tất xây dựng trước Q4/2027
+    const DISCOUNT_SCHEME_1 = 200000000;  // 200 triệu cho phương thức chuẩn 12 tháng
+    const DISCOUNT_SCHEME_2 = 800000000;  // 800 triệu cho phương thức nhanh 70%
     const DISCOUNT_SCHEME_3 = 1000000000; // 1 tỷ cho phương thức nhanh 100%
 
     function formatVND(num) {{
@@ -2257,20 +2461,22 @@ def build_unit_page_html(item, all_items):
     }}
 
     function updatePaymentCalculations() {{
-      const applyBonus = document.getElementById('bonus800Toggle').checked;
+      const bonusEl = document.getElementById('bonus800Toggle');
+      if (!bonusEl) return;
+      const applyBonus = bonusEl.checked;
       const bonusStatusLabel = document.getElementById('bonusToggleStatus');
-      bonusStatusLabel.textContent = applyBonus ? 'Đang áp dụng (-800 Tr)' : 'Chưa áp dụng ưu đãi';
+      if (bonusStatusLabel) bonusStatusLabel.textContent = applyBonus ? 'Đang áp dụng (-800 Tr)' : 'Chưa áp dụng ưu đãi';
 
       const originalPrice = LOT_DATA.originalPrice;
       let schemeDiscount = 0;
       let schemeDiscountName = 'Chiết khấu thanh toán';
 
       if (currentScheme === 1) {{
-        schemeDiscount = 0;
-        schemeDiscountName = 'Tiến độ chuẩn 12 tháng (0 đ)';
+        schemeDiscount = DISCOUNT_SCHEME_1;
+        schemeDiscountName = 'Tiến độ chuẩn 12 tháng (-200 Tr)';
       }} else if (currentScheme === 2) {{
         schemeDiscount = DISCOUNT_SCHEME_2;
-        schemeDiscountName = 'Chiết khấu Nhanh 70% (-600 Tr)';
+        schemeDiscountName = 'Chiết khấu Nhanh 70% (-800 Tr)';
       }} else if (currentScheme === 3) {{
         schemeDiscount = DISCOUNT_SCHEME_3;
         schemeDiscountName = 'Chiết khấu Nhanh 100% (-1 Tỷ)';
@@ -2281,20 +2487,28 @@ def build_unit_page_html(item, all_items):
       const finalPrice = Math.max(0, originalPrice - totalDiscount);
 
       // Update Summary Cards
-      document.getElementById('summaryOriginalPrice').textContent = formatVND(originalPrice);
-      document.getElementById('summarySchemeDiscountLabel').textContent = schemeDiscountName;
-      document.getElementById('summarySchemeDiscount').textContent = schemeDiscount > 0 ? ('-' + formatVND(schemeDiscount)) : '0 đ';
-      document.getElementById('summaryBuildBonus').textContent = buildBonus > 0 ? ('-' + formatVND(buildBonus)) : '0 đ';
-      document.getElementById('summaryFinalPrice').textContent = formatVND(finalPrice);
+      const origPriceEl = document.getElementById('summaryOriginalPrice');
+      if (origPriceEl) origPriceEl.textContent = formatVND(originalPrice);
+      const schemeDiscLabelEl = document.getElementById('summarySchemeDiscountLabel');
+      if (schemeDiscLabelEl) schemeDiscLabelEl.textContent = schemeDiscountName;
+      const schemeDiscEl = document.getElementById('summarySchemeDiscount');
+      if (schemeDiscEl) schemeDiscEl.textContent = schemeDiscount > 0 ? ('-' + formatVND(schemeDiscount)) : '0 đ';
+      const buildBonusEl = document.getElementById('summaryBuildBonus');
+      if (buildBonusEl) buildBonusEl.textContent = buildBonus > 0 ? ('-' + formatVND(buildBonus)) : '0 đ';
+      const finalPriceEl = document.getElementById('summaryFinalPrice');
+      if (finalPriceEl) finalPriceEl.textContent = formatVND(finalPrice);
 
       const savingsText = document.getElementById('summarySavingsText');
-      if (totalDiscount > 0) {{
-        const b = (totalDiscount / 1000000000).toFixed(2).replace('.', ',');
-        savingsText.innerHTML = `Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>${{b}} Tỷ đồng (${{formatVND(totalDiscount)}})</strong>`;
-        document.getElementById('summarySavingsBadge').style.display = 'flex';
-      }} else {{
-        savingsText.innerHTML = `Giá bán chuẩn theo Bảng giá mở bán Đợt 1`;
-        document.getElementById('summarySavingsBadge').style.display = 'none';
+      const savingsBadge = document.getElementById('summarySavingsBadge');
+      if (savingsText && savingsBadge) {{
+        if (totalDiscount > 0) {{
+          const b = (totalDiscount / 1000000000).toFixed(2).replace('.', ',');
+          savingsText.innerHTML = `Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>${{b}} Tỷ đồng (${{formatVND(totalDiscount)}})</strong>`;
+          savingsBadge.style.display = 'flex';
+        }} else {{
+          savingsText.innerHTML = `Giá bán chuẩn theo Bảng giá mở bán Đợt 1`;
+          savingsBadge.style.display = 'none';
+        }}
       }}
 
       // Build Table Installments
@@ -2417,8 +2631,35 @@ def build_unit_page_html(item, all_items):
 
     // Copy Schedule Text Function
     function copyScheduleText() {{
-      const applyBonus = document.getElementById('bonus800Toggle').checked;
-      const finalPriceStr = document.getElementById('summaryFinalPrice').textContent;
+      if (LOT_DATA.catSlug === 'dien-an') {{
+        const text = `🏡 BẢNG BÁO GIÁ THAM KHẢO CĂN ${{LOT_DATA.code}} (ĐIỀN AN) · SAIGON FARM RESORT
+📍 Dòng sản phẩm: Điền An (The Haven Collection) | Dãy ${{LOT_DATA.block}}
+📐 Diện tích đất: ${{LOT_DATA.areaStr}} m² (100% Sổ đỏ riêng)
+🏨 Loại hình xây dựng: Cụm 30 suites (DTXD 850 m²)
+✨ Tiêu chuẩn bàn giao: Hoàn thiện full nội thất liền tường
+💰 Đơn giá đất ưu đãi: ${{LOT_DATA.unitPriceMil}}
+💵 Giá trị QSDĐ (tiền đất): ${{LOT_DATA.originalPriceBil}} (${{LOT_DATA.originalPriceStr}})
+🏗️ Giá trị xây dựng 30 suites: 7,50 Tỷ (đã gồm 10% VAT)
+💎 TỔNG GIÁ BÁN TRỌN GÓI CẢ ĐẤT & NHÀ: ${{LOT_DATA.houseVatBil}} (đã gồm VAT)
+🎁 Ưu đãi: Tặng 24 tháng phí quản lý + 24 tháng Quản gia Farm Resort (MDS Living)
+💼 Cam kết: Thuê tối thiểu 80 Tr/tháng
+🌐 Chi tiết: https://saigonfarmresort.com/${{LOT_DATA.codeLower}}
+📞 Liên hệ chuyên viên tư vấn để nhận hỗ trợ thực địa!`;
+
+        if (navigator.clipboard) {{
+          navigator.clipboard.writeText(text).then(() => {{
+            showToast('Đã sao chép bảng tính dòng tiền Căn ' + LOT_DATA.code);
+          }});
+        }} else {{
+          promptCopyFallback(text);
+        }}
+        return;
+      }}
+
+      const bonusEl = document.getElementById('bonus800Toggle');
+      const applyBonus = bonusEl ? bonusEl.checked : false;
+      const finalPriceEl = document.getElementById('summaryFinalPrice');
+      const finalPriceStr = finalPriceEl ? finalPriceEl.textContent : LOT_DATA.originalPriceStr;
       let schemeName = 'Phương thức Chuẩn 12 tháng';
       if (currentScheme === 2) schemeName = 'Phương thức Nhanh 70% (Công chứng ngay)';
       if (currentScheme === 3) schemeName = 'Phương thức Nhanh 100% (Sang tên ngay)';

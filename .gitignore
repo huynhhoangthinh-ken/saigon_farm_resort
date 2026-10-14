@@ -25,3 +25,5 @@ dist-invitation/
 dist-site/
 ai_agent_bot/.env
 *.xlsx
+archive/
+

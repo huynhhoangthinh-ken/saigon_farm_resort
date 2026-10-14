@@ -41,7 +41,7 @@
 | **Tổng số sản phẩm toàn khu** | **47 sản phẩm điền trang** độc bản |
 | **Quy mô mở bán Đợt 1 (T9/2026)** | **36 sản phẩm** (Bao gồm: 17 Biệt Phủ + 12 Điền Sản + 07 Điền An) |
 | **Diện tích khuôn viên riêng** | **Trên 1.000 m² mỗi sản phẩm** (từ 646,5 m² – 1.452 m², bình quân ~1.108 m²) |
-| **Pháp lý sản phẩm** | **Sổ đỏ riêng từng nền**, 100% thổ cư, sang tên công chứng ngay |
+| **Pháp lý sản phẩm** | **Sổ đỏ riêng từng sản phẩm**, 100% thổ cư, sang tên công chứng ngay |
 | **Tiêu chuẩn vận hành** | Khu nghỉ dưỡng sinh thái cao cấp mang âm hưởng Văn hóa & Bản sắc Việt |
 | **Thời gian vận hành chính thức** | Bàn giao và vận hành toàn khu vào **Cuối năm 2027** |
 
@@ -119,7 +119,7 @@ Mở bán **36 sản phẩm** với 3 phân khúc chiến lược đáp ứng tr
 
 ### 4.2. Điền Sản (Founders) (12 Nền Độc Bản)
 - **Mã lô:** A8 · A9 · A10 · A11 · A12 · B5 · B8 · B9 · B10 · B17 · B18 · B19
-- **Mô tả:** Dòng sản phẩm đất nền điền trang nghỉ dưỡng sổ đỏ ven hồ dành riêng cho 12 nhà đầu tư đồng hành đầu tiên (Founders Club).
+- **Mô tả:** Dòng sản phẩm sản phẩm điền trang nghỉ dưỡng sổ đỏ ven hồ dành riêng cho 12 nhà đầu tư đồng hành đầu tiên (Founders Club).
 - **Lợi thế:**
   - Sở hữu mức giá gốc đợt 1 từ Đơn vị Phát triển MDS Land với quyền chọn vị trí ưu tiên.
   - Thanh toán 50% ký công chứng HĐ chuyển nhượng QSDĐ (tiến độ 100% đứng sổ đỏ riêng), 50% được giãn tiến độ với lãi suất 0% trong 12 tháng (hoặc tới cuối năm 2027), Đơn vị Phát triển MDS Land cam kết đồng hành hỗ trợ ra hàng với giá dự kiến 13,8 – 15 triệu/m² (tỷ suất sinh lời ~60% – 83%/vốn tự có).
@@ -152,7 +152,7 @@ Dòng Điền Sản dành cho nhà đầu tư vào dòng vốn ở đợt mở b
 2. **Hạ giá trị mỗi giao dịch** — tách thửa theo quy định hiện hành để mở rộng tệp người mua và rút ngắn thời gian. Đây là chiến lược thanh khoản, không phải chiến lược tăng biên lợi nhuận.
 
 **Bốn yếu tố tạo nên biên an toàn cho nhà đầu tư:**
-- **Sổ đỏ riêng từng nền ngay từ ngày ký** — không có rủi ro pháp lý kéo dài, không phát sinh chi phí chuyển đổi mục đích sử dụng đất.
+- **Sổ đỏ riêng từng sản phẩm ngay từ ngày ký** — không có rủi ro pháp lý kéo dài, không phát sinh chi phí chuyển đổi mục đích sử dụng đất.
 - **Vào tiền ở mức giá gốc giai đoạn đầu của vòng đời quần thể** — giá đợt mở bán đầu tiên là mức thấp nhất, trước khi quần thể đi vào vận hành đồng bộ.
 - **Đòn bẩy không lãi suất** — phương án thanh toán 50/50 cho phép nhận công chứng HĐ chuyển nhượng ngay khi thanh toán 50%, phần 50% còn lại giãn 12 tháng sau với lãi suất 0%.
 - **Giá trị tăng theo tiến độ vận hành** — mỗi hạng mục tiện ích đi vào hoạt động là một lần mặt bằng giá của quần thể được thiết lập lại ở nấc thang mới.
@@ -326,7 +326,7 @@ Sở hữu biệt phủ tại Saigon Farm Resort không chỉ để nghỉ dư�
 
 ### 7.4. Lợi ích kép của mô hình
 
-1. **Tích sản gia tăng giá trị lũy tiến:** Quỹ đất hữu hạn chỉ 47 sản phẩm điền trang, sổ đỏ 100% thổ cư từng nền, nằm tại tâm điểm hưởng lợi trực tiếp từ cú hích hạ tầng (Cao tốc Biên Hòa – Vũng Tàu thông xe, Sân bay Quốc tế Long Thành cất cánh).
+1. **Tích sản gia tăng giá trị lũy tiến:** Quỹ đất hữu hạn chỉ 47 sản phẩm điền trang, sổ đỏ 100% thổ cư từng sản phẩm, nằm tại tâm điểm hưởng lợi trực tiếp từ cú hích hạ tầng (Cao tốc Biên Hòa – Vũng Tàu thông xe, Sân bay Quốc tế Long Thành cất cánh).
 2. **Dòng tiền khai thác ổn định:** Tài sản được vận hành bài bản bởi đơn vị chuyên nghiệp, sinh lời tự động ngay cả khi chủ nhân không có mặt tại điền trang.
 3. **Tiết kiệm tối đa chi phí nghỉ dưỡng:** Khoảng thời gian gia đình sử dụng hàng năm là giá trị thụ hưởng nghỉ dưỡng 5 sao thực tế, không tốn chi phí thuê phòng resort đắt đỏ.
 4. **Miễn phí quản lý 24 tháng:** Giảm thiểu tối đa chi phí nắm giữ tài sản trong hai năm đầu tiên.
@@ -336,7 +336,7 @@ Sở hữu biệt phủ tại Saigon Farm Resort không chỉ để nghỉ dư�
 ## 8. PHÁP LÝ, TIẾN ĐỘ & LỘ TRÌNH PHÁT TRIỂN
 
 ### 8.1. Pháp lý vững chắc & Triệt tiêu 3 loại chi phí ngầm
-- Toàn bộ các khuôn viên điền trang trong quần thể đã có **Sổ đỏ riêng từng nền, 100% thổ cư**, pháp lý minh bạch tuyệt đối, công chứng sang tên ngay trong 10 – 20 ngày.
+- Toàn bộ các khuôn viên điền trang trong quần thể đã có **Sổ đỏ riêng từng sản phẩm, 100% thổ cư**, pháp lý minh bạch tuyệt đối, công chứng sang tên ngay trong 10 – 20 ngày.
 - **Triệt tiêu hoàn toàn 3 loại chi phí ngầm khổng lồ** mà nhà đầu tư đất vùng ven tự do thường vấp phải:
   1. **Chi phí thời gian chờ đợi:** Đất nông nghiệp chờ chuyển đổi mục đích sử dụng mất 3 – 5 năm, trong thời gian đó tài sản bị đóng băng, không thể xây dựng, không thể khai thác thương mại và bỏ lỡ nhiều cơ hội đầu tư khác.
   2. **Chi phí chuyển đổi thổ cư thực tế:** Theo bảng giá đất mới sát giá thị trường, tiền thuế sử dụng đất khi chuyển sang đất ở nông thôn là khoản tài chính rất lớn, thường chiếm từ 30% đến 50% tổng giá trị khu đất.
@@ -371,7 +371,7 @@ Sở hữu biệt phủ tại Saigon Farm Resort không chỉ để nghỉ dư�
 ### GHI CHÚ NGUỒN & PHẠM VI SỬ DỤNG
 - Diện tích từng khuôn viên thể hiện theo trích lục bản đồ phân lô được phê duyệt, có thể điều chỉnh nhẹ theo hồ sơ đo đạc bàn giao mốc thực địa chính thức.
 - Cơ cấu 36 sản phẩm mở bán đợt 1: 17 Biệt Phủ · 12 Điền Sản · 07 Điền An. Toàn bộ quần thể giới hạn 47 sản phẩm độc bản.
-- **Tài liệu này KHÔNG công bố giá bán cố định.** Bảng giá chi tiết theo từng mã nền, đơn giá xây dựng và phương án dòng tiền cụ thể được tư vấn viên cung cấp theo từng giao dịch thực tế.
+- **Tài liệu này KHÔNG công bố giá bán cố định.** Bảng giá chi tiết theo từng mã sản phẩm, đơn giá xây dựng và phương án dòng tiền cụ thể được tư vấn viên cung cấp theo từng giao dịch thực tế.
 - Diện tích nêu trong tài liệu là diện tích trên Giấy chứng nhận quyền sử dụng đất (Sổ đỏ).
 - Mức chiết khấu 600 triệu đồng (PA 50/50) và 1 tỷ đồng (PA 100%) là chính sách đặc quyền cố định theo phương án thanh toán ưu việt, khấu trừ trực tiếp vào giá bán.
 - Mốc vận hành hạ tầng giao thông vùng (Cao tốc Biên Hòa – Vũng Tàu, Sân bay Long Thành, Đường ĐT994) căn cứ theo tiến độ công bố của các cơ quan quản lý Nhà nước có thẩm quyền.

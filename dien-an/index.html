@@ -1069,22 +1069,24 @@
       <p class="hero-desc">Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu là 80 triệu/đồng. Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.</p>
       
       <div class="hero-stats-bar">
+        
+        <div class="stat-item">
+          <span class="stat-num" style="color: #0284c7;">8,99 TR/M²</span>
+          <span class="stat-label">Đơn giá đất ưu đãi đột phá</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">30 SUITES</span>
+          <span class="stat-label">Gói xây dựng 850m² full nội thất</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" style="color: #b91c1c;">17,60 TỶ</span>
+          <span class="stat-label">Tổng gói đất & nhà (gồm VAT)</span>
+        </div>
         <div class="stat-item">
           <span class="stat-num">100% THỔ CƯ</span>
-          <span class="stat-label">Sổ đỏ riêng từng lô có sẵn</span>
+          <span class="stat-label">Sổ đỏ riêng từng khuôn viên</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-num">7 SẢN PHẨM</span>
-          <span class="stat-label">Giỏ hàng mở bán tháng 9/2026</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">30.000 m²</span>
-          <span class="stat-label">Đại công viên & Tiện ích resort</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">CÔNG CHỨNG</span>
-          <span class="stat-label">Sang tên sở hữu ngay trong ngày</span>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -1179,12 +1181,12 @@
       <!-- Listing Cards -->
       <div class="listings-grid" id="listings-grid">
         
-        <div class="listing-card" data-area="1.269,38" data-status="available">
+        <div class="listing-card" data-area="1.269,38" data-status="reserved">
           <div class="card-thumb-wrap">
             <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp" alt="Phối cảnh Lô A13" loading="lazy" class="card-thumb">
             <span class="card-badge-code">LÔ A13</span>
-            <span class="card-badge-status status-available">
-              <i class="fa-solid fa-circle-check"></i> Còn hàng
+            <span class="card-badge-status status-reserved">
+              <i class="fa-solid fa-clock"></i> Quỹ Giai Đoạn 2
             </span>
           </div>
           <div class="card-body">
@@ -1200,13 +1202,20 @@
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
-                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">15,30 Tỷ</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: 12,05 Tr/m²</span>
+                
+                <span class="price-label">Tình trạng quỹ căn:</span>
+                <span class="price-val" style="color: #b45309; font-weight: 800; font-size: 1.15rem;">Quỹ GĐ2</span>
+                <span style="font-size: 0.74rem; color: #92400e; display: block;">Chưa mở bán chính thức</span>
+                
               </div>
-              <button type="button" class="card-btn-action" onclick="openBookingModal('A13', '1.269,38', 'Điền An')" title="Đặt lịch / Giữ chỗ lô A13">
-                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </button>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <a href="/a13" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: var(--primary); border: 1px solid var(--primary); padding: 8px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.2s;" title="Xem chi tiết & tiến độ thanh toán căn A13">
+                  <i class="fa-solid fa-file-invoice-dollar" style="margin-right: 4px;"></i> Chi Tiết Căn
+                </a>
+                <button type="button" class="card-btn-action" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;" onclick="openBookingModal('A13', '1.269,38', 'Điền An')" title="Đặt lịch / Giữ chỗ lô A13">
+                  <i class="fa-solid fa-paper-plane"></i> Giữ Chỗ
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1232,13 +1241,29 @@
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
-                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">15,36 Tỷ</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: 12,05 Tr/m²</span>
+                
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="price-label" style="margin: 0; color: #0284c7; font-weight: 700; font-size: 0.78rem;">ĐƠN GIÁ ĐẤT:</span>
+                  <span style="color: #0284c7; font-weight: 800; font-size: 1.05rem;">11,94 Tr/m²</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+                  <span class="price-label" style="margin: 0; font-size: 0.76rem;">Tiền đất:</span>
+                  <span class="price-val" style="color: #1e293b; font-weight: 700; font-size: 0.95rem;">15,22 Tỷ</span>
+                </div>
+                <div style="background: rgba(2, 132, 199, 0.08); border-left: 3px solid #0284c7; border-radius: 4px; padding: 4px 8px; margin-top: 4px; font-size: 0.8rem; color: #0369a1; font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
+                  <span><i class="fa-solid fa-hotel" style="color:#0284c7; margin-right:4px;"></i> Gói cả nhà 30 suites:</span>
+                  <span style="color: #b91c1c; font-size: 0.95rem;">22,79 Tỷ <small style="font-size: 0.68rem; color: #666; font-weight: 400;">(gồm VAT)</small></span>
+                </div>
+                
               </div>
-              <button type="button" class="card-btn-action" onclick="openBookingModal('A14', '1.274,69', 'Điền An')" title="Đặt lịch / Giữ chỗ lô A14">
-                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </button>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <a href="/a14" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: var(--primary); border: 1px solid var(--primary); padding: 8px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.2s;" title="Xem chi tiết & tiến độ thanh toán căn A14">
+                  <i class="fa-solid fa-file-invoice-dollar" style="margin-right: 4px;"></i> Chi Tiết Căn
+                </a>
+                <button type="button" class="card-btn-action" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;" onclick="openBookingModal('A14', '1.274,69', 'Điền An')" title="Đặt lịch / Giữ chỗ lô A14">
+                  <i class="fa-solid fa-paper-plane"></i> Giữ Chỗ
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1257,30 +1282,46 @@
               <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
             </div>
             <h4 class="card-title">Mã Lô A15 · Điền An</h4>
-            <p class="card-desc"><strong>Đặc tính:</strong> VIEW CÁNH ĐỒNG LÚA THANH BÌNH. Đơn giá cực kỳ ưu đãi 11,63 Tr/m², không gian khoáng đạt trong lành.</p>
+            <p class="card-desc"><strong>Đặc tính:</strong> VIEW CÁNH ĐỒNG LÚA THANH BÌNH. Đơn giá đất đột phá chỉ 8,99 Tr/m², tổng gói đất và xây dựng 30 suites 17,60 Tỷ.</p>
             <div class="card-fit">
               <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
               <span><strong>Phù hợp:</strong> Mô hình lưu trú nghỉ dưỡng kết hợp chữa lành (healing retreat) giữa thiên nhiên.</span>
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
-                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">12,98 Tỷ</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: 11,63 Tr/m²</span>
+                
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="price-label" style="margin: 0; color: #0284c7; font-weight: 700; font-size: 0.78rem;">ĐƠN GIÁ ĐẤT:</span>
+                  <span style="color: #0284c7; font-weight: 800; font-size: 1.05rem;">8,99 Tr/m²</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+                  <span class="price-label" style="margin: 0; font-size: 0.76rem;">Tiền đất:</span>
+                  <span class="price-val" style="color: #1e293b; font-weight: 700; font-size: 0.95rem;">10,03 Tỷ</span>
+                </div>
+                <div style="background: rgba(2, 132, 199, 0.08); border-left: 3px solid #0284c7; border-radius: 4px; padding: 4px 8px; margin-top: 4px; font-size: 0.8rem; color: #0369a1; font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
+                  <span><i class="fa-solid fa-hotel" style="color:#0284c7; margin-right:4px;"></i> Gói cả nhà 30 suites:</span>
+                  <span style="color: #b91c1c; font-size: 0.95rem;">17,60 Tỷ <small style="font-size: 0.68rem; color: #666; font-weight: 400;">(gồm VAT)</small></span>
+                </div>
+                
               </div>
-              <button type="button" class="card-btn-action" onclick="openBookingModal('A15', '1.115,70', 'Điền An')" title="Đặt lịch / Giữ chỗ lô A15">
-                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </button>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <a href="/a15" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: var(--primary); border: 1px solid var(--primary); padding: 8px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.2s;" title="Xem chi tiết & tiến độ thanh toán căn A15">
+                  <i class="fa-solid fa-file-invoice-dollar" style="margin-right: 4px;"></i> Chi Tiết Căn
+                </a>
+                <button type="button" class="card-btn-action" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;" onclick="openBookingModal('A15', '1.115,70', 'Điền An')" title="Đặt lịch / Giữ chỗ lô A15">
+                  <i class="fa-solid fa-paper-plane"></i> Giữ Chỗ
+                </button>
+              </div>
             </div>
           </div>
         </div>
         
-        <div class="listing-card" data-area="1.012,53" data-status="available">
+        <div class="listing-card" data-area="1.012,53" data-status="reserved">
           <div class="card-thumb-wrap">
             <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg" alt="Phối cảnh Lô A22" loading="lazy" class="card-thumb">
             <span class="card-badge-code">LÔ A22</span>
-            <span class="card-badge-status status-available">
-              <i class="fa-solid fa-circle-check"></i> Còn hàng
+            <span class="card-badge-status status-reserved">
+              <i class="fa-solid fa-clock"></i> Quỹ Giai Đoạn 2
             </span>
           </div>
           <div class="card-body">
@@ -1296,13 +1337,20 @@
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
-                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">15,07 Tỷ</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: 14,88 Tr/m²</span>
+                
+                <span class="price-label">Tình trạng quỹ căn:</span>
+                <span class="price-val" style="color: #b45309; font-weight: 800; font-size: 1.15rem;">Quỹ GĐ2</span>
+                <span style="font-size: 0.74rem; color: #92400e; display: block;">Chưa mở bán chính thức</span>
+                
               </div>
-              <button type="button" class="card-btn-action" onclick="openBookingModal('A22', '1.012,53', 'Điền An')" title="Đặt lịch / Giữ chỗ lô A22">
-                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </button>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <a href="/a22" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: var(--primary); border: 1px solid var(--primary); padding: 8px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.2s;" title="Xem chi tiết & tiến độ thanh toán căn A22">
+                  <i class="fa-solid fa-file-invoice-dollar" style="margin-right: 4px;"></i> Chi Tiết Căn
+                </a>
+                <button type="button" class="card-btn-action" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;" onclick="openBookingModal('A22', '1.012,53', 'Điền An')" title="Đặt lịch / Giữ chỗ lô A22">
+                  <i class="fa-solid fa-paper-plane"></i> Giữ Chỗ
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1321,20 +1369,36 @@
               <span class="card-legal"><i class="fa-solid fa-shield-halved"></i> 100% Thổ Cư · Sổ Riêng</span>
             </div>
             <h4 class="card-title">Mã Lô B22 · Điền An</h4>
-            <p class="card-desc"><strong>Đặc tính:</strong> ĐẦU CỤM PHÍA NAM KỀ CLUBHOUSE. Hướng Đông Bắc mát lành, tiếp cận thuận tiện từ trục chính D1.</p>
+            <p class="card-desc"><strong>Đặc tính:</strong> ĐẦU CỤM PHÍA NAM KỀ CLUBHOUSE. Đơn giá đất chỉ 9,60 Tr/m², tổng gói đất và xây dựng 30 suites 17,60 Tỷ.</p>
             <div class="card-fit">
               <i class="fa-regular fa-compass" style="color: #2e7d32; margin-right: 4px;"></i>
               <span><strong>Phù hợp:</strong> Phát triển cụm phòng lưu trú chuyên gia cao cấp, công suất lấp đầy luôn đạt mức tối đa.</span>
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
-                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">12,66 Tỷ</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: 12,11 Tr/m²</span>
+                
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="price-label" style="margin: 0; color: #0284c7; font-weight: 700; font-size: 0.78rem;">ĐƠN GIÁ ĐẤT:</span>
+                  <span style="color: #0284c7; font-weight: 800; font-size: 1.05rem;">9,60 Tr/m²</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+                  <span class="price-label" style="margin: 0; font-size: 0.76rem;">Tiền đất:</span>
+                  <span class="price-val" style="color: #1e293b; font-weight: 700; font-size: 0.95rem;">10,03 Tỷ</span>
+                </div>
+                <div style="background: rgba(2, 132, 199, 0.08); border-left: 3px solid #0284c7; border-radius: 4px; padding: 4px 8px; margin-top: 4px; font-size: 0.8rem; color: #0369a1; font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
+                  <span><i class="fa-solid fa-hotel" style="color:#0284c7; margin-right:4px;"></i> Gói cả nhà 30 suites:</span>
+                  <span style="color: #b91c1c; font-size: 0.95rem;">17,60 Tỷ <small style="font-size: 0.68rem; color: #666; font-weight: 400;">(gồm VAT)</small></span>
+                </div>
+                
               </div>
-              <button type="button" class="card-btn-action" onclick="openBookingModal('B22', '1.044,86', 'Điền An')" title="Đặt lịch / Giữ chỗ lô B22">
-                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </button>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <a href="/b22" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: var(--primary); border: 1px solid var(--primary); padding: 8px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.2s;" title="Xem chi tiết & tiến độ thanh toán căn B22">
+                  <i class="fa-solid fa-file-invoice-dollar" style="margin-right: 4px;"></i> Chi Tiết Căn
+                </a>
+                <button type="button" class="card-btn-action" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;" onclick="openBookingModal('B22', '1.044,86', 'Điền An')" title="Đặt lịch / Giữ chỗ lô B22">
+                  <i class="fa-solid fa-paper-plane"></i> Giữ Chỗ
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1360,23 +1424,39 @@
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
-                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">13,98 Tỷ</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: 12,11 Tr/m²</span>
+                
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="price-label" style="margin: 0; color: #0284c7; font-weight: 700; font-size: 0.78rem;">ĐƠN GIÁ ĐẤT:</span>
+                  <span style="color: #0284c7; font-weight: 800; font-size: 1.05rem;">11,99 Tr/m²</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+                  <span class="price-label" style="margin: 0; font-size: 0.76rem;">Tiền đất:</span>
+                  <span class="price-val" style="color: #1e293b; font-weight: 700; font-size: 0.95rem;">13,84 Tỷ</span>
+                </div>
+                <div style="background: rgba(2, 132, 199, 0.08); border-left: 3px solid #0284c7; border-radius: 4px; padding: 4px 8px; margin-top: 4px; font-size: 0.8rem; color: #0369a1; font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
+                  <span><i class="fa-solid fa-hotel" style="color:#0284c7; margin-right:4px;"></i> Gói cả nhà 30 suites:</span>
+                  <span style="color: #b91c1c; font-size: 0.95rem;">21,41 Tỷ <small style="font-size: 0.68rem; color: #666; font-weight: 400;">(gồm VAT)</small></span>
+                </div>
+                
               </div>
-              <button type="button" class="card-btn-action" onclick="openBookingModal('B23', '1.154,54', 'Điền An')" title="Đặt lịch / Giữ chỗ lô B23">
-                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </button>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <a href="/b23" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: var(--primary); border: 1px solid var(--primary); padding: 8px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.2s;" title="Xem chi tiết & tiến độ thanh toán căn B23">
+                  <i class="fa-solid fa-file-invoice-dollar" style="margin-right: 4px;"></i> Chi Tiết Căn
+                </a>
+                <button type="button" class="card-btn-action" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;" onclick="openBookingModal('B23', '1.154,54', 'Điền An')" title="Đặt lịch / Giữ chỗ lô B23">
+                  <i class="fa-solid fa-paper-plane"></i> Giữ Chỗ
+                </button>
+              </div>
             </div>
           </div>
         </div>
         
-        <div class="listing-card" data-area="1.336,20" data-status="available">
+        <div class="listing-card" data-area="1.336,20" data-status="reserved">
           <div class="card-thumb-wrap">
             <img src="assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_4.jpg" alt="Phối cảnh Lô B24" loading="lazy" class="card-thumb">
             <span class="card-badge-code">LÔ B24</span>
-            <span class="card-badge-status status-available">
-              <i class="fa-solid fa-circle-check"></i> Còn hàng
+            <span class="card-badge-status status-reserved">
+              <i class="fa-solid fa-clock"></i> Quỹ Giai Đoạn 2
             </span>
           </div>
           <div class="card-body">
@@ -1392,13 +1472,20 @@
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
-                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">16,10 Tỷ</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: 12,05 Tr/m²</span>
+                
+                <span class="price-label">Tình trạng quỹ căn:</span>
+                <span class="price-val" style="color: #b45309; font-weight: 800; font-size: 1.15rem;">Quỹ GĐ2</span>
+                <span style="font-size: 0.74rem; color: #92400e; display: block;">Chưa mở bán chính thức</span>
+                
               </div>
-              <button type="button" class="card-btn-action" onclick="openBookingModal('B24', '1.336,20', 'Điền An')" title="Đặt lịch / Giữ chỗ lô B24">
-                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </button>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <a href="/b24" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: var(--primary); border: 1px solid var(--primary); padding: 8px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.2s;" title="Xem chi tiết & tiến độ thanh toán căn B24">
+                  <i class="fa-solid fa-file-invoice-dollar" style="margin-right: 4px;"></i> Chi Tiết Căn
+                </a>
+                <button type="button" class="card-btn-action" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;" onclick="openBookingModal('B24', '1.336,20', 'Điền An')" title="Đặt lịch / Giữ chỗ lô B24">
+                  <i class="fa-solid fa-paper-plane"></i> Giữ Chỗ
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1465,7 +1552,7 @@
         <a href="/dien-san" class="collection-switch-card">
           <div class="switch-card-bg" style="background-image: url('assets/Index_asset/tien_ich_3D/Tong_quan.jpg');"></div>
           <div class="switch-card-content">
-            <span class="switch-badge">11 Nền Độc Bản Tiên Phong</span>
+            <span class="switch-badge">11 Sản Phẩm Độc Bản Tiên Phong</span>
             <h3>Điền Sản</h3>
             <p class="switch-sub">The Founders Collection</p>
             <p class="switch-desc">Tích Sản Tài Chính & Quyền Ưu Tiên Ra Hàng Đón Sóng Hạ Tầng</p>

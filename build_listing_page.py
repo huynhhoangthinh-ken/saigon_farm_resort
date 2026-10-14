@@ -25,6 +25,8 @@ LOT_COORDINATES = {
     'A16': (52.60, 56.83),
     'A17': (50.40, 55.70),
     'A18': (48.34, 54.84),
+    'A19': (46.49, 53.97),
+    'A20': (44.60, 53.36),
     'A21': (42.49, 52.45),
     'A22': (40.10, 50.34),
     'A23': (37.44, 48.40),
@@ -97,11 +99,19 @@ def update_listing():
         unit_price_str = item.get("unit_price_str", "")
         price_bil = item.get("price_billion", "")
         price_str = item.get("price_str", "")
+        house_vat_bil = item.get("house_price_vat_billion")
+        phase = item.get("phase", "GĐ1")
         status_type = item.get("status_type", "available")
         status_text = item.get("status", "Còn hàng")
 
         cat_color_class = f"pin-{cat_slug}"
         reserved_class = "pin-reserved" if status_type == "reserved" else ""
+
+        house_row_tooltip = ""
+        if house_vat_bil:
+            house_row_tooltip = f'<div style="font-size:0.75rem; color:#fca5a5; margin-top:3px;"><i class="fa-solid fa-house-chimney"></i> Cả nhà: <strong>{house_vat_bil}</strong> (gồm VAT)</div>'
+        elif phase == "GĐ2":
+            house_row_tooltip = '<div style="font-size:0.75rem; color:#fde68a; margin-top:3px;">Chờ công bố bảng giá GĐ2</div>'
 
         hotspot = f"""
         <div class="map-hotspot {cat_color_class} {reserved_class}"
@@ -129,6 +139,7 @@ def update_listing():
               <div class="tooltip-price-val">{price_bil}</div>
               <div class="tooltip-unit-val">{unit_price_mil}</div>
             </div>
+            {house_row_tooltip}
             <div class="tooltip-action-row" style="display: flex; gap: 6px;">
               <a href="/{code.lower()}" class="btn-tooltip-booking" style="flex: 1; text-align: center; text-decoration: none;">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Căn {code}
@@ -163,6 +174,8 @@ def update_listing():
         price = item.get("price", 0)
         price_str = item.get("price_str", "")
         price_bil = item.get("price_billion", "")
+        house_vat_bil = item.get("house_price_vat_billion")
+        phase = item.get("phase", "GĐ1")
         status_type = item.get("status_type", "available")
         status_text = item.get("status", "Còn hàng")
         features = item.get("features", "")
@@ -214,6 +227,92 @@ def update_listing():
             <div class="card-policy-box policy-manor">
               <i class="fa-solid fa-crown"></i>
               <span><strong>Đặc Quyền:</strong> Biệt Phủ Điền Trang - Gói vận hành thuê 150 đêm (thu nhập 600 triệu/năm) và 215 đêm nghỉ dưỡng + chia sẻ 50% doanh thu cùng MDS Living</span>
+            </div>
+            """
+
+        # Price Block construction
+        if phase == "GĐ2":
+            price_block_html = """
+            <div class="card-price-section" style="background: rgba(180, 83, 9, 0.05); border: 1px dashed rgba(180, 83, 9, 0.3);">
+              <div class="price-header-row">
+                <span class="price-type-tag" style="background: rgba(180, 83, 9, 0.15); color: #b45309; border-color: rgba(180, 83, 9, 0.3); font-weight:700;">QUỸ GIAI ĐOẠN 2</span>
+                <span class="unit-price-tag" style="color: #b45309;">Chưa mở bán</span>
+              </div>
+              <div class="price-main-row">
+                <div class="price-display">
+                  <span class="price-billion" style="color: #b45309;">Chờ Công Bố GĐ2</span>
+                  <span class="price-exact" style="color: #92400e;">(Nhận đăng ký ưu tiên vị trí)</span>
+                </div>
+                <span class="price-note-badge" style="background: #fef3c7; color: #92400e;">Quỹ Dự Bị GĐ2</span>
+              </div>
+            </div>
+            """
+        elif cat_slug == "dien-an":
+            price_block_html = f"""
+            <div class="card-price-section" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.05) 0%, rgba(201, 169, 110, 0.08) 100%); border: 1px solid rgba(2, 132, 199, 0.28);">
+              <div class="price-header-row">
+                <span class="price-type-tag" style="background: #0284c7; color: #fff; font-weight: 700; border: none;">ĐƠN GIÁ ĐẤT: {unit_price_mil}</span>
+                <span class="unit-price-tag" style="color: #0369a1; font-weight: 700;"><i class="fa-solid fa-hotel"></i> 30 Suites (850m²)</span>
+              </div>
+              <div class="price-main-row">
+                <div class="price-display">
+                  <span class="price-billion" style="color: #0c4a6e;">{price_bil}</span>
+                  <span class="price-exact" style="color: #0369a1;">(Tiền đất: {price_str})</span>
+                </div>
+                <span class="price-note-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Đất chỉ {unit_price_mil}</span>
+              </div>
+              <div class="house-price-row" style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(2, 132, 199, 0.35); display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;">
+                <span style="color: #0f172a;"><i class="fa-solid fa-house-chimney" style="color: #0284c7;"></i> <strong>Tổng Gói Đất & XD:</strong></span>
+                <span style="color: #b91c1c; font-weight: 800; font-size: 1.05rem;">{house_vat_bil} <small style="font-weight: 500; font-size: 0.72rem; color: #64748b;">(gồm VAT)</small></span>
+              </div>
+            </div>
+            """
+        else:
+            house_price_addon = ""
+            if house_vat_bil:
+                house_price_addon = f"""
+                <div class="house-price-row" style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(201, 169, 110, 0.3); display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+                  <span style="color: #556b60;"><i class="fa-solid fa-house-chimney"></i> <strong>Gói Cả Nhà (gồm XD):</strong></span>
+                  <span style="color: #b91c1c; font-weight: 700; font-size: 0.95rem;">{house_vat_bil} <small style="font-weight: 500; font-size: 0.74rem; color: #777;">(gồm VAT)</small></span>
+                </div>
+                """
+            price_block_html = f"""
+            <div class="card-price-section">
+              <div class="price-header-row">
+                <span class="price-type-tag">GIÁ ĐẤT NIÊM YẾT</span>
+                <span class="unit-price-tag">Đơn giá: <strong>{unit_price_mil}</strong></span>
+              </div>
+              <div class="price-main-row">
+                <div class="price-display">
+                  <span class="price-billion">{price_bil}</span>
+                  <span class="price-exact">({price_str})</span>
+                </div>
+                <span class="price-note-badge">Trước CSBH</span>
+              </div>
+              {house_price_addon}
+            </div>
+            """
+
+        # Bonus Pill per collection
+        if cat_slug == "dien-an":
+            bonus_pill_html = """
+            <div class="card-bonus-construction-pill" style="background: rgba(2, 132, 199, 0.08); border-color: rgba(2, 132, 199, 0.25); color: #0369a1;">
+              <i class="fa-solid fa-hotel"></i>
+              <span>Bàn giao hoàn thiện: <strong>Full nội thất 30 suites liền tường (850 m²)</strong></span>
+            </div>
+            """
+        elif cat_slug == "dien-san":
+            bonus_pill_html = """
+            <div class="card-bonus-construction-pill" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.25); color: #065f46;">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi TT sớm 50/50: <strong>Giảm 600 Triệu</strong> · TT 100%: <strong>Giảm 1 Tỷ</strong></span>
+            </div>
+            """
+        else:
+            bonus_pill_html = """
+            <div class="card-bonus-construction-pill">
+              <i class="fa-solid fa-gift"></i>
+              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
             </div>
             """
 
@@ -298,26 +397,10 @@ def update_listing():
 
             {policy_html}
 
-            <!-- Construction 800M Bonus Callout -->
-            <div class="card-bonus-construction-pill">
-              <i class="fa-solid fa-gift"></i>
-              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
-            </div>
+            {bonus_pill_html}
 
             <!-- Price Block -->
-            <div class="card-price-section">
-              <div class="price-header-row">
-                <span class="price-type-tag">GIÁ GỐC NIÊM YẾT ĐỢT 1</span>
-                <span class="unit-price-tag">Đơn giá: <strong>{unit_price_mil}</strong></span>
-              </div>
-              <div class="price-main-row">
-                <div class="price-display">
-                  <span class="price-billion">{price_bil}</span>
-                  <span class="price-exact">({price_str})</span>
-                </div>
-                <span class="price-note-badge">Trước CSBH & Ưu Đãi</span>
-              </div>
-            </div>
+            {price_block_html}
 
             <!-- Share Box with Direct Clean URL: saigonfarmresort.com/[code] -->
             <div class="card-share-box" onclick="event.stopPropagation()">
@@ -379,10 +462,36 @@ def update_listing():
         price = item.get("price", 0)
         price_str = item.get("price_str", "")
         price_bil = item.get("price_billion", "")
+        house_vat_bil = item.get("house_price_vat_billion")
+        phase = item.get("phase", "GĐ1")
         status_type = item.get("status_type", "available")
         status_text = item.get("status", "Còn hàng")
 
         status_class = "status-available" if status_type == "available" else "status-reserved"
+
+        if phase == "GĐ2":
+            table_price_cell = """
+            <strong class="price-bil-text" style="color:#b45309;">Quỹ GĐ2</strong>
+            <span class="price-full-sub" style="color:#92400e;">Chưa công bố</span>
+            """
+            table_status_cell = '<span class="table-status-pill status-reserved" style="background:#fef3c7; color:#92400e; border:1px solid #fde68a;">Quỹ GĐ2</span>'
+        elif cat_slug == "dien-an":
+            table_price_cell = f"""
+            <div style="line-height: 1.35;">
+              <div><strong class="price-bil-text" style="color:#0c4a6e;">Đất: {price_bil}</strong> <span style="font-size:0.75rem; color:#0284c7; font-weight:700;">({unit_price_mil})</span></div>
+              <span class="price-full-sub">{price_str}</span>
+              <span style="display:block; font-size:0.78rem; color:#b91c1c; margin-top:3px; font-weight:700;"><i class="fa-solid fa-hotel"></i> Cả Đất & XD: {house_vat_bil}</span>
+            </div>
+            """
+            table_status_cell = f'<span class="table-status-pill {status_class}">{status_text}</span>'
+        else:
+            table_house_sub = f'<span style="display:block; font-size:0.75rem; color:#b91c1c; margin-top:2px; font-weight:600;"><i class="fa-solid fa-house-chimney"></i> Cả nhà: {house_vat_bil}</span>' if house_vat_bil else ""
+            table_price_cell = f"""
+            <strong class="price-bil-text">{price_bil}</strong>
+            <span class="price-full-sub">{price_str}</span>
+            {table_house_sub}
+            """
+            table_status_cell = f'<span class="table-status-pill {status_class}">{status_text}</span>'
 
         row = f"""
         <tr class="table-row-item"
@@ -414,10 +523,9 @@ def update_listing():
           <td class="col-road">{road}</td>
           <td class="col-unit-price"><span class="unit-p-text">{unit_price_str}</span></td>
           <td class="col-total-price">
-            <strong class="price-bil-text">{price_bil}</strong>
-            <span class="price-full-sub">{price_str}</span>
+            {table_price_cell}
           </td>
-          <td class="col-status"><span class="table-status-pill {status_class}">{status_text}</span></td>
+          <td class="col-status">{table_status_cell}</td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/{code.lower()}" class="btn-table-action" title="Xem chi tiết & CSBH căn {code}">
@@ -458,7 +566,7 @@ def update_listing():
   <base href="/">
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 | Saigon Farm Resort</title>
-  <meta content="Bản đồ mặt bằng tương tác và giỏ hàng 34 sản phẩm mở bán Đợt 1 tại Saigon Farm Resort: Biệt Phủ Điền Trang, Điền Sản và Điền An. Xem vị trí thực địa, đơn giá và giá niêm yết gốc (Original Price Listing) trực tiếp từ Đơn vị Phát triển MDS Land." name="description"/>
+  <meta content="Bản đồ mặt bằng tương tác và giỏ hàng 36 sản phẩm mở bán Đợt 1 tại Saigon Farm Resort: Biệt Phủ Điền Trang, Điền Sản và Điền An. Xem vị trí thực địa, đơn giá và giá niêm yết gốc (Original Price Listing) trực tiếp từ Đơn vị Phát triển MDS Land." name="description"/>
   <meta name="keywords" content="mặt bằng saigon farm resort, sơ đồ phân lô saigon farm resort, giỏ hàng saigon farm resort, bảng giá saigon farm resort, biệt phủ điền trang, điền sản mds living, điền an lưu trú"/>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   <link rel="canonical" href="https://saigonfarmresort.com/giohang">
@@ -468,13 +576,13 @@ def update_listing():
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saigonfarmresort.com/giohang">
   <meta property="og:title" content="Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 | Saigon Farm Resort">
-  <meta property="og:description" content="34 sản phẩm đất nền biệt phủ & điền trang sinh thái ven hồ 100ha. Bản đồ phân lô tương tác và bảng giá niêm yết gốc từ Đơn vị Phát triển MDS Land.">
+  <meta property="og:description" content="36 sản phẩm biệt phủ & điền trang sinh thái ven hồ 100ha. Bản đồ phân lô tương tác và bảng giá niêm yết gốc từ Đơn vị Phát triển MDS Land.">
   <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/masterplan_tmb_sales.webp">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Giỏ Hàng & Mặt Bằng Phân Lô Tương Tác | Saigon Farm Resort">
-  <meta name="twitter:description" content="34 sản phẩm đất nền biệt phủ & điền trang sinh thái ven hồ 100ha.">
+  <meta name="twitter:description" content="36 sản phẩm biệt phủ & điền trang sinh thái ven hồ 100ha.">
   <meta name="twitter:image" content="https://saigonfarmresort.com/assets/Index_asset/masterplan_tmb_sales.webp">
 
   <!-- Fonts & Icons -->
@@ -975,6 +1083,246 @@ def update_listing():
       display: block;
       pointer-events: none;
       user-select: none;
+    }}
+
+    /* Perspective Switcher Tabs */
+    .mp-perspective-switcher {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      padding: 6px;
+      background: #f4efe6;
+      border: 1px solid #e2d7c3;
+      border-radius: 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }}
+    .mp-perspective-switcher::-webkit-scrollbar {{
+      display: none;
+    }}
+    .mp-view-tab {{
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: #5a544b;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }}
+    .mp-view-tab i {{
+      font-size: 1.15rem;
+      color: #8c8273;
+      transition: color 0.25s ease;
+    }}
+    .mp-view-tab .tab-badge {{
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 10px;
+      color: #6d6455;
+      font-weight: 500;
+    }}
+    .mp-view-tab:hover {{
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--primary);
+    }}
+    .mp-view-tab.active {{
+      background: #ffffff;
+      color: var(--primary);
+      border-color: #d1c1a5;
+      box-shadow: 0 4px 12px rgba(15, 31, 23, 0.08);
+    }}
+    .mp-view-tab.active i {{
+      color: var(--gold);
+    }}
+    .mp-view-tab.active .tab-badge {{
+      background: rgba(201, 169, 110, 0.22);
+      color: #8a6526;
+      font-weight: 700;
+    }}
+
+    .mp-perspective-panel {{
+      display: none;
+      animation: fadeInPerspective 0.3s ease;
+    }}
+    .mp-perspective-panel.active {{
+      display: block;
+    }}
+    @keyframes fadeInPerspective {{
+      from {{ opacity: 0; transform: translateY(4px); }}
+      to {{ opacity: 1; transform: translateY(0); }}
+    }}
+
+    .map-stage-3d-wide {{
+      width: 2560px;
+      height: 1440px;
+      position: relative;
+    }}
+    .map-stage-3d-close {{
+      width: 2495px;
+      height: 1403px;
+      position: relative;
+    }}
+
+    .mp-actions-group {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }}
+    .btn-mp-action {{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: #fbf7ee;
+      border: 1px solid var(--gold);
+      color: var(--primary);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }}
+    .btn-mp-action:hover {{
+      background: var(--gold);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(201, 169, 110, 0.35);
+    }}
+
+    /* 3D Feature Overlay Badges */
+    .mp-feature-overlay {{
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      z-index: 15;
+      pointer-events: none;
+    }}
+    .feature-tag {{
+      background: rgba(10, 25, 18, 0.82);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      color: #f7f3ec;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }}
+    .feature-tag i {{
+      color: var(--gold);
+    }}
+
+    /* MasterPlan Lightbox Modal */
+    .mp-lightbox-modal {{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(4, 12, 8, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }}
+    .mp-lightbox-modal.active {{
+      display: flex;
+      opacity: 1;
+    }}
+    .mp-lightbox-dialog {{
+      width: 95vw;
+      max-width: 1800px;
+      height: 92vh;
+      display: flex;
+      flex-direction: column;
+      background: #08160f;
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    }}
+    .mp-lightbox-header {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: #0f2419;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+    }}
+    .mp-lightbox-header h4 {{
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: #f5f0e6;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }}
+    .mp-lightbox-close {{
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 1.4rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      transition: all 0.2s;
+    }}
+    .mp-lightbox-close:hover {{
+      background: #e11d48;
+      border-color: #e11d48;
+    }}
+    .mp-lightbox-body {{
+      flex: 1;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050d09;
+      padding: 12px;
+    }}
+    .mp-lightbox-body img {{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }}
+    .mp-lightbox-body img.zoomed-in {{
+      max-width: none;
+      max-height: none;
+      cursor: zoom-out;
     }}
 
     /* Map Floating Controls */
@@ -2913,7 +3261,7 @@ def update_listing():
     <div class="topbar-container">
       <div class="topbar-left">
         <span><i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> Xã Đất Đỏ, TP. Hồ Chí Minh</span>
-        <span><i class="fa-solid fa-shield-halved" style="color:#4ade80;"></i> Sổ đỏ thổ cư 100% từng nền</span>
+        <span><i class="fa-solid fa-shield-halved" style="color:#4ade80;"></i> Sổ đỏ thổ cư 100% từng sản phẩm</span>
       </div>
       <div class="topbar-right">
         <a href="tel:0909000712" style="font-weight:700; color:#fff; background:rgba(201,169,110,0.22); padding:3px 10px; border-radius:14px; border:1px solid rgba(201,169,110,0.5);"><i class="fa-solid fa-phone-volume" style="color:var(--gold);"></i> Check Căn: 0909 000 712</a>
@@ -2967,7 +3315,7 @@ def update_listing():
         </div>
         <h1 class="hero-title">BẢNG HÀNG & GIỎ HÀNG MỞ BÁN ĐỢT 1</h1>
         <p class="hero-sub">
-          Cập nhật thông tin chi tiết mã căn, diện tích, vị trí, hướng, view, đơn giá và giá bán niêm yết của 34 sản phẩm đất nền nghỉ dưỡng ven hồ 100ha tại Saigon Farm Resort.
+          Cập nhật thông tin chi tiết mã căn, diện tích, vị trí, hướng, view, đơn giá, giá đất và trọn gói cả nhà (gồm xây dựng) của 36 sản phẩm nghỉ dưỡng ven hồ 100ha tại Saigon Farm Resort.
         </p>
       </div>
 
@@ -2975,12 +3323,13 @@ def update_listing():
       <div class="notice-original-price">
         <i class="fa-solid fa-circle-exclamation notice-icon"></i>
         <div class="notice-text">
-          <strong>LƯU Ý VỀ GIÁ NIÊM YẾT GỐC (ORIGINAL PRICE LISTING):</strong>
-          <p>Bảng giá dưới đây là <strong>Giá Niêm Yết Công Bố Trước Chính Sách Bán Hàng</strong> của Đơn vị Phát triển MDS Land. Khách hàng giao dịch trong Đợt 1 sẽ được áp dụng các chính sách ưu đãi đặc quyền:</p>
+          <strong>LƯU Ý VỀ BẢNG GIÁ VÀ PHƯƠNG ÁN CÓ NHÀ (ORIGINAL PRICE LISTING):</strong>
+          <p>Bảng giá dưới đây cập nhật phương án <strong>Giá Đất Niêm Yết</strong> và <strong>Phương Án Cả Nhà (Trọn Gói Xây Dựng gồm VAT)</strong> trực tiếp từ Đơn vị Phát triển MDS Land. Khách hàng giao dịch sẽ được áp dụng các chính sách ưu đãi đặc quyền:</p>
           <ul>
-            <li><strong>Điền Sản (11 nền):</strong> Thanh toán sớm 50/50 giảm ngay <strong>600 Triệu</strong> · Thanh toán 100% giảm <strong>1 Tỷ đồng</strong> · Giữ lại 50% Đơn vị Phát triển hỗ trợ ra hàng giá 13,8 – 15 Tr/m² hoặc giãn thanh toán 12 tháng với lãi suất 0%.</li>
-            <li><strong>Điền An (7 cụm):</strong> Hợp đồng thuê dài hạn từ MDS Living, cam kết thuê tối thiểu <strong>80 Tr/tháng (960 Tr/năm)</strong> với cụm từ 20 phòng trở lên.</li>
-            <li><strong>Biệt Phủ Điền Trang (16 dinh thự):</strong> MDS Living cam kết thuê lại 150 đêm/năm (thu nhập 600 triệu/năm) và 215 đêm nghỉ dưỡng cho gia chủ + chia sẻ 50% doanh thu cùng MDS Living.</li>
+            <li><strong>Điền Sản (11 sản phẩm):</strong> Dòng sản phẩm tự xây. Ưu đãi TT sớm 50/50 giảm ngay <strong>600 Triệu</strong> · Thanh toán 100% giảm <strong>1 Tỷ đồng</strong> · Giãn thanh toán 12 tháng 0% lãi suất.</li>
+            <li><strong>Điền An (7 cụm):</strong> Hợp đồng thuê dài hạn từ MDS Living, cam kết thuê tối thiểu <strong>80 Tr/tháng (960 Tr/năm)</strong> với cụm từ 20 phòng trở lên. (Các căn A13, A22, B24 thuộc Quỹ GĐ2).</li>
+            <li><strong>Biệt Phủ Điền Trang (18 dinh thự):</strong> Khách hàng có thể lựa chọn Mua Đất giãn xây dựng hoặc Gói Cả Nhà hoàn thiện mặt ngoài thô bên trong. MDS Living cam kết đồng hành khai thác vận hành lưu trú hoặc mua lại 90–150 đêm/năm (4 triệu/đêm).</li>
+            <li><strong>Đặc Quyền Hoàn Thiện Xây Dựng:</strong> Tặng gói quà tặng / giảm ngay <strong>800.000.000 đ</strong> khi hoàn tất xây dựng trước Q4/2027.</li>
           </ul>
         </div>
       </div>
@@ -3036,56 +3385,166 @@ def update_listing():
   <main class="main-content">
 
     <!-- ==============================================================
-         INTERACTIVE MASTER PLAN
+         INTERACTIVE MASTER PLAN (2D & 3D MULTI-PERSPECTIVE)
          ============================================================== -->
     <section class="masterplan-interactive-section" id="masterplanSection">
-      <div class="map-header">
-        <div class="map-title-group">
-          <h2><i class="fa-solid fa-map-location-dot" style="color:var(--gold);"></i> SƠ ĐỒ MẶT BẰNG PHÂN LÔ TƯƠNG TÁC</h2>
-          <p>Click hoặc chạm vào từng lô trên sơ đồ để xem vị trí thực tế, cảnh quan, diện tích và giá niêm yết gốc đợt 1</p>
+      <!-- Perspective Mode Switcher Tabs -->
+      <div class="mp-perspective-switcher">
+        <button type="button" class="mp-view-tab active" id="tabMp2D" onclick="switchMasterPlanPerspective('2d')">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span class="tab-label">Sơ Đồ Phân Lô 2D</span>
+          <span class="tab-badge">{total_count} Căn · Tương Tác Ghim</span>
+        </button>
+        <button type="button" class="mp-view-tab" id="tabMp3DWide" onclick="switchMasterPlanPerspective('3d-wide')">
+          <i class="fa-solid fa-mountain-sun"></i>
+          <span class="tab-label">3D Toàn Cảnh Hồ Sinh Thái</span>
+          <span class="tab-badge">Góc Rộng 5K Ven Hồ</span>
+        </button>
+        <button type="button" class="mp-view-tab" id="tabMp3DClose" onclick="switchMasterPlanPerspective('3d-close')">
+          <i class="fa-solid fa-house-chimney-window"></i>
+          <span class="tab-label">3D Cận Cảnh Quần Thể</span>
+          <span class="tab-badge">Biệt Phủ & Bến Thuyền</span>
+        </button>
+      </div>
+
+      <!-- VIEW 1: 2D Interactive Lot Map -->
+      <div class="mp-perspective-panel active" id="panelMp2D">
+        <div class="map-header">
+          <div class="map-title-group">
+            <h2><i class="fa-solid fa-map-location-dot" style="color:var(--gold);"></i> SƠ ĐỒ MẶT BẰNG PHÂN LÔ TƯƠNG TÁC</h2>
+            <p>Click hoặc chạm vào từng lô trên sơ đồ để xem vị trí thực tế, cảnh quan, diện tích và giá niêm yết gốc đợt 1</p>
+          </div>
+
+          <div class="map-legend-group">
+            <div class="legend-item legend-manor">
+              <span class="legend-dot"></span> Biệt Phủ Điền Trang ({manor_count})
+            </div>
+            <div class="legend-item legend-founders">
+              <span class="legend-dot"></span> Điền Sản ({founders_count})
+            </div>
+            <div class="legend-item legend-haven">
+              <span class="legend-dot"></span> Điền An ({haven_count})
+            </div>
+            <div class="legend-item legend-reserved">
+              <span class="legend-dot"></span> Đang Giữ Chỗ ({reserved_count})
+            </div>
+          </div>
         </div>
 
-        <div class="map-legend-group">
-          <div class="legend-item legend-manor">
-            <span class="legend-dot"></span> Biệt Phủ Điền Trang ({manor_count})
+        <!-- Viewport & Hotspots Canvas -->
+        <div class="map-viewport" id="mapViewport">
+          <div class="map-canvas" id="mapCanvas">
+            <div class="map-stage" id="mapStage">
+              <img src="/assets/Index_asset/masterplan_tmb_sales.webp" 
+                   alt="Sơ đồ phân lô tổng mặt bằng Saigon Farm Resort" 
+                   class="map-image"
+                   id="masterPlanImg">
+              
+              <!-- Interactive Pins -->
+              {map_hotspots_rendered}
+            </div>
           </div>
-          <div class="legend-item legend-founders">
-            <span class="legend-dot"></span> Điền Sản ({founders_count})
+
+          <!-- Floating Controls -->
+          <div class="map-controls-floating">
+            <button type="button" class="map-ctrl-btn" onclick="zoomMap(1.25)" title="Phóng to"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="zoomMap(0.8)" title="Thu nhỏ"><i class="fa-solid fa-minus"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="resetMap()" title="Đặt lại góc nhìn"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="toggleMapFullscreen('mapViewport')" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
           </div>
-          <div class="legend-item legend-haven">
-            <span class="legend-dot"></span> Điền An ({haven_count})
-          </div>
-          <div class="legend-item legend-reserved">
-            <span class="legend-dot"></span> Đang Giữ Chỗ ({reserved_count})
+
+          <!-- Touch/Drag Hint -->
+          <div class="map-hint-badge">
+            <i class="fa-solid fa-hand-pointer"></i> <span>Kéo chuột/chạm để di chuyển bản đồ · Cuộn để phóng to/thu nhỏ</span>
           </div>
         </div>
       </div>
 
-      <!-- Viewport & Hotspots Canvas -->
-      <div class="map-viewport" id="mapViewport">
-        <div class="map-canvas" id="mapCanvas">
-          <div class="map-stage" id="mapStage">
-            <img src="/assets/Index_asset/masterplan_tmb_sales.webp" 
-                 alt="Sơ đồ phân lô tổng mặt bằng Saigon Farm Resort" 
-                 class="map-image"
-                 id="masterPlanImg">
-            
-            <!-- 34 Interactive Pins -->
-            {map_hotspots_rendered}
+      <!-- VIEW 2: 3D Wide Perspective (Ven hồ 8ha nhìn vào thung lũng & biệt phủ) -->
+      <div class="mp-perspective-panel" id="panelMp3DWide" style="display:none;">
+        <div class="map-header">
+          <div class="map-title-group">
+            <h2><i class="fa-solid fa-mountain-sun" style="color:var(--gold);"></i> PHỐI CẢNH 3D TOÀN CẢNH VEN HỒ SINH THÁI</h2>
+            <p>Góc nhìn chim bay từ mặt hồ sinh thái 8ha, bao quát toàn bộ thung lũng ruộng lúa, cụm Biệt Phủ Điền Trang và rặng núi hùng vĩ</p>
+          </div>
+          <div class="mp-actions-group">
+            <button type="button" class="btn-mp-action" onclick="openMasterplanLightbox('/assets/Index_asset/MasterPlan/SGFR_Master_1.webp', 'Phối Cảnh 3D Toàn Cảnh Ven Hồ Sinh Thái (Độ phân giải siêu nét 5K)')">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Mở Bản Gốc Siêu Nét 5K
+            </button>
           </div>
         </div>
 
-        <!-- Floating Controls -->
-        <div class="map-controls-floating">
-          <button type="button" class="map-ctrl-btn" onclick="zoomMap(1.25)" title="Phóng to"><i class="fa-solid fa-plus"></i></button>
-          <button type="button" class="map-ctrl-btn" onclick="zoomMap(0.8)" title="Thu nhỏ"><i class="fa-solid fa-minus"></i></button>
-          <button type="button" class="map-ctrl-btn" onclick="resetMap()" title="Đặt lại góc nhìn"><i class="fa-solid fa-arrows-rotate"></i></button>
-          <button type="button" class="map-ctrl-btn" onclick="toggleMapFullscreen()" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
+        <div class="map-viewport" id="mapViewport3DWide">
+          <div class="map-canvas" id="mapCanvas3DWide">
+            <div class="map-stage map-stage-3d-wide" id="mapStage3DWide">
+              <img src="/assets/Index_asset/MasterPlan/SGFR_Master_1_web.webp" 
+                   alt="Phối cảnh 3D toàn cảnh ven hồ Saigon Farm Resort" 
+                   class="map-image"
+                   id="masterPlan3DWideImg">
+            </div>
+          </div>
+
+          <div class="map-controls-floating">
+            <button type="button" class="map-ctrl-btn" onclick="zoom3D('wide', 1.25)" title="Phóng to"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="zoom3D('wide', 0.8)" title="Thu nhỏ"><i class="fa-solid fa-minus"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="reset3D('wide')" title="Đặt lại góc nhìn"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="toggleMapFullscreen('mapViewport3DWide')" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
+          </div>
+
+          <div class="map-hint-badge">
+            <i class="fa-solid fa-hand-pointer"></i> <span>Kéo chuột/chạm để ngắm toàn cảnh · Cuộn để soi chi tiết</span>
+          </div>
+
+          <!-- Feature callouts on 3D -->
+          <div class="mp-feature-overlay">
+            <span class="feature-tag"><i class="fa-solid fa-water"></i> Hồ sinh thái 8ha</span>
+            <span class="feature-tag"><i class="fa-solid fa-wheat-awn"></i> Thung lũng lúa xanh</span>
+            <span class="feature-tag"><i class="fa-solid fa-tree"></i> Đồi chè Oolong</span>
+            <span class="feature-tag"><i class="fa-solid fa-landmark"></i> Biệt Phủ Điền Trang</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 3: 3D Close-up (Cận cảnh quần thể biệt phủ, bến thuyền, công viên) -->
+      <div class="mp-perspective-panel" id="panelMp3DClose" style="display:none;">
+        <div class="map-header">
+          <div class="map-title-group">
+            <h2><i class="fa-solid fa-house-chimney-window" style="color:var(--gold);"></i> PHỐI CẢNH 3D CẬN CẢNH QUẦN THỂ NGHỈ DƯỠNG</h2>
+            <p>Góc nhìn chi tiết kiến trúc ngói âm dương truyền thống, bến chèo thuyền SUP ven hồ, lối tản bộ hoa và không gian sống sinh thái</p>
+          </div>
+          <div class="mp-actions-group">
+            <button type="button" class="btn-mp-action" onclick="openMasterplanLightbox('/assets/Index_asset/MasterPlan/SGFR_Master_2.webp', 'Phối Cảnh 3D Cận Cảnh Quần Thể Nghỉ Dưỡng Saigon Farm Resort')">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Mở Ảnh Độ Nét Cao
+            </button>
+          </div>
         </div>
 
-        <!-- Touch/Drag Hint -->
-        <div class="map-hint-badge">
-          <i class="fa-solid fa-hand-pointer"></i> <span>Kéo để di chuyển bản đồ · Cuộn chuột để phóng to/thu nhỏ</span>
+        <div class="map-viewport" id="mapViewport3DClose">
+          <div class="map-canvas" id="mapCanvas3DClose">
+            <div class="map-stage map-stage-3d-close" id="mapStage3DClose">
+              <img src="/assets/Index_asset/MasterPlan/SGFR_Master_2.webp" 
+                   alt="Phối cảnh 3D cận cảnh quần thể Saigon Farm Resort" 
+                   class="map-image"
+                   id="masterPlan3DCloseImg">
+            </div>
+          </div>
+
+          <div class="map-controls-floating">
+            <button type="button" class="map-ctrl-btn" onclick="zoom3D('close', 1.25)" title="Phóng to"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="zoom3D('close', 0.8)" title="Thu nhỏ"><i class="fa-solid fa-minus"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="reset3D('close')" title="Đặt lại góc nhìn"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button type="button" class="map-ctrl-btn" onclick="toggleMapFullscreen('mapViewport3DClose')" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
+          </div>
+
+          <div class="map-hint-badge">
+            <i class="fa-solid fa-hand-pointer"></i> <span>Kéo để di chuyển · Cuộn chuột hoặc chạm 2 ngón để phóng to</span>
+          </div>
+
+          <div class="mp-feature-overlay">
+            <span class="feature-tag"><i class="fa-solid fa-sailboat"></i> Bến thuyền Kayak & SUP</span>
+            <span class="feature-tag"><i class="fa-solid fa-campground"></i> Công viên lễ hội bãi cỏ</span>
+            <span class="feature-tag"><i class="fa-solid fa-spa"></i> Khu Clubhouse & Wellness</span>
+          </div>
         </div>
       </div>
     </section>
@@ -3133,7 +3592,7 @@ def update_listing():
           <!-- Dãy -->
           <select id="filterBlock" class="select-filter" onchange="applyFilters()">
             <option value="all">Tất cả Dãy (A & B)</option>
-            <option value="a">Dãy A (16 căn)</option>
+            <option value="a">Dãy A (18 căn)</option>
             <option value="b">Dãy B (18 căn)</option>
           </select>
 
@@ -3224,7 +3683,7 @@ def update_listing():
               <th>Tiện Ích</th>
               <th>Mặt Đường</th>
               <th>Đơn Giá Đất</th>
-              <th>Giá Gốc Niêm Yết</th>
+              <th>Giá Đất / Gói Cả Nhà</th>
               <th>Trạng Thái</th>
               <th>Thao Tác</th>
             </tr>
@@ -3307,6 +3766,19 @@ def update_listing():
     </div>
   </div>
 
+  <!-- Lightbox Modal for 5K MasterPlan -->
+  <div class="mp-lightbox-modal" id="mpLightboxModal" onclick="closeMasterplanLightbox(event)">
+    <div class="mp-lightbox-dialog">
+      <div class="mp-lightbox-header">
+        <h4 id="mpLightboxTitle"><i class="fa-solid fa-mountain-sun" style="color:var(--gold);"></i> Phối Cảnh MasterPlan</h4>
+        <button type="button" class="mp-lightbox-close" onclick="closeMasterplanLightbox()">&times;</button>
+      </div>
+      <div class="mp-lightbox-body">
+        <img id="mpLightboxImg" src="" alt="MasterPlan Fullscreen" title="Click để phóng to 100% / thu nhỏ">
+      </div>
+    </div>
+  </div>
+
   <!-- Mobile Fixed Bottom Dock -->
   <div class="mobile-bottom-dock">
     <a href="tel:0909000712" class="dock-btn dock-btn-call">
@@ -3374,7 +3846,7 @@ def update_listing():
 
     <div class="footer-bottom">
       <div>&copy; 2026 Saigon Farm Resort & MDS Living. Toàn bộ thông tin được bảo lưu quyền tác giả.</div>
-      <div>Pháp lý minh bạch · 100% Sổ đỏ thổ cư riêng từng nền</div>
+      <div>Pháp lý minh bạch · 100% Sổ đỏ thổ cư riêng từng sản phẩm</div>
     </div>
   </footer>
 
@@ -3384,130 +3856,281 @@ def update_listing():
     let currentView = 'grid';
 
     // ==============================================================
-    // MAP INTERACTION ENGINE (PAN & ZOOM)
+    // MASTER PLAN MULTI-PERSPECTIVE & PAN-ZOOM ENGINE
     // ==============================================================
+    let currentPerspective = '2d';
+
+    function createPanZoomViewer(config) {{
+      const viewport = document.getElementById(config.viewportId);
+      const canvas = document.getElementById(config.canvasId);
+      const stageW = config.stageWidth;
+      const stageH = config.stageHeight;
+      const initialFocusX = config.focusX || 0.5;
+      const initialFocusY = config.focusY || 0.5;
+      const initialZoomMultiplier = config.zoomMultiplier || 1.0;
+
+      let scale = 1.0;
+      let panX = 0;
+      let panY = 0;
+      let isDragging = false;
+      let startX = 0;
+      let startY = 0;
+
+      function updateTransform() {{
+        if (canvas) {{
+          canvas.style.transform = `translate(${{panX}}px, ${{panY}}px) scale(${{scale}})`;
+        }}
+      }}
+
+      function fitToViewport() {{
+        if (!viewport || !canvas) return;
+        const vpW = viewport.clientWidth || 1200;
+        const vpH = viewport.clientHeight || 720;
+        const fitScale = Math.min(vpW / stageW, vpH / stageH);
+        scale = Math.max(fitScale * initialZoomMultiplier, 0.4);
+
+        const targetX = stageW * initialFocusX;
+        const targetY = stageH * initialFocusY;
+        panX = (vpW / 2) - (targetX * scale);
+        panY = (vpH / 2) - (targetY * scale);
+        updateTransform();
+      }}
+
+      function zoom(factor, clientX, clientY) {{
+        const oldScale = scale;
+        const newScale = Math.min(Math.max(0.3, scale * factor), 4.0);
+        if (newScale === oldScale) return;
+
+        const rect = viewport.getBoundingClientRect();
+        const originX = (clientX !== undefined) ? (clientX - rect.left) : (viewport.clientWidth / 2);
+        const originY = (clientY !== undefined) ? (clientY - rect.top) : (viewport.clientHeight / 2);
+
+        const stageX = (originX - panX) / oldScale;
+        const stageY = (originY - panY) / oldScale;
+
+        scale = newScale;
+        panX = originX - stageX * scale;
+        panY = originY - stageY * scale;
+        updateTransform();
+      }}
+
+      function reset() {{
+        if (!canvas) return;
+        canvas.classList.add('smooth-anim');
+        fitToViewport();
+        setTimeout(() => canvas.classList.remove('smooth-anim'), 400);
+      }}
+
+      function setPosition(targetXPixel, targetYPixel, targetScale) {{
+        if (!viewport || !canvas) return;
+        scale = targetScale;
+        const vpW = viewport.clientWidth;
+        const vpH = viewport.clientHeight;
+        canvas.classList.add('smooth-anim');
+        panX = (vpW / 2) - (targetXPixel * scale);
+        panY = (vpH / 2) - (targetYPixel * scale);
+        updateTransform();
+        setTimeout(() => canvas.classList.remove('smooth-anim'), 400);
+      }}
+
+      if (viewport) {{
+        viewport.addEventListener('mousedown', (e) => {{
+          if (e.target.closest('.map-controls-floating') || e.target.closest('.hotspot-tooltip') || e.target.closest('button') || e.target.closest('.mp-actions-group')) return;
+          isDragging = true;
+          startX = e.clientX - panX;
+          startY = e.clientY - panY;
+        }});
+
+        window.addEventListener('mousemove', (e) => {{
+          if (!isDragging) return;
+          panX = e.clientX - startX;
+          panY = e.clientY - startY;
+          updateTransform();
+        }});
+
+        window.addEventListener('mouseup', () => {{
+          isDragging = false;
+        }});
+
+        viewport.addEventListener('wheel', (e) => {{
+          e.preventDefault();
+          const zoomFactor = e.deltaY < 0 ? 1.12 : 0.89;
+          zoom(zoomFactor, e.clientX, e.clientY);
+        }}, {{ passive: false }});
+
+        viewport.addEventListener('dblclick', (e) => {{
+          if (e.target.closest('.map-controls-floating') || e.target.closest('.hotspot-tooltip') || e.target.closest('button')) return;
+          zoom(1.35, e.clientX, e.clientY);
+        }});
+
+        let touchStartX = 0, touchStartY = 0;
+        viewport.addEventListener('touchstart', (e) => {{
+          if (e.touches.length === 1) {{
+            touchStartX = e.touches[0].clientX - panX;
+            touchStartY = e.touches[0].clientY - panY;
+          }}
+        }});
+        viewport.addEventListener('touchmove', (e) => {{
+          if (e.touches.length === 1) {{
+            panX = e.touches[0].clientX - touchStartX;
+            panY = e.touches[0].clientY - touchStartY;
+            updateTransform();
+          }}
+        }});
+      }}
+
+      return {{
+        fitToViewport,
+        zoom,
+        reset,
+        setPosition,
+        getScale: () => scale
+      }};
+    }}
+
+    // Initialize 3 Viewers
     const STAGE_WIDTH = 2560;
     const STAGE_HEIGHT = 1918;
 
-    let mapScale = 1.0;
-    let mapPanX = 0;
-    let mapPanY = 0;
-    let isDragging = false;
-    let startX = 0;
-    let startY = 0;
+    const viewer2D = createPanZoomViewer({{
+      viewportId: 'mapViewport',
+      canvasId: 'mapCanvas',
+      stageWidth: 2560,
+      stageHeight: 1918,
+      focusX: 0.52,
+      focusY: 0.55,
+      zoomMultiplier: 1.35
+    }});
 
-    const viewport = document.getElementById('mapViewport');
-    const canvas = document.getElementById('mapCanvas');
-    const masterPlanImg = document.getElementById('masterPlanImg');
+    const viewer3DWide = createPanZoomViewer({{
+      viewportId: 'mapViewport3DWide',
+      canvasId: 'mapCanvas3DWide',
+      stageWidth: 2560,
+      stageHeight: 1440,
+      focusX: 0.5,
+      focusY: 0.5,
+      zoomMultiplier: 1.05
+    }});
 
-    function updateMapTransform() {{
-      canvas.style.transform = `translate(${{mapPanX}}px, ${{mapPanY}}px) scale(${{mapScale}})`;
+    const viewer3DClose = createPanZoomViewer({{
+      viewportId: 'mapViewport3DClose',
+      canvasId: 'mapCanvas3DClose',
+      stageWidth: 2495,
+      stageHeight: 1403,
+      focusX: 0.5,
+      focusY: 0.5,
+      zoomMultiplier: 1.05
+    }});
+
+    // Helper functions for 2D Controls
+    function zoomMap(factor) {{ viewer2D.zoom(factor); }}
+    function resetMap() {{ viewer2D.reset(); }}
+
+    // Helper functions for 3D Controls
+    function zoom3D(mode, factor) {{
+      if (mode === 'wide') viewer3DWide.zoom(factor);
+      else viewer3DClose.zoom(factor);
+    }}
+    function reset3D(mode) {{
+      if (mode === 'wide') viewer3DWide.reset();
+      else viewer3DClose.reset();
     }}
 
-    function fitMapToViewport() {{
-      if (!viewport) return;
-      const vpW = viewport.clientWidth || 1200;
-      const vpH = viewport.clientHeight || 720;
-      
-      const fitScale = Math.min(vpW / STAGE_WIDTH, vpH / STAGE_HEIGHT);
-      // Set comfortable initial zoom focused on lot cluster
-      mapScale = Math.max(fitScale * 1.35, 0.55);
-      
-      // Lots cluster center is around (52% X, 55% Y)
-      const targetX = STAGE_WIDTH * 0.52;
-      const targetY = STAGE_HEIGHT * 0.55;
-      
-      mapPanX = (vpW / 2) - (targetX * mapScale);
-      mapPanY = (vpH / 2) - (targetY * mapScale);
-      
-      updateMapTransform();
+    // Perspective Switcher Logic
+    function switchMasterPlanPerspective(perspective) {{
+      currentPerspective = perspective;
+
+      // Update Tab Buttons
+      const tab2D = document.getElementById('tabMp2D');
+      const tab3DWide = document.getElementById('tabMp3DWide');
+      const tab3DClose = document.getElementById('tabMp3DClose');
+      if (tab2D) tab2D.classList.toggle('active', perspective === '2d');
+      if (tab3DWide) tab3DWide.classList.toggle('active', perspective === '3d-wide');
+      if (tab3DClose) tab3DClose.classList.toggle('active', perspective === '3d-close');
+
+      // Update Panels
+      const panel2D = document.getElementById('panelMp2D');
+      const panel3DWide = document.getElementById('panelMp3DWide');
+      const panel3DClose = document.getElementById('panelMp3DClose');
+
+      if (panel2D) {{
+        panel2D.style.display = perspective === '2d' ? 'block' : 'none';
+        panel2D.classList.toggle('active', perspective === '2d');
+      }}
+      if (panel3DWide) {{
+        panel3DWide.style.display = perspective === '3d-wide' ? 'block' : 'none';
+        panel3DWide.classList.toggle('active', perspective === '3d-wide');
+      }}
+      if (panel3DClose) {{
+        panel3DClose.style.display = perspective === '3d-close' ? 'block' : 'none';
+        panel3DClose.classList.toggle('active', perspective === '3d-close');
+      }}
+
+      // Fit viewer to viewport when activated
+      setTimeout(() => {{
+        if (perspective === '2d') viewer2D.fitToViewport();
+        else if (perspective === '3d-wide') viewer3DWide.fitToViewport();
+        else if (perspective === '3d-close') viewer3DClose.fitToViewport();
+      }}, 60);
     }}
 
-    function zoomMap(factor, clientX, clientY) {{
-      const oldScale = mapScale;
-      const newScale = Math.min(Math.max(0.35, mapScale * factor), 3.2);
-      if (newScale === oldScale) return;
-
-      const rect = viewport.getBoundingClientRect();
-      const originX = (clientX !== undefined) ? (clientX - rect.left) : (viewport.clientWidth / 2);
-      const originY = (clientY !== undefined) ? (clientY - rect.top) : (viewport.clientHeight / 2);
-
-      const stageX = (originX - mapPanX) / oldScale;
-      const stageY = (originY - mapPanY) / oldScale;
-
-      mapScale = newScale;
-      mapPanX = originX - stageX * mapScale;
-      mapPanY = originY - stageY * mapScale;
-
-      updateMapTransform();
-    }}
-
-    function resetMap() {{
-      canvas.classList.add('smooth-anim');
-      fitMapToViewport();
-      setTimeout(() => canvas.classList.remove('smooth-anim'), 400);
-    }}
-
-    function toggleMapFullscreen() {{
+    // Fullscreen Toggle
+    function toggleMapFullscreen(viewportId) {{
+      const el = document.getElementById(viewportId) || document.getElementById('mapViewport');
       if (!document.fullscreenElement) {{
-        viewport.requestFullscreen().catch(err => alert('Không thể bật toàn màn hình: ' + err.message));
+        el.requestFullscreen().catch(err => alert('Không thể bật toàn màn hình: ' + err.message));
       }} else {{
         document.exitFullscreen();
       }}
     }}
 
-    viewport.addEventListener('mousedown', (e) => {{
-      if (e.target.closest('.map-controls-floating') || e.target.closest('.hotspot-tooltip') || e.target.closest('button')) return;
-      isDragging = true;
-      startX = e.clientX - mapPanX;
-      startY = e.clientY - mapPanY;
-    }});
-
-    window.addEventListener('mousemove', (e) => {{
-      if (!isDragging) return;
-      mapPanX = e.clientX - startX;
-      mapPanY = e.clientY - startY;
-      updateMapTransform();
-    }});
-
-    window.addEventListener('mouseup', () => {{
-      isDragging = false;
-    }});
-
-    viewport.addEventListener('wheel', (e) => {{
-      e.preventDefault();
-      const zoomFactor = e.deltaY < 0 ? 1.12 : 0.89;
-      zoomMap(zoomFactor, e.clientX, e.clientY);
-    }}, {{ passive: false }});
-
-    viewport.addEventListener('dblclick', (e) => {{
-      if (e.target.closest('.map-controls-floating') || e.target.closest('.hotspot-tooltip') || e.target.closest('button')) return;
-      zoomMap(1.35, e.clientX, e.clientY);
-    }});
-
-    // Touch support for mobile panning
-    let touchStartX = 0, touchStartY = 0;
-    viewport.addEventListener('touchstart', (e) => {{
-      if (e.touches.length === 1) {{
-        touchStartX = e.touches[0].clientX - mapPanX;
-        touchStartY = e.touches[0].clientY - mapPanY;
+    // Lightbox for 5K MasterPlan
+    function openMasterplanLightbox(imgUrl, title) {{
+      const modal = document.getElementById('mpLightboxModal');
+      const img = document.getElementById('mpLightboxImg');
+      const titleEl = document.getElementById('mpLightboxTitle');
+      if (img) {{
+        img.src = imgUrl;
+        img.classList.remove('zoomed-in');
       }}
-    }});
-    viewport.addEventListener('touchmove', (e) => {{
-      if (e.touches.length === 1) {{
-        mapPanX = e.touches[0].clientX - touchStartX;
-        mapPanY = e.touches[0].clientY - touchStartY;
-        updateMapTransform();
+      if (titleEl) {{
+        titleEl.innerHTML = `<i class="fa-solid fa-mountain-sun" style="color:var(--gold);"></i> ${{title || 'Phối Cảnh MasterPlan 3D'}}`;
       }}
-    }});
-
-    // Initialize map positioning once image or DOM is ready
-    if (masterPlanImg && masterPlanImg.complete) {{
-      fitMapToViewport();
-    }} else if (masterPlanImg) {{
-      masterPlanImg.addEventListener('load', fitMapToViewport);
+      if (modal) {{
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }}
     }}
-    window.addEventListener('load', fitMapToViewport);
+
+    function closeMasterplanLightbox(event) {{
+      if (event && event.target && event.target.closest('.mp-lightbox-dialog') && !event.target.closest('.mp-lightbox-close')) {{
+        return;
+      }}
+      const modal = document.getElementById('mpLightboxModal');
+      if (modal) {{
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }}
+    }}
+
+    // Toggle zoom on lightbox image
+    const lbImg = document.getElementById('mpLightboxImg');
+    if (lbImg) {{
+      lbImg.addEventListener('click', () => {{
+        lbImg.classList.toggle('zoomed-in');
+      }});
+    }}
+
+    document.addEventListener('keydown', (e) => {{
+      if (e.key === 'Escape') {{
+        closeMasterplanLightbox();
+      }}
+    }});
+
+    // Initial fits on load
+    window.addEventListener('load', () => {{
+      viewer2D.fitToViewport();
+    }});
 
     // Bidirectional highlighting between map & list
     function highlightHotspot(code) {{
@@ -3538,6 +4161,11 @@ def update_listing():
 
     function locateOnMap(code) {{
       const c = code.toLowerCase();
+      // Auto-switch to 2D lot map if currently in 3D
+      if (currentPerspective !== '2d') {{
+        switchMasterPlanPerspective('2d');
+      }}
+
       const pin = document.getElementById('hotspot-' + c);
       const sec = document.getElementById('masterplanSection');
       if (sec) {{
@@ -3547,17 +4175,10 @@ def update_listing():
         const xPct = parseFloat(pin.style.left);
         const yPct = parseFloat(pin.style.top);
         
-        mapScale = 1.45;
-        const vpW = viewport.clientWidth;
-        const vpH = viewport.clientHeight;
         const pinPixelX = (xPct / 100.0) * STAGE_WIDTH;
         const pinPixelY = (yPct / 100.0) * STAGE_HEIGHT;
         
-        canvas.classList.add('smooth-anim');
-        mapPanX = (vpW / 2) - (pinPixelX * mapScale);
-        mapPanY = (vpH / 2) - (pinPixelY * mapScale);
-        updateMapTransform();
-        setTimeout(() => canvas.classList.remove('smooth-anim'), 400);
+        viewer2D.setPosition(pinPixelX, pinPixelY, 1.45);
 
         pin.classList.add('highlighted');
         setTimeout(() => pin.classList.remove('highlighted'), 3500);

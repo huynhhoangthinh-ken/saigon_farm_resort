@@ -937,7 +937,7 @@ new_estate_posts = [
         "date": "30 TH8 2026",
         "category": "Đầu Tư & Tích Sản",
         "content": f"""
-<p>Điền trang 2 tầng <strong>Sunset 2</strong> sở hữu những ưu thế vượt trội về mặt không gian và kiến trúc để trở thành "ngôi sao" trên các nền tảng đặt phòng cao cấp như Airbnb Luxe hay hệ thống vận hành quốc tế của <strong>MDS Living</strong>. Bài viết này phân tích sâu nguồn cầu lưu trú cao cấp từ khu vực phụ cận.</p>
+<p>Điền trang 2 tầng <strong>Sunset 2</strong> sở hữu những ưu thế vượt trội về mặt không gian và kiến trúc để trở thành "ngôi sao" trên các sản phẩm tảng đặt phòng cao cấp như Airbnb Luxe hay hệ thống vận hành quốc tế của <strong>MDS Living</strong>. Bài viết này phân tích sâu nguồn cầu lưu trú cao cấp từ khu vực phụ cận.</p>
 
 <div class="pull-quote">
   "Khoảng cách 25 phút đến Sân bay Long Thành biến Sunset 2 thành điểm dừng chân nghỉ dưỡng số 1 cho các chuyên gia hàng không, phi công quốc tế và giới quản lý cấp cao."

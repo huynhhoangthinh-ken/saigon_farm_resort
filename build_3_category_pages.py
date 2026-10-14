@@ -81,7 +81,7 @@ def render_page(cat, all_cats):
                 "desc": "Được đội ngũ kinh doanh Ban Quản Lý Saigon Farm Resort đồng hành hỗ trợ ra hàng theo từng giai đoạn tăng giá mở bán tiếp theo của khu điền trang."
             }
         ]
-        product_form_desc = "Đất nền điền trang 100% thổ cư, sổ đỏ cầm tay, hạ tầng hoàn thiện đồng bộ (đường nội khu trải nhựa, vỉa hè cỏ lạc, cấp điện nước ngầm). Nhà đầu tư an tâm nắm giữ tài sản đất vàng ven đô không lo khấu hao."
+        product_form_desc = "Sản phẩm điền trang 100% thổ cư, sổ đỏ cầm tay, hạ tầng hoàn thiện đồng bộ (đường nội khu trải nhựa, vỉa hè cỏ lạc, cấp điện nước ngầm). Nhà đầu tư an tâm nắm giữ tài sản đất vàng ven đô không lo khấu hao."
     else: # biet-phu-dien-trang
         benefits = [
             {
@@ -107,11 +107,82 @@ def render_page(cat, all_cats):
         ]
         product_form_desc = "Khuôn viên điền trang siêu lớn với 100% thổ cư sổ đỏ riêng. Thiết kế kiến trúc dinh thự thuần Việt đương đại kết hợp tiện nghi cao cấp phương Tây, hồ bơi muối khoáng và vườn cây sinh thái riêng biệt."
 
+    # Hero stats bar definition
+    if cat["slug"] == "dien-an":
+        hero_stats_html = f"""
+        <div class="stat-item">
+          <span class="stat-num" style="color: #0284c7;">8,99 TR/M²</span>
+          <span class="stat-label">Đơn giá đất ưu đãi đột phá</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">30 SUITES</span>
+          <span class="stat-label">Gói xây dựng 850m² full nội thất</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" style="color: #b91c1c;">17,60 TỶ</span>
+          <span class="stat-label">Tổng gói đất & nhà (gồm VAT)</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100% THỔ CƯ</span>
+          <span class="stat-label">Sổ đỏ riêng từng khuôn viên</span>
+        </div>
+        """
+    else:
+        hero_stats_html = f"""
+        <div class="stat-item">
+          <span class="stat-num">100% THỔ CƯ</span>
+          <span class="stat-label">Sổ đỏ riêng từng lô có sẵn</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">{len(cat['items'])} SẢN PHẨM</span>
+          <span class="stat-label">Giỏ hàng mở bán tháng 9/2026</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">30.000 m²</span>
+          <span class="stat-label">Đại công viên & Tiện ích resort</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">CÔNG CHỨNG</span>
+          <span class="stat-label">Sang tên sở hữu ngay trong ngày</span>
+        </div>
+        """
+
     # Generate cards HTML with button opening popup
     cards_html = ""
     for idx, item in enumerate(cat["items"]):
         status_badge_class = "status-available" if item["status_type"] == "available" else "status-reserved"
         status_icon = "fa-circle-check" if item["status_type"] == "available" else "fa-clock"
+        
+        if cat["slug"] == "dien-an":
+            if item.get("phase") == "GĐ2":
+                price_html = f"""
+                <span class="price-label">Tình trạng quỹ căn:</span>
+                <span class="price-val" style="color: #b45309; font-weight: 800; font-size: 1.15rem;">Quỹ GĐ2</span>
+                <span style="font-size: 0.74rem; color: #92400e; display: block;">Chưa mở bán chính thức</span>
+                """
+            else:
+                price_html = f"""
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="price-label" style="margin: 0; color: #0284c7; font-weight: 700; font-size: 0.78rem;">ĐƠN GIÁ ĐẤT:</span>
+                  <span style="color: #0284c7; font-weight: 800; font-size: 1.05rem;">{item.get('unit_price_million', '')}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+                  <span class="price-label" style="margin: 0; font-size: 0.76rem;">Tiền đất:</span>
+                  <span class="price-val" style="color: #1e293b; font-weight: 700; font-size: 0.95rem;">{item.get('price_billion', '')}</span>
+                </div>
+                <div style="background: rgba(2, 132, 199, 0.08); border-left: 3px solid #0284c7; border-radius: 4px; padding: 4px 8px; margin-top: 4px; font-size: 0.8rem; color: #0369a1; font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
+                  <span><i class="fa-solid fa-hotel" style="color:#0284c7; margin-right:4px;"></i> Gói cả nhà 30 suites:</span>
+                  <span style="color: #b91c1c; font-size: 0.95rem;">{item.get('house_price_vat_billion', '')} <small style="font-size: 0.68rem; color: #666; font-weight: 400;">(gồm VAT)</small></span>
+                </div>
+                """
+        else:
+            house_str = f"""<div style="font-size: 0.78rem; color: #b91c1c; font-weight: 700; margin-top: 2px;"><i class="fa-solid fa-house-chimney"></i> Cả Nhà: {item.get('house_price_vat_billion')} <small style="color:#666; font-weight:400;">(gồm VAT)</small></div>""" if item.get('house_price_vat_billion') and item.get('phase') != 'GĐ2' else ""
+            price_html = f"""
+                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
+                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">{item.get('price_billion', 'Liên hệ')}</span>
+                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: {item.get('unit_price_million', '')}</span>
+                {house_str}
+            """
         
         cards_html += f"""
         <div class="listing-card" data-area="{item['area']}" data-status="{item['status_type']}">
@@ -135,13 +206,16 @@ def render_page(cat, all_cats):
             </div>
             <div class="card-footer">
               <div class="card-price-wrap">
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
-                <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">{item.get('price_billion', 'Liên hệ')}</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: {item.get('unit_price_million', '')}</span>
+                {price_html}
               </div>
-              <button type="button" class="card-btn-action" onclick="openBookingModal('{item['code']}', '{item['area']}', '{cat['title']}')" title="Đặt lịch / Giữ chỗ lô {item['code']}">
-                <i class="fa-solid fa-paper-plane"></i> Đặt Lịch / Giữ Chỗ
-              </button>
+              <div style="display: flex; gap: 6px; margin-top: 8px;">
+                <a href="/{item['code'].lower()}" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: var(--primary); border: 1px solid var(--primary); padding: 8px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.2s;" title="Xem chi tiết & tiến độ thanh toán căn {item['code']}">
+                  <i class="fa-solid fa-file-invoice-dollar" style="margin-right: 4px;"></i> Chi Tiết Căn
+                </a>
+                <button type="button" class="card-btn-action" style="flex: 1; padding: 8px 10px; font-size: 0.8rem;" onclick="openBookingModal('{item['code']}', '{item['area']}', '{cat['title']}')" title="Đặt lịch / Giữ chỗ lô {item['code']}">
+                  <i class="fa-solid fa-paper-plane"></i> Giữ Chỗ
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1234,22 +1308,7 @@ def render_page(cat, all_cats):
       <p class="hero-desc">{cat['desc']}</p>
       
       <div class="hero-stats-bar">
-        <div class="stat-item">
-          <span class="stat-num">100% THỔ CƯ</span>
-          <span class="stat-label">Sổ đỏ riêng từng lô có sẵn</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">{len(cat['items'])} SẢN PHẨM</span>
-          <span class="stat-label">Giỏ hàng mở bán tháng 9/2026</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">30.000 m²</span>
-          <span class="stat-label">Đại công viên & Tiện ích resort</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">CÔNG CHỨNG</span>
-          <span class="stat-label">Sang tên sở hữu ngay trong ngày</span>
-        </div>
+        {hero_stats_html}
       </div>
     </div>
   </section>

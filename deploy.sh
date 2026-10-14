@@ -23,9 +23,10 @@ with open("js/posts-data.js", "w") as f:
 ' 2>/dev/null
 fi
 
-# Tự động cập nhật giỏ hàng và 34 trang chi tiết căn hộ
-python3 build_listing_page.py 2>/dev/null
-python3 build_unit_pages.py 2>/dev/null
+# Tự động cập nhật giỏ hàng, 3 trang phân khu và 36 trang chi tiết căn hộ
+python3 build_listing_page.py
+python3 build_3_category_pages.py
+python3 build_unit_pages.py
 
 echo "🚀 [1/3] Kiểm tra và gom tất cả thay đổi (Staging)..."
 git add -A
@@ -56,8 +57,8 @@ for f in os.listdir('.'):
 # Copy essential static web folders
 folders = [
     'assets', 'css', 'js', 'data', 'bai-viet', 'listing', 'giohang', 'short',
-    'introduction', 'gioi-thieu', 'investment', 'investor', 'dien-an',
-    'dien-san', 'biet-phu-dien-trang', 'story', 'article', 'animation'
+    'introduction', 'gioithieu', 'gioi-thieu', 'investment', 'investor', 'dien-an',
+    'dien-san', 'biet-phu-dien-trang', 'cam-on', 'story', 'article', 'animation'
 ]
 
 # Include all 34 individual unit folders

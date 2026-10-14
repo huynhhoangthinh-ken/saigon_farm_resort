@@ -110,7 +110,7 @@ def build_50_brokers(wb):
             "partners": [
                 (1, "Nguyễn Quang Anh", "0909 430 175", "Môi giới Đất Lớn Đất Đỏ", "Đất Đỏ, Phước Hội, Láng Dài", "Đất mẫu, đất sào, đất kề KCN 1.000ha", "⭐⭐⭐⭐⭐ Cực sát địa bàn", "Khách địa phương và NĐT săn quỹ đất Đất Đỏ", "Hợp tác giỏ hàng Điền An thổ cư có sổ sẵn, cam kết pháp lý sạch"),
                 (2, "Lê Minh Hải", "0938 858 959", "BĐS Trung tâm Đất Đỏ", "Thị trấn Đất Đỏ, Hồ Lồ Ồ, Long Đất", "Đất biệt thự vườn, đất ở ven hồ", "⭐⭐⭐⭐⭐ Cực sát địa bàn", "Khách mua nhà vườn cuối tuần từ TP.HCM đổ về", "Gửi giỏ hàng Điền An phân khúc 3 - 6 tỷ hoa hồng nhanh"),
-                (3, "CSQ Real Bà Rịa", "0933 666 888", "BĐS CSQ Real (Võ Văn Kiệt)", "TP. Bà Rịa, Đất Đỏ, Long Điền", "Đất nền thổ cư, nhà phố vườn cao cấp", "⭐⭐⭐⭐ Rất cao", "Giới tinh hoa, chủ doanh nghiệp tại tỉnh BR-VT", "Tổ chức hội thảo mini giới thiệu Điền Trang cho VIP BR-VT"),
+                (3, "CSQ Real Bà Rịa", "0933 666 888", "BĐS CSQ Real (Võ Văn Kiệt)", "TP. Bà Rịa, Đất Đỏ, Long Điền", "Sản phẩm thổ cư, nhà phố vườn cao cấp", "⭐⭐⭐⭐ Rất cao", "Giới tinh hoa, chủ doanh nghiệp tại tỉnh BR-VT", "Tổ chức hội thảo mini giới thiệu Điền Trang cho VIP BR-VT"),
                 (4, "Kim Chi Land", "0907 657 687", "Sàn BĐS Kim Chi Land", "Xuyên Mộc, Đất Đỏ, Bà Rịa", "Đất vườn sinh thái, farmstay, nhà vườn", "⭐⭐⭐⭐⭐ Khớp 100% Concept", "Khách yêu thích lối sống xanh nông trại (Farm Resort)", "Cực kỳ khớp concept nông trang sinh thái ven hồ 100ha"),
                 (5, "BĐS Vũng Tàu (Mr. Tuấn)", "0978 384 438", "Công ty BĐS Vũng Tàu", "Bà Rịa, Châu Đức, Xuyên Mộc", "Trang trại, đất vườn lớn, đất ven hồ", "⭐⭐⭐⭐ Cao", "Khách săn đất sào làm nhà vườn ven hồ", "Giới thiệu mô hình Điền Trang ven hồ Lồ Ồ hoàn chỉnh tiện ích"),
                 (6, "BĐS Tiền Land Long Hải", "0908 123 789", "Tiền Land (Võ Thị Sáu, Long Hải)", "Long Hải, Phước Hải, Đất Đỏ", "Đất nghỉ dưỡng ven biển & ven hồ", "⭐⭐⭐⭐ Cao", "Khách chuộng nghỉ dưỡng sinh thái gần biển", "Liên kết Co-broking, chia sẻ hoa hồng 3%"),
@@ -127,7 +127,7 @@ def build_50_brokers(wb):
                 (12, "Quỳnh Liên", "0936 09 10 11", "TPKD - Khải Minh Land", "Hồ Tràm (Maia, Ixora, Sanctuary)", "Resort cao cấp, Biệt thự biển 15 - 50 tỷ", "⭐⭐⭐⭐⭐ Cực cao", "Sales tinh nhuệ chuyên đánh dòng Second Home", "Ký kết liên kết sàn, tổ chức tour trải nghiệm hồ 100ha"),
                 (13, "Lâm Khánh Tài", "0966 205 205", "Beach Villa Vietnam", "Cung đường biển Hồ Tràm - Bình Châu", "Villa nghỉ dưỡng, review hạ tầng", "⭐⭐⭐⭐⭐ Cực cao", "Kênh YouTube BĐS triệu view, tệp NĐT tài chính mạnh", "Tài trợ video review trải nghiệm hồ Lồ Ồ 100ha + booking độc quyền"),
                 (14, "Đạt Nguyễn", "0918 788 966", "Vạn Đạt Land (Chuyên Ixora)", "Hồ Tràm Strip, Xuyên Mộc", "Biệt thự biển hạng sang, condotel", "⭐⭐⭐⭐ Cao", "Khách thích nhận dòng tiền cho thuê thụ động", "Chào sản phẩm Điền Sản (cam kết vận hành cho thuê turnkey)"),
-                (15, "Phương Thiện", "0931 555 355", "Phương Thiện Land (Novaworld)", "Bình Châu, Xuyên Mộc", "Shophouse, Biệt thự nghỉ dưỡng Novaworld", "⭐⭐⭐⭐ Cao", "Khách Novaworld tìm sp pháp lý sổ đỏ sở hữu lâu dài", "Nhấn mạnh: '100% Đất thổ cư lâu dài có sổ đỏ riêng từng nền'"),
+                (15, "Phương Thiện", "0931 555 355", "Phương Thiện Land (Novaworld)", "Bình Châu, Xuyên Mộc", "Shophouse, Biệt thự nghỉ dưỡng Novaworld", "⭐⭐⭐⭐ Cao", "Khách Novaworld tìm sp pháp lý sổ đỏ sở hữu lâu dài", "Nhấn mạnh: '100% Đất thổ cư lâu dài có sổ đỏ riêng từng sản phẩm'"),
                 (16, "Sea Property (Team Hồ Tràm)", "0908 982 299", "Công ty CP ĐT BĐS HPR", "Trục Hồ Tràm - Bình Châu", "Tổng đại lý phân phối BĐS nghỉ dưỡng biển", "⭐⭐⭐⭐ Cao", "Sàn chuyên nghiệp, có phòng marketing & data VIP", "Ký hợp đồng đối tác chiến lược phân phối Biệt Phủ Điền Trang"),
                 (17, "AQLand - Phòng Dự Án", "0906 462 223", "Sàn Giao Dịch AQLand", "Hồ Tràm, Long Hải", "Biệt thự biển, phân khúc wellness & retreat", "⭐⭐⭐⭐ Cao", "Khách thích chăm sóc sức khỏe, khoáng nóng, thiên nhiên", "Pitching concept 5 Trụ cột Lối sống Việt & Wellness ven hồ"),
                 (18, "La Kim Mỹ Duyên", "0918 626 687", "IQI Vietnam (Chuyên Angsana)", "Hồ Tràm Strip, Xuyên Mộc", "BĐS nghỉ dưỡng hạng sang chuẩn quốc tế", "⭐⭐⭐⭐ Cao", "Khách hàng đầu tư BĐS thương hiệu 5 sao", "Chào giỏ hàng Biệt Phủ Điền Trang cho khách thượng lưu"),
@@ -147,7 +147,7 @@ def build_50_brokers(wb):
                 (27, "Hunter Land (Eco Village)", "0911 378 737", "Sàn Hunter Land", "Khu Đông TP.HCM, Nhơn Trạch", "Bất động sản sinh thái trị liệu (Wellness)", "⭐⭐⭐⭐ Cao", "Khách quan tâm bất động sản chăm sóc sức khỏe", "Định vị SFR: Quần thể điền trang sinh thái hồ 100ha thuần tự nhiên"),
                 (28, "Minh Nhật (Vinhomes Grand Park)", "0787 595 954", "Chuyên Phân Khu Biệt Thự", "TP. Thủ Đức, TP.HCM", "Biệt thự The Manhattan, The Rivus", "⭐⭐⭐⭐ Khách siêu giàu", "Cư dân triệu phú Vinhomes muốn tìm second home nông trại", "Mời trải nghiệm Làng ngựa quý tộc Việt Mã Viên tại SFR"),
                 (29, "Nhơn Trạch Land (Mr. Thịnh)", "0919 422 678", "Văn phòng Nhơn Trạch Land", "Nhơn Trạch, Long Thành", "Đất sào làm trang trại, biệt thự ven sông", "⭐⭐⭐⭐ Cao", "NĐT chuộng đất diện tích lớn", "Giới thiệu Điền Trang quy mô lớn ven hồ 100ha pháp lý an toàn"),
-                (30, "BĐS Vạn Đô Nhơn Trạch", "0901 399 456", "Vạn Đô Land (Saigonland)", "Nhơn Trạch, Long Thành, Cát Lái", "Đất nền dự án & Đất nghỉ dưỡng ven sông", "⭐⭐⭐⭐ Cao", "Khách đầu tư theo quy hoạch hạ tầng cao tốc", "Nhấn mạnh Cao tốc Bến Lức - Long Thành kết nối thẳng tới Đất Đỏ"),
+                (30, "BĐS Vạn Đô Nhơn Trạch", "0901 399 456", "Vạn Đô Land (Saigonland)", "Nhơn Trạch, Long Thành, Cát Lái", "Sản phẩm dự án & Đất nghỉ dưỡng ven sông", "⭐⭐⭐⭐ Cao", "Khách đầu tư theo quy hoạch hạ tầng cao tốc", "Nhấn mạnh Cao tốc Bến Lức - Long Thành kết nối thẳng tới Đất Đỏ"),
             ]
         },
         {
@@ -175,7 +175,7 @@ def build_50_brokers(wb):
                 (45, "PQR Corp (Chuyên BĐS Triệu USD)", "0987 345 678", "PQR Corporation (Nguyễn Hữu Thọ Q7)", "TP.HCM, Phú Quốc, Hồ Tràm", "BĐS nghỉ dưỡng cao cấp & Siêu sang", "⭐⭐⭐⭐⭐ Rất mạnh khách VIP", "Tệp khách thượng lưu chuyên săn villa nghỉ dưỡng độc bản", "Mời làm đại lý F1 giỏ hàng Biệt Phủ Điền Trang"),
                 (46, "SRT Miền Nam (Sky Realty)", "0901 619 888", "SRT Realty (Chi nhánh Vũng Tàu)", "Vũng Tàu, Hồ Tràm, TP.HCM", "BĐS nghỉ dưỡng tập đoàn Sun Group", "⭐⭐⭐⭐ Cao", "Lực lượng sales nhiệt huyết, kỹ năng chốt deal lớn tốt", "Ký liên kết giỏ hàng Điền Sản và Biệt Phủ"),
                 (47, "Empire Realty", "0907 096 666", "Empire Realty Miền Nam", "TP.HCM, Hồ Tràm, Bình Châu", "Phân phối Novaworld Hồ Tràm, Ixora", "⭐⭐⭐⭐ Cao", "Tệp khách hàng đầu tư theo các đại dự án biển", "Ráp khách hàng đang tìm pháp lý sở hữu lâu dài"),
-                (48, "Thủ Thiêm Real", "0988 333 444", "Công ty BĐS Thủ Thiêm", "TP. Thủ Đức, Đồng Nai, BR-VT", "Đất nền dự án & Biệt thự sinh thái", "⭐⭐⭐⭐ Cao", "Khách hàng khu Đông TP.HCM có sẵn tài chính", "Mời hợp tác phân phối giỏ hàng Điền An"),
+                (48, "Thủ Thiêm Real", "0988 333 444", "Công ty BĐS Thủ Thiêm", "TP. Thủ Đức, Đồng Nai, BR-VT", "Sản phẩm dự án & Biệt thự sinh thái", "⭐⭐⭐⭐ Cao", "Khách hàng khu Đông TP.HCM có sẵn tài chính", "Mời hợp tác phân phối giỏ hàng Điền An"),
                 (49, "Danh Khôi (DKRS / DKRX)", "0909 777 888", "Hệ sinh thái Danh Khôi", "TP.HCM, Vũng Tàu, Bình Thuận", "Phân phối dự án quy mô ngàn tỷ", "⭐⭐⭐⭐ Sàn lớn", "Đội ngũ sales đông đảo phủ khắp các tỉnh phía Nam", "Mời tham gia sự kiện Kick-off liên kết đại lý"),
                 (50, "Bất Động Sản Express", "0909 890 890", "Express Real Estate", "Quận 1, TP. Thủ Đức, TP.HCM", "BĐS cao cấp & Kênh marketing digital mạnh", "⭐⭐⭐⭐ Cao", "Tệp khách hàng online quan tâm BĐS sinh thái", "Tài trợ chiến dịch truyền thông chung trên portal BĐS"),
             ]
@@ -210,7 +210,7 @@ def build_50_brokers(wb):
     ws.merge_cells(start_row=current_row, start_column=2, end_row=current_row, end_column=10)
     note_cell = ws.cell(row=current_row, column=2,
         value="📌 BÍ QUYẾT TRIỂN KHAI CHO NHÂN VIÊN GỌI ĐIỆN: \n"
-              "• Với Nhóm 1 (Địa phương): Đánh mạnh yếu tố 'Sổ đỏ thổ cư riêng từng nền, không dính quy hoạch treo, giỏ hàng giá từ 3 - 6 tỷ rất dễ chốt'.\n"
+              "• Với Nhóm 1 (Địa phương): Đánh mạnh yếu tố 'Sổ đỏ thổ cư riêng từng sản phẩm, không dính quy hoạch treo, giỏ hàng giá từ 3 - 6 tỷ rất dễ chốt'.\n"
               "• Với Nhóm 2 (Hồ Tràm biển): So sánh 'Sở hữu lâu dài vs 50 năm' và 'Vùng trũng giá chỉ bằng 1/3 đất biển Hồ Tràm'.\n"
               "• Với Nhóm 3 (Nhà vườn TP.HCM): So sánh 'Giá đất vườn Q9 40-50tr/m² trong khi SFR chỉ 1/4 mà có mặt nước hồ 100ha, đi cao tốc đúng 60 phút'.\n"
               "• Với Nhóm 4 (Chuyên gia Farmstay hồ): 'Khách của bạn thích không khí ven hồ, SFR có hồ 100ha mà đi từ TP.HCM chỉ 60p thay vì 4 tiếng lên Bảo Lộc'.\n"
@@ -350,7 +350,7 @@ def build_scripts(wb):
                 "Em thấy anh/chị đang giao dịch rất mạnh phân khúc BĐS nghỉ dưỡng / biệt thự / nhà vườn khu vực phía Nam.\n\n"
                 "Bên em là Chủ đầu tư MDS Land & Living, đang triển khai quần thể điền trang sinh thái SAIGON FARM RESORT ôm trọn mặt hồ nước ngọt Lồ Ồ 100ha tại Đất Đỏ (liền kề Hồ Tràm, chỉ 60 phút từ TP.HCM).\n\n"
                 "Dự án bên em có 3 điểm CỰC KỲ DỄ BÁN cho khách hàng của anh/chị:\n"
-                "1. 100% Đất ở thổ cư lâu dài, sổ đỏ riêng từng nền, công chứng sang tên ngay (không lo pháp lý 50 năm hay quy hoạch treo).\n"
+                "1. 100% Đất ở thổ cư lâu dài, sổ đỏ riêng từng sản phẩm, công chứng sang tên ngay (không lo pháp lý 50 năm hay quy hoạch treo).\n"
                 "2. Vùng trũng giá: Giá chỉ bằng 1/3 đến 1/4 đất biển Hồ Tràm trong khi sở hữu mặt nước hồ tự nhiên 100ha và 30.000m² tiện ích (Việt Mã Viên, Pickleball, Kayak).\n"
                 "3. Cơ chế hoa hồng & thưởng nóng cực kỳ hấp dẫn cho Sales / Đại lý liên kết (2.5% - 3.5%).\n\n"
                 "Em gửi anh/chị xem trước link giới thiệu: saigonfarmresort.com/gioithieu và Bảng cơ chế hoa hồng chi tiết nhé ạ!"

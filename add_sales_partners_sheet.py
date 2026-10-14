@@ -175,7 +175,7 @@ def main():
         (
             12, "CSQ Real Bà Rịa", "0933 666 888",
             "BĐS CSQ Real (Võ Văn Kiệt)", "TP. Bà Rịa, Đất Đỏ, Long Điền",
-            "Đất nền thổ cư, nhà phố vườn cao cấp", "⭐⭐⭐⭐ Cao",
+            "Sản phẩm thổ cư, nhà phố vườn cao cấp", "⭐⭐⭐⭐ Cao",
             "Khách địa phương giàu có, quan chức và chủ doanh nghiệp tại BR-VT",
             "Tổ chức hội thảo mini giới thiệu Điền Trang cho giới tinh hoa BR-VT"
         )
@@ -204,7 +204,7 @@ def main():
     ws.merge_cells(start_row=last_row, start_column=2, end_row=last_row, end_column=10)
     note_cell = ws.cell(row=last_row, column=2,
         value="📌 CHIẾN LƯỢC TIẾP CẬN MÔI GIỚI: 1) Liên hệ trực tiếp qua Zalo/Điện thoại gửi Bảng hoa hồng & Cơ chế chia sẻ hấp dẫn (2.5% - 3.5%). "
-              "2) Nhấn mạnh các điểm 'bán được ngay': Sổ đỏ thổ cư riêng từng nền, mặt hồ nước ngọt 100ha độc bản, giá chỉ 1/3 đất biển Hồ Tràm. "
+              "2) Nhấn mạnh các điểm 'bán được ngay': Sổ đỏ thổ cư riêng từng sản phẩm, mặt hồ nước ngọt 100ha độc bản, giá chỉ 1/3 đất biển Hồ Tràm. "
               "3) Mời tham quan thực tế trải nghiệm tại Saigon Farm Resort và tặng voucher trải nghiệm ẩm thực Farm-to-Table.")
     note_cell.fill = make_fill(GREEN_DARK)
     note_cell.font = Font(name="Calibri", size=9.5, bold=True, color="FFFDF9")

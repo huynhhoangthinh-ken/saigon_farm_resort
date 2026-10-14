@@ -86,7 +86,7 @@ new_articles = [
         <tr style="border-bottom: 1px solid #f0ebe1;">
           <td style="padding: 12px 16px; font-weight: 600; color: #333;">Quy mô khuôn viên</td>
           <td style="padding: 12px 16px; color: #666;">200m² – 500m² (Diện tích hạn hẹp)</td>
-          <td style="padding: 12px 16px; color: #2e7d32; font-weight: 600;">1.000m² – 1.500m² (Sổ hồng riêng từng nền)</td>
+          <td style="padding: 12px 16px; color: #2e7d32; font-weight: 600;">1.000m² – 1.500m² (Sổ hồng riêng từng sản phẩm)</td>
         </tr>
         <tr style="border-bottom: 1px solid #f0ebe1; background: #fdfbf7;">
           <td style="padding: 12px 16px; font-weight: 600; color: #333;">Cảnh quan & Mặt nước</td>
@@ -1129,7 +1129,7 @@ new_articles = [
         "id": 410,
         "title": "Đất Rộng Ven Hồ Ngày Càng Hiếm: Tích Sản Điền Trang Sinh Thái – Biểu Tượng Đẳng Cấp & Di Sản Truyền Đời",
         "excerpt": "Trong bối cảnh quỹ đất nội đô cạn kiệt và quy hoạch đô thị nén thu hẹp không gian, việc sở hữu một khuôn viên điền trang 1.000m² - 1.500m² ven hồ tự nhiên 100ha là cơ hội tích sản vô giá và khẳng định vị thế đỉnh cao.",
-        "image": "assets/Index_asset/Flycam/DJI_0014_2.JPG",
+        "image": "assets/Index_asset/MasterPlan/SGFR_Master_1_web.webp",
         "date": "31 TH8 2026",
         "author": "Ban Phân Tích Dữ Liệu BĐS Nghỉ Dưỡng • Ban Quản Lý Saigon Farm Resort",
         "category": "Đầu Tư & Bất Động Sản",
@@ -1151,9 +1151,9 @@ new_articles = [
   </div>
 
   <figure style="margin: 0 0 32px; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12); border: 1px solid #e0d5c1;">
-    <img src="assets/Index_asset/Flycam/DJI_0014_2.JPG" alt="Toàn cảnh không gian hồ nước tự nhiên 100ha và quỹ đất rộng lớn" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="lazy">
+    <img src="assets/Index_asset/MasterPlan/SGFR_Master_1_web.webp" alt="Phối cảnh 3D toàn cảnh không gian hồ nước tự nhiên 100ha và quần thể điền trang" style="width: 100%; height: auto; max-height: 480px; object-fit: cover; display: block;" loading="lazy">
     <figcaption style="padding: 10px 16px; background: #fdfbf7; font-size: 0.8rem; color: #777; font-style: italic; border-top: 1px solid #eee; text-align: right;">
-      * Toàn cảnh flycam mặt nước hồ tự nhiên 100ha và quỹ đất sinh thái nguyên bản tại Saigon Farm Resort.
+      * Phối cảnh 3D toàn cảnh mặt nước hồ tự nhiên 100ha và quần thể điền trang sinh thái tại Saigon Farm Resort.
     </figcaption>
   </figure>
 

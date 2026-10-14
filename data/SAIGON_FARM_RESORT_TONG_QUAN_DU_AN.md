@@ -33,7 +33,7 @@
 | **Tổng số sản phẩm toàn khu** | **47 sản phẩm điền trang** độc bản |
 | **Quy mô mở bán Đợt 1 (T9/2026)** | **36 sản phẩm** (Bao gồm: 17 Biệt Phủ + 12 Điền Sản + 07 Điền An) |
 | **Diện tích khuôn viên riêng** | **Trên 1.000 m² mỗi sản phẩm** (từ 646,5 m² – 1.452 m², bình quân ~1.108 m²) |
-| **Pháp lý sản phẩm** | **Sổ đỏ riêng từng nền**, 100% thổ cư, sang tên công chứng ngay |
+| **Pháp lý sản phẩm** | **Sổ đỏ riêng từng sản phẩm**, 100% thổ cư, sang tên công chứng ngay |
 | **Tiêu chuẩn vận hành** | Khu nghỉ dưỡng sinh thái cao cấp mang âm hưởng Văn hóa & Bản sắc Việt |
 | **Thời gian vận hành chính thức** | Bàn giao và vận hành toàn khu vào **Cuối năm 2027** |
 
@@ -109,7 +109,7 @@ Mở bán đợt 1 đúng **36 sản phẩm** với 3 phân khúc chiến lượ
   - 215 đêm còn lại ủy thác MDS Living kinh doanh lưu trú với giá thuê công bố từ **6.000.000 đ – 10.000.000 đ / đêm**, chia sẻ 50% doanh thu thuần.
 
 ### 4.2. Điền Sản (Founders) (12 Nền Độc Bản)
-- **Mô tả:** Dòng sản phẩm đất nền điền trang nghỉ dưỡng sổ đỏ ven hồ dành riêng cho 12 nhà đầu tư đồng hành đầu tiên (Founders Club).
+- **Mô tả:** Dòng sản phẩm sản phẩm điền trang nghỉ dưỡng sổ đỏ ven hồ dành riêng cho 12 nhà đầu tư đồng hành đầu tiên (Founders Club).
 - **Lợi thế:**
   - Sở hữu mức giá gốc đợt 1 từ Đơn vị Phát triển MDS Land với quyền chọn vị trí ưu tiên.
   - Thanh toán 50% ký công chứng HĐ chuyển nhượng QSDĐ (tiến độ thanh toán 100% mới đứng sổ đỏ riêng), 50% được giãn tiến độ với lãi suất 0% trong 12 tháng (hoặc tới cuối năm 2027 khi toàn khu vận hành), Đơn vị Phát triển MDS Land cam kết đồng hành hỗ trợ ra hàng giá 13,8 – 15 triệu/m².
@@ -203,7 +203,7 @@ Chính sách định giá cho thuê biệt phủ điền trang ven hồ tại kh
 ## 8. PHÁP LÝ, TIẾN ĐỘ & LỘ TRÌNH PHÁT TRIỂN
 
 ### 8.1. Pháp lý vững chắc & Triệt tiêu 3 loại chi phí ngầm
-- Toàn bộ các nền đất trong quần thể đã có **Sổ hồng riêng từng nền**, hình thức sở hữu lâu dài/an toàn tuyệt đối, công chứng sang tên và khởi công xây dựng ngay.
+- Toàn bộ các sản phẩm trong quần thể đã có **Sổ hồng riêng từng sản phẩm**, hình thức sở hữu lâu dài/an toàn tuyệt đối, công chứng sang tên và khởi công xây dựng ngay.
 - **Triệt tiêu hoàn toàn 3 loại chi phí ngầm khổng lồ** mà người mua đất tự do thường phải đối mặt:
   1. **Chi phí chờ đợi (Thời gian là tiền bạc):** Đất nông nghiệp chờ chuyển đổi mục đích sử dụng có thể mất 3 - 5 năm, không thể khai thác, không thể xây dựng, và mất đi chi phí cơ hội đầu tư.
   2. **Chi phí chuyển đổi (Tiền sử dụng đất thực tế):** Nghĩa vụ tài chính nộp tiền sử dụng đất khi chuyển từ đất trồng cây lâu năm sang đất ở nông thôn theo bảng giá đất mới là một khoản tiền thật rất lớn, có thể chiếm từ 30% đến 50% giá trị mảnh đất.

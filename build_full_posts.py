@@ -15,7 +15,7 @@ posts = [
         "content": """
 <p>Trong một thời gian dài, khi nghĩ về bất động sản cao cấp, người ta thường liên tưởng đến những phong cách kiến trúc phương Tây: những căn biệt thự phong cách Địa Trung Hải, những dãy nhà cổ điển châu Âu hay những khu nghỉ dưỡng được quảng bá theo tiêu chuẩn của một vùng đất xa xôi nào đó. Điều này hoàn toàn dễ hiểu trong một giai đoạn mà chuẩn mực quốc tế đồng nghĩa với sự sang trọng.</p>
 
-<p>Nhưng nếu quan sát các nền kinh tế đã phát triển, có một xu hướng thú vị: khi một quốc gia đạt đến mức độ trưởng thành nhất định về kinh tế, tầng lớp tinh hoa của họ thường bắt đầu quay về tìm kiếm những giá trị thuộc về nguồn cội. Họ không còn cần mượn một nền văn hóa khác để chứng minh vị thế của mình.</p>
+<p>Nhưng nếu quan sát các sản phẩm kinh tế đã phát triển, có một xu hướng thú vị: khi một quốc gia đạt đến mức độ trưởng thành nhất định về kinh tế, tầng lớp tinh hoa của họ thường bắt đầu quay về tìm kiếm những giá trị thuộc về nguồn cội. Họ không còn cần mượn một nền văn hóa khác để chứng minh vị thế của mình.</p>
 
 <p>Khách hàng cao cấp ngày nay quan tâm nhiều hơn đến những trải nghiệm có bản sắc, những câu chuyện chân thực và mối liên hệ với con người địa phương. Bất động sản cao cấp cũng đang đứng trước một câu hỏi tương tự:</p>
 <p>Một ngôi nhà Việt Nam hoàn toàn có thể sử dụng đá Ý, thiết bị Đức, công nghệ Nhật và những tiêu chuẩn thiết kế, vận hành tốt nhất của thế giới. Tiếp nhận tinh hoa quốc tế là điều bình thường. Nhưng một căn nhà ở Việt Nam không nhất thiết phải mang hình hài Tuscany, Kyoto hay một vùng ngoại ô châu Âu để được xem là sang trọng. <strong>Chúng ta đã có những chất liệu của riêng mình.</strong></p>
@@ -1555,7 +1555,7 @@ posts = [
 
   <!-- Flycam Image 1 -->
   <div style=\"margin: 32px 0; text-align: center;\">
-    <img src=\"assets/Index_asset/Flycam/DJI_0007_2.JPG\" alt=\"Toàn cảnh thực tế mặt hồ sinh thái 100ha xanh ngắt từ Flycam\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
+    <img src=\"assets/Index_asset/MasterPlan/SGFR_Master_2.webp\" alt=\"Toàn cảnh thực tế mặt hồ sinh thái 100ha xanh ngắt từ Phối Cảnh 3D MasterPlan\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
     <p style=\"font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;\">
       Ảnh Flycam thực tế: Mặt nước hồ sinh thái 100ha trong xanh ngút tầm mắt, được ôm trọn bởi vành đai cây xanh và vườn cây ăn trái trù phú.
     </p>
@@ -1591,7 +1591,7 @@ posts = [
 
   <!-- Flycam Image 2: Wide Panorama -->
   <div style=\"margin: 32px 0; text-align: center;\">
-    <img src=\"assets/Index_asset/Flycam/DJI_0020_2.JPG\" alt=\"Toàn cảnh Flycam hồ 100ha và rặng núi đồi xa xa tại Đất Đỏ Hồ Tràm\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
+    <img src=\"assets/Index_asset/MasterPlan/SGFR_Master_1_web.webp\" alt=\"Toàn cảnh Phối cảnh 3D hồ 100ha và rặng núi đồi xa xa tại Đất Đỏ Hồ Tràm\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
     <p style=\"font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;\">
       Ảnh Flycam thực tế: Góc nhìn bao quát toàn cảnh lòng hồ 100ha với hậu cảnh núi đồi trập trùng, tạo nên địa thế phong thủy 'Sơn Thủy Hữu Tình' hiếm có.
     </p>
@@ -1933,7 +1933,7 @@ posts = [
   </div>
 
   <div style=\"margin: 30px 0; text-align: center;\">
-    <img src=\"assets/Index_asset/Flycam/DJI_0014_2.JPG\" alt=\"Toàn cảnh thiên nhiên Đất Đỏ nhìn từ trên cao\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
+    <img src=\"assets/Index_asset/MasterPlan/SGFR_Master_1_web.webp\" alt=\"Toàn cảnh thiên nhiên Đất Đỏ nhìn từ trên cao\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
     <p style=\"font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;\">
       Không gian thảo nguyên rộng mở ôm trọn hồ sinh thái 100ha — Địa hình lý tưởng để phát triển câu lạc bộ cưỡi ngựa quý tộc.
     </p>
@@ -2433,7 +2433,7 @@ posts = [
   </div>
 
   <div style=\"margin: 30px 0; text-align: center;\">
-    <img src=\"assets/Index_asset/Flycam/DJI_0014_2.JPG\" alt=\"Góc nhìn flycam toàn cảnh thiên nhiên và hạ tầng kết nối Hồ Tràm\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
+    <img src=\"assets/Index_asset/MasterPlan/SGFR_Master_1_web.webp\" alt=\"Góc nhìn phối cảnh 3D toàn cảnh thiên nhiên và hạ tầng kết nối Hồ Tràm\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
     <p style=\"font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;\">
       Toàn cảnh thiên nhiên Đất Đỏ - Hồ Tràm nhìn từ trên cao: Địa thế trù phú xanh mát, quỹ đất ven hồ rộng lớn ngày càng khan hiếm.
     </p>
@@ -2610,7 +2610,7 @@ posts = [
 </div>
 
 <div style="margin: 24px 0; text-align: center;">
-  <img src="assets/Index_asset/Flycam/DJI_0997_2.JPG" alt="Toàn cảnh mặt hồ 100ha thực tế nhìn từ Flycam" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <img src="assets/Index_asset/MasterPlan/SGFR_Master_2.webp" alt="Toàn cảnh mặt hồ 100ha thực tế nhìn từ Phối Cảnh 3D MasterPlan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
   <p style="font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;">Hình ảnh thực tế mặt nước hồ tự nhiên 100ha tại Saigon Farm Resort</p>
 </div>
 
@@ -2734,7 +2734,7 @@ posts = [
         "id": 304,
         "title": "Thông Tin Liên Hệ & Đăng Ký Trải Nghiệm Thực Tế Saigon Farm Resort",
         "excerpt": "Kính mời Quý khách hàng tham quan thực địa Saigon Farm Resort. Xe cao cấp đưa đón tận nơi từ TP.HCM, khảo sát ranh đất từng vị trí, cập nhật tiến độ hạ tầng và nhà mẫu hoàn thành Tháng 12/2026, thưởng thức bữa trưa ấm cúng ven hồ.",
-        "image": "assets/Index_asset/Flycam/DJI_0007_2.JPG",
+        "image": "assets/Index_asset/MasterPlan/SGFR_Master_2.webp",
         "date": "29 TH8 2026",
         "content": "
 <article class=\"article-detail\" style=\"font-family: var(--font-sans); color: #2c2c2c; line-height: 1.85; max-width: 900px; margin: 0 auto;\">
@@ -2782,7 +2782,7 @@ posts = [
 
   <!-- Hero Image -->
   <div style=\"margin: 36px 0; text-align: center;\">
-    <img src=\"assets/Index_asset/Flycam/DJI_0007_2.JPG\" alt=\"Toàn cảnh thực tế hồ sinh thái 100ha tại Saigon Farm Resort\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);\" />
+    <img src=\"assets/Index_asset/MasterPlan/SGFR_Master_2.webp\" alt=\"Toàn cảnh thực tế hồ sinh thái 100ha tại Saigon Farm Resort\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);\" />
     <p style=\"font-size: 0.88rem; color: #777; margin-top: 10px; font-style: italic;\">
       Toàn cảnh thực tế mặt hồ sinh thái 100ha và vùng đất trù phú tại Saigon Farm Resort — Nơi đón tiếp Quý khách hàng tham quan thực địa.
     </p>
@@ -2854,7 +2854,7 @@ posts = [
   </div>
 
   <div style=\"margin: 30px 0; text-align: center;\">
-    <img src=\"assets/Index_asset/Flycam/DJI_0014_2.JPG\" alt=\"Toàn cảnh thực địa khu đất và cây xanh tại Saigon Farm Resort\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
+    <img src=\"assets/Index_asset/MasterPlan/SGFR_Master_1_web.webp\" alt=\"Toàn cảnh thực địa khu đất và cây xanh tại Saigon Farm Resort\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);\" />
     <p style=\"font-size: 0.88rem; color: #777; margin-top: 8px; font-style: italic;\">
       Khuôn viên thực địa đang được phủ xanh cảnh quan và hoàn thiện đồng bộ hệ thống hạ tầng kỹ thuật.
     </p>
