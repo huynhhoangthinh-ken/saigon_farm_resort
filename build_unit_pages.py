@@ -151,6 +151,32 @@ def build_unit_page_html(item, all_items):
               <div class="uph-m2" style="color: #777;">Chưa mở bán chính thức</div>
             </div>
             """
+        elif code == "A15":
+            price_hero_box_html = f"""
+            <div class="unit-price-hero-box" style="background: linear-gradient(135deg, rgba(185, 28, 28, 0.06), rgba(2, 132, 199, 0.04)); border: 1.5px solid #b91c1c; min-width: 280px; box-shadow: 0 4px 14px rgba(185, 28, 28, 0.1);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <span class="uph-label" style="margin:0; color:#b91c1c; font-weight:800; font-size:0.75rem;"><i class="fa-solid fa-tag"></i> ĐƠN GIÁ THẤP NHẤT TOÀN KHU</span>
+                <span style="background:#b91c1c; color:#fff; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:12px;">Hot Deal Đợt 1</span>
+              </div>
+              <div class="uph-billion" style="color:#b91c1c; font-size:1.75rem; font-weight:900;">{unit_price_mil}</div>
+              <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:4px; padding:3px 8px; font-size:0.78rem; color:#991b1b; font-weight:700; margin-bottom:6px;">
+                Sau ưu đãi 1 Tỷ chỉ còn: ~8,17 Tr/m²
+              </div>
+              <div style="font-size:0.82rem; color:#475569; margin-bottom:8px;">Tiền đất: <strong style="color:#0f172a;">{price_bil}</strong> <span style="font-size:0.75rem; color:#64748b;">({price_str})</span></div>
+              <div style="padding-top:8px; border-top:1px dashed rgba(185, 28, 28, 0.3); font-size:0.88rem; color:#b91c1c; font-weight:700; display:flex; justify-content:space-between; align-items:center;">
+                <span><i class="fa-solid fa-hotel"></i> Cả Đất & Nhà 30 phòng:</span>
+                <span style="font-size:1.15rem;">{house_vat_bil}</span>
+              </div>
+              <div style="font-size:0.72rem; color:#64748b; text-align:right;">(Gồm VAT & bàn giao full nội thất theo chuẩn MDS Living)</div>
+            </div>
+            """
+            sticky_features_html = f"""
+            <li><i class="fa-solid fa-fire" style="color:#b91c1c;"></i> <strong style="color:#b91c1c;">ĐƠN GIÁ ĐẤT THẤP NHẤT TOÀN QUẦN THỂ: {unit_price_mil}</strong></li>
+            <li><i class="fa-solid fa-circle-check"></i> Sau ưu đãi 1 Tỷ đơn giá đất chỉ: <strong>~8,17 Tr/m²</strong></li>
+            <li><i class="fa-solid fa-circle-check"></i> Gói xây dựng 30 phòng 850m² trọn gói: <strong>{house_vat_bil}</strong></li>
+            <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng sản phẩm, thổ cư lâu dài</li>
+            <li><i class="fa-solid fa-circle-check"></i> Chính sách thuê lại 120 Tr/tháng (30 phòng x 4 Tr) từ MDS Living</li>
+        """
         else:
             price_hero_box_html = f"""
             <div class="unit-price-hero-box" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.06), rgba(12, 74, 110, 0.03)); border: 1px solid rgba(2, 132, 199, 0.35); min-width: 270px;">
@@ -167,8 +193,7 @@ def build_unit_page_html(item, all_items):
               <div style="font-size:0.72rem; color:#64748b; text-align:right;">(Gồm VAT & bàn giao full nội thất theo chuẩn MDS Living)</div>
             </div>
             """
-            
-        sticky_features_html = f"""
+            sticky_features_html = f"""
             <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng sản phẩm, thổ cư lâu dài</li>
             <li><i class="fa-solid fa-circle-check"></i> Đơn giá đất ưu đãi đột phá: <strong>{unit_price_mil}</strong></li>
             <li><i class="fa-solid fa-circle-check"></i> Gói xây dựng 30 phòng 850m² trọn gói: <strong>{house_vat_bil}</strong></li>

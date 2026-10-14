@@ -161,17 +161,21 @@ def render_page(cat, all_cats):
                 <span style="font-size: 0.74rem; color: #92400e; display: block;">Chưa mở bán chính thức</span>
                 """
             else:
+                lowest_badge = '<div style="background: #fee2e2; border: 1px solid #fca5a5; color: #b91c1c; font-weight: 800; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 4px;"><i class="fa-solid fa-tag"></i> ĐƠN GIÁ THẤP NHẤT TOÀN QUẦN THỂ</div>' if item['code'] == 'A15' else ""
+                note_a15 = '<div style="font-size: 0.74rem; color: #b91c1c; font-weight: 700; margin-top: 2px;">(Sau ưu đãi chỉ ~8,17 Tr/m²)</div>' if item['code'] == 'A15' else ""
                 price_html = f"""
+                {lowest_badge}
                 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
                   <span class="price-label" style="margin: 0; color: #0284c7; font-weight: 700; font-size: 0.78rem;">ĐƠN GIÁ ĐẤT:</span>
-                  <span style="color: #0284c7; font-weight: 800; font-size: 1.05rem;">{item.get('unit_price_million', '')}</span>
+                  <span style="color: {'#b91c1c' if item['code'] == 'A15' else '#0284c7'}; font-weight: 800; font-size: 1.05rem;">{item.get('unit_price_million', '')}</span>
                 </div>
+                {note_a15}
                 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
                   <span class="price-label" style="margin: 0; font-size: 0.76rem;">Tiền đất:</span>
                   <span class="price-val" style="color: #1e293b; font-weight: 700; font-size: 0.95rem;">{item.get('price_billion', '')}</span>
                 </div>
                 <div style="background: rgba(2, 132, 199, 0.08); border-left: 3px solid #0284c7; border-radius: 4px; padding: 4px 8px; margin-top: 4px; font-size: 0.8rem; color: #0369a1; font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
-                  <span><i class="fa-solid fa-hotel" style="color:#0284c7; margin-right:4px;"></i> Gói cả nhà 30 suites:</span>
+                  <span><i class="fa-solid fa-hotel" style="color:#0284c7; margin-right:4px;"></i> Gói cả nhà 30 phòng:</span>
                   <span style="color: #b91c1c; font-size: 0.95rem;">{item.get('house_price_vat_billion', '')} <small style="font-size: 0.68rem; color: #666; font-weight: 400;">(gồm VAT)</small></span>
                 </div>
                 """

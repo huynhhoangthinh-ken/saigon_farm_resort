@@ -242,7 +242,22 @@ def main():
                 house_unit_price_vat_million = None
 
         # Build feature descriptions
-        if code == 'A19':
+        if code == 'A15':
+            features = "ĐƠN GIÁ ĐẤT THẤP NHẤT TOÀN QUẦN THỂ CHỈ 9,07 TR/M² (Sau ưu đãi chỉ ~8,17 Tr/m²). Khuôn viên 1.115,70 m² view đồng lúa thanh bình, trọn gói cả đất và hoàn thiện 30 phòng lưu trú 850m² chỉ 17,60 Tỷ."
+            suitable_for = "Nhà đầu tư khai thác dòng tiền cho thuê tối ưu với suất đầu tư thấp nhất toàn khu, chính sách thuê lại 120 Tr/tháng (1,44 Tỷ/năm) từ MDS Living."
+            amenity = "Bình thường"
+            image = "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp"
+        elif code == 'B10':
+            features = "ĐƠN GIÁ TỐT NHẤT DÒNG ĐIỀN SẢN (Chỉ 11,21 Tr/m²). Khuôn viên tới 1.291,20 m², vị trí ngoài cùng cánh Đông tiếp giáp công viên và đường trục lớn."
+            suitable_for = "Nhà đầu tư chiến lược tối ưu hóa biên độ lợi nhuận với đơn giá đầu vào tốt nhất dòng Điền Sản."
+            amenity = "Bình thường"
+            image = old_it.get('image', 'assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg')
+        elif code == 'B22':
+            features = "ĐƠN GIÁ ĐẤT CỰC TỐT CHỈ 9,69 TR/M² (Tiền đất 10,12 Tỷ). Khuôn viên 1.044,86 m² kề cận công viên trung tâm, trọn gói đất và nhà 30 phòng 850m² chỉ 17,60 Tỷ."
+            suitable_for = "Nhà đầu tư tìm kiếm mô hình BĐS dòng tiền bền vững, chính sách thuê lại 120 Tr/tháng từ MDS Living."
+            amenity = "Bình thường"
+            image = "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp"
+        elif code == 'A19':
             features = "TẦM NHÌN TRỰC DIỆN ĐỒNG LÚA THANH BÌNH. Hướng Đông Bắc đón gió sinh thái mát mẻ quanh năm, không gian tĩnh lặng tuyệt đối bên thềm đồng lúa."
             suitable_for = "Gia chủ tìm kiếm tư dinh dưỡng sinh, tái tạo năng lượng với không gian mở khoáng đạt và dịch vụ MDS Living chuẩn 5 sao."
             amenity = "Bình thường"

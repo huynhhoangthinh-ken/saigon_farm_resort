@@ -207,6 +207,10 @@ def update_listing():
         elif amenity == "Công viên cảnh quan":
             amenity_badge = '<span class="badge-chip badge-blue"><i class="fa-solid fa-tree"></i> Kề Công Viên</span>'
 
+        lowest_price_badge = ""
+        if code == "A15":
+            lowest_price_badge = '<span class="badge-chip" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; font-weight:800;"><i class="fa-solid fa-tag"></i> ĐƠN GIÁ ĐẤT THẤP NHẤT TOÀN QUẦN THỂ: 9,07 TR/M²</span>'
+
         # Policy note per collection
         if cat_slug == "dien-san":
             policy_html = """
@@ -219,7 +223,7 @@ def update_listing():
             policy_html = """
             <div class="card-policy-box policy-haven">
               <i class="fa-solid fa-hand-holding-dollar"></i>
-              <span><strong>Dòng Tiền:</strong> Cam kết thuê tối thiểu <strong>80 Tr/tháng</strong> (từ 20 phòng) · MDS Living vận hành phòng bổ sung</span>
+              <span><strong>Dòng Tiền:</strong> Chính sách thuê lại <strong>120 Tr/tháng</strong> (30 phòng x 4 Tr) từ MDS Living mang lại dòng tiền an tâm</span>
             </div>
             """
         else:
@@ -248,18 +252,21 @@ def update_listing():
             </div>
             """
         elif cat_slug == "dien-an":
+            tag_bg = "#b91c1c" if code == "A15" else "#0284c7"
+            tag_text = f"ĐƠN GIÁ THẤP NHẤT: {unit_price_mil}" if code == "A15" else f"ĐƠN GIÁ ĐẤT: {unit_price_mil}"
+            note_badge = '<span class="price-note-badge" style="background: #fef2f2; color: #b91c1c; border-color: #fca5a5; font-weight: 700;">Sau ưu đãi ~8,17 Tr/m²</span>' if code == "A15" else f'<span class="price-note-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Đất chỉ {unit_price_mil}</span>'
             price_block_html = f"""
             <div class="card-price-section" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.05) 0%, rgba(201, 169, 110, 0.08) 100%); border: 1px solid rgba(2, 132, 199, 0.28);">
               <div class="price-header-row">
-                <span class="price-type-tag" style="background: #0284c7; color: #fff; font-weight: 700; border: none;">ĐƠN GIÁ ĐẤT: {unit_price_mil}</span>
-                <span class="unit-price-tag" style="color: #0369a1; font-weight: 700;"><i class="fa-solid fa-hotel"></i> 30 Suites (850m²)</span>
+                <span class="price-type-tag" style="background: {tag_bg}; color: #fff; font-weight: 700; border: none;">{tag_text}</span>
+                <span class="unit-price-tag" style="color: #0369a1; font-weight: 700;"><i class="fa-solid fa-hotel"></i> 30 Phòng (850m²)</span>
               </div>
               <div class="price-main-row">
                 <div class="price-display">
                   <span class="price-billion" style="color: #0c4a6e;">{price_bil}</span>
                   <span class="price-exact" style="color: #0369a1;">(Tiền đất: {price_str})</span>
                 </div>
-                <span class="price-note-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Đất chỉ {unit_price_mil}</span>
+                {note_badge}
               </div>
               <div class="house-price-row" style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(2, 132, 199, 0.35); display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;">
                 <span style="color: #0f172a;"><i class="fa-solid fa-house-chimney" style="color: #0284c7;"></i> <strong>Tổng Gói Đất & XD:</strong></span>
@@ -383,6 +390,7 @@ def update_listing():
 
             <!-- Chips tags -->
             <div class="card-chips-row">
+              {lowest_price_badge}
               {pos_badge}
               {view_badge}
               {amenity_badge}
