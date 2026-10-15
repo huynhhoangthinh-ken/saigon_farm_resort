@@ -216,21 +216,21 @@ def update_listing():
             policy_html = """
             <div class="card-policy-box policy-founders">
               <i class="fa-solid fa-gift"></i>
-              <span><strong>CS Mở Bán:</strong> Ưu đãi TT sớm 50/50 giảm <strong>600Tr</strong> · TT sớm 100% giảm <strong>1 Tỷ</strong> · Giãn 50% trong 12 tháng 0% lãi</span>
+              <span><strong>CS Mở Bán:</strong> 4 Phương án TT linh hoạt · Chiết khấu từ <strong>200 Triệu – 1 Tỷ</strong> · Miễn phí quản lý 24 tháng MDS Living</span>
             </div>
             """
         elif cat_slug == "dien-an":
             policy_html = """
             <div class="card-policy-box policy-haven">
               <i class="fa-solid fa-hand-holding-dollar"></i>
-              <span><strong>Dòng Tiền:</strong> Chính sách thuê lại <strong>120 Tr/tháng</strong> (30 phòng x 4 Tr) từ MDS Living mang lại dòng tiền an tâm</span>
+              <span><strong>Dòng Tiền:</strong> MDS Living cam kết thuê lại <strong>120 Tr/tháng (1,44 Tỷ/năm)</strong> với 30 phòng lưu trú (4 Tr/phòng/tháng)</span>
             </div>
             """
         else:
             policy_html = """
             <div class="card-policy-box policy-manor">
               <i class="fa-solid fa-crown"></i>
-              <span><strong>Đặc Quyền:</strong> Biệt Phủ Điền Trang - Gói vận hành thuê 150 đêm (thu nhập 600 triệu/năm) và 215 đêm nghỉ dưỡng + chia sẻ 50% doanh thu cùng MDS Living</span>
+              <span><strong>Đặc Quyền:</strong> 4 Phương án TT (Ưu đãi 200M – 1 Tỷ) · MDS Living ủy thác vận hành 360M - 600M/năm hoặc chia sẻ doanh thu</span>
             </div>
             """
 
@@ -305,21 +305,21 @@ def update_listing():
             bonus_pill_html = """
             <div class="card-bonus-construction-pill" style="background: rgba(2, 132, 199, 0.08); border-color: rgba(2, 132, 199, 0.25); color: #0369a1;">
               <i class="fa-solid fa-hotel"></i>
-              <span>Bàn giao hoàn thiện: <strong>Full nội thất 30 suites liền tường (850 m²)</strong></span>
+              <span>30 phòng lưu trú · <strong>MDS Living thuê lại 120 Tr/tháng (1,44 Tỷ/năm)</strong></span>
             </div>
             """
         elif cat_slug == "dien-san":
             bonus_pill_html = """
             <div class="card-bonus-construction-pill" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.25); color: #065f46;">
               <i class="fa-solid fa-gift"></i>
-              <span>Ưu đãi TT sớm 50/50: <strong>Giảm 600 Triệu</strong> · TT 100%: <strong>Giảm 1 Tỷ</strong></span>
+              <span>4 Phương Án TT: <strong>Ưu đãi 200M – 1 Tỷ</strong> · Miễn phí quản lý 24 tháng</span>
             </div>
             """
         else:
             bonus_pill_html = """
             <div class="card-bonus-construction-pill">
               <i class="fa-solid fa-gift"></i>
-              <span>Ưu đãi hoàn tất xây dựng trước 12/2027: <strong>Giảm 800 Triệu</strong></span>
+              <span>Ưu đãi TT sớm: <strong>200M – 1 Tỷ</strong> · Gói nội thất <strong>800 Triệu</strong></span>
             </div>
             """
 
@@ -2788,171 +2788,396 @@ def update_listing():
         padding: 6px 10px;
       }}
 
-      /* 2-Column Square Grid on Mobile ("Hàng ngang ô vuông") */
-      .listings-grid:not(.view-list-mode) {{
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-        margin-bottom: 25px !important;
-      }}
-      .listings-grid:not(.view-list-mode) .listing-card {{
-        border-radius: 10px !important;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+      /* Full-Width Beautiful Mobile Cards ("Xem Trọn Vẹn Như Máy Tính - Gọn Gàng & Dễ Nhìn") */
+      .listings-grid,
+      .listings-grid:not(.view-list-mode),
+      .listings-grid.view-list-mode {{
+        grid-template-columns: 1fr !important;
         display: flex !important;
         flex-direction: column !important;
-        cursor: pointer;
-        transition: transform 0.2s;
+        gap: 18px !important;
+        margin-bottom: 30px !important;
       }}
-      .listings-grid:not(.view-list-mode) .listing-card:active {{
-        transform: scale(0.98);
-      }}
-      .listings-grid:not(.view-list-mode) .card-thumb-wrap {{
-        height: 120px !important;
-        position: relative;
-      }}
-      .listings-grid:not(.view-list-mode) .card-badge-code {{
-        top: 6px !important;
-        left: 6px !important;
-        font-size: 0.7rem !important;
-        padding: 3px 6px !important;
-        font-weight: 800;
-        letter-spacing: 0;
-      }}
-      .listings-grid:not(.view-list-mode) .card-badge-cat {{
-        bottom: 6px !important;
-        left: 6px !important;
-        font-size: 0.62rem !important;
-        padding: 2px 6px !important;
-      }}
-      .listings-grid:not(.view-list-mode) .card-badge-status {{
-        top: 6px !important;
-        right: 6px !important;
-        font-size: 0.62rem !important;
-        padding: 2px 6px !important;
-      }}
-      .listings-grid:not(.view-list-mode) .card-body {{
-        padding: 8px !important;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-      }}
-      .listings-grid:not(.view-list-mode) .card-top-info {{
-        margin-bottom: 4px !important;
-      }}
-      .listings-grid:not(.view-list-mode) .area-label {{
-        display: none !important;
-      }}
-      .listings-grid:not(.view-list-mode) .area-val {{
-        font-size: 0.95rem !important;
-        font-weight: 800;
-        color: var(--primary);
-      }}
-      .listings-grid:not(.view-list-mode) .area-val strong {{
-        font-size: 1.05rem !important;
-        color: var(--gold-dark);
-      }}
-      .listings-grid:not(.view-list-mode) .card-legal-pill {{
-        display: none !important;
-      }}
-      .listings-grid:not(.view-list-mode) .card-title {{
-        font-size: 0.84rem !important;
-        font-weight: 700 !important;
-        margin-bottom: 4px !important;
-        line-height: 1.3 !important;
-        white-space: nowrap !important;
+      .listing-card,
+      .listings-grid:not(.view-list-mode) .listing-card,
+      .listings-grid.view-list-mode .listing-card {{
+        border-radius: 12px !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
         overflow: hidden !important;
-        text-overflow: ellipsis !important;
+        background: #ffffff !important;
+        border: 1px solid #ebdcc5 !important;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }}
+      .listing-card:active {{
+        transform: scale(0.99);
+      }}
+      .card-thumb-wrap,
+      .listings-grid:not(.view-list-mode) .card-thumb-wrap,
+      .listings-grid.view-list-mode .card-thumb-wrap {{
+        width: 100% !important;
+        min-width: 100% !important;
+        height: 200px !important;
+        position: relative !important;
+        overflow: hidden !important;
+      }}
+      .card-badge-code,
+      .listings-grid:not(.view-list-mode) .card-badge-code {{
+        top: 10px !important;
+        left: 10px !important;
+        font-size: 0.8rem !important;
+        padding: 4px 10px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.5px;
+      }}
+      .card-badge-cat,
+      .listings-grid:not(.view-list-mode) .card-badge-cat {{
+        bottom: 10px !important;
+        left: 10px !important;
+        font-size: 0.72rem !important;
+        padding: 3px 8px !important;
+      }}
+      .card-badge-status,
+      .listings-grid:not(.view-list-mode) .card-badge-status {{
+        top: 10px !important;
+        right: 10px !important;
+        font-size: 0.7rem !important;
+        padding: 3px 9px !important;
+      }}
+      .card-body,
+      .listings-grid:not(.view-list-mode) .card-body,
+      .listings-grid.view-list-mode .card-body {{
+        padding: 14px 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }}
+      .card-top-info,
+      .listings-grid:not(.view-list-mode) .card-top-info {{
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 8px !important;
+      }}
+      .area-label,
+      .listings-grid:not(.view-list-mode) .area-label {{
+        display: block !important;
+        font-size: 0.7rem !important;
+        color: #777 !important;
+        text-transform: uppercase !important;
+      }}
+      .area-val,
+      .listings-grid:not(.view-list-mode) .area-val {{
+        font-size: 1.15rem !important;
+        font-weight: 800 !important;
+        color: var(--primary) !important;
+      }}
+      .area-val strong,
+      .listings-grid:not(.view-list-mode) .area-val strong {{
+        font-size: 1.3rem !important;
+        color: var(--gold-dark) !important;
+      }}
+      .card-legal-pill,
+      .listings-grid:not(.view-list-mode) .card-legal-pill {{
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        font-size: 0.74rem !important;
+        background: #e8f5e9 !important;
+        color: #2e7d32 !important;
+        padding: 3px 8px !important;
+        border-radius: 4px !important;
+        font-weight: 700 !important;
+      }}
+      .card-title,
+      .listings-grid:not(.view-list-mode) .card-title {{
+        font-size: 1.12rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 8px !important;
+        line-height: 1.35 !important;
+        color: #1a1a1a !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
       }}
       .card-mobile-meta {{
-        display: flex !important;
-        align-items: center;
-        gap: 4px;
-        font-size: 0.68rem;
-        color: var(--text-muted);
-        margin-bottom: 4px;
-      }}
-      .cm-tag {{
-        background: #f4ecdc;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-weight: 600;
-        color: #7d6f5d;
+        display: none !important;
       }}
 
-      /* Hide dense text fields on 2-col mobile cards so they stay neat and square */
+      /* Specs 4-cell Grid on Mobile */
+      .card-specs-grid,
       .listings-grid:not(.view-list-mode) .card-specs-grid,
-      .listings-grid:not(.view-list-mode) .card-features,
-      .listings-grid:not(.view-list-mode) .card-fit,
-      .listings-grid:not(.view-list-mode) .card-policy-box,
-      .listings-grid:not(.view-list-mode) .card-chips-row {{
-        display: none !important;
-      }}
-      /* Compact Price box */
-      .listings-grid:not(.view-list-mode) .card-price-section {{
-        padding: 6px 8px !important;
-        margin-top: auto !important;
-        margin-bottom: 6px !important;
+      .listings-grid.view-list-mode .card-specs-grid {{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px !important;
+        background: #fdfbf7 !important;
+        border: 1px solid #ebdcc5 !important;
         border-radius: 6px !important;
-        background: #fdfaf4 !important;
+        padding: 8px 10px !important;
+        margin-bottom: 10px !important;
       }}
-      .listings-grid:not(.view-list-mode) .price-type-tag,
-      .listings-grid:not(.view-list-mode) .price-exact,
-      .listings-grid:not(.view-list-mode) .price-note-badge {{
-        display: none !important;
-      }}
-      .listings-grid:not(.view-list-mode) .unit-price-tag {{
+      .card-specs-grid .spec-label {{
         font-size: 0.68rem !important;
-        color: #777;
       }}
+      .card-specs-grid .spec-val {{
+        font-size: 0.8rem !important;
+      }}
+
+      /* Chips Row on Mobile */
+      .card-chips-row,
+      .listings-grid:not(.view-list-mode) .card-chips-row,
+      .listings-grid.view-list-mode .card-chips-row {{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 5px !important;
+        margin-bottom: 10px !important;
+      }}
+      .badge-chip {{
+        font-size: 0.72rem !important;
+        padding: 2px 7px !important;
+      }}
+
+      /* Features & Suitability on Mobile */
+      .card-features,
+      .listings-grid:not(.view-list-mode) .card-features,
+      .listings-grid.view-list-mode .card-features {{
+        display: block !important;
+        font-size: 0.82rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 8px !important;
+        color: #555 !important;
+        min-height: auto !important;
+      }}
+      .card-fit,
+      .listings-grid:not(.view-list-mode) .card-fit,
+      .listings-grid.view-list-mode .card-fit {{
+        display: flex !important;
+        font-size: 0.78rem !important;
+        padding: 6px 10px !important;
+        margin-bottom: 10px !important;
+        line-height: 1.45 !important;
+        background: #faf6ee !important;
+        border: 1px dashed #ebdcc5 !important;
+        border-radius: 6px !important;
+      }}
+
+      /* Policy Box & Bonus Pill on Mobile */
+      .card-policy-box,
+      .listings-grid:not(.view-list-mode) .card-policy-box,
+      .listings-grid.view-list-mode .card-policy-box {{
+        display: flex !important;
+        font-size: 0.78rem !important;
+        padding: 7px 10px !important;
+        margin-bottom: 8px !important;
+        border-radius: 6px !important;
+      }}
+      .card-bonus-construction-pill,
+      .listings-grid:not(.view-list-mode) .card-bonus-construction-pill,
+      .listings-grid.view-list-mode .card-bonus-construction-pill {{
+        display: flex !important;
+        font-size: 0.76rem !important;
+        padding: 6px 10px !important;
+        margin-bottom: 10px !important;
+        border-radius: 6px !important;
+      }}
+
+      /* Price Section on Mobile */
+      .card-price-section,
+      .listings-grid:not(.view-list-mode) .card-price-section,
+      .listings-grid.view-list-mode .card-price-section {{
+        display: block !important;
+        padding: 10px 12px !important;
+        margin-bottom: 12px !important;
+        border-radius: 8px !important;
+        background: #fdfaf4 !important;
+        border: 1px solid #ebdcc5 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }}
+      .price-header-row,
+      .listings-grid:not(.view-list-mode) .price-header-row {{
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 4px !important;
+      }}
+      .price-type-tag,
+      .listings-grid:not(.view-list-mode) .price-type-tag {{
+        display: inline-block !important;
+        font-size: 0.7rem !important;
+        font-weight: 700 !important;
+        color: #7b5921 !important;
+        text-transform: uppercase !important;
+      }}
+      .unit-price-tag,
+      .listings-grid:not(.view-list-mode) .unit-price-tag {{
+        display: inline-block !important;
+        font-size: 0.78rem !important;
+        color: #555 !important;
+      }}
+      .unit-price-tag strong,
+      .listings-grid:not(.view-list-mode) .unit-price-tag strong {{
+        color: var(--primary) !important;
+      }}
+      .price-main-row,
+      .listings-grid:not(.view-list-mode) .price-main-row {{
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+      }}
+      .price-display,
+      .listings-grid:not(.view-list-mode) .price-display {{
+        display: flex !important;
+        align-items: baseline !important;
+        gap: 6px !important;
+        flex-wrap: wrap !important;
+      }}
+      .price-billion,
       .listings-grid:not(.view-list-mode) .price-billion {{
-        font-size: 1.12rem !important;
+        display: inline-block !important;
+        font-size: 1.45rem !important;
         font-weight: 800 !important;
         color: #b91c1c !important;
+        letter-spacing: -0.5px;
       }}
-      /* Dual Quick Action Buttons on 2-col card */
-      .listings-grid:not(.view-list-mode) .card-actions {{
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
+      .price-exact,
+      .listings-grid:not(.view-list-mode) .price-exact {{
+        display: inline-block !important;
+        font-size: 0.78rem !important;
+        color: #777 !important;
+      }}
+      .price-note-badge,
+      .listings-grid:not(.view-list-mode) .price-note-badge {{
+        display: inline-block !important;
+        font-size: 0.68rem !important;
+        padding: 2px 6px !important;
+        border-radius: 4px !important;
+        font-weight: 600 !important;
+      }}
+
+      /* Clean Share URL Box on Mobile */
+      .card-share-box {{
+        display: flex !important;
+        flex-direction: column !important;
         gap: 6px !important;
-      }}
-      .listings-grid:not(.view-list-mode) .btn-primary-action,
-      .listings-grid:not(.view-list-mode) .btn-view-map-action {{
-        display: none !important;
-      }}
-      .listings-grid:not(.view-list-mode) .btn-call-action {{
+        padding: 10px 12px !important;
+        margin-bottom: 12px !important;
+        background: #faf6ee !important;
+        border: 1.5px solid #e5d7be !important;
+        border-radius: 8px !important;
         width: 100% !important;
-        height: 32px !important;
-        border-radius: 5px !important;
-        background: #183024 !important;
-        color: #ffffff !important;
-        font-size: 0.74rem !important;
+        box-sizing: border-box !important;
+      }}
+      .csb-header {{
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }}
+      .csb-label {{
+        font-size: 0.72rem !important;
         font-weight: 700 !important;
+        color: #7b5f2c !important;
+        letter-spacing: 0.3px !important;
+      }}
+      .csb-row {{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        background: #ffffff !important;
+        padding: 6px 10px !important;
+        border-radius: 6px !important;
+        border: 1px solid #ebdcc5 !important;
+      }}
+      .csb-url {{
+        font-size: 0.8rem !important;
+        font-weight: 700 !important;
+        color: #183024 !important;
+        word-break: break-all !important;
+        flex: 1 !important;
+      }}
+      .btn-copy-share {{
         display: inline-flex !important;
         align-items: center !important;
-        justify-content: center !important;
         gap: 4px !important;
-        text-decoration: none !important;
-        border: none !important;
+        padding: 6px 10px !important;
+        font-size: 0.75rem !important;
+        font-weight: 700 !important;
+        border-radius: 4px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
       }}
-      .listings-grid:not(.view-list-mode) .btn-call-action::after {{
-        content: "Gọi";
-      }}
-      .listings-grid:not(.view-list-mode) .btn-zalo-action {{
+
+      /* Action Buttons on Mobile */
+      .card-actions,
+      .listings-grid:not(.view-list-mode) .card-actions,
+      .listings-grid.view-list-mode .card-actions {{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
         width: 100% !important;
-        height: 32px !important;
-        border-radius: 5px !important;
+      }}
+      .btn-primary-action,
+      .listings-grid:not(.view-list-mode) .btn-primary-action,
+      .listings-grid.view-list-mode .btn-primary-action {{
+        display: inline-flex !important;
+        flex: 1 !important;
+        min-width: 150px !important;
+        height: 42px !important;
+        padding: 0 14px !important;
+        font-size: 0.84rem !important;
+        font-weight: 700 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        border-radius: 6px !important;
+        background: var(--primary) !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+      }}
+      .btn-copy-action,
+      .btn-view-map-action,
+      .btn-call-action,
+      .btn-zalo-action,
+      .listings-grid:not(.view-list-mode) .btn-call-action,
+      .listings-grid:not(.view-list-mode) .btn-zalo-action {{
+        display: inline-flex !important;
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        padding: 0 !important;
+        font-size: 1rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 6px !important;
+        text-decoration: none !important;
+        border: 1px solid #ded6c5 !important;
+      }}
+      .btn-call-action,
+      .listings-grid:not(.view-list-mode) .btn-call-action {{
+        background: #fdfaf4 !important;
+        color: #183024 !important;
+      }}
+      .btn-zalo-action,
+      .listings-grid:not(.view-list-mode) .btn-zalo-action {{
         background: #0068FF !important;
         color: #ffffff !important;
-        font-size: 0.74rem !important;
-        font-weight: 700 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 4px !important;
-        text-decoration: none !important;
-        border: none !important;
+        border-color: #0068FF !important;
       }}
+      .btn-call-action::after,
+      .btn-zalo-action::after,
+      .listings-grid:not(.view-list-mode) .btn-call-action::after,
       .listings-grid:not(.view-list-mode) .btn-zalo-action::after {{
-        content: "Zalo";
+        content: "" !important;
+        display: none !important;
       }}
 
       /* Mobile Modal Polish */
@@ -3333,10 +3558,10 @@ def update_listing():
           <strong>LƯU Ý VỀ BẢNG GIÁ VÀ PHƯƠNG ÁN CÓ NHÀ (ORIGINAL PRICE LISTING):</strong>
           <p>Bảng giá dưới đây cập nhật phương án <strong>Giá Đất Niêm Yết</strong> và <strong>Phương Án Cả Nhà (Trọn Gói Xây Dựng gồm VAT)</strong> trực tiếp từ Đơn vị Phát triển MDS Land. Khách hàng giao dịch sẽ được áp dụng các chính sách ưu đãi đặc quyền:</p>
           <ul>
-            <li><strong>Điền Sản (11 sản phẩm):</strong> Dòng sản phẩm tự xây. Ưu đãi TT sớm 50/50 giảm ngay <strong>600 Triệu</strong> · Thanh toán 100% giảm <strong>1 Tỷ đồng</strong> · Giãn thanh toán 12 tháng 0% lãi suất.</li>
-            <li><strong>Điền An (7 cụm):</strong> Hợp đồng thuê dài hạn từ MDS Living, cam kết thuê tối thiểu <strong>80 Tr/tháng (960 Tr/năm)</strong> với cụm từ 20 phòng trở lên. (Các căn A13, A22, B24 thuộc Quỹ GĐ2).</li>
-            <li><strong>Biệt Phủ Điền Trang (18 dinh thự):</strong> Khách hàng có thể lựa chọn Mua Đất giãn xây dựng hoặc Gói Cả Nhà hoàn thiện mặt ngoài thô bên trong. MDS Living cam kết đồng hành khai thác vận hành lưu trú hoặc mua lại 90–150 đêm/năm (4 triệu/đêm).</li>
-            <li><strong>Đặc Quyền Hoàn Thiện Xây Dựng:</strong> Tặng gói quà tặng / giảm ngay <strong>800.000.000 đ</strong> khi hoàn tất xây dựng trước Q4/2027.</li>
+            <li><strong>Điền Sản (13 sản phẩm):</strong> Dòng sản phẩm tự xây linh hoạt. 4 phương án thanh toán: PA1 (Giảm 200M) · PA2 (Giảm 600M) · PA3 (Giảm 800M) · PA4 (Giảm 1 Tỷ). Miễn phí quản lý MDS Living 24 tháng và gói ủy thác lưu trú hằng quý.</li>
+            <li><strong>Điền An (5 sản phẩm):</strong> Quy mô chuẩn 30 phòng lưu trú. MDS Living triển khai chương trình thuê lại cam kết <strong>120 Tr/tháng (1,44 Tỷ/năm)</strong> (đơn giá 4 Tr/phòng/tháng, thanh toán theo quý). Tiến độ thanh toán đất 4 đợt và xây dựng 4 đợt.</li>
+            <li><strong>Biệt Phủ Điền Trang (18 dinh thự):</strong> Khách hàng lựa chọn 4 phương án thanh toán đất (ưu đãi 200M – 1 Tỷ) và tiến độ xây dựng 5 đợt (30% - 15% - 20% - 20% - 15%). MDS Living đồng hành khai thác chia sẻ doanh thu hoặc ủy thác vận hành an nhàn (360 Tr – 600 Tr/năm).</li>
+            <li><strong>Bộ Đặc Quyền Chung:</strong> Miễn phí quản lý vận hành MDS Living 24 tháng · Dịch vụ Quản gia & Nông sản Organic 24 tháng · Ưu đãi kiến tạo không gian sống trị giá đến 800.000.000 đ.</li>
           </ul>
         </div>
       </div>

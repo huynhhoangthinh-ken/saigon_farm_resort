@@ -53,8 +53,8 @@ def render_page(cat, all_cats):
             },
             {
                 "icon": "fa-gem",
-                "title": "Số Lượng Khan Hiếm Bậc Nhất (Chỉ 7 Lô)",
-                "desc": "Quy hoạch giới hạn tuyệt đối chỉ 7 sản phẩm giúp Điền An sở hữu tính độc bản cao, giữ vững giá trị và thanh khoản vượt trội trước mọi biến động thị trường."
+                "title": "Số Lượng Khan Hiếm Bậc Nhất (Chỉ 5 Sản Phẩm)",
+                "desc": "Quy hoạch giới hạn tuyệt đối chỉ 5 sản phẩm giúp Điền An sở hữu tính độc bản cao, giữ vững giá trị và thanh khoản vượt trội trước mọi biến động thị trường."
             }
         ]
         product_form_desc = "Đất 100% thổ cư (đất ở nông thôn lâu dài), sổ đỏ riêng từng lô, công chứng sang tên ngay trong ngày. Quy hoạch lý tưởng để phát triển mô hình dinh thự vườn sinh thái kết hợp cụm bungalow lưu trú chuẩn 5 sao."
@@ -1260,6 +1260,18 @@ def render_page(cat, all_cats):
       }}
       .booking-modal-box {{
         padding: 30px 20px 24px;
+      }}
+    }}
+    @media (max-width: 768px) {{
+      .listings-grid {{
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+      }}
+      .listing-card {{
+        width: 100% !important;
+      }}
+      .card-body {{
+        padding: 16px !important;
       }}
     }}
   </style>

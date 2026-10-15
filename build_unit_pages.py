@@ -119,6 +119,8 @@ def build_unit_page_html(item, all_items):
     house_vat_bil = item.get("house_price_vat_billion")
     house_vat_str = item.get("house_price_vat_str")
     house_vat_val = item.get("house_price_vat", 0) or 0
+    construction_val = item.get("construction_price_vat", 0) or 7480000000
+    construction_bil = item.get("construction_price_vat_billion") or "7,48 Tỷ"
     phase = item.get("phase", "GĐ1")
     features = item.get("features", "")
     suitable_for = item.get("suitable_for", "")
@@ -260,62 +262,148 @@ def build_unit_page_html(item, all_items):
             </div>
           </div>
 
-          <!-- Installment Schedule Table -->
-          <div class="installment-table-wrap">
-            <table class="installment-table">
-              <thead>
-                <tr>
-                  <th style="min-width: 120px;">Đợt Thanh Toán</th>
-                  <th style="min-width: 160px;">Thời Gian / Tiến Độ</th>
-                  <th style="min-width: 120px; text-align: center;">Tỷ Lệ (%)</th>
-                  <th style="min-width: 180px; text-align: right;">Số Tiền (VNĐ)</th>
-                  <th style="min-width: 250px;">Nội Dung & Mốc Pháp Lý</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Đặt Cọc</strong></td>
-                  <td>Ngày ký Phiếu cọc</td>
-                  <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">200 Triệu</span></td>
-                  <td style="text-align: right; font-weight: 700; color:#0c4a6e;">200.000.000 đ</td>
-                  <td>Ký Phiếu Đặt Cọc giữ vị trí độc quyền Căn {code}</td>
-                </tr>
-                <tr>
-                  <td><strong>Lần 1 (Đợt 1)</strong></td>
-                  <td>10 ngày sau đặt cọc (T)</td>
-                  <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30% (trừ cọc)</span></td>
-                  <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr((house_vat_val * 0.30) - 200000000)}</td>
-                  <td>Ký HĐCN QSDĐ và Thương Mại + Hợp đồng xây dựng 30 suites</td>
-                </tr>
-                <tr>
-                  <td><strong>Lần 2 (Đợt 2)</strong></td>
-                  <td>T + 120 ngày</td>
-                  <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30%</span></td>
-                  <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(house_vat_val * 0.30)}</td>
-                  <td>Thanh toán theo tiến độ thi công hạ tầng & móng hầm cụm lưu trú</td>
-                </tr>
-                <tr>
-                  <td><strong>Lần 3 (Đợt 3)</strong></td>
-                  <td>T + 240 ngày (Xong thô)</td>
-                  <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
-                  <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(house_vat_val * 0.20)}</td>
-                  <td>Hoàn thành cất nóc & xây thô cụm 30 suites</td>
-                </tr>
-                <tr>
-                  <td><strong>Lần 4 (Đợt 4)</strong></td>
-                  <td>Bàn giao hoàn thiện</td>
-                  <td style="text-align: center;"><span class="badge" style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
-                  <td style="text-align: right; font-weight: 700; color:#b91c1c;">{format_curr(house_vat_val * 0.20)}</td>
-                  <td>Bàn giao hoàn thiện full nội thất liền tường, kích hoạt vận hành cùng MDS Living</td>
-                </tr>
-                <tr style="background: #f8fafc; font-weight: 800;">
-                  <td colspan="2"><strong>TỔNG THANH TOÁN (GỒM VAT)</strong></td>
-                  <td style="text-align: center; color:#b91c1c;">100%</td>
-                  <td style="text-align: right; color:#b91c1c; font-size:1.05rem;">{format_curr(house_vat_val)}</td>
-                  <td><strong>{house_vat_bil}</strong> (Đã gồm 10% VAT xây dựng)</td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- Installment Schedule Tables for Điền An (Both Land & Construction) -->
+          <div style="margin-bottom: 24px;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: #0c4a6e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-layer-group" style="color: #0284c7;"></i> 1. Thanh Toán Giá Trị Quyền Sử Dụng Đất (Tiền Đất: {price_bil})
+            </h3>
+            <div class="installment-table-wrap">
+              <table class="installment-table">
+                <thead>
+                  <tr>
+                    <th style="min-width: 120px;">Đợt Thanh Toán</th>
+                    <th style="min-width: 160px;">Thời Gian Thanh Toán</th>
+                    <th style="min-width: 110px; text-align: center;">Tỷ Lệ (%)</th>
+                    <th style="min-width: 170px; text-align: right;">Số Tiền (VNĐ)</th>
+                    <th style="min-width: 250px;">Ghi Chú & Mốc Pháp Lý</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Đặt Cọc</strong></td>
+                    <td>Ngày ký Phiếu cọc</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">200 Triệu</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">200.000.000 đ</td>
+                    <td>Ký Phiếu Đặt Cọc giữ vị trí căn {code}</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Đợt 1</strong></td>
+                    <td>Trong vòng 10 ngày kể từ ngày cọc</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30% (trừ cọc)</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr((price * 0.30) - 200000000)}</td>
+                    <td>Ký Hợp đồng đặt cọc chính thức</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Đợt 2</strong></td>
+                    <td>Trong vòng 04 tháng từ ngày ký HĐ đặt cọc</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30%</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(price * 0.30)}</td>
+                    <td>Tiến độ hoàn thiện hạ tầng kỹ thuật</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Đợt 3</strong></td>
+                    <td>Trong vòng 08 tháng từ ngày ký HĐ đặt cọc</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(price * 0.20)}</td>
+                    <td>Tiến độ hoàn thiện cảnh quan sinh thái & tiện ích</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Đợt 4</strong></td>
+                    <td>Trong vòng 12 tháng từ ngày ký HĐ đặt cọc</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#b91c1c;">{format_curr(price * 0.20)}</td>
+                    <td>Ký Hợp đồng chuyển nhượng QSDĐ (Công chứng nhận Sổ đỏ riêng)</td>
+                  </tr>
+                  <tr style="background: #f8fafc; font-weight: 800;">
+                    <td colspan="2"><strong>TỔNG TIỀN ĐẤT</strong></td>
+                    <td style="text-align: center; color:#0284c7;">100%</td>
+                    <td style="text-align: right; color:#0284c7; font-size:1.05rem;">{price_str}</td>
+                    <td><strong>{price_bil}</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: #0c4a6e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-hotel" style="color: #0284c7;"></i> 2. Thanh Toán Giá Trị Công Trình Xây Dựng 30 Phòng ({construction_bil})
+            </h3>
+            <div class="installment-table-wrap">
+              <table class="installment-table">
+                <thead>
+                  <tr>
+                    <th style="min-width: 120px;">Đợt Thanh Toán</th>
+                    <th style="min-width: 160px;">Thời Gian Thanh Toán</th>
+                    <th style="min-width: 110px; text-align: center;">Tỷ Lệ (%)</th>
+                    <th style="min-width: 170px; text-align: right;">Số Tiền (VNĐ)</th>
+                    <th style="min-width: 250px;">Tiến Độ & Mốc Công Trình</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Đợt 1</strong></td>
+                    <td>Ký HĐ thi công (Sau 4 tháng từ ngày ký HĐ cọc)</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30%</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(construction_val * 0.30)}</td>
+                    <td>Khởi công móng và hạ tầng cụm lưu trú</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Đợt 2</strong></td>
+                    <td>Trong vòng 04 tháng từ ngày ký HĐ thi công</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30%</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(construction_val * 0.30)}</td>
+                    <td>Hoàn thành phần thô cụm 30 phòng lưu trú</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Đợt 3</strong></td>
+                    <td>Trong vòng 08 tháng từ ngày ký HĐ thi công</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(construction_val * 0.20)}</td>
+                    <td>Hoàn thiện mặt ngoài và kiến trúc cảnh quan</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Đợt 4</strong></td>
+                    <td>Trong vòng 12 tháng từ ngày ký HĐ thi công</td>
+                    <td style="text-align: center;"><span class="badge" style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
+                    <td style="text-align: right; font-weight: 700; color:#b91c1c;">{format_curr(construction_val * 0.20)}</td>
+                    <td>Nghiệm thu, bàn giao nhà theo hợp đồng chìa khóa trao tay</td>
+                  </tr>
+                  <tr style="background: #f8fafc; font-weight: 800;">
+                    <td colspan="2"><strong>TỔNG TIỀN XÂY DỰNG</strong></td>
+                    <td style="text-align: center; color:#b91c1c;">100%</td>
+                    <td style="text-align: right; color:#b91c1c; font-size:1.05rem;">{format_curr(construction_val)}</td>
+                    <td><strong>{construction_bil}</strong> (Đã gồm 10% VAT)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- MDS Living Rental Program Box -->
+          <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(201, 169, 110, 0.12) 100%); border: 1.5px solid rgba(2, 132, 199, 0.35); border-radius: 12px; padding: 20px 24px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
+              <span style="background: #0284c7; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.76rem; font-weight: 800; text-transform: uppercase;">MDS Living Khai Thác</span>
+              <strong style="color: #0c4a6e; font-size: 1.12rem;">Chương Trình Hợp Tác Thuê Lại: "Sở Hữu Tài Sản – An Tâm Dòng Tiền"</strong>
+            </div>
+            <p style="margin: 0 0 14px; font-size: 0.9rem; color: #334155; line-height: 1.6;">
+              MDS Living triển khai chương trình thuê lại cụm 30 phòng lưu trú dành riêng cho Chủ sở hữu Căn {code} (Điền An), tạo lập dòng tiền thụ động ổn định và bền vững:
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
+              <div style="background: #fff; padding: 12px 16px; border-radius: 8px; border: 1px solid #bae6fd;">
+                <span style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; display: block;">Quy mô vận hành</span>
+                <strong style="font-size: 1.2rem; color: #0284c7;">30 Phòng Lưu Trú</strong>
+              </div>
+              <div style="background: #fff; padding: 12px 16px; border-radius: 8px; border: 1px solid #bae6fd;">
+                <span style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; display: block;">Đơn giá thuê cam kết</span>
+                <strong style="font-size: 1.2rem; color: #0284c7;">4.000.000 đ/phòng/tháng</strong>
+              </div>
+              <div style="background: #fff; padding: 12px 16px; border-radius: 8px; border: 1px solid #fecaca;">
+                <span style="font-size: 0.75rem; color: #991b1b; text-transform: uppercase; display: block;">Tổng tiền thuê cam kết</span>
+                <strong style="font-size: 1.25rem; color: #b91c1c;">120 Triệu/tháng</strong>
+                <small style="display: block; font-size: 0.74rem; color: #666;">(1,44 Tỷ/năm · Thanh toán hằng quý)</small>
+              </div>
+            </div>
           </div>
 
           <!-- Table Toolbar -->
@@ -356,12 +444,145 @@ def build_unit_page_html(item, all_items):
             <li><i class="fa-solid fa-circle-check"></i> Đưa đón khảo sát thực địa xe riêng 5 sao</li>
         """
         
+        const_val = item.get("construction_price_vat") or 0
+        const_bil = item.get("construction_price_vat_billion") or ""
+
+        construction_schedule_html = ""
+        if cat_slug == "biet-phu-dien-trang" and const_val > 0:
+            c_d1 = format_curr(round(const_val * 0.30))
+            c_d2 = format_curr(round(const_val * 0.15))
+            c_d3 = format_curr(round(const_val * 0.20))
+            c_d4 = format_curr(round(const_val * 0.20))
+            c_d5 = format_curr(round(const_val * 0.15))
+            c_tot = format_curr(const_val)
+
+            construction_schedule_html = f"""
+            <div style="margin-top: 32px; margin-bottom: 24px;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--primary); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-person-digging" style="color: var(--gold-dark);"></i> 2. Tiến Độ Thanh Toán Giá Trị Xây Dựng Biệt Phủ ({const_bil})
+              </h3>
+              <p style="font-size: 0.88rem; color: #555; margin-bottom: 12px;">Áp dụng đối với sản phẩm Biệt Phủ có ký Hợp đồng thi công xây dựng theo mẫu kiến trúc chuẩn của dự án:</p>
+              <div class="installment-table-wrap">
+                <table class="installment-table">
+                  <thead>
+                    <tr>
+                      <th style="min-width: 120px;">Đợt Thanh Toán</th>
+                      <th style="min-width: 170px;">Thời Gian / Tiến Độ</th>
+                      <th style="min-width: 100px; text-align: center;">Tỷ Lệ (%)</th>
+                      <th style="min-width: 170px; text-align: right;">Số Tiền (VNĐ)</th>
+                      <th style="min-width: 250px;">Tiến Độ & Mốc Công Trình</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Đợt 1</strong></td>
+                      <td>Ký Hợp đồng thi công</td>
+                      <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30%</span></td>
+                      <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{c_d1}</td>
+                      <td>Sau 04 tháng kể từ ngày ký HĐ đặt cọc</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Đợt 2</strong></td>
+                      <td>Trong vòng 02 tháng từ ngày ký HĐ thi công</td>
+                      <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">15%</span></td>
+                      <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{c_d2}</td>
+                      <td>Hoàn thành phần móng công trình</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Đợt 3</strong></td>
+                      <td>Trong vòng 04 tháng từ ngày ký HĐ thi công</td>
+                      <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
+                      <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{c_d3}</td>
+                      <td>Hoàn thành phần thô biệt thự</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Đợt 4</strong></td>
+                      <td>Trong vòng 06 tháng từ ngày ký HĐ thi công</td>
+                      <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
+                      <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{c_d4}</td>
+                      <td>Hoàn thiện toàn bộ mặt ngoài</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Đợt 5</strong></td>
+                      <td>Trong vòng 08 tháng từ ngày ký HĐ thi công</td>
+                      <td style="text-align: center;"><span class="badge" style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:700;">15%</span></td>
+                      <td style="text-align: right; font-weight: 700; color:#b91c1c;">{c_d5}</td>
+                      <td>Nghiệm thu, bàn giao nhà theo hợp đồng chìa khóa trao tay</td>
+                    </tr>
+                    <tr style="background: #f8fafc; font-weight: 800;">
+                      <td colspan="2"><strong>TỔNG TIỀN XÂY DỰNG BIỆT THỰ</strong></td>
+                      <td style="text-align: center; color:#b91c1c;">100%</td>
+                      <td style="text-align: right; color:#b91c1c; font-size:1.05rem;">{c_tot}</td>
+                      <td><strong>{const_bil}</strong> (Đã gồm 10% VAT)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            """
+
+        mds_living_companion_html = f"""
+        <!-- Chương trình đồng hành khai thác MDS Living -->
+        <div style="background: linear-gradient(135deg, rgba(201, 169, 110, 0.08) 0%, rgba(24, 48, 36, 0.04) 100%); border: 1.5px solid rgba(201, 169, 110, 0.4); border-radius: 12px; padding: 22px 24px; margin-top: 28px; margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
+            <span style="background: var(--gold-dark); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;">Chính Sách Khai Thác MDS Living</span>
+            <strong style="color: var(--primary); font-size: 1.15rem;">Chương Trình Đồng Hành Khai Thác Biệt Thự & Tạo Dòng Tiền</strong>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 0.9rem; color: #444; line-height: 1.6;">
+            Sở hữu biệt thự không chỉ để nghỉ dưỡng – Mỗi tài sản đều có thể được khai thác gia tăng hiệu quả đầu tư thông qua hệ thống vận hành chuyên nghiệp của <strong>MDS Living</strong>:
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 16px;">
+            <!-- Lựa chọn 1 -->
+            <div style="background: #ffffff; border: 1px solid #e2d7c5; border-radius: 10px; padding: 16px;">
+              <div style="font-weight: 800; color: #183024; font-size: 0.95rem; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
+                <span style="background:#183024; color:#fff; width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.75rem;">1</span>
+                Lựa Chọn 1: Đồng Hành Kinh Doanh
+              </div>
+              <div style="font-size: 0.82rem; color: #7b5f2c; margin-bottom: 8px; font-weight:700;">Sở hữu tài sản – Đồng hành khai thác – Chia sẻ doanh thu</div>
+              <p style="font-size: 0.83rem; color: #555; line-height: 1.5; margin: 0;">
+                MDS Living trực tiếp quản lý vận hành, marketing quảng bá, đón tiếp và chăm sóc khách lưu trú. Doanh thu phân chia theo tỷ lệ đối soát định kỳ minh bạch tại Hợp đồng hợp tác.
+              </p>
+            </div>
+
+            <!-- Lựa chọn 2 -->
+            <div style="background: #ffffff; border: 1.5px solid #c9a96e; border-radius: 10px; padding: 16px;">
+              <div style="font-weight: 800; color: #92691e; font-size: 0.95rem; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
+                <span style="background:#92691e; color:#fff; width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.75rem;">2</span>
+                Lựa Chọn 2: Ủy Thác Vận Hành An Nhàn
+              </div>
+              <div style="font-size: 0.82rem; color: #7b5f2c; margin-bottom: 8px; font-weight:700;">Chủ động dòng tiền – Nhận thanh toán hằng quý</div>
+              <p style="font-size: 0.83rem; color: #555; line-height: 1.5; margin: 0 0 10px;">
+                Chủ sở hữu bàn giao số đêm lưu trú theo hạn mức gói và nhận thanh toán quy đổi điểm cố định (<strong>3.000.000 VNĐ / điểm</strong>):
+              </p>
+              <div style="display:flex; flex-direction:column; gap:6px; font-size:0.8rem;">
+                <div style="display:flex; justify-content:space-between; background:#faf7f0; padding:6px 10px; border-radius:4px; border-left:3px solid #c9a96e;">
+                  <span>• <strong>Gói An Viên (90 đêm):</strong> 120 điểm</span>
+                  <strong style="color:#b91c1c;">360.000.000 VNĐ/năm</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; background:#faf7f0; padding:6px 10px; border-radius:4px; border-left:3px solid #c9a96e;">
+                  <span>• <strong>Gói Phú Quý (120 đêm):</strong> 160 điểm</span>
+                  <strong style="color:#b91c1c;">480.000.000 VNĐ/năm</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; background:#faf7f0; padding:6px 10px; border-radius:4px; border-left:3px solid #c9a96e;">
+                  <span>• <strong>Gói Tinh Hoa Việt (150 đêm):</strong> 200 điểm</span>
+                  <strong style="color:#b91c1c;">600.000.000 VNĐ/năm</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="font-size: 0.8rem; color: #666; line-height: 1.5;">
+            <em>* Hệ số quy đổi: Ngày thường (T2–T5) = 1 điểm; Cao điểm (T6 & CN) = 1,5 điểm; Cuối tuần & Lễ/Tết = 2 điểm. Biệt phủ áp dụng 12 tháng từ ngày bàn giao; Điền sản áp dụng khi hoàn thành trước 31/12/2027.</em>
+          </div>
+        </div>
+        """
+
         calc_section_html = f"""
         <section class="calculator-section" id="payment-schedule-section">
           <div class="calc-header">
             <span class="sec-badge">Bảng Tính & Tiến Độ Thanh Toán</span>
             <h2>Phương Thức & Tiến Độ Thanh Toán Căn {code}</h2>
-            <p>Hệ thống tự động tính toán chính xác dòng tiền từng đợt theo 3 phương thức linh hoạt và khấu trừ ưu đãi xây dựng theo thời gian thực.</p>
+            <p>Hệ thống tự động tính toán chính xác dòng tiền từng đợt theo 4 phương án thanh toán linh hoạt và khấu trừ ưu đãi theo thời gian thực.</p>
           </div>
 
           <!-- Construction 800M Bonus Card with Toggle -->
@@ -388,36 +609,47 @@ def build_unit_page_html(item, all_items):
             </div>
           </div>
 
-          <!-- 3 Scheme Tabs -->
+          <!-- 4 Scheme Tabs -->
           <div class="scheme-tabs">
             <div class="scheme-tab-btn active" id="tabBtn1" onclick="selectScheme(1)">
               <div class="stb-header">
-                <span class="stb-title">1. Chuẩn 12 Tháng</span>
+                <span class="stb-title">PA 1: Khởi Đầu An Nhàn</span>
                 <span class="stb-badge stb-badge-standard">12 Tháng</span>
               </div>
-              <div class="stb-sub">Giãn tiến độ thanh toán thảnh thơi trong 12 tháng, không áp lực tài chính.</div>
+              <div class="stb-sub">Giãn tiến độ 12 tháng thảnh thơi, không áp lực tài chính (Cọc 200M).</div>
               <div class="stb-discount">
-                <i class="fa-solid fa-gift"></i> <span>Chiết khấu: <strong>-200 Triệu</strong></span>
+                <i class="fa-solid fa-gift"></i> <span>Ưu đãi: <strong>-200 Triệu</strong></span>
               </div>
             </div>
 
             <div class="scheme-tab-btn" id="tabBtn2" onclick="selectScheme(2)">
               <div class="stb-header">
-                <span class="stb-title">2. Nhanh 70%</span>
-                <span class="stb-badge stb-badge-fast">Công Chứng Ngay</span>
+                <span class="stb-title">PA 2: Chủ Động Tài Chính</span>
+                <span class="stb-badge stb-badge-fast">50% / 50%</span>
               </div>
-              <div class="stb-sub">Thanh toán 70% trong 10 ngày, ký công chứng HĐ chuyển nhượng QSDĐ ngay.</div>
+              <div class="stb-sub">Thanh toán 50% trong 10 ngày ký HĐCN QSDĐ, 50% sau 12 tháng nhận sổ.</div>
               <div class="stb-discount">
-                <i class="fa-solid fa-tag"></i> <span>Chiết khấu: <strong>-800 Triệu</strong></span>
+                <i class="fa-solid fa-tag"></i> <span>Ưu đãi: <strong>-600 Triệu</strong></span>
               </div>
             </div>
 
             <div class="scheme-tab-btn" id="tabBtn3" onclick="selectScheme(3)">
               <div class="stb-header">
-                <span class="stb-title">3. Nhanh 100%</span>
-                <span class="stb-badge stb-badge-full">Sang Tên Ngay</span>
+                <span class="stb-title">PA 3: Thanh Toán Ưu Việt</span>
+                <span class="stb-badge stb-badge-fast">70% / 30%</span>
               </div>
-              <div class="stb-sub">Thanh toán 100% trong 20 ngày, công chứng sang tên sổ hồng riêng trao tay ngay.</div>
+              <div class="stb-sub">Thanh toán 70% trong 10 ngày ký HĐCN QSDĐ, 30% khi nhận bàn giao GCNQSDĐ.</div>
+              <div class="stb-discount">
+                <i class="fa-solid fa-tag"></i> <span>Ưu đãi: <strong>-800 Triệu</strong></span>
+              </div>
+            </div>
+
+            <div class="scheme-tab-btn" id="tabBtn4" onclick="selectScheme(4)">
+              <div class="stb-header">
+                <span class="stb-title">PA 4: Thanh Toán Tinh Gọn</span>
+                <span class="stb-badge stb-badge-full">100% Sổ Trao Tay</span>
+              </div>
+              <div class="stb-sub">Cọc 500M, thanh toán 100% trong 20 ngày, ký HĐCN QSDĐ sang tên ngay.</div>
               <div class="stb-discount">
                 <i class="fa-solid fa-crown"></i> <span>Đặc quyền: <strong>-1 TỶ ĐỒNG</strong></span>
               </div>
@@ -487,6 +719,10 @@ def build_unit_page_html(item, all_items):
               </button>
             </div>
           </div>
+
+          {construction_schedule_html}
+
+          {mds_living_companion_html}
 
         </section>
         """
@@ -1372,15 +1608,21 @@ def build_unit_page_html(item, all_items):
       cursor: pointer;
     }}
 
-    /* Payment Scheme Tabs */
+    /* Payment Scheme Tabs (4 Schemes) */
     .scheme-tabs {{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
       margin-bottom: 26px;
     }}
 
-    @media (max-width: 900px) {{
+    @media (max-width: 1024px) {{
+      .scheme-tabs {{
+        grid-template-columns: repeat(2, 1fr);
+      }}
+    }}
+
+    @media (max-width: 640px) {{
       .scheme-tabs {{
         grid-template-columns: 1fr;
       }}
@@ -2460,11 +2702,12 @@ def build_unit_page_html(item, all_items):
       unitPriceMil: '{unit_price_mil}'
     }};
 
-    let currentScheme = 1; // 1: Standard (-200Tr), 2: Fast 70% (-800Tr), 3: Fast 100% (-1 Tỷ)
+    let currentScheme = 1; // 1: PA1 (-200Tr), 2: PA2 (-600Tr), 3: PA3 (-800Tr), 4: PA4 (-1 Tỷ)
     const BONUS_BUILD_AMOUNT = 800000000; // 800 triệu hoàn tất xây dựng trước Q4/2027
-    const DISCOUNT_SCHEME_1 = 200000000;  // 200 triệu cho phương thức chuẩn 12 tháng
-    const DISCOUNT_SCHEME_2 = 800000000;  // 800 triệu cho phương thức nhanh 70%
-    const DISCOUNT_SCHEME_3 = 1000000000; // 1 tỷ cho phương thức nhanh 100%
+    const DISCOUNT_SCHEME_1 = 200000000;  // 200 triệu cho PA1 - Khởi đầu an nhàn
+    const DISCOUNT_SCHEME_2 = 600000000;  // 600 triệu cho PA2 - Chủ động tài chính
+    const DISCOUNT_SCHEME_3 = 800000000;  // 800 triệu cho PA3 - Thanh toán ưu việt
+    const DISCOUNT_SCHEME_4 = 1000000000; // 1 tỷ cho PA4 - Thanh toán tinh gọn
 
     function formatVND(num) {{
       return Math.round(num).toLocaleString('vi-VN') + ' đ';
@@ -2481,7 +2724,8 @@ def build_unit_page_html(item, all_items):
     function selectScheme(schemeId) {{
       currentScheme = schemeId;
       document.querySelectorAll('.scheme-tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.getElementById('tabBtn' + schemeId).classList.add('active');
+      const activeBtn = document.getElementById('tabBtn' + schemeId);
+      if (activeBtn) activeBtn.classList.add('active');
       updatePaymentCalculations();
     }}
 
@@ -2498,13 +2742,16 @@ def build_unit_page_html(item, all_items):
 
       if (currentScheme === 1) {{
         schemeDiscount = DISCOUNT_SCHEME_1;
-        schemeDiscountName = 'Tiến độ chuẩn 12 tháng (-200 Tr)';
+        schemeDiscountName = 'PA 1 – Khởi đầu an nhàn (-200 Tr)';
       }} else if (currentScheme === 2) {{
         schemeDiscount = DISCOUNT_SCHEME_2;
-        schemeDiscountName = 'Chiết khấu Nhanh 70% (-800 Tr)';
+        schemeDiscountName = 'PA 2 – Chủ động tài chính (-600 Tr)';
       }} else if (currentScheme === 3) {{
         schemeDiscount = DISCOUNT_SCHEME_3;
-        schemeDiscountName = 'Chiết khấu Nhanh 100% (-1 Tỷ)';
+        schemeDiscountName = 'PA 3 – Thanh toán ưu việt (-800 Tr)';
+      }} else if (currentScheme === 4) {{
+        schemeDiscount = DISCOUNT_SCHEME_4;
+        schemeDiscountName = 'PA 4 – Thanh toán tinh gọn (-1 Tỷ)';
       }}
 
       const buildBonus = applyBonus ? BONUS_BUILD_AMOUNT : 0;
@@ -2542,19 +2789,13 @@ def build_unit_page_html(item, all_items):
 
     function renderInstallmentsTable(finalPrice) {{
       const tbody = document.getElementById('installmentTableBody');
+      if (!tbody) return;
       tbody.innerHTML = '';
 
       let rows = [];
 
       if (currentScheme === 1) {{
-        // Scheme 1: Chuẩn 12 tháng
-        // Cọc: 200 tr
-        // Đợt 1: 20% (bao gồm cọc) -> Đợt 1 = 20% * finalPrice - 200tr
-        // Đợt 2: 10%
-        // Đợt 3: 10%
-        // Đợt 4: 10%
-        // Đợt 5: 10%
-        // Đợt cuối (Đợt 6): 40% (Ký HĐMB chuyển nhượng công chứng, nhận sổ)
+        // PA 1: Khởi đầu an nhàn (Cọc 200M -> 20% -> 4x10% -> 40%)
         const deposit = 200000000;
         const d1 = (0.20 * finalPrice) - deposit;
         const d2 = 0.10 * finalPrice;
@@ -2565,40 +2806,43 @@ def build_unit_page_html(item, all_items):
 
         rows = [
           {{ dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn {code}' }},
-          {{ dot: 'Đợt 1', time: '07 - 10 ngày kể từ cọc', ratio: '20% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng đặt cọc / Thỏa thuận mua bán chính thức' }},
-          {{ dot: 'Đợt 2', time: '02 tháng kể từ Đợt 1', ratio: '10%', money: d2, desc: 'Tiến độ hoàn thiện hạ tầng kỹ thuật và đường nội bộ' }},
-          {{ dot: 'Đợt 3', time: '04 tháng kể từ Đợt 1', ratio: '10%', money: d3, desc: 'Tiến độ ngầm hóa hệ thống điện nước và trạm đấu nối' }},
-          {{ dot: 'Đợt 4', time: '06 tháng kể từ Đợt 1', ratio: '10%', money: d4, desc: 'Tiến độ phân lô mốc giới và trồng cây cảnh quan' }},
-          {{ dot: 'Đợt 5', time: '08 tháng kể từ Đợt 1', ratio: '10%', money: d5, desc: 'Tiến độ tổ hợp đại tiện ích ven hồ và cảnh quan xanh' }},
-          {{ dot: 'Đợt Cuối (6)', time: '12 tháng kể từ Đợt 1', ratio: '40%', money: d6, desc: 'Ký Hợp đồng chuyển nhượng QSDĐ công chứng, bàn giao đất & nhận Sổ đỏ riêng' }}
+          {{ dot: 'Đợt 1', time: 'Trong vòng 10 ngày kể từ ngày cọc', ratio: '20% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng đặt cọc chính thức (Ưu đãi 200M khấu trừ trực tiếp)' }},
+          {{ dot: 'Đợt 2', time: 'Trong vòng 02 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d2, desc: 'Tiến độ hoàn thiện hạ tầng kỹ thuật và cảnh quan nội khu' }},
+          {{ dot: 'Đợt 3', time: 'Trong vòng 04 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d3, desc: 'Tiến độ ngầm hóa hệ thống điện nước và trạm đấu nối' }},
+          {{ dot: 'Đợt 4', time: 'Trong vòng 06 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d4, desc: 'Tiến độ phân lô mốc giới thực địa' }},
+          {{ dot: 'Đợt 5', time: 'Trong vòng 08 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d5, desc: 'Tiến độ tổ hợp đại tiện ích và công viên ven hồ' }},
+          {{ dot: 'Đợt Cuối', time: 'Trong vòng 12 tháng từ ngày ký HĐ cọc', ratio: '40%', money: d6, desc: 'Ký HĐ chuyển nhượng QSDĐ công chứng, bàn giao đất & nhận Sổ đỏ riêng' }}
         ];
       }} else if (currentScheme === 2) {{
-        // Scheme 2: Nhanh 70% (Ký công chứng ngay)
-        // Cọc: 200 tr
-        // Đợt 1: 70% (bao gồm cọc) -> Đợt 1 = 70% * finalPrice - 200tr -> Ký công chứng ngay!
-        // Đợt 2: 15% (Sau 6 tháng)
-        // Đợt 3: 15% (Sau 12 tháng - nhận sổ riêng)
+        // PA 2: Chủ động tài chính (Cọc 200M -> 50% trong 10 ngày ký HĐCN QSDĐ -> 50% trong 12 tháng nhận sổ)
         const deposit = 200000000;
-        const d1 = (0.70 * finalPrice) - deposit;
-        const d2 = 0.15 * finalPrice;
-        const d3 = 0.15 * finalPrice;
+        const d1 = (0.50 * finalPrice) - deposit;
+        const d2 = 0.50 * finalPrice;
 
         rows = [
           {{ dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn {code}' }},
-          {{ dot: 'Đợt 1', time: '07 - 10 ngày kể từ cọc', ratio: '70% (trừ cọc)', money: d1, desc: '<strong>Ký công chứng Hợp đồng chuyển nhượng QSDĐ ngay tại phòng công chứng</strong>' }},
-          {{ dot: 'Đợt 2', time: '06 tháng kể từ Đợt 1', ratio: '15%', money: d2, desc: 'Tiến độ hoàn thiện cảnh quan đại tiện ích & phân khu' }},
-          {{ dot: 'Đợt 3', time: '12 tháng kể từ Đợt 1', ratio: '15%', money: d3, desc: 'Hoàn tất bàn giao mốc giới thực địa & nhận Sổ đỏ riêng mang tên khách hàng' }}
+          {{ dot: 'Đợt 1', time: 'Trong vòng 10 ngày kể từ ngày cọc', ratio: '50% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng chuyển nhượng QSDĐ tại văn phòng công chứng' }},
+          {{ dot: 'Đợt 2', time: 'Trong vòng 12 tháng kể từ HĐCN QSDĐ', ratio: '50%', money: d2, desc: 'Bàn giao Giấy chứng nhận QSDĐ (Sổ đỏ riêng) mang tên khách hàng' }}
         ];
       }} else if (currentScheme === 3) {{
-        // Scheme 3: Nhanh 100% (Sang tên ngay)
-        // Cọc: 500 tr
-        // Đợt 1: 100% còn lại trong 15-20 ngày -> Ký công chứng sang tên sổ riêng trao tay ngay!
+        // PA 3: Thanh toán ưu việt (Cọc 200M -> 70% trong 10 ngày ký HĐCN QSDĐ -> 30% trong 12 tháng nhận sổ)
+        const deposit = 200000000;
+        const d1 = (0.70 * finalPrice) - deposit;
+        const d2 = 0.30 * finalPrice;
+
+        rows = [
+          {{ dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn {code}' }},
+          {{ dot: 'Đợt 1', time: 'Trong vòng 10 ngày kể từ ngày cọc', ratio: '70% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng chuyển nhượng QSDĐ tại phòng công chứng' }},
+          {{ dot: 'Đợt 2', time: 'Trong vòng 12 tháng kể từ HĐCN QSDĐ', ratio: '30%', money: d2, desc: 'Bàn giao Giấy chứng nhận QSDĐ (Sổ đỏ riêng) mang tên khách hàng' }}
+        ];
+      }} else if (currentScheme === 4) {{
+        // PA 4: Thanh toán tinh gọn (Cọc 500M -> 100% trong 20 ngày ký HĐCN QSDĐ)
         const deposit = 500000000;
         const d1 = finalPrice - deposit;
 
         rows = [
           {{ dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '500 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí độc quyền căn {code}' }},
-          {{ dot: 'Đợt 1 (Duy Nhất)', time: '15 - 20 ngày kể từ cọc', ratio: '100% (trừ cọc)', money: d1, desc: '<strong>Ký công chứng HĐ chuyển nhượng QSDĐ sang tên ngay, nhận bàn giao toàn bộ hồ sơ sổ hồng riêng</strong>' }}
+          {{ dot: 'Đợt 1 (Duy Nhất)', time: 'Trong vòng 20 ngày kể từ ngày cọc', ratio: '100% (trừ cọc)', money: d1, desc: 'Ký công chứng HĐ chuyển nhượng QSDĐ sang tên ngay, nhận bàn giao toàn bộ hồ sơ sổ hồng riêng' }}
         ];
       }}
 

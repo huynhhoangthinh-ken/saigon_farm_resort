@@ -130,16 +130,17 @@ def main():
         direction = str(ws.cell(r, 17).value or '').strip()
         loai_sp = str(ws.cell(r, 18).value or '').strip()
 
-        # Slug classification
-        if 'biệt phủ' in loai_sp.lower():
-            cat_slug = 'biet-phu-dien-trang'
-            cat_title = 'Biệt Phủ Điền Trang'
-        elif 'điền sản' in loai_sp.lower():
-            cat_slug = 'dien-san'
-            cat_title = 'Điền Sản'
-        else:
+        # Slug classification: Strictly 5 products for Điền An (A13, A14, A15, B22, B23)
+        DIEN_AN_CODES = {'A13', 'A14', 'A15', 'B22', 'B23'}
+        if code in DIEN_AN_CODES:
             cat_slug = 'dien-an'
             cat_title = 'Điền An'
+        elif 'biệt phủ' in loai_sp.lower():
+            cat_slug = 'biet-phu-dien-trang'
+            cat_title = 'Biệt Phủ Điền Trang'
+        else:
+            cat_slug = 'dien-san'
+            cat_title = 'Điền Sản'
 
         # New Excel columns in sheet 'Bảng giá'
         dg_dat = ws.cell(r, 19).value
@@ -247,16 +248,41 @@ def main():
             suitable_for = "Nhà đầu tư khai thác dòng tiền cho thuê tối ưu với suất đầu tư thấp nhất toàn khu, chính sách thuê lại 120 Tr/tháng (1,44 Tỷ/năm) từ MDS Living."
             amenity = "Bình thường"
             image = "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp"
-        elif code == 'B10':
-            features = "ĐƠN GIÁ TỐT NHẤT DÒNG ĐIỀN SẢN (Chỉ 11,21 Tr/m²). Khuôn viên tới 1.291,20 m², vị trí ngoài cùng cánh Đông tiếp giáp công viên và đường trục lớn."
-            suitable_for = "Nhà đầu tư chiến lược tối ưu hóa biên độ lợi nhuận với đơn giá đầu vào tốt nhất dòng Điền Sản."
-            amenity = "Bình thường"
-            image = old_it.get('image', 'assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg')
         elif code == 'B22':
             features = "ĐƠN GIÁ ĐẤT CỰC TỐT CHỈ 9,69 TR/M² (Tiền đất 10,12 Tỷ). Khuôn viên 1.044,86 m² kề cận công viên trung tâm, trọn gói đất và nhà 30 phòng 850m² chỉ 17,60 Tỷ."
             suitable_for = "Nhà đầu tư tìm kiếm mô hình BĐS dòng tiền bền vững, chính sách thuê lại 120 Tr/tháng từ MDS Living."
             amenity = "Bình thường"
             image = "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp"
+        elif code == 'A13':
+            features = "KHUÔN VIÊN ĐIỀN AN 1.269,38 M² DÃY A. Hoàn thiện 30 phòng lưu trú 850m², cam kết thuê lại 120 Tr/tháng (1,44 Tỷ/năm) từ MDS Living."
+            suitable_for = "Nhà đầu tư tìm kiếm mô hình BĐS dòng tiền bền vững, chính sách thuê lại 120 Tr/tháng từ MDS Living."
+            amenity = "Bình thường"
+            image = "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp"
+        elif code == 'A14':
+            features = "KHUÔN VIÊN ĐIỀN AN 1.274,69 M² DÃY A. Hoàn thiện 30 phòng lưu trú 850m², cam kết thuê lại 120 Tr/tháng (1,44 Tỷ/năm) từ MDS Living."
+            suitable_for = "Nhà đầu tư tìm kiếm mô hình BĐS dòng tiền bền vững, chính sách thuê lại 120 Tr/tháng từ MDS Living."
+            amenity = "Bình thường"
+            image = "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp"
+        elif code == 'B23':
+            features = "KHUÔN VIÊN ĐIỀN AN 1.154,54 M² DÃY B. Hoàn thiện 30 phòng lưu trú 850m², cam kết thuê lại 120 Tr/tháng (1,44 Tỷ/năm) từ MDS Living."
+            suitable_for = "Nhà đầu tư tìm kiếm mô hình BĐS dòng tiền bền vững, chính sách thuê lại 120 Tr/tháng từ MDS Living."
+            amenity = "Bình thường"
+            image = "assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp"
+        elif code == 'B10':
+            features = "ĐƠN GIÁ TỐT NHẤT DÒNG ĐIỀN SẢN (Chỉ 11,21 Tr/m²). Khuôn viên tới 1.291,20 m², vị trí ngoài cùng cánh Đông tiếp giáp công viên và đường trục lớn."
+            suitable_for = "Nhà đầu tư chiến lược tối ưu hóa biên độ lợi nhuận với đơn giá đầu vào tốt nhất dòng Điền Sản."
+            amenity = "Bình thường"
+            image = old_it.get('image', 'assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg')
+        elif code == 'A22':
+            features = "KHUÔN VIÊN ĐIỀN SẢN 1.012,53 M² DÃY A VIEW ĐỒNG LÚA. Đơn giá đất tốt, hưởng đặc quyền 24 tháng quản lý MDS Living và gói ủy thác lưu trú hằng quý."
+            suitable_for = "Gia chủ tìm kiếm tư dinh dưỡng sinh, tái tạo năng lượng với không gian mở khoáng đạt."
+            amenity = "Bình thường"
+            image = "assets/Index_asset/villa_gallery/sunset_2_ext_2.jpg"
+        elif code == 'B24':
+            features = "KHUÔN VIÊN ĐIỀN SẢN 1.336,20 M² DÃY B. Diện tích lớn bề thế, hưởng trọn đặc quyền quản lý 24 tháng và gói ủy thác vận hành MDS Living."
+            suitable_for = "Gia chủ yêu thích khuôn viên rộng lớn, tích sản an nhàn với tiềm năng tăng giá vượt trội."
+            amenity = "Bình thường"
+            image = old_it.get('image', 'assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg')
         elif code == 'A19':
             features = "TẦM NHÌN TRỰC DIỆN ĐỒNG LÚA THANH BÌNH. Hướng Đông Bắc đón gió sinh thái mát mẻ quanh năm, không gian tĩnh lặng tuyệt đối bên thềm đồng lúa."
             suitable_for = "Gia chủ tìm kiếm tư dinh dưỡng sinh, tái tạo năng lượng với không gian mở khoáng đạt và dịch vụ MDS Living chuẩn 5 sao."
