@@ -139,8 +139,8 @@ def build_unit_page_html(item, all_items):
             "layout_img": "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
             "desc": "Phương án quy hoạch kiến trúc 30 phòng lưu trú sinh thái cao cấp (diện tích sàn 850m²). Tối ưu hóa dòng tiền kinh doanh retreat/chữa lành giữa không gian thiên nhiên, bàn giao hoàn thiện full nội thất theo tiêu chuẩn vận hành MDS Living. Chính sách thuê lại 120 Tr/tháng (30 phòng x 4 Tr/tháng) từ MDS Living mang lại dòng tiền an tâm thụ động.",
             "gallery": [
-                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp",
                 "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
+                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp",
                 "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp",
                 "/assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg"
             ]
@@ -736,6 +736,27 @@ def build_unit_page_html(item, all_items):
 
     canonical_url = f"https://saigonfarmresort.com/{code_lower}"
     short_display_url = f"saigonfarmresort.com/{code_lower}"
+
+    # Build unique gallery thumbnails list
+    thumbs_list = [main_img]
+    if arch.get('layout_img') and arch['layout_img'] not in thumbs_list:
+        thumbs_list.append(arch['layout_img'])
+    for g_img in arch.get('gallery', []):
+        if g_img and g_img not in thumbs_list:
+            thumbs_list.append(g_img)
+    tmb_map = "/assets/Index_asset/MatBang/TongQuan_QuyMo.png"
+    if tmb_map not in thumbs_list:
+        thumbs_list.append(tmb_map)
+
+    gallery_thumbs_html = []
+    for idx, t_src in enumerate(thumbs_list[:5]):
+        act_cls = " active" if idx == 0 else ""
+        alt_txt = f"Ảnh {idx + 1} Căn {code}" if idx > 0 else f"Ảnh chính Căn {code} - Layout Mặt Bằng"
+        gallery_thumbs_html.append(f"""
+            <div class="thumb-item{act_cls}" onclick="switchGalleryImg('{t_src}', this)">
+              <img src="{t_src}" alt="{alt_txt}">
+            </div>""")
+    gallery_thumbs_rendered = "".join(gallery_thumbs_html)
 
     html = f"""<!DOCTYPE html>
 <html lang="vi">
@@ -2827,21 +2848,7 @@ def build_unit_page_html(item, all_items):
           </div>
           <!-- Thumbnails -->
           <div class="hero-gallery-thumbs">
-            <div class="thumb-item active" onclick="switchGalleryImg('{main_img}', this)">
-              <img src="{main_img}" alt="Ảnh chính Căn {code}">
-            </div>
-            <div class="thumb-item" onclick="switchGalleryImg('{arch['layout_img']}', this)">
-              <img src="{arch['layout_img']}" alt="Mặt bằng thiết kế {arch['name']}">
-            </div>
-            <div class="thumb-item" onclick="switchGalleryImg('{arch['gallery'][0]}', this)">
-              <img src="{arch['gallery'][0]}" alt="Phối cảnh ngoại thất">
-            </div>
-            <div class="thumb-item" onclick="switchGalleryImg('{arch['gallery'][1]}', this)">
-              <img src="{arch['gallery'][1]}" alt="Nội thất phòng khách">
-            </div>
-            <div class="thumb-item" onclick="switchGalleryImg('/assets/Index_asset/MatBang/TongQuan_QuyMo.png', this)">
-              <img src="/assets/Index_asset/MatBang/TongQuan_QuyMo.png" alt="Sơ đồ phân lô tổng thể">
-            </div>
+            {gallery_thumbs_rendered}
           </div>
 
           <!-- Hero Info Content -->
