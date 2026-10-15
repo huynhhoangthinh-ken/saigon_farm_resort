@@ -186,15 +186,18 @@ def render_page(cat, all_cats):
                 <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá đất: {item.get('unit_price_million', '')}</span>
             """
         
-        img_src = item.get('image', '')
-        if img_src and not img_src.startswith('/') and not img_src.startswith('http'):
-            img_src = '/' + img_src
+        code_val = item.get('code', '')
+        img_webp = f"/assets/Index_asset/listing_lots/{code_val}.webp"
+        img_jpg = f"/assets/Index_asset/listing_lots/{code_val}.jpg"
 
         cards_html += f"""
         <div class="listing-card" data-area="{item['area']}" data-status="{item['status_type']}">
           <div class="card-thumb-wrap">
-            <img src="{img_src}" alt="Vị trí & Phối cảnh Lô {item['code']}" loading="lazy" class="card-thumb" onerror="this.onerror=null; this.src='/assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg'">
-            <span class="card-badge-code">LÔ {item['code']}</span>
+            <picture>
+              <source srcset="{img_webp}?v=3" type="image/webp">
+              <img src="{img_jpg}?v=3" alt="Bảng giá & Vị trí Lô {code_val}" loading="lazy" class="card-thumb" onerror="this.onerror=null; this.src='{img_webp}?v=3'">
+            </picture>
+            <span class="card-badge-code">LÔ {code_val}</span>
             <span class="card-badge-status {status_badge_class}">
               <i class="fa-solid {status_icon}"></i> {item['status']}
             </span>

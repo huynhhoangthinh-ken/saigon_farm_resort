@@ -329,6 +329,9 @@ def update_listing():
             </div>
             """
 
+        img_webp = f"/assets/Index_asset/listing_lots/{code}.webp"
+        img_jpg = f"/assets/Index_asset/listing_lots/{code}.jpg"
+
         card = f"""
         <div class="listing-card"
              id="card-{code.lower()}"
@@ -349,11 +352,14 @@ def update_listing():
              onmouseenter="highlightHotspot('{code.lower()}')"
              onmouseleave="unhighlightHotspot('{code.lower()}')">
           <div class="card-thumb-wrap">
-            <img src="{img}" 
-                 alt="Mã căn {code} - {cat_title}" 
-                 loading="lazy" 
-                 class="card-thumb" 
-                 onerror="this.onerror=null; this.src='/assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg'">
+            <picture>
+              <source srcset="{img_webp}?v=3" type="image/webp">
+              <img src="{img_jpg}?v=3" 
+                   alt="Bảng giá & Vị trí Mã căn {code} - {cat_title}" 
+                   loading="lazy" 
+                   class="card-thumb" 
+                   onerror="this.onerror=null; this.src='{img_webp}?v=3'">
+            </picture>
             <span class="card-badge-code">MÃ {code}</span>
             <span class="card-badge-cat">{cat_title}</span>
             <span class="card-badge-status {status_class}">
@@ -4753,8 +4759,8 @@ def update_listing():
 
     os.makedirs("giohang", exist_ok=True)
     with open("giohang/index.html", "w", encoding="utf-8") as f:
-        f.write(html_content.replace("<head>", '<head>\n  <base href="../">'))
-    print("Generated giohang/index.html successfully with base href!")
+        f.write(html_content)
+    print("Generated giohang/index.html successfully!")
 
     # Also keep listing.html and listing/index.html updated as legacy fallback
     with open("listing.html", "w", encoding="utf-8") as f:
@@ -4763,8 +4769,8 @@ def update_listing():
 
     os.makedirs("listing", exist_ok=True)
     with open("listing/index.html", "w", encoding="utf-8") as f:
-        f.write(html_content.replace("<head>", '<head>\n  <base href="../">'))
-    print("Generated listing/index.html successfully with base href!")
+        f.write(html_content)
+    print("Generated listing/index.html successfully!")
 
 if __name__ == "__main__":
     update_listing()

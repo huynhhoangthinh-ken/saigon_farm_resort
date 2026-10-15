@@ -128,7 +128,7 @@ def build_unit_page_html(item, all_items):
     phase = item.get("phase", "GĐ1")
     features = item.get("features", "")
     suitable_for = item.get("suitable_for", "")
-    main_img = item.get("image", "/assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg")
+    main_img = item.get("image") or f"/assets/Index_asset/listing_lots/{code}.webp"
     if main_img and not main_img.startswith('/') and not main_img.startswith('http'):
         main_img = '/' + main_img
 
@@ -2839,7 +2839,7 @@ def build_unit_page_html(item, all_items):
         <!-- Visual & Info Hero Card -->
         <div class="unit-hero-card">
           <div class="hero-gallery-main">
-            <img id="mainGalleryImg" src="{main_img}" alt="Mặt bằng phối cảnh Căn {code} - {cat_title}">
+            <img id="mainGalleryImg" src="{main_img}" alt="Bảng giá & Vị trí Căn {code} - {cat_title}" onerror="this.onerror=null; this.src='/assets/Index_asset/listing_lots/{code}.jpg';">
             <div class="gallery-badges">
               <span class="badge-hero-code">MÃ {code}</span>
               <span class="badge-hero-cat">{cat_title}</span>

@@ -17,3 +17,22 @@
 
 /dist-invitation/*
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/giohang
+  Cache-Control: public, max-age=0, must-revalidate
+
+/giohang/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/dien-an
+  Cache-Control: public, max-age=0, must-revalidate
+
+/dien-san
+  Cache-Control: public, max-age=0, must-revalidate
+
+/biet-phu-dien-trang
+  Cache-Control: public, max-age=0, must-revalidate
+
