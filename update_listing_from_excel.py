@@ -130,12 +130,19 @@ def main():
         direction = str(ws.cell(r, 17).value or '').strip()
         loai_sp = str(ws.cell(r, 18).value or '').strip()
 
-        # Slug classification: Strictly 5 products for Điền An (A13, A14, A15, B22, B23)
-        DIEN_AN_CODES = {'A13', 'A14', 'A15', 'B22', 'B23'}
+        # Danh sách 21 sản phẩm mở bán Đợt 1 (theo bản v3)
+        DIEN_SAN_CODES = {'B05', 'B18', 'B17', 'B19', 'B08', 'B09', 'B10', 'A12', 'A11', 'A09', 'A08'} # 11 sản phẩm (chỉ bán đất)
+        DIEN_AN_CODES = {'B22', 'A15', 'B23', 'A14'} # 4 sản phẩm (có nhà)
+        BIET_PHU_CODES = {'A23', 'B13', 'B12', 'A17', 'A16', 'B14'} # 6 sản phẩm (chỉ bán đất)
+        PHASE_1_CODES = DIEN_SAN_CODES | DIEN_AN_CODES | BIET_PHU_CODES
+
+        if code not in PHASE_1_CODES:
+            continue
+
         if code in DIEN_AN_CODES:
             cat_slug = 'dien-an'
             cat_title = 'Điền An'
-        elif 'biệt phủ' in loai_sp.lower():
+        elif code in BIET_PHU_CODES:
             cat_slug = 'biet-phu-dien-trang'
             cat_title = 'Biệt Phủ Điền Trang'
         else:
@@ -187,24 +194,34 @@ def main():
             construction_price_vat = 0
             construction_price_vat_str = None
             construction_price_vat_billion = None
+            price_label = "Chưa mở bán"
         else:
-            unit_price = int(round(dg_dat))
-            unit_price_str = format_unit_str(dg_dat)
-            unit_price_million = format_unit_million_str(dg_dat)
+            land_price = int(round(tt_dat))
+            land_price_str = format_vnd_str(tt_dat)
+            land_price_billion = format_billion_str(tt_dat)
+            land_unit_price = int(round(dg_dat))
+            land_unit_price_str = format_unit_str(dg_dat)
+            land_unit_price_million = format_unit_million_str(dg_dat)
 
-            price = int(round(tt_dat))
-            price_str = format_vnd_str(tt_dat)
-            price_billion = format_billion_str(tt_dat)
+            if cat_slug == 'dien-an' and tt_nha_vat and tt_nha_vat > 0:
+                price = int(round(tt_nha_vat))
+                price_str = format_vnd_str(tt_nha_vat)
+                price_billion = format_billion_str(tt_nha_vat)
+                unit_price = int(round(dg_nha_vat)) if dg_nha_vat else int(round(price / dt_ban))
+                unit_price_str = format_unit_str(unit_price)
+                unit_price_million = format_unit_million_str(unit_price)
+                price_label = "Giá Trọn Gói (Đất + Nhà 30 Phòng gồm VAT)"
+            else:
+                price = int(round(tt_dat))
+                price_str = format_vnd_str(tt_dat)
+                price_billion = format_billion_str(tt_dat)
+                unit_price = int(round(dg_dat))
+                unit_price_str = format_unit_str(dg_dat)
+                unit_price_million = format_unit_million_str(dg_dat)
+                price_label = "Giá Đất (Chỉ Bán Đất)"
 
             status = old_it.get('status', 'Còn hàng')
             status_type = old_it.get('status_type', 'available')
-
-            land_price = price
-            land_price_str = price_str
-            land_price_billion = price_billion
-            land_unit_price = unit_price
-            land_unit_price_str = unit_price_str
-            land_unit_price_million = unit_price_million
 
             construction_area = int(round(dt_xd)) if dt_xd else 0
             if tt_xd_vat and tt_xd_vat > 0:
@@ -319,7 +336,7 @@ def main():
             "price": price,
             "price_str": price_str,
             "price_billion": price_billion,
-            "price_label": "Giá Niêm Yết Gốc (Original Price Listing - Trước CSBH)",
+            "price_label": price_label,
             "land_price": land_price,
             "land_price_str": land_price_str,
             "land_price_billion": land_price_billion,
@@ -360,16 +377,24 @@ def main():
 
     # Reassemble categories preserving metadata
     new_categories = []
+    category_badges = {
+        'biet-phu-dien-trang': '6 Dinh Thự Mở Bán Đợt 1 (Chỉ Bán Đất)',
+        'dien-san': '11 Sản Phẩm Mở Bán Đợt 1 (Chỉ Bán Đất)',
+        'dien-an': '4 Cụm Lưu Trú Mở Bán Đợt 1 (Đất + Nhà 30 Phòng)'
+    }
     for cat in categories:
         slug = cat['slug']
         c_copy = dict(cat)
         c_copy['items'] = cat_items.get(slug, [])
+        if slug in category_badges:
+            c_copy['badge'] = category_badges[slug]
         new_categories.append(c_copy)
 
     with open(JSON_PATH, 'w', encoding='utf-8') as f:
         json.dump(new_categories, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ Successfully updated {JSON_PATH} with 36 verified lots!")
+    total_21 = sum(len(c['items']) for c in new_categories)
+    print(f"✅ Successfully updated {JSON_PATH} with {total_21} Phase 1 lots!")
     for c in new_categories:
         print(f"  - {c['title']}: {len(c['items'])} items")
 

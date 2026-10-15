@@ -116,6 +116,10 @@ def build_unit_page_html(item, all_items):
     price = item.get("price", 0)
     price_str = item.get("price_str", "")
     price_bil = item.get("price_billion", "")
+    land_price = item.get("land_price") or price
+    land_price_bil = item.get("land_price_billion") or price_bil
+    land_price_str = item.get("land_price_str") or price_str
+    land_unit_price_mil = item.get("land_unit_price_million") or unit_price_mil
     house_vat_bil = item.get("house_price_vat_billion")
     house_vat_str = item.get("house_price_vat_str")
     house_vat_val = item.get("house_price_vat", 0) or 0
@@ -141,8 +145,8 @@ def build_unit_page_html(item, all_items):
                 "/assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg"
             ]
         }
-        page_title = f"Căn {code} ({area_str} m²) — Điền An | Đơn Giá Đất Từ {unit_price_mil} · Gói 30 Phòng {house_vat_bil} | Saigon Farm Resort"
-        page_desc = f"Thông tin chi tiết Căn {code} dòng Điền An, diện tích {area_str}m². Đơn giá đất chỉ {unit_price_mil}, tiền đất {price_bil}, tổng gói đất và hoàn thiện 30 phòng 850m² chỉ {house_vat_bil}. Sổ đỏ riêng, chính sách thuê lại 120 Tr/tháng từ MDS Living."
+        page_title = f"Căn {code} ({area_str} m²) — Điền An | Đơn Giá Đất Từ {land_unit_price_mil} · Gói 30 Phòng {price_bil} | Saigon Farm Resort"
+        page_desc = f"Thông tin chi tiết Căn {code} dòng Điền An, diện tích {area_str}m². Đơn giá đất chỉ {land_unit_price_mil}, tiền đất {land_price_bil}, trọn gói cả đất và hoàn thiện 30 phòng 850m² chỉ {price_bil}. Sổ đỏ riêng, chính sách thuê lại 120 Tr/tháng từ MDS Living."
         
         if phase == "GĐ2":
             price_hero_box_html = f"""
@@ -157,25 +161,25 @@ def build_unit_page_html(item, all_items):
             price_hero_box_html = f"""
             <div class="unit-price-hero-box" style="background: linear-gradient(135deg, rgba(185, 28, 28, 0.06), rgba(2, 132, 199, 0.04)); border: 1.5px solid #b91c1c; min-width: 280px; box-shadow: 0 4px 14px rgba(185, 28, 28, 0.1);">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                <span class="uph-label" style="margin:0; color:#b91c1c; font-weight:800; font-size:0.75rem;"><i class="fa-solid fa-tag"></i> ĐƠN GIÁ THẤP NHẤT TOÀN KHU</span>
+                <span class="uph-label" style="margin:0; color:#b91c1c; font-weight:800; font-size:0.75rem;"><i class="fa-solid fa-tag"></i> ĐƠN GIÁ ĐẤT THẤP NHẤT TOÀN KHU</span>
                 <span style="background:#b91c1c; color:#fff; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:12px;">Hot Deal Đợt 1</span>
               </div>
-              <div class="uph-billion" style="color:#b91c1c; font-size:1.75rem; font-weight:900;">{unit_price_mil}</div>
+              <div class="uph-billion" style="color:#b91c1c; font-size:1.75rem; font-weight:900;">{price_bil}</div>
               <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:4px; padding:3px 8px; font-size:0.78rem; color:#991b1b; font-weight:700; margin-bottom:6px;">
-                Sau ưu đãi 1 Tỷ chỉ còn: ~8,17 Tr/m²
+                Đơn giá đất chỉ {land_unit_price_mil} (Sau ưu đãi ~8,17 Tr/m²)
               </div>
-              <div style="font-size:0.82rem; color:#475569; margin-bottom:8px;">Tiền đất: <strong style="color:#0f172a;">{price_bil}</strong> <span style="font-size:0.75rem; color:#64748b;">({price_str})</span></div>
+              <div style="font-size:0.82rem; color:#475569; margin-bottom:8px;">Tiền đất: <strong style="color:#0f172a;">{land_price_bil}</strong> <span style="font-size:0.75rem; color:#64748b;">({land_price_str})</span></div>
               <div style="padding-top:8px; border-top:1px dashed rgba(185, 28, 28, 0.3); font-size:0.88rem; color:#b91c1c; font-weight:700; display:flex; justify-content:space-between; align-items:center;">
                 <span><i class="fa-solid fa-hotel"></i> Cả Đất & Nhà 30 phòng:</span>
-                <span style="font-size:1.15rem;">{house_vat_bil}</span>
+                <span style="font-size:1.15rem;">{price_bil}</span>
               </div>
               <div style="font-size:0.72rem; color:#64748b; text-align:right;">(Gồm VAT & bàn giao full nội thất theo chuẩn MDS Living)</div>
             </div>
             """
             sticky_features_html = f"""
-            <li><i class="fa-solid fa-fire" style="color:#b91c1c;"></i> <strong style="color:#b91c1c;">ĐƠN GIÁ ĐẤT THẤP NHẤT TOÀN QUẦN THỂ: {unit_price_mil}</strong></li>
+            <li><i class="fa-solid fa-fire" style="color:#b91c1c;"></i> <strong style="color:#b91c1c;">ĐƠN GIÁ ĐẤT THẤP NHẤT TOÀN QUẦN THỂ: {land_unit_price_mil}</strong></li>
             <li><i class="fa-solid fa-circle-check"></i> Sau ưu đãi 1 Tỷ đơn giá đất chỉ: <strong>~8,17 Tr/m²</strong></li>
-            <li><i class="fa-solid fa-circle-check"></i> Gói xây dựng 30 phòng 850m² trọn gói: <strong>{house_vat_bil}</strong></li>
+            <li><i class="fa-solid fa-circle-check"></i> Trọn gói cả đất và 30 phòng 850m²: <strong>{price_bil}</strong></li>
             <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng sản phẩm, thổ cư lâu dài</li>
             <li><i class="fa-solid fa-circle-check"></i> Chính sách thuê lại 120 Tr/tháng (30 phòng x 4 Tr) từ MDS Living</li>
         """
@@ -183,22 +187,22 @@ def build_unit_page_html(item, all_items):
             price_hero_box_html = f"""
             <div class="unit-price-hero-box" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.06), rgba(12, 74, 110, 0.03)); border: 1px solid rgba(2, 132, 199, 0.35); min-width: 270px;">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-                <span class="uph-label" style="margin:0; color:#0369a1; font-weight:700;">ĐƠN GIÁ ĐẤT</span>
+                <span class="uph-label" style="margin:0; color:#0369a1; font-weight:700;">TRỌN GÓI ĐẤT & NHÀ 30P</span>
                 <span style="background:#0284c7; color:#fff; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:12px;">Đợt 1</span>
               </div>
-              <div class="uph-billion" style="color:#0284c7; font-size:1.65rem;">{unit_price_mil}</div>
-              <div style="font-size:0.82rem; color:#475569; margin-bottom:8px;">Tiền đất: <strong style="color:#0f172a;">{price_bil}</strong> <span style="font-size:0.75rem; color:#64748b;">({price_str})</span></div>
+              <div class="uph-billion" style="color:#b91c1c; font-size:1.65rem;">{price_bil}</div>
+              <div style="font-size:0.82rem; color:#475569; margin-bottom:8px;">Tiền đất: <strong style="color:#0f172a;">{land_price_bil}</strong> <span style="font-size:0.75rem; color:#64748b;">(Đơn giá: {land_unit_price_mil})</span></div>
               <div style="padding-top:8px; border-top:1px dashed rgba(2, 132, 199, 0.3); font-size:0.88rem; color:#b91c1c; font-weight:700; display:flex; justify-content:space-between; align-items:center;">
                 <span><i class="fa-solid fa-hotel"></i> Cả Đất & Nhà 30 phòng:</span>
-                <span style="font-size:1.15rem;">{house_vat_bil}</span>
+                <span style="font-size:1.15rem;">{price_bil}</span>
               </div>
               <div style="font-size:0.72rem; color:#64748b; text-align:right;">(Gồm VAT & bàn giao full nội thất theo chuẩn MDS Living)</div>
             </div>
             """
             sticky_features_html = f"""
             <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng sản phẩm, thổ cư lâu dài</li>
-            <li><i class="fa-solid fa-circle-check"></i> Đơn giá đất ưu đãi đột phá: <strong>{unit_price_mil}</strong></li>
-            <li><i class="fa-solid fa-circle-check"></i> Gói xây dựng 30 phòng 850m² trọn gói: <strong>{house_vat_bil}</strong></li>
+            <li><i class="fa-solid fa-circle-check"></i> Đơn giá đất: <strong>{land_unit_price_mil}</strong> (Tiền đất: {land_price_bil})</li>
+            <li><i class="fa-solid fa-circle-check"></i> Trọn gói cả đất và 30 phòng 850m²: <strong>{price_bil}</strong></li>
             <li><i class="fa-solid fa-circle-check"></i> Tặng 24 tháng phí quản lý Farm Resort</li>
             <li><i class="fa-solid fa-circle-check"></i> Chính sách thuê lại 120 Tr/tháng (30 phòng x 4 Tr) từ MDS Living</li>
         """
@@ -221,12 +225,12 @@ def build_unit_page_html(item, all_items):
                 Bàn Giao Hoàn Thiện Full Nội Thất Liền Tường: <span>DTXD 850 m²</span>
               </div>
               <div class="cbc-desc" style="color: #334155;">
-                Đơn giá đất ưu đãi đặc biệt: <strong>{unit_price_mil}</strong> (Tiền đất: {price_bil}). Gói xây dựng 30 suites cao cấp: <strong>7,50 Tỷ</strong> (đã gồm 10% VAT). Bàn giao chìa khóa trao tay vận hành khai thác ngay.
+                Đơn giá đất ưu đãi: <strong>{land_unit_price_mil}</strong> (Tiền đất: {land_price_bil}). Gói xây dựng 30 suites cao cấp: <strong>{construction_bil}</strong> (đã gồm 10% VAT). Bàn giao chìa khóa trao tay vận hành khai thác ngay.
               </div>
             </div>
             <div style="background: #fff; padding: 12px 18px; border-radius: 8px; border: 1px dashed #0284c7; text-align: right; min-width: 180px;">
               <span style="font-size: 0.76rem; color: #64748b; display: block;">TỔNG GÓI CẢ ĐẤT & NHÀ:</span>
-              <strong style="color: #b91c1c; font-size: 1.35rem; font-weight: 800;">{house_vat_bil}</strong>
+              <strong style="color: #b91c1c; font-size: 1.35rem; font-weight: 800;">{price_bil}</strong>
               <small style="display: block; font-size: 0.72rem; color: #64748b;">(Đã gồm 10% VAT xây dựng)</small>
             </div>
           </div>
@@ -236,11 +240,11 @@ def build_unit_page_html(item, all_items):
             <div class="fsc-detail-row">
               <div class="fsc-item">
                 <span class="fsc-label">Giá Trị QSDĐ (Tiền Đất)</span>
-                <span class="fsc-val" style="color: #0c4a6e;">{price_bil}</span>
+                <span class="fsc-val" style="color: #0c4a6e;">{land_price_bil}</span>
               </div>
               <div class="fsc-item">
                 <span class="fsc-label">Giá Trị Xây Dựng 30 Suites</span>
-                <span class="fsc-val" style="color: #0c4a6e;">7,50 Tỷ <small style="font-size:0.75rem; font-weight:normal; color:#64748b;">(gồm VAT)</small></span>
+                <span class="fsc-val" style="color: #0c4a6e;">{construction_bil} <small style="font-size:0.75rem; font-weight:normal; color:#64748b;">(gồm VAT)</small></span>
               </div>
               <div class="fsc-item">
                 <span class="fsc-label">Quà Tặng Vận Hành 24 Tháng</span>
@@ -253,7 +257,7 @@ def build_unit_page_html(item, all_items):
                 <span class="fsc-total-label">Tổng Giá Trị Hợp Đồng Trọn Gói</span>
                 <span class="fsc-total-sub">Bao gồm Giá trị QSDĐ & Giá trị xây dựng hoàn thiện bàn giao full nội thất liền tường</span>
               </div>
-              <div class="fsc-total-val" style="color: #b91c1c;">{house_vat_bil}</div>
+              <div class="fsc-total-val" style="color: #b91c1c;">{price_bil}</div>
             </div>
 
             <div class="fsc-savings-badge" style="display: flex; background: rgba(34, 197, 94, 0.08); border-color: rgba(34, 197, 94, 0.3);">
@@ -265,7 +269,7 @@ def build_unit_page_html(item, all_items):
           <!-- Installment Schedule Tables for Điền An (Both Land & Construction) -->
           <div style="margin-bottom: 24px;">
             <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: #0c4a6e; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-              <i class="fa-solid fa-layer-group" style="color: #0284c7;"></i> 1. Thanh Toán Giá Trị Quyền Sử Dụng Đất (Tiền Đất: {price_bil})
+              <i class="fa-solid fa-layer-group" style="color: #0284c7;"></i> 1. Thanh Toán Giá Trị Quyền Sử Dụng Đất (Tiền Đất: {land_price_bil})
             </h3>
             <div class="installment-table-wrap">
               <table class="installment-table">
@@ -290,35 +294,35 @@ def build_unit_page_html(item, all_items):
                     <td><strong>Đợt 1</strong></td>
                     <td>Trong vòng 10 ngày kể từ ngày cọc</td>
                     <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30% (trừ cọc)</span></td>
-                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr((price * 0.30) - 200000000)}</td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr((land_price * 0.30) - 200000000)}</td>
                     <td>Ký Hợp đồng đặt cọc chính thức</td>
                   </tr>
                   <tr>
                     <td><strong>Đợt 2</strong></td>
                     <td>Trong vòng 04 tháng từ ngày ký HĐ đặt cọc</td>
                     <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">30%</span></td>
-                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(price * 0.30)}</td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(land_price * 0.30)}</td>
                     <td>Tiến độ hoàn thiện hạ tầng kỹ thuật</td>
                   </tr>
                   <tr>
                     <td><strong>Đợt 3</strong></td>
                     <td>Trong vòng 08 tháng từ ngày ký HĐ đặt cọc</td>
                     <td style="text-align: center;"><span class="badge" style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
-                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(price * 0.20)}</td>
+                    <td style="text-align: right; font-weight: 700; color:#0c4a6e;">{format_curr(land_price * 0.20)}</td>
                     <td>Tiến độ hoàn thiện cảnh quan sinh thái & tiện ích</td>
                   </tr>
                   <tr>
                     <td><strong>Đợt 4</strong></td>
                     <td>Trong vòng 12 tháng từ ngày ký HĐ đặt cọc</td>
                     <td style="text-align: center;"><span class="badge" style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-weight:700;">20%</span></td>
-                    <td style="text-align: right; font-weight: 700; color:#b91c1c;">{format_curr(price * 0.20)}</td>
+                    <td style="text-align: right; font-weight: 700; color:#b91c1c;">{format_curr(land_price * 0.20)}</td>
                     <td>Ký Hợp đồng chuyển nhượng QSDĐ (Công chứng nhận Sổ đỏ riêng)</td>
                   </tr>
                   <tr style="background: #f8fafc; font-weight: 800;">
                     <td colspan="2"><strong>TỔNG TIỀN ĐẤT</strong></td>
                     <td style="text-align: center; color:#0284c7;">100%</td>
-                    <td style="text-align: right; color:#0284c7; font-size:1.05rem;">{price_str}</td>
-                    <td><strong>{price_bil}</strong></td>
+                    <td style="text-align: right; color:#0284c7; font-size:1.05rem;">{land_price_str}</td>
+                    <td><strong>{land_price_bil}</strong></td>
                   </tr>
                 </tbody>
               </table>
@@ -429,11 +433,11 @@ def build_unit_page_html(item, all_items):
         
         price_hero_box_html = f"""
         <div class="unit-price-hero-box" {"style='background: rgba(180, 83, 9, 0.08); border: 1px dashed rgba(180, 83, 9, 0.35);'" if phase == "GĐ2" else ""}>
-          <div class="uph-label" {"style='color: #b45309;'" if phase == "GĐ2" else ""}>{"QUỸ GIAI ĐOẠN 2" if phase == "GĐ2" else "Giá Đất Niêm Yết Gốc"}</div>
+          <div class="uph-label" {"style='color: #b45309;'" if phase == "GĐ2" else ""}>{"QUỸ GIAI ĐOẠN 2" if phase == "GĐ2" else "Giá Đất Niêm Yết (Chỉ Bán Đất)"}</div>
           <div class="uph-billion" {"style='color: #b45309;'" if phase == "GĐ2" else ""}>{price_bil}</div>
           <div class="uph-exact" {"style='color: #92400e;'" if phase == "GĐ2" else ""}>{"(Đăng ký ưu tiên vị trí GĐ2)" if phase == "GĐ2" else f"({price_str})"}</div>
           <div class="uph-m2" {"style='color: #777;'" if phase == "GĐ2" else ""}>{"Chưa mở bán chính thức" if phase == "GĐ2" else f"Đơn giá đất: {unit_price_mil}"}</div>
-          {f'<div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(201, 169, 110, 0.35); font-size: 0.86rem; color: #b91c1c; font-weight: 700;"><i class="fa-solid fa-house-chimney"></i> Cả Nhà: {house_vat_bil} <small style="color: #666; font-weight: 400;">(gồm VAT & XD)</small></div>' if house_vat_bil and phase != "GĐ2" else ""}
+          {f'<div style="margin-top: 8px; padding-top: 6px; border-top: 1px dashed rgba(201, 169, 110, 0.35); font-size: 0.86rem; color: #b91c1c; font-weight: 700;"><i class="fa-solid fa-house-chimney"></i> Tùy chọn xây biệt phủ (tham khảo): {house_vat_bil} <small style="color: #666; font-weight: 400;">(gồm VAT & XD)</small></div>' if house_vat_bil and phase != "GĐ2" else ""}
         </div>
         """
         
@@ -3360,6 +3364,7 @@ def main():
 
     print(f"📦 Tổng số sản phẩm tìm thấy: {len(all_items)} căn.")
 
+    active_codes_set = set()
     generated_codes = []
     for item in all_items:
         code = item.get("code", "").strip()
@@ -3368,19 +3373,20 @@ def main():
 
         code_lower = code.lower()
         code_upper = code.upper()
+        active_codes_set.add(code_upper)
 
         html_content = build_unit_page_html(item, all_items)
 
-        # 1. Write root lowercase file: e.g. a04.html
+        # 1. Write root lowercase file: e.g. b05.html
         with open(f"{code_lower}.html", "w", encoding="utf-8") as f:
             f.write(html_content)
 
-        # 2. Write root lowercase dir: e.g. a04/index.html (Cloudflare Pages trailing slash compatibility)
+        # 2. Write root lowercase dir: e.g. b05/index.html (Cloudflare Pages trailing slash compatibility)
         os.makedirs(code_lower, exist_ok=True)
         with open(f"{code_lower}/index.html", "w", encoding="utf-8") as f:
             f.write(html_content)
 
-        # 3. Write uppercase compatibility: e.g. A04.html and A04/index.html
+        # 3. Write uppercase compatibility: e.g. B05.html and B05/index.html
         with open(f"{code_upper}.html", "w", encoding="utf-8") as f:
             f.write(html_content)
         os.makedirs(code_upper, exist_ok=True)
@@ -3389,8 +3395,43 @@ def main():
 
         generated_codes.append(code_lower)
 
-    print(f"✅ Đã tạo thành công {len(generated_codes)} trang chi tiết cho toàn bộ căn:")
+    # Clean / redirect any unreleased lots to /giohang
+    unreleased_codes = [c for c in LOT_COORDINATES if c.upper() not in active_codes_set]
+    redirect_count = 0
+    for uc in unreleased_codes:
+        u_lower = uc.lower()
+        u_upper = uc.upper()
+        redirect_html = f"""<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Mã Căn {u_upper} | Saigon Farm Resort</title>
+  <meta http-equiv="refresh" content="0; url=/giohang">
+  <link rel="canonical" href="https://saigonfarmresort.com/giohang">
+  <script>window.location.replace("/giohang");</script>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; padding: 60px 20px; color: #183024;">
+  <h2 style="font-size: 1.5rem; margin-bottom: 12px;">Mã Căn {u_upper} Chưa Mở Bán Trong Đợt 1</h2>
+  <p style="color: #64748b; font-size: 1rem; margin-bottom: 24px;">Hiện tại dự án chỉ mở bán 21 sản phẩm Đợt 1 (11 Điền Sản, 4 Điền An, 6 Biệt Phủ).</p>
+  <p>Đang chuyển hướng quý khách về <a href="/giohang" style="color: #0284c7; font-weight: 700; text-decoration: underline;">Giỏ Hàng Mở Bán Đợt 1</a>...</p>
+</body>
+</html>"""
+        with open(f"{u_lower}.html", "w", encoding="utf-8") as f:
+            f.write(redirect_html)
+        os.makedirs(u_lower, exist_ok=True)
+        with open(f"{u_lower}/index.html", "w", encoding="utf-8") as f:
+            f.write(redirect_html)
+        with open(f"{u_upper}.html", "w", encoding="utf-8") as f:
+            f.write(redirect_html)
+        os.makedirs(u_upper, exist_ok=True)
+        with open(f"{u_upper}/index.html", "w", encoding="utf-8") as f:
+            f.write(redirect_html)
+        redirect_count += 1
+
+    print(f"✅ Đã tạo thành công {len(generated_codes)} trang chi tiết cho 21 sản phẩm mở bán Đợt 1:")
     print(", ".join(generated_codes))
+    print(f"🔒 Đã cấu hình chuyển hướng an toàn cho {redirect_count} mã căn chưa mở bán về /giohang:")
+    print(", ".join(sorted(unreleased_codes)))
 
 if __name__ == "__main__":
     main()

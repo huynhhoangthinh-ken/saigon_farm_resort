@@ -53,8 +53,8 @@ def render_page(cat, all_cats):
             },
             {
                 "icon": "fa-gem",
-                "title": "Số Lượng Khan Hiếm Bậc Nhất (Chỉ 5 Sản Phẩm)",
-                "desc": "Quy hoạch giới hạn tuyệt đối chỉ 5 sản phẩm giúp Điền An sở hữu tính độc bản cao, giữ vững giá trị và thanh khoản vượt trội trước mọi biến động thị trường."
+                "title": "Số Lượng Khan Hiếm Bậc Nhất (Chỉ 4 Sản Phẩm Mở Bán Đợt 1)",
+                "desc": "Quy hoạch giới hạn mở bán Đợt 1 chỉ đúng 4 sản phẩm giúp Điền An sở hữu tính độc bản cao, giữ vững giá trị và thanh khoản vượt trội trước mọi biến động thị trường."
             }
         ]
         product_form_desc = "Đất 100% thổ cư (đất ở nông thôn lâu dài), sổ đỏ riêng từng lô, công chứng sang tên ngay trong ngày. Quy hoạch lý tưởng để phát triển mô hình dinh thự vườn sinh thái kết hợp cụm bungalow lưu trú chuẩn 5 sao."
@@ -161,31 +161,29 @@ def render_page(cat, all_cats):
                 <span style="font-size: 0.74rem; color: #92400e; display: block;">Chưa mở bán chính thức</span>
                 """
             else:
-                lowest_badge = '<div style="background: #fee2e2; border: 1px solid #fca5a5; color: #b91c1c; font-weight: 800; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 4px;"><i class="fa-solid fa-tag"></i> ĐƠN GIÁ THẤP NHẤT TOÀN QUẦN THỂ</div>' if item['code'] == 'A15' else ""
+                lowest_badge = '<div style="background: #fee2e2; border: 1px solid #fca5a5; color: #b91c1c; font-weight: 800; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; display: inline-flex; align-items: center; gap: 4px; margin-bottom: 4px;"><i class="fa-solid fa-tag"></i> ĐƠN GIÁ ĐẤT THẤP NHẤT TOÀN KHU</div>' if item['code'] == 'A15' else ""
                 note_a15 = '<div style="font-size: 0.74rem; color: #b91c1c; font-weight: 700; margin-top: 2px;">(Sau ưu đãi chỉ ~8,17 Tr/m²)</div>' if item['code'] == 'A15' else ""
                 price_html = f"""
                 {lowest_badge}
                 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
-                  <span class="price-label" style="margin: 0; color: #0284c7; font-weight: 700; font-size: 0.78rem;">ĐƠN GIÁ ĐẤT:</span>
-                  <span style="color: {'#b91c1c' if item['code'] == 'A15' else '#0284c7'}; font-weight: 800; font-size: 1.05rem;">{item.get('unit_price_million', '')}</span>
+                  <span class="price-label" style="margin: 0; color: #b91c1c; font-weight: 800; font-size: 0.8rem;">TRỌN GÓI ĐẤT &amp; NHÀ 30P:</span>
+                  <span style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">{item.get('price_billion', '')}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+                  <span class="price-label" style="margin: 0; font-size: 0.76rem;">Tiền đất (Đơn giá {item.get('land_unit_price_million', item.get('unit_price_million', ''))}):</span>
+                  <span class="price-val" style="color: #1e293b; font-weight: 700; font-size: 0.95rem;">{item.get('land_price_billion', '')}</span>
                 </div>
                 {note_a15}
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
-                  <span class="price-label" style="margin: 0; font-size: 0.76rem;">Tiền đất:</span>
-                  <span class="price-val" style="color: #1e293b; font-weight: 700; font-size: 0.95rem;">{item.get('price_billion', '')}</span>
-                </div>
                 <div style="background: rgba(2, 132, 199, 0.08); border-left: 3px solid #0284c7; border-radius: 4px; padding: 4px 8px; margin-top: 4px; font-size: 0.8rem; color: #0369a1; font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
-                  <span><i class="fa-solid fa-hotel" style="color:#0284c7; margin-right:4px;"></i> Gói cả nhà 30 phòng:</span>
-                  <span style="color: #b91c1c; font-size: 0.95rem;">{item.get('house_price_vat_billion', '')} <small style="font-size: 0.68rem; color: #666; font-weight: 400;">(gồm VAT)</small></span>
+                  <span><i class="fa-solid fa-hand-holding-dollar" style="color:#0284c7; margin-right:4px;"></i> Thuê lại cam kết:</span>
+                  <span style="color: #0369a1; font-size: 0.95rem;">120 Tr/tháng <small style="font-size: 0.68rem; color: #666; font-weight: 400;">(1,44 Tỷ/năm)</small></span>
                 </div>
                 """
         else:
-            house_str = f"""<div style="font-size: 0.78rem; color: #b91c1c; font-weight: 700; margin-top: 2px;"><i class="fa-solid fa-house-chimney"></i> Cả Nhà: {item.get('house_price_vat_billion')} <small style="color:#666; font-weight:400;">(gồm VAT)</small></div>""" if item.get('house_price_vat_billion') and item.get('phase') != 'GĐ2' else ""
             price_html = f"""
-                <span class="price-label">Giá niêm yết gốc (trước CSBH):</span>
+                <span class="price-label">Giá đất niêm yết (chỉ bán đất):</span>
                 <span class="price-val" style="color: #b91c1c; font-weight: 800; font-size: 1.15rem;">{item.get('price_billion', 'Liên hệ')}</span>
-                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá: {item.get('unit_price_million', '')}</span>
-                {house_str}
+                <span style="font-size: 0.74rem; color: #777; display: block;">Đơn giá đất: {item.get('unit_price_million', '')}</span>
             """
         
         cards_html += f"""

@@ -81,6 +81,15 @@ def update_listing():
     haven_count = sum(1 for i in all_items if i["category_slug"] == "dien-an")
     available_count = sum(1 for i in all_items if i.get("status_type") == "available")
     reserved_count = sum(1 for i in all_items if i.get("status_type") == "reserved")
+    block_a_count = sum(1 for i in all_items if i.get("block", "").upper() == "A")
+    block_b_count = sum(1 for i in all_items if i.get("block", "").upper() == "B")
+    corner_count = sum(1 for i in all_items if i.get("position") == "Lô góc")
+    front2_count = sum(1 for i in all_items if i.get("position") == "2 MT")
+    normal_pos_count = sum(1 for i in all_items if i.get("position") == "Lô thường")
+    garden_view_count = sum(1 for i in all_items if i.get("view") == "Garden")
+    rice_view_count = sum(1 for i in all_items if i.get("view") == "Lúa")
+    clubhouse_count = sum(1 for i in all_items if i.get("amenity") == "Clubhouse")
+    park_count = sum(1 for i in all_items if i.get("amenity") == "Công viên cảnh quan")
 
     # Generate Map Hotspots
     map_hotspots_html = []
@@ -100,6 +109,7 @@ def update_listing():
         price_bil = item.get("price_billion", "")
         price_str = item.get("price_str", "")
         house_vat_bil = item.get("house_price_vat_billion")
+        land_price_bil = item.get("land_price_billion")
         phase = item.get("phase", "GĐ1")
         status_type = item.get("status_type", "available")
         status_text = item.get("status", "Còn hàng")
@@ -108,7 +118,9 @@ def update_listing():
         reserved_class = "pin-reserved" if status_type == "reserved" else ""
 
         house_row_tooltip = ""
-        if house_vat_bil:
+        if cat_slug == "dien-an":
+            house_row_tooltip = f'<div style="font-size:0.75rem; color:#bae6fd; margin-top:3px;"><i class="fa-solid fa-hotel"></i> Cả Đất & Nhà 30P (Tiền đất: {land_price_bil})</div>'
+        elif house_vat_bil and cat_slug != "dien-san" and cat_slug != "biet-phu-dien-trang":
             house_row_tooltip = f'<div style="font-size:0.75rem; color:#fca5a5; margin-top:3px;"><i class="fa-solid fa-house-chimney"></i> Cả nhà: <strong>{house_vat_bil}</strong> (gồm VAT)</div>'
         elif phase == "GĐ2":
             house_row_tooltip = '<div style="font-size:0.75rem; color:#fde68a; margin-top:3px;">Chờ công bố bảng giá GĐ2</div>'
@@ -175,6 +187,9 @@ def update_listing():
         price_str = item.get("price_str", "")
         price_bil = item.get("price_billion", "")
         house_vat_bil = item.get("house_price_vat_billion")
+        land_price_bil = item.get("land_price_billion")
+        land_price_str = item.get("land_price_str")
+        land_unit_price_mil = item.get("land_unit_price_million")
         phase = item.get("phase", "GĐ1")
         status_type = item.get("status_type", "available")
         status_text = item.get("status", "Còn hàng")
@@ -253,8 +268,8 @@ def update_listing():
             """
         elif cat_slug == "dien-an":
             tag_bg = "#b91c1c" if code == "A15" else "#0284c7"
-            tag_text = f"ĐƠN GIÁ THẤP NHẤT: {unit_price_mil}" if code == "A15" else f"ĐƠN GIÁ ĐẤT: {unit_price_mil}"
-            note_badge = '<span class="price-note-badge" style="background: #fef2f2; color: #b91c1c; border-color: #fca5a5; font-weight: 700;">Sau ưu đãi ~8,17 Tr/m²</span>' if code == "A15" else f'<span class="price-note-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Đất chỉ {unit_price_mil}</span>'
+            tag_text = f"ĐẤT THẤP NHẤT: {land_unit_price_mil}" if code == "A15" else f"ĐƠN GIÁ ĐẤT: {land_unit_price_mil}"
+            note_badge = '<span class="price-note-badge" style="background: #fef2f2; color: #b91c1c; border-color: #fca5a5; font-weight: 700;">Sau ưu đãi ~8,17 Tr/m²</span>' if code == "A15" else f'<span class="price-note-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Đất chỉ {land_unit_price_mil}</span>'
             price_block_html = f"""
             <div class="card-price-section" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.05) 0%, rgba(201, 169, 110, 0.08) 100%); border: 1px solid rgba(2, 132, 199, 0.28);">
               <div class="price-header-row">
@@ -263,30 +278,22 @@ def update_listing():
               </div>
               <div class="price-main-row">
                 <div class="price-display">
-                  <span class="price-billion" style="color: #0c4a6e;">{price_bil}</span>
-                  <span class="price-exact" style="color: #0369a1;">(Tiền đất: {price_str})</span>
+                  <span class="price-billion" style="color: #b91c1c;">{price_bil}</span>
+                  <span class="price-exact" style="color: #0369a1;">(Trọn gói Đất &amp; Nhà 30P gồm VAT)</span>
                 </div>
                 {note_badge}
               </div>
               <div class="house-price-row" style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(2, 132, 199, 0.35); display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;">
-                <span style="color: #0f172a;"><i class="fa-solid fa-house-chimney" style="color: #0284c7;"></i> <strong>Tổng Gói Đất & XD:</strong></span>
-                <span style="color: #b91c1c; font-weight: 800; font-size: 1.05rem;">{house_vat_bil} <small style="font-weight: 500; font-size: 0.72rem; color: #64748b;">(gồm VAT)</small></span>
+                <span style="color: #0f172a;"><i class="fa-solid fa-layer-group" style="color: #0284c7;"></i> <strong>Tiền Đất:</strong> {land_price_bil}</span>
+                <span style="color: #0369a1; font-weight: 700; font-size: 0.85rem;"><i class="fa-solid fa-hand-holding-dollar"></i> Thuê lại 120 Tr/th</span>
               </div>
             </div>
             """
         else:
-            house_price_addon = ""
-            if house_vat_bil:
-                house_price_addon = f"""
-                <div class="house-price-row" style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(201, 169, 110, 0.3); display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
-                  <span style="color: #556b60;"><i class="fa-solid fa-house-chimney"></i> <strong>Gói Cả Nhà (gồm XD):</strong></span>
-                  <span style="color: #b91c1c; font-weight: 700; font-size: 0.95rem;">{house_vat_bil} <small style="font-weight: 500; font-size: 0.74rem; color: #777;">(gồm VAT)</small></span>
-                </div>
-                """
             price_block_html = f"""
             <div class="card-price-section">
               <div class="price-header-row">
-                <span class="price-type-tag">GIÁ ĐẤT NIÊM YẾT</span>
+                <span class="price-type-tag">GIÁ ĐẤT NIÊM YẾT (CHỈ BÁN ĐẤT)</span>
                 <span class="unit-price-tag">Đơn giá: <strong>{unit_price_mil}</strong></span>
               </div>
               <div class="price-main-row">
@@ -296,7 +303,6 @@ def update_listing():
                 </div>
                 <span class="price-note-badge">Trước CSBH</span>
               </div>
-              {house_price_addon}
             </div>
             """
 
@@ -470,6 +476,8 @@ def update_listing():
         price_str = item.get("price_str", "")
         price_bil = item.get("price_billion", "")
         house_vat_bil = item.get("house_price_vat_billion")
+        land_price_bil = item.get("land_price_billion")
+        land_unit_price_mil = item.get("land_unit_price_million")
         phase = item.get("phase", "GĐ1")
         status_type = item.get("status_type", "available")
         status_text = item.get("status", "Còn hàng")
@@ -485,18 +493,17 @@ def update_listing():
         elif cat_slug == "dien-an":
             table_price_cell = f"""
             <div style="line-height: 1.35;">
-              <div><strong class="price-bil-text" style="color:#0c4a6e;">Đất: {price_bil}</strong> <span style="font-size:0.75rem; color:#0284c7; font-weight:700;">({unit_price_mil})</span></div>
-              <span class="price-full-sub">{price_str}</span>
-              <span style="display:block; font-size:0.78rem; color:#b91c1c; margin-top:3px; font-weight:700;"><i class="fa-solid fa-hotel"></i> Cả Đất & XD: {house_vat_bil}</span>
+              <div><strong class="price-bil-text" style="color:#b91c1c;">{price_bil}</strong> <span style="font-size:0.75rem; color:#64748b; font-weight:600;">(Đất + Nhà 30P)</span></div>
+              <span class="price-full-sub">Tiền đất: {land_price_bil} ({land_unit_price_mil})</span>
+              <span style="display:block; font-size:0.78rem; color:#0369a1; margin-top:3px; font-weight:700;"><i class="fa-solid fa-hand-holding-dollar"></i> Thuê lại 120 Tr/th</span>
             </div>
             """
             table_status_cell = f'<span class="table-status-pill {status_class}">{status_text}</span>'
         else:
-            table_house_sub = f'<span style="display:block; font-size:0.75rem; color:#b91c1c; margin-top:2px; font-weight:600;"><i class="fa-solid fa-house-chimney"></i> Cả nhà: {house_vat_bil}</span>' if house_vat_bil else ""
             table_price_cell = f"""
             <strong class="price-bil-text">{price_bil}</strong>
             <span class="price-full-sub">{price_str}</span>
-            {table_house_sub}
+            <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             """
             table_status_cell = f'<span class="table-status-pill {status_class}">{status_text}</span>'
 
@@ -572,8 +579,8 @@ def update_listing():
   <meta charset="utf-8"/>
   <base href="/">
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 | Saigon Farm Resort</title>
-  <meta content="Bản đồ mặt bằng tương tác và giỏ hàng 36 sản phẩm mở bán Đợt 1 tại Saigon Farm Resort: Biệt Phủ Điền Trang, Điền Sản và Điền An. Xem vị trí thực địa, đơn giá và giá niêm yết gốc (Original Price Listing) trực tiếp từ Đơn vị Phát triển MDS Land." name="description"/>
+  <title>Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 (21 Sản Phẩm) | Saigon Farm Resort</title>
+  <meta content="Bản đồ mặt bằng tương tác và giỏ hàng 21 sản phẩm mở bán Đợt 1 tại Saigon Farm Resort: 11 Điền Sản (chỉ bán đất), 4 Điền An (có nhà 30 phòng), 6 Biệt Phủ (chỉ bán đất). Bảng giá niêm yết gốc trực tiếp từ Đơn vị Phát triển MDS Land." name="description"/>
   <meta name="keywords" content="mặt bằng saigon farm resort, sơ đồ phân lô saigon farm resort, giỏ hàng saigon farm resort, bảng giá saigon farm resort, biệt phủ điền trang, điền sản mds living, điền an lưu trú"/>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   <link rel="canonical" href="https://saigonfarmresort.com/giohang">
@@ -582,14 +589,14 @@ def update_listing():
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saigonfarmresort.com/giohang">
-  <meta property="og:title" content="Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 | Saigon Farm Resort">
-  <meta property="og:description" content="36 sản phẩm biệt phủ & điền trang sinh thái ven hồ 100ha. Bản đồ phân lô tương tác và bảng giá niêm yết gốc từ Đơn vị Phát triển MDS Land.">
+  <meta property="og:title" content="Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 (21 Sản Phẩm) | Saigon Farm Resort">
+  <meta property="og:description" content="21 sản phẩm mở bán Đợt 1 (11 Điền Sản, 4 Điền An, 6 Biệt Phủ) ven hồ 100ha. Bản đồ phân lô tương tác và bảng giá niêm yết gốc từ Đơn vị Phát triển MDS Land.">
   <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/masterplan_tmb_sales.webp">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Giỏ Hàng & Mặt Bằng Phân Lô Tương Tác | Saigon Farm Resort">
-  <meta name="twitter:description" content="36 sản phẩm biệt phủ & điền trang sinh thái ven hồ 100ha.">
+  <meta name="twitter:description" content="21 sản phẩm mở bán Đợt 1 (11 Điền Sản, 4 Điền An, 6 Biệt Phủ) ven hồ 100ha.">
   <meta name="twitter:image" content="https://saigonfarmresort.com/assets/Index_asset/masterplan_tmb_sales.webp">
 
   <!-- Fonts & Icons -->
@@ -3547,7 +3554,7 @@ def update_listing():
         </div>
         <h1 class="hero-title">BẢNG HÀNG & GIỎ HÀNG MỞ BÁN ĐỢT 1</h1>
         <p class="hero-sub">
-          Cập nhật thông tin chi tiết mã căn, diện tích, vị trí, hướng, view, đơn giá, giá đất và trọn gói cả nhà (gồm xây dựng) của 36 sản phẩm nghỉ dưỡng ven hồ 100ha tại Saigon Farm Resort.
+          Cập nhật thông tin chi tiết mã căn, diện tích, vị trí, hướng, view, đơn giá và bảng giá niêm yết gốc của <strong>21 sản phẩm mở bán Đợt 1</strong> (11 Điền Sản, 4 Điền An, 6 Biệt Phủ) tại Saigon Farm Resort.
         </p>
       </div>
 
@@ -3555,12 +3562,12 @@ def update_listing():
       <div class="notice-original-price">
         <i class="fa-solid fa-circle-exclamation notice-icon"></i>
         <div class="notice-text">
-          <strong>LƯU Ý VỀ BẢNG GIÁ VÀ PHƯƠNG ÁN CÓ NHÀ (ORIGINAL PRICE LISTING):</strong>
-          <p>Bảng giá dưới đây cập nhật phương án <strong>Giá Đất Niêm Yết</strong> và <strong>Phương Án Cả Nhà (Trọn Gói Xây Dựng gồm VAT)</strong> trực tiếp từ Đơn vị Phát triển MDS Land. Khách hàng giao dịch sẽ được áp dụng các chính sách ưu đãi đặc quyền:</p>
+          <strong>LƯU Ý VỀ BẢNG GIÁ MỞ BÁN ĐỢT 1 (BẢN V3):</strong>
+          <p>Bảng giá dưới đây cập nhật chính sách <strong>Giá Đất Niêm Yết</strong> (Điền Sản & Biệt Phủ chỉ bán đất) và <strong>Trọn Gói Cả Nhà (gồm XD 30 phòng & VAT)</strong> đối với Điền An trực tiếp từ Đơn vị Phát triển MDS Land:</p>
           <ul>
-            <li><strong>Điền Sản (13 sản phẩm):</strong> Dòng sản phẩm tự xây linh hoạt. 4 phương án thanh toán: PA1 (Giảm 200M) · PA2 (Giảm 600M) · PA3 (Giảm 800M) · PA4 (Giảm 1 Tỷ). Miễn phí quản lý MDS Living 24 tháng và gói ủy thác lưu trú hằng quý.</li>
-            <li><strong>Điền An (5 sản phẩm):</strong> Quy mô chuẩn 30 phòng lưu trú. MDS Living triển khai chương trình thuê lại cam kết <strong>120 Tr/tháng (1,44 Tỷ/năm)</strong> (đơn giá 4 Tr/phòng/tháng, thanh toán theo quý). Tiến độ thanh toán đất 4 đợt và xây dựng 4 đợt.</li>
-            <li><strong>Biệt Phủ Điền Trang (18 dinh thự):</strong> Khách hàng lựa chọn 4 phương án thanh toán đất (ưu đãi 200M – 1 Tỷ) và tiến độ xây dựng 5 đợt (30% - 15% - 20% - 20% - 15%). MDS Living đồng hành khai thác chia sẻ doanh thu hoặc ủy thác vận hành an nhàn (360 Tr – 600 Tr/năm).</li>
+            <li><strong>Điền Sản (11 sản phẩm, chỉ bán đất):</strong> Dòng sản phẩm đất tự xây linh hoạt (DT từ 828 m² đến 1.299 m², giá từ 10,58 Tỷ đến 15,65 Tỷ). 4 phương án thanh toán: PA1 (Giảm 200M) · PA2 (Giảm 600M) · PA3 (Giảm 800M) · PA4 (Giảm 1 Tỷ). Miễn phí quản lý MDS Living 24 tháng.</li>
+            <li><strong>Điền An (4 sản phẩm, có nhà 30 phòng):</strong> Quy mô khuôn viên từ 1.045 m² đến 1.275 m², hoàn thiện trọn gói 30 phòng lưu trú (giá từ 17,60 Tỷ đến 22,84 Tỷ gồm VAT). MDS Living cam kết thuê lại <strong>120 Tr/tháng (1,44 Tỷ/năm)</strong>.</li>
+            <li><strong>Biệt Phủ Điền Trang (6 sản phẩm, chỉ bán đất):</strong> Dinh thự khuôn viên bề thế từ 544 m² đến 966 m² (giá đất từ 7,96 Tỷ đến 12,89 Tỷ). Áp dụng 4 phương án thanh toán linh hoạt và gói quản lý dịch vụ MDS Living chuẩn 5 sao.</li>
             <li><strong>Bộ Đặc Quyền Chung:</strong> Miễn phí quản lý vận hành MDS Living 24 tháng · Dịch vụ Quản gia & Nông sản Organic 24 tháng · Ưu đãi kiến tạo không gian sống trị giá đến 800.000.000 đ.</li>
           </ul>
         </div>
@@ -3824,16 +3831,16 @@ def update_listing():
           <!-- Dãy -->
           <select id="filterBlock" class="select-filter" onchange="applyFilters()">
             <option value="all">Tất cả Dãy (A & B)</option>
-            <option value="a">Dãy A (18 căn)</option>
-            <option value="b">Dãy B (18 căn)</option>
+            <option value="a">Dãy A ({block_a_count} sản phẩm)</option>
+            <option value="b">Dãy B ({block_b_count} sản phẩm)</option>
           </select>
 
           <!-- Vị trí -->
           <select id="filterPos" class="select-filter" onchange="applyFilters()">
             <option value="all">Tất cả Vị Trí</option>
-            <option value="Lô góc">Lô Góc (6 căn)</option>
-            <option value="2 MT">2 Mặt Tiền (1 căn)</option>
-            <option value="Lô thường">Lô Thường (27 căn)</option>
+            <option value="Lô góc">Lô Góc ({corner_count} sản phẩm)</option>
+            <option value="2 MT">2 Mặt Tiền ({front2_count} sản phẩm)</option>
+            <option value="Lô thường">Lô Thường ({normal_pos_count} sản phẩm)</option>
           </select>
 
           <!-- Hướng -->
@@ -3848,16 +3855,16 @@ def update_listing():
           <!-- View -->
           <select id="filterView" class="select-filter" onchange="applyFilters()">
             <option value="all">Tất cả Cảnh Quan</option>
-            <option value="Garden">View Garden (28 căn)</option>
-            <option value="Lúa">View Đồng Lúa (6 căn)</option>
+            <option value="Garden">View Garden ({garden_view_count} sản phẩm)</option>
+            <option value="Lúa">View Đồng Lúa ({rice_view_count} sản phẩm)</option>
           </select>
 
           <!-- Tiện ích -->
           <select id="filterAmenity" class="select-filter" onchange="applyFilters()">
             <option value="all">Tất cả Tiện Ích</option>
-            <option value="Clubhouse">Kề Clubhouse (5 căn)</option>
-            <option value="Công viên cảnh quan">Kề Công Viên (2 căn)</option>
-            <option value="Bình thường">Tiện ích nội khu</option>
+            <option value="Clubhouse">Kề Clubhouse ({clubhouse_count} sản phẩm)</option>
+            <option value="Công viên cảnh quan">Kề Công Viên ({park_count} sản phẩm)</option>
+            <option value="Bình thường">Tiện ích sinh thái</option>
           </select>
 
           <!-- Trạng thái -->
@@ -4049,10 +4056,10 @@ def update_listing():
       <div class="footer-col">
         <h4>Bộ Sưu Tập Sản Phẩm</h4>
         <ul>
-          <li><a href="/biet-phu-dien-trang">Biệt Phủ Điền Trang (16 Căn)</a></li>
-          <li><a href="/dien-san">Điền Sản - Founders (11 Căn)</a></li>
-          <li><a href="/dien-an">Điền An - Haven (7 Cụm)</a></li>
-          <li><a href="/giohang">Giỏ Hàng & Bảng Giá Mở Bán</a></li>
+          <li><a href="/biet-phu-dien-trang">Biệt Phủ Điền Trang (6 Căn Mở Bán Đợt 1)</a></li>
+          <li><a href="/dien-san">Điền Sản (11 Căn Mở Bán Đợt 1)</a></li>
+          <li><a href="/dien-an">Điền An (4 Cụm Mở Bán Đợt 1)</a></li>
+          <li><a href="/giohang">Giỏ Hàng Mở Bán Đợt 1 (21 Sản Phẩm)</a></li>
         </ul>
       </div>
       <div class="footer-col">
