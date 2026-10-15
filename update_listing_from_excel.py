@@ -6,6 +6,7 @@ listing/20261013_SFR_PA GIÁ_ có nhà_V3.xlsx
 """
 
 import json
+import os
 import datetime
 import openpyxl
 
@@ -309,12 +310,16 @@ def main():
             features = "KHUÔN VIÊN GẦN 950 M² VIEW ĐỒNG LÚA. Thế đất vuông vức bề thế, hướng Đông Bắc đón gió lành, liền kề dải cảnh quan sinh thái và trục nội bộ yên tĩnh."
             suitable_for = "Gia đình đa thế hệ ưu tiên không gian sống biệt lập, diện tích lớn để thiết kế cảnh quan vườn và hồ bơi khoáng muối riêng biệt."
             amenity = "Bình thường"
-            image = "assets/Index_asset/villa_gallery/sunrise_1_ext_3.jpg"
         else:
             features = old_it.get('features', '')
             suitable_for = old_it.get('suitable_for', '')
             amenity = old_it.get('amenity', 'Bình thường')
             image = old_it.get('image', 'assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg')
+
+        # Assign lot position photo as thumbnail for quick sales identification
+        lot_img_path = f"assets/Index_asset/listing_lots/{code}.webp"
+        if os.path.exists(lot_img_path):
+            image = lot_img_path
 
         map_x, map_y = LOT_COORDINATES.get(code, (50.0, 50.0))
 
