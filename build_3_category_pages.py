@@ -187,16 +187,13 @@ def render_page(cat, all_cats):
             """
         
         code_val = item.get('code', '')
-        img_webp = f"/assets/Index_asset/listing_lots/{code_val}.webp"
-        img_jpg = f"/assets/Index_asset/listing_lots/{code_val}.jpg"
+        img_thumb_webp = f"/assets/Index_asset/listing_lots/thumb/{code_val}.webp"
+        img_thumb_jpg = f"/assets/Index_asset/listing_lots/thumb/{code_val}.jpg"
 
         cards_html += f"""
         <div class="listing-card" data-area="{item['area']}" data-status="{item['status_type']}">
           <div class="card-thumb-wrap">
-            <picture>
-              <source srcset="{img_webp}?v=3" type="image/webp">
-              <img src="{img_jpg}?v=3" alt="Bảng giá & Vị trí Lô {code_val}" loading="lazy" class="card-thumb" onerror="this.onerror=null; this.src='{img_webp}?v=3'">
-            </picture>
+            <img src="{img_thumb_webp}?v=4" alt="Bảng giá & Vị trí Lô {code_val}" loading="lazy" decoding="async" class="card-thumb" onerror="this.onerror=null; this.src='{img_thumb_jpg}?v=4'">
             <span class="card-badge-code">LÔ {code_val}</span>
             <span class="card-badge-status {status_badge_class}">
               <i class="fa-solid {status_icon}"></i> {item['status']}

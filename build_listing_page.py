@@ -329,8 +329,8 @@ def update_listing():
             </div>
             """
 
-        img_webp = f"/assets/Index_asset/listing_lots/{code}.webp"
-        img_jpg = f"/assets/Index_asset/listing_lots/{code}.jpg"
+        img_thumb_webp = f"/assets/Index_asset/listing_lots/thumb/{code}.webp"
+        img_thumb_jpg = f"/assets/Index_asset/listing_lots/thumb/{code}.jpg"
 
         card = f"""
         <div class="listing-card"
@@ -352,14 +352,12 @@ def update_listing():
              onmouseenter="highlightHotspot('{code.lower()}')"
              onmouseleave="unhighlightHotspot('{code.lower()}')">
           <div class="card-thumb-wrap">
-            <picture>
-              <source srcset="{img_webp}?v=3" type="image/webp">
-              <img src="{img_jpg}?v=3" 
-                   alt="Bảng giá & Vị trí Mã căn {code} - {cat_title}" 
-                   loading="lazy" 
-                   class="card-thumb" 
-                   onerror="this.onerror=null; this.src='{img_webp}?v=3'">
-            </picture>
+            <img src="{img_thumb_webp}?v=4" 
+                 alt="Bảng giá & Vị trí Mã căn {code} - {cat_title}" 
+                 loading="lazy" 
+                 decoding="async"
+                 class="card-thumb" 
+                 onerror="this.onerror=null; this.src='{img_thumb_jpg}?v=4'">
             <span class="card-badge-code">MÃ {code}</span>
             <span class="card-badge-cat">{cat_title}</span>
             <span class="card-badge-status {status_class}">
@@ -3680,10 +3678,11 @@ def update_listing():
         <div class="map-viewport" id="mapViewport">
           <div class="map-canvas" id="mapCanvas">
             <div class="map-stage" id="mapStage">
-              <img src="/assets/Index_asset/masterplan_tmb_sales.webp" 
+              <img src="/assets/Index_asset/masterplan_tmb_sales.webp?v=4" 
                    alt="Sơ đồ phân lô tổng mặt bằng Saigon Farm Resort" 
                    class="map-image"
-                   id="masterPlanImg">
+                   id="masterPlanImg"
+                   decoding="async">
               
               <!-- Interactive Pins -->
               {map_hotspots_rendered}
