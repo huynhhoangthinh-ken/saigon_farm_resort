@@ -183,6 +183,17 @@
       border-color: var(--gold);
     }
 
+    .btn-nav-back {
+      background: rgba(24, 48, 36, 0.08);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-nav-back:hover {
+      background: rgba(24, 48, 36, 0.15);
+      border-color: var(--primary);
+    }
+
     .btn-nav-gold {
       background: var(--gold-gradient);
       color: #1a1a1a;
@@ -1567,10 +1578,363 @@
       margin-bottom: 40px;
     }
 
+    /* Mobile Responsive Master Overhaul (Top to Bottom) */
+    .mobile-bottom-dock {
+      display: none;
+    }
+
     @media (max-width: 768px) {
+      body {
+        padding-bottom: 75px !important;
+      }
+      .container {
+        padding: 0 12px !important;
+      }
+
+      /* TOP: Header Navigation */
+      .unit-header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+      }
+      .nav-inner {
+        height: 54px !important;
+      }
+      .nav-brand {
+        gap: 8px !important;
+      }
+      .nav-brand img {
+        height: 32px !important;
+      }
+      .nav-brand-name {
+        font-size: 0.96rem !important;
+        white-space: nowrap !important;
+      }
+      .nav-brand-sub {
+        display: none !important;
+      }
+      .nav-actions {
+        gap: 6px !important;
+      }
+      .btn-nav {
+        padding: 6px 10px !important;
+        font-size: 0.78rem !important;
+        gap: 4px !important;
+        border-radius: 6px !important;
+      }
+
+      /* TOP: Breadcrumb & Share Bar */
+      .breadcrumb-bar {
+        padding: 10px 0 6px !important;
+        font-size: 0.76rem !important;
+        white-space: nowrap !important;
+        overflow-x: auto !important;
+        scrollbar-width: none;
+      }
+      .breadcrumb-bar::-webkit-scrollbar {
+        display: none;
+      }
+      .share-bar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 10px 12px !important;
+        gap: 8px !important;
+        margin-bottom: 14px !important;
+        border-radius: 8px !important;
+      }
+      .share-bar-left {
+        gap: 8px !important;
+      }
+      .share-bar-icon {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        font-size: 0.85rem !important;
+      }
+      .share-bar-title {
+        font-size: 0.8rem !important;
+        font-weight: 700 !important;
+        line-height: 1.3 !important;
+      }
+      .share-bar-sub {
+        display: none !important;
+      }
+      .share-bar-right {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        width: 100% !important;
+      }
+      .share-bar-url-wrap {
+        flex: 1 !important;
+        padding: 6px 10px !important;
+        font-size: 0.78rem !important;
+      }
+      .btn-copy-gold {
+        padding: 6px 12px !important;
+        font-size: 0.78rem !important;
+        flex-shrink: 0 !important;
+      }
+
+      /* HERO: Gallery & Title & Price Box */
+      .hero-gallery-main {
+        height: 240px !important;
+      }
+      .badge-hero-code {
+        top: 10px !important;
+        left: 10px !important;
+        padding: 4px 10px !important;
+        font-size: 0.78rem !important;
+      }
+      .badge-hero-cat {
+        padding: 4px 10px !important;
+        font-size: 0.74rem !important;
+      }
+      .badge-hero-status {
+        padding: 4px 10px !important;
+        font-size: 0.74rem !important;
+      }
+      .hero-gallery-thumbs {
+        padding: 8px 10px !important;
+        gap: 8px !important;
+      }
+      .thumb-item {
+        width: 72px !important;
+        height: 48px !important;
+      }
+      .hero-info-content {
+        padding: 14px 12px 18px !important;
+      }
+      .unit-title-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+      }
+      .unit-main-heading {
+        font-size: 1.45rem !important;
+        line-height: 1.25 !important;
+      }
+      .unit-sub-heading {
+        font-size: 0.88rem !important;
+        margin-top: 2px !important;
+      }
+      .unit-price-hero-box {
+        width: 100% !important;
+        min-width: 0 !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+        padding: 12px 14px !important;
+        border-radius: 8px !important;
+        margin-top: 4px !important;
+      }
+      .uph-billion {
+        font-size: 1.6rem !important;
+      }
+      .specs-matrix {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        padding: 12px 10px !important;
+        margin: 14px 0 !important;
+      }
+      .spec-cell-label {
+        font-size: 0.68rem !important;
+        margin-bottom: 2px !important;
+      }
+      .spec-cell-val {
+        font-size: 0.92rem !important;
+      }
+      .spec-cell-val.highlight {
+        font-size: 1.15rem !important;
+      }
+
+      /* HIGHLIGHTS */
+      .highlights-section {
+        margin: 20px 0 !important;
+      }
+      .sec-title {
+        font-size: 1.3rem !important;
+      }
+      .highlights-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+      .hl-card {
+        padding: 12px 14px !important;
+        gap: 10px !important;
+      }
+      .hl-icon {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        font-size: 1rem !important;
+      }
+      .hl-title {
+        font-size: 0.92rem !important;
+      }
+      .hl-desc {
+        font-size: 0.82rem !important;
+      }
+
+      /* ARCHITECTURE */
+      .arch-body {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+
+      /* CALCULATOR & TABLES */
+      .calculator-section {
+        padding: 16px 12px !important;
+        margin: 20px 0 !important;
+        border-radius: 12px !important;
+      }
+      .calc-header {
+        margin-bottom: 16px !important;
+      }
+      .calc-header h2 {
+        font-size: 1.35rem !important;
+      }
+      .calc-header p {
+        font-size: 0.82rem !important;
+      }
+      .construction-bonus-card {
+        padding: 14px 12px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        margin-bottom: 16px !important;
+      }
+      .scheme-tabs {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin-bottom: 16px !important;
+      }
+      .financial-summary-card {
+        padding: 14px 12px !important;
+        margin-bottom: 16px !important;
+      }
+      .fsc-detail-row {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
+      }
+      .fsc-total-box {
+        padding: 12px 14px !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 4px !important;
+      }
+      .fsc-total-val {
+        font-size: 1.45rem !important;
+      }
+      .fsc-savings-badge {
+        font-size: 0.8rem !important;
+        padding: 8px 10px !important;
+      }
+      .installment-table-wrap {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        border-radius: 8px !important;
+      }
+      .table-toolbar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+      }
+      .table-toolbar > div:last-child {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 8px !important;
+      }
+      .btn-action-tool {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 10px !important;
+        font-size: 0.82rem !important;
+      }
+
+      /* BOTTOM: Right column & Sticky card */
+      .unit-main-layout {
+        margin-bottom: 24px !important;
+      }
+      .sticky-card {
+        padding: 16px 14px !important;
+        border-radius: 12px !important;
+      }
+      .sc-title {
+        font-size: 1.25rem !important;
+      }
+      .sc-cta-stack {
+        flex-direction: column !important;
+        gap: 8px !important;
+      }
+      .btn-cta-full {
+        padding: 12px 16px !important;
+        font-size: 0.9rem !important;
+      }
+      .inquiry-form-card {
+        padding: 16px 14px !important;
+      }
+
+      /* BOTTOM: Footer */
+      .unit-footer {
+        margin-top: 24px !important;
+        padding: 24px 0 95px !important; /* Space for fixed bottom dock */
+      }
       .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-bottom: 20px !important;
+      }
+      .footer-brand h4 {
+        font-size: 1.15rem !important;
+      }
+      .footer-brand p {
+        font-size: 0.8rem !important;
+      }
+      .footer-col h5 {
+        font-size: 0.86rem !important;
+        margin-bottom: 8px !important;
+      }
+      .footer-links li {
+        font-size: 0.8rem !important;
+      }
+
+      /* BOTTOM: Fixed Mobile Action Dock */
+      .mobile-bottom-dock {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(15, 31, 23, 0.98);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        padding: 8px 12px;
+        gap: 8px;
+        z-index: 9999;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+        border-top: 1px solid rgba(201,169,110,0.4);
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+      }
+      .dock-btn {
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 11px 8px;
+        border-radius: 8px;
+        font-size: 0.84rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .dock-btn-call {
+        background: linear-gradient(135deg, #c9a96e, #a88448);
+        color: #183024;
+      }
+      .dock-btn-zalo {
+        background: #0068FF;
+        color: #ffffff;
       }
     }
 
@@ -1649,7 +2013,7 @@
   <!-- Header Nav -->
   <header class="unit-header">
     <div class="container nav-inner">
-      <a href="/" class="nav-brand" title="Trang chủ Saigon Farm Resort">
+      <a href="/giohang" class="nav-brand" title="Giỏ Hàng Saigon Farm Resort">
         <img src="/assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo">
         <div class="nav-brand-title">
           <span class="nav-brand-name">Saigon Farm Resort</span>
@@ -1657,11 +2021,11 @@
         </div>
       </a>
       <div class="nav-actions">
+        <a href="/giohang" class="btn-nav btn-nav-back" title="Quay lại giỏ hàng toàn khu">
+          <i class="fa-solid fa-arrow-left"></i> <span class="nav-label-text">Giỏ Hàng</span>
+        </a>
         <button type="button" class="btn-nav btn-nav-gold" onclick="copyShareLink()" title="Sao chép link căn B10">
-          <i class="fa-solid fa-share-nodes"></i> Chia Sẻ Link Căn
-        </button>
-        <button type="button" class="btn-nav btn-nav-outline" onclick="copyScheduleText()" title="Sao chép bảng tính gửi khách">
-          <i class="fa-solid fa-copy"></i> <span class="hide-mobile">Sao Chép</span> Bảng Tính
+          <i class="fa-solid fa-share-nodes"></i> <span class="nav-label-text">Chia Sẻ</span>
         </button>
       </div>
     </div>
@@ -1672,6 +2036,8 @@
     <nav class="breadcrumb-bar" aria-label="Breadcrumb">
       <ol class="breadcrumb-list">
         <li><a href="/"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+        <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
+        <li><a href="/giohang">Giỏ Hàng</a></li>
         <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
         <li><span>Phân Khu Điền Sản</span></li>
         <li class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
@@ -1685,18 +2051,18 @@
         <div class="share-bar-icon">
           <i class="fa-solid fa-link"></i>
         </div>
-        <div>
-          <div style="font-weight: 700;">Liên kết chính thức của Căn B10 dành cho Sales, Khách hàng & Đối tác:</div>
-          <div style="font-size: 0.8rem; opacity: 0.85;">Đường dẫn trực tiếp — Truy cập thông tin chính xác & CSBH:</div>
+        <div class="share-bar-text-group">
+          <div class="share-bar-title">Link trực tiếp Căn B10 (Dành cho Khách hàng & Sales):</div>
+          <div class="share-bar-sub">Thông tin niêm yết chính thức & CSBH chuẩn xác nhất</div>
         </div>
       </div>
-      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <div class="share-bar-right">
         <div class="share-bar-url-wrap">
           <i class="fa-solid fa-globe" style="color: var(--gold);"></i>
           <span id="shortShareUrl">saigonfarmresort.com/b10</span>
         </div>
         <button type="button" class="btn-copy-gold" onclick="copyShareLink()">
-          <i class="fa-solid fa-copy"></i> Sao Chép Link Căn
+          <i class="fa-solid fa-copy"></i> <span>Sao Chép Link</span>
         </button>
       </div>
     </div>
@@ -2459,5 +2825,15 @@
       updatePaymentCalculations();
     });
   </script>
+
+  <!-- Fixed Mobile Bottom Action Dock -->
+  <div class="mobile-bottom-dock">
+    <a href="tel:0909000712" class="dock-btn dock-btn-call">
+      <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
+    </a>
+    <a href="https://zalo.me/0909000712" target="_blank" class="dock-btn dock-btn-zalo">
+      <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Căn B10
+    </a>
+  </div>
 </body>
 </html>
