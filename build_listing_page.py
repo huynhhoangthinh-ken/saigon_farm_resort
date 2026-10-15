@@ -414,7 +414,6 @@ def update_listing():
             <div class="card-share-box" onclick="event.stopPropagation()">
               <div class="csb-header">
                 <span class="csb-label"><i class="fa-solid fa-share-nodes"></i> LINK CHIA SẺ CĂN {code}:</span>
-                <span class="csb-badge-root">Root Domain</span>
               </div>
               <div class="csb-row">
                 <a href="/{code.lower()}" class="csb-url" title="Xem chi tiết căn {code}">saigonfarmresort.com/{code.lower()}</a>

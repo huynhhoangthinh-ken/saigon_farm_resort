@@ -2180,7 +2180,7 @@ def build_unit_page_html(item, all_items):
         </div>
         <div>
           <div style="font-weight: 700;">Liên kết chính thức của Căn {code} dành cho Sales, Khách hàng & Đối tác:</div>
-          <div style="font-size: 0.8rem; opacity: 0.85;">Đường dẫn trực tiếp cấp tên miền gốc (Root Domain) — Truy cập thông tin chính xác & CSBH:</div>
+          <div style="font-size: 0.8rem; opacity: 0.85;">Đường dẫn trực tiếp — Truy cập thông tin chính xác & CSBH:</div>
         </div>
       </div>
       <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
