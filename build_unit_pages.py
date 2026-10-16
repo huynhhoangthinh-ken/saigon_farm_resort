@@ -136,10 +136,10 @@ def build_unit_page_html(item, all_items):
         arch = {
             "name": "Tổ Hợp 30 Phòng Lưu Trú Sinh Thái",
             "tag": "DTXD 850m² · 30 Phòng Khép Kín · Hoàn Thiện Full Nội Thất Chuẩn MDS Living",
-            "layout_img": "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
+            "layout_img": "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp",
             "desc": "Phương án quy hoạch kiến trúc 30 phòng lưu trú sinh thái cao cấp (diện tích sàn 850m²). Tối ưu hóa dòng tiền kinh doanh retreat/chữa lành giữa không gian thiên nhiên, bàn giao hoàn thiện full nội thất theo tiêu chuẩn vận hành MDS Living. Chính sách thuê lại 120 Tr/tháng (30 phòng x 4 Tr/tháng) từ MDS Living mang lại dòng tiền an tâm thụ động.",
             "gallery": [
-                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp",
+                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp",
                 "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp",
                 "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp",
                 "/assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg"
