@@ -1359,8 +1359,11 @@ def render_page(cat, all_cats):
           </div>
         </div>
 
-        <div class="overview-img-wrap">
-          <img src="{cat['default_image']}" alt="{cat['title']}" class="overview-img">
+        <div class="overview-img-wrap" onclick="openLightbox('{cat['default_image']}')" style="cursor: pointer; {'background: #0a1b17;' if cat['slug'] == 'dien-an' else ''}">
+          <img src="{cat['default_image']}" alt="{cat['title']}" class="overview-img" style="{'object-fit: contain; max-height: 520px;' if cat['slug'] == 'dien-an' else ''}">
+          <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.65); color: #fff; font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; backdrop-filter: blur(4px); pointer-events: none; display: flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Nhấp để phóng to chi tiết
+          </div>
         </div>
       </div>
 
