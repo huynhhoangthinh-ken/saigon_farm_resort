@@ -3110,11 +3110,12 @@
         <div class="map-viewport" id="mapViewport">
           <div class="map-canvas" id="mapCanvas">
             <div class="map-stage" id="mapStage">
-              <img src="/assets/Index_asset/masterplan_tmb_sales.webp?v=4" 
+              <img src="/assets/Index_asset/masterplan_tmb_sales.webp?v=5" 
                    alt="Sơ đồ phân lô tổng mặt bằng Saigon Farm Resort" 
                    class="map-image"
                    id="masterPlanImg"
-                   decoding="async">
+                   decoding="async"
+                   onerror="this.onerror=null; this.src='/assets/Index_asset/masterplan_tmb_sales.jpg?v=5';">
               
               <!-- Interactive Pins -->
               
@@ -8843,10 +8844,27 @@
       }
     });
 
-    // Initial fits on load
-    window.addEventListener('load', () => {
-      viewer2D.fitToViewport();
-    });
+    // Initial fits on load, DOM ready, and image ready
+    function initMapViewer() {
+      if (typeof viewer2D !== 'undefined' && viewer2D.fitToViewport) {
+        viewer2D.fitToViewport();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initMapViewer);
+    window.addEventListener('load', initMapViewer);
+    window.addEventListener('resize', initMapViewer);
+
+    const mPlanImg = document.getElementById('masterPlanImg');
+    if (mPlanImg) {
+      if (mPlanImg.complete && mPlanImg.naturalWidth > 0) {
+        setTimeout(initMapViewer, 10);
+      } else {
+        mPlanImg.addEventListener('load', initMapViewer);
+      }
+    }
+    setTimeout(initMapViewer, 100);
+    setTimeout(initMapViewer, 500);
 
     // Bidirectional highlighting between map & list
     function highlightHotspot(code) {
