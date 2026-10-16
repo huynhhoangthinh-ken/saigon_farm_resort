@@ -1228,6 +1228,101 @@
       white-space: nowrap !important;
     }
 
+    /* Scheme Quick Selector Dropdown (Cho Sales & Khách thao tác nhanh) */
+    .scheme-quick-selector-card {
+      background: linear-gradient(135deg, #fbf7ee 0%, #f4ece0 100%);
+      border: 1.5px solid var(--gold);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(201, 169, 110, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sqs-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sqs-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .sqs-title i {
+      color: #936e28;
+      font-size: 1.1rem;
+    }
+
+    .sqs-badge {
+      background: #183024;
+      color: #dfc185;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sqs-custom-select {
+      position: relative;
+      width: 100%;
+    }
+
+    .scheme-dropdown {
+      width: 100%;
+      padding: 13px 44px 13px 16px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: #ffffff;
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease;
+      line-height: 1.4;
+    }
+
+    .scheme-dropdown:focus {
+      border-color: #936e28;
+      box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.3);
+    }
+
+    .sqs-select-arrow {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: #936e28;
+      font-size: 1rem;
+    }
+
+    .sqs-help-note {
+      font-size: 0.8rem;
+      color: #7b5921;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     /* Table Toolbar */
     .table-toolbar {
       display: flex;
@@ -1238,24 +1333,73 @@
       margin-top: 16px;
     }
 
+    .toolbar-btn-group {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .btn-action-tool {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 18px;
+      padding: 10px 16px;
       border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.88rem;
+      font-weight: 700;
+      font-size: 0.86rem;
       border: 1px solid var(--border);
       background: #ffffff;
       color: var(--primary);
       cursor: pointer;
       transition: all 0.2s ease;
+      text-decoration: none;
     }
 
     .btn-action-tool:hover {
       background: var(--gold-light);
       border-color: var(--gold);
+      color: var(--primary-dark);
+    }
+
+    .btn-print-primary {
+      background: #183024;
+      color: #ffffff;
+      border: 1px solid #183024;
+      box-shadow: 0 2px 6px rgba(24, 48, 36, 0.2);
+    }
+
+    .btn-print-primary:hover {
+      background: #244837;
+      border-color: #244837;
+      color: #dfc185;
+    }
+
+    .btn-print-all {
+      background: #faf4e8;
+      color: #8b621e;
+      border: 1px solid var(--gold);
+    }
+
+    .btn-print-all:hover {
+      background: #f3e6cf;
+      border-color: #8b621e;
+      color: #614413;
+    }
+
+    /* Mobile Bottom Dock Print Button */
+    .dock-btn-print {
+      background: #2e5944;
+      color: #ffffff;
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      cursor: pointer;
+    }
+
+    /* Print Header, Footer & Comparative Container - Hidden on Screen */
+    .print-official-header,
+    .print-official-footer,
+    .all-schemes-print-container {
+      display: none;
     }
 
     /* Right Column: Sticky Booking Card */
@@ -1989,20 +2133,430 @@
       color: #7b8e85;
     }
 
-    /* Print Styles */
+    @page {
+      size: A4 portrait;
+      margin: 8mm 10mm 10mm 10mm;
+    }
+
+    /* Print Styles (Khắc phục triệt để lỗi tràn lề và chữ tràn màn hình) */
     @media print {
-      .unit-header, .share-bar, .sc-cta-stack, .inquiry-form-card, .table-toolbar, .recommendations-section, .unit-footer, .toast-box {
+      /* 1. Ẩn toàn bộ các thành phần web thừa */
+      .unit-header, .share-bar, .breadcrumb-bar, .unit-hero-card, .unit-gallery-card,
+      .sticky-col, .sticky-card, .sc-cta-stack, .inquiry-form-card, .table-toolbar,
+      .recommendations-section, .unit-footer, .toast-box, .mobile-bottom-dock,
+      .scheme-tabs-nav, .scheme-quick-selector-card, .bonus-toggle-card,
+      .fsc-savings-badge, .sqs-help-note {
         display: none !important;
       }
-      body {
-        background: #ffffff;
+
+      /* 2. Thiết lập khổ in A4 tiêu chuẩn */
+      html, body {
+        background: #ffffff !important;
+        color: #111827 !important;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+        font-size: 8.8pt !important;
+        line-height: 1.35 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
+
+      *, *::before, *::after {
+        box-sizing: border-box !important;
+      }
+
+      main.container {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
       .unit-main-layout {
-        grid-template-columns: 1fr;
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
+
       .calculator-section {
-        box-shadow: none;
-        border: 1px solid #ccc;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        width: 100% !important;
+      }
+
+      .calc-header {
+        margin-bottom: 12px !important;
+        border-bottom: 1.5px solid #183024 !important;
+        padding-bottom: 8px !important;
+      }
+
+      .calc-title {
+        font-size: 13pt !important;
+        color: #183024 !important;
+      }
+
+      .calc-sub {
+        font-size: 8pt !important;
+        color: #4b5563 !important;
+      }
+
+      /* Official Print Header */
+      .print-official-header {
+        display: block !important;
+        margin-bottom: 14px !important;
+        border-bottom: 2px solid #183024 !important;
+        padding-bottom: 10px !important;
+      }
+
+      .poh-branding {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        margin-bottom: 10px !important;
+      }
+
+      .poh-logo-group {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+      }
+
+      .poh-logo {
+        height: 38px !important;
+        width: auto !important;
+      }
+
+      .poh-brand-text {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      .poh-brand-title {
+        font-size: 11pt !important;
+        font-weight: 800 !important;
+        color: #183024 !important;
+        letter-spacing: 0.5px !important;
+        text-transform: uppercase !important;
+      }
+
+      .poh-brand-sub {
+        font-size: 7.5pt !important;
+        color: #7b5921 !important;
+        font-weight: 600 !important;
+      }
+
+      .poh-doc-info {
+        text-align: right !important;
+      }
+
+      .poh-doc-type {
+        font-size: 9pt !important;
+        font-weight: 800 !important;
+        color: #b91c1c !important;
+        text-transform: uppercase !important;
+      }
+
+      .poh-doc-date {
+        font-size: 7.5pt !important;
+        color: #64748b !important;
+      }
+
+      .poh-meta-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 4px !important;
+        padding: 8px 12px !important;
+      }
+
+      .poh-meta-item {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      .poh-meta-label {
+        font-size: 6.8pt !important;
+        text-transform: uppercase !important;
+        color: #64748b !important;
+        font-weight: 700 !important;
+      }
+
+      .poh-meta-val {
+        font-size: 8.5pt !important;
+        font-weight: 800 !important;
+        color: #183024 !important;
+      }
+
+      .poh-meta-val.highlight {
+        color: #b91c1c !important;
+      }
+
+      /* Financial Summary Card in Print */
+      .financial-summary-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 4px !important;
+        padding: 10px 14px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .fsc-detail-row {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 8px !important;
+        border-bottom: 1px dashed #cbd5e1 !important;
+      }
+
+      .fsc-label {
+        font-size: 6.8pt !important;
+        color: #64748b !important;
+      }
+
+      .fsc-val {
+        font-size: 9pt !important;
+        font-weight: 800 !important;
+        color: #183024 !important;
+      }
+
+      .fsc-total-box {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }
+
+      .fsc-total-label {
+        font-size: 8pt !important;
+        color: #b91c1c !important;
+      }
+
+      .fsc-total-val {
+        font-size: 12pt !important;
+        color: #b91c1c !important;
+      }
+
+      /* 3. BẢNG TIẾN ĐỘ THANH TOÁN - CHỐNG TRÀN TUYỆT ĐỐI */
+      .installment-table-wrap {
+        overflow: visible !important;
+        border: 1.5px solid #183024 !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        margin-bottom: 12px !important;
+        width: 100% !important;
+      }
+
+      .installment-table {
+        width: 100% !important;
+        min-width: 0 !important; /* QUAN TRỌNG: Gỡ bỏ min-width: 820px gây tràn */
+        table-layout: fixed !important; /* QUAN TRỌNG: Cố định tỷ lệ các cột, chia đều theo % */
+        border-collapse: collapse !important;
+        font-size: 8pt !important;
+      }
+
+      .installment-table th,
+      .installment-table td {
+        border: 1px solid #cbd5e1 !important;
+        padding: 6px 7px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important; /* QUAN TRỌNG: Cho phép xuống dòng tự nhiên, không tràn */
+        min-width: 0 !important; /* Gỡ bỏ min-width inline */
+      }
+
+      .installment-table thead {
+        background: #183024 !important;
+        color: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .installment-table th {
+        background-color: #183024 !important;
+        color: #ffffff !important;
+        font-size: 7.5pt !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.3px !important;
+        text-align: center !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      /* Chia tỷ lệ phần trăm các cột chuẩn xác 100% chiều rộng trang A4 */
+      .col-dot { width: 14% !important; text-align: center !important; }
+      .col-time { width: 22% !important; text-align: left !important; }
+      .col-ratio { width: 13% !important; text-align: center !important; }
+      .col-money { width: 22% !important; text-align: right !important; }
+      .col-desc { width: 29% !important; text-align: left !important; }
+
+      .installment-table td.td-dot {
+        font-weight: 700 !important;
+        color: #183024 !important;
+        text-align: center !important;
+      }
+
+      .installment-table td.td-time {
+        font-size: 7.8pt !important;
+      }
+
+      .installment-table td.td-ratio-cell {
+        text-align: center !important;
+      }
+
+      .installment-table .td-ratio {
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+        padding: 2px 4px !important;
+        border-radius: 3px !important;
+        font-size: 7.2pt !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+      }
+
+      .installment-table td.td-money {
+        font-size: 8.2pt !important;
+        font-weight: 700 !important;
+        color: #b91c1c !important;
+        text-align: right !important;
+        white-space: nowrap !important;
+      }
+
+      .installment-table td.td-desc {
+        font-size: 7.2pt !important;
+        line-height: 1.3 !important;
+      }
+
+      .installment-table tr.total-row td {
+        background: #f8fafc !important;
+        font-weight: 800 !important;
+        border-top: 2px solid #183024 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .installment-table .total-label-cell {
+        font-size: 8pt !important;
+        color: #183024 !important;
+        font-weight: 800 !important;
+      }
+
+      .installment-table .total-money-val {
+        font-size: 9pt !important;
+        color: #b91c1c !important;
+      }
+
+      .installment-table .total-status-cell {
+        font-size: 7.2pt !important;
+        color: #15803d !important;
+      }
+
+      /* Chế độ in 1 phương án vs In so sánh cả 4 phương án */
+      body.printing-all-schemes .single-scheme-content {
+        display: none !important;
+      }
+
+      body.printing-all-schemes .all-schemes-print-container {
+        display: block !important;
+      }
+
+      body.printing-single-scheme .single-scheme-content {
+        display: block !important;
+      }
+
+      body.printing-single-scheme .all-schemes-print-container {
+        display: none !important;
+      }
+
+      /* Thẻ tiến độ khi in cả 4 phương án so sánh */
+      .print-scheme-card {
+        page-break-inside: avoid !important;
+        margin-bottom: 14px !important;
+        border: 1.5px solid #cbd5e1 !important;
+        border-radius: 4px !important;
+        padding: 8px 10px !important;
+        background: #ffffff !important;
+      }
+
+      .print-scheme-card-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 6px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        padding-bottom: 4px !important;
+      }
+
+      .print-scheme-card-title {
+        font-size: 9pt !important;
+        font-weight: 800 !important;
+        color: #183024 !important;
+      }
+
+      .print-scheme-card-price {
+        font-size: 9pt !important;
+        font-weight: 800 !important;
+        color: #b91c1c !important;
+      }
+
+      /* Official Print Footer */
+      .print-official-footer {
+        display: block !important;
+        margin-top: 18px !important;
+        page-break-inside: avoid !important;
+        border-top: 1px dashed #cbd5e1 !important;
+        padding-top: 12px !important;
+      }
+
+      .pof-notes {
+        font-size: 7pt !important;
+        color: #64748b !important;
+        line-height: 1.4 !important;
+        margin-bottom: 16px !important;
+      }
+
+      .pof-signatures {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+        text-align: center !important;
+      }
+
+      .pof-sig-col {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+
+      .pof-sig-title {
+        font-size: 8pt !important;
+        font-weight: 800 !important;
+        color: #183024 !important;
+        text-transform: uppercase !important;
+      }
+
+      .pof-sig-sub {
+        font-size: 7pt !important;
+        color: #64748b !important;
+        margin-bottom: 45px !important;
+      }
+
+      .pof-sig-name {
+        font-size: 7.8pt !important;
+        font-weight: 700 !important;
+        color: #183024 !important;
+        border-top: 1px dotted #94a3b8 !important;
+        padding-top: 4px !important;
+        width: 180px !important;
       }
     }
   </style>
@@ -2237,148 +2791,213 @@
              =================================================================== -->
         
         <section class="calculator-section" id="payment-schedule-section">
-          <div class="calc-header">
-            <span class="sec-badge">Bảng Tính & Tiến Độ Thanh Toán</span>
-            <h2>Phương Thức & Tiến Độ Thanh Toán Căn A23</h2>
-            <p>Hệ thống tự động tính toán chính xác dòng tiền từng đợt theo 4 phương án thanh toán linh hoạt và khấu trừ ưu đãi theo thời gian thực.</p>
-          </div>
-
-          <!-- Construction 800M Bonus Card with Toggle -->
-          <div class="construction-bonus-card">
-            <div class="cbc-left">
-              <div class="cbc-badge">
-                <i class="fa-solid fa-gift"></i> Đặc Quyền Xây Dựng Hoàn Thiện
+          <!-- Official Print Header (Visible ONLY when printing / PDF export) -->
+          <div class="print-official-header">
+            <div class="poh-brand-row">
+              <div class="poh-logo-wrap">
+                <img src="/assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" class="poh-logo">
+                <div>
+                  <div class="poh-brand-title">SAIGON FARM RESORT</div>
+                  <div class="poh-brand-sub">Quần Thể Điền Trang Sinh Thái 100ha · Hồ Suối Giai</div>
+                </div>
               </div>
-              <div class="cbc-title">
-                Ưu Đãi Xây Dựng Hoàn Tất Trước 12/2027: <span>GIẢM NGAY 800 TRIỆU ĐỒNG</span>
-              </div>
-              <div class="cbc-desc">
-                Khách hàng ký cam kết hoàn thành xây dựng điền trang trước tháng 12/2027 được giảm trực tiếp <strong>800.000.000 đ</strong> vào tổng giá trị thanh toán, phân bổ đều vào dòng tiền thực tế.
+              <div class="poh-contact-info">
+                <div>Đơn vị Phát triển: <strong>MDS Land</strong></div>
+                <div>Đơn vị Vận hành: <strong>MDS Living</strong></div>
+                <div>Hotline CSKH: <strong>0906.99.33.68</strong></div>
+                <div>Website: <strong>saigonfarmresort.com</strong></div>
               </div>
             </div>
-            <div class="cbc-toggle-wrap">
-              <label class="toggle-switch">
-                <input type="checkbox" id="bonus800Toggle" checked onchange="updatePaymentCalculations()">
-                <span class="toggle-slider"></span>
-              </label>
-              <label for="bonus800Toggle" class="toggle-label" id="bonusToggleStatus">
-                Đang áp dụng (-800 Tr)
-              </label>
+            <div class="poh-doc-title" id="printDocTitle">
+              PHIẾU TÍNH GIÁ & TIẾN ĐỘ THANH TOÁN
             </div>
-          </div>
-
-          <!-- 4 Scheme Tabs -->
-          <div class="scheme-tabs">
-            <div class="scheme-tab-btn active" id="tabBtn1" onclick="selectScheme(1)">
-              <div class="stb-header">
-                <span class="stb-title">PA 1: Khởi Đầu An Nhàn</span>
-                <span class="stb-badge stb-badge-standard">12 Tháng</span>
-              </div>
-              <div class="stb-sub">Giãn tiến độ 12 tháng thảnh thơi, không áp lực tài chính (Cọc 200M).</div>
-              <div class="stb-discount">
-                <i class="fa-solid fa-gift"></i> <span>Ưu đãi: <strong>-200 Triệu</strong></span>
-              </div>
-            </div>
-
-            <div class="scheme-tab-btn" id="tabBtn2" onclick="selectScheme(2)">
-              <div class="stb-header">
-                <span class="stb-title">PA 2: Chủ Động Tài Chính</span>
-                <span class="stb-badge stb-badge-fast">50% / 50%</span>
-              </div>
-              <div class="stb-sub">Thanh toán 50% trong 10 ngày ký HĐCN QSDĐ, 50% sau 12 tháng nhận sổ.</div>
-              <div class="stb-discount">
-                <i class="fa-solid fa-tag"></i> <span>Ưu đãi: <strong>-600 Triệu</strong></span>
-              </div>
-            </div>
-
-            <div class="scheme-tab-btn" id="tabBtn3" onclick="selectScheme(3)">
-              <div class="stb-header">
-                <span class="stb-title">PA 3: Thanh Toán Ưu Việt</span>
-                <span class="stb-badge stb-badge-fast">70% / 30%</span>
-              </div>
-              <div class="stb-sub">Thanh toán 70% trong 10 ngày ký HĐCN QSDĐ, 30% khi nhận bàn giao GCNQSDĐ.</div>
-              <div class="stb-discount">
-                <i class="fa-solid fa-tag"></i> <span>Ưu đãi: <strong>-800 Triệu</strong></span>
-              </div>
-            </div>
-
-            <div class="scheme-tab-btn" id="tabBtn4" onclick="selectScheme(4)">
-              <div class="stb-header">
-                <span class="stb-title">PA 4: Thanh Toán Tinh Gọn</span>
-                <span class="stb-badge stb-badge-full">100% Sổ Trao Tay</span>
-              </div>
-              <div class="stb-sub">Cọc 500M, thanh toán 100% trong 20 ngày, ký HĐCN QSDĐ sang tên ngay.</div>
-              <div class="stb-discount">
-                <i class="fa-solid fa-crown"></i> <span>Đặc quyền: <strong>-1 TỶ ĐỒNG</strong></span>
-              </div>
+            <div class="poh-lot-summary-grid">
+              <div>Mã sản phẩm: <strong>Căn A23</strong></div>
+              <div>Phân khu: <strong>Biệt Phủ Điền Trang (Dãy A)</strong></div>
+              <div>Diện tích: <strong>543,61 m²</strong></div>
+              <div>Hướng / Vị trí: <strong>Đông Bắc · Lô góc</strong></div>
+              <div>Đơn giá đất: <strong>14,64 Tr/m²</strong></div>
+              <div>Giá gốc niêm yết: <strong>7.960.179.080 đ</strong></div>
+              <div>Pháp lý: <strong>100% Sổ đỏ riêng</strong></div>
+              <div>Ngày lập phiếu: <strong id="printCurrentDate">--/--/----</strong></div>
             </div>
           </div>
 
-          <!-- Financial Summary Card -->
-          <div class="financial-summary-card">
-            <div class="fsc-detail-row">
-              <div class="fsc-item">
-                <span class="fsc-label">Giá Gốc Niêm Yết</span>
-                <span class="fsc-val" id="summaryOriginalPrice">7.960.179.080 đ</span>
+          <!-- Normal Screen Content & Single Scheme Print Container -->
+          <div class="single-scheme-content">
+            <div class="calc-header">
+              <span class="sec-badge">Bảng Tính & Tiến Độ Thanh Toán</span>
+              <h2>Phương Thức & Tiến Độ Thanh Toán Căn A23</h2>
+              <p>Hệ thống tự động tính toán chính xác dòng tiền từng đợt theo 4 phương án thanh toán linh hoạt và khấu trừ ưu đãi theo thời gian thực.</p>
+            </div>
+
+            <!-- Nút xổ (Dropdown Selector) & Chuyển đổi tiến độ trực quan cho Sales & Khách hàng -->
+            <div class="scheme-quick-selector-card">
+              <div class="sqs-header">
+                <div class="sqs-title-group">
+                  <i class="fa-solid fa-calculator" style="color: var(--gold-dark); font-size: 1.25rem;"></i>
+                  <div>
+                    <h4 style="margin: 0; font-size: 1.05rem; color: var(--primary); font-weight: 800;">
+                      Chọn Nhanh Tiến Độ Thanh Toán:
+                    </h4>
+                    <p style="margin: 2px 0 0; font-size: 0.8rem; color: var(--text-muted);">
+                      Chuyển đổi trực tiếp bằng nút xổ hoặc nhấp vào từng thẻ phương án bên dưới
+                    </p>
+                  </div>
+                </div>
+                <div class="sqs-select-box">
+                  <div class="sqs-custom-select">
+                    <select id="schemeSelectDropdown" class="scheme-dropdown" onchange="selectScheme(parseInt(this.value))">
+                      <option value="1">📋 Phương Án 1: Khởi Đầu An Nhàn (Giãn 12 Tháng · Ưu Đãi -200 Triệu)</option>
+                      <option value="2">⚡ Phương Án 2: Chủ Động Tài Chính (50% / 50% · Ưu Đãi -600 Triệu)</option>
+                      <option value="3">💎 Phương Án 3: Thanh Toán Ưu Việt (70% / 30% · Ưu Đãi -800 Triệu)</option>
+                      <option value="4">👑 Phương Án 4: Thanh Toán Tinh Gọn (100% Sổ Trao Tay · Giảm -1 TỶ ĐỒNG)</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down sqs-select-icon"></i>
+                  </div>
+                </div>
               </div>
-              <div class="fsc-item">
-                <span class="fsc-label" id="summarySchemeDiscountLabel">Chiết Khấu Phương Thức</span>
-                <span class="fsc-val discount" id="summarySchemeDiscount">0 đ</span>
+            </div>
+
+            <!-- Construction 800M Bonus Card with Toggle -->
+            <div class="construction-bonus-card">
+              <div class="cbc-left">
+                <div class="cbc-badge">
+                  <i class="fa-solid fa-gift"></i> Đặc Quyền Xây Dựng Hoàn Thiện
+                </div>
+                <div class="cbc-title">
+                  Ưu Đãi Xây Dựng Hoàn Tất Trước 12/2027: <span>GIẢM NGAY 800 TRIỆU ĐỒNG</span>
+                </div>
+                <div class="cbc-desc">
+                  Khách hàng ký cam kết hoàn thành xây dựng điền trang trước tháng 12/2027 được giảm trực tiếp <strong>800.000.000 đ</strong> vào tổng giá trị thanh toán, phân bổ đều vào dòng tiền thực tế.
+                </div>
               </div>
-              <div class="fsc-item">
-                <span class="fsc-label">Ưu Đãi Xây Dựng (12/2027)</span>
-                <span class="fsc-val discount" id="summaryBuildBonus">-800.000.000 đ</span>
+              <div class="cbc-toggle-wrap">
+                <label class="toggle-switch">
+                  <input type="checkbox" id="bonus800Toggle" checked onchange="updatePaymentCalculations()">
+                  <span class="toggle-slider"></span>
+                </label>
+                <label for="bonus800Toggle" class="toggle-label" id="bonusToggleStatus">
+                  Đang áp dụng (-800 Tr)
+                </label>
               </div>
             </div>
 
-            <div class="fsc-total-box">
-              <div class="fsc-total-text">
-                <span class="fsc-total-label">Tổng Giá Thanh Toán Sau Ưu Đãi</span>
-                <span class="fsc-total-sub">Đã áp dụng toàn bộ chiết khấu phương thức & ưu đãi xây dựng</span>
+            <!-- 4 Scheme Tabs -->
+            <div class="scheme-tabs">
+              <div class="scheme-tab-btn active" id="tabBtn1" onclick="selectScheme(1)">
+                <div class="stb-header">
+                  <span class="stb-title">PA 1: Khởi Đầu An Nhàn</span>
+                  <span class="stb-badge stb-badge-standard">12 Tháng</span>
+                </div>
+                <div class="stb-sub">Giãn tiến độ 12 tháng thảnh thơi, không áp lực tài chính (Cọc 200M).</div>
+                <div class="stb-discount">
+                  <i class="fa-solid fa-gift"></i> <span>Ưu đãi: <strong>-200 Triệu</strong></span>
+                </div>
               </div>
-              <div class="fsc-total-val" id="summaryFinalPrice">0 đ</div>
+
+              <div class="scheme-tab-btn" id="tabBtn2" onclick="selectScheme(2)">
+                <div class="stb-header">
+                  <span class="stb-title">PA 2: Chủ Động Tài Chính</span>
+                  <span class="stb-badge stb-badge-fast">50% / 50%</span>
+                </div>
+                <div class="stb-sub">Thanh toán 50% trong 10 ngày ký HĐCN QSDĐ, 50% sau 12 tháng nhận sổ.</div>
+                <div class="stb-discount">
+                  <i class="fa-solid fa-tag"></i> <span>Ưu đãi: <strong>-600 Triệu</strong></span>
+                </div>
+              </div>
+
+              <div class="scheme-tab-btn" id="tabBtn3" onclick="selectScheme(3)">
+                <div class="stb-header">
+                  <span class="stb-title">PA 3: Thanh Toán Ưu Việt</span>
+                  <span class="stb-badge stb-badge-fast">70% / 30%</span>
+                </div>
+                <div class="stb-sub">Thanh toán 70% trong 10 ngày ký HĐCN QSDĐ, 30% khi nhận bàn giao GCNQSDĐ.</div>
+                <div class="stb-discount">
+                  <i class="fa-solid fa-tag"></i> <span>Ưu đãi: <strong>-800 Triệu</strong></span>
+                </div>
+              </div>
+
+              <div class="scheme-tab-btn" id="tabBtn4" onclick="selectScheme(4)">
+                <div class="stb-header">
+                  <span class="stb-title">PA 4: Thanh Toán Tinh Gọn</span>
+                  <span class="stb-badge stb-badge-full">100% Sổ Trao Tay</span>
+                </div>
+                <div class="stb-sub">Cọc 500M, thanh toán 100% trong 20 ngày, ký HĐCN QSDĐ sang tên ngay.</div>
+                <div class="stb-discount">
+                  <i class="fa-solid fa-crown"></i> <span>Đặc quyền: <strong>-1 TỶ ĐỒNG</strong></span>
+                </div>
+              </div>
             </div>
 
-            <div class="fsc-savings-badge" id="summarySavingsBadge">
-              <i class="fa-solid fa-piggy-bank"></i>
-              <span id="summarySavingsText">Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>800 Triệu đồng</strong></span>
-            </div>
-          </div>
+            <!-- Financial Summary Card -->
+            <div class="financial-summary-card">
+              <div class="fsc-detail-row">
+                <div class="fsc-item">
+                  <span class="fsc-label">Giá Gốc Niêm Yết</span>
+                  <span class="fsc-val" id="summaryOriginalPrice">7.960.179.080 đ</span>
+                </div>
+                <div class="fsc-item">
+                  <span class="fsc-label" id="summarySchemeDiscountLabel">Chiết Khấu Phương Thức</span>
+                  <span class="fsc-val discount" id="summarySchemeDiscount">0 đ</span>
+                </div>
+                <div class="fsc-item">
+                  <span class="fsc-label">Ưu Đãi Xây Dựng (12/2027)</span>
+                  <span class="fsc-val discount" id="summaryBuildBonus">-800.000.000 đ</span>
+                </div>
+              </div>
 
-          <!-- Installment Schedule Table -->
-          <div class="installment-table-wrap">
-            <table class="installment-table">
-              <thead>
-                <tr>
-                  <th style="min-width: 120px;">Đợt Thanh Toán</th>
-                  <th style="min-width: 160px;">Thời Gian / Tiến Độ</th>
-                  <th style="min-width: 110px; text-align: center;">Tỷ Lệ (%)</th>
-                  <th style="min-width: 180px; text-align: right;">Số Tiền Thanh Toán (VNĐ)</th>
-                  <th style="min-width: 250px;">Nội Dung & Mốc Pháp Lý</th>
-                </tr>
-              </thead>
-              <tbody id="installmentTableBody">
-                <!-- Dynamically injected via JavaScript -->
-              </tbody>
-            </table>
-          </div>
+              <div class="fsc-total-box">
+                <div class="fsc-total-text">
+                  <span class="fsc-total-label">Tổng Giá Thanh Toán Sau Ưu Đãi</span>
+                  <span class="fsc-total-sub">Đã áp dụng toàn bộ chiết khấu phương thức & ưu đãi xây dựng</span>
+                </div>
+                <div class="fsc-total-val" id="summaryFinalPrice">0 đ</div>
+              </div>
 
-          <!-- Table Toolbar -->
-          <div class="table-toolbar">
-            <div style="font-size: 0.82rem; color: var(--text-muted);">
-              * Số tiền trên đã bao gồm VAT & các ưu đãi tương ứng. Bảng tính có giá trị tham khảo theo chính sách hiện hành.
+              <div class="fsc-savings-badge" id="summarySavingsBadge">
+                <i class="fa-solid fa-piggy-bank"></i>
+                <span id="summarySavingsText">Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>800 Triệu đồng</strong></span>
+              </div>
             </div>
-            <div style="display: flex; gap: 10px;">
-              <button type="button" class="btn-action-tool" onclick="copyScheduleText()">
-                <i class="fa-solid fa-copy"></i> Sao Chép Bảng Tính Gửi Khách
-              </button>
-              <button type="button" class="btn-action-tool" onclick="window.print()">
-                <i class="fa-solid fa-print"></i> In / Tải PDF Bảng Tính
-              </button>
-            </div>
-          </div>
 
-          
+            <!-- Installment Schedule Table -->
+            <div class="installment-table-wrap">
+              <table class="installment-table">
+                <thead>
+                  <tr>
+                    <th>Đợt Thanh Toán</th>
+                    <th>Thời Gian / Tiến Độ</th>
+                    <th style="text-align: center;">Tỷ Lệ (%)</th>
+                    <th style="text-align: right;">Số Tiền Thanh Toán (VNĐ)</th>
+                    <th>Nội Dung & Mốc Pháp Lý</th>
+                  </tr>
+                </thead>
+                <tbody id="installmentTableBody">
+                  <!-- Dynamically injected via JavaScript -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Table Toolbar -->
+            <div class="table-toolbar">
+              <div style="font-size: 0.82rem; color: var(--text-muted);">
+                * Số tiền trên đã bao gồm VAT & các ưu đãi tương ứng. Bảng tính có giá trị tham khảo theo chính sách hiện hành.
+              </div>
+              <div class="toolbar-btn-group">
+                <button type="button" class="btn-action-tool" onclick="copyScheduleText()" title="Sao chép toàn bộ bảng tính gửi khách hàng qua Zalo / Tin nhắn">
+                  <i class="fa-solid fa-copy"></i> Sao Chép Bảng Tính
+                </button>
+                <button type="button" class="btn-action-tool btn-print-primary" onclick="printSingleScheme()" title="In hoặc lưu PDF tiến độ thanh toán phương án đang chọn">
+                  <i class="fa-solid fa-print"></i> In Tiến Độ Đang Chọn (PDF)
+                </button>
+                <button type="button" class="btn-action-tool btn-print-all" onclick="printAllSchemes()" title="In hoặc lưu PDF trọn bộ cả 4 phương án tiến độ để khách hàng cân nhắc và so sánh">
+                  <i class="fa-solid fa-file-invoice-dollar"></i> In Cả 4 Tiến Độ (PDF So Sánh)
+                </button>
+              </div>
+            </div>
+
+            
             <div style="margin-top: 32px; margin-bottom: 24px;">
               <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--primary); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
                 <i class="fa-solid fa-person-digging" style="color: var(--gold-dark);"></i> 2. Tiến Độ Thanh Toán Giá Trị Xây Dựng Biệt Phủ (5,56 Tỷ)
@@ -2388,11 +3007,11 @@
                 <table class="installment-table">
                   <thead>
                     <tr>
-                      <th style="min-width: 120px;">Đợt Thanh Toán</th>
-                      <th style="min-width: 170px;">Thời Gian / Tiến Độ</th>
-                      <th style="min-width: 100px; text-align: center;">Tỷ Lệ (%)</th>
-                      <th style="min-width: 170px; text-align: right;">Số Tiền (VNĐ)</th>
-                      <th style="min-width: 250px;">Tiến Độ & Mốc Công Trình</th>
+                      <th class="col-dot" style="min-width: 120px;">Đợt Thanh Toán</th>
+                      <th class="col-time" style="min-width: 170px;">Thời Gian / Tiến Độ</th>
+                      <th class="col-ratio" style="min-width: 100px; text-align: center;">Tỷ Lệ (%)</th>
+                      <th class="col-money" style="min-width: 170px; text-align: right;">Số Tiền (VNĐ)</th>
+                      <th class="col-desc" style="min-width: 250px;">Tiến Độ & Mốc Công Trình</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -2443,7 +3062,7 @@
             </div>
             
 
-          
+            
         <!-- Chương trình đồng hành khai thác MDS Living -->
         <div style="background: linear-gradient(135deg, rgba(201, 169, 110, 0.08) 0%, rgba(24, 48, 36, 0.04) 100%); border: 1.5px solid rgba(201, 169, 110, 0.4); border-radius: 12px; padding: 22px 24px; margin-top: 28px; margin-bottom: 24px;">
           <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
@@ -2498,7 +3117,31 @@
           </div>
         </div>
         
+          </div>
 
+          <!-- All 4 Schemes Comparison Container (Populated dynamically when printing all 4 schemes) -->
+          <div id="allSchemesPrintContainer" class="all-schemes-print-container">
+            <!-- Dynamically populated by printAllSchemes() -->
+          </div>
+
+          <!-- Official Print Footer (Visible ONLY when printing / PDF export) -->
+          <div class="print-official-footer">
+            <div class="pof-signatures-grid">
+              <div class="pof-sign-col">
+                <strong>ĐẠI DIỆN ĐƠN VỊ PHÁT TRIỂN MDS LAND</strong>
+                <span>(Ký, ghi rõ họ tên & đóng dấu)</span>
+                <div class="pof-sign-space"></div>
+              </div>
+              <div class="pof-sign-col">
+                <strong>XÁC NHẬN CỦA KHÁCH HÀNG</strong>
+                <span>(Ký & ghi rõ họ tên)</span>
+                <div class="pof-sign-space"></div>
+              </div>
+            </div>
+            <div class="pof-legal-notes">
+              * Ghi chú: Bảng tính giá và tiến độ thanh toán được áp dụng theo chính sách bán hàng Đợt 1 Saigon Farm Resort. Dòng tiền thực tế có hiệu lực theo Hợp đồng và phiếu xác nhận thu tiền chính thức từ MDS Land. Quý khách vui lòng liên hệ chuyên viên tư vấn để nhận hướng dẫn thủ tục cọc và công chứng sang tên.
+            </div>
+          </div>
         </section>
         
       </div>
@@ -2629,7 +3272,100 @@
       document.querySelectorAll('.scheme-tab-btn').forEach(btn => btn.classList.remove('active'));
       const activeBtn = document.getElementById('tabBtn' + schemeId);
       if (activeBtn) activeBtn.classList.add('active');
+
+      // Đồng bộ hóa với nút xổ Dropdown
+      const dropdown = document.getElementById('schemeSelectDropdown');
+      if (dropdown && parseInt(dropdown.value) !== schemeId) {
+        dropdown.value = schemeId;
+      }
+
       updatePaymentCalculations();
+    }
+
+    // Helper tính toán dữ liệu tiến độ cho từng phương án
+    function getSchemeData(schemeId, applyBonus) {
+      const originalPrice = LOT_DATA.originalPrice;
+      let schemeDiscount = 0;
+      let schemeName = '';
+      let shortName = '';
+
+      if (schemeId === 1) {
+        schemeDiscount = DISCOUNT_SCHEME_1;
+        schemeName = 'Phương thức 1 – Khởi đầu an nhàn (-200 Tr · 12 tháng)';
+        shortName = 'PA 1 · Chuẩn 12 Tháng';
+      } else if (schemeId === 2) {
+        schemeDiscount = DISCOUNT_SCHEME_2;
+        schemeName = 'Phương thức 2 – Chủ động tài chính (-600 Tr · Công chứng 50%)';
+        shortName = 'PA 2 · Chủ Động 50%';
+      } else if (schemeId === 3) {
+        schemeDiscount = DISCOUNT_SCHEME_3;
+        schemeName = 'Phương thức 3 – Thanh toán ưu việt (-800 Tr · Công chứng 70%)';
+        shortName = 'PA 3 · Ưu Việt 70%';
+      } else if (schemeId === 4) {
+        schemeDiscount = DISCOUNT_SCHEME_4;
+        schemeName = 'Phương thức 4 – Thanh toán tinh gọn (-1 Tỷ · Công chứng 100%)';
+        shortName = 'PA 4 · Tinh Gọn 100%';
+      }
+
+      const buildBonus = applyBonus ? BONUS_BUILD_AMOUNT : 0;
+      const totalDiscount = schemeDiscount + buildBonus;
+      const finalPrice = Math.max(0, originalPrice - totalDiscount);
+
+      let rows = [];
+      if (schemeId === 1) {
+        const deposit = 200000000;
+        const d1 = (0.20 * finalPrice) - deposit;
+        const d2 = 0.10 * finalPrice;
+        const d3 = 0.10 * finalPrice;
+        const d4 = 0.10 * finalPrice;
+        const d5 = 0.10 * finalPrice;
+        const d6 = 0.40 * finalPrice;
+        rows = [
+          { dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn A23' },
+          { dot: 'Đợt 1', time: 'Trong vòng 10 ngày từ ngày cọc', ratio: '20% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng đặt cọc chính thức (Ưu đãi 200M khấu trừ trực tiếp)' },
+          { dot: 'Đợt 2', time: 'Trong vòng 02 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d2, desc: 'Tiến độ hoàn thiện hạ tầng kỹ thuật và cảnh quan nội khu' },
+          { dot: 'Đợt 3', time: 'Trong vòng 04 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d3, desc: 'Tiến độ ngầm hóa hệ thống điện nước và trạm đấu nối' },
+          { dot: 'Đợt 4', time: 'Trong vòng 06 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d4, desc: 'Tiến độ phân lô mốc giới thực địa' },
+          { dot: 'Đợt 5', time: 'Trong vòng 08 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d5, desc: 'Tiến độ tổ hợp đại tiện ích và công viên ven hồ' },
+          { dot: 'Đợt Cuối', time: 'Trong vòng 12 tháng từ ngày ký HĐ cọc', ratio: '40%', money: d6, desc: 'Ký HĐ chuyển nhượng QSDĐ công chứng, bàn giao đất & nhận Sổ đỏ riêng' }
+        ];
+      } else if (schemeId === 2) {
+        const deposit = 200000000;
+        const d1 = (0.50 * finalPrice) - deposit;
+        const d2 = 0.50 * finalPrice;
+        rows = [
+          { dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn A23' },
+          { dot: 'Đợt 1', time: 'Trong vòng 10 ngày từ ngày cọc', ratio: '50% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng chuyển nhượng QSDĐ tại văn phòng công chứng' },
+          { dot: 'Đợt 2', time: 'Trong vòng 12 tháng kể từ HĐCN QSDĐ', ratio: '50%', money: d2, desc: 'Bàn giao Giấy chứng nhận QSDĐ (Sổ đỏ riêng) mang tên khách hàng' }
+        ];
+      } else if (schemeId === 3) {
+        const deposit = 200000000;
+        const d1 = (0.70 * finalPrice) - deposit;
+        const d2 = 0.30 * finalPrice;
+        rows = [
+          { dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn A23' },
+          { dot: 'Đợt 1', time: 'Trong vòng 10 ngày từ ngày cọc', ratio: '70% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng chuyển nhượng QSDĐ tại phòng công chứng' },
+          { dot: 'Đợt 2', time: 'Trong vòng 12 tháng kể từ HĐCN QSDĐ', ratio: '30%', money: d2, desc: 'Bàn giao Giấy chứng nhận QSDĐ (Sổ đỏ riêng) mang tên khách hàng' }
+        ];
+      } else if (schemeId === 4) {
+        const deposit = 500000000;
+        const d1 = finalPrice - deposit;
+        rows = [
+          { dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '500 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí độc quyền căn A23' },
+          { dot: 'Đợt 1 (Duy Nhất)', time: 'Trong vòng 20 ngày từ ngày cọc', ratio: '100% (trừ cọc)', money: d1, desc: 'Ký công chứng HĐ chuyển nhượng QSDĐ sang tên ngay, nhận bàn giao toàn bộ hồ sơ sổ hồng riêng' }
+        ];
+      }
+
+      return {
+        id: schemeId,
+        name: schemeName,
+        shortName: shortName,
+        schemeDiscount: schemeDiscount,
+        buildBonus: buildBonus,
+        totalDiscount: totalDiscount,
+        finalPrice: finalPrice,
+        rows: rows
+      };
     }
 
     function updatePaymentCalculations() {
@@ -2639,46 +3375,26 @@
       const bonusStatusLabel = document.getElementById('bonusToggleStatus');
       if (bonusStatusLabel) bonusStatusLabel.textContent = applyBonus ? 'Đang áp dụng (-800 Tr)' : 'Chưa áp dụng ưu đãi';
 
-      const originalPrice = LOT_DATA.originalPrice;
-      let schemeDiscount = 0;
-      let schemeDiscountName = 'Chiết khấu thanh toán';
-
-      if (currentScheme === 1) {
-        schemeDiscount = DISCOUNT_SCHEME_1;
-        schemeDiscountName = 'PA 1 – Khởi đầu an nhàn (-200 Tr)';
-      } else if (currentScheme === 2) {
-        schemeDiscount = DISCOUNT_SCHEME_2;
-        schemeDiscountName = 'PA 2 – Chủ động tài chính (-600 Tr)';
-      } else if (currentScheme === 3) {
-        schemeDiscount = DISCOUNT_SCHEME_3;
-        schemeDiscountName = 'PA 3 – Thanh toán ưu việt (-800 Tr)';
-      } else if (currentScheme === 4) {
-        schemeDiscount = DISCOUNT_SCHEME_4;
-        schemeDiscountName = 'PA 4 – Thanh toán tinh gọn (-1 Tỷ)';
-      }
-
-      const buildBonus = applyBonus ? BONUS_BUILD_AMOUNT : 0;
-      const totalDiscount = schemeDiscount + buildBonus;
-      const finalPrice = Math.max(0, originalPrice - totalDiscount);
+      const sData = getSchemeData(currentScheme, applyBonus);
 
       // Update Summary Cards
       const origPriceEl = document.getElementById('summaryOriginalPrice');
-      if (origPriceEl) origPriceEl.textContent = formatVND(originalPrice);
+      if (origPriceEl) origPriceEl.textContent = formatVND(LOT_DATA.originalPrice);
       const schemeDiscLabelEl = document.getElementById('summarySchemeDiscountLabel');
-      if (schemeDiscLabelEl) schemeDiscLabelEl.textContent = schemeDiscountName;
+      if (schemeDiscLabelEl) schemeDiscLabelEl.textContent = sData.name;
       const schemeDiscEl = document.getElementById('summarySchemeDiscount');
-      if (schemeDiscEl) schemeDiscEl.textContent = schemeDiscount > 0 ? ('-' + formatVND(schemeDiscount)) : '0 đ';
+      if (schemeDiscEl) schemeDiscEl.textContent = sData.schemeDiscount > 0 ? ('-' + formatVND(sData.schemeDiscount)) : '0 đ';
       const buildBonusEl = document.getElementById('summaryBuildBonus');
-      if (buildBonusEl) buildBonusEl.textContent = buildBonus > 0 ? ('-' + formatVND(buildBonus)) : '0 đ';
+      if (buildBonusEl) buildBonusEl.textContent = sData.buildBonus > 0 ? ('-' + formatVND(sData.buildBonus)) : '0 đ';
       const finalPriceEl = document.getElementById('summaryFinalPrice');
-      if (finalPriceEl) finalPriceEl.textContent = formatVND(finalPrice);
+      if (finalPriceEl) finalPriceEl.textContent = formatVND(sData.finalPrice);
 
       const savingsText = document.getElementById('summarySavingsText');
       const savingsBadge = document.getElementById('summarySavingsBadge');
       if (savingsText && savingsBadge) {
-        if (totalDiscount > 0) {
-          const b = (totalDiscount / 1000000000).toFixed(2).replace('.', ',');
-          savingsText.innerHTML = `Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>${b} Tỷ đồng (${formatVND(totalDiscount)})</strong>`;
+        if (sData.totalDiscount > 0) {
+          const b = (sData.totalDiscount / 1000000000).toFixed(2).replace('.', ',');
+          savingsText.innerHTML = `Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>${b} Tỷ đồng (${formatVND(sData.totalDiscount)})</strong>`;
           savingsBadge.style.display = 'flex';
         } else {
           savingsText.innerHTML = `Giá bán chuẩn theo Bảng giá mở bán Đợt 1`;
@@ -2686,68 +3402,22 @@
         }
       }
 
+      // Đồng bộ thông tin in ấn chính thức
+      const pohScheme = document.getElementById('pohSchemeName');
+      if (pohScheme) pohScheme.textContent = sData.name;
+      const pohPrice = document.getElementById('pohFinalPrice');
+      if (pohPrice) pohPrice.textContent = formatVND(sData.finalPrice);
+      const pohSavings = document.getElementById('pohSavingsVal');
+      if (pohSavings) pohSavings.textContent = sData.totalDiscount > 0 ? formatVND(sData.totalDiscount) : '0 đ';
+
       // Build Table Installments
-      renderInstallmentsTable(finalPrice);
+      renderInstallmentsTable(sData.finalPrice, sData.rows);
     }
 
-    function renderInstallmentsTable(finalPrice) {
+    function renderInstallmentsTable(finalPrice, rows) {
       const tbody = document.getElementById('installmentTableBody');
       if (!tbody) return;
       tbody.innerHTML = '';
-
-      let rows = [];
-
-      if (currentScheme === 1) {
-        // PA 1: Khởi đầu an nhàn (Cọc 200M -> 20% -> 4x10% -> 40%)
-        const deposit = 200000000;
-        const d1 = (0.20 * finalPrice) - deposit;
-        const d2 = 0.10 * finalPrice;
-        const d3 = 0.10 * finalPrice;
-        const d4 = 0.10 * finalPrice;
-        const d5 = 0.10 * finalPrice;
-        const d6 = 0.40 * finalPrice;
-
-        rows = [
-          { dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn A23' },
-          { dot: 'Đợt 1', time: 'Trong vòng 10 ngày kể từ ngày cọc', ratio: '20% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng đặt cọc chính thức (Ưu đãi 200M khấu trừ trực tiếp)' },
-          { dot: 'Đợt 2', time: 'Trong vòng 02 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d2, desc: 'Tiến độ hoàn thiện hạ tầng kỹ thuật và cảnh quan nội khu' },
-          { dot: 'Đợt 3', time: 'Trong vòng 04 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d3, desc: 'Tiến độ ngầm hóa hệ thống điện nước và trạm đấu nối' },
-          { dot: 'Đợt 4', time: 'Trong vòng 06 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d4, desc: 'Tiến độ phân lô mốc giới thực địa' },
-          { dot: 'Đợt 5', time: 'Trong vòng 08 tháng từ ngày ký HĐ cọc', ratio: '10%', money: d5, desc: 'Tiến độ tổ hợp đại tiện ích và công viên ven hồ' },
-          { dot: 'Đợt Cuối', time: 'Trong vòng 12 tháng từ ngày ký HĐ cọc', ratio: '40%', money: d6, desc: 'Ký HĐ chuyển nhượng QSDĐ công chứng, bàn giao đất & nhận Sổ đỏ riêng' }
-        ];
-      } else if (currentScheme === 2) {
-        // PA 2: Chủ động tài chính (Cọc 200M -> 50% trong 10 ngày ký HĐCN QSDĐ -> 50% trong 12 tháng nhận sổ)
-        const deposit = 200000000;
-        const d1 = (0.50 * finalPrice) - deposit;
-        const d2 = 0.50 * finalPrice;
-
-        rows = [
-          { dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn A23' },
-          { dot: 'Đợt 1', time: 'Trong vòng 10 ngày kể từ ngày cọc', ratio: '50% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng chuyển nhượng QSDĐ tại văn phòng công chứng' },
-          { dot: 'Đợt 2', time: 'Trong vòng 12 tháng kể từ HĐCN QSDĐ', ratio: '50%', money: d2, desc: 'Bàn giao Giấy chứng nhận QSDĐ (Sổ đỏ riêng) mang tên khách hàng' }
-        ];
-      } else if (currentScheme === 3) {
-        // PA 3: Thanh toán ưu việt (Cọc 200M -> 70% trong 10 ngày ký HĐCN QSDĐ -> 30% trong 12 tháng nhận sổ)
-        const deposit = 200000000;
-        const d1 = (0.70 * finalPrice) - deposit;
-        const d2 = 0.30 * finalPrice;
-
-        rows = [
-          { dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '200 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí căn A23' },
-          { dot: 'Đợt 1', time: 'Trong vòng 10 ngày kể từ ngày cọc', ratio: '70% (trừ cọc)', money: d1, desc: 'Ký Hợp đồng chuyển nhượng QSDĐ tại phòng công chứng' },
-          { dot: 'Đợt 2', time: 'Trong vòng 12 tháng kể từ HĐCN QSDĐ', ratio: '30%', money: d2, desc: 'Bàn giao Giấy chứng nhận QSDĐ (Sổ đỏ riêng) mang tên khách hàng' }
-        ];
-      } else if (currentScheme === 4) {
-        // PA 4: Thanh toán tinh gọn (Cọc 500M -> 100% trong 20 ngày ký HĐCN QSDĐ)
-        const deposit = 500000000;
-        const d1 = finalPrice - deposit;
-
-        rows = [
-          { dot: 'Đặt Cọc', time: 'Ngày ký Phiếu cọc', ratio: '500 Triệu', money: deposit, desc: 'Ký Phiếu Đặt Cọc giữ vị trí độc quyền căn A23' },
-          { dot: 'Đợt 1 (Duy Nhất)', time: 'Trong vòng 20 ngày kể từ ngày cọc', ratio: '100% (trừ cọc)', money: d1, desc: 'Ký công chứng HĐ chuyển nhượng QSDĐ sang tên ngay, nhận bàn giao toàn bộ hồ sơ sổ hồng riêng' }
-        ];
-      }
 
       rows.forEach(r => {
         const tr = document.createElement('tr');
@@ -2772,6 +3442,108 @@
       `;
       tbody.appendChild(totalTr);
     }
+
+    // In 1 Phương Án Đang Chọn (Chuẩn A4, không tràn lề)
+    function printSingleScheme() {
+      document.body.classList.remove('printing-all-schemes');
+      document.body.classList.add('printing-single-scheme');
+
+      const docTypeEl = document.getElementById('pohDocType');
+      if (docTypeEl) docTypeEl.textContent = 'BẢNG TÍNH TIẾN ĐỘ THANH TOÁN (TIẾN ĐỘ ĐÃ CHỌN)';
+
+      updateRealtimePrintDate();
+      window.print();
+    }
+
+    // In Cả 4 Phương Án Để Khách So Sánh Lựa Chọn
+    function printAllSchemes() {
+      const bonusEl = document.getElementById('bonus800Toggle');
+      const applyBonus = bonusEl ? bonusEl.checked : false;
+
+      const container = document.getElementById('allSchemesPrintContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const schemes = [1, 2, 3, 4];
+      schemes.forEach(sid => {
+        const sData = getSchemeData(sid, applyBonus);
+        const card = document.createElement('div');
+        card.className = 'print-scheme-card';
+
+        let rowsHtml = '';
+        sData.rows.forEach(r => {
+          rowsHtml += `
+            <tr>
+              <td class="td-dot">${r.dot}</td>
+              <td class="td-time">${r.time}</td>
+              <td class="td-ratio-cell"><span class="td-ratio">${r.ratio}</span></td>
+              <td class="td-money">${formatVND(r.money)}</td>
+              <td class="td-desc">${r.desc}</td>
+            </tr>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="print-scheme-card-header">
+            <div>
+              <span class="print-scheme-card-title">${sData.name}</span>
+              <div style="font-size: 7.2pt; color: #64748b; margin-top: 2px;">
+                Tổng chiết khấu & ưu đãi: <strong>${formatVND(sData.totalDiscount)}</strong>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-size: 7pt; color: #64748b; text-transform: uppercase;">Giá thanh toán:</span>
+              <div class="print-scheme-card-price">${formatVND(sData.finalPrice)}</div>
+            </div>
+          </div>
+          <div class="installment-table-wrap" style="margin-bottom: 0;">
+            <table class="installment-table">
+              <thead>
+                <tr>
+                  <th class="col-dot">Đợt TT</th>
+                  <th class="col-time">Thời Gian Thực Hiện</th>
+                  <th class="col-ratio">Tỷ Lệ</th>
+                  <th class="col-money">Số Tiền (VND)</th>
+                  <th class="col-desc">Điều Kiện / Mốc Pháp Lý</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rowsHtml}
+                <tr class="total-row">
+                  <td colspan="2" class="total-label-cell">TỔNG CỘNG THANH TOÁN</td>
+                  <td class="td-ratio-cell"><span class="td-ratio" style="background:#183024; color:#fff;">100%</span></td>
+                  <td class="td-money total-money-val">${formatVND(sData.finalPrice)}</td>
+                  <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ toàn bộ ưu đãi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      document.body.classList.remove('printing-single-scheme');
+      document.body.classList.add('printing-all-schemes');
+
+      const docTypeEl = document.getElementById('pohDocType');
+      if (docTypeEl) docTypeEl.textContent = 'BẢNG SO SÁNH 4 PHƯƠNG THỨC THANH TOÁN TOÀN DIỆN';
+
+      updateRealtimePrintDate();
+      window.print();
+    }
+
+    function updateRealtimePrintDate() {
+      const d = new Date();
+      const dateStr = `Ngày ${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+      document.querySelectorAll('.print-realtime-date').forEach(el => {
+        el.textContent = dateStr;
+      });
+    }
+
+    // Dọn dẹp class in ấn sau khi in xong
+    window.addEventListener('afterprint', () => {
+      document.body.classList.remove('printing-all-schemes', 'printing-single-scheme');
+    });
 
     // Copy Share Link Function
     function copyShareLink() {
@@ -2830,20 +3602,16 @@
 
       const bonusEl = document.getElementById('bonus800Toggle');
       const applyBonus = bonusEl ? bonusEl.checked : false;
-      const finalPriceEl = document.getElementById('summaryFinalPrice');
-      const finalPriceStr = finalPriceEl ? finalPriceEl.textContent : LOT_DATA.originalPriceStr;
-      let schemeName = 'Phương thức Chuẩn 12 tháng';
-      if (currentScheme === 2) schemeName = 'Phương thức Nhanh 70% (Công chứng ngay)';
-      if (currentScheme === 3) schemeName = 'Phương thức Nhanh 100% (Sang tên ngay)';
+      const sData = getSchemeData(currentScheme, applyBonus);
 
       const text = `🏡 BẢNG TÍNH & TIẾN ĐỘ THANH TOÁN CĂN ${LOT_DATA.code} · SAIGON FARM RESORT
 📍 Phân khu: ${LOT_DATA.catTitle} | Dãy: ${LOT_DATA.block}
 📐 Diện tích: ${LOT_DATA.areaStr} m² (100% Sổ đỏ riêng)
 🧭 Hướng: ${LOT_DATA.direction} | Vị trí: ${LOT_DATA.pos}
 💰 Giá gốc niêm yết: ${LOT_DATA.originalPriceStr}
-📋 Phương án chọn: ${schemeName}
+📋 Phương án chọn: ${sData.name}
 🎁 Ưu đãi xây dựng trước 12/2027: ${applyBonus ? '-800 Triệu đồng (Đã tính)' : 'Chưa áp dụng'}
-💎 TỔNG GIÁ THANH TOÁN SAU ƯU ĐÃI: ${finalPriceStr}
+💎 TỔNG GIÁ THANH TOÁN SAU ƯU ĐÃI: ${formatVND(sData.finalPrice)}
 🌐 Xem chi tiết trực tuyến: https://saigonfarmresort.com/${LOT_DATA.codeLower}
 📞 Liên hệ: Chuyên viên tư vấn gửi bảng tính này để nhận hỗ trợ & đăng ký xe đưa đón tham quan thực địa.`;
 
@@ -2869,16 +3637,20 @@
     // Init on load
     document.addEventListener('DOMContentLoaded', () => {
       updatePaymentCalculations();
+      updateRealtimePrintDate();
     });
   </script>
 
   <!-- Fixed Mobile Bottom Action Dock (Công cụ hỗ trợ Sales gửi khách, bảo toàn thông tin khách hàng) -->
   <div class="mobile-bottom-dock">
     <button type="button" class="dock-btn dock-btn-gold" onclick="copyShareLink()">
-      <i class="fa-solid fa-share-nodes"></i> Sao Chép Link Căn A23
+      <i class="fa-solid fa-share-nodes"></i> Link Căn A23
     </button>
     <button type="button" class="dock-btn dock-btn-schedule" onclick="copyScheduleText()">
-      <i class="fa-solid fa-copy"></i> Sao Chép Bảng Tính
+      <i class="fa-solid fa-copy"></i> Sao Chép Bảng
+    </button>
+    <button type="button" class="dock-btn dock-btn-print" onclick="printSingleScheme()">
+      <i class="fa-solid fa-print"></i> In PDF
     </button>
   </div>
 </body>
