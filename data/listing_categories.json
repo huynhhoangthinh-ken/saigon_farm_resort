@@ -939,7 +939,7 @@
         "map_y": 64.91
       }
     ],
-    "default_image": "assets/Index_asset/tien_ich_3D/Tong_Quan_1.jpg"
+    "default_image": "assets/Index_asset/MasterPlan/SGFR_Master_1_web.webp"
   },
   {
     "slug": "dien-an",
@@ -948,7 +948,7 @@
     "tagline": "Khu Lưu Trú Chuyên Gia & Dòng Tiền Vận Hành Bền Vững",
     "badge": "4 Cụm Lưu Trú Mở Bán Đợt 1 (Đất + Nhà 30 Phòng)",
     "desc": "Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu là 80 triệu/đồng. Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.",
-    "hero_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa_chín.jpg",
+    "hero_image": "assets/Index_asset/Hero_Slider/hero_slide_1.webp",
     "items": [
       {
         "stt": 8,
@@ -1167,6 +1167,6 @@
         "map_y": 75.49
       }
     ],
-    "default_image": "assets/Index_asset/tien_ich_3D/điền_trang_đồng_lúa.jpg"
+    "default_image": "assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/S03_Final_Fix_001.webp"
   }
 ]
