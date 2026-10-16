@@ -606,7 +606,7 @@ def update_listing():
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <!-- Structured Data JSON-LD -->
@@ -658,9 +658,9 @@ def update_listing():
       --color-manor: #c9a96e;
       --color-founders: #10b981;
       --color-haven: #0284c7;
-      --font-serif: 'Playfair Display', serif;
-      --font-sans: 'Montserrat', sans-serif;
-      --font-display: 'Outfit', sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }}
 
     * {{
@@ -982,7 +982,7 @@ def update_listing():
       font-weight: 700;
     }}
     .stat-pill-val {{
-      font-family: var(--font-serif);
+      font-family: var(--font-sans);
       font-size: 1.65rem;
       font-weight: 800;
       color: var(--primary);
@@ -1494,7 +1494,7 @@ def update_listing():
       margin-bottom: 4px;
     }}
     .tooltip-code {{
-      font-family: var(--font-serif);
+      font-family: var(--font-sans);
       font-weight: 800;
       color: var(--primary);
       font-size: 0.95rem;
@@ -1856,11 +1856,12 @@ def update_listing():
     }}
 
     .card-title {{
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      color: #1a1a1a;
+      font-family: var(--font-sans);
+      font-size: 1.15rem;
+      color: #183024;
       margin-bottom: 12px;
       font-weight: 700;
+      line-height: 1.35;
     }}
 
     /* Specs 4-cell Grid */
@@ -2142,11 +2143,13 @@ def update_listing():
     .csb-badge-root {{
       background: #183024;
       color: #c9a96e;
-      font-size: 0.65rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      padding: 2px 6px;
+      padding: 2px 7px;
       border-radius: 4px;
       text-transform: uppercase;
+      font-family: var(--font-sans);
+      letter-spacing: 0.4px;
     }}
     .csb-row {{
       display: flex;
@@ -2159,10 +2162,10 @@ def update_listing():
       border: 1px solid #ebdcc5;
     }}
     .csb-url {{
-      font-family: monospace;
-      font-size: 0.85rem;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
       color: #183024;
-      font-weight: 700;
+      font-weight: 600;
       word-break: break-all;
       text-decoration: none;
     }}
@@ -2672,7 +2675,8 @@ def update_listing():
         display: none;
       }}
       .hero-title {{
-        font-size: 1.6rem !important;
+        font-size: 1.55rem !important;
+        line-height: 1.3 !important;
       }}
       .hero-stats-grid {{
         grid-template-columns: repeat(2, 1fr) !important;
@@ -2681,8 +2685,17 @@ def update_listing():
       .stat-pill {{
         padding: 10px 12px !important;
       }}
+      .stat-pill-label {{
+        font-size: 0.75rem !important;
+        font-weight: 700 !important;
+      }}
       .stat-pill-val {{
-        font-size: 1.3rem !important;
+        font-family: var(--font-sans) !important;
+        font-size: 1.25rem !important;
+        font-weight: 800 !important;
+      }}
+      .stat-pill-sub {{
+        font-size: 0.74rem !important;
       }}
       .footer-container {{
         grid-template-columns: 1fr;
@@ -2733,6 +2746,7 @@ def update_listing():
         border-radius: 8px;
         font-size: 0.84rem;
         font-weight: 700;
+        font-family: var(--font-sans);
         text-decoration: none;
       }}
       .dock-btn-call {{
@@ -2761,7 +2775,9 @@ def update_listing():
       .cat-btn {{
         flex-shrink: 0 !important;
         padding: 7px 14px !important;
-        font-size: 0.8rem !important;
+        font-size: 0.82rem !important;
+        font-weight: 600 !important;
+        font-family: var(--font-sans) !important;
         white-space: nowrap !important;
       }}
 
@@ -2786,8 +2802,9 @@ def update_listing():
       }}
       .select-filter {{
         flex-shrink: 0 !important;
-        padding: 6px 10px !important;
-        font-size: 0.78rem !important;
+        padding: 7px 10px !important;
+        font-size: 0.82rem !important;
+        font-family: var(--font-sans) !important;
         background-color: #ffffff;
         border: 1px solid #dcd3c2;
       }}
@@ -2795,11 +2812,12 @@ def update_listing():
         justify-content: flex-end;
       }}
       .sort-group select {{
-        font-size: 0.78rem;
-        padding: 6px 10px;
+        font-size: 0.82rem !important;
+        font-family: var(--font-sans) !important;
+        padding: 7px 10px !important;
       }}
 
-      /* Full-Width Beautiful Mobile Cards ("Xem Trọn Vẹn Như Máy Tính - Gọn Gàng & Dễ Nhìn") */
+      /* Full-Width Beautiful Mobile Cards */
       .listings-grid,
       .listings-grid:not(.view-list-mode),
       .listings-grid.view-list-mode {{
@@ -2839,23 +2857,28 @@ def update_listing():
       .listings-grid:not(.view-list-mode) .card-badge-code {{
         top: 10px !important;
         left: 10px !important;
-        font-size: 0.8rem !important;
+        font-size: 0.82rem !important;
         padding: 4px 10px !important;
         font-weight: 800 !important;
+        font-family: var(--font-sans) !important;
         letter-spacing: 0.5px;
       }}
       .card-badge-cat,
       .listings-grid:not(.view-list-mode) .card-badge-cat {{
         bottom: 10px !important;
         left: 10px !important;
-        font-size: 0.72rem !important;
+        font-size: 0.76rem !important;
+        font-weight: 700 !important;
+        font-family: var(--font-sans) !important;
         padding: 3px 8px !important;
       }}
       .card-badge-status,
       .listings-grid:not(.view-list-mode) .card-badge-status {{
         top: 10px !important;
         right: 10px !important;
-        font-size: 0.7rem !important;
+        font-size: 0.76rem !important;
+        font-weight: 700 !important;
+        font-family: var(--font-sans) !important;
         padding: 3px 9px !important;
       }}
       .card-body,
@@ -2878,19 +2901,22 @@ def update_listing():
       .area-label,
       .listings-grid:not(.view-list-mode) .area-label {{
         display: block !important;
-        font-size: 0.7rem !important;
-        color: #777 !important;
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+        color: #666e68 !important;
         text-transform: uppercase !important;
       }}
       .area-val,
       .listings-grid:not(.view-list-mode) .area-val {{
-        font-size: 1.15rem !important;
-        font-weight: 800 !important;
+        font-size: 1.05rem !important;
+        font-weight: 700 !important;
         color: var(--primary) !important;
+        font-family: var(--font-sans) !important;
       }}
       .area-val strong,
       .listings-grid:not(.view-list-mode) .area-val strong {{
-        font-size: 1.3rem !important;
+        font-size: 1.2rem !important;
+        font-weight: 800 !important;
         color: var(--gold-dark) !important;
       }}
       .card-legal-pill,
@@ -2898,20 +2924,22 @@ def update_listing():
         display: inline-flex !important;
         align-items: center !important;
         gap: 4px !important;
-        font-size: 0.74rem !important;
+        font-size: 0.76rem !important;
         background: #e8f5e9 !important;
         color: #2e7d32 !important;
         padding: 3px 8px !important;
         border-radius: 4px !important;
         font-weight: 700 !important;
+        font-family: var(--font-sans) !important;
       }}
       .card-title,
       .listings-grid:not(.view-list-mode) .card-title {{
-        font-size: 1.12rem !important;
+        font-size: 1.08rem !important;
         font-weight: 700 !important;
         margin-bottom: 8px !important;
         line-height: 1.35 !important;
-        color: #1a1a1a !important;
+        color: #183024 !important;
+        font-family: var(--font-sans) !important;
         white-space: normal !important;
         overflow: visible !important;
         text-overflow: unset !important;
@@ -2934,10 +2962,16 @@ def update_listing():
         margin-bottom: 10px !important;
       }}
       .card-specs-grid .spec-label {{
-        font-size: 0.68rem !important;
+        font-size: 0.74rem !important;
+        font-weight: 600 !important;
+        color: #666e68 !important;
+        text-transform: uppercase !important;
       }}
       .card-specs-grid .spec-val {{
-        font-size: 0.8rem !important;
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+        color: var(--primary) !important;
+        font-family: var(--font-sans) !important;
       }}
 
       /* Chips Row on Mobile */
@@ -2950,8 +2984,10 @@ def update_listing():
         margin-bottom: 10px !important;
       }}
       .badge-chip {{
-        font-size: 0.72rem !important;
-        padding: 2px 7px !important;
+        font-size: 0.76rem !important;
+        font-weight: 600 !important;
+        font-family: var(--font-sans) !important;
+        padding: 3px 8px !important;
       }}
 
       /* Features & Suitability on Mobile */
@@ -2959,20 +2995,22 @@ def update_listing():
       .listings-grid:not(.view-list-mode) .card-features,
       .listings-grid.view-list-mode .card-features {{
         display: block !important;
-        font-size: 0.82rem !important;
+        font-size: 0.84rem !important;
         line-height: 1.5 !important;
         margin-bottom: 8px !important;
-        color: #555 !important;
+        color: #444 !important;
+        font-family: var(--font-sans) !important;
         min-height: auto !important;
       }}
       .card-fit,
       .listings-grid:not(.view-list-mode) .card-fit,
       .listings-grid.view-list-mode .card-fit {{
         display: flex !important;
-        font-size: 0.78rem !important;
+        font-size: 0.82rem !important;
         padding: 6px 10px !important;
         margin-bottom: 10px !important;
         line-height: 1.45 !important;
+        font-family: var(--font-sans) !important;
         background: #faf6ee !important;
         border: 1px dashed #ebdcc5 !important;
         border-radius: 6px !important;
@@ -2983,19 +3021,23 @@ def update_listing():
       .listings-grid:not(.view-list-mode) .card-policy-box,
       .listings-grid.view-list-mode .card-policy-box {{
         display: flex !important;
-        font-size: 0.78rem !important;
+        font-size: 0.80rem !important;
         padding: 7px 10px !important;
         margin-bottom: 8px !important;
         border-radius: 6px !important;
+        line-height: 1.45 !important;
+        font-family: var(--font-sans) !important;
       }}
       .card-bonus-construction-pill,
       .listings-grid:not(.view-list-mode) .card-bonus-construction-pill,
       .listings-grid.view-list-mode .card-bonus-construction-pill {{
         display: flex !important;
-        font-size: 0.76rem !important;
+        font-size: 0.78rem !important;
+        font-weight: 700 !important;
         padding: 6px 10px !important;
         margin-bottom: 10px !important;
         border-radius: 6px !important;
+        font-family: var(--font-sans) !important;
       }}
 
       /* Price Section on Mobile */
@@ -3021,16 +3063,19 @@ def update_listing():
       .price-type-tag,
       .listings-grid:not(.view-list-mode) .price-type-tag {{
         display: inline-block !important;
-        font-size: 0.7rem !important;
+        font-size: 0.75rem !important;
         font-weight: 700 !important;
         color: #7b5921 !important;
         text-transform: uppercase !important;
+        font-family: var(--font-sans) !important;
       }}
       .unit-price-tag,
       .listings-grid:not(.view-list-mode) .unit-price-tag {{
         display: inline-block !important;
-        font-size: 0.78rem !important;
+        font-size: 0.80rem !important;
+        font-weight: 600 !important;
         color: #555 !important;
+        font-family: var(--font-sans) !important;
       }}
       .unit-price-tag strong,
       .listings-grid:not(.view-list-mode) .unit-price-tag strong {{
@@ -3054,24 +3099,27 @@ def update_listing():
       .price-billion,
       .listings-grid:not(.view-list-mode) .price-billion {{
         display: inline-block !important;
-        font-size: 1.45rem !important;
+        font-size: 1.28rem !important;
         font-weight: 800 !important;
         color: #b91c1c !important;
-        letter-spacing: -0.5px;
+        font-family: var(--font-sans) !important;
+        letter-spacing: -0.3px !important;
       }}
       .price-exact,
       .listings-grid:not(.view-list-mode) .price-exact {{
         display: inline-block !important;
-        font-size: 0.78rem !important;
-        color: #777 !important;
+        font-size: 0.80rem !important;
+        color: #666e68 !important;
+        font-family: var(--font-sans) !important;
       }}
       .price-note-badge,
       .listings-grid:not(.view-list-mode) .price-note-badge {{
         display: inline-block !important;
-        font-size: 0.68rem !important;
+        font-size: 0.72rem !important;
         padding: 2px 6px !important;
         border-radius: 4px !important;
-        font-weight: 600 !important;
+        font-weight: 700 !important;
+        font-family: var(--font-sans) !important;
       }}
 
       /* Clean Share URL Box on Mobile */
@@ -3093,10 +3141,16 @@ def update_listing():
         align-items: center !important;
       }}
       .csb-label {{
-        font-size: 0.72rem !important;
+        font-size: 0.76rem !important;
         font-weight: 700 !important;
         color: #7b5f2c !important;
         letter-spacing: 0.3px !important;
+        font-family: var(--font-sans) !important;
+      }}
+      .csb-badge-root {{
+        font-size: 0.72rem !important;
+        font-weight: 700 !important;
+        font-family: var(--font-sans) !important;
       }}
       .csb-row {{
         display: flex !important;
@@ -3109,9 +3163,10 @@ def update_listing():
         border: 1px solid #ebdcc5 !important;
       }}
       .csb-url {{
-        font-size: 0.8rem !important;
-        font-weight: 700 !important;
+        font-size: 0.80rem !important;
+        font-weight: 600 !important;
         color: #183024 !important;
+        font-family: var(--font-sans) !important;
         word-break: break-all !important;
         flex: 1 !important;
       }}
@@ -3120,8 +3175,9 @@ def update_listing():
         align-items: center !important;
         gap: 4px !important;
         padding: 6px 10px !important;
-        font-size: 0.75rem !important;
+        font-size: 0.76rem !important;
         font-weight: 700 !important;
+        font-family: var(--font-sans) !important;
         border-radius: 4px !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
@@ -3144,8 +3200,9 @@ def update_listing():
         min-width: 150px !important;
         height: 42px !important;
         padding: 0 14px !important;
-        font-size: 0.84rem !important;
+        font-size: 0.86rem !important;
         font-weight: 700 !important;
+        font-family: var(--font-sans) !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 6px !important;
