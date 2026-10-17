@@ -195,9 +195,6 @@ def render_page(cat, all_cats):
           <div class="card-thumb-wrap">
             <img src="{img_thumb_webp}?v=4" alt="Bảng giá & Vị trí Lô {code_val}" loading="lazy" decoding="async" class="card-thumb" onerror="this.onerror=null; this.src='{img_thumb_jpg}?v=4'">
             <span class="card-badge-code">LÔ {code_val}</span>
-            <span class="card-badge-status {status_badge_class}">
-              <i class="fa-solid {status_icon}"></i> {item['status']}
-            </span>
           </div>
           <div class="card-body">
             <div class="card-meta-top">
@@ -1399,7 +1396,6 @@ def render_page(cat, all_cats):
           <button class="filter-btn active" onclick="filterListings('all', this)">Tất Cả</button>
           <button class="filter-btn" onclick="filterListings('large', this)">Trên 1.000 m²</button>
           <button class="filter-btn" onclick="filterListings('compact', this)">Dưới 1.000 m²</button>
-          <button class="filter-btn" onclick="filterListings('available', this)">Còn Hàng</button>
         </div>
       </div>
 

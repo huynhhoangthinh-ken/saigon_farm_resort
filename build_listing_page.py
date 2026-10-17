@@ -140,7 +140,6 @@ def update_listing():
           <div class="hotspot-tooltip">
             <div class="tooltip-header">
               <span class="tooltip-code">MÃ CĂN {code}</span>
-              <span class="tooltip-status status-{status_type}">{status_text}</span>
             </div>
             <div class="tooltip-cat">{cat_title} · Dãy {block}</div>
             <div class="tooltip-area"><i class="fa-solid fa-ruler-combined"></i> <strong>{area_str}</strong> m² (100% Thổ cư)</div>
@@ -360,9 +359,6 @@ def update_listing():
                  onerror="this.onerror=null; this.src='{img_thumb_jpg}?v=4'">
             <span class="card-badge-code">MÃ {code}</span>
             <span class="card-badge-cat">{cat_title}</span>
-            <span class="card-badge-status {status_class}">
-              <i class="fa-solid {status_icon}"></i> {status_text}
-            </span>
           </div>
           <div class="card-body">
             <div class="card-top-info">
@@ -502,14 +498,14 @@ def update_listing():
               <span style="display:block; font-size:0.78rem; color:#0369a1; margin-top:3px; font-weight:700;"><i class="fa-solid fa-hand-holding-dollar"></i> Thuê lại 120 Tr/th</span>
             </div>
             """
-            table_status_cell = f'<span class="table-status-pill {status_class}">{status_text}</span>'
+            table_status_cell = '<a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a>'
         else:
             table_price_cell = f"""
             <strong class="price-bil-text">{price_bil}</strong>
             <span class="price-full-sub">{price_str}</span>
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             """
-            table_status_cell = f'<span class="table-status-pill {status_class}">{status_text}</span>'
+            table_status_cell = '<a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a>'
 
         row = f"""
         <tr class="table-row-item"
@@ -3930,12 +3926,7 @@ def update_listing():
             <option value="Bình thường">Tiện ích sinh thái</option>
           </select>
 
-          <!-- Trạng thái -->
-          <select id="filterStatus" class="select-filter" onchange="applyFilters()">
-            <option value="all">Tất cả Trạng Thái</option>
-            <option value="available">Còn Hàng ({available_count})</option>
-            <option value="reserved">Đang Giữ Chỗ ({reserved_count})</option>
-          </select>
+
         </div>
 
         <!-- Sort -->
@@ -4562,7 +4553,8 @@ def update_listing():
       const dirFilter = document.getElementById('filterDir').value;
       const viewFilter = document.getElementById('filterView').value;
       const amenityFilter = document.getElementById('filterAmenity').value;
-      const statusFilter = document.getElementById('filterStatus').value;
+      const statusFilterEl = document.getElementById('filterStatus');
+      const statusFilter = statusFilterEl ? statusFilterEl.value : 'all';
 
       const cards = document.querySelectorAll('.listing-card');
       const rows = document.querySelectorAll('.table-row-item');
@@ -4696,7 +4688,7 @@ def update_listing():
       document.getElementById('filterDir').value = 'all';
       document.getElementById('filterView').value = 'all';
       document.getElementById('filterAmenity').value = 'all';
-      document.getElementById('filterStatus').value = 'all';
+      if (document.getElementById('filterStatus')) document.getElementById('filterStatus').value = 'all';
       document.getElementById('sortSelect').value = 'stt';
 
       currentCategory = 'all';

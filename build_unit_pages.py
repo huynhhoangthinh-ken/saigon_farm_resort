@@ -3486,7 +3486,6 @@ def build_unit_page_html(item, all_items):
             <div class="gallery-badges">
               <span class="badge-hero-code">MÃ {code}</span>
               <span class="badge-hero-cat">{cat_title}</span>
-              <span class="badge-hero-status"><i class="fa-solid fa-circle-check"></i> Còn Hàng · Đợt 1</span>
             </div>
           </div>
           <!-- Thumbnails -->
