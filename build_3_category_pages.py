@@ -1262,6 +1262,35 @@ def render_page(cat, all_cats):
       }}
     }}
     @media (max-width: 768px) {{
+      .topbar {{
+        display: none !important;
+      }}
+      .nav-container {{
+        padding: 6px 12px !important;
+      }}
+      .brand-icon {{
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.95rem !important;
+      }}
+      .brand-name {{
+        display: none !important;
+      }}
+      .brand-tag {{
+        font-size: 0.72rem !important;
+        font-weight: 700 !important;
+        color: var(--primary) !important;
+      }}
+      .btn-nav-cta {{
+        padding: 6px 12px !important;
+        font-size: 0.76rem !important;
+      }}
+      .hero {{
+        padding: 24px 12px 20px !important;
+      }}
+      .hero-title {{
+        font-size: 1.5rem !important;
+      }}
       .listings-grid {{
         grid-template-columns: 1fr !important;
         gap: 18px !important;

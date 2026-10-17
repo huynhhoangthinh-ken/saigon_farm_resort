@@ -134,23 +134,21 @@
     .nav-brand-title {
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
 
     .nav-brand-name {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--primary);
-      letter-spacing: 0.5px;
-      line-height: 1.2;
+      display: none;
     }
 
     .nav-brand-sub {
-      font-size: 0.72rem;
-      color: var(--gold-dark);
-      letter-spacing: 1.5px;
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      color: var(--primary);
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 700;
+      line-height: 1.2;
     }
 
     .nav-actions {
@@ -1743,27 +1741,32 @@
         z-index: 1000 !important;
       }
       .nav-inner {
-        height: 54px !important;
+        height: 42px !important;
       }
       .nav-brand {
-        gap: 8px !important;
-      }
-      .nav-brand img {
-        height: 32px !important;
-      }
-      .nav-brand-name {
-        font-size: 0.96rem !important;
-        white-space: nowrap !important;
-      }
-      .nav-brand-sub {
-        display: none !important;
-      }
-      .nav-actions {
         gap: 6px !important;
       }
+      .nav-brand img {
+        height: 26px !important;
+        max-width: 95px !important;
+      }
+      .nav-brand-name {
+        display: none !important;
+      }
+      .nav-brand-sub {
+        display: block !important;
+        font-size: 0.65rem !important;
+        font-weight: 700 !important;
+        color: var(--primary) !important;
+        line-height: 1.15 !important;
+      }
+      .nav-actions {
+        gap: 4px !important;
+      }
       .btn-nav {
-        padding: 6px 10px !important;
-        font-size: 0.78rem !important;
+        padding: 4px 8px !important;
+        font-size: 0.72rem !important;
+        height: 28px !important;
         gap: 4px !important;
         border-radius: 6px !important;
       }
@@ -2575,8 +2578,7 @@
       <a href="/giohang" class="nav-brand" title="Giỏ Hàng Saigon Farm Resort">
         <img src="/assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo">
         <div class="nav-brand-title">
-          <span class="nav-brand-name">Saigon Farm Resort</span>
-          <span class="nav-brand-sub">Quần Thể Điền Trang Sinh Thái</span>
+          <span class="nav-brand-sub">Quần Thể Điền Trang Sinh Thái Ven Hồ</span>
         </div>
       </a>
       <div class="nav-actions">
