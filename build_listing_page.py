@@ -3222,19 +3222,23 @@ def update_listing():
         border: 1px solid #ebdcc5 !important;
       }}
       .csb-url {{
-        font-size: 0.80rem !important;
+        font-size: 0.72rem !important;
         font-weight: 600 !important;
         color: #183024 !important;
         font-family: var(--font-sans) !important;
-        word-break: break-all !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        word-break: normal !important;
         flex: 1 !important;
+        min-width: 0 !important;
       }}
       .btn-copy-share {{
         display: inline-flex !important;
         align-items: center !important;
-        gap: 4px !important;
-        padding: 6px 10px !important;
-        font-size: 0.76rem !important;
+        gap: 3px !important;
+        padding: 5px 8px !important;
+        font-size: 0.72rem !important;
         font-weight: 700 !important;
         font-family: var(--font-sans) !important;
         border-radius: 4px !important;
@@ -3242,33 +3246,36 @@ def update_listing():
         flex-shrink: 0 !important;
       }}
 
-      /* Action Buttons on Mobile */
+      /* Action Buttons on Mobile - All in 1 single neat row */
       .card-actions,
       .listings-grid:not(.view-list-mode) .card-actions,
       .listings-grid.view-list-mode .card-actions {{
         display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 8px !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 5px !important;
         width: 100% !important;
+        align-items: center !important;
       }}
       .btn-primary-action,
       .listings-grid:not(.view-list-mode) .btn-primary-action,
       .listings-grid.view-list-mode .btn-primary-action {{
         display: inline-flex !important;
-        flex: 1 !important;
-        min-width: 150px !important;
-        height: 42px !important;
-        padding: 0 14px !important;
-        font-size: 0.86rem !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        height: 38px !important;
+        padding: 0 8px !important;
+        font-size: 0.76rem !important;
         font-weight: 700 !important;
         font-family: var(--font-sans) !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 6px !important;
+        gap: 4px !important;
         border-radius: 6px !important;
         background: var(--primary) !important;
         color: #ffffff !important;
         text-decoration: none !important;
+        white-space: nowrap !important;
       }}
       .btn-copy-action,
       .btn-view-map-action,
@@ -3277,11 +3284,12 @@ def update_listing():
       .listings-grid:not(.view-list-mode) .btn-call-action,
       .listings-grid:not(.view-list-mode) .btn-zalo-action {{
         display: inline-flex !important;
-        width: 42px !important;
-        height: 42px !important;
-        min-width: 42px !important;
+        width: 36px !important;
+        height: 38px !important;
+        min-width: 36px !important;
+        flex-shrink: 0 !important;
         padding: 0 !important;
-        font-size: 1rem !important;
+        font-size: 0.88rem !important;
         align-items: center !important;
         justify-content: center !important;
         border-radius: 6px !important;
@@ -3305,6 +3313,54 @@ def update_listing():
       .listings-grid:not(.view-list-mode) .btn-zalo-action::after {{
         content: "" !important;
         display: none !important;
+      }}
+
+      /* Lock Deposit Banner on Mobile - All buttons on 1 single row */
+      .lock-deposit-banner {{
+        padding: 14px 14px !important;
+        margin-bottom: 16px !important;
+        border-radius: 10px !important;
+      }}
+      .lock-deposit-badge {{
+        font-size: 0.68rem !important;
+        padding: 3px 10px !important;
+        margin-bottom: 8px !important;
+      }}
+      .lock-deposit-grid {{
+        gap: 12px !important;
+      }}
+      .lock-deposit-text {{
+        min-width: 0 !important;
+      }}
+      .lock-deposit-text h3 {{
+        font-size: 1.05rem !important;
+        margin-bottom: 6px !important;
+      }}
+      .lock-deposit-text p {{
+        font-size: 0.78rem !important;
+        line-height: 1.45 !important;
+      }}
+      .lock-deposit-cta-group {{
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        width: 100% !important;
+      }}
+      .btn-lock-phone,
+      .btn-lock-zalo {{
+        flex: 1 1 50% !important;
+        min-width: 0 !important;
+        padding: 10px 6px !important;
+        font-size: 0.78rem !important;
+        white-space: nowrap !important;
+        justify-content: center !important;
+        gap: 5px !important;
+        border-radius: 24px !important;
+      }}
+      .btn-lock-phone i,
+      .btn-lock-zalo i {{
+        font-size: 0.85rem !important;
       }}
 
       /* Mobile Modal Polish */
