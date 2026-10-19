@@ -2809,10 +2809,9 @@
         color: #ffffff !important;
       }
       .hotline-phone-highlight,
-      .lock-deposit-banner a[href^="tel"],
       .lock-deposit-text h3 a,
       .lock-deposit-text h3 span {
-        font-size: 1.20rem !important;
+        font-size: 1.15rem !important;
         color: #ffd54f !important;
       }
       .hotline-inline-highlight,
@@ -2831,20 +2830,38 @@
         flex-wrap: nowrap !important;
         gap: 8px !important;
         width: 100% !important;
+        box-sizing: border-box !important;
       }
       .btn-lock-phone,
       .btn-lock-zalo {
         flex: 1 1 50% !important;
         min-width: 0 !important;
-        padding: 10px 6px !important;
+        box-sizing: border-box !important;
+        padding: 10px 4px !important;
         font-size: 0.78rem !important;
+        font-family: var(--font-sans) !important;
+        font-weight: 700 !important;
         white-space: nowrap !important;
         justify-content: center !important;
         gap: 5px !important;
         border-radius: 24px !important;
+        text-shadow: none !important;
+        text-align: center !important;
       }
-      .btn-lock-phone i,
+      .btn-lock-phone {
+        background: linear-gradient(135deg, #c9a96e, #a88448) !important;
+        color: #183024 !important;
+      }
+      .btn-lock-phone i {
+        color: #183024 !important;
+        font-size: 0.85rem !important;
+      }
+      .btn-lock-zalo {
+        background: #0068FF !important;
+        color: #ffffff !important;
+      }
       .btn-lock-zalo i {
+        color: #ffffff !important;
         font-size: 0.85rem !important;
       }
 
@@ -2929,7 +2946,6 @@
       gap: 8px;
     }
     .hotline-phone-highlight,
-    .lock-deposit-banner a[href^="tel"],
     .lock-deposit-text h3 a,
     .lock-deposit-text h3 span {
       color: #ffd54f !important;
@@ -2968,23 +2984,29 @@
       flex-wrap: wrap;
     }
     .btn-lock-phone {
-      background: var(--gold);
-      color: #183024;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 12px 22px;
-      border-radius: 30px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 14px rgba(201, 169, 110, 0.35);
+      background: linear-gradient(135deg, #c9a96e, #a88448) !important;
+      color: #183024 !important;
+      font-family: var(--font-sans) !important;
+      font-weight: 700 !important;
+      font-size: 0.9rem !important;
+      padding: 12px 22px !important;
+      border-radius: 30px !important;
+      text-decoration: none !important;
+      text-shadow: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 4px 14px rgba(201, 169, 110, 0.35) !important;
     }
     .btn-lock-phone:hover {
-      background: var(--gold-light);
+      background: #dfbe84 !important;
+      color: #183024 !important;
       transform: translateY(-2px);
       box-shadow: 0 6px 18px rgba(201, 169, 110, 0.45);
+    }
+    .btn-lock-phone i {
+      color: #183024 !important;
     }
     .btn-lock-zalo {
       background: #0068FF;
