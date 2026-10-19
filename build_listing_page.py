@@ -266,13 +266,15 @@ def update_listing():
             </div>
             """
         elif cat_slug == "dien-an":
-            tag_bg = "#b91c1c" if code == "A15" else "#0284c7"
-            tag_text = f"ĐẤT THẤP NHẤT: {land_unit_price_mil}" if code == "A15" else f"ĐƠN GIÁ ĐẤT: {land_unit_price_mil}"
+            if code == "A15":
+                tag_badge_html = f'<span class="price-type-tag tag-a15-highlight"><i class="fa-solid fa-fire"></i> ĐẤT THẤP NHẤT: {land_unit_price_mil}</span>'
+            else:
+                tag_badge_html = f'<span class="price-type-tag tag-dien-an"><i class="fa-solid fa-hotel"></i> ĐƠN GIÁ ĐẤT: {land_unit_price_mil}</span>'
             note_badge = '<span class="price-note-badge" style="background: #fef2f2; color: #b91c1c; border-color: #fca5a5; font-weight: 700;">Sau ưu đãi ~8,17 Tr/m²</span>' if code == "A15" else f'<span class="price-note-badge" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">Đất chỉ {land_unit_price_mil}</span>'
             price_block_html = f"""
             <div class="card-price-section" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.05) 0%, rgba(201, 169, 110, 0.08) 100%); border: 1px solid rgba(2, 132, 199, 0.28);">
               <div class="price-header-row">
-                <span class="price-type-tag" style="background: {tag_bg}; color: #fff; font-weight: 700; border: none;">{tag_text}</span>
+                {tag_badge_html}
                 <span class="unit-price-tag" style="color: #0369a1; font-weight: 700;"><i class="fa-solid fa-hotel"></i> 30 Phòng (850m²)</span>
               </div>
               <div class="price-main-row">
@@ -310,7 +312,7 @@ def update_listing():
             bonus_pill_html = """
             <div class="card-bonus-construction-pill" style="background: rgba(2, 132, 199, 0.08); border-color: rgba(2, 132, 199, 0.25); color: #0369a1;">
               <i class="fa-solid fa-hotel"></i>
-              <span>30 phòng lưu trú · <strong>MDS Living thuê lại 120 Tr/tháng (1,44 Tỷ/năm)</strong></span>
+              <span>Quy mô bàn giao: <strong>30 phòng lưu trú 850m² chuẩn vận hành MDS Living</strong></span>
             </div>
             """
         elif cat_slug == "dien-san":
@@ -579,6 +581,7 @@ def update_listing():
   <meta charset="utf-8"/>
   <base href="/">
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="format-detection" content="telephone=no"/>
   <title>Giỏ Hàng & Bảng Giá Mở Bán Đợt 1 (21 Sản Phẩm) | Saigon Farm Resort</title>
   <meta content="Bản đồ mặt bằng tương tác và giỏ hàng 21 sản phẩm mở bán Đợt 1 tại Saigon Farm Resort: 11 Điền Sản (chỉ bán đất), 4 Điền An (có nhà 30 phòng), 6 Biệt Phủ (chỉ bán đất). Bảng giá niêm yết gốc trực tiếp từ Đơn vị Phát triển MDS Land." name="description"/>
   <meta name="keywords" content="mặt bằng saigon farm resort, sơ đồ phân lô saigon farm resort, giỏ hàng saigon farm resort, bảng giá saigon farm resort, biệt phủ điền trang, điền sản mds living, điền an lưu trú"/>
@@ -1997,11 +2000,34 @@ def update_listing():
       margin-bottom: 6px;
     }}
     .price-type-tag {{
-      font-size: 0.68rem;
+      font-size: 0.70rem;
       font-weight: 700;
       color: #8c6b32;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: #fdfaf4;
+      border: 1px solid #ebdcc5;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }}
+    .tag-a15-highlight {{
+      background: #fef2f2 !important;
+      color: #991b1b !important;
+      border: 1px solid #fecaca !important;
+      font-weight: 800 !important;
+      font-size: 0.72rem !important;
+      letter-spacing: 0.3px;
+    }}
+    .tag-dien-an {{
+      background: #f0f9ff !important;
+      color: #0369a1 !important;
+      border: 1px solid #bae6fd !important;
+      font-weight: 700 !important;
+      font-size: 0.72rem !important;
+      letter-spacing: 0.3px;
     }}
     .unit-price-tag {{
       font-size: 0.78rem;
@@ -3132,10 +3158,9 @@ def update_listing():
       }}
       .price-type-tag,
       .listings-grid:not(.view-list-mode) .price-type-tag {{
-        display: inline-block !important;
-        font-size: 0.75rem !important;
+        display: inline-flex !important;
+        font-size: 0.72rem !important;
         font-weight: 700 !important;
-        color: #7b5921 !important;
         text-transform: uppercase !important;
         font-family: var(--font-sans) !important;
       }}
@@ -3347,10 +3372,24 @@ def update_listing():
       .lock-deposit-text h3 {{
         font-size: 1.05rem !important;
         margin-bottom: 6px !important;
+        color: #ffffff !important;
+      }}
+      .hotline-phone-highlight,
+      .lock-deposit-banner a[href^="tel"],
+      .lock-deposit-text h3 a,
+      .lock-deposit-text h3 span {{
+        font-size: 1.20rem !important;
+        color: #ffd54f !important;
+      }}
+      .hotline-inline-highlight,
+      .lock-deposit-text p a,
+      .lock-deposit-text p strong {{
+        color: #ffd54f !important;
       }}
       .lock-deposit-text p {{
         font-size: 0.78rem !important;
         line-height: 1.45 !important;
+        color: #e8e0d5 !important;
       }}
       .lock-deposit-cta-group {{
         display: flex !important;
@@ -3455,14 +3494,35 @@ def update_listing():
       flex-wrap: wrap;
       gap: 8px;
     }}
+    .hotline-phone-highlight,
+    .lock-deposit-banner a[href^="tel"],
+    .lock-deposit-text h3 a,
     .lock-deposit-text h3 span {{
-      color: var(--gold-light);
+      color: #ffd54f !important;
       font-family: var(--font-display);
-      font-weight: 800;
+      font-weight: 900 !important;
+      font-size: 1.35rem !important;
       letter-spacing: 0.5px;
+      text-decoration: none !important;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.2s;
+    }}
+    .hotline-phone-highlight:hover {{
+      color: #ffffff !important;
+      text-shadow: 0 0 12px rgba(255, 213, 79, 0.8);
+    }}
+    .hotline-inline-highlight,
+    .lock-deposit-text p a,
+    .lock-deposit-text p strong {{
+      color: #ffd54f !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      border-bottom: 1px dashed rgba(255, 213, 79, 0.6);
     }}
     .lock-deposit-text p {{
-      color: #dfd7cc;
+      color: #f4ecdc;
       font-size: 0.88rem;
       line-height: 1.55;
       margin: 0;
@@ -3767,8 +3827,8 @@ def update_listing():
         </div>
         <div class="lock-deposit-grid">
           <div class="lock-deposit-text">
-            <h3><i class="fa-solid fa-phone-volume" style="color: #c9a96e; margin-right: 8px;"></i>Hotline / Zalo Quản Lý Giỏ Hàng: <span>0909 000 712</span></h3>
-            <p>Dành riêng cho Chuyên viên kinh doanh &amp; Quản lý bán hàng: Vui lòng gọi hoặc nhắn Zalo trực tiếp đến <strong>0909 000 712</strong> để kiểm tra tình trạng còn/hết của mã căn và khóa cọc ngay trong thời gian thực trước khi tiến hành nhận tiền khách hàng.</p>
+            <h3><i class="fa-solid fa-phone-volume" style="color: #ffd54f; margin-right: 8px;"></i>Hotline / Zalo Quản Lý Giỏ Hàng: <a href="tel:0909000712" class="hotline-phone-highlight">0909 000 712</a></h3>
+            <p>Dành riêng cho Chuyên viên kinh doanh &amp; Quản lý bán hàng: Vui lòng gọi hoặc nhắn Zalo trực tiếp đến <a href="tel:0909000712" class="hotline-inline-highlight">0909 000 712</a> để kiểm tra tình trạng còn/hết của mã căn và khóa cọc ngay trong thời gian thực trước khi tiến hành nhận tiền khách hàng.</p>
           </div>
           <div class="lock-deposit-cta-group">
             <a href="tel:0909000712" class="btn-lock-phone">
