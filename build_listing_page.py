@@ -431,8 +431,8 @@ def update_listing():
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/{code.lower()}" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn {code}">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/{code.lower()}" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn {code}">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('{code}', '{code.lower()}')" title="Sao chép link căn {code}">
                 <i class="fa-solid fa-copy"></i>
@@ -2049,10 +2049,10 @@ def update_listing():
     }}
     .btn-primary-action {{
       flex: 1;
-      background: var(--primary);
+      background: linear-gradient(135deg, #16a34a 0%, #10b981 100%);
       color: #ffffff;
       border: none;
-      padding: 11px 16px;
+      padding: 10px 14px;
       border-radius: 6px;
       font-size: 0.88rem;
       font-weight: 700;
@@ -2060,11 +2060,17 @@ def update_listing():
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      transition: background 0.2s;
+      gap: 7px;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.28);
+      transition: all 0.2s ease;
     }}
     .btn-primary-action:hover {{
-      background: var(--gold-dark);
+      background: linear-gradient(135deg, #15803d 0%, #059669 100%);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+      color: #ffffff;
+      transform: translateY(-1px);
     }}
     .btn-view-map-action {{
       width: 44px;
@@ -2355,7 +2361,7 @@ def update_listing():
       display: block;
     }}
     .btn-table-action {{
-      background: var(--primary);
+      background: linear-gradient(135deg, #16a34a 0%, #10b981 100%);
       color: #ffffff;
       border: none;
       padding: 6px 12px;
@@ -2366,10 +2372,15 @@ def update_listing():
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      transition: background 0.2s;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+      transition: all 0.2s ease;
     }}
     .btn-table-action:hover {{
-      background: var(--gold-dark);
+      background: linear-gradient(135deg, #15803d 0%, #059669 100%);
+      box-shadow: 0 3px 8px rgba(16, 185, 129, 0.35);
+      color: #ffffff;
     }}
 
     /* Empty state */
@@ -3272,10 +3283,11 @@ def update_listing():
         justify-content: center !important;
         gap: 4px !important;
         border-radius: 6px !important;
-        background: var(--primary) !important;
+        background: linear-gradient(135deg, #16a34a 0%, #10b981 100%) !important;
         color: #ffffff !important;
         text-decoration: none !important;
         white-space: nowrap !important;
+        box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25) !important;
       }}
       .btn-copy-action,
       .btn-view-map-action,

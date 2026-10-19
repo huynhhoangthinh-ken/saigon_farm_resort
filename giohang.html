@@ -1485,10 +1485,10 @@
     }
     .btn-primary-action {
       flex: 1;
-      background: var(--primary);
+      background: linear-gradient(135deg, #16a34a 0%, #10b981 100%);
       color: #ffffff;
       border: none;
-      padding: 11px 16px;
+      padding: 10px 14px;
       border-radius: 6px;
       font-size: 0.88rem;
       font-weight: 700;
@@ -1496,11 +1496,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      transition: background 0.2s;
+      gap: 7px;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.28);
+      transition: all 0.2s ease;
     }
     .btn-primary-action:hover {
-      background: var(--gold-dark);
+      background: linear-gradient(135deg, #15803d 0%, #059669 100%);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+      color: #ffffff;
+      transform: translateY(-1px);
     }
     .btn-view-map-action {
       width: 44px;
@@ -1791,7 +1797,7 @@
       display: block;
     }
     .btn-table-action {
-      background: var(--primary);
+      background: linear-gradient(135deg, #16a34a 0%, #10b981 100%);
       color: #ffffff;
       border: none;
       padding: 6px 12px;
@@ -1802,10 +1808,15 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      transition: background 0.2s;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+      transition: all 0.2s ease;
     }
     .btn-table-action:hover {
-      background: var(--gold-dark);
+      background: linear-gradient(135deg, #15803d 0%, #059669 100%);
+      box-shadow: 0 3px 8px rgba(16, 185, 129, 0.35);
+      color: #ffffff;
     }
 
     /* Empty state */
@@ -2708,10 +2719,11 @@
         justify-content: center !important;
         gap: 4px !important;
         border-radius: 6px !important;
-        background: var(--primary) !important;
+        background: linear-gradient(135deg, #16a34a 0%, #10b981 100%) !important;
         color: #ffffff !important;
         text-decoration: none !important;
         white-space: nowrap !important;
+        box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25) !important;
       }
       .btn-copy-action,
       .btn-view-map-action,
@@ -4410,8 +4422,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a08" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A08">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a08" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A08">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A08', 'a08')" title="Sao chép link căn A08">
                 <i class="fa-solid fa-copy"></i>
@@ -4553,8 +4565,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a09" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A09">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a09" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A09">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A09', 'a09')" title="Sao chép link căn A09">
                 <i class="fa-solid fa-copy"></i>
@@ -4696,8 +4708,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a11" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A11">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a11" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A11">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A11', 'a11')" title="Sao chép link căn A11">
                 <i class="fa-solid fa-copy"></i>
@@ -4839,8 +4851,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a12" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A12">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a12" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A12">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A12', 'a12')" title="Sao chép link căn A12">
                 <i class="fa-solid fa-copy"></i>
@@ -4986,8 +4998,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a14" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A14">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a14" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A14">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A14', 'a14')" title="Sao chép link căn A14">
                 <i class="fa-solid fa-copy"></i>
@@ -5133,8 +5145,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a15" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A15">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a15" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A15">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A15', 'a15')" title="Sao chép link căn A15">
                 <i class="fa-solid fa-copy"></i>
@@ -5276,8 +5288,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a16" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A16">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a16" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A16">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A16', 'a16')" title="Sao chép link căn A16">
                 <i class="fa-solid fa-copy"></i>
@@ -5419,8 +5431,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a17" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A17">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a17" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A17">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A17', 'a17')" title="Sao chép link căn A17">
                 <i class="fa-solid fa-copy"></i>
@@ -5562,8 +5574,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/a23" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn A23">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/a23" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn A23">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('A23', 'a23')" title="Sao chép link căn A23">
                 <i class="fa-solid fa-copy"></i>
@@ -5705,8 +5717,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b05" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B05">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b05" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B05">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B05', 'b05')" title="Sao chép link căn B05">
                 <i class="fa-solid fa-copy"></i>
@@ -5848,8 +5860,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b08" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B08">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b08" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B08">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B08', 'b08')" title="Sao chép link căn B08">
                 <i class="fa-solid fa-copy"></i>
@@ -5991,8 +6003,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b09" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B09">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b09" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B09">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B09', 'b09')" title="Sao chép link căn B09">
                 <i class="fa-solid fa-copy"></i>
@@ -6134,8 +6146,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b10" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B10">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b10" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B10">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B10', 'b10')" title="Sao chép link căn B10">
                 <i class="fa-solid fa-copy"></i>
@@ -6277,8 +6289,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b12" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B12">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b12" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B12">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B12', 'b12')" title="Sao chép link căn B12">
                 <i class="fa-solid fa-copy"></i>
@@ -6420,8 +6432,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b13" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B13">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b13" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B13">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B13', 'b13')" title="Sao chép link căn B13">
                 <i class="fa-solid fa-copy"></i>
@@ -6563,8 +6575,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b14" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B14">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b14" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B14">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B14', 'b14')" title="Sao chép link căn B14">
                 <i class="fa-solid fa-copy"></i>
@@ -6706,8 +6718,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b17" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B17">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b17" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B17">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B17', 'b17')" title="Sao chép link căn B17">
                 <i class="fa-solid fa-copy"></i>
@@ -6849,8 +6861,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b18" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B18">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b18" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B18">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B18', 'b18')" title="Sao chép link căn B18">
                 <i class="fa-solid fa-copy"></i>
@@ -6992,8 +7004,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b19" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B19">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b19" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B19">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B19', 'b19')" title="Sao chép link căn B19">
                 <i class="fa-solid fa-copy"></i>
@@ -7139,8 +7151,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b22" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B22">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b22" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B22">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B22', 'b22')" title="Sao chép link căn B22">
                 <i class="fa-solid fa-copy"></i>
@@ -7286,8 +7298,8 @@
 
             <!-- Footer Action -->
             <div class="card-actions">
-              <a href="/b23" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết & CSBH Căn B23">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Chi Tiết & CSBH
+              <a href="/b23" onclick="event.stopPropagation()" class="btn-primary-action" title="Xem chi tiết Căn B23">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Chi tiết
               </a>
               <button type="button" class="btn-copy-action" onclick="event.stopPropagation(); copyLotShareLink('B23', 'b23')" title="Sao chép link căn B23">
                 <i class="fa-solid fa-copy"></i>
