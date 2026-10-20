@@ -50,10 +50,10 @@ def get_villa_archetype(direction, area_val):
                 "layout_img": "/assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_1.webp",
                 "desc": "Thiết kế trải rộng theo phương ngang, tối ưu hóa đón gió lành và ánh sáng bình minh. Hồ bơi muối khoáng riêng tư, sân vườn sinh thái 700m².",
                 "gallery": [
-                    "/assets/Index_asset/villa_gallery/sunrise_1_ext_1.webp",
-                    "/assets/Index_asset/villa_gallery/sunrise_1_ext_2.jpg",
-                    "/assets/Index_asset/villa_gallery/sunrise_1_living_1.jpg",
-                    "/assets/Index_asset/villa_gallery/sunrise_1_bed_1.webp"
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.webp"
                 ]
             }
         else:
@@ -63,10 +63,10 @@ def get_villa_archetype(direction, area_val):
                 "layout_img": "/assets/Index_asset/Loai_hinh_Villa/MatBang_Sunrise_2.webp",
                 "desc": "Biểu tượng quyền uy của gia tộc với sảnh đón thông tầng lộng lẫy, ban công Sky Deck ngắm trọn bình minh và không gian gala tiệc ngoài trời riêng tư.",
                 "gallery": [
-                    "/assets/Index_asset/villa_gallery/sunrise_2_living_1.jpg",
-                    "/assets/Index_asset/villa_gallery/sunrise_2_living_2.jpg",
-                    "/assets/Index_asset/villa_gallery/sunrise_2_bed_1.jpg",
-                    "/assets/Index_asset/villa_gallery/sunrise_2_shc_1.webp"
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp"
                 ]
             }
     else:
@@ -77,10 +77,10 @@ def get_villa_archetype(direction, area_val):
                 "layout_img": "/assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_1.webp",
                 "desc": "Bố cục sân trong truyền thống kết hợp kiến trúc đương đại. Đón trọn luồng gió mát từ mặt hồ 100ha, tạo vi khí hậu mát lành quanh năm.",
                 "gallery": [
-                    "/assets/Index_asset/villa_gallery/sunset_1_living.webp",
-                    "/assets/Index_asset/villa_gallery/sunset_1_master.webp",
-                    "/assets/Index_asset/villa_gallery/sunset_1_courtyard.jpg",
-                    "/assets/Index_asset/villa_gallery/sunset_1_lake_1.webp"
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp"
                 ]
             }
         else:
@@ -90,10 +90,10 @@ def get_villa_archetype(direction, area_val):
                 "layout_img": "/assets/Index_asset/Loai_hinh_Villa/MatBang_Sunset_2.webp",
                 "desc": "Tầm nhìn vô cực bắt trọn khoảnh khắc hoàng hôn rực rỡ buông xuống mặt hồ. Thiết kế 2 tầng biệt lập, công năng cao cấp chuẩn nghỉ dưỡng quốc tế.",
                 "gallery": [
-                    "/assets/Index_asset/villa_gallery/sunset_2_ext_1.jpg",
-                    "/assets/Index_asset/villa_gallery/sunset_2_ext_2.jpg",
-                    "/assets/Index_asset/villa_gallery/sunset_2_living.webp",
-                    "/assets/Index_asset/villa_gallery/sunset_2_master.webp"
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp",
+                    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.webp"
                 ]
             }
 
@@ -139,10 +139,10 @@ def build_unit_page_html(item, all_items):
             "layout_img": "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp",
             "desc": "Phương án quy hoạch kiến trúc 30 phòng lưu trú sinh thái cao cấp (diện tích sàn 850m²). Tối ưu hóa dòng tiền kinh doanh retreat/chữa lành giữa không gian thiên nhiên, bàn giao hoàn thiện full nội thất theo tiêu chuẩn vận hành MDS Living. Chính sách thuê lại 120 Tr/tháng (30 phòng x 4 Tr/tháng) từ MDS Living mang lại dòng tiền an tâm thụ động.",
             "gallery": [
-                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp",
-                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_Bat_dong_San_dong_tien.webp",
-                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_7.webp",
-                "/assets/Index_asset/Phoicanh_3D_Tien_ich/Ven_ho_clubhouse/Lake_Clubhouse_1.jpg"
+                "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.webp",
+                "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp",
+                "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp",
+                "/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp"
             ]
         }
         page_title = f"Căn {code} ({area_str} m²) — Điền An | Đơn Giá Đất Từ {land_unit_price_mil} · Gói 30 Phòng {price_bil} | Saigon Farm Resort"
@@ -3411,6 +3411,83 @@ def build_unit_page_html(item, all_items):
         width: 180px !important;
       }}
     }}
+
+    /* 3D Amenities Showcase Strip */
+    .unit-3d-amenities {{
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-top: 24px;
+      box-shadow: var(--shadow-sm);
+    }}
+    .u3d-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }}
+    .u3d-title {{
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }}
+    .u3d-grid {{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }}
+    @media (max-width: 768px) {{
+      .u3d-grid {{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }}
+    }}
+    .u3d-item {{
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      transition: all 0.25s ease;
+    }}
+    .u3d-item:hover {{
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      box-shadow: var(--shadow-md);
+    }}
+    .u3d-item img {{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }}
+    .u3d-item:hover img {{
+      transform: scale(1.06);
+    }}
+    .u3d-item-caption {{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 6px 8px;
+      background: linear-gradient(0deg, rgba(14,26,20,0.92) 0%, transparent 100%);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+
   </style>
 </head>
 <body>
@@ -3606,6 +3683,35 @@ def build_unit_page_html(item, all_items):
                       <i class="fa-solid fa-book-open"></i> Xem Thuyết Minh Kiến Trúc Chi Tiết
                     </a>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3D Amenities Surroundings Strip -->
+            <div class="unit-3d-amenities">
+              <div class="u3d-header">
+                <h3 class="u3d-title"><i class="fa-solid fa-sparkles" style="color:var(--gold);"></i> Hệ Sinh Thái &amp; Tiện Ích Thừa Hưởng Quanh Căn {code}</h3>
+                <span style="font-size: 0.82rem; color: var(--gold-dark); font-weight: 700;"><i class="fa-solid fa-gem"></i> Bộ 3D Tiện Ích Mới 2026</span>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5;">
+                Chủ nhân Căn {code} sở hữu trọn vẹn quyền tiếp cận quần thể đại tiện ích nghỉ dưỡng 100ha: Clubhouse ven hồ, hồ bơi khoáng muối, bến thuyền kayak và công viên bản sắc Việt:
+              </p>
+              <div class="u3d-grid">
+                <div class="u3d-item" onclick="switchGalleryImg('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp', null)">
+                  <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_2.webp" alt="Clubhouse Ven Hồ & Bến Thuyền Kayak" loading="lazy">
+                  <div class="u3d-item-caption">Clubhouse Ven Hồ 100ha</div>
+                </div>
+                <div class="u3d-item" onclick="switchGalleryImg('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp', null)">
+                  <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_4.webp" alt="Hồ Bơi Điện Phân Khoáng Muối" loading="lazy">
+                  <div class="u3d-item-caption">Hồ Bơi Điện Phân Khoáng Muối</div>
+                </div>
+                <div class="u3d-item" onclick="switchGalleryImg('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp', null)">
+                  <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_3.webp" alt="Cung Tường Sử Việt & Không Gian Bản Sắc" loading="lazy">
+                  <div class="u3d-item-caption">Cung Tường Sử Việt</div>
+                </div>
+                <div class="u3d-item" onclick="switchGalleryImg('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp', null)">
+                  <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_11.webp" alt="Bến Du Thuyền & Thể Thao Nước" loading="lazy">
+                  <div class="u3d-item-caption">Bến Thuyền & Chèo SUP</div>
                 </div>
               </div>
             </div>

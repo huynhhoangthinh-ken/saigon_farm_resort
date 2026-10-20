@@ -10,21 +10,26 @@ def clean_text(t):
 
 # 100% verified existing images in repo
 verified_images = [
-    "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_2_VILLA/SFR_04.PC_01.jpg",
-    "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNSET_VILLA/SUNSET_1_VILLA/SFR_04.PC_01.jpg",
-    "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_06.jpg",
-    "assets/Index_asset/02_Phoi_Canh_3D/09.3D_TKCS-SUNRISE_VILLA/05.3D_TKCS-SUNRISE_1_VILLA/05.3D_TKCS-NHA_GO_4_MAU_1-_07.2025/01._NGOAI_THAT/SFR_NGOAI_THAT_(3).jpg",
-    "assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg",
-    "assets/Index_asset/Phoicanh_3D_Tien_ich/Villa_mau_ven_ruong_lua/S03_Final_Fix_001.webp",
-    "assets/Index_asset/Hero_Slider/hero_slide_1.webp",
-    "assets/Index_asset/tien_ich_3D/Clubhoue_ven_ho.jpg",
-    "assets/Index_asset/tien_ich_3D/Không_gian_clubhouse_ven_ho.jpg",
-    "assets/Index_asset/tien_ich_3D/Hồ_bơi_ven_Hồ.jpg",
-    "assets/Index_asset/tien_ich_3D/Tiện_ích_bên_hồ_&_Kayak.jpg",
-    "assets/Index_asset/tien_ich_3D/Đường_dạo_bộ_Bên_Hồ.jpg",
-    "assets/Index_asset/tien_ich_3D/An_yên_thanh_bình.jpg",
-    "assets/Index_asset/tien_ich_3D/Không_gian_sắc_việt.jpg",
-    "assets/Index_asset/tien_ich_3D/Việt_Mã_Viên.jpg"
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_13.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp"
 ]
 
 with open("data/listing_categories.json", "r", encoding="utf-8") as f:
@@ -1302,6 +1307,103 @@ def render_page(cat, all_cats):
         padding: 16px !important;
       }}
     }}
+
+    /* 3D Amenities Showcase Section */
+    .cat-3d-showcase {{
+      padding: 70px 20px;
+      background: linear-gradient(180deg, #183024 0%, #0d1e16 100%);
+      color: #ffffff;
+    }}
+    .c3d-header {{
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 36px;
+    }}
+    .c3d-tag {{
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,169,110,0.15);
+      border: 1px solid rgba(201,169,110,0.4);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }}
+    .c3d-title {{
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      margin-bottom: 12px;
+      color: #ffffff;
+    }}
+    .c3d-desc {{
+      color: #c2d1cb;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }}
+    .c3d-grid {{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }}
+    @media (max-width: 1024px) {{
+      .c3d-grid {{
+        grid-template-columns: repeat(3, 1fr);
+      }}
+    }}
+    @media (max-width: 768px) {{
+      .c3d-grid {{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }}
+      .cat-3d-showcase {{
+        padding: 40px 16px;
+      }}
+    }}
+    .c3d-card {{
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      background: #0a140f;
+      border: 1px solid rgba(201, 169, 110, 0.25);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }}
+    .c3d-card:hover {{
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(201, 169, 110, 0.35);
+    }}
+    .c3d-card img {{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }}
+    .c3d-card:hover img {{
+      transform: scale(1.06);
+    }}
+    .c3d-caption {{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 12px;
+      background: linear-gradient(0deg, rgba(10,20,15,0.92) 0%, transparent 100%);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }}
+
   </style>
 </head>
 <body>

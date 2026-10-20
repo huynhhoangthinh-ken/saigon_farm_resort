@@ -290,22 +290,22 @@ def main():
             features = "ĐƠN GIÁ TỐT NHẤT DÒNG ĐIỀN SẢN (Chỉ 11,21 Tr/m²). Khuôn viên tới 1.291,20 m², vị trí ngoài cùng cánh Đông tiếp giáp công viên và đường trục lớn."
             suitable_for = "Nhà đầu tư chiến lược tối ưu hóa biên độ lợi nhuận với đơn giá đầu vào tốt nhất dòng Điền Sản."
             amenity = "Bình thường"
-            image = old_it.get('image', 'assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg')
+            image = old_it.get('image', 'assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp')
         elif code == 'A22':
             features = "KHUÔN VIÊN ĐIỀN SẢN 1.012,53 M² DÃY A VIEW ĐỒNG LÚA. Đơn giá đất tốt, hưởng đặc quyền 24 tháng quản lý MDS Living và gói ủy thác lưu trú hằng quý."
             suitable_for = "Gia chủ tìm kiếm tư dinh dưỡng sinh, tái tạo năng lượng với không gian mở khoáng đạt."
             amenity = "Bình thường"
-            image = "assets/Index_asset/villa_gallery/sunset_2_ext_2.jpg"
+            image = "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp"
         elif code == 'B24':
             features = "KHUÔN VIÊN ĐIỀN SẢN 1.336,20 M² DÃY B. Diện tích lớn bề thế, hưởng trọn đặc quyền quản lý 24 tháng và gói ủy thác vận hành MDS Living."
             suitable_for = "Gia chủ yêu thích khuôn viên rộng lớn, tích sản an nhàn với tiềm năng tăng giá vượt trội."
             amenity = "Bình thường"
-            image = old_it.get('image', 'assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg')
+            image = old_it.get('image', 'assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp')
         elif code == 'A19':
             features = "TẦM NHÌN TRỰC DIỆN ĐỒNG LÚA THANH BÌNH. Hướng Đông Bắc đón gió sinh thái mát mẻ quanh năm, không gian tĩnh lặng tuyệt đối bên thềm đồng lúa."
             suitable_for = "Gia chủ tìm kiếm tư dinh dưỡng sinh, tái tạo năng lượng với không gian mở khoáng đạt và dịch vụ MDS Living chuẩn 5 sao."
             amenity = "Bình thường"
-            image = "assets/Index_asset/villa_gallery/sunset_2_ext_2.jpg"
+            image = "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp"
         elif code == 'A20':
             features = "KHUÔN VIÊN GẦN 950 M² VIEW ĐỒNG LÚA. Thế đất vuông vức bề thế, hướng Đông Bắc đón gió lành, liền kề dải cảnh quan sinh thái và trục nội bộ yên tĩnh."
             suitable_for = "Gia đình đa thế hệ ưu tiên không gian sống biệt lập, diện tích lớn để thiết kế cảnh quan vườn và hồ bơi khoáng muối riêng biệt."
@@ -314,7 +314,7 @@ def main():
             features = old_it.get('features', '')
             suitable_for = old_it.get('suitable_for', '')
             amenity = old_it.get('amenity', 'Bình thường')
-            image = old_it.get('image', 'assets/Index_asset/Phoicanh_3D_Tien_ich/Tong_the/S01_Final_Fix.jpg')
+            image = old_it.get('image', 'assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp')
 
         # Assign lot position photo as thumbnail for quick sales identification
         lot_img_path = f"assets/Index_asset/listing_lots/{code}.webp"

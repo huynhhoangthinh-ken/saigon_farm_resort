@@ -28,13 +28,13 @@
   <meta property="og:url" content="https://saigonfarmresort.com/dien-an">
   <meta property="og:title" content="Điền An (The Haven Collection) | Saigon Farm Resort">
   <meta property="og:description" content="Điền An (The Haven Collection) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay.">
-  <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/Hero_Slider/hero_slide_1.webp">
+  <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Điền An (The Haven Collection) | Saigon Farm Resort">
   <meta name="twitter:description" content="Điền An (The Haven Collection) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay.">
-  <meta name="twitter:image" content="https://saigonfarmresort.com/assets/Index_asset/Hero_Slider/hero_slide_1.webp">
+  <meta name="twitter:image" content="https://saigonfarmresort.com/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -47,7 +47,7 @@
         "name": "Điền An (The Haven Collection) - Saigon Farm Resort",
         "description": "Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu là 80 triệu/đồng. Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.",
         "url": "https://saigonfarmresort.com/dien-an",
-        "image": "https://saigonfarmresort.com/assets/Index_asset/Hero_Slider/hero_slide_1.webp",
+        "image": "https://saigonfarmresort.com/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp",
         "provider": {
           "@type": "Organization",
           "name": "Saigon Farm Resort",
@@ -254,7 +254,7 @@
       background-position: center;
       color: #fff;
       padding: 80px 20px;
-      background-image: linear-gradient(to right, rgba(14,26,20,0.92) 0%, rgba(14,26,20,0.72) 60%, rgba(14,26,20,0.4) 100%), url('assets/Index_asset/Hero_Slider/hero_slide_1.webp');
+      background-image: linear-gradient(to right, rgba(14,26,20,0.92) 0%, rgba(14,26,20,0.72) 60%, rgba(14,26,20,0.4) 100%), url('assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp');
     }
     .hero-container {
       max-width: 1240px;
@@ -1060,6 +1060,103 @@
         padding: 16px !important;
       }
     }
+
+    /* 3D Amenities Showcase Section */
+    .cat-3d-showcase {
+      padding: 70px 20px;
+      background: linear-gradient(180deg, #183024 0%, #0d1e16 100%);
+      color: #ffffff;
+    }
+    .c3d-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 36px;
+    }
+    .c3d-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,169,110,0.15);
+      border: 1px solid rgba(201,169,110,0.4);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .c3d-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    .c3d-desc {
+      color: #c2d1cb;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+    .c3d-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    @media (max-width: 1024px) {
+      .c3d-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .c3d-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .cat-3d-showcase {
+        padding: 40px 16px;
+      }
+    }
+    .c3d-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      background: #0a140f;
+      border: 1px solid rgba(201, 169, 110, 0.25);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .c3d-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(201, 169, 110, 0.35);
+    }
+    .c3d-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .c3d-card:hover img {
+      transform: scale(1.06);
+    }
+    .c3d-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 12px;
+      background: linear-gradient(0deg, rgba(10,20,15,0.92) 0%, transparent 100%);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
   </style>
 </head>
 <body>
@@ -1160,8 +1257,8 @@
           </div>
         </div>
 
-        <div class="overview-img-wrap" onclick="openLightbox('assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp')" style="cursor: pointer; background: #0a1b17;">
-          <img src="assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp" alt="Điền An" class="overview-img" style="object-fit: contain; max-height: 520px;">
+        <div class="overview-img-wrap" onclick="openLightbox('assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp')" style="cursor: pointer; background: #0a1b17;">
+          <img src="assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp" alt="Điền An" class="overview-img" style="object-fit: contain; max-height: 520px;">
           <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.65); color: #fff; font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; backdrop-filter: blur(4px); pointer-events: none; display: flex; align-items: center; gap: 6px;">
             <i class="fa-solid fa-magnifying-glass-plus"></i> Nhấp để phóng to chi tiết
           </div>
@@ -1461,7 +1558,7 @@
       <div class="switch-grid">
         
         <a href="/biet-phu-dien-trang" class="collection-switch-card">
-          <div class="switch-card-bg" style="background-image: url('assets/Index_asset/tien_ich_3D/Dinh_thự_ven_đồng_lúa.jpg');"></div>
+          <div class="switch-card-bg" style="background-image: url('assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp');"></div>
           <div class="switch-card-content">
             <span class="switch-badge">6 Dinh Thự Mở Bán Đợt 1 (Chỉ Bán Đất)</span>
             <h3>Biệt Phủ Điền Trang</h3>
@@ -1472,7 +1569,7 @@
         </a>
         
         <a href="/dien-san" class="collection-switch-card">
-          <div class="switch-card-bg" style="background-image: url('assets/Index_asset/tien_ich_3D/Tong_quan.jpg');"></div>
+          <div class="switch-card-bg" style="background-image: url('assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp');"></div>
           <div class="switch-card-content">
             <span class="switch-badge">11 Sản Phẩm Mở Bán Đợt 1 (Chỉ Bán Đất)</span>
             <h3>Điền Sản</h3>
