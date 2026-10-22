@@ -12,9 +12,9 @@
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="product">
   <meta property="og:title" content="Căn B22 · Điền An (1.044,86 m²) — Saigon Farm Resort">
-  <meta property="og:description" content="Giá niêm yết: 17,60 Tỷ • Đơn giá: 16,84 Tr/m² • 100% Sổ đỏ riêng. Ưu đãi giảm 800 Triệu khi hoàn tất xây dựng trước 12/2027.">
+  <meta property="og:description" content="Giá niêm yết: 17,60 Tỷ • Đơn giá: 16,84 Tr/m² • 100% Sổ đỏ riêng. Chiết khấu thanh toán trực tiếp lên đến 1 Tỷ đồng.">
   <meta property="og:url" content="https://saigonfarmresort.com/b22">
-  <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/listing_lots/B22.webp">
+  <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp">
   <meta property="og:site_name" content="Saigon Farm Resort">
 
   <!-- Favicon -->
@@ -898,6 +898,16 @@
 
     @media (max-width: 640px) {
       .scheme-tabs {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Điền Sản: chỉ 3 phương án (50/50 · 70/30 · 100%) */
+    .scheme-tabs.scheme-tabs-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+      .scheme-tabs.scheme-tabs-3 {
         grid-template-columns: 1fr;
       }
     }
@@ -2712,7 +2722,7 @@
         <!-- Visual & Info Hero Card -->
         <div class="unit-hero-card">
           <div class="hero-gallery-main">
-            <img id="mainGalleryImg" src="/assets/Index_asset/listing_lots/B22.webp" alt="Bảng giá & Vị trí Căn B22 - Điền An" onerror="this.onerror=null; this.src='/assets/Index_asset/listing_lots/B22.jpg';">
+            <img id="mainGalleryImg" src="/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp" alt="Bảng giá & Vị trí Căn B22 - Điền An" onerror="this.onerror=null; this.src='/assets/Index_asset/listing_lots/B22.jpg';">
             <div class="gallery-badges">
               <span class="badge-hero-code">MÃ B22</span>
               <span class="badge-hero-cat">Điền An</span>
@@ -2721,8 +2731,8 @@
           <!-- Thumbnails -->
           <div class="hero-gallery-thumbs">
             
-            <div class="thumb-item active" onclick="switchGalleryImg('/assets/Index_asset/listing_lots/B22.webp', this)">
-              <img src="/assets/Index_asset/listing_lots/B22.webp" alt="Ảnh chính Căn B22 - Layout Mặt Bằng">
+            <div class="thumb-item active" onclick="switchGalleryImg('/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp', this)">
+              <img src="/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout.webp" alt="Ảnh chính Căn B22 - Layout Mặt Bằng">
             </div>
             <div class="thumb-item" onclick="switchGalleryImg('/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp', this)">
               <img src="/assets/Index_asset/editorial_photo/3_product_type/Dien_an_layout_30_phong_moi_nhat.webp" alt="Ảnh 2 Căn B22">
@@ -3226,12 +3236,11 @@
       unitPriceMil: '16,84 Tr/m²'
     };
 
-    let currentScheme = 1; // 1: PA1 (-200Tr), 2: PA2 (-600Tr), 3: PA3 (-800Tr), 4: PA4 (-1 Tỷ)
-    const BONUS_BUILD_AMOUNT = 800000000; // 800 triệu hoàn tất xây dựng trước Q4/2027
+    let currentScheme = 1; // 1: PA1 (-200Tr, chỉ Biệt Phủ), 2: PA2 (-600Tr), 3: PA3 (-800Tr), 4: PA4 (-1 Tỷ)
     const DISCOUNT_SCHEME_1 = 200000000;  // 200 triệu cho PA1 - Khởi đầu an nhàn
-    const DISCOUNT_SCHEME_2 = 600000000;  // 600 triệu cho PA2 - Chủ động tài chính
-    const DISCOUNT_SCHEME_3 = 800000000;  // 800 triệu cho PA3 - Thanh toán ưu việt
-    const DISCOUNT_SCHEME_4 = 1000000000; // 1 tỷ cho PA4 - Thanh toán tinh gọn
+    const DISCOUNT_SCHEME_2 = 600000000;  // 600 triệu cho PA2 - Thanh toán chuẩn 50/50
+    const DISCOUNT_SCHEME_3 = 800000000;  // 800 triệu cho PA3 - Thanh toán 70/30
+    const DISCOUNT_SCHEME_4 = 1000000000; // 1 tỷ cho PA4 - Thanh toán 100%
 
     function formatVND(num) {
       return Math.round(num).toLocaleString('vi-VN') + ' đ';
@@ -3261,7 +3270,7 @@
     }
 
     // Helper tính toán dữ liệu tiến độ cho từng phương án
-    function getSchemeData(schemeId, applyBonus) {
+    function getSchemeData(schemeId) {
       const originalPrice = LOT_DATA.originalPrice;
       let schemeDiscount = 0;
       let schemeName = '';
@@ -3273,20 +3282,19 @@
         shortName = 'PA 1 · Chuẩn 12 Tháng';
       } else if (schemeId === 2) {
         schemeDiscount = DISCOUNT_SCHEME_2;
-        schemeName = 'Phương thức 2 – Chủ động tài chính (-600 Tr · Công chứng 50%)';
-        shortName = 'PA 2 · Chủ Động 50%';
+        schemeName = 'Phương thức 2 – Thanh toán chuẩn 50/50 (-600 Tr · Công chứng 50%)';
+        shortName = 'PA 2 · Chuẩn 50/50';
       } else if (schemeId === 3) {
         schemeDiscount = DISCOUNT_SCHEME_3;
-        schemeName = 'Phương thức 3 – Thanh toán ưu việt (-800 Tr · Công chứng 70%)';
-        shortName = 'PA 3 · Ưu Việt 70%';
+        schemeName = 'Phương thức 3 – Thanh toán 70/30 (-800 Tr · Công chứng 70%)';
+        shortName = 'PA 3 · Thanh Toán 70/30';
       } else if (schemeId === 4) {
         schemeDiscount = DISCOUNT_SCHEME_4;
-        schemeName = 'Phương thức 4 – Thanh toán tinh gọn (-1 Tỷ · Công chứng 100%)';
-        shortName = 'PA 4 · Tinh Gọn 100%';
+        schemeName = 'Phương thức 4 – Thanh toán 100% (-1 Tỷ · Công chứng 100%)';
+        shortName = 'PA 4 · Thanh Toán 100%';
       }
 
-      const buildBonus = applyBonus ? BONUS_BUILD_AMOUNT : 0;
-      const totalDiscount = schemeDiscount + buildBonus;
+      const totalDiscount = schemeDiscount;
       const finalPrice = Math.max(0, originalPrice - totalDiscount);
 
       let rows = [];
@@ -3339,7 +3347,6 @@
         name: schemeName,
         shortName: shortName,
         schemeDiscount: schemeDiscount,
-        buildBonus: buildBonus,
         totalDiscount: totalDiscount,
         finalPrice: finalPrice,
         rows: rows
@@ -3347,13 +3354,7 @@
     }
 
     function updatePaymentCalculations() {
-      const bonusEl = document.getElementById('bonus800Toggle');
-      if (!bonusEl) return;
-      const applyBonus = bonusEl.checked;
-      const bonusStatusLabel = document.getElementById('bonusToggleStatus');
-      if (bonusStatusLabel) bonusStatusLabel.textContent = applyBonus ? 'Đang áp dụng (-800 Tr)' : 'Chưa áp dụng ưu đãi';
-
-      const sData = getSchemeData(currentScheme, applyBonus);
+      const sData = getSchemeData(currentScheme);
 
       // Update Summary Cards
       const origPriceEl = document.getElementById('summaryOriginalPrice');
@@ -3362,8 +3363,6 @@
       if (schemeDiscLabelEl) schemeDiscLabelEl.textContent = sData.name;
       const schemeDiscEl = document.getElementById('summarySchemeDiscount');
       if (schemeDiscEl) schemeDiscEl.textContent = sData.schemeDiscount > 0 ? ('-' + formatVND(sData.schemeDiscount)) : '0 đ';
-      const buildBonusEl = document.getElementById('summaryBuildBonus');
-      if (buildBonusEl) buildBonusEl.textContent = sData.buildBonus > 0 ? ('-' + formatVND(sData.buildBonus)) : '0 đ';
       const finalPriceEl = document.getElementById('summaryFinalPrice');
       if (finalPriceEl) finalPriceEl.textContent = formatVND(sData.finalPrice);
 
@@ -3416,7 +3415,7 @@
         <td colspan="2" class="total-label-cell">TỔNG CỘNG THANH TOÁN</td>
         <td class="td-ratio-cell"><span class="td-ratio" style="background:#183024; color:#fff;">100%</span></td>
         <td class="td-money total-money-val">${formatVND(finalPrice)}</td>
-        <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ toàn bộ chiết khấu & ưu đãi</td>
+        <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ chiết khấu phương thức thanh toán</td>
       `;
       tbody.appendChild(totalTr);
     }
@@ -3435,16 +3434,13 @@
 
     // In Cả 4 Phương Án Để Khách So Sánh Lựa Chọn
     function printAllSchemes() {
-      const bonusEl = document.getElementById('bonus800Toggle');
-      const applyBonus = bonusEl ? bonusEl.checked : false;
-
       const container = document.getElementById('allSchemesPrintContainer');
       if (!container) return;
       container.innerHTML = '';
 
       const schemes = [1, 2, 3, 4];
       schemes.forEach(sid => {
-        const sData = getSchemeData(sid, applyBonus);
+        const sData = getSchemeData(sid);
         const card = document.createElement('div');
         card.className = 'print-scheme-card';
 
@@ -3466,7 +3462,7 @@
             <div>
               <span class="print-scheme-card-title">${sData.name}</span>
               <div style="font-size: 7.2pt; color: #64748b; margin-top: 2px;">
-                Tổng chiết khấu & ưu đãi: <strong>${formatVND(sData.totalDiscount)}</strong>
+                Chiết khấu phương thức: <strong>${formatVND(sData.totalDiscount)}</strong>
               </div>
             </div>
             <div style="text-align: right;">
@@ -3491,7 +3487,7 @@
                   <td colspan="2" class="total-label-cell">TỔNG CỘNG THANH TOÁN</td>
                   <td class="td-ratio-cell"><span class="td-ratio" style="background:#183024; color:#fff;">100%</span></td>
                   <td class="td-money total-money-val">${formatVND(sData.finalPrice)}</td>
-                  <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ toàn bộ ưu đãi</td>
+                  <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ chiết khấu thanh toán</td>
                 </tr>
               </tbody>
             </table>
@@ -3578,9 +3574,7 @@
         return;
       }
 
-      const bonusEl = document.getElementById('bonus800Toggle');
-      const applyBonus = bonusEl ? bonusEl.checked : false;
-      const sData = getSchemeData(currentScheme, applyBonus);
+      const sData = getSchemeData(currentScheme);
 
       const text = `🏡 BẢNG TÍNH & TIẾN ĐỘ THANH TOÁN CĂN ${LOT_DATA.code} · SAIGON FARM RESORT
 📍 Phân khu: ${LOT_DATA.catTitle} | Dãy: ${LOT_DATA.block}
@@ -3588,8 +3582,8 @@
 🧭 Hướng: ${LOT_DATA.direction} | Vị trí: ${LOT_DATA.pos}
 💰 Giá gốc niêm yết: ${LOT_DATA.originalPriceStr}
 📋 Phương án chọn: ${sData.name}
-🎁 Ưu đãi xây dựng trước 12/2027: ${applyBonus ? '-800 Triệu đồng (Đã tính)' : 'Chưa áp dụng'}
-💎 TỔNG GIÁ THANH TOÁN SAU ƯU ĐÃI: ${formatVND(sData.finalPrice)}
+🎁 Chiết khấu thanh toán: ${sData.schemeDiscount > 0 ? ('-' + formatVND(sData.schemeDiscount)) : '0 đ'}
+💎 TỔNG GIÁ THANH TOÁN SAU CHIẾT KHẤU: ${formatVND(sData.finalPrice)}
 🌐 Xem chi tiết trực tuyến: https://saigonfarmresort.com/${LOT_DATA.codeLower}
 📞 Liên hệ: Chuyên viên tư vấn gửi bảng tính này để nhận hỗ trợ & đăng ký xe đưa đón tham quan thực địa.`;
 
@@ -3614,7 +3608,7 @@
 
     // Init on load
     document.addEventListener('DOMContentLoaded', () => {
-      updatePaymentCalculations();
+      selectScheme(1);
       updateRealtimePrintDate();
     });
   </script>

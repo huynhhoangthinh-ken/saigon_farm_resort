@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Căn B12 (829,44 m²) — Biệt Phủ Điền Trang | Bảng Giá & Tiến Độ Thanh Toán Saigon Farm Resort</title>
-  <meta name="description" content="Thông tin chi tiết Căn B12 (Biệt Phủ Điền Trang), diện tích 829,44m², hướng Đông Bắc, mặt đường Đường nội bộ. Xem chính sách thanh toán chuẩn, nhanh 70%, nhanh 100% và ưu đãi giảm 800 triệu khi xây dựng trước 12/2027.">
+  <meta name="description" content="Thông tin chi tiết Căn B12 (Biệt Phủ Điền Trang), diện tích 829,44m², hướng Đông Bắc, mặt đường Đường nội bộ. Xem chính sách thanh toán chuẩn, nhanh 70%, nhanh 100% cùng chiết khấu thanh toán lên đến 1 Tỷ đồng.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://saigonfarmresort.com/b12">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="product">
   <meta property="og:title" content="Căn B12 · Biệt Phủ Điền Trang (829,44 m²) — Saigon Farm Resort">
-  <meta property="og:description" content="Giá niêm yết: 10,10 Tỷ • Đơn giá: 12,17 Tr/m² • 100% Sổ đỏ riêng. Ưu đãi giảm 800 Triệu khi hoàn tất xây dựng trước 12/2027.">
+  <meta property="og:description" content="Giá niêm yết: 10,10 Tỷ • Đơn giá: 12,17 Tr/m² • 100% Sổ đỏ riêng. Chiết khấu thanh toán trực tiếp lên đến 1 Tỷ đồng.">
   <meta property="og:url" content="https://saigonfarmresort.com/b12">
   <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/listing_lots/B12.webp">
   <meta property="og:site_name" content="Saigon Farm Resort">
@@ -898,6 +898,16 @@
 
     @media (max-width: 640px) {
       .scheme-tabs {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Điền Sản: chỉ 3 phương án (50/50 · 70/30 · 100%) */
+    .scheme-tabs.scheme-tabs-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+      .scheme-tabs.scheme-tabs-3 {
         grid-template-columns: 1fr;
       }
     }
@@ -2911,7 +2921,6 @@
               <div class="poh-contact-info">
                 <div>Đơn vị Phát triển: <strong>MDS Land</strong></div>
                 <div>Đơn vị Vận hành: <strong>MDS Living</strong></div>
-                <div>Hotline CSKH: <strong>0906.99.33.68</strong></div>
                 <div>Website: <strong>saigonfarmresort.com</strong></div>
               </div>
             </div>
@@ -2956,9 +2965,9 @@
                   <div class="sqs-custom-select">
                     <select id="schemeSelectDropdown" class="scheme-dropdown" onchange="selectScheme(parseInt(this.value))">
                       <option value="1">📋 Phương Án 1: Khởi Đầu An Nhàn (Giãn 12 Tháng · Ưu Đãi -200 Triệu)</option>
-                      <option value="2">⚡ Phương Án 2: Chủ Động Tài Chính (50% / 50% · Ưu Đãi -600 Triệu)</option>
-                      <option value="3">💎 Phương Án 3: Thanh Toán Ưu Việt (70% / 30% · Ưu Đãi -800 Triệu)</option>
-                      <option value="4">👑 Phương Án 4: Thanh Toán Tinh Gọn (100% Sổ Trao Tay · Giảm -1 TỶ ĐỒNG)</option>
+                      <option value="2">⚡ Phương Án 2: Thanh Toán Chuẩn 50/50 (50% / 50% · Ưu Đãi -600 Triệu)</option>
+                      <option value="3">💎 Phương Án 3: Thanh Toán 70/30 (70% / 30% · Ưu Đãi -800 Triệu)</option>
+                      <option value="4">👑 Phương Án 4: Thanh Toán 100% (100% Sổ Trao Tay · Giảm -1 TỶ ĐỒNG)</option>
                     </select>
                     <i class="fa-solid fa-chevron-down sqs-select-icon"></i>
                   </div>
@@ -2966,33 +2975,9 @@
               </div>
             </div>
 
-            <!-- Construction 800M Bonus Card with Toggle -->
-            <div class="construction-bonus-card">
-              <div class="cbc-left">
-                <div class="cbc-badge">
-                  <i class="fa-solid fa-gift"></i> Đặc Quyền Xây Dựng Hoàn Thiện
-                </div>
-                <div class="cbc-title">
-                  Ưu Đãi Xây Dựng Hoàn Tất Trước 12/2027: <span>GIẢM NGAY 800 TRIỆU ĐỒNG</span>
-                </div>
-                <div class="cbc-desc">
-                  Khách hàng ký cam kết hoàn thành xây dựng điền trang trước tháng 12/2027 được giảm trực tiếp <strong>800.000.000 đ</strong> vào tổng giá trị thanh toán, phân bổ đều vào dòng tiền thực tế.
-                </div>
-              </div>
-              <div class="cbc-toggle-wrap">
-                <label class="toggle-switch">
-                  <input type="checkbox" id="bonus800Toggle" checked onchange="updatePaymentCalculations()">
-                  <span class="toggle-slider"></span>
-                </label>
-                <label for="bonus800Toggle" class="toggle-label" id="bonusToggleStatus">
-                  Đang áp dụng (-800 Tr)
-                </label>
-              </div>
-            </div>
-
             <!-- 4 Scheme Tabs -->
             <div class="scheme-tabs">
-              <div class="scheme-tab-btn active" id="tabBtn1" onclick="selectScheme(1)">
+              <div class="scheme-tab-btn" id="tabBtn1" onclick="selectScheme(1)">
                 <div class="stb-header">
                   <span class="stb-title">PA 1: Khởi Đầu An Nhàn</span>
                   <span class="stb-badge stb-badge-standard">12 Tháng</span>
@@ -3005,7 +2990,7 @@
 
               <div class="scheme-tab-btn" id="tabBtn2" onclick="selectScheme(2)">
                 <div class="stb-header">
-                  <span class="stb-title">PA 2: Chủ Động Tài Chính</span>
+                  <span class="stb-title">PA 2: Thanh Toán Chuẩn 50/50</span>
                   <span class="stb-badge stb-badge-fast">50% / 50%</span>
                 </div>
                 <div class="stb-sub">Thanh toán 50% trong 10 ngày ký HĐCN QSDĐ, 50% sau 12 tháng nhận sổ.</div>
@@ -3016,7 +3001,7 @@
 
               <div class="scheme-tab-btn" id="tabBtn3" onclick="selectScheme(3)">
                 <div class="stb-header">
-                  <span class="stb-title">PA 3: Thanh Toán Ưu Việt</span>
+                  <span class="stb-title">PA 3: Thanh Toán 70/30</span>
                   <span class="stb-badge stb-badge-fast">70% / 30%</span>
                 </div>
                 <div class="stb-sub">Thanh toán 70% trong 10 ngày ký HĐCN QSDĐ, 30% khi nhận bàn giao GCNQSDĐ.</div>
@@ -3027,7 +3012,7 @@
 
               <div class="scheme-tab-btn" id="tabBtn4" onclick="selectScheme(4)">
                 <div class="stb-header">
-                  <span class="stb-title">PA 4: Thanh Toán Tinh Gọn</span>
+                  <span class="stb-title">PA 4: Thanh Toán 100%</span>
                   <span class="stb-badge stb-badge-full">100% Sổ Trao Tay</span>
                 </div>
                 <div class="stb-sub">Cọc 500M, thanh toán 100% trong 20 ngày, ký HĐCN QSDĐ sang tên ngay.</div>
@@ -3046,25 +3031,21 @@
                 </div>
                 <div class="fsc-item">
                   <span class="fsc-label" id="summarySchemeDiscountLabel">Chiết Khấu Phương Thức</span>
-                  <span class="fsc-val discount" id="summarySchemeDiscount">0 đ</span>
-                </div>
-                <div class="fsc-item">
-                  <span class="fsc-label">Ưu Đãi Xây Dựng (12/2027)</span>
-                  <span class="fsc-val discount" id="summaryBuildBonus">-800.000.000 đ</span>
+                  <span class="fsc-val discount" id="summarySchemeDiscount">-200.000.000 đ</span>
                 </div>
               </div>
 
               <div class="fsc-total-box">
                 <div class="fsc-total-text">
-                  <span class="fsc-total-label">Tổng Giá Thanh Toán Sau Ưu Đãi</span>
-                  <span class="fsc-total-sub">Đã áp dụng toàn bộ chiết khấu phương thức & ưu đãi xây dựng</span>
+                  <span class="fsc-total-label">Tổng Giá Thanh Toán Sau Chiết Khấu</span>
+                  <span class="fsc-total-sub">Đã áp dụng chiết khấu theo phương thức thanh toán</span>
                 </div>
                 <div class="fsc-total-val" id="summaryFinalPrice">0 đ</div>
               </div>
 
               <div class="fsc-savings-badge" id="summarySavingsBadge">
                 <i class="fa-solid fa-piggy-bank"></i>
-                <span id="summarySavingsText">Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>800 Triệu đồng</strong></span>
+                <span id="summarySavingsText">Tổng mức tiết kiệm tài chính cho chủ nhân: <strong>200 Triệu đồng</strong></span>
               </div>
             </div>
 
@@ -3266,7 +3247,7 @@
             
             <li><i class="fa-solid fa-circle-check"></i> 100% Sổ đỏ riêng từng sản phẩm, thổ cư lâu dài</li>
             <li><i class="fa-solid fa-circle-check"></i> Độc quyền giữ chỗ & khóa vị trí căn B12</li>
-            <li><i class="fa-solid fa-circle-check"></i> Giảm 800 Triệu khi xây dựng trước 12/2027</li>
+            <li><i class="fa-solid fa-circle-check"></i> Chiết khấu thanh toán linh hoạt lên đến 1 Tỷ đồng</li>
             <li><i class="fa-solid fa-circle-check"></i> Đưa đón khảo sát thực địa xe riêng 5 sao</li>
         
           </ul>
@@ -3355,12 +3336,11 @@
       unitPriceMil: '12,17 Tr/m²'
     };
 
-    let currentScheme = 1; // 1: PA1 (-200Tr), 2: PA2 (-600Tr), 3: PA3 (-800Tr), 4: PA4 (-1 Tỷ)
-    const BONUS_BUILD_AMOUNT = 800000000; // 800 triệu hoàn tất xây dựng trước Q4/2027
+    let currentScheme = 1; // 1: PA1 (-200Tr, chỉ Biệt Phủ), 2: PA2 (-600Tr), 3: PA3 (-800Tr), 4: PA4 (-1 Tỷ)
     const DISCOUNT_SCHEME_1 = 200000000;  // 200 triệu cho PA1 - Khởi đầu an nhàn
-    const DISCOUNT_SCHEME_2 = 600000000;  // 600 triệu cho PA2 - Chủ động tài chính
-    const DISCOUNT_SCHEME_3 = 800000000;  // 800 triệu cho PA3 - Thanh toán ưu việt
-    const DISCOUNT_SCHEME_4 = 1000000000; // 1 tỷ cho PA4 - Thanh toán tinh gọn
+    const DISCOUNT_SCHEME_2 = 600000000;  // 600 triệu cho PA2 - Thanh toán chuẩn 50/50
+    const DISCOUNT_SCHEME_3 = 800000000;  // 800 triệu cho PA3 - Thanh toán 70/30
+    const DISCOUNT_SCHEME_4 = 1000000000; // 1 tỷ cho PA4 - Thanh toán 100%
 
     function formatVND(num) {
       return Math.round(num).toLocaleString('vi-VN') + ' đ';
@@ -3390,7 +3370,7 @@
     }
 
     // Helper tính toán dữ liệu tiến độ cho từng phương án
-    function getSchemeData(schemeId, applyBonus) {
+    function getSchemeData(schemeId) {
       const originalPrice = LOT_DATA.originalPrice;
       let schemeDiscount = 0;
       let schemeName = '';
@@ -3402,20 +3382,19 @@
         shortName = 'PA 1 · Chuẩn 12 Tháng';
       } else if (schemeId === 2) {
         schemeDiscount = DISCOUNT_SCHEME_2;
-        schemeName = 'Phương thức 2 – Chủ động tài chính (-600 Tr · Công chứng 50%)';
-        shortName = 'PA 2 · Chủ Động 50%';
+        schemeName = 'Phương thức 2 – Thanh toán chuẩn 50/50 (-600 Tr · Công chứng 50%)';
+        shortName = 'PA 2 · Chuẩn 50/50';
       } else if (schemeId === 3) {
         schemeDiscount = DISCOUNT_SCHEME_3;
-        schemeName = 'Phương thức 3 – Thanh toán ưu việt (-800 Tr · Công chứng 70%)';
-        shortName = 'PA 3 · Ưu Việt 70%';
+        schemeName = 'Phương thức 3 – Thanh toán 70/30 (-800 Tr · Công chứng 70%)';
+        shortName = 'PA 3 · Thanh Toán 70/30';
       } else if (schemeId === 4) {
         schemeDiscount = DISCOUNT_SCHEME_4;
-        schemeName = 'Phương thức 4 – Thanh toán tinh gọn (-1 Tỷ · Công chứng 100%)';
-        shortName = 'PA 4 · Tinh Gọn 100%';
+        schemeName = 'Phương thức 4 – Thanh toán 100% (-1 Tỷ · Công chứng 100%)';
+        shortName = 'PA 4 · Thanh Toán 100%';
       }
 
-      const buildBonus = applyBonus ? BONUS_BUILD_AMOUNT : 0;
-      const totalDiscount = schemeDiscount + buildBonus;
+      const totalDiscount = schemeDiscount;
       const finalPrice = Math.max(0, originalPrice - totalDiscount);
 
       let rows = [];
@@ -3468,7 +3447,6 @@
         name: schemeName,
         shortName: shortName,
         schemeDiscount: schemeDiscount,
-        buildBonus: buildBonus,
         totalDiscount: totalDiscount,
         finalPrice: finalPrice,
         rows: rows
@@ -3476,13 +3454,7 @@
     }
 
     function updatePaymentCalculations() {
-      const bonusEl = document.getElementById('bonus800Toggle');
-      if (!bonusEl) return;
-      const applyBonus = bonusEl.checked;
-      const bonusStatusLabel = document.getElementById('bonusToggleStatus');
-      if (bonusStatusLabel) bonusStatusLabel.textContent = applyBonus ? 'Đang áp dụng (-800 Tr)' : 'Chưa áp dụng ưu đãi';
-
-      const sData = getSchemeData(currentScheme, applyBonus);
+      const sData = getSchemeData(currentScheme);
 
       // Update Summary Cards
       const origPriceEl = document.getElementById('summaryOriginalPrice');
@@ -3491,8 +3463,6 @@
       if (schemeDiscLabelEl) schemeDiscLabelEl.textContent = sData.name;
       const schemeDiscEl = document.getElementById('summarySchemeDiscount');
       if (schemeDiscEl) schemeDiscEl.textContent = sData.schemeDiscount > 0 ? ('-' + formatVND(sData.schemeDiscount)) : '0 đ';
-      const buildBonusEl = document.getElementById('summaryBuildBonus');
-      if (buildBonusEl) buildBonusEl.textContent = sData.buildBonus > 0 ? ('-' + formatVND(sData.buildBonus)) : '0 đ';
       const finalPriceEl = document.getElementById('summaryFinalPrice');
       if (finalPriceEl) finalPriceEl.textContent = formatVND(sData.finalPrice);
 
@@ -3545,7 +3515,7 @@
         <td colspan="2" class="total-label-cell">TỔNG CỘNG THANH TOÁN</td>
         <td class="td-ratio-cell"><span class="td-ratio" style="background:#183024; color:#fff;">100%</span></td>
         <td class="td-money total-money-val">${formatVND(finalPrice)}</td>
-        <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ toàn bộ chiết khấu & ưu đãi</td>
+        <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ chiết khấu phương thức thanh toán</td>
       `;
       tbody.appendChild(totalTr);
     }
@@ -3564,16 +3534,13 @@
 
     // In Cả 4 Phương Án Để Khách So Sánh Lựa Chọn
     function printAllSchemes() {
-      const bonusEl = document.getElementById('bonus800Toggle');
-      const applyBonus = bonusEl ? bonusEl.checked : false;
-
       const container = document.getElementById('allSchemesPrintContainer');
       if (!container) return;
       container.innerHTML = '';
 
       const schemes = [1, 2, 3, 4];
       schemes.forEach(sid => {
-        const sData = getSchemeData(sid, applyBonus);
+        const sData = getSchemeData(sid);
         const card = document.createElement('div');
         card.className = 'print-scheme-card';
 
@@ -3595,7 +3562,7 @@
             <div>
               <span class="print-scheme-card-title">${sData.name}</span>
               <div style="font-size: 7.2pt; color: #64748b; margin-top: 2px;">
-                Tổng chiết khấu & ưu đãi: <strong>${formatVND(sData.totalDiscount)}</strong>
+                Chiết khấu phương thức: <strong>${formatVND(sData.totalDiscount)}</strong>
               </div>
             </div>
             <div style="text-align: right;">
@@ -3620,7 +3587,7 @@
                   <td colspan="2" class="total-label-cell">TỔNG CỘNG THANH TOÁN</td>
                   <td class="td-ratio-cell"><span class="td-ratio" style="background:#183024; color:#fff;">100%</span></td>
                   <td class="td-money total-money-val">${formatVND(sData.finalPrice)}</td>
-                  <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ toàn bộ ưu đãi</td>
+                  <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ chiết khấu thanh toán</td>
                 </tr>
               </tbody>
             </table>
@@ -3707,9 +3674,7 @@
         return;
       }
 
-      const bonusEl = document.getElementById('bonus800Toggle');
-      const applyBonus = bonusEl ? bonusEl.checked : false;
-      const sData = getSchemeData(currentScheme, applyBonus);
+      const sData = getSchemeData(currentScheme);
 
       const text = `🏡 BẢNG TÍNH & TIẾN ĐỘ THANH TOÁN CĂN ${LOT_DATA.code} · SAIGON FARM RESORT
 📍 Phân khu: ${LOT_DATA.catTitle} | Dãy: ${LOT_DATA.block}
@@ -3717,8 +3682,8 @@
 🧭 Hướng: ${LOT_DATA.direction} | Vị trí: ${LOT_DATA.pos}
 💰 Giá gốc niêm yết: ${LOT_DATA.originalPriceStr}
 📋 Phương án chọn: ${sData.name}
-🎁 Ưu đãi xây dựng trước 12/2027: ${applyBonus ? '-800 Triệu đồng (Đã tính)' : 'Chưa áp dụng'}
-💎 TỔNG GIÁ THANH TOÁN SAU ƯU ĐÃI: ${formatVND(sData.finalPrice)}
+🎁 Chiết khấu thanh toán: ${sData.schemeDiscount > 0 ? ('-' + formatVND(sData.schemeDiscount)) : '0 đ'}
+💎 TỔNG GIÁ THANH TOÁN SAU CHIẾT KHẤU: ${formatVND(sData.finalPrice)}
 🌐 Xem chi tiết trực tuyến: https://saigonfarmresort.com/${LOT_DATA.codeLower}
 📞 Liên hệ: Chuyên viên tư vấn gửi bảng tính này để nhận hỗ trợ & đăng ký xe đưa đón tham quan thực địa.`;
 
@@ -3743,7 +3708,7 @@
 
     // Init on load
     document.addEventListener('DOMContentLoaded', () => {
-      updatePaymentCalculations();
+      selectScheme(1);
       updateRealtimePrintDate();
     });
   </script>

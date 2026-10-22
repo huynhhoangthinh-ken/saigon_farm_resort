@@ -326,7 +326,7 @@ def update_listing():
             bonus_pill_html = """
             <div class="card-bonus-construction-pill">
               <i class="fa-solid fa-gift"></i>
-              <span>Ưu đãi TT sớm: <strong>200M – 1 Tỷ</strong> · Gói nội thất <strong>800 Triệu</strong></span>
+              <span>Ưu đãi TT sớm: <strong>200M – 1 Tỷ</strong> · Miễn phí QLVH 24 tháng</span>
             </div>
             """
 
@@ -563,6 +563,24 @@ def update_listing():
         table_rows_html.append(row)
 
     table_rows_rendered = "\n".join(table_rows_html)
+
+    # Tạo 20 card phối cảnh 3D tiện ích sạch đẹp, bỏ toàn bộ chú thích sai theo yêu cầu
+    m3d_cards_list = []
+    for i in range(20):
+        num = i + 1
+        card_html = f"""
+          <div class="m3d-card" onclick="openGallery3DLightbox({i})" title="Xem ảnh phối cảnh 3D #{num:02d}">
+            <span class="m3d-card-num">3D #{num:02d}</span>
+            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_{num}.webp" 
+                 alt="Phối cảnh 3D Saigon Farm Resort #{num:02d}" 
+                 loading="lazy" 
+                 decoding="async">
+            <div class="m3d-card-hover-hint">
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>"""
+        m3d_cards_list.append(card_html)
+    m3d_cards_rendered = "\n".join(m3d_cards_list)
 
     html_content = f"""<!DOCTYPE html>
 <html lang="vi">
@@ -1325,6 +1343,7 @@ def update_listing():
       justify-content: center;
       background: #050d09;
       padding: 12px;
+      position: relative;
     }}
     .mp-lightbox-body img {{
       max-width: 100%;
@@ -1339,6 +1358,50 @@ def update_listing():
       max-width: none;
       max-height: none;
       cursor: zoom-out;
+    }}
+    .lb-nav-btn {{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(8, 22, 15, 0.88);
+      color: #fff;
+      border: 1.5px solid rgba(201, 169, 110, 0.6);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      z-index: 100;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      user-select: none;
+    }}
+    .lb-nav-btn:hover {{
+      background: var(--gold);
+      color: #0c1c14;
+      border-color: #fff;
+      transform: translateY(-50%) scale(1.12);
+      box-shadow: 0 6px 24px rgba(201, 169, 110, 0.6);
+    }}
+    .lb-prev-btn {{
+      left: 18px;
+    }}
+    .lb-next-btn {{
+      right: 18px;
+    }}
+    @media (max-width: 768px) {{
+      .lb-nav-btn {{
+        width: 44px;
+        height: 44px;
+        font-size: 1.15rem;
+      }}
+      .lb-prev-btn {{ left: 8px; }}
+      .lb-next-btn {{ right: 8px; }}
     }}
 
     /* Map Floating Controls */
@@ -3861,23 +3924,32 @@ def update_listing():
     .m3d-card:hover img {{
       transform: scale(1.05);
     }}
-    .m3d-card-overlay {{
+    .m3d-card-hover-hint {{
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(10, 20, 15, 0.88) 100%);
-      display: flex;
-      align-items: flex-end;
-      padding: 10px 12px;
-      pointer-events: none;
-    }}
-    .m3d-card-title {{
-      color: #ffffff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      background: rgba(10, 20, 15, 0.35);
       display: flex;
       align-items: center;
-      gap: 5px;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }}
+    .m3d-card-hover-hint i {{
+      color: var(--gold);
+      font-size: 1.4rem;
+      background: rgba(8, 22, 15, 0.85);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }}
+    .m3d-card:hover .m3d-card-hover-hint {{
+      opacity: 1;
     }}
     .m3d-card-num {{
       position: absolute;
@@ -3927,7 +3999,6 @@ def update_listing():
         <li><a href="/dien-san">Điền Sản</a></li>
         <li><a href="/dien-an">Điền An</a></li>
         <li><a href="/giohang" class="active"><i class="fa-solid fa-cart-shopping" style="color:var(--gold-dark);"></i> Giỏ Hàng Mở Bán</a></li>
-        <li><a href="javascript:void(0)" onclick="openBookingModal('TƯ VẤN CHUNG', 'Đợt 1', '', '', '', '')" class="nav-cta"><i class="fa-solid fa-paper-plane"></i> Nhận Báo Giá Đợt 1</a></li>
       </ul>
     </div>
   </header>
@@ -3969,7 +4040,7 @@ def update_listing():
             <li><strong>Điền Sản (11 sản phẩm, chỉ bán đất):</strong> Dòng sản phẩm đất tự xây linh hoạt (DT từ 828 m² đến 1.299 m², giá từ 10,58 Tỷ đến 15,65 Tỷ). 4 phương án thanh toán: PA1 (Giảm 200M) · PA2 (Giảm 600M) · PA3 (Giảm 800M) · PA4 (Giảm 1 Tỷ). Miễn phí quản lý MDS Living 24 tháng.</li>
             <li><strong>Điền An (4 sản phẩm, có nhà 30 phòng):</strong> Quy mô khuôn viên từ 1.045 m² đến 1.275 m², hoàn thiện trọn gói 30 phòng lưu trú (giá từ 17,60 Tỷ đến 22,84 Tỷ gồm VAT). MDS Living cam kết thuê lại <strong>120 Tr/tháng (1,44 Tỷ/năm)</strong>.</li>
             <li><strong>Biệt Phủ Điền Trang (6 sản phẩm, chỉ bán đất):</strong> Dinh thự khuôn viên bề thế từ 544 m² đến 966 m² (giá đất từ 7,96 Tỷ đến 12,89 Tỷ). Áp dụng 4 phương án thanh toán linh hoạt và gói quản lý dịch vụ MDS Living chuẩn 5 sao.</li>
-            <li><strong>Bộ Đặc Quyền Chung:</strong> Miễn phí quản lý vận hành MDS Living 24 tháng · Dịch vụ Quản gia & Nông sản Organic 24 tháng · Ưu đãi kiến tạo không gian sống trị giá đến 800.000.000 đ.</li>
+            <li><strong>Bộ Đặc Quyền Chung:</strong> Miễn phí quản lý vận hành MDS Living 24 tháng · Dịch vụ Quản gia & Nông sản Organic 24 tháng · Chiết khấu thanh toán linh hoạt lên đến 1 Tỷ đồng.</li>
           </ul>
         </div>
       </div>
@@ -4198,217 +4269,17 @@ def update_listing():
       <div class="m3d-header">
         <div>
           <span class="m3d-badge"><i class="fa-solid fa-sparkles"></i> Bộ Sưu Tập Phối Cảnh 3D Mới 2026</span>
-          <h2 class="m3d-title"><i class="fa-solid fa-gem" style="color:var(--gold);"></i> HỆ THỐNG TIỆN ÍCH ĐẲNG CẤP THƯỢNG LƯU</h2>
-          <p class="m3d-sub">Toàn bộ 20 góc phối cảnh 3D siêu thực tế về đại tiện ích ven hồ, clubhouse, công viên bản sắc Việt và cảnh quan sinh thái Saigon Farm Resort.</p>
+          <h2 class="m3d-title"><i class="fa-solid fa-gem" style="color:var(--gold);"></i> HỆ THỐNG TIỆN ÍCH &amp; CẢNH QUAN SINH THÁI</h2>
+          <p class="m3d-sub">Toàn bộ 20 góc phối cảnh 3D thực tế về tiện ích ven hồ, clubhouse và cảnh quan sinh thái Saigon Farm Resort. Nhấp vào bất kỳ hình nào để mở xem toàn màn hình và bấm tới lui để lướt qua toàn bộ hình ảnh.</p>
         </div>
         <div>
-          <button type="button" class="btn-mp-action" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp', 'Phối Cảnh Tiện Ích Saigon Farm Resort')">
-            <i class="fa-solid fa-expand"></i> Mở Xem Toàn Màn Hình
+          <button type="button" class="btn-mp-action" onclick="openGallery3DLightbox(0)">
+            <i class="fa-solid fa-expand"></i> Mở Xem Toàn Màn Hình (20 Hình)
           </button>
         </div>
       </div>
       <div class="m3d-grid">
-
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp', 'Phối Cảnh Cổng Chào & Trục Đại Lộ Sinh Thái')">
-            <span class="m3d-card-num">3D #01</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_1.webp" 
-                 alt="Phối Cảnh Cổng Chào & Trục Đại Lộ Sinh Thái - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Phối Cảnh Cổng Chào & Trục Đại Lộ Sinh Thái</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp', 'Clubhouse Ven Hồ 100ha & Bến Thuyền Kayak')">
-            <span class="m3d-card-num">3D #02</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_2.webp" 
-                 alt="Clubhouse Ven Hồ 100ha & Bến Thuyền Kayak - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Clubhouse Ven Hồ 100ha & Bến Thuyền Kayak</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp', 'Cung Tường Sử Việt & Không Gian Bản Sắc')">
-            <span class="m3d-card-num">3D #03</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_3.webp" 
-                 alt="Cung Tường Sử Việt & Không Gian Bản Sắc - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Cung Tường Sử Việt & Không Gian Bản Sắc</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp', 'Hồ Bơi Vô Cực Nước Khoáng Tự Nhiên')">
-            <span class="m3d-card-num">3D #04</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_4.webp" 
-                 alt="Hồ Bơi Vô Cực Nước Khoáng Tự Nhiên - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Hồ Bơi Vô Cực Nước Khoáng Tự Nhiên</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp', 'Quần Thể Biệt Phủ Điền Trang Trực Diện Hồ')">
-            <span class="m3d-card-num">3D #05</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_5.webp" 
-                 alt="Quần Thể Biệt Phủ Điền Trang Trực Diện Hồ - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Quần Thể Biệt Phủ Điền Trang Trực Diện Hồ</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp', 'Khu Vực Tổ Chức Sự Kiện & Lễ Hội Ngoài Trời')">
-            <span class="m3d-card-num">3D #06</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_6.webp" 
-                 alt="Khu Vực Tổ Chức Sự Kiện & Lễ Hội Ngoài Trời - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Khu Vực Tổ Chức Sự Kiện & Lễ Hội Ngoài Trời</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.webp', 'Vườn Thiền Trà & Không Gian Dưỡng Sinh Thượng Lưu')">
-            <span class="m3d-card-num">3D #07</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_7.webp" 
-                 alt="Vườn Thiền Trà & Không Gian Dưỡng Sinh Thượng Lưu - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Vườn Thiền Trà & Không Gian Dưỡng Sinh Thượng Lưu</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp', 'Đại Dinh Thự Hoàng Hôn Sunset Ven Hồ')">
-            <span class="m3d-card-num">3D #08</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_8.webp" 
-                 alt="Đại Dinh Thự Hoàng Hôn Sunset Ven Hồ - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Đại Dinh Thự Hoàng Hôn Sunset Ven Hồ</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.webp', 'Khu Lưu Trú Sinh Thái Điền An 30 Suites')">
-            <span class="m3d-card-num">3D #09</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_9.webp" 
-                 alt="Khu Lưu Trú Sinh Thái Điền An 30 Suites - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Khu Lưu Trú Sinh Thái Điền An 30 Suites</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.webp', 'Cụm Điền Sản Founders View Đồng Lúa Thanh Bình')">
-            <span class="m3d-card-num">3D #10</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_10.webp" 
-                 alt="Cụm Điền Sản Founders View Đồng Lúa Thanh Bình - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Cụm Điền Sản Founders View Đồng Lúa Thanh Bình</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp', 'Bến Du Thuyền Thể Thao Nước & Chèo SUP')">
-            <span class="m3d-card-num">3D #11</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_11.webp" 
-                 alt="Bến Du Thuyền Thể Thao Nước & Chèo SUP - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Bến Du Thuyền Thể Thao Nước & Chèo SUP</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.webp', 'Đại Quảng Trường Văn Hóa & Nghệ Thuật Sắc Việt')">
-            <span class="m3d-card-num">3D #12</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_12.webp" 
-                 alt="Đại Quảng Trường Văn Hóa & Nghệ Thuật Sắc Việt - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Đại Quảng Trường Văn Hóa & Nghệ Thuật Sắc Việt</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_13.webp', 'Nhà Hàng Ẩm Thực Thực Dưỡng Organic Farm-to-Table')">
-            <span class="m3d-card-num">3D #13</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_13.webp" 
-                 alt="Nhà Hàng Ẩm Thực Thực Dưỡng Organic Farm-to-Table - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Nhà Hàng Ẩm Thực Thực Dưỡng Organic Farm-to-Table</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.webp', 'Công Viên Cảnh Quan Sinh Thái 30.000 m²')">
-            <span class="m3d-card-num">3D #14</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_14.webp" 
-                 alt="Công Viên Cảnh Quan Sinh Thái 30.000 m² - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Công Viên Cảnh Quan Sinh Thái 30.000 m²</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp', 'Lối Tản Bộ Ven Hồ & Cung Đường Nắng Sớm')">
-            <span class="m3d-card-num">3D #15</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_15.webp" 
-                 alt="Lối Tản Bộ Ven Hồ & Cung Đường Nắng Sớm - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Lối Tản Bộ Ven Hồ & Cung Đường Nắng Sớm</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp', 'Không Gian Thư Giãn Trị Liệu & Spa Thảo Mộc')">
-            <span class="m3d-card-num">3D #16</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_16.webp" 
-                 alt="Không Gian Thư Giãn Trị Liệu & Spa Thảo Mộc - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Không Gian Thư Giãn Trị Liệu & Spa Thảo Mộc</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp', 'Biệt Thự Vườn Sinh Thái Đương Đại Ban Mai Sunrise')">
-            <span class="m3d-card-num">3D #17</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_17.webp" 
-                 alt="Biệt Thự Vườn Sinh Thái Đương Đại Ban Mai Sunrise - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Biệt Thự Vườn Sinh Thái Đương Đại Ban Mai Sunrise</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.webp', 'Hệ Sinh Thái Nông Nghiệp Hữu Cơ MDS Living')">
-            <span class="m3d-card-num">3D #18</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_18.webp" 
-                 alt="Hệ Sinh Thái Nông Nghiệp Hữu Cơ MDS Living - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Hệ Sinh Thái Nông Nghiệp Hữu Cơ MDS Living</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.webp', 'Khu Nghỉ Dưỡng Trải Nghiệm Gia Đình Đa Thế Hệ')">
-            <span class="m3d-card-num">3D #19</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_19.webp" 
-                 alt="Khu Nghỉ Dưỡng Trải Nghiệm Gia Đình Đa Thế Hệ - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Khu Nghỉ Dưỡng Trải Nghiệm Gia Đình Đa Thế Hệ</span>
-            </div>
-          </div>
-          <div class="m3d-card" onclick="openMasterplanLightbox('/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp', 'Toàn Cảnh Hoàng Hôn Rực Rỡ Ven Hồ Saigon Farm Resort')">
-            <span class="m3d-card-num">3D #20</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_20.webp" 
-                 alt="Toàn Cảnh Hoàng Hôn Rực Rỡ Ven Hồ Saigon Farm Resort - Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-overlay">
-              <span class="m3d-card-title"><i class="fa-solid fa-magnifying-glass-plus" style="color:var(--gold);"></i> Toàn Cảnh Hoàng Hôn Rực Rỡ Ven Hồ Saigon Farm Resort</span>
-            </div>
-          </div>
+{m3d_cards_rendered}
       </div>
     </section>
 
@@ -4624,15 +4495,21 @@ def update_listing():
     </div>
   </div>
 
-  <!-- Lightbox Modal for 5K MasterPlan -->
+  <!-- Lightbox Modal for 5K MasterPlan & 3D Showcase -->
   <div class="mp-lightbox-modal" id="mpLightboxModal" onclick="closeMasterplanLightbox(event)">
     <div class="mp-lightbox-dialog">
       <div class="mp-lightbox-header">
-        <h4 id="mpLightboxTitle"><i class="fa-solid fa-mountain-sun" style="color:var(--gold);"></i> Phối Cảnh MasterPlan</h4>
+        <h4 id="mpLightboxTitle"><i class="fa-solid fa-images" style="color:var(--gold);"></i> Phối Cảnh 3D Tiện Ích</h4>
         <button type="button" class="mp-lightbox-close" onclick="closeMasterplanLightbox()">&times;</button>
       </div>
-      <div class="mp-lightbox-body">
-        <img id="mpLightboxImg" src="" alt="MasterPlan Fullscreen" title="Click để phóng to 100% / thu nhỏ">
+      <div class="mp-lightbox-body" id="mpLightboxBody">
+        <button type="button" class="lb-nav-btn lb-prev-btn" id="lbPrevBtn" onclick="prevGalleryImage(event)" title="Xem hình trước (Phím mũi tên trái)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <img id="mpLightboxImg" src="" alt="Saigon Farm Resort 3D" title="Click để phóng to 100% / thu nhỏ">
+        <button type="button" class="lb-nav-btn lb-next-btn" id="lbNextBtn" onclick="nextGalleryImage(event)" title="Xem hình kế tiếp (Phím mũi tên phải)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </div>
@@ -4942,11 +4819,94 @@ def update_listing():
       }}
     }}
 
-    // Lightbox for 5K MasterPlan
+    // 3D Showcase Gallery & MasterPlan Lightbox Controller
+    const GALLERY_3D_URLS = [
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_13.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.webp',
+      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp'
+    ];
+    let currentGalleryIdx = 0;
+    let isGallery3DMode = false;
+
+    function openGallery3DLightbox(idx) {{
+      isGallery3DMode = true;
+      currentGalleryIdx = typeof idx === 'number' ? idx : 0;
+      updateGallery3DView();
+      const modal = document.getElementById('mpLightboxModal');
+      if (modal) {{
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }}
+    }}
+
+    function updateGallery3DView() {{
+      const img = document.getElementById('mpLightboxImg');
+      const titleEl = document.getElementById('mpLightboxTitle');
+      const prevBtn = document.getElementById('lbPrevBtn');
+      const nextBtn = document.getElementById('lbNextBtn');
+
+      if (prevBtn) prevBtn.style.display = isGallery3DMode ? 'flex' : 'none';
+      if (nextBtn) nextBtn.style.display = isGallery3DMode ? 'flex' : 'none';
+
+      if (isGallery3DMode) {{
+        if (img) {{
+          img.src = GALLERY_3D_URLS[currentGalleryIdx];
+          img.classList.remove('zoomed-in');
+        }}
+        if (titleEl) {{
+          titleEl.innerHTML = `<i class="fa-solid fa-images" style="color:var(--gold);"></i> Phối Cảnh 3D Tiện Ích Saigon Farm Resort (${{currentGalleryIdx + 1}} / ${{GALLERY_3D_URLS.length}})`;
+        }}
+      }}
+    }}
+
+    function prevGalleryImage(event) {{
+      if (event) {{
+        event.preventDefault();
+        event.stopPropagation();
+      }}
+      if (!isGallery3DMode) return;
+      currentGalleryIdx = (currentGalleryIdx - 1 + GALLERY_3D_URLS.length) % GALLERY_3D_URLS.length;
+      updateGallery3DView();
+    }}
+
+    function nextGalleryImage(event) {{
+      if (event) {{
+        event.preventDefault();
+        event.stopPropagation();
+      }}
+      if (!isGallery3DMode) return;
+      currentGalleryIdx = (currentGalleryIdx + 1) % GALLERY_3D_URLS.length;
+      updateGallery3DView();
+    }}
+
     function openMasterplanLightbox(imgUrl, title) {{
+      isGallery3DMode = false;
       const modal = document.getElementById('mpLightboxModal');
       const img = document.getElementById('mpLightboxImg');
       const titleEl = document.getElementById('mpLightboxTitle');
+      const prevBtn = document.getElementById('lbPrevBtn');
+      const nextBtn = document.getElementById('lbNextBtn');
+
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+
       if (img) {{
         img.src = imgUrl;
         img.classList.remove('zoomed-in');
@@ -4979,11 +4939,43 @@ def update_listing():
       }});
     }}
 
+    // Keyboard navigation (Phím mũi tên trái/phải xem ảnh, Esc để đóng)
     document.addEventListener('keydown', (e) => {{
-      if (e.key === 'Escape') {{
+      const modal = document.getElementById('mpLightboxModal');
+      if (!modal || !modal.classList.contains('active')) return;
+      if (e.key === 'ArrowLeft') {{
+        prevGalleryImage(e);
+      }} else if (e.key === 'ArrowRight') {{
+        nextGalleryImage(e);
+      }} else if (e.key === 'Escape') {{
         closeMasterplanLightbox();
       }}
     }});
+
+    // Touch swipe navigation for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const lbModalEl = document.getElementById('mpLightboxModal');
+    if (lbModalEl) {{
+      lbModalEl.addEventListener('touchstart', (e) => {{
+        if (e.changedTouches && e.changedTouches[0]) {{
+          touchStartX = e.changedTouches[0].screenX;
+        }}
+      }}, {{ passive: true }});
+      lbModalEl.addEventListener('touchend', (e) => {{
+        if (e.changedTouches && e.changedTouches[0]) {{
+          touchEndX = e.changedTouches[0].screenX;
+          const diff = touchStartX - touchEndX;
+          if (Math.abs(diff) > 45) {{
+            if (diff > 0) {{
+              nextGalleryImage(e);
+            }} else {{
+              prevGalleryImage(e);
+            }}
+          }}
+        }}
+      }}, {{ passive: true }});
+    }}
 
     // Initial fits on load, DOM ready, and image ready
     function initMapViewer() {{
