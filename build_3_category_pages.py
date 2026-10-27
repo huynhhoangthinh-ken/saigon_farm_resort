@@ -29,7 +29,8 @@ verified_images = [
     "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp",
     "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.webp",
     "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp"
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp",
+    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_21.webp"
 ]
 
 with open("data/listing_categories.json", "r", encoding="utf-8") as f:

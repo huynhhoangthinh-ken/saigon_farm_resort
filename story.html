@@ -21,7 +21,7 @@
   <link rel="icon" type="image/x-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
   <meta property="og:title" content="Saigon Farm Resort - Tạp Chí & Câu Chuyện Sản Phẩm"/>
   <meta property="og:description" content="Khám phá toàn cảnh câu chuyện sản phẩm điền trang ven hồ Lồ Ồ 100ha qua cuốn tạp chí ảnh tương tác 98 trang."/>
-  <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/SGFR_slide_product_story/web/Slide1.webp"/>
+  <meta property="og:image" content="https://saigonfarmresort.com/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp"/>
   <meta property="og:url" content="https://saigonfarmresort.com/story"/>
   <meta property="og:type" content="website"/>
 
@@ -29,7 +29,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Saigon Farm Resort - Tạp Chí & Câu Chuyện Sản Phẩm">
   <meta name="twitter:description" content="Khám phá toàn cảnh câu chuyện sản phẩm điền trang ven hồ Lồ Ồ 100ha qua cuốn tạp chí ảnh tương tác 98 trang.">
-  <meta name="twitter:image" content="https://saigonfarmresort.com/assets/Index_asset/SGFR_slide_product_story/web/Slide1.webp">
+  <meta name="twitter:image" content="https://saigonfarmresort.com/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -1160,7 +1160,7 @@
 
   <script>
     (function() {
-      const TOTAL_PAGES = 98;
+      const TOTAL_PAGES = 21;
       const loadingOverlay = document.getElementById('loadingOverlay');
       const pageInput = document.getElementById('pageInput');
       const pageScrubber = document.getElementById('pageScrubber');
@@ -1194,7 +1194,7 @@
         thumbItem.className = 'thumb-item' + (i === 1 ? ' active' : '');
         thumbItem.dataset.page = i;
         thumbItem.innerHTML = `
-          <img src="assets/Index_asset/SGFR_slide_product_story/thumbs/Slide${i}.webp" alt="Trang ${i}" loading="lazy">
+          <img src="assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_${i}.webp" alt="Trang ${i}" loading="lazy">
           <span class="thumb-num">${i}</span>
         `;
         thumbItem.addEventListener('click', () => {
@@ -1344,7 +1344,7 @@
           pageDiv.style.height = dims.pageHeight + 'px';
 
           const img = document.createElement('img');
-          img.src = `assets/Index_asset/SGFR_slide_product_story/web/Slide${i}.webp`;
+          img.src = `assets/Index_asset/3D_SGFR_Photo_logo/SGFR_${i}.webp`;
           img.alt = `Saigon Farm Resort Slide ${i}`;
           img.loading = (i <= 4) ? 'eager' : 'lazy';
 
