@@ -564,23 +564,33 @@ def update_listing():
 
     table_rows_rendered = "\n".join(table_rows_html)
 
-    # Tạo 20 card phối cảnh 3D tiện ích sạch đẹp, bỏ toàn bộ chú thích sai theo yêu cầu
+    # Tạo 23 card phối cảnh 3D độc bản với tên gọi chuẩn xác theo hồ sơ thiết kế
+    with open("data/sgfr_3d_gallery.json", "r", encoding="utf-8") as gf:
+        sgfr_gallery = json.load(gf)
+
     m3d_cards_list = []
-    for i in range(20):
+    for i, g_item in enumerate(sgfr_gallery):
         num = i + 1
+        g_title = g_item.get("title", f"Phối cảnh 3D #{num:02d}")
+        g_tag = g_item.get("tag", "TIỆN ÍCH")
         card_html = f"""
-          <div class="m3d-card" onclick="openGallery3DLightbox({i})" title="Xem ảnh phối cảnh 3D #{num:02d}">
+          <div class="m3d-card" onclick="openGallery3DLightbox({i})" title="Xem ảnh 3D #{num:02d}: {g_title}">
             <span class="m3d-card-num">3D #{num:02d}</span>
             <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_{num}.webp" 
-                 alt="Phối cảnh 3D Saigon Farm Resort #{num:02d}" 
+                 alt="{g_title}" 
                  loading="lazy" 
                  decoding="async">
             <div class="m3d-card-hover-hint">
               <i class="fa-solid fa-expand"></i>
             </div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
+              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">{g_tag}</div>
+              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">{g_title}</div>
+            </div>
           </div>"""
         m3d_cards_list.append(card_html)
     m3d_cards_rendered = "\n".join(m3d_cards_list)
+    gallery_3d_items_json = json.dumps(sgfr_gallery, ensure_ascii=False).replace('{', '{{').replace('}', '}}')
 
     html_content = f"""<!DOCTYPE html>
 <html lang="vi">
@@ -4819,29 +4829,9 @@ def update_listing():
       }}
     }}
 
-    // 3D Showcase Gallery & MasterPlan Lightbox Controller
-    const GALLERY_3D_URLS = [
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_13.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.webp',
-      '/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp'
-    ];
+    // 3D Showcase Gallery & MasterPlan Lightbox Controller (All 23 Images)
+    const GALLERY_3D_ITEMS = {gallery_3d_items_json};
+    const GALLERY_3D_URLS = GALLERY_3D_ITEMS.map(it => it.webp_url);
     let currentGalleryIdx = 0;
     let isGallery3DMode = false;
 
@@ -4871,7 +4861,10 @@ def update_listing():
           img.classList.remove('zoomed-in');
         }}
         if (titleEl) {{
-          titleEl.innerHTML = `<i class="fa-solid fa-images" style="color:var(--gold);"></i> Phối Cảnh 3D Tiện Ích Saigon Farm Resort (${{currentGalleryIdx + 1}} / ${{GALLERY_3D_URLS.length}})`;
+          const curItem = GALLERY_3D_ITEMS[currentGalleryIdx] || {{}};
+          const tName = curItem.title || 'Phối Cảnh 3D';
+          const tTag = curItem.tag || 'SAIGON FARM RESORT';
+          titleEl.innerHTML = `<i class="fa-solid fa-images" style="color:var(--gold); margin-right: 6px;"></i> <span style="color:var(--gold); font-weight:800;">#${{currentGalleryIdx + 1 < 10 ? '0' + (currentGalleryIdx + 1) : currentGalleryIdx + 1}}:</span> ${{tName}} <span style="font-size:0.75rem; color:#aaa; margin-left: 8px;">(${{currentGalleryIdx + 1}} / ${{GALLERY_3D_ITEMS.length}})</span>`;
         }}
       }}
     }}

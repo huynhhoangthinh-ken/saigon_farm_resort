@@ -6,7 +6,7 @@
     "tagline": "Dinh Thự Gia Tộc Sum Họp Đa Thế Hệ & Nghỉ Dưỡng Thượng Lưu",
     "badge": "6 Dinh Thự Mở Bán Đợt 1 (Chỉ Bán Đất)",
     "desc": "Biệt phủ gia đình cho kỳ nghỉ và sum họp nhiều thế hệ. Không gian khuôn viên rộng lớn từ 543,6m² đến 1.293,9m² với 100% thổ cư sổ đỏ riêng. Chủ nhân có thể đưa vào chương trình khai thác cho thuê của MDS Living khi không sử dụng.",
-    "hero_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp",
+    "hero_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp",
     "items": [
       {
         "stt": 10,
@@ -333,7 +333,7 @@
         "map_y": 61.65
       }
     ],
-    "default_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp"
+    "default_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp"
   },
   {
     "slug": "dien-san",
@@ -342,7 +342,7 @@
     "tagline": "Tích Sản Tài Chính & Quyền Ưu Tiên Ra Hàng Đón Sóng Hạ Tầng",
     "badge": "11 Sản Phẩm Mở Bán Đợt 1 (Chỉ Bán Đất)",
     "desc": "Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của chủ đầu tư. Không bắt buộc xây dựng ngay.",
-    "hero_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp",
+    "hero_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp",
     "items": [
       {
         "stt": 3,
@@ -939,7 +939,7 @@
         "map_y": 64.91
       }
     ],
-    "default_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp"
+    "default_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp"
   },
   {
     "slug": "dien-an",
@@ -948,7 +948,7 @@
     "tagline": "Khu Lưu Trú Chuyên Gia & Dòng Tiền Vận Hành Bền Vững",
     "badge": "4 Cụm Lưu Trú Mở Bán Đợt 1 (Đất + Nhà 30 Phòng)",
     "desc": "Khách hàng xây dựng khu lưu trú chuyên gia ít nhất từ 20 phòng trở lên, cam kết thuê tối thiểu là 80 triệu/đồng. Khách hàng xây từ 20 phòng trở lên, các phòng khác sẽ được MDS Living khai thác vận hành cho khách hàng mới thuê dài hạn hoặc ngắn hạn.",
-    "hero_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp",
+    "hero_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp",
     "items": [
       {
         "stt": 8,
@@ -1167,6 +1167,6 @@
         "map_y": 75.49
       }
     ],
-    "default_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp"
+    "default_image": "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp"
   }
 ]

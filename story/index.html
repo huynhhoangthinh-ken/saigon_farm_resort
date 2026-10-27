@@ -814,6 +814,22 @@
       display: block;
     }
 
+    
+    .thumb-title-badge {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+      color: #e0d5c1;
+      font-size: 0.58rem;
+      padding: 12px 4px 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      pointer-events: none;
+    }
+
     .thumb-item .thumb-num {
       position: absolute;
       bottom: 3px;
@@ -1051,7 +1067,7 @@
         <span>Quay lại</span>
       </button>
       <div class="fs-page-badge">
-        Trang <span id="fsMobilePageNum">1</span> / 98
+        Trang <span id="fsMobilePageNum">1</span> / 23
       </div>
     </div>
 
@@ -1085,7 +1101,7 @@
   <div class="thumbnails-drawer" id="thumbsDrawer">
     <div class="drawer-header">
       <div class="drawer-title">
-        <i class="fa-solid fa-images" style="margin-right: 6px;"></i> Mục Lục Hình Ảnh (98 Trang)
+        <i class="fa-solid fa-images" style="margin-right: 6px;"></i> Mục Lục 23 Phối Cảnh 3D Độc Bản
       </div>
       <button class="drawer-close" id="btnCloseDrawer" aria-label="Đóng mục lục">&times;</button>
     </div>
@@ -1105,8 +1121,8 @@
       </button>
       <div class="page-indicator-box">
         <label for="pageInput" style="font-size: 0.8rem; color: var(--text-muted); margin-right: 2px;">Trang</label>
-        <input type="number" id="pageInput" class="page-input" min="1" max="98" value="1" aria-label="Số trang">
-        <span class="page-total">/ 98</span>
+        <input type="number" id="pageInput" class="page-input" min="1" max="23" value="1" aria-label="Số trang">
+        <span class="page-total">/ 23</span>
       </div>
       <button class="nav-btn" id="btnNext" title="Trang sau">
         <i class="fa-solid fa-chevron-right"></i>
@@ -1117,13 +1133,13 @@
     </div>
 
     <div class="footer-center">
-      <input type="range" class="page-scrubber" id="pageScrubber" min="1" max="98" value="1" aria-label="Kéo chọn trang nhanh">
+      <input type="range" class="page-scrubber" id="pageScrubber" min="1" max="23" value="1" aria-label="Kéo chọn trang nhanh">
     </div>
 
     <div class="footer-right">
       <button class="btn-thumbs-toggle" id="btnToggleThumbs">
         <i class="fa-solid fa-grip"></i>
-        <span>Mục Lục (98)</span>
+        <span>Mục Lục (23)</span>
       </button>
       <a href="/" class="icon-btn" title="Về Trang Chủ" style="text-decoration: none;">
         <i class="fa-solid fa-house"></i>
@@ -1160,7 +1176,32 @@
 
   <script>
     (function() {
-      const TOTAL_PAGES = 21;
+      const TOTAL_PAGES = 23;
+      const PAGE_TITLES = [
+        "Toàn Cảnh Hoàng Hôn Saigon Farm Resort",
+        "Biệt Thự Sân Vườn Sinh Thái Điền An",
+        "Hồ Bơi Trung Tâm Resort",
+        "Hồ Bơi Vô Cực Điện Phân Khoáng Muối Ven Hồ",
+        "Nhà Lễ Tân & Sảnh Đón Tiếp MDS Living",
+        "Khu Trị Liệu Dưỡng Sinh & Thảo Dược Spa",
+        "Cầu Gỗ Ven Hồ & Lối Dạo Bộ Thủy Trúc (Top View)",
+        "Công Viên Cảnh Quan Hồ & Không Gian Dã Ngoại",
+        "Tuyến Dạo Bộ Ven Hồ Lakeside Promenade",
+        "Trung Tâm Thể Thao Đa Năng & Phòng Gym Hướng Hồ",
+        "Sân Khấu Nghệ Thuật & Sự Kiện Văn Hóa Ngoài Trời",
+        "Nhà Hàng Ẩm Thực Sinh Thái The Lake Dining",
+        "Tuyến Đường Nội Khu Cảnh Quan Dẫn Vào Villa A10",
+        "Cổng Chào Chánh Điện Saigon Farm Resort",
+        "Phối Cảnh Chi Tiết Biệt Phủ Điền Trang A10",
+        "Tổng Thể Khu Biệt Thự Điền Trang Sinh Thái",
+        "Góc Sân Vườn Biệt Thự & Hiên Nhà Thuần Việt",
+        "Làng Thượng Khách - Khu Nghỉ Dưỡng Thượng Lưu",
+        "Khu Biệt Thự Lưu Trú Chuyên Gia & Ban Vận Hành",
+        "Làng Thượng Khách Bên Cánh Đồng Lúa Sinh Thái",
+        "Khu Biệt Thự Ven Sông & Kênh Thủy Sinh Phong Thủy",
+        "Phối Cảnh Toàn Cảnh Saigon Farm Resort (Flycam View)",
+        "Đại Phối Cảnh Quần Thể Điền Trang Saigon Farm Resort"
+      ];
       const loadingOverlay = document.getElementById('loadingOverlay');
       const pageInput = document.getElementById('pageInput');
       const pageScrubber = document.getElementById('pageScrubber');
@@ -1188,14 +1229,17 @@
       // Default to Single Page Mode (1 slide 16:9 at a time) for massive, clear, easy-to-read slides!
       let isSingleMode = true;
 
-      // 1. Build Thumbnails Once
+      // 1. Build Thumbnails Once with exact names
       for (let i = 1; i <= TOTAL_PAGES; i++) {
         const thumbItem = document.createElement('div');
         thumbItem.className = 'thumb-item' + (i === 1 ? ' active' : '');
         thumbItem.dataset.page = i;
+        const pTitle = PAGE_TITLES[i - 1] || `Ảnh 3D #${i}`;
+        thumbItem.title = `${i}. ${pTitle}`;
         thumbItem.innerHTML = `
-          <img src="assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_${i}.webp" alt="Trang ${i}" loading="lazy">
+          <img src="assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_${i}.webp" alt="${pTitle}" loading="lazy">
           <span class="thumb-num">${i}</span>
+          <span class="thumb-title-badge">${pTitle}</span>
         `;
         thumbItem.addEventListener('click', () => {
           goToPage(i);
@@ -1345,7 +1389,8 @@
 
           const img = document.createElement('img');
           img.src = `assets/Index_asset/3D_SGFR_Photo_logo/SGFR_${i}.webp`;
-          img.alt = `Saigon Farm Resort Slide ${i}`;
+          const pTitle = PAGE_TITLES[i - 1] || `Phối cảnh 3D ${i}`;
+          img.alt = `Saigon Farm Resort - ${pTitle}`;
           img.loading = (i <= 4) ? 'eager' : 'lazy';
 
           pageDiv.appendChild(img);
@@ -1408,6 +1453,11 @@
         const fsMobilePageNum = document.getElementById('fsMobilePageNum');
         if (fsMobilePageNum) {
           fsMobilePageNum.textContent = pageNumber;
+        }
+        const slideCaptionEl = document.getElementById('slideCaptionPill');
+        if (slideCaptionEl) {
+          const curTitle = PAGE_TITLES[pageNumber - 1] || '';
+          slideCaptionEl.innerHTML = `<span style="color:var(--gold); font-weight:800;">#${pageNumber < 10 ? '0' + pageNumber : pageNumber}:</span> ${curTitle}`;
         }
 
         btnPrev.disabled = (pageNumber <= 1);
