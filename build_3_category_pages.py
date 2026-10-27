@@ -10,27 +10,27 @@ def clean_text(t):
 
 # 100% verified existing images in repo
 verified_images = [
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_13.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp",
-    "assets/Index_asset/3D_SGFR_Photo_logo/SGFR_21.webp"
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_13.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp",
+    "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_21.webp"
 ]
 
 with open("data/listing_categories.json", "r", encoding="utf-8") as f:
@@ -269,7 +269,7 @@ def render_page(cat, all_cats):
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://saigonfarmresort.com/{cat['slug']}">
   
-  <link rel="icon" type="image/x-icon" href="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
+  <link rel="icon" type="image/x-icon" href="/assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -1488,8 +1488,8 @@ def render_page(cat, all_cats):
           </div>
         </div>
 
-        <div class="overview-img-wrap" onclick="openLightbox('{cat['default_image']}')" style="cursor: pointer; {'background: #0a1b17;' if cat['slug'] == 'dien-an' else ''}">
-          <img src="{cat['default_image']}" alt="{cat['title']}" class="overview-img" style="{'object-fit: contain; max-height: 520px;' if cat['slug'] == 'dien-an' else ''}">
+        <div class="overview-img-wrap" onclick="openLightbox('/{cat['default_image'].lstrip('/')}')" style="cursor: pointer; {'background: #0a1b17;' if cat['slug'] == 'dien-an' else ''}">
+          <img src="/{cat['default_image'].lstrip('/')}" alt="{cat['title']}" class="overview-img" style="{'object-fit: contain; max-height: 520px;' if cat['slug'] == 'dien-an' else ''}">
           <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.65); color: #fff; font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; backdrop-filter: blur(4px); pointer-events: none; display: flex; align-items: center; gap: 6px;">
             <i class="fa-solid fa-magnifying-glass-plus"></i> Nhấp để phóng to chi tiết
           </div>
@@ -1564,7 +1564,7 @@ def render_page(cat, all_cats):
         </div>
 
         <div class="masterplan-img-card" onclick="openLightbox('assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png')">
-          <img src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Sơ Đồ Phân Lô & Tiện Ích Saigon Farm Resort" class="masterplan-img">
+          <img src="/assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Sơ Đồ Phân Lô & Tiện Ích Saigon Farm Resort" class="masterplan-img">
           <div class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Nhấp để xem lớn</div>
         </div>
       </div>
@@ -1642,7 +1642,7 @@ def render_page(cat, all_cats):
   <!-- Lightbox Modal Container -->
   <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Mặt bằng phóng to" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="/assets/Index_asset/MatBang/SoDo_TienIch_TongThe.png" alt="Mặt bằng phóng to" onclick="event.stopPropagation()">
   </div>
 
   <!-- Elegant Booking Guidance Modal -->
