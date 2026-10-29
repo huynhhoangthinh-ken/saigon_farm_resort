@@ -4,6 +4,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
+
   <!-- Google Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L9EZXY66G"></script>
   <script>
@@ -14,6 +15,7 @@
   </script>
   <!-- SFR Real-Time Visitor Live Tracker -->
   <script defer src="/js/sfr-tracker.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Saigon Farm Resort | Quần Thể Điền Trang Nghỉ Dưỡng Sinh Thái Ven Hồ 100ha — Bản Sắc Việt Đương Đại</title>
@@ -40,29 +42,32 @@
 
   <style>
     /* ==============================================================
-       BẢNG MÀU TRẮNG NGÀ / GIẤY DÓ ĐÔNG HỒ & BẢN SẮC VIỆT
+       HỆ MÀU BẢN SẮC VIỆT HOÀNG GIA & NỀN TRẮNG NGÀ TRANH GIẤY ĐÔNG HỒ
+       (LOẠI BỎ HOÀN TOÀN TONE XANH LÁ ĐẬM - THAY BẰNG GỖ MUN, TRẦM HƯƠNG & VÀNG ĐỒNG)
        ============================================================== */
     :root {
-      /* Màu nền giấy Dó / giấy Điệp Đông Hồ trắng ngà ấm áp */
+      /* Màu nền giấy Dó / giấy Điệp tranh Đông Hồ trắng ngà ấm áp */
       --bg-page: #FAF6ED;
-      --bg-paper-warm: #F4ECE0;
+      --bg-paper-warm: #F4EBE0;
       --bg-paper-light: #FDFBF7;
       --bg-surface: #FFFFFF;
-      --bg-card: #FFFDF9;
-      --bg-dark: #122219;
+      --bg-card: #FFFEFA;
       
-      /* Hệ màu thương hiệu Bản Sắc Việt */
-      --color-gold: #c29b53;
-      --color-gold-hover: #b08940;
-      --color-gold-dark: #8c6b32;
-      --color-gold-light: #f7f1e4;
-      --color-forest: #183024;
-      --color-forest-dark: #0f1d16;
-      --color-dark: #1a241e;
-      --color-body: #2d3831;
-      --color-muted: #5e6f65;
-      --color-border: #e4dcce;
-      --color-border-gold: rgba(194, 155, 83, 0.35);
+      /* Hệ màu Di Sản Hoàng Gia: Gỗ Mun, Trầm Hương, Hoàng Đàn, Sơn Mài & Vàng Đồng */
+      --color-dark: #1E1713;          /* Gỗ mun trầm đen tuyền sang trọng, không ánh xanh */
+      --color-wood: #2B211B;          /* Nâu gỗ trầm hương thượng lưu */
+      --color-wood-deep: #16100C;     /* Nâu đen sơn mài quý phái cho footer */
+      --color-wood-medium: #45362B;   /* Nâu gỗ ấm trung tính */
+      --color-body: #322822;          /* Chữ sắc nét, thanh nhã, nâu đen cổ điển */
+      --color-muted: #6E5F55;         /* Chữ phụ màu đất trầm mộc mạc, dễ đọc */
+      --color-border: #E4D8C8;        /* Viền giấy Dó ngà ấm */
+      --color-border-gold: rgba(194, 155, 83, 0.45);
+
+      /* Ánh kim vàng đồng hoàng gia */
+      --color-gold: #C29B53;
+      --color-gold-hover: #D6AE66;
+      --color-gold-dark: #916E31;
+      --color-gold-light: #F8F1E4;
 
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-heading: 'Montserrat', sans-serif;
@@ -83,11 +88,10 @@
     body {
       font-family: var(--font-sans);
       background-color: var(--bg-page);
-      /* Hiệu ứng nền giấy mỹ thuật mộc mạc kết hợp ánh hoàng kim */
       background-image: 
-        radial-gradient(circle at 12% 15%, rgba(194, 155, 83, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 88% 35%, rgba(24, 48, 36, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 50% 85%, rgba(194, 155, 83, 0.06) 0%, transparent 60%);
+        radial-gradient(circle at 10% 12%, rgba(194, 155, 83, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 90% 30%, rgba(43, 33, 27, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(194, 155, 83, 0.07) 0%, transparent 60%);
       color: var(--color-body);
       line-height: 1.7;
       overflow-x: hidden;
@@ -115,8 +119,11 @@
       z-index: 2;
     }
 
-    /* ---- LỚP HỌA TIẾT WATERMARK BẢN SẮC VIỆT (TRỐNG ĐỒNG, HOA SEN, MÂY) ---- */
-    .viet-pattern-layer {
+    /* ==============================================================
+       HỆ THỐNG HOA VĂN BẢN SẮC VIỆT (TRỐNG ĐỒNG, HOA SEN, MÂY CÁT TƯỜNG, ĐÌNH CỔ)
+       ============================================================== */
+    /* Watermark cố định nền trang */
+    .viet-pattern-fixed {
       position: fixed;
       inset: 0;
       pointer-events: none;
@@ -124,56 +131,172 @@
       z-index: 0;
     }
 
-    .pat-drum-top-right {
+    .fixed-pat-drum {
       position: absolute;
-      top: -80px;
-      right: -80px;
-      width: 480px;
-      height: 480px;
+      top: -120px;
+      right: -120px;
+      width: 640px;
+      height: 640px;
       background: url('assets/patterns/gold_dong_son_drum.png') no-repeat center;
       background-size: contain;
-      opacity: 0.06;
-      transform: rotate(15deg);
+      opacity: 0.10;
+      transform: rotate(18deg);
+      animation: slowRotate 240s linear infinite;
     }
 
-    .pat-lotus-bottom-left {
+    .fixed-pat-lotus {
       position: absolute;
-      bottom: 60px;
-      left: -60px;
-      width: 320px;
-      height: 320px;
+      bottom: 80px;
+      left: -90px;
+      width: 420px;
+      height: 420px;
       background: url('assets/patterns/gold_lotus.png') no-repeat center;
       background-size: contain;
-      opacity: 0.05;
+      opacity: 0.09;
     }
 
-    /* ---- HEADER & NAVIGATION ---- */
+    @keyframes slowRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Watermark chuyên biệt cho từng section */
+    .section-watermark-wrap {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .wm-dong-son-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 620px;
+      height: 620px;
+      background: url('assets/patterns/gold_dong_son_drum.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.08;
+    }
+
+    .wm-pavilion-corner {
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 360px;
+      height: 300px;
+      background: url('assets/patterns/gold_estate_pavilion.png') no-repeat right bottom;
+      background-size: contain;
+      opacity: 0.12;
+    }
+
+    .wm-lotus-corner {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      width: 300px;
+      height: 300px;
+      background: url('assets/patterns/gold_lotus.png') no-repeat left bottom;
+      background-size: contain;
+      opacity: 0.12;
+    }
+
+    .wm-cloud-float {
+      position: absolute;
+      top: 25px;
+      left: 6%;
+      width: 220px;
+      height: 110px;
+      background: url('assets/patterns/gold_auspicious_cloud.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.16;
+    }
+
+    .wm-cloud-float-right {
+      position: absolute;
+      top: 35px;
+      right: 7%;
+      width: 200px;
+      height: 100px;
+      background: url('assets/patterns/gold_auspicious_cloud.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.16;
+      transform: scaleX(-1);
+    }
+
+    /* Mây cát tường 4 góc khung */
+    .corner-cloud {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      background: url('assets/patterns/gold_auspicious_cloud.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.35;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .corner-cloud.tl { top: 10px; left: 10px; }
+    .corner-cloud.tr { top: 10px; right: 10px; transform: scaleX(-1); }
+    .corner-cloud.bl { bottom: 10px; left: 10px; transform: scaleY(-1); }
+    .corner-cloud.br { bottom: 10px; right: 10px; transform: scale(-1); }
+
+    /* Họa tiết hoa sen phân cách chính giữa */
+    .heritage-ornament-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .heritage-line {
+      height: 1px;
+      width: 65px;
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    }
+
+    .heritage-lotus-icon {
+      height: 26px;
+      width: auto;
+      opacity: 0.95;
+    }
+
+    /* ==============================================================
+       HEADER & NAVIGATION BAR (TRÁNH XUỐNG HÀNG & CHUẨN MOBILE)
+       ============================================================== */
     .site-header {
       position: sticky;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(250, 246, 237, 0.94);
+      background: rgba(250, 246, 237, 0.96);
       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--color-border-gold);
-      box-shadow: 0 4px 20px rgba(24, 48, 36, 0.04);
+      box-shadow: 0 4px 20px rgba(31, 25, 21, 0.04);
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 78px;
+      height: 76px;
       max-width: 1240px;
       margin: 0 auto;
       padding: 0 24px;
+      gap: 16px;
+      flex-wrap: nowrap; /* Không cho rớt hàng */
     }
 
     .brand-logo {
       display: flex;
       align-items: center;
       gap: 12px;
+      flex-shrink: 0;
+      white-space: nowrap !important;
     }
 
     .brand-logo img {
@@ -184,41 +307,60 @@
     .brand-text-block {
       display: flex;
       flex-direction: column;
+      white-space: nowrap !important;
     }
 
     .brand-name {
       font-family: var(--font-heading);
       font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: 1.5px;
-      color: var(--color-forest);
+      font-size: 1.05rem;
+      letter-spacing: 1.2px;
+      color: var(--color-dark);
       text-transform: uppercase;
+      white-space: nowrap !important;
     }
 
     .brand-tagline {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: var(--color-gold-dark);
       letter-spacing: 1.2px;
       text-transform: uppercase;
       font-weight: 600;
+      white-space: nowrap !important;
     }
 
+    /* MENU CHÍNH DESKTOP: KHÔNG BAO GIỜ XUỐNG HÀNG */
     .nav-links {
       display: flex;
       align-items: center;
       list-style: none;
-      gap: 28px;
+      gap: clamp(12px, 1.8vw, 24px);
+      margin: 0;
+      padding: 0;
+      flex-wrap: nowrap; /* Tuyệt đối không cho xuống hàng */
+      flex-shrink: 0;
+    }
+
+    .nav-links li {
+      flex-shrink: 0;
+      white-space: nowrap !important;
+      word-break: keep-all !important;
     }
 
     .nav-links a {
       font-family: var(--font-heading);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      color: var(--color-forest);
-      padding: 6px 0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      color: var(--color-wood);
+      padding: 8px 0;
       position: relative;
       text-transform: uppercase;
+      white-space: nowrap !important;
+      word-break: keep-all !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
 
     .nav-links a:hover,
@@ -236,58 +378,244 @@
       background: var(--color-gold);
     }
 
+    .nav-cta-wrap {
+      flex-shrink: 0;
+      white-space: nowrap !important;
+    }
+
     .btn-nav-cta {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 20px;
+      padding: 10px 18px;
       background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
-      color: #0f1d16;
+      color: #1E1713;
       font-family: var(--font-heading);
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 700;
       border-radius: 4px;
       text-transform: uppercase;
+      white-space: nowrap !important;
+      word-break: keep-all !important;
       box-shadow: 0 4px 15px rgba(194, 155, 83, 0.28);
+      flex-shrink: 0;
     }
 
     .btn-nav-cta:hover {
-      background: linear-gradient(135deg, #dfb262 0%, var(--color-gold) 100%);
+      background: linear-gradient(135deg, #DFB262 0%, var(--color-gold) 100%);
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(194, 155, 83, 0.4);
     }
 
-    .menu-toggle {
+    /* Nút Hamburger bật Drawer Mobile */
+    .btn-hamburger {
       display: none;
       background: none;
-      border: none;
-      color: var(--color-forest);
-      font-size: 1.5rem;
+      border: 1px solid var(--color-border-gold);
+      border-radius: 4px;
+      padding: 8px 12px;
+      color: var(--color-dark);
+      font-size: 1.25rem;
       cursor: pointer;
+      flex-shrink: 0;
+      line-height: 1;
+      transition: all 0.2s ease;
     }
 
-    /* ---- BIỂU TƯỢNG VĂN HÓA DI SẢN (HERITAGE MOTIF) ---- */
-    .heritage-ornament-center {
+    .btn-hamburger:hover {
+      background: var(--color-gold-light);
+      color: var(--color-gold-dark);
+    }
+
+    /* ==============================================================
+       MOBILE QUICK TAB BAR (STICKY NGAY DƯỚI HEADER)
+       CUỘN NGANG MƯỢT MÀ, 100% CHỮ KHÔNG XUỐNG HÀNG
+       ============================================================== */
+    .mobile-quick-tabbar {
+      display: none;
+      position: sticky;
+      top: 76px;
+      z-index: 998;
+      background: rgba(250, 246, 237, 0.98);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: 0 3px 12px rgba(31, 25, 21, 0.04);
+    }
+
+    .quick-tabbar-scroll {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 8px 16px;
+      scrollbar-width: none;
+    }
+
+    .quick-tabbar-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .quick-tab-item {
+      white-space: nowrap !important;
+      word-break: keep-all !important;
+      flex-shrink: 0;
+      font-family: var(--font-heading);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--color-wood);
+      background: var(--bg-surface);
+      border: 1px solid var(--color-border);
+      padding: 7px 14px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      transition: all 0.2s ease;
+    }
+
+    .quick-tab-item.active,
+    .quick-tab-item:hover {
+      background: var(--color-gold);
+      color: #1E1713;
+      border-color: var(--color-gold);
+    }
+
+    .quick-tab-item.tab-highlight {
+      background: var(--color-gold-light);
+      border-color: var(--color-gold);
+      color: var(--color-gold-dark);
+    }
+
+    .quick-tab-item.tab-cta {
+      background: var(--color-dark);
+      color: var(--color-gold);
+      border-color: var(--color-gold);
+    }
+
+    /* DRAWER MENU TRÊN MOBILE */
+    .mobile-drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(22, 16, 12, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-drawer-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 290px;
+      max-width: 85vw;
+      height: 100%;
+      background: var(--bg-page);
+      border-left: 1px solid var(--color-border-gold);
+      box-shadow: -10px 0 30px rgba(0,0,0,0.25);
+      z-index: 2001;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+    }
+
+    .mobile-drawer.active {
+      right: 0;
+    }
+
+    .drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 20px;
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--color-wood);
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .drawer-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .drawer-menu a {
+      font-family: var(--font-heading);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--color-wood);
+      padding: 10px 14px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--color-border);
+      text-transform: uppercase;
+      white-space: nowrap !important;
+    }
+
+    .drawer-menu a i {
+      color: var(--color-gold-dark);
+      width: 18px;
+      text-align: center;
+    }
+
+    .drawer-menu a.active,
+    .drawer-menu a:hover {
+      background: var(--color-gold-light);
+      border-color: var(--color-gold);
+      color: var(--color-gold-dark);
+    }
+
+    .drawer-footer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .drawer-btn-cta {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      margin-bottom: 16px;
+      gap: 8px;
+      width: 100%;
+      padding: 13px;
+      background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+      color: #1E1713;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 6px;
+      text-transform: uppercase;
+      white-space: nowrap !important;
     }
 
-    .heritage-line {
-      height: 1px;
-      width: 60px;
-      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-    }
-
-    .heritage-lotus-icon {
-      height: 24px;
-      width: auto;
-      opacity: 0.9;
-    }
-
-    /* ---- HERO INTRO SECTION ---- */
+    /* ==============================================================
+       HERO INTRO SECTION
+       ============================================================== */
     .intro-hero {
       padding: 70px 0 50px;
       text-align: center;
@@ -298,14 +626,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 7px 18px;
+      padding: 8px 20px;
       background: var(--color-gold-light);
-      border: 1px solid var(--color-border);
+      border: 1px solid var(--color-border-gold);
       border-radius: 20px;
       font-family: var(--font-heading);
       font-size: 0.78rem;
       font-weight: 700;
-      color: var(--color-forest);
+      color: var(--color-wood);
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin-bottom: 22px;
@@ -313,10 +641,10 @@
 
     .intro-title {
       font-family: var(--font-serif);
-      font-size: 3.1rem;
+      font-size: clamp(2rem, 4.5vw, 3.1rem);
       font-weight: 700;
-      line-height: 1.2;
-      color: var(--color-forest);
+      line-height: 1.25;
+      color: var(--color-dark);
       margin-bottom: 18px;
       max-width: 920px;
       margin-left: auto;
@@ -329,7 +657,7 @@
     }
 
     .intro-sub {
-      font-size: 1.15rem;
+      font-size: clamp(0.98rem, 2vw, 1.15rem);
       color: var(--color-muted);
       max-width: 800px;
       margin: 0 auto 36px;
@@ -346,9 +674,9 @@
     }
 
     .btn-hero-primary {
-      padding: 14px 32px;
+      padding: 14px 30px;
       background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
-      color: #0f1d16;
+      color: #1E1713;
       font-family: var(--font-heading);
       font-size: 0.88rem;
       font-weight: 700;
@@ -359,18 +687,19 @@
       align-items: center;
       gap: 8px;
       box-shadow: 0 6px 20px rgba(194, 155, 83, 0.3);
+      white-space: nowrap !important;
     }
 
     .btn-hero-primary:hover {
-      background: linear-gradient(135deg, #dfb262 0%, var(--color-gold) 100%);
+      background: linear-gradient(135deg, #DFB262 0%, var(--color-gold) 100%);
       transform: translateY(-2px);
     }
 
     .btn-hero-outline {
-      padding: 13px 30px;
+      padding: 13px 28px;
       background: var(--bg-surface);
       border: 1px solid var(--color-border);
-      color: var(--color-forest);
+      color: var(--color-wood);
       font-family: var(--font-heading);
       font-size: 0.88rem;
       font-weight: 600;
@@ -380,6 +709,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      white-space: nowrap !important;
     }
 
     .btn-hero-outline:hover {
@@ -397,7 +727,7 @@
       border: 1px solid var(--color-border);
       border-radius: 10px;
       padding: 26px 20px;
-      box-shadow: 0 12px 35px rgba(24, 48, 36, 0.05);
+      box-shadow: 0 12px 35px rgba(31, 25, 21, 0.05);
       position: relative;
     }
 
@@ -413,19 +743,21 @@
 
     .metric-num {
       font-family: var(--font-heading);
-      font-size: 2.2rem;
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
       font-weight: 800;
       color: var(--color-gold-dark);
-      line-height: 1.1;
+      line-height: 1.15;
       margin-bottom: 4px;
+      white-space: nowrap !important;
     }
 
     .metric-label {
-      font-size: 0.82rem;
-      color: var(--color-forest);
+      font-size: 0.8rem;
+      color: var(--color-wood);
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      white-space: nowrap !important;
     }
 
     /* SECTION SPACING & HEADERS */
@@ -454,8 +786,8 @@
 
     .section-headline {
       font-family: var(--font-serif);
-      font-size: 2.35rem;
-      color: var(--color-forest);
+      font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+      color: var(--color-dark);
       font-weight: 700;
       line-height: 1.25;
       margin-bottom: 12px;
@@ -467,7 +799,9 @@
       line-height: 1.65;
     }
 
-    /* ---- 1. TỌA ĐỘ VÀNG ---- */
+    /* ==============================================================
+       1. TỌA ĐỘ VÀNG
+       ============================================================== */
     .location-box {
       background: var(--bg-surface);
       border: 1px solid var(--color-border);
@@ -475,7 +809,8 @@
       overflow: hidden;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      box-shadow: 0 15px 35px rgba(24, 48, 36, 0.05);
+      box-shadow: 0 15px 35px rgba(31, 25, 21, 0.05);
+      position: relative;
     }
 
     .location-media {
@@ -494,6 +829,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      position: relative;
     }
 
     .address-highlight {
@@ -503,7 +839,7 @@
       border-radius: 0 6px 6px 0;
       margin-bottom: 24px;
       font-size: 0.95rem;
-      color: var(--color-forest);
+      color: var(--color-wood);
     }
 
     .time-grid {
@@ -527,7 +863,7 @@
 
     .time-item div strong {
       display: block;
-      color: var(--color-forest);
+      color: var(--color-wood);
       font-size: 0.92rem;
     }
 
@@ -536,7 +872,9 @@
       color: var(--color-muted);
     }
 
-    /* ---- 2. 5 TRỤ CỘT BẢN SẮC VIỆT ---- */
+    /* ==============================================================
+       2. 5 TRỤ CỘT BẢN SẮC VIỆT
+       ============================================================== */
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -548,16 +886,17 @@
       border: 1px solid var(--color-border);
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 6px 20px rgba(24, 48, 36, 0.04);
+      box-shadow: 0 6px 20px rgba(31, 25, 21, 0.04);
       transition: transform 0.3s ease, border-color 0.3s ease;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
     .pillar-card:hover {
       transform: translateY(-5px);
       border-color: var(--color-gold);
-      box-shadow: 0 12px 30px rgba(24, 48, 36, 0.08);
+      box-shadow: 0 12px 30px rgba(31, 25, 21, 0.08);
     }
 
     .pillar-media {
@@ -585,8 +924,8 @@
 
     .pillar-title {
       font-family: var(--font-serif);
-      font-size: 1.25rem;
-      color: var(--color-forest);
+      font-size: 1.22rem;
+      color: var(--color-dark);
       font-weight: 700;
       margin-bottom: 6px;
     }
@@ -597,7 +936,9 @@
       line-height: 1.5;
     }
 
-    /* ---- 3. BỘ SƯU TẬP 4 DÒNG SẢN PHẨM ---- */
+    /* ==============================================================
+       3. BỘ SƯU TẬP 4 DÒNG ĐIỀN TRANG
+       ============================================================== */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -609,16 +950,17 @@
       border: 1px solid var(--color-border);
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(24, 48, 36, 0.05);
+      box-shadow: 0 10px 25px rgba(31, 25, 21, 0.05);
       display: flex;
       flex-direction: column;
       transition: all 0.3s ease;
+      position: relative;
     }
 
     .product-box:hover {
       border-color: var(--color-gold);
       transform: translateY(-4px);
-      box-shadow: 0 15px 35px rgba(24, 48, 36, 0.08);
+      box-shadow: 0 15px 35px rgba(31, 25, 21, 0.08);
     }
 
     .product-media {
@@ -637,7 +979,7 @@
       position: absolute;
       top: 14px;
       left: 14px;
-      background: rgba(15, 29, 22, 0.88);
+      background: rgba(30, 23, 19, 0.90);
       color: var(--color-gold-light);
       border: 1px solid var(--color-gold);
       padding: 5px 12px;
@@ -647,6 +989,7 @@
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      white-space: nowrap !important;
     }
 
     .product-detail {
@@ -658,8 +1001,8 @@
 
     .product-name {
       font-family: var(--font-serif);
-      font-size: 1.5rem;
-      color: var(--color-forest);
+      font-size: 1.45rem;
+      color: var(--color-dark);
       font-weight: 700;
       margin-bottom: 4px;
     }
@@ -671,6 +1014,7 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-bottom: 12px;
+      white-space: nowrap !important;
     }
 
     .product-brief {
@@ -702,12 +1046,14 @@
       color: var(--color-muted);
       text-transform: uppercase;
       margin-bottom: 2px;
+      white-space: nowrap !important;
     }
 
     .spec-cell strong {
       font-family: var(--font-heading);
-      font-size: 0.88rem;
-      color: var(--color-forest);
+      font-size: 0.86rem;
+      color: var(--color-dark);
+      white-space: nowrap !important;
     }
 
     .product-action {
@@ -720,10 +1066,11 @@
 
     .product-cert {
       font-size: 0.8rem;
-      color: var(--color-forest);
+      color: var(--color-wood);
       display: flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap !important;
     }
 
     .product-cert i {
@@ -739,21 +1086,25 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap !important;
     }
 
     .btn-lot-link:hover {
-      color: var(--color-forest);
+      color: var(--color-dark);
       transform: translateX(4px);
     }
 
-    /* ---- 4. TIỆN ÍCH 30.000 M² ---- */
+    /* ==============================================================
+       4. TIỆN ÍCH 30.000 M²
+       ============================================================== */
     .amenities-feature-wrap {
       background: var(--bg-surface);
       border: 1px solid var(--color-border);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(24, 48, 36, 0.06);
+      box-shadow: 0 15px 35px rgba(31, 25, 21, 0.06);
       margin-bottom: 30px;
+      position: relative;
     }
 
     .amenities-img-frame {
@@ -767,14 +1118,15 @@
     }
 
     .amenities-caption-bar {
-      background: var(--color-forest);
-      color: #ffffff;
+      background: var(--color-dark);
+      color: #FFFFFF;
       padding: 16px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
+      border-top: 1px solid var(--color-border-gold);
     }
 
     .amenities-caption-title {
@@ -807,7 +1159,7 @@
       display: block;
       font-family: var(--font-heading);
       font-size: 0.9rem;
-      color: var(--color-forest);
+      color: var(--color-dark);
       margin-bottom: 4px;
     }
 
@@ -817,7 +1169,9 @@
       line-height: 1.45;
     }
 
-    /* ---- 5. BẢO CHỨNG PHÁP LÝ & VẬN HÀNH ---- */
+    /* ==============================================================
+       5. PHÁP LÝ & QUẢN GIA MDS LIVING
+       ============================================================== */
     .trust-dual-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -830,13 +1184,15 @@
       border: 1px solid var(--color-border);
       border-radius: 10px;
       padding: 32px 28px;
-      box-shadow: 0 10px 25px rgba(24, 48, 36, 0.05);
+      box-shadow: 0 10px 25px rgba(31, 25, 21, 0.05);
+      position: relative;
+      overflow: hidden;
     }
 
     .trust-card-title {
       font-family: var(--font-serif);
       font-size: 1.35rem;
-      color: var(--color-forest);
+      color: var(--color-dark);
       font-weight: 700;
       margin-bottom: 14px;
       display: flex;
@@ -865,30 +1221,36 @@
     }
 
     .trust-card li i {
-      color: #27ae60;
+      color: var(--color-gold); /* Thay thế màu xanh lá */
       margin-top: 4px;
     }
 
-    /* ---- FORM ĐĂNG KÝ KHẢO SÁT VIP ---- */
+    /* ==============================================================
+       FORM ĐĂNG KÝ KHẢO SÁT VIP (LIMOUSINE)
+       ============================================================== */
     .booking-section-wrap {
       background: var(--bg-paper-warm);
       border: 1px solid var(--color-border);
       border-radius: 14px;
       padding: 48px 36px;
-      box-shadow: 0 20px 45px rgba(24, 48, 36, 0.06);
+      box-shadow: 0 20px 45px rgba(31, 25, 21, 0.06);
       margin-top: 40px;
+      position: relative;
+      overflow: hidden;
     }
 
     .booking-head {
       text-align: center;
       max-width: 680px;
       margin: 0 auto 30px;
+      position: relative;
+      z-index: 2;
     }
 
     .booking-head h3 {
       font-family: var(--font-serif);
-      font-size: 2rem;
-      color: var(--color-forest);
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      color: var(--color-dark);
       margin-bottom: 8px;
     }
 
@@ -903,6 +1265,8 @@
       gap: 16px;
       max-width: 820px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
     .form-item {
@@ -913,7 +1277,7 @@
     .form-item label {
       font-size: 0.8rem;
       font-weight: 600;
-      color: var(--color-forest);
+      color: var(--color-wood);
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-bottom: 6px;
@@ -928,6 +1292,7 @@
       font-size: 0.92rem;
       color: var(--color-dark);
       transition: border-color 0.25s ease;
+      width: 100%;
     }
 
     .form-input:focus {
@@ -944,7 +1309,7 @@
       width: 100%;
       padding: 15px;
       background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
-      color: #0f1d16;
+      color: #1E1713;
       border: none;
       border-radius: 4px;
       font-family: var(--font-heading);
@@ -955,21 +1320,39 @@
       cursor: pointer;
       transition: all 0.25s ease;
       box-shadow: 0 6px 20px rgba(194, 155, 83, 0.3);
+      white-space: nowrap !important;
     }
 
     .btn-submit-vip:hover {
-      background: linear-gradient(135deg, #dfb262 0%, var(--color-gold) 100%);
+      background: linear-gradient(135deg, #DFB262 0%, var(--color-gold) 100%);
       transform: translateY(-2px);
     }
 
-    /* ---- FOOTER ---- */
+    /* ==============================================================
+       FOOTER SƠN MÀI GỖ QUÝ & HOA VĂN HOÀNG GIA (NO DARK GREEN)
+       ============================================================== */
     .site-footer {
-      background: var(--color-forest-dark);
-      color: #a3b5aa;
-      padding: 55px 0 25px;
+      background: var(--color-wood-deep);
+      color: #D6CBC0;
+      padding: 60px 0 25px;
       font-size: 0.88rem;
       margin-top: 80px;
       border-top: 2px solid var(--color-gold);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-watermark {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: url('assets/patterns/gold_dong_son_drum.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.10;
+      pointer-events: none;
     }
 
     .footer-grid {
@@ -977,12 +1360,15 @@
       grid-template-columns: 2fr 1fr 1fr;
       gap: 40px;
       margin-bottom: 36px;
+      position: relative;
+      z-index: 2;
     }
 
     .footer-brand p {
       line-height: 1.6;
       margin-top: 12px;
       max-width: 420px;
+      color: #C2B6AA;
     }
 
     .footer-col h4 {
@@ -992,6 +1378,7 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin-bottom: 16px;
+      white-space: nowrap !important;
     }
 
     .footer-col ul {
@@ -1001,12 +1388,16 @@
       gap: 9px;
     }
 
+    .footer-col li {
+      white-space: nowrap !important;
+    }
+
     .footer-col a:hover {
-      color: #ffffff;
+      color: #FFFFFF;
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
       padding-top: 20px;
       display: flex;
       align-items: center;
@@ -1014,6 +1405,9 @@
       flex-wrap: wrap;
       gap: 12px;
       font-size: 0.8rem;
+      position: relative;
+      z-index: 2;
+      color: #A99B8E;
     }
 
     /* LIGHTBOX MODAL */
@@ -1021,7 +1415,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      z-index: 2000;
+      z-index: 3000;
       background: rgba(0,0,0,0.92);
       backdrop-filter: blur(8px);
       align-items: center;
@@ -1058,10 +1452,30 @@
       cursor: pointer;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .intro-title {
-        font-size: 2.5rem;
+    /* ==============================================================
+       RESPONSIVE & MOBILE FRIENDLY OPTIMIZATION
+       ============================================================== */
+    @media (max-width: 1080px) {
+      .nav-links {
+        gap: 14px;
+      }
+      .nav-links a {
+        font-size: 0.78rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .nav-links {
+        display: none; /* Ẩn menu chính, chuyển sang Mobile Tab Bar & Drawer */
+      }
+      .nav-cta-wrap {
+        display: none;
+      }
+      .btn-hamburger {
+        display: inline-flex;
+      }
+      .mobile-quick-tabbar {
+        display: block; /* Hiện tab bar cuộn ngang mượt mà */
       }
       .pillars-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1069,33 +1483,65 @@
       .amenities-subgrid {
         grid-template-columns: repeat(2, 1fr);
       }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .footer-brand {
+        grid-column: span 2;
+      }
     }
 
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
+      .site-header {
+        height: 68px;
       }
-      .menu-toggle {
-        display: block;
+      .nav-inner {
+        height: 68px;
+        padding: 0 16px;
       }
-      .intro-title {
-        font-size: 2rem;
+      .mobile-quick-tabbar {
+        top: 68px;
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .intro-hero {
+        padding: 50px 0 35px;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .btn-hero-primary,
+      .btn-hero-outline {
+        width: 100%;
+        justify-content: center;
       }
       .metrics-bar {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 14px;
+        padding: 18px 12px;
       }
       .metric-card {
+        padding: 6px 4px;
+      }
+      .metric-card:nth-child(2) {
         border-right: none;
       }
       .location-box {
         grid-template-columns: 1fr;
       }
       .location-media {
-        min-height: 240px;
+        min-height: 220px;
       }
       .location-content {
-        padding: 24px 20px;
+        padding: 24px 18px;
+      }
+      .time-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
       .pillars-grid {
         grid-template-columns: 1fr;
@@ -1106,32 +1552,48 @@
       .trust-dual-grid {
         grid-template-columns: 1fr;
       }
+      .booking-section-wrap {
+        padding: 30px 18px;
+      }
       .booking-form-grid {
         grid-template-columns: 1fr;
       }
       .form-submit-full {
         grid-column: span 1;
       }
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      .btn-submit-vip {
+        white-space: normal !important;
+        line-height: 1.4;
       }
       .amenities-subgrid {
         grid-template-columns: 1fr;
       }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .footer-brand {
+        grid-column: span 1;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
-<body>
+<body id="hero">
 
-  <!-- LỚP HỌA TIẾT BẢN SẮC VIỆT (TRỐNG ĐỒNG & HOA SEN NỀN) -->
-  <div class="viet-pattern-layer">
-    <div class="pat-drum-top-right"></div>
-    <div class="pat-lotus-bottom-left"></div>
+  <!-- ==============================================================
+       LỚP HỌA TIẾT BẢN SẮC VIỆT NỀN CỐ ĐỊNH (TRỐNG ĐỒNG & HOA SEN)
+       ============================================================== -->
+  <div class="viet-pattern-fixed" aria-hidden="true">
+    <div class="fixed-pat-drum"></div>
+    <div class="fixed-pat-lotus"></div>
   </div>
 
   <!-- ==============================================================
-       TOP NAVIGATION BAR
+       HEADER NAVIGATION CHÍNH
        ============================================================== -->
   <header class="site-header">
     <div class="nav-inner">
@@ -1143,28 +1605,89 @@
         </div>
       </a>
 
-      <!-- MENU ĐIỀU HƯỚNG TRANG CHỦ -->
+      <!-- MENU ĐIỀU HƯỚNG TRANG CHỦ (CHỮ TUYỆT ĐỐI KHÔNG XUỐNG HÀNG) -->
       <ul class="nav-links">
-        <li><a href="/" class="active">Trang Chủ</a></li>
+        <li><a href="/" class="active"><i class="fa-solid fa-house" style="font-size:0.75rem;"></i> Trang Chủ</a></li>
         <li><a href="#vi-tri">Tọa Độ</a></li>
         <li><a href="#triet-ly">Bản Sắc Việt</a></li>
         <li><a href="#san-pham">Điền Trang</a></li>
-        <li><a href="#tien-ich">Tiện Ích 30.000m²</a></li>
-        <li><a href="https://invitation.saigonfarmresort.com" target="_blank" rel="noopener">Thư Mời VIP</a></li>
+        <li><a href="#tien-ich">Tiện Ích</a></li>
+        <li><a href="https://invitation.saigonfarmresort.com" target="_blank" rel="noopener" style="color:var(--color-gold-dark);"><i class="fa-solid fa-envelope-open-text"></i> Thư Mời VIP</a></li>
       </ul>
 
-      <div>
+      <!-- NÚT CTA ĐĂNG KÝ DESKTOP -->
+      <div class="nav-cta-wrap">
         <a href="#dang-ky" class="btn-nav-cta">
           <i class="fa-solid fa-calendar-check"></i> Đăng Ký Khảo Sát
         </a>
       </div>
+
+      <!-- NÚT BẬT MENU TRÊN MOBILE -->
+      <button class="btn-hamburger" id="hamburgerBtn" aria-label="Mở menu" onclick="toggleMobileDrawer()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </header>
+
+  <!-- ==============================================================
+       MOBILE STICKY QUICK TAB BAR (CUỘN NGANG MƯỢT MÀ, 100% 1 HÀNG)
+       ============================================================== -->
+  <nav class="mobile-quick-tabbar" aria-label="Điều hướng nhanh">
+    <div class="quick-tabbar-scroll">
+      <a href="#hero" class="quick-tab-item active"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+      <a href="#vi-tri" class="quick-tab-item"><i class="fa-solid fa-location-dot"></i> Tọa Độ</a>
+      <a href="#triet-ly" class="quick-tab-item"><i class="fa-solid fa-spa"></i> Bản Sắc Việt</a>
+      <a href="#san-pham" class="quick-tab-item"><i class="fa-solid fa-landmark"></i> Điền Trang</a>
+      <a href="#tien-ich" class="quick-tab-item"><i class="fa-solid fa-water"></i> Tiện Ích</a>
+      <a href="https://invitation.saigonfarmresort.com" target="_blank" rel="noopener" class="quick-tab-item tab-highlight"><i class="fa-solid fa-envelope-open-text"></i> Thư Mời VIP</a>
+      <a href="#dang-ky" class="quick-tab-item tab-cta"><i class="fa-solid fa-car-side"></i> Đăng Ký</a>
+    </div>
+  </nav>
+
+  <!-- ==============================================================
+       DRAWER MENU DI ĐỘNG (SLIDE-OUT TỪ PHẢI)
+       ============================================================== -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileDrawer()"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-head">
+      <div class="brand-logo">
+        <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Logo" style="height:36px;">
+        <span class="brand-name" style="font-size:0.92rem;">Saigon Farm Resort</span>
+      </div>
+      <button class="drawer-close" onclick="toggleMobileDrawer()">&times;</button>
+    </div>
+
+    <ul class="drawer-menu">
+      <li><a href="#hero" onclick="toggleMobileDrawer()" class="active"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+      <li><a href="#vi-tri" onclick="toggleMobileDrawer()"><i class="fa-solid fa-location-dot"></i> Tọa Độ Phong Thủy</a></li>
+      <li><a href="#triet-ly" onclick="toggleMobileDrawer()"><i class="fa-solid fa-spa"></i> 5 Trụ Cột Bản Sắc</a></li>
+      <li><a href="#san-pham" onclick="toggleMobileDrawer()"><i class="fa-solid fa-landmark"></i> 4 Dòng Điền Trang</a></li>
+      <li><a href="#tien-ich" onclick="toggleMobileDrawer()"><i class="fa-solid fa-water"></i> Quần Thể Tiện Ích 30.000m²</a></li>
+      <li><a href="#phap-ly" onclick="toggleMobileDrawer()"><i class="fa-solid fa-shield-halved"></i> Pháp Lý & Quản Gia MDS</a></li>
+      <li><a href="https://invitation.saigonfarmresort.com" target="_blank" rel="noopener" style="color:var(--color-gold-dark); border-color:var(--color-gold);"><i class="fa-solid fa-envelope-open-text"></i> Xem Thư Mời VIP</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <a href="#dang-ky" onclick="toggleMobileDrawer()" class="drawer-btn-cta">
+        <i class="fa-solid fa-car-side"></i> Đăng Ký Khảo Sát Limousine
+      </a>
+      <p style="font-size:0.75rem; color:var(--color-muted); text-align:center; margin-top:14px;">
+        Hotline VIP: <strong>090 999 9999</strong>
+      </p>
+    </div>
+  </aside>
 
   <!-- ==============================================================
        HERO: KHỞI NGUYÊN BẢN SẮC & 4 THƯỚC ĐO VÀNG
        ============================================================== -->
   <section class="intro-hero">
+    <!-- Watermark hoa văn mây & đình cổ nổi bật -->
+    <div class="section-watermark-wrap" aria-hidden="true">
+      <div class="wm-cloud-float"></div>
+      <div class="wm-cloud-float-right"></div>
+      <div class="wm-dong-son-center" style="opacity:0.06;"></div>
+    </div>
+
     <div class="container">
       <div class="heritage-ornament-center">
         <span class="heritage-line"></span>
@@ -1196,6 +1719,11 @@
 
       <!-- 4 THƯỚC ĐO VÀNG -->
       <div class="metrics-bar">
+        <div class="corner-cloud tl"></div>
+        <div class="corner-cloud tr"></div>
+        <div class="corner-cloud bl"></div>
+        <div class="corner-cloud br"></div>
+
         <div class="metric-card">
           <div class="metric-num">100 ha</div>
           <div class="metric-label">Mặt Nước Tự Nhiên</div>
@@ -1220,6 +1748,10 @@
        MỤC 1: TỌA ĐỘ VÀNG & TỨ GIÁC HẠ TẦNG KẾT NỐI
        ============================================================== -->
   <section class="intro-section" id="vi-tri">
+    <div class="section-watermark-wrap" aria-hidden="true">
+      <div class="wm-pavilion-corner" style="opacity:0.10;"></div>
+    </div>
+
     <div class="container">
       <div class="section-head">
         <span class="section-kicker">Tọa Độ Phong Thủy</span>
@@ -1230,6 +1762,9 @@
       </div>
 
       <div class="location-box">
+        <div class="corner-cloud tl"></div>
+        <div class="corner-cloud tr"></div>
+
         <div class="location-media">
           <img src="assets/Index_asset/3D new 2026/SGFR_14 - CỔNG CHÍNH.jpg" alt="Cổng chính Saigon Farm Resort" loading="lazy">
         </div>
@@ -1278,77 +1813,82 @@
        MỤC 2: 5 TRỤ CỘT LỐI SỐNG VIỆT ĐƯƠNG ĐẠI
        ============================================================== -->
   <section class="intro-section" id="triet-ly" style="background:var(--bg-paper-warm); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
+    <div class="section-watermark-wrap" aria-hidden="true">
+      <div class="wm-dong-son-center" style="opacity:0.07;"></div>
+      <div class="wm-lotus-corner" style="opacity:0.12;"></div>
+    </div>
+
     <div class="container">
       <div class="section-head">
         <span class="section-kicker">Triết Lý Sống Thân - Tâm - Trí</span>
         <h2 class="section-headline">5 Trụ Cột Lối Sống Việt Đương Đại</h2>
         <p class="section-summary">
-          Hệ giá trị chuẩn mực dung hòa giữa tinh hoa bản sắc văn hóa Việt và tiện nghi sống sinh thái đẳng cấp.
+          Tại Saigon Farm Resort, di sản văn hóa không phải là bảo tàng tĩnh lặng mà hòa quyện sinh động trong từng nếp nhà, mảnh vườn và bữa ăn hàng ngày.
         </p>
       </div>
 
       <div class="pillars-grid">
-        <!-- ĐẤT -->
+        <!-- Trụ cột 1 -->
         <div class="pillar-card">
           <div class="pillar-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_20 - LÀNG THƯỢNG KHÁCH BÊN RUỘNG.jpg" alt="Trụ cột Đất" loading="lazy">
+            <img src="assets/Index_asset/3D new 2026/SGFR_HỒ CẢNH QUAN.jpg" alt="Sinh Thái Thuần Khiết" loading="lazy">
           </div>
           <div class="pillar-info">
-            <h3 class="pillar-title">🌿 ĐẤT</h3>
+            <h3 class="pillar-title">Sinh Thái</h3>
             <p class="pillar-desc">
-              <strong>Địa Linh & Sinh Mệnh:</strong> Cánh đồng lúa nếp chín vàng, nông trại Farm-to-Table hữu cơ, vườn thảo dược và Làng ngựa Việt Mã Viên.
+              Hồ nước 100ha điều hòa không khí tự nhiên, mật độ xây dựng chỉ 16%, 84% không gian phủ xanh hoàn toàn.
             </p>
           </div>
         </div>
 
-        <!-- THỦY -->
+        <!-- Trụ cột 2 -->
         <div class="pillar-card">
           <div class="pillar-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_4 - HỒ BƠI VÔ CỰC.jpg" alt="Trụ cột Thủy" loading="lazy">
+            <img src="assets/Index_asset/3D new 2026/SGFR_01 - ĐIỀN AN HAVEN - VIEW 01.jpg" alt="Kiến Trúc Bản Sắc" loading="lazy">
           </div>
           <div class="pillar-info">
-            <h3 class="pillar-title">💧 THỦY</h3>
+            <h3 class="pillar-title">Bản Sắc</h3>
             <p class="pillar-desc">
-              <strong>Dưỡng Thần & Tái Sinh:</strong> Mặt hồ tự nhiên 100ha điều hòa vi khí hậu mát mẻ quanh năm, bến du thuyền, hồ bơi khoáng muối vô cực điện phân.
+              Kiến trúc nhà vườn Nam Bộ kết hợp vật liệu tự nhiên: ngói gốm, gỗ ấm, hiên đón gió và giàn hoa giấy.
             </p>
           </div>
         </div>
 
-        <!-- VĂN -->
+        <!-- Trụ cột 3 -->
         <div class="pillar-card">
           <div class="pillar-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_11 - SÂN KHẤU.jpg" alt="Trụ cột Văn" loading="lazy">
+            <img src="assets/Index_asset/3D new 2026/SGFR_KHU VUI CHƠI TRẺ EM.jpg" alt="Gia Tộc Sum Vầy" loading="lazy">
           </div>
           <div class="pillar-info">
-            <h3 class="pillar-title">🎻 VĂN</h3>
+            <h3 class="pillar-title">Gia Phong</h3>
             <p class="pillar-desc">
-              <strong>Bản Sắc & Di Sản:</strong> Thanh Âm Các trải nghiệm nhạc cụ dân tộc, Trà đạo ven hồ và sân khấu biểu diễn nghệ thuật đương đại ngoài trời.
+              Khuôn viên điền trang rộng lớn là nơi ông bà an dưỡng tuổi già, con cháu sum vầy mỗi dịp cuối tuần.
             </p>
           </div>
         </div>
 
-        <!-- GIA -->
+        <!-- Trụ cột 4 -->
         <div class="pillar-card">
           <div class="pillar-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_2 - BIỆT THỰ SÂN VƯỜN.jpg" alt="Trụ cột Gia" loading="lazy">
+            <img src="assets/Index_asset/3D new 2026/SGFR_12 - TRANG TRẠI VẬT NUÔI.jpg" alt="Nông Trại Hữu Cơ" loading="lazy">
           </div>
           <div class="pillar-info">
-            <h3 class="pillar-title">👨‍👩‍👧‍👦 GIA</h3>
+            <h3 class="pillar-title">Canh Tác</h3>
             <p class="pillar-desc">
-              <strong>Gia Tộc & Gắn Kết:</strong> Không gian tam đại đồng đường sum vầy, môi trường tuổi thơ thuần khiết cho con trẻ, lưu truyền nếp nhà gia phong.
+              Vườn rau củ quả, cánh đồng lúa nếp và trang trại gia súc hữu cơ Farm-to-Table cung cấp thực phẩm lành.
             </p>
           </div>
         </div>
 
-        <!-- HỘI -->
+        <!-- Trụ cột 5 -->
         <div class="pillar-card">
           <div class="pillar-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_12 - THE LAKE DINING.jpg" alt="Trụ cột Hội" loading="lazy">
+            <img src="assets/Index_asset/3D new 2026/SGFR_BẾN THUYỀN.jpg" alt="Tận Hưởng 5 Sao" loading="lazy">
           </div>
           <div class="pillar-info">
-            <h3 class="pillar-title">🤝 HỘI</h3>
+            <h3 class="pillar-title">Hưởng Thụ</h3>
             <p class="pillar-desc">
-              <strong>Tương Phùng & Tinh Hoa:</strong> Cộng đồng thượng khách ưu tú hội tụ, thưởng lãm ẩm thực đỉnh cao tại The Lake Dining và những đêm tiệc riêng tư.
+              Bến du thuyền kayak, hồ bơi điện phân muối, club house ẩm thực và dịch vụ quản gia cao cấp MDS Living.
             </p>
           </div>
         </div>
@@ -1357,147 +1897,179 @@
   </section>
 
   <!-- ==============================================================
-       MỤC 3: HỆ THỐNG 4 DÒNG ĐIỀN TRANG ĐỘC BẢN
+       MỤC 3: 4 DÒNG ĐIỀN TRANG ĐỘC BẢN
        ============================================================== -->
   <section class="intro-section" id="san-pham">
+    <div class="section-watermark-wrap" aria-hidden="true">
+      <div class="wm-dong-son-center" style="opacity:0.08;"></div>
+    </div>
+
     <div class="container">
       <div class="section-head">
-        <span class="section-kicker">Hệ Thống Sản Phẩm</span>
-        <h2 class="section-headline">4 Dòng Điền Trang Nghỉ Dưỡng</h2>
+        <span class="section-kicker">Bộ Sưu Tập Giới Hạn</span>
+        <h2 class="section-headline">4 Dòng Điền Trang Nghỉ Dưỡng Độc Bản</h2>
         <p class="section-summary">
-          Quy hoạch giới hạn chỉ 47 khuôn viên điền trang, sở hữu diện tích đất lớn với 100% thổ cư riêng biệt.
+          Toàn bộ 47 khuôn viên đều sở hữu diện tích lớn hiếm có, 100% sổ đỏ thổ cư riêng biệt từng căn, tầm nhìn khoáng đạt ôm trọn hồ nước và sinh thái tự nhiên.
         </p>
       </div>
 
       <div class="products-grid">
-        <!-- 1. BIỆT PHỦ ĐIỀN TRANG -->
+        <!-- DÒNG 1: BIỆT PHỦ ĐIỀN TRANG -->
         <div class="product-box">
+          <div class="corner-cloud tl"></div>
+          <div class="corner-cloud tr"></div>
+
           <div class="product-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_15 - BIỆT THỰ A10.jpg" alt="Biệt Phủ Điền Trang Saigon Farm Resort" loading="lazy">
-            <span class="product-tag">Dinh Thự Ven Hồ · 06 Căn Đợt 1</span>
+            <span class="product-tag">Dinh Thự Ven Hồ</span>
+            <img src="assets/Index_asset/3D new 2026/SGFR_03 - BIỆT PHỦ ĐIỀN TRANG - VIEW 01.jpg" alt="Biệt Phủ Điền Trang" loading="lazy">
           </div>
           <div class="product-detail">
             <h3 class="product-name">Biệt Phủ Điền Trang</h3>
-            <div class="product-en-name">The Flagship Heritage Estates</div>
+            <span class="product-en-name">Imperial Heritage Manor · 6 Căn Đợt 1</span>
             <p class="product-brief">
-              Dinh thự 1 – 2 tầng biệt lập trực diện mặt hồ 100ha hoặc lõi tiện ích trung tâm. Thiết kế sảnh trần cao ốp gỗ, hồ bơi tràn viền muối khoáng (45 – 53 m²) và sân vườn thảo mộc nhiệt đới. MDS Living mua lại 150 đêm/năm (600 triệu/năm) hoặc chia sẻ 50/50 doanh thu thuần.
+              Dinh thự độc bản ven hồ 100ha dành riêng cho các chủ nhân tôn quý, sở hữu bến thuyền riêng, vườn cây ăn trái cổ thụ và hồ bơi vô cực ngắm hoàng hôn rực rỡ.
             </p>
             <div class="product-specs-row">
               <div class="spec-cell">
-                <span>Diện tích khuôn viên</span>
+                <span>Diện Tích Khuôn Viên</span>
                 <strong>543,61 – 966,37 m²</strong>
               </div>
               <div class="spec-cell">
-                <span>Mã Đợt 1 (06 Căn)</span>
-                <strong>A16, A17, A23, B12, B13, B14</strong>
+                <span>Tầm Nhìn Độc Bản</span>
+                <strong>Trực Diện Mặt Hồ</strong>
               </div>
               <div class="spec-cell">
-                <span>Pháp lý</span>
+                <span>Pháp Lý Sở Hữu</span>
                 <strong>100% Sổ Đỏ Lâu Dài</strong>
               </div>
             </div>
             <div class="product-action">
-              <div class="product-cert"><i class="fa-solid fa-circle-check"></i> Sổ đỏ riêng từng căn · Công chứng ngay</div>
-              <a href="#dang-ky" class="btn-lot-link">Đăng Ký Tư Vấn <i class="fa-solid fa-arrow-right"></i></a>
+              <span class="product-cert">
+                <i class="fa-solid fa-circle-check"></i> Sẵn sàng chuyển nhượng
+              </span>
+              <a href="#dang-ky" class="btn-lot-link">
+                Đăng ký xem thực địa <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- 2. ĐIỀN SẢN -->
+        <!-- DÒNG 2: ĐIỀN SẢN -->
         <div class="product-box">
+          <div class="corner-cloud tl"></div>
+          <div class="corner-cloud tr"></div>
+
           <div class="product-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_16 - KHU BIỆT THỰ.jpg" alt="Điền Sản Founders Saigon Farm Resort" loading="lazy">
-            <span class="product-tag">Tích Sản Gia Tộc · 11 Căn Đợt 1</span>
+            <span class="product-tag">Nhà Vườn Nghỉ Dưỡng</span>
+            <img src="assets/Index_asset/3D new 2026/SGFR_02 - ĐIỀN SẢN - VIEW 01.jpg" alt="Điền Sản Saigon Farm Resort" loading="lazy">
           </div>
           <div class="product-detail">
             <h3 class="product-name">Điền Sản</h3>
-            <div class="product-en-name">The Founders Collection</div>
+            <span class="product-en-name">Founders Estate · 11 Căn Đợt 1</span>
             <p class="product-brief">
-              Khuôn viên điền trang ôm trọn dải lúa sinh thái hữu cơ. Dành cho nhà đầu tư đồng hành: Không bắt buộc xây ngay, thanh toán 50% khi công chứng, 50% còn lại giãn 12 tháng với 0% lãi suất, hoặc chiết khấu tới 1 tỷ khi thanh toán 100%.
+              Khuôn viên nhà vườn sinh thái rộng lớn, lý tưởng để kiến tạo cơ ngơi nông trại gia đình với vườn trà, luống rau sạch, hiên trà đạo và không gian tiếp khách tao nhã.
             </p>
             <div class="product-specs-row">
               <div class="spec-cell">
-                <span>Diện tích khuôn viên</span>
+                <span>Diện Tích Khuôn Viên</span>
                 <strong>828,50 – 1.298,93 m²</strong>
               </div>
               <div class="spec-cell">
-                <span>Mã Đợt 1 (11 Căn)</span>
-                <strong>A08, A09, A11, A12, B05...</strong>
+                <span>Tầm Nhìn Độc Bản</span>
+                <strong>Vườn Cảnh Quan &amp; Hồ</strong>
               </div>
               <div class="spec-cell">
-                <span>Pháp lý</span>
+                <span>Pháp Lý Sở Hữu</span>
                 <strong>100% Sổ Đỏ Lâu Dài</strong>
               </div>
             </div>
             <div class="product-action">
-              <div class="product-cert"><i class="fa-solid fa-circle-check"></i> Đón sóng cao tốc &amp; sân bay 2026</div>
-              <a href="#dang-ky" class="btn-lot-link">Đăng Ký Tư Vấn <i class="fa-solid fa-arrow-right"></i></a>
+              <span class="product-cert">
+                <i class="fa-solid fa-circle-check"></i> Sẵn sàng chuyển nhượng
+              </span>
+              <a href="#dang-ky" class="btn-lot-link">
+                Đăng ký xem thực địa <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- 3. ĐIỀN AN -->
+        <!-- DÒNG 3: ĐIỀN AN -->
         <div class="product-box">
+          <div class="corner-cloud tl"></div>
+          <div class="corner-cloud tr"></div>
+
           <div class="product-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_17 - BIỆT THỰ GÓC SÂN.jpg" alt="Điền An Haven Saigon Farm Resort" loading="lazy">
-            <span class="product-tag">Lưu Trú Chuyên Gia · 04 Cụm Đợt 1</span>
+            <span class="product-tag">Khuôn Viên Lưu Trú 5 Sao</span>
+            <img src="assets/Index_asset/3D new 2026/SGFR_01 - ĐIỀN AN HAVEN - VIEW 01.jpg" alt="Điền An Haven" loading="lazy">
           </div>
           <div class="product-detail">
             <h3 class="product-name">Điền An</h3>
-            <div class="product-en-name">The Haven Collection</div>
+            <span class="product-en-name">Haven Wellness Compound · 4 Cụm Đợt 1</span>
             <p class="product-brief">
-              Cụm lưu trú sinh thái trọn gói gồm đất và công trình 20 – 30 phòng đón đầu nhu cầu thuê chuyên gia từ KCN Đất Đỏ (1.000 ha). MDS Living cam kết thuê lại tối thiểu 5 năm liên tục: 80 triệu/tháng (20 phòng) đến 120 triệu/tháng (30 phòng = 1,44 tỷ/năm).
+              Quần thể nghỉ dưỡng sinh thái khép kín được thiết kế trọn gói gồm đất và công trình lưu trú 20 – 30 phòng cao cấp, hồ bơi và khu trị liệu spa riêng biệt.
             </p>
             <div class="product-specs-row">
               <div class="spec-cell">
-                <span>Diện tích khuôn viên</span>
+                <span>Diện Tích Khuôn Viên</span>
                 <strong>1.044,86 – 1.274,69 m²</strong>
               </div>
               <div class="spec-cell">
-                <span>Mã Đợt 1 (04 Cụm)</span>
-                <strong>A14, A15, B22, B23</strong>
+                <span>Mô Hình Vận Hành</span>
+                <strong>Lưu Trú 20–30 Phòng</strong>
               </div>
               <div class="spec-cell">
-                <span>Khai thác</span>
-                <strong>Cam Kết Thuê 5 Năm</strong>
+                <span>Pháp Lý Sở Hữu</span>
+                <strong>100% Sổ Đỏ Lâu Dài</strong>
               </div>
             </div>
             <div class="product-action">
-              <div class="product-cert"><i class="fa-solid fa-circle-check"></i> Dòng tiền thực tế có sẵn khách thuê</div>
-              <a href="#dang-ky" class="btn-lot-link">Đăng Ký Tư Vấn <i class="fa-solid fa-arrow-right"></i></a>
+              <span class="product-cert">
+                <i class="fa-solid fa-circle-check"></i> Bàn giao chìa khóa trao tay
+              </span>
+              <a href="#dang-ky" class="btn-lot-link">
+                Đăng ký xem thực địa <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- 4. ĐIỀN VIÊN -->
+        <!-- DÒNG 4: ĐIỀN VIÊN -->
         <div class="product-box">
+          <div class="corner-cloud tl"></div>
+          <div class="corner-cloud tr"></div>
+
           <div class="product-media">
-            <img src="assets/Index_asset/3D new 2026/SGFR_2 - BIỆT THỰ SÂN VƯỜN.jpg" alt="Điền Viên Boutique Garden Saigon Farm Resort" loading="lazy">
-            <span class="product-tag">Điền Viên Thân Hữu · Cụm 6 Lô</span>
+            <span class="product-tag">Boutique Second-Home</span>
+            <img src="assets/Index_asset/3D new 2026/SGFR_04 - ĐIỀN VIÊN - VIEW 01.jpg" alt="Điền Viên Boutique" loading="lazy">
           </div>
           <div class="product-detail">
             <h3 class="product-name">Điền Viên</h3>
-            <div class="product-en-name">The Boutique Garden Collection</div>
+            <span class="product-en-name">Boutique Village · Cụm 6 Lô Chung Khuôn Viên</span>
             <p class="product-brief">
-              Lô đất thổ cư diện tích vừa phải chia ra từ các lô lớn, gộp thành cụm 6 lô chung khuôn viên (tổng cụm 2.000 – 2.400 m²). Giá nội bộ 3,2 tỷ đồng/lô (~8 – 9 Tr/m²), đóng trước 40% (1,28 tỷ), phần còn lại giãn tới Quý 4/2027. Thích hợp cho nhóm bạn, gia đình mua cạnh nhau.
+              Cơ hội sở hữu ngôi nhà vườn nghỉ dưỡng tinh gọn, chi phí đầu tư hợp lý, tối ưu công năng nghỉ ngơi cuối tuần kết hợp khai thác cho thuê qua MDS Living.
             </p>
             <div class="product-specs-row">
               <div class="spec-cell">
-                <span>Diện tích mỗi lô</span>
-                <strong>350 – 400 m² (Thổ cư)</strong>
+                <span>Diện Tích Từng Lô</span>
+                <strong>350 – 400 m² / lô</strong>
               </div>
               <div class="spec-cell">
-                <span>Giá nội bộ</span>
-                <strong>3,2 Tỷ / Lô (Vốn 40%)</strong>
+                <span>Tầm Nhìn Độc Bản</span>
+                <strong>Nội Khu Yên Bình</strong>
               </div>
               <div class="spec-cell">
-                <span>Quy hoạch</span>
-                <strong>Cụm 6 Lô Thân Hữu</strong>
+                <span>Pháp Lý Sở Hữu</span>
+                <strong>100% Sổ Đỏ Lâu Dài</strong>
               </div>
             </div>
             <div class="product-action">
-              <div class="product-cert"><i class="fa-solid fa-circle-check"></i> Ủy quyền toàn phần sổ lớn khi mua 3 lô</div>
-              <a href="#dang-ky" class="btn-lot-link">Đăng Ký Tư Vấn <i class="fa-solid fa-arrow-right"></i></a>
+              <span class="product-cert">
+                <i class="fa-solid fa-circle-check"></i> Suất đầu tư tinh tuyển
+              </span>
+              <a href="#dang-ky" class="btn-lot-link">
+                Đăng ký xem thực địa <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -1506,67 +2078,79 @@
   </section>
 
   <!-- ==============================================================
-       MỤC 4: QUẦN THỂ TIỆN ÍCH 30.000 M² (3HA) CHUẨN RESORT 5 SAO
+       MỤC 4: TIỆN ÍCH ĐỈNH CAO 30.000 M²
        ============================================================== -->
   <section class="intro-section" id="tien-ich" style="background:var(--bg-paper-warm); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
+    <div class="section-watermark-wrap" aria-hidden="true">
+      <div class="wm-pavilion-corner" style="opacity:0.12;"></div>
+      <div class="wm-cloud-float-right" style="opacity:0.14;"></div>
+    </div>
+
     <div class="container">
       <div class="section-head">
-        <span class="section-kicker">Hệ Thống Tiện Ích Đỉnh Cao</span>
-        <h2 class="section-headline">Quần Thể Tiện Ích 30.000 m² (3ha)</h2>
+        <span class="section-kicker">Hệ Sinh Thái Toàn Diện</span>
+        <h2 class="section-headline">30.000m² Tiện Ích Chuẩn Resort 5 Sao</h2>
         <p class="section-summary">
-          Sự kết hợp hoàn hảo giữa 5.000 m² tiện ích mặt nước hiện đại ven hồ 100ha và 2.5ha tiện ích bản sắc Việt truyền thống bên ruộng đồng.
+          Hơn 20 công trình tiện ích được quy hoạch đồng bộ tạo nên một thiên đường nghỉ dưỡng ven hồ tràn đầy năng lượng tươi mới.
         </p>
       </div>
 
-      <!-- SƠ ĐỒ QUY HOẠCH TIỆN ÍCH -->
+      <!-- ẢNH PHỐI CẢNH TOÀN CẢNH TIỆN ÍCH -->
       <div class="amenities-feature-wrap">
-        <div class="amenities-img-frame" onclick="openLightbox('assets/Index_asset/3D new 2026/SGFR_3D-Tien ich.jpg')">
-          <img src="assets/Index_asset/3D new 2026/SGFR_3D-Tien ich.jpg" alt="Phối cảnh 3D tiện ích Saigon Farm Resort">
+        <div class="corner-cloud tl"></div>
+        <div class="corner-cloud tr"></div>
+
+        <div class="amenities-img-frame" onclick="openLightbox('assets/Index_asset/3D new 2026/SGFR_TỔNG QUAN BAN NGÀY.jpg')">
+          <img src="assets/Index_asset/3D new 2026/SGFR_TỔNG QUAN BAN NGÀY.jpg" alt="Tổng quan tiện ích Saigon Farm Resort" loading="lazy">
         </div>
         <div class="amenities-caption-bar">
-          <div class="amenities-caption-title">
-            <i class="fa-solid fa-map"></i> Bản Đồ Quy Hoạch Tổng Mặt Bằng Tiện Ích 2026
-          </div>
-          <span style="font-size:0.85rem; color:var(--color-gold-light); cursor:pointer;" onclick="openLightbox('assets/Index_asset/3D new 2026/SGFR_3D-Tien ich.jpg')">
-            <i class="fa-solid fa-magnifying-glass-plus"></i> Nhấn để phóng to ảnh siêu nét
+          <span class="amenities-caption-title">
+            <i class="fa-solid fa-expand"></i> Quần thể 2.5 Hecta Tiện Ích Bản Sắc Việt Đương Đại
+          </span>
+          <span style="font-size:0.85rem; color:var(--color-gold-light);">
+            * Bấm vào ảnh để phóng to toàn màn hình
           </span>
         </div>
       </div>
 
-      <!-- 4 NHÓM TIỆN ÍCH CHÍNH -->
+      <!-- LƯỚI 4 TIỆN ÍCH NỔI BẬT -->
       <div class="amenities-subgrid">
         <div class="sub-amenity-card">
-          <i class="fa-solid fa-ship"></i>
-          <strong>5.000 m² Bên Hồ 100ha</strong>
-          <p>Aquatic Clubhouse, Bến du thuyền Adventure Pier, Hồ bơi vô cực điện phân khoáng muối, Zen Zone.</p>
+          <i class="fa-solid fa-sailboat"></i>
+          <strong>Bến Du Thuyền Ven Hồ</strong>
+          <p>Trải nghiệm chèo kayak, thuyền buồm thư thái trên mặt nước hồ Lồ Ô 100ha lộng gió.</p>
         </div>
         <div class="sub-amenity-card">
-          <i class="fa-solid fa-bowl-rice"></i>
-          <strong>2.5 Hecta Bản Sắc Việt</strong>
-          <p>Nhà hàng Nếp Việt, Trà quán ven hồ, Quảng trường Hội Việt, Công viên Thủy An Viên bên đồng.</p>
+          <i class="fa-solid fa-person-swimming"></i>
+          <strong>Hồ Bơi Điện Phân Muối</strong>
+          <p>Hệ thống lọc khoáng tinh khiết, làn nước êm dịu bảo vệ sức khỏe cho cả gia đình.</p>
+        </div>
+        <div class="sub-amenity-card">
+          <i class="fa-solid fa-utensils"></i>
+          <strong>Ẩm Thực Farm-to-Table</strong>
+          <p>Nhà hàng ven hồ phục vụ đặc sản tươi sạch thu hái trực tiếp từ nông trại nội khu.</p>
         </div>
         <div class="sub-amenity-card">
           <i class="fa-solid fa-horse"></i>
           <strong>Làng Ngựa Việt Mã Viên</strong>
-          <p>Trải nghiệm cưỡi ngựa quý tộc, đường dạo bộ ven hồ Promenade 1.2km, khu thể thao ngoài trời.</p>
-        </div>
-        <div class="sub-amenity-card">
-          <i class="fa-solid fa-hand-holding-heart"></i>
-          <strong>Sức Khỏe & Spa Nam Y</strong>
-          <p>Healthcare Therapy, ngâm tắm dược liệu thảo mộc, vườn Bách Thảo Điền thanh lọc thân - tâm - trí.</p>
+          <p>Không gian cưỡi ngựa tao nhã, huấn luyện chuyên nghiệp cho cả trẻ nhỏ và người lớn.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==============================================================
-       MỤC 5: BẢO CHỨNG PHÁP LÝ & QUẢN GIA MDS LIVING
+       MỤC 5: PHÁP LÝ MINH BẠCH & QUẢN GIA 5 SAO
        ============================================================== -->
   <section class="intro-section" id="phap-ly">
+    <div class="section-watermark-wrap" aria-hidden="true">
+      <div class="wm-dong-son-center" style="opacity:0.07;"></div>
+    </div>
+
     <div class="container">
       <div class="section-head">
         <span class="section-kicker">Giá Trị Bảo Chứng</span>
-        <h2 class="section-headline">Pháp Lý Minh Bạch & Dịch Vụ Quản Gia 5 Sao</h2>
+        <h2 class="section-headline">Pháp Lý Minh Bạch &amp; Dịch Vụ Quản Gia 5 Sao</h2>
         <p class="section-summary">
           Tài sản truyền đời với quyền sở hữu đất ở vĩnh viễn, an nhàn tận hưởng dòng tiền và giá trị gia tăng bền vững.
         </p>
@@ -1575,6 +2159,8 @@
       <div class="trust-dual-grid">
         <!-- PHÁP LÝ -->
         <div class="trust-card">
+          <div class="corner-cloud tl"></div>
+          <div class="corner-cloud tr"></div>
           <h3 class="trust-card-title">
             <i class="fa-solid fa-shield-halved"></i> 100% Sổ Đỏ Riêng Từng Căn
           </h3>
@@ -1588,6 +2174,8 @@
 
         <!-- VẬN HÀNH MDS LIVING -->
         <div class="trust-card">
+          <div class="corner-cloud tl"></div>
+          <div class="corner-cloud tr"></div>
           <h3 class="trust-card-title">
             <i class="fa-solid fa-bell-concierge"></i> Quản Gia Resort MDS Living
           </h3>
@@ -1602,6 +2190,11 @@
 
       <!-- FORM ĐĂNG KÝ KHẢO SÁT VIP -->
       <div class="booking-section-wrap" id="dang-ky">
+        <div class="corner-cloud tl"></div>
+        <div class="corner-cloud tr"></div>
+        <div class="corner-cloud bl"></div>
+        <div class="corner-cloud br"></div>
+
         <div class="booking-head">
           <div class="heritage-ornament-center">
             <span class="heritage-line"></span>
@@ -1652,20 +2245,22 @@
   </section>
 
   <!-- ==============================================================
-       FOOTER
+       FOOTER SƠN MÀI GỖ MUN (KHÔNG XANH LÁ) & BẢN SẮC VIỆT
        ============================================================== -->
   <footer class="site-footer">
+    <div class="footer-watermark" aria-hidden="true"></div>
+
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="brand-logo" style="margin-bottom:12px;">
             <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" style="height:40px;">
-            <span class="brand-name" style="font-size:1.05rem; color:#ffffff;">Saigon Farm Resort</span>
+            <span class="brand-name" style="font-size:1.05rem; color:#FFFFFF;">Saigon Farm Resort</span>
           </div>
           <p>
             Quần thể điền trang nghỉ dưỡng sinh thái ven hồ 100ha — Bản Sắc Việt Đương Đại. Phát triển bởi MDS Land, vận hành tiêu chuẩn resort 5 sao bởi MDS Living.
           </p>
-          <p style="margin-top:10px; color:var(--color-gold);">
+          <p style="margin-top:12px; color:var(--color-gold);">
             <i class="fa-solid fa-map-pin"></i> Hồ Lồ Ô, Khu vực Đất Đỏ, Xã Đất Đỏ, TP Hồ Chí Minh
           </p>
         </div>
@@ -1673,11 +2268,12 @@
         <div class="footer-col">
           <h4>Hệ Thống Liên Kết</h4>
           <ul>
-            <li><a href="/">Trang Chủ</a></li>
+            <li><a href="#hero">Trang Chủ</a></li>
+            <li><a href="#vi-tri">Tọa Độ Phong Thủy</a></li>
             <li><a href="#triet-ly">Bản Sắc Việt</a></li>
             <li><a href="#san-pham">Điền Trang Độc Bản</a></li>
             <li><a href="#tien-ich">Tiện Ích 30.000m²</a></li>
-            <li><a href="https://invitation.saigonfarmresort.com" target="_blank" rel="noopener">Thư Mời Tham Quan VIP</a></li>
+            <li><a href="https://invitation.saigonfarmresort.com" target="_blank" rel="noopener">Thư Mời VIP</a></li>
           </ul>
         </div>
 
@@ -1693,7 +2289,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Saigon Farm Resort. Bản quyền thuộc về MDS Land & Đại Chúng Properties.</div>
+        <div>© 2026 Saigon Farm Resort. Bản quyền thuộc về MDS Land &amp; Đại Chúng Properties.</div>
         <div>100% Sổ đỏ riêng từng khuôn viên · Pháp lý hoàn chỉnh</div>
       </div>
     </div>
@@ -1708,12 +2304,25 @@
   </div>
 
   <script>
+    // Bật/tắt Drawer Menu Di Động
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('mobileDrawer');
+      const overlay = document.getElementById('drawerOverlay');
+      if (drawer && overlay) {
+        drawer.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = drawer.classList.contains('active') ? 'hidden' : '';
+      }
+    }
+
+    // Lightbox phóng to ảnh
     function openLightbox(src) {
       const modal = document.getElementById('imageLightbox');
       const img = document.getElementById('lightboxImg');
       if (modal && img) {
         img.src = src;
         modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
     }
 
@@ -1721,9 +2330,11 @@
       const modal = document.getElementById('imageLightbox');
       if (modal) {
         modal.classList.remove('active');
+        document.body.style.overflow = '';
       }
     }
 
+    // Xử lý gửi Form Đăng ký khảo sát VIP
     function handleHomeVipSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('clientName').value;
@@ -1732,6 +2343,30 @@
       alert('Kính chào Quý khách ' + name + ' (' + phone + '). Lịch đăng ký tham quan thực địa ngày ' + date + ' bằng xe Limousine VIP đã được ghi nhận. Quản gia VIP sẽ liên hệ xác nhận chuyến xe đón Quý vị.');
       document.getElementById('homeVipTourForm').reset();
     }
+
+    // Tự động highlight tab theo scroll position
+    window.addEventListener('scroll', function() {
+      const sections = ['hero', 'vi-tri', 'triet-ly', 'san-pham', 'tien-ich', 'phap-ly', 'dang-ky'];
+      const scrollPos = window.scrollY + 120;
+      
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            document.querySelectorAll('.quick-tab-item').forEach(tab => {
+              if (tab.getAttribute('href') === '#' + id) {
+                tab.classList.add('active');
+              } else if (!tab.classList.contains('tab-highlight') && !tab.classList.contains('tab-cta')) {
+                tab.classList.remove('active');
+              }
+            });
+            break;
+          }
+        }
+      }
+    });
   </script>
 </body>
 </html>
