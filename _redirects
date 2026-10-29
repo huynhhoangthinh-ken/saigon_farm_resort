@@ -1,3 +1,6 @@
+/short /gioithieu 301
+/short.html /gioithieu 301
+/short/ /gioithieu 301
 # Cloudflare Pages 301 Redirect Rules
 
 # 1. Canonical Domain: www to non-www
