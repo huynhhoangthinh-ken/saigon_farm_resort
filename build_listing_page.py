@@ -671,7 +671,7 @@ def update_listing():
 
   <style>
     :root {{
-      --primary: #183024;
+      --primary: #1E1713;
       --primary-dark: #0f1f17;
       --primary-light: #2c4d3b;
       --gold: #c9a96e;
@@ -1828,7 +1828,7 @@ def update_listing():
       position: relative;
       height: 220px;
       overflow: hidden;
-      background: #183024;
+      background: #1E1713;
     }}
     .card-thumb {{
       width: 100%;
@@ -1929,7 +1929,7 @@ def update_listing():
     .card-title {{
       font-family: var(--font-sans);
       font-size: 1.15rem;
-      color: #183024;
+      color: #1E1713;
       margin-bottom: 12px;
       font-weight: 700;
       line-height: 1.35;
@@ -2241,7 +2241,7 @@ def update_listing():
       letter-spacing: 0.5px;
     }}
     .csb-badge-root {{
-      background: #183024;
+      background: #1E1713;
       color: #c9a96e;
       font-size: 0.72rem;
       font-weight: 700;
@@ -2264,7 +2264,7 @@ def update_listing():
     .csb-url {{
       font-family: var(--font-sans);
       font-size: 0.82rem;
-      color: #183024;
+      color: #1E1713;
       font-weight: 600;
       word-break: break-all;
       text-decoration: none;
@@ -2348,7 +2348,7 @@ def update_listing():
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: #183024;
+      background: #1E1713;
       color: #ffffff;
       border: 1px solid var(--gold);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -2396,7 +2396,7 @@ def update_listing():
       white-space: nowrap;
     }}
     .inventory-table th {{
-      background: #183024;
+      background: #1E1713;
       color: #ffffff;
       font-weight: 700;
       padding: 14px 12px;
@@ -2417,7 +2417,7 @@ def update_listing():
       background-color: #faf6ee;
     }}
     .table-code-badge {{
-      background: #183024;
+      background: #1E1713;
       color: #ffffff;
       font-weight: 800;
       padding: 3px 8px;
@@ -2920,7 +2920,7 @@ def update_listing():
       }}
       .dock-btn-call {{
         background: linear-gradient(135deg, #c9a96e, #a88448);
-        color: #183024;
+        color: #1E1713;
       }}
       .dock-btn-zalo {{
         background: #0068FF;
@@ -3107,7 +3107,7 @@ def update_listing():
         font-weight: 700 !important;
         margin-bottom: 8px !important;
         line-height: 1.35 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
         font-family: var(--font-sans) !important;
         white-space: normal !important;
         overflow: visible !important;
@@ -3333,7 +3333,7 @@ def update_listing():
       .csb-url {{
         font-size: 0.72rem !important;
         font-weight: 600 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
         font-family: var(--font-sans) !important;
         white-space: nowrap !important;
         overflow: hidden !important;
@@ -3409,7 +3409,7 @@ def update_listing():
       .btn-call-action,
       .listings-grid:not(.view-list-mode) .btn-call-action {{
         background: #fdfaf4 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
       }}
       .btn-zalo-action,
       .listings-grid:not(.view-list-mode) .btn-zalo-action {{
@@ -3489,10 +3489,10 @@ def update_listing():
       }}
       .btn-lock-phone {{
         background: linear-gradient(135deg, #c9a96e, #a88448) !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
       }}
       .btn-lock-phone i {{
-        color: #183024 !important;
+        color: #1E1713 !important;
         font-size: 0.85rem !important;
       }}
       .btn-lock-zalo {{
@@ -3528,7 +3528,7 @@ def update_listing():
 
     /* Lock Deposit Banner */
     .lock-deposit-banner {{
-      background: linear-gradient(135deg, #183024 0%, #102219 100%);
+      background: linear-gradient(135deg, #1E1713 0%, #16100C 100%);
       border: 1.5px solid var(--gold);
       border-radius: 12px;
       padding: 20px 24px;
@@ -3624,7 +3624,7 @@ def update_listing():
     }}
     .btn-lock-phone {{
       background: linear-gradient(135deg, #c9a96e, #a88448) !important;
-      color: #183024 !important;
+      color: #1E1713 !important;
       font-family: var(--font-sans) !important;
       font-weight: 700 !important;
       font-size: 0.9rem !important;
@@ -3640,12 +3640,12 @@ def update_listing():
     }}
     .btn-lock-phone:hover {{
       background: #dfbe84 !important;
-      color: #183024 !important;
+      color: #1E1713 !important;
       transform: translateY(-2px);
       box-shadow: 0 6px 18px rgba(201, 169, 110, 0.45);
     }}
     .btn-lock-phone i {{
-      color: #183024 !important;
+      color: #1E1713 !important;
     }}
     .btn-lock-zalo {{
       background: #0068FF;
@@ -3737,7 +3737,7 @@ def update_listing():
     .mdl-title {{
       font-size: 0.82rem;
       font-weight: 700;
-      color: #183024;
+      color: #1E1713;
       margin-bottom: 8px;
     }}
     .mdl-actions {{
@@ -3747,7 +3747,7 @@ def update_listing():
     }}
     .btn-mdl-call {{
       flex: 1;
-      background: #183024;
+      background: #1E1713;
       color: #fff;
       font-weight: 700;
       font-size: 0.84rem;
@@ -3798,7 +3798,7 @@ def update_listing():
       border: 1.5px solid rgba(255,255,255,0.25);
     }}
     .float-sales-btn.float-call {{
-      background: linear-gradient(135deg, #183024 0%, #102219 100%);
+      background: linear-gradient(135deg, #1E1713 0%, #16100C 100%);
       color: #f7eedc;
       border-color: #c9a96e;
     }}
@@ -3809,10 +3809,10 @@ def update_listing():
     .float-sales-btn.float-call:hover {{
       transform: translateY(-2px);
       background: #c9a96e;
-      color: #183024;
+      color: #1E1713;
     }}
     .float-sales-btn.float-call:hover i {{
-      color: #183024;
+      color: #1E1713;
     }}
     .float-sales-btn.float-zalo {{
       background: #0068FF;
@@ -3839,7 +3839,7 @@ def update_listing():
     .master-3d-showcase {{
       margin-top: 36px;
       margin-bottom: 36px;
-      background: linear-gradient(180deg, #183024 0%, #102018 100%);
+      background: linear-gradient(180deg, #1E1713 0%, #16100C 100%);
       border-radius: 16px;
       border: 1px solid rgba(201, 169, 110, 0.45);
       padding: 32px 28px;

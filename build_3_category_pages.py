@@ -1312,7 +1312,7 @@ def render_page(cat, all_cats):
     /* 3D Amenities Showcase Section */
     .cat-3d-showcase {{
       padding: 70px 20px;
-      background: linear-gradient(180deg, #183024 0%, #0d1e16 100%);
+      background: linear-gradient(180deg, #1E1713 0%, #16100C 100%);
       color: #ffffff;
     }}
     .c3d-header {{

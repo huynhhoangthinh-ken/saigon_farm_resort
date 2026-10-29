@@ -33,16 +33,20 @@
 
   <style>
     :root {
-      --bg-page: #f4eee5;
-      --bg-card: #ffffff;
-      --color-gold: #c29b53;
-      --color-gold-dark: #8c6b32;
-      --color-gold-light: #f7f1e4;
-      --color-forest: #183024;
-      --color-forest-dark: #0f1d16;
-      --color-dark: #1a221e;
-      --color-muted: #5e6f65;
-      --color-border: #e2d7c5;
+      --bg-page: #FAF6ED;
+      --bg-card: #FFFFFF;
+      --bg-paper-warm: #F4EBE0;
+      --color-gold: #C29B53;
+      --color-gold-hover: #D6AE66;
+      --color-gold-dark: #916E31;
+      --color-gold-light: #F8F1E4;
+      --color-wood-deep: #16100C;  /* Nâu đen sơn mài quý phái - hoàn toàn thay thế xanh lá đậm */
+      --color-wood: #2B211B;       /* Nâu gỗ trầm thượng lưu */
+      --color-dark: #1E1713;       /* Gỗ mun trầm sang trọng */
+      --color-body: #322822;
+      --color-muted: #6E5F55;
+      --color-border: #E4D8C8;
+      --color-border-gold: rgba(194, 155, 83, 0.45);
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-heading: 'Montserrat', sans-serif;
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -71,14 +75,16 @@
       width: 100%;
       background: var(--bg-card);
       border-radius: 12px;
-      box-shadow: 0 25px 60px rgba(24, 48, 36, 0.15);
+      box-shadow: 0 25px 60px rgba(30, 23, 19, 0.15);
       border: 1px solid var(--color-border);
       overflow: hidden;
       position: relative;
     }
 
     .invitation-header {
-      background: var(--color-forest-dark);
+      background: var(--color-wood-deep) url('assets/patterns/gold_dong_son_drum.png') no-repeat center !important;
+      background-size: 380px !important;
+      background: var(--color-wood-deep);
       padding: 40px 30px;
       text-align: center;
       color: #ffffff;
@@ -123,7 +129,7 @@
 
     .salutation {
       font-size: 1.05rem;
-      color: var(--color-forest);
+      color: var(--color-wood);
       margin-bottom: 20px;
       line-height: 1.7;
     }
@@ -159,7 +165,7 @@
     .value-text strong {
       font-family: var(--font-heading);
       font-size: 0.9rem;
-      color: var(--color-forest);
+      color: var(--color-wood);
       display: block;
       margin-bottom: 2px;
     }
@@ -186,7 +192,7 @@
     }
 
     .master-visual-caption {
-      background: var(--color-forest);
+      background: var(--color-wood);
       color: #ffffff;
       padding: 10px 16px;
       font-size: 0.82rem;
@@ -208,7 +214,7 @@
       font-family: var(--font-heading);
       font-size: 0.95rem;
       font-weight: 700;
-      color: var(--color-forest);
+      color: var(--color-wood);
       text-transform: uppercase;
       margin-bottom: 12px;
       display: flex;
@@ -237,7 +243,7 @@
 
     /* RSVP FORM */
     .rsvp-box {
-      background: var(--color-forest-dark);
+      background: var(--color-wood-deep);
       border-radius: 8px;
       padding: 30px 28px;
       color: #ffffff;
@@ -301,7 +307,7 @@
       width: 100%;
       padding: 15px;
       background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
-      color: #0f1d16;
+      color: #16100C;
       border: none;
       border-radius: 4px;
       font-family: var(--font-heading);
@@ -336,7 +342,7 @@
     }
 
     .footer-links a {
-      color: var(--color-forest);
+      color: var(--color-wood);
       font-weight: 600;
       text-decoration: none;
     }
@@ -369,7 +375,7 @@
   <div class="invitation-wrapper">
     <!-- HEADER -->
     <header class="invitation-header">
-      <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_3_BROWN.png" alt="Saigon Farm Resort Logo" class="invitation-logo">
+      <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_GOLD.png" alt="Saigon Farm Resort Logo" class="invitation-logo">
       <div class="invitation-pretitle">Đại Chúng Properties &amp; MDS Land</div>
       <h1 class="invitation-title">THƯ MỜI TRẢI NGHIỆM THỰC ĐỊA VIP</h1>
       <p class="invitation-subtitle">
@@ -421,7 +427,7 @@
 
       <!-- MASTER VISUAL -->
       <div class="master-visual-box">
-        <img src="assets/Index_asset/3D new 2026/SGFR_3D-Tien ich.jpg" alt="Phối cảnh 3D Quần thể Saigon Farm Resort">
+        <img src="assets/Index_asset/3D%20new%202026/SGFR_3D-Tien%20ich.jpg" alt="Phối cảnh 3D Quần thể Saigon Farm Resort">
         <div class="master-visual-caption">
           <span><i class="fa-solid fa-map"></i> Quần thể 8.4ha ôm trọn mặt hồ 100ha và thung lũng ruộng lúa</span>
           <span>Bản đồ quy hoạch 2026</span>

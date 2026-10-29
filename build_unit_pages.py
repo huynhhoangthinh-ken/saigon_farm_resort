@@ -564,8 +564,8 @@ def build_unit_page_html(item, all_items):
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 16px;">
             <!-- Lựa chọn 1 -->
             <div style="background: #ffffff; border: 1px solid #e2d7c5; border-radius: 10px; padding: 16px;">
-              <div style="font-weight: 800; color: #183024; font-size: 0.95rem; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
-                <span style="background:#183024; color:#fff; width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.75rem;">1</span>
+              <div style="font-weight: 800; color: #1E1713; font-size: 0.95rem; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
+                <span style="background:#1E1713; color:#fff; width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.75rem;">1</span>
                 Lựa Chọn 1: Đồng Hành Kinh Doanh
               </div>
               <div style="font-size: 0.82rem; color: #7b5f2c; margin-bottom: 8px; font-weight:700;">Sở hữu tài sản – Đồng hành khai thác – Chia sẻ doanh thu</div>
@@ -881,10 +881,10 @@ def build_unit_page_html(item, all_items):
 
   <style>
     :root {{
-      --primary: #183024;
+      --primary: #1E1713;
       --primary-dark: #0f1f17;
       --primary-light: #254535;
-      --primary-gradient: linear-gradient(135deg, #183024 0%, #0d1e16 100%);
+      --primary-gradient: linear-gradient(135deg, #1E1713 0%, #16100C 100%);
       --gold: #c9a96e;
       --gold-light: #f3ebd8;
       --gold-dark: #9f7d43;
@@ -1080,7 +1080,7 @@ def build_unit_page_html(item, all_items):
 
     /* Share Alert Banner */
     .share-bar {{
-      background: linear-gradient(135deg, #183024 0%, #1d3d2e 100%);
+      background: linear-gradient(135deg, #1E1713 0%, #2B211B 100%);
       color: #ffffff;
       border-radius: var(--radius-md);
       padding: 14px 20px;
@@ -1602,7 +1602,7 @@ def build_unit_page_html(item, all_items):
 
     /* Construction 800M Bonus Banner with Interactive Toggle */
     .construction-bonus-card {{
-      background: linear-gradient(135deg, #183024 0%, #204030 100%);
+      background: linear-gradient(135deg, #1E1713 0%, #204030 100%);
       color: #ffffff;
       border-radius: var(--radius-md);
       padding: 22px 26px;
@@ -1975,7 +1975,7 @@ def build_unit_page_html(item, all_items):
     }}
 
     .installment-table thead {{
-      background: #183024;
+      background: #1E1713;
       color: #ffffff;
     }}
 
@@ -2109,7 +2109,7 @@ def build_unit_page_html(item, all_items):
     }}
 
     .sqs-badge {{
-      background: #183024;
+      background: #1E1713;
       color: #dfc185;
       font-size: 0.72rem;
       font-weight: 700;
@@ -2207,9 +2207,9 @@ def build_unit_page_html(item, all_items):
     }}
 
     .btn-print-primary {{
-      background: #183024;
+      background: #1E1713;
       color: #ffffff;
-      border: 1px solid #183024;
+      border: 1px solid #1E1713;
       box-shadow: 0 2px 6px rgba(24, 48, 36, 0.2);
     }}
 
@@ -2522,7 +2522,7 @@ def build_unit_page_html(item, all_items):
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: #183024;
+      background: #1E1713;
       color: #ffffff;
       border: 1px solid var(--gold);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -2924,12 +2924,12 @@ def build_unit_page_html(item, all_items):
       }}
       .dock-btn-gold {{
         background: linear-gradient(135deg, #c9a96e, #a88448);
-        color: #183024;
+        color: #1E1713;
         border: none;
         cursor: pointer;
       }}
       .dock-btn-schedule {{
-        background: #183024;
+        background: #1E1713;
         color: #ffffff;
         border: 1px solid rgba(201, 169, 110, 0.4);
         cursor: pointer;
@@ -3042,13 +3042,13 @@ def build_unit_page_html(item, all_items):
 
       .calc-header {{
         margin-bottom: 12px !important;
-        border-bottom: 1.5px solid #183024 !important;
+        border-bottom: 1.5px solid #1E1713 !important;
         padding-bottom: 8px !important;
       }}
 
       .calc-title {{
         font-size: 13pt !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
       }}
 
       .calc-sub {{
@@ -3060,7 +3060,7 @@ def build_unit_page_html(item, all_items):
       .print-official-header {{
         display: block !important;
         margin-bottom: 14px !important;
-        border-bottom: 2px solid #183024 !important;
+        border-bottom: 2px solid #1E1713 !important;
         padding-bottom: 10px !important;
       }}
 
@@ -3090,7 +3090,7 @@ def build_unit_page_html(item, all_items):
       .poh-brand-title {{
         font-size: 11pt !important;
         font-weight: 800 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
         letter-spacing: 0.5px !important;
         text-transform: uppercase !important;
       }}
@@ -3142,7 +3142,7 @@ def build_unit_page_html(item, all_items):
       .poh-meta-val {{
         font-size: 8.5pt !important;
         font-weight: 800 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
       }}
 
       .poh-meta-val.highlight {{
@@ -3175,7 +3175,7 @@ def build_unit_page_html(item, all_items):
       .fsc-val {{
         font-size: 9pt !important;
         font-weight: 800 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
       }}
 
       .fsc-total-box {{
@@ -3197,7 +3197,7 @@ def build_unit_page_html(item, all_items):
       /* 3. BẢNG TIẾN ĐỘ THANH TOÁN - CHỐNG TRÀN TUYỆT ĐỐI */
       .installment-table-wrap {{
         overflow: visible !important;
-        border: 1.5px solid #183024 !important;
+        border: 1.5px solid #1E1713 !important;
         border-radius: 4px !important;
         box-shadow: none !important;
         margin-bottom: 12px !important;
@@ -3223,14 +3223,14 @@ def build_unit_page_html(item, all_items):
       }}
 
       .installment-table thead {{
-        background: #183024 !important;
+        background: #1E1713 !important;
         color: #ffffff !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }}
 
       .installment-table th {{
-        background-color: #183024 !important;
+        background-color: #1E1713 !important;
         color: #ffffff !important;
         font-size: 7.5pt !important;
         font-weight: 700 !important;
@@ -3250,7 +3250,7 @@ def build_unit_page_html(item, all_items):
 
       .installment-table td.td-dot {{
         font-weight: 700 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
         text-align: center !important;
       }}
 
@@ -3288,14 +3288,14 @@ def build_unit_page_html(item, all_items):
       .installment-table tr.total-row td {{
         background: #f8fafc !important;
         font-weight: 800 !important;
-        border-top: 2px solid #183024 !important;
+        border-top: 2px solid #1E1713 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }}
 
       .installment-table .total-label-cell {{
         font-size: 8pt !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
         font-weight: 800 !important;
       }}
 
@@ -3348,7 +3348,7 @@ def build_unit_page_html(item, all_items):
       .print-scheme-card-title {{
         font-size: 9pt !important;
         font-weight: 800 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
       }}
 
       .print-scheme-card-price {{
@@ -3389,7 +3389,7 @@ def build_unit_page_html(item, all_items):
       .pof-sig-title {{
         font-size: 8pt !important;
         font-weight: 800 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
         text-transform: uppercase !important;
       }}
 
@@ -3402,7 +3402,7 @@ def build_unit_page_html(item, all_items):
       .pof-sig-name {{
         font-size: 7.8pt !important;
         font-weight: 700 !important;
-        color: #183024 !important;
+        color: #1E1713 !important;
         border-top: 1px dotted #94a3b8 !important;
         padding-top: 4px !important;
         width: 180px !important;
@@ -4012,7 +4012,7 @@ def build_unit_page_html(item, all_items):
       totalTr.className = 'total-row';
       totalTr.innerHTML = `
         <td colspan="2" class="total-label-cell">TỔNG CỘNG THANH TOÁN</td>
-        <td class="td-ratio-cell"><span class="td-ratio" style="background:#183024; color:#fff;">100%</span></td>
+        <td class="td-ratio-cell"><span class="td-ratio" style="background:#1E1713; color:#fff;">100%</span></td>
         <td class="td-money total-money-val">${{formatVND(finalPrice)}}</td>
         <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ chiết khấu phương thức thanh toán</td>
       `;
@@ -4084,7 +4084,7 @@ def build_unit_page_html(item, all_items):
                 ${{rowsHtml}}
                 <tr class="total-row">
                   <td colspan="2" class="total-label-cell">TỔNG CỘNG THANH TOÁN</td>
-                  <td class="td-ratio-cell"><span class="td-ratio" style="background:#183024; color:#fff;">100%</span></td>
+                  <td class="td-ratio-cell"><span class="td-ratio" style="background:#1E1713; color:#fff;">100%</span></td>
                   <td class="td-money total-money-val">${{formatVND(sData.finalPrice)}}</td>
                   <td class="total-status-cell"><i class="fa-solid fa-circle-check"></i> Đã khấu trừ chiết khấu thanh toán</td>
                 </tr>
@@ -4293,7 +4293,7 @@ def main():
   <link rel="canonical" href="https://saigonfarmresort.com/giohang">
   <script>window.location.replace("/giohang");</script>
 </head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; padding: 60px 20px; color: #183024;">
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; padding: 60px 20px; color: #1E1713;">
   <h2 style="font-size: 1.5rem; margin-bottom: 12px;">Mã Căn {u_upper} Chưa Mở Bán Trong Đợt 1</h2>
   <p style="color: #64748b; font-size: 1rem; margin-bottom: 24px;">Hiện tại dự án chỉ mở bán 21 sản phẩm Đợt 1 (11 Điền Sản, 4 Điền An, 6 Biệt Phủ).</p>
   <p>Đang chuyển hướng quý khách về <a href="/giohang" style="color: #0284c7; font-weight: 700; text-decoration: underline;">Giỏ Hàng Mở Bán Đợt 1</a>...</p>
