@@ -435,6 +435,70 @@
     /* ==============================================================
        INTERACTIVE MASTER PLAN SECTION
        ============================================================== */
+    /* Focus Headers for Section 1 and Section 2 */
+    .section-focus-header {
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .sfh-step {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--primary);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .sfh-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.01em;
+    }
+    .sfh-sub {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+    .inventory-section-wrap {
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    .btn-inquire-action {
+      flex: 1.4;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #c9a96e 0%, #b38e4a 100%);
+      color: #1f2421;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-inquire-action:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(201,169,110,0.35);
+    }
+    .dock-btn-map {
+      background: var(--gold);
+      color: #1a1510;
+    }
+    .dock-btn-cart {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
     .masterplan-interactive-section {
       background: #ffffff;
       border: 1px solid var(--border-color);
@@ -3393,8 +3457,7 @@
         <span><i class="fa-solid fa-shield-halved" style="color:#4ade80;"></i> Sản phẩm 100% Thổ cư</span>
       </div>
       <div class="topbar-right">
-        <a href="tel:0909000712" style="font-weight:700; color:#fff; background:rgba(201,169,110,0.22); padding:3px 10px; border-radius:14px; border:1px solid rgba(201,169,110,0.5);"><i class="fa-solid fa-phone-volume" style="color:var(--gold);"></i> Check Căn: 0909 000 712</a>
-        <a href="https://zalo.me/0909000712" target="_blank" style="font-weight:700; color:#0068FF; background:#fff; padding:3px 10px; border-radius:14px;"><i class="fa-solid fa-comment-dots"></i> Zalo Khóa Cọc</a>
+        <span><i class="fa-solid fa-gem" style="color:var(--gold);"></i> 21 Sản Phẩm Giới Hạn Đợt 1</span>
         <a href="gioithieu"><i class="fa-solid fa-book-open"></i> Bản Giới Thiệu (Pitch Deck)</a>
       </div>
     </div>
@@ -3413,7 +3476,6 @@
         <li><a href="/">Trang Chủ</a></li>
         <li><a href="/gioithieu">Giới Thiệu</a></li>
         <li><a href="/giohang" class="active"><i class="fa-solid fa-cart-shopping" style="color:var(--gold-dark);"></i> Giỏ Hàng Mở Bán</a></li>
-        <li><a href="https://invitation.saigonfarmresort.com" target="_blank" rel="noopener">Thư Mời VIP</a></li>
       </ul>
     </div>
   </header>
@@ -3460,23 +3522,15 @@
         </div>
       </div>
 
-      <!-- Sales Lock Deposit Callout Banner -->
+      <!-- Sales Direct Guidance Callout Banner -->
       <div class="lock-deposit-banner">
         <div class="lock-deposit-badge">
-          <i class="fa-solid fa-shield-halved"></i> QUY TRÌNH CHECK CĂN &amp; KHÓA CỌC TRỰC TIẾP
+          <i class="fa-solid fa-shield-halved"></i> QUY TRÌNH CHECK CĂN &amp; ĐĂNG KÝ NGUYỆN VỌNG ĐỢT 1
         </div>
         <div class="lock-deposit-grid">
           <div class="lock-deposit-text">
-            <h3><i class="fa-solid fa-phone-volume" style="color: #ffd54f; margin-right: 8px;"></i>Hotline / Zalo Quản Lý Giỏ Hàng: <a href="tel:0909000712" class="hotline-phone-highlight">0909 000 712</a></h3>
-            <p>Dành riêng cho Chuyên viên kinh doanh &amp; Quản lý bán hàng: Vui lòng gọi hoặc nhắn Zalo trực tiếp đến <a href="tel:0909000712" class="hotline-inline-highlight">0909 000 712</a> để kiểm tra tình trạng còn/hết của mã căn và khóa cọc ngay trong thời gian thực trước khi tiến hành nhận tiền khách hàng.</p>
-          </div>
-          <div class="lock-deposit-cta-group">
-            <a href="tel:0909000712" class="btn-lock-phone">
-              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
-            </a>
-            <a href="https://zalo.me/0909000712" target="_blank" class="btn-lock-zalo">
-              <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc
-            </a>
+            <h3><i class="fa-solid fa-file-signature" style="color: #ffd54f; margin-right: 8px;"></i>Đăng Ký &amp; Nhận Báo Giá Trực Tiếp Từng Mã Căn</h3>
+            <p>Quý khách hàng &amp; Đối tác có thể nhấp trực tiếp vào từng căn trên Bản đồ hoặc Giỏ hàng bên dưới để xem chi tiết thông số, hoặc bấm <strong>Nhận Báo Giá</strong> để được bộ phận tư vấn gửi hồ sơ pháp lý và bảng tính ưu đãi sớm nhất.</p>
           </div>
         </div>
       </div>
@@ -3511,49 +3565,39 @@
   <main class="main-content">
 
     <!-- ==============================================================
-         INTERACTIVE MASTER PLAN (2D & 3D MULTI-PERSPECTIVE)
+         PHẦN 1: BẢN ĐỒ PHÂN LÔ TƯƠNG TÁC
          ============================================================== -->
     <section class="masterplan-interactive-section" id="masterplanSection">
-      <!-- Perspective Mode Switcher Tabs -->
-      <div class="mp-perspective-switcher">
-        <button type="button" class="mp-view-tab active" id="tabMp2D" onclick="switchMasterPlanPerspective('2d')">
-          <i class="fa-solid fa-map-location-dot"></i>
-          <span class="tab-label">Sơ Đồ Phân Lô 2D</span>
-          <span class="tab-badge">21 Căn · Tương Tác Ghim</span>
-        </button>
-        <button type="button" class="mp-view-tab" id="tabMp3DWide" onclick="switchMasterPlanPerspective('3d-wide')">
-          <i class="fa-solid fa-mountain-sun"></i>
-          <span class="tab-label">3D Toàn Cảnh Hồ Sinh Thái</span>
-          <span class="tab-badge">Góc Rộng 5K Ven Hồ</span>
-        </button>
-        <button type="button" class="mp-view-tab" id="tabMp3DClose" onclick="switchMasterPlanPerspective('3d-close')">
-          <i class="fa-solid fa-house-chimney-window"></i>
-          <span class="tab-label">3D Cận Cảnh Quần Thể</span>
-          <span class="tab-badge">Biệt Phủ & Bến Thuyền</span>
-        </button>
+      <!-- Section 1 Header Badge -->
+      <div class="section-focus-header">
+        <span class="sfh-step">PHẦN 1</span>
+        <h2 class="sfh-title"><i class="fa-solid fa-map-location-dot" style="color:var(--gold);"></i> BẢN ĐỒ PHÂN LÔ TƯƠNG TÁC</h2>
+        <p class="sfh-sub">Chạm hoặc click vào từng ghim lô trên sơ đồ để xem thông số chi tiết, cảnh quan, diện tích và đơn giá niêm yết</p>
       </div>
 
-      <!-- VIEW 1: 2D Interactive Lot Map -->
+      <!-- VIEW: 2D Interactive Lot Map -->
       <div class="mp-perspective-panel active" id="panelMp2D">
         <div class="map-header">
           <div class="map-title-group">
-            <h2><i class="fa-solid fa-map-location-dot" style="color:var(--gold);"></i> SƠ ĐỒ MẶT BẰNG PHÂN LÔ TƯƠNG TÁC</h2>
-            <p>Click hoặc chạm vào từng lô trên sơ đồ để xem vị trí thực tế, cảnh quan, diện tích và giá niêm yết gốc đợt 1</p>
+            <div class="map-legend-group">
+              <div class="legend-item legend-manor">
+                <span class="legend-dot"></span> Biệt Phủ Điền Trang (6)
+              </div>
+              <div class="legend-item legend-founders">
+                <span class="legend-dot"></span> Điền Sản (11)
+              </div>
+              <div class="legend-item legend-haven">
+                <span class="legend-dot"></span> Điền An (4)
+              </div>
+              <div class="legend-item legend-reserved">
+                <span class="legend-dot"></span> Đang Giữ Chỗ (4)
+              </div>
+            </div>
           </div>
-
-          <div class="map-legend-group">
-            <div class="legend-item legend-manor">
-              <span class="legend-dot"></span> Biệt Phủ Điền Trang (6)
-            </div>
-            <div class="legend-item legend-founders">
-              <span class="legend-dot"></span> Điền Sản (11)
-            </div>
-            <div class="legend-item legend-haven">
-              <span class="legend-dot"></span> Điền An (4)
-            </div>
-            <div class="legend-item legend-reserved">
-              <span class="legend-dot"></span> Đang Giữ Chỗ (4)
-            </div>
+          <div class="mp-actions-group">
+            <button type="button" class="btn-mp-action" onclick="toggleMapFullscreen('mapViewport')">
+              <i class="fa-solid fa-expand"></i> Toàn Màn Hình
+            </button>
           </div>
         </div>
 
@@ -4363,460 +4407,18 @@
           </div>
         </div>
       </div>
-
-      <!-- VIEW 2: 3D Wide Perspective (Ven hồ 8ha nhìn vào thung lũng & biệt phủ) -->
-      <div class="mp-perspective-panel" id="panelMp3DWide" style="display:none;">
-        <div class="map-header">
-          <div class="map-title-group">
-            <h2><i class="fa-solid fa-mountain-sun" style="color:var(--gold);"></i> PHỐI CẢNH 3D QUẦN THỂ TIỆN ÍCH 30.000 M² &amp; HỒ 100HA</h2>
-            <p>Góc nhìn chim bay từ mặt hồ sinh thái 8ha, bao quát toàn bộ thung lũng ruộng lúa, cụm Biệt Phủ Điền Trang và rặng núi hùng vĩ</p>
-          </div>
-          <div class="mp-actions-group">
-            <button type="button" class="btn-mp-action" onclick="openMasterplanLightbox('/assets/Index_asset/3D new 2026/SGFR_3D-Tien ich.jpg', 'Phối Cảnh 3D Toàn Cảnh Ven Hồ Sinh Thái (Độ phân giải siêu nét 5K)')">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> Mở Bản Gốc Siêu Nét 5K
-            </button>
-          </div>
-        </div>
-
-        <div class="map-viewport" id="mapViewport3DWide">
-          <div class="map-canvas" id="mapCanvas3DWide">
-            <div class="map-stage map-stage-3d-wide" id="mapStage3DWide">
-              <img src="/assets/Index_asset/3D new 2026/SGFR_3D-Tien ich.jpg" 
-                   alt="Phối cảnh 3D toàn cảnh ven hồ Saigon Farm Resort" 
-                   class="map-image"
-                   id="masterPlan3DWideImg">
-            </div>
-          </div>
-
-          <div class="map-controls-floating">
-            <button type="button" class="map-ctrl-btn" onclick="zoom3D('wide', 1.25)" title="Phóng to"><i class="fa-solid fa-plus"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="zoom3D('wide', 0.8)" title="Thu nhỏ"><i class="fa-solid fa-minus"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="reset3D('wide')" title="Đặt lại góc nhìn"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="toggleMapFullscreen('mapViewport3DWide')" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
-          </div>
-
-          <div class="map-hint-badge">
-            <i class="fa-solid fa-hand-pointer"></i> <span>Kéo chuột/chạm để ngắm toàn cảnh · Cuộn để soi chi tiết</span>
-          </div>
-
-          <!-- Feature callouts on 3D -->
-          <div class="mp-feature-overlay">
-            <span class="feature-tag"><i class="fa-solid fa-water"></i> Hồ sinh thái 8ha</span>
-            <span class="feature-tag"><i class="fa-solid fa-wheat-awn"></i> Thung lũng lúa xanh</span>
-            <span class="feature-tag"><i class="fa-solid fa-tree"></i> Đồi chè Oolong</span>
-            <span class="feature-tag"><i class="fa-solid fa-landmark"></i> Biệt Phủ Điền Trang</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- VIEW 3: 3D Close-up (Cận cảnh quần thể biệt phủ, bến thuyền, công viên) -->
-      <div class="mp-perspective-panel" id="panelMp3DClose" style="display:none;">
-        <div class="map-header">
-          <div class="map-title-group">
-            <h2><i class="fa-solid fa-house-chimney-window" style="color:var(--gold);"></i> PHỐI CẢNH 3D TOÀN CẢNH HOÀNG HÔN VEN HỒ</h2>
-            <p>Góc nhìn chi tiết kiến trúc ngói âm dương truyền thống, bến chèo thuyền SUP ven hồ, lối tản bộ hoa và không gian sống sinh thái</p>
-          </div>
-          <div class="mp-actions-group">
-            <button type="button" class="btn-mp-action" onclick="openMasterplanLightbox('/assets/Index_asset/3D new 2026/SGFR_TỔNG QUAN HOÀNG HÔN.jpg', 'Phối Cảnh 3D Cận Cảnh Quần Thể Nghỉ Dưỡng Saigon Farm Resort')">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> Mở Ảnh Độ Nét Cao
-            </button>
-          </div>
-        </div>
-
-        <div class="map-viewport" id="mapViewport3DClose">
-          <div class="map-canvas" id="mapCanvas3DClose">
-            <div class="map-stage map-stage-3d-close" id="mapStage3DClose">
-              <img src="/assets/Index_asset/3D new 2026/SGFR_TỔNG QUAN HOÀNG HÔN.jpg" 
-                   alt="Phối cảnh 3D cận cảnh quần thể Saigon Farm Resort" 
-                   class="map-image"
-                   id="masterPlan3DCloseImg">
-            </div>
-          </div>
-
-          <div class="map-controls-floating">
-            <button type="button" class="map-ctrl-btn" onclick="zoom3D('close', 1.25)" title="Phóng to"><i class="fa-solid fa-plus"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="zoom3D('close', 0.8)" title="Thu nhỏ"><i class="fa-solid fa-minus"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="reset3D('close')" title="Đặt lại góc nhìn"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="toggleMapFullscreen('mapViewport3DClose')" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
-          </div>
-
-          <div class="map-hint-badge">
-            <i class="fa-solid fa-hand-pointer"></i> <span>Kéo để di chuyển · Cuộn chuột hoặc chạm 2 ngón để phóng to</span>
-          </div>
-
-          <div class="mp-feature-overlay">
-            <span class="feature-tag"><i class="fa-solid fa-sailboat"></i> Bến thuyền Kayak & SUP</span>
-            <span class="feature-tag"><i class="fa-solid fa-campground"></i> Công viên lễ hội bãi cỏ</span>
-            <span class="feature-tag"><i class="fa-solid fa-spa"></i> Khu Clubhouse & Wellness</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ==============================================================
-         BỘ SƯU TẬP 20 PHỐI CẢNH 3D TIỆN ÍCH MỚI NHẤT 2026
+         PHẦN 2: GIỎ HÀNG & BẢNG GIÁ ĐỢT 1
          ============================================================== -->
-    <section class="master-3d-showcase" id="tienIch3DSection">
-      <div class="m3d-header">
-        <div>
-          <span class="m3d-badge"><i class="fa-solid fa-sparkles"></i> Bộ Sưu Tập Phối Cảnh 3D Mới 2026</span>
-          <h2 class="m3d-title"><i class="fa-solid fa-gem" style="color:var(--gold);"></i> HỆ THỐNG TIỆN ÍCH &amp; CẢNH QUAN SINH THÁI</h2>
-          <p class="m3d-sub">Toàn bộ 20 góc phối cảnh 3D thực tế về tiện ích ven hồ, clubhouse và cảnh quan sinh thái Saigon Farm Resort. Nhấp vào bất kỳ hình nào để mở xem toàn màn hình và bấm tới lui để lướt qua toàn bộ hình ảnh.</p>
-        </div>
-        <div>
-          <button type="button" class="btn-mp-action" onclick="openGallery3DLightbox(0)">
-            <i class="fa-solid fa-expand"></i> Mở Xem Toàn Màn Hình (20 Hình)
-          </button>
-        </div>
+    <section class="inventory-section-wrap" id="gioHangSection">
+      <!-- Section 2 Header Badge -->
+      <div class="section-focus-header">
+        <span class="sfh-step">PHẦN 2</span>
+        <h2 class="sfh-title"><i class="fa-solid fa-cart-shopping" style="color:var(--gold);"></i> GIỎ HÀNG &amp; BẢNG GIÁ MỞ BÁN ĐỢT 1 (21 CĂN)</h2>
+        <p class="sfh-sub">Tra cứu thông số, lọc theo phân khu, hướng, cảnh quan hoặc xuất bảng giá chi tiết</p>
       </div>
-      <div class="m3d-grid">
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(0)" title="Xem ảnh 3D #01: Toàn Cảnh Hoàng Hôn Saigon Farm Resort">
-            <span class="m3d-card-num">3D #01</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_1.webp" 
-                 alt="Toàn Cảnh Hoàng Hôn Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">QUY HOẠCH TOÀN KHU 100HA</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Toàn Cảnh Hoàng Hôn Saigon Farm Resort</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(1)" title="Xem ảnh 3D #02: Biệt Thự Sân Vườn Sinh Thái Điền An">
-            <span class="m3d-card-num">3D #02</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_2.webp" 
-                 alt="Biệt Thự Sân Vườn Sinh Thái Điền An" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">DÒNG SẢN PHẨM ĐIỀN AN</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Biệt Thự Sân Vườn Sinh Thái Điền An</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(2)" title="Xem ảnh 3D #03: Hồ Bơi Trung Tâm Resort">
-            <span class="m3d-card-num">3D #03</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_3.webp" 
-                 alt="Hồ Bơi Trung Tâm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">TIỆN ÍCH NGHỈ DƯỠNG</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Hồ Bơi Trung Tâm Resort</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(3)" title="Xem ảnh 3D #04: Hồ Bơi Vô Cực Điện Phân Khoáng Muối Ven Hồ">
-            <span class="m3d-card-num">3D #04</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_4.webp" 
-                 alt="Hồ Bơi Vô Cực Điện Phân Khoáng Muối Ven Hồ" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">OASIS POOL ĐẲNG CẤP</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Hồ Bơi Vô Cực Điện Phân Khoáng Muối Ven Hồ</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(4)" title="Xem ảnh 3D #05: Nhà Lễ Tân & Sảnh Đón Tiếp MDS Living">
-            <span class="m3d-card-num">3D #05</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_5.webp" 
-                 alt="Nhà Lễ Tân & Sảnh Đón Tiếp MDS Living" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">DỊCH VỤ QUẢN GIA 5 SAO</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Nhà Lễ Tân & Sảnh Đón Tiếp MDS Living</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(5)" title="Xem ảnh 3D #06: Khu Trị Liệu Dưỡng Sinh & Thảo Dược Spa">
-            <span class="m3d-card-num">3D #06</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_6.webp" 
-                 alt="Khu Trị Liệu Dưỡng Sinh & Thảo Dược Spa" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">WELLNESS & DƯỠNG SINH</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Khu Trị Liệu Dưỡng Sinh & Thảo Dược Spa</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(6)" title="Xem ảnh 3D #07: Cầu Gỗ Ven Hồ & Lối Dạo Bộ Thủy Trúc (Top View)">
-            <span class="m3d-card-num">3D #07</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_7.webp" 
-                 alt="Cầu Gỗ Ven Hồ & Lối Dạo Bộ Thủy Trúc (Top View)" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">BOARDWALK SINH THÁI</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Cầu Gỗ Ven Hồ & Lối Dạo Bộ Thủy Trúc (Top View)</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(7)" title="Xem ảnh 3D #08: Công Viên Cảnh Quan Hồ & Không Gian Dã Ngoại">
-            <span class="m3d-card-num">3D #08</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_8.webp" 
-                 alt="Công Viên Cảnh Quan Hồ & Không Gian Dã Ngoại" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">LAKESIDE PARK & DÃ NGOẠI</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Công Viên Cảnh Quan Hồ & Không Gian Dã Ngoại</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(8)" title="Xem ảnh 3D #09: Tuyến Dạo Bộ Ven Hồ Lakeside Promenade">
-            <span class="m3d-card-num">3D #09</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_9.webp" 
-                 alt="Tuyến Dạo Bộ Ven Hồ Lakeside Promenade" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">LAKESIDE PROMENADE</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Tuyến Dạo Bộ Ven Hồ Lakeside Promenade</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(9)" title="Xem ảnh 3D #10: Trung Tâm Thể Thao Đa Năng & Phòng Gym Hướng Hồ">
-            <span class="m3d-card-num">3D #10</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_10.webp" 
-                 alt="Trung Tâm Thể Thao Đa Năng & Phòng Gym Hướng Hồ" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">FITNESS & THỂ THAO</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Trung Tâm Thể Thao Đa Năng & Phòng Gym Hướng Hồ</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(10)" title="Xem ảnh 3D #11: Sân Khấu Nghệ Thuật & Sự Kiện Văn Hóa Ngoài Trời">
-            <span class="m3d-card-num">3D #11</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_11.webp" 
-                 alt="Sân Khấu Nghệ Thuật & Sự Kiện Văn Hóa Ngoài Trời" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">ĐÀI ÂM SẮC & SỰ KIỆN</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Sân Khấu Nghệ Thuật & Sự Kiện Văn Hóa Ngoài Trời</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(11)" title="Xem ảnh 3D #12: Nhà Hàng Ẩm Thực Sinh Thái The Lake Dining">
-            <span class="m3d-card-num">3D #12</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_12.webp" 
-                 alt="Nhà Hàng Ẩm Thực Sinh Thái The Lake Dining" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">THE LAKE DINING • FARM-TO-TABLE</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Nhà Hàng Ẩm Thực Sinh Thái The Lake Dining</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(12)" title="Xem ảnh 3D #13: Tuyến Đường Nội Khu Cảnh Quan Dẫn Vào Villa A10">
-            <span class="m3d-card-num">3D #13</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_13.webp" 
-                 alt="Tuyến Đường Nội Khu Cảnh Quan Dẫn Vào Villa A10" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">HẠ TẦNG XANH SINH THÁI</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Tuyến Đường Nội Khu Cảnh Quan Dẫn Vào Villa A10</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(13)" title="Xem ảnh 3D #14: Cổng Chào Chánh Điện Saigon Farm Resort">
-            <span class="m3d-card-num">3D #14</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_14.webp" 
-                 alt="Cổng Chào Chánh Điện Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">CỔNG CHÀO ĐẠI CẢNH</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Cổng Chào Chánh Điện Saigon Farm Resort</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(14)" title="Xem ảnh 3D #15: Phối Cảnh Chi Tiết Biệt Phủ Điền Trang A10">
-            <span class="m3d-card-num">3D #15</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_15.webp" 
-                 alt="Phối Cảnh Chi Tiết Biệt Phủ Điền Trang A10" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">BIỆT PHỦ ĐIỀN TRANG A10</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Phối Cảnh Chi Tiết Biệt Phủ Điền Trang A10</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(15)" title="Xem ảnh 3D #16: Tổng Thể Khu Biệt Thự Điền Trang Sinh Thái">
-            <span class="m3d-card-num">3D #16</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_16.webp" 
-                 alt="Tổng Thể Khu Biệt Thự Điền Trang Sinh Thái" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">QUẦN THỂ ĐIỀN SẢN</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Tổng Thể Khu Biệt Thự Điền Trang Sinh Thái</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(16)" title="Xem ảnh 3D #17: Góc Sân Vườn Biệt Thự & Hiên Nhà Thuần Việt">
-            <span class="m3d-card-num">3D #17</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_17.webp" 
-                 alt="Góc Sân Vườn Biệt Thự & Hiên Nhà Thuần Việt" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">KIẾN TRÚC HIÊN NHÀ VIỆT</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Góc Sân Vườn Biệt Thự & Hiên Nhà Thuần Việt</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(17)" title="Xem ảnh 3D #18: Làng Thượng Khách - Khu Nghỉ Dưỡng Thượng Lưu">
-            <span class="m3d-card-num">3D #18</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_18.webp" 
-                 alt="Làng Thượng Khách - Khu Nghỉ Dưỡng Thượng Lưu" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">LÀNG THƯỢNG KHÁCH RETREAT</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Làng Thượng Khách - Khu Nghỉ Dưỡng Thượng Lưu</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(18)" title="Xem ảnh 3D #19: Khu Biệt Thự Lưu Trú Chuyên Gia & Ban Vận Hành">
-            <span class="m3d-card-num">3D #19</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_19.webp" 
-                 alt="Khu Biệt Thự Lưu Trú Chuyên Gia & Ban Vận Hành" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">KHU CHUYÊN GIA SINH THÁI</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Khu Biệt Thự Lưu Trú Chuyên Gia & Ban Vận Hành</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(19)" title="Xem ảnh 3D #20: Làng Thượng Khách Bên Cánh Đồng Lúa Sinh Thái">
-            <span class="m3d-card-num">3D #20</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_20.webp" 
-                 alt="Làng Thượng Khách Bên Cánh Đồng Lúa Sinh Thái" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">ĐỒNG LÚA & BẢN SẮC NÔNG NGHIỆP</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Làng Thượng Khách Bên Cánh Đồng Lúa Sinh Thái</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(20)" title="Xem ảnh 3D #21: Khu Biệt Thự Ven Sông & Kênh Thủy Sinh Phong Thủy">
-            <span class="m3d-card-num">3D #21</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_21.webp" 
-                 alt="Khu Biệt Thự Ven Sông & Kênh Thủy Sinh Phong Thủy" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">VILLA VEN SÔNG TỤ THỦY</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Khu Biệt Thự Ven Sông & Kênh Thủy Sinh Phong Thủy</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(21)" title="Xem ảnh 3D #22: Phối Cảnh Toàn Cảnh Saigon Farm Resort (Flycam View)">
-            <span class="m3d-card-num">3D #22</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_22.webp" 
-                 alt="Phối Cảnh Toàn Cảnh Saigon Farm Resort (Flycam View)" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">FLYCAM TỔNG THỂ DỰ ÁN</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Phối Cảnh Toàn Cảnh Saigon Farm Resort (Flycam View)</div>
-            </div>
-          </div>
-
-          <div class="m3d-card" onclick="openGallery3DLightbox(22)" title="Xem ảnh 3D #23: Đại Phối Cảnh Quần Thể Điền Trang Saigon Farm Resort">
-            <span class="m3d-card-num">3D #23</span>
-            <img src="/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_23.webp" 
-                 alt="Đại Phối Cảnh Quần Thể Điền Trang Saigon Farm Resort" 
-                 loading="lazy" 
-                 decoding="async">
-            <div class="m3d-card-hover-hint">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(14,26,20,0.95) 0%, rgba(14,26,20,0.7) 70%, transparent 100%); padding: 16px 8px 6px; pointer-events: none;">
-              <div style="font-size: 0.65rem; color: #c9a96e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.2;">ĐẠI CẢNH 3D MASTER VIEW</div>
-              <div style="font-size: 0.76rem; color: #fff; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;">Đại Phối Cảnh Quần Thể Điền Trang Saigon Farm Resort</div>
-            </div>
-          </div>
-      </div>
-    </section>
 
     <!-- Control Toolbar -->
     <div class="control-toolbar">
@@ -5060,12 +4662,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A08')" title="Định vị lô A08 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A08">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A08">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A08', 'Điền Sản', '1.298,93', '12.052.000 đ/m²', '15.654.704.360 đ', '15,65 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A08">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -5203,12 +4802,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A09')" title="Định vị lô A09 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A09">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A09">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A09', 'Điền Sản', '1.284,89', '12.052.000 đ/m²', '15.485.494.280 đ', '15,49 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A09">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -5346,12 +4942,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A11')" title="Định vị lô A11 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A11">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A11">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A11', 'Điền Sản', '1.255,40', '12.052.000 đ/m²', '15.130.080.800 đ', '15,13 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A11">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -5489,12 +5082,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A12')" title="Định vị lô A12 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A12">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A12">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A12', 'Điền Sản', '1.246,02', '12.052.000 đ/m²', '15.017.033.040 đ', '15,02 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A12">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -5636,12 +5226,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A14')" title="Định vị lô A14 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A14">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A14">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A14', 'Điền An', '1.274,69', '17.920.093 đ/m²', '22.842.563.880 đ', '22,84 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A14">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -5783,12 +5370,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A15')" title="Định vị lô A15 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A15">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A15">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A15', 'Điền An', '1.115,70', '15.774.850 đ/m²', '17.600.000.000 đ', '17,60 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A15">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -5926,12 +5510,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A16')" title="Định vị lô A16 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A16">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A16">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A16', 'Biệt Phủ Điền Trang', '966,37', '12.775.120 đ/m²', '12.345.492.714 đ', '12,35 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A16">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -6069,12 +5650,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A17')" title="Định vị lô A17 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A17">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A17">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A17', 'Biệt Phủ Điền Trang', '836,77', '12.534.080 đ/m²', '10.488.142.122 đ', '10,49 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A17">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -6212,12 +5790,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('A23')" title="Định vị lô A23 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô A23">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô A23">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('A23', 'Biệt Phủ Điền Trang', '543,61', '14.643.180 đ/m²', '7.960.179.080 đ', '7,96 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô A23">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -6355,12 +5930,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B05')" title="Định vị lô B05 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B05">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B05">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B05', 'Điền Sản', '828,50', '12.775.120 đ/m²', '10.584.186.920 đ', '10,58 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B05">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -6498,12 +6070,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B08')" title="Định vị lô B08 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B08">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B08">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B08', 'Điền Sản', '1.113,49', '12.112.260 đ/m²', '13.486.880.387 đ', '13,49 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B08">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -6641,12 +6210,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B09')" title="Định vị lô B09 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B09">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B09">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B09', 'Điền Sản', '1.126,59', '12.052.000 đ/m²', '13.577.662.680 đ', '13,58 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B09">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -6784,12 +6350,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B10')" title="Định vị lô B10 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B10">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B10">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B10', 'Điền Sản', '1.291,20', '11.208.360 đ/m²', '14.472.234.432 đ', '14,47 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B10">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -6927,12 +6490,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B12')" title="Định vị lô B12 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B12">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B12">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B12', 'Biệt Phủ Điền Trang', '829,44', '12.172.520 đ/m²', '10.096.374.989 đ', '10,10 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B12">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -7070,12 +6630,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B13')" title="Định vị lô B13 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B13">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B13">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B13', 'Biệt Phủ Điền Trang', '763,27', '12.835.380 đ/m²', '9.796.860.493 đ', '9,80 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B13">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -7213,12 +6770,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B14')" title="Định vị lô B14 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B14">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B14">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B14', 'Biệt Phủ Điền Trang', '946,15', '13.618.760 đ/m²', '12.885.389.774 đ', '12,89 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B14">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -7356,12 +6910,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B17')" title="Định vị lô B17 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B17">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B17">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B17', 'Điền Sản', '985,57', '12.172.520 đ/m²', '11.996.870.536 đ', '12,00 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B17">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -7499,12 +7050,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B18')" title="Định vị lô B18 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B18">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B18">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B18', 'Điền Sản', '985,01', '12.172.520 đ/m²', '11.990.053.925 đ', '11,99 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B18">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -7642,12 +7190,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B19')" title="Định vị lô B19 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B19">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B19">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B19', 'Điền Sản', '998,06', '12.052.000 đ/m²', '12.028.619.120 đ', '12,03 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B19">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -7789,12 +7334,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B22')" title="Định vị lô B22 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B22">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B22">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B22', 'Điền An', '1.044,86', '16.844.362 đ/m²', '17.600.000.000 đ', '17,60 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B22">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -7936,12 +7478,9 @@
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('B23')" title="Định vị lô B23 trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô B23">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô B23">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('B23', 'Điền An', '1.154,54', '18.591.031 đ/m²', '21.464.088.660 đ', '21,46 Tỷ')" title="Nhận báo giá &amp; ưu đãi lô B23">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -8007,7 +7546,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a08" class="btn-table-action" title="Xem chi tiết & CSBH căn A08">
@@ -8016,12 +7555,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A08', 'a08')" title="Sao chép link căn A08">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A08">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A08">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8062,7 +7595,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a09" class="btn-table-action" title="Xem chi tiết & CSBH căn A09">
@@ -8071,12 +7604,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A09', 'a09')" title="Sao chép link căn A09">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A09">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A09">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8117,7 +7644,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a11" class="btn-table-action" title="Xem chi tiết & CSBH căn A11">
@@ -8126,12 +7653,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A11', 'a11')" title="Sao chép link căn A11">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A11">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A11">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8172,7 +7693,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a12" class="btn-table-action" title="Xem chi tiết & CSBH căn A12">
@@ -8181,12 +7702,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A12', 'a12')" title="Sao chép link căn A12">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A12">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A12">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8229,7 +7744,7 @@
             </div>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a14" class="btn-table-action" title="Xem chi tiết & CSBH căn A14">
@@ -8238,12 +7753,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A14', 'a14')" title="Sao chép link căn A14">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A14">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A14">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8286,7 +7795,7 @@
             </div>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a15" class="btn-table-action" title="Xem chi tiết & CSBH căn A15">
@@ -8295,12 +7804,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A15', 'a15')" title="Sao chép link căn A15">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A15">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A15">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8341,7 +7844,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a16" class="btn-table-action" title="Xem chi tiết & CSBH căn A16">
@@ -8350,12 +7853,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A16', 'a16')" title="Sao chép link căn A16">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A16">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A16">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8396,7 +7893,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a17" class="btn-table-action" title="Xem chi tiết & CSBH căn A17">
@@ -8405,12 +7902,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A17', 'a17')" title="Sao chép link căn A17">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A17">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A17">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8451,7 +7942,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/a23" class="btn-table-action" title="Xem chi tiết & CSBH căn A23">
@@ -8460,12 +7951,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('A23', 'a23')" title="Sao chép link căn A23">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn A23">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc A23">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8506,7 +7991,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b05" class="btn-table-action" title="Xem chi tiết & CSBH căn B05">
@@ -8515,12 +8000,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B05', 'b05')" title="Sao chép link căn B05">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B05">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B05">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8561,7 +8040,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b08" class="btn-table-action" title="Xem chi tiết & CSBH căn B08">
@@ -8570,12 +8049,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B08', 'b08')" title="Sao chép link căn B08">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B08">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B08">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8616,7 +8089,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b09" class="btn-table-action" title="Xem chi tiết & CSBH căn B09">
@@ -8625,12 +8098,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B09', 'b09')" title="Sao chép link căn B09">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B09">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B09">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8671,7 +8138,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b10" class="btn-table-action" title="Xem chi tiết & CSBH căn B10">
@@ -8680,12 +8147,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B10', 'b10')" title="Sao chép link căn B10">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B10">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B10">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8726,7 +8187,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b12" class="btn-table-action" title="Xem chi tiết & CSBH căn B12">
@@ -8735,12 +8196,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B12', 'b12')" title="Sao chép link căn B12">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B12">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B12">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8781,7 +8236,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b13" class="btn-table-action" title="Xem chi tiết & CSBH căn B13">
@@ -8790,12 +8245,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B13', 'b13')" title="Sao chép link căn B13">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B13">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B13">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8836,7 +8285,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b14" class="btn-table-action" title="Xem chi tiết & CSBH căn B14">
@@ -8845,12 +8294,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B14', 'b14')" title="Sao chép link căn B14">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B14">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B14">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8891,7 +8334,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b17" class="btn-table-action" title="Xem chi tiết & CSBH căn B17">
@@ -8900,12 +8343,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B17', 'b17')" title="Sao chép link căn B17">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B17">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B17">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -8946,7 +8383,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b18" class="btn-table-action" title="Xem chi tiết & CSBH căn B18">
@@ -8955,12 +8392,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B18', 'b18')" title="Sao chép link căn B18">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B18">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B18">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -9001,7 +8432,7 @@
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b19" class="btn-table-action" title="Xem chi tiết & CSBH căn B19">
@@ -9010,12 +8441,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B19', 'b19')" title="Sao chép link căn B19">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B19">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B19">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -9058,7 +8483,7 @@
             </div>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b22" class="btn-table-action" title="Xem chi tiết & CSBH căn B22">
@@ -9067,12 +8492,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B22', 'b22')" title="Sao chép link căn B22">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B22">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B22">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -9115,7 +8534,7 @@
             </div>
             
           </td>
-          <td class="col-status"><a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a></td>
+          <td class="col-status"><span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span></td>
           <td class="col-action">
             <div style="display:flex; gap:6px; align-items:center;">
               <a href="/b23" class="btn-table-action" title="Xem chi tiết & CSBH căn B23">
@@ -9124,12 +8543,6 @@
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('B23', 'b23')" title="Sao chép link căn B23">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn B23">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc B23">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -9149,6 +8562,7 @@
       </button>
     </div>
 
+    </section>
   </main>
 
   <!-- Booking Modal -->
@@ -9165,11 +8579,10 @@
           <div class="mlp-price" id="modalLotPrice">13,85 Tỷ (Giá gốc niêm yết)</div>
         </div>
 
-        <div class="modal-direct-lock">
-          <div class="mdl-title"><i class="fa-solid fa-bolt" style="color:var(--gold);"></i> Kiểm tra tình trạng căn &amp; Khóa cọc nhanh:</div>
-          <div class="mdl-actions">
-            <a href="tel:0909000712" class="btn-mdl-call"><i class="fa-solid fa-phone"></i> Gọi 0909 000 712</a>
-            <a href="https://zalo.me/0909000712" target="_blank" class="btn-mdl-zalo"><i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc</a>
+        <div class="modal-direct-lock" style="background:#fdfbf7; border:1px solid #ebdcc5; border-radius:8px; padding:12px 14px; margin-bottom:16px;">
+          <div style="font-size:0.86rem; color:#4a3f35; line-height:1.5;">
+            <i class="fa-solid fa-shield-halved" style="color:var(--gold); margin-right:6px;"></i>
+            <strong>Chính sách bảo mật nguồn khách:</strong> Đăng ký nhận bảng tính chi tiết và chính sách ưu đãi Đợt 1. Sau khi gửi, Quý khách vui lòng liên hệ với chuyên viên tư vấn / đối tác đã gửi đường link này để được hỗ trợ khóa căn ưu tiên.
           </div>
         </div>
 
@@ -9210,44 +8623,30 @@
     </div>
   </div>
 
-  <!-- Lightbox Modal for 5K MasterPlan & 3D Showcase -->
-  <div class="mp-lightbox-modal" id="mpLightboxModal" onclick="closeMasterplanLightbox(event)">
-    <div class="mp-lightbox-dialog">
-      <div class="mp-lightbox-header">
-        <h4 id="mpLightboxTitle"><i class="fa-solid fa-images" style="color:var(--gold);"></i> Phối Cảnh 3D Tiện Ích</h4>
-        <button type="button" class="mp-lightbox-close" onclick="closeMasterplanLightbox()">&times;</button>
+  <!-- Thank You Modal -->
+  <div class="modal-overlay" id="thankyouModal" onclick="closeThankyouModal(event)">
+    <div class="modal-card" style="text-align:center; padding:36px 24px; max-width:480px;">
+      <div style="width:64px; height:64px; border-radius:50%; background:#ecfdf5; color:#059669; display:inline-flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 16px;">
+        <i class="fa-solid fa-check"></i>
       </div>
-      <div class="mp-lightbox-body" id="mpLightboxBody">
-        <button type="button" class="lb-nav-btn lb-prev-btn" id="lbPrevBtn" onclick="prevGalleryImage(event)" title="Xem hình trước (Phím mũi tên trái)">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <img id="mpLightboxImg" src="" alt="Saigon Farm Resort 3D" title="Click để phóng to 100% / thu nhỏ">
-        <button type="button" class="lb-nav-btn lb-next-btn" id="lbNextBtn" onclick="nextGalleryImage(event)" title="Xem hình kế tiếp (Phím mũi tên phải)">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
+      <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:var(--primary); margin-bottom:12px;">ĐÃ GHI NHẬN YÊU CẦU THÀNH CÔNG</h3>
+      <p style="font-size:0.95rem; color:#475569; line-height:1.6; margin-bottom:24px;">
+        Cảm ơn Quý khách / Quý đối tác đã quan tâm đến giỏ hàng Saigon Farm Resort.<br/>
+        <strong>Quý khách vui lòng liên hệ trực tiếp với chuyên viên tư vấn / đối tác đã gửi đường link này</strong> để được hỗ trợ kiểm tra tình trạng mã căn trong thời gian thực và nhận chính sách ưu đãi Đợt 1 tốt nhất.
+      </p>
+      <button type="button" class="modal-submit-btn" onclick="closeThankyouModal()" style="width:100%; border:none; cursor:pointer;">
+        Đã Hiểu &amp; Đóng
+      </button>
     </div>
   </div>
 
   <!-- Mobile Fixed Bottom Dock -->
   <div class="mobile-bottom-dock">
-    <a href="tel:0909000712" class="dock-btn dock-btn-call">
-      <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
+    <a href="#masterplanSection" class="dock-btn dock-btn-map">
+      <i class="fa-solid fa-map-location-dot"></i> 1. Bản Đồ Phân Lô
     </a>
-    <a href="https://zalo.me/0909000712" target="_blank" class="dock-btn dock-btn-zalo">
-      <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc
-    </a>
-  </div>
-
-  <!-- Floating Sales CTA Bar -->
-  <div class="floating-sales-cta">
-    <a href="tel:0909000712" class="float-sales-btn float-call" title="Gọi kiểm tra giỏ hàng 0909 000 712">
-      <i class="fa-solid fa-phone"></i>
-      <span class="float-btn-label">Check Căn: <strong>0909 000 712</strong></span>
-    </a>
-    <a href="https://zalo.me/0909000712" target="_blank" class="float-sales-btn float-zalo" title="Zalo khóa cọc 0909 000 712">
-      <i class="fa-solid fa-comment-dots"></i>
-      <span class="float-btn-label">Zalo Khóa Cọc</span>
+    <a href="#gioHangSection" class="dock-btn dock-btn-cart">
+      <i class="fa-solid fa-cart-shopping"></i> 2. Giỏ Hàng (21)
     </a>
   </div>
 
@@ -9255,6 +8654,7 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-col">
+        <img src="/assets/Index_asset/LOGO_PNG/LOGO_SGF_2_WHITE.png" alt="Saigon Farm Resort" style="height:38px; width:auto; margin-bottom:14px; display:block;">
         <h4 style="color:#ffffff;">SAIGON FARM RESORT</h4>
         <p style="font-size:0.86rem; color:#dfd7cc; line-height:1.6; margin-bottom:14px;">
           Quần thể điền trang nghỉ dưỡng sinh thái ven hồ 100ha đầu tiên tại TP. Hồ Chí Minh. Bộ sưu tập 34 sản phẩm giới hạn 100% thổ cư sổ đỏ riêng.
@@ -9283,13 +8683,12 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Liên Hệ Ban Quản Lý</h4>
+        <h4>Tư Vấn &amp; Trải Nghiệm</h4>
         <p style="font-size:0.86rem; color:#dfd7cc; line-height:1.6; margin-bottom:10px;">
-          Hotline Quản Lý Giỏ Hàng & Khóa Cọc:<br/>
-          <strong style="font-size:1.15rem; color:var(--gold);">0909 000 712</strong> (Call / Zalo)
+          Quý khách và Quý đối tác vui lòng liên hệ trực tiếp với chuyên viên tư vấn đã gửi đường link này để được cung cấp trọn bộ hồ sơ pháp lý, bảng tính dòng tiền và sắp xếp xe đưa đón khảo sát thực địa.
         </p>
         <p style="font-size:0.82rem; color:#aaa;">
-          Hỗ trợ tư vấn 24/7 · Xe đưa đón khảo sát thực tế dự án miễn phí cuối tuần.
+          Hỗ trợ thông tin 24/7 · Xe đưa đón khảo sát thực tế dự án miễn phí cuối tuần.
         </p>
       </div>
     </div>
@@ -9997,14 +9396,22 @@
 
     function handleFormSubmit(e) {
       e.preventDefault();
-      const name = document.getElementById('formName').value;
-      const phone = document.getElementById('formPhone').value;
-      const code = document.getElementById('formCode').value || 'Tư vấn chung';
-      const need = document.getElementById('formNeed').value;
-
-      alert(`Cảm ơn Quý khách ${name}! Yêu cầu nhận bảng tính & chính sách cho sản phẩm ${code} đã được chuyển đến Ban Quản Lý Dự Án. Chuyên viên sẽ liên hệ lại qua SĐT/Zalo ${phone} trong ít phút.`);
       closeBookingModal();
       document.getElementById('bookingForm').reset();
+      const thankyouModal = document.getElementById('thankyouModal');
+      if (thankyouModal) {
+        thankyouModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeThankyouModal(e) {
+      if (e && e.target && e.target.id !== 'thankyouModal') return;
+      const thankyouModal = document.getElementById('thankyouModal');
+      if (thankyouModal) {
+        thankyouModal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
     }
 
     // Lot Share Link Copy Handler

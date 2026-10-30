@@ -442,12 +442,9 @@ def update_listing():
               <button type="button" class="btn-view-map-action" onclick="event.stopPropagation(); locateOnMap('{code}')" title="Định vị lô {code} trên bản đồ">
                 <i class="fa-solid fa-map-location-dot"></i>
               </button>
-              <a href="tel:0909000712" onclick="event.stopPropagation()" class="btn-call-action" title="Gọi 0909 000 712 kiểm tra lô {code}">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" onclick="event.stopPropagation()" target="_blank" class="btn-zalo-action" title="Nhắn Zalo 0909 000 712 khóa cọc lô {code}">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
+              <button type="button" class="btn-inquire-action" onclick="event.stopPropagation(); openBookingModal('{code}', '{cat_title}', '{area_str}', '{unit_price_str}', '{price_str}', '{price_bil}')" title="Nhận báo giá &amp; ưu đãi lô {code}">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Nhận Báo Giá
+              </button>
             </div>
           </div>
         </div>
@@ -500,14 +497,14 @@ def update_listing():
               <span style="display:block; font-size:0.78rem; color:#0369a1; margin-top:3px; font-weight:700;"><i class="fa-solid fa-hand-holding-dollar"></i> Thuê lại 120 Tr/th</span>
             </div>
             """
-            table_status_cell = '<a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a>'
+            table_status_cell = '<span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span>'
         else:
             table_price_cell = f"""
             <strong class="price-bil-text">{price_bil}</strong>
             <span class="price-full-sub">{price_str}</span>
             <span style="display:block; font-size:0.75rem; color:#556b60; margin-top:2px; font-weight:600;">(Chỉ bán đất)</span>
             """
-            table_status_cell = '<a href="tel:0909000712" class="table-status-pill" style="background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1; text-decoration:none;" title="Gọi Hotline 0909 000 712 kiểm tra căn"><i class="fa-solid fa-phone" style="font-size:0.65rem; margin-right:3px; color:#15803d;"></i> Gọi check</a>'
+            table_status_cell = '<span class="table-status-pill status-available" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;"><i class="fa-solid fa-circle-check" style="font-size:0.65rem; margin-right:3px;"></i> Mở Bán Đợt 1</span>'
 
         row = f"""
         <tr class="table-row-item"
@@ -550,12 +547,6 @@ def update_listing():
               <button type="button" class="btn-table-copy" onclick="copyLotShareLink('{code}', '{code.lower()}')" title="Sao chép link căn {code}">
                 <i class="fa-solid fa-copy"></i>
               </button>
-              <a href="tel:0909000712" class="btn-table-call" title="Gọi 0909 000 712 check căn {code}">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="https://zalo.me/0909000712" target="_blank" class="btn-table-zalo" title="Zalo 0909 000 712 khóa cọc {code}">
-                <i class="fa-solid fa-comment-dots"></i>
-              </a>
             </div>
           </td>
         </tr>
@@ -1029,6 +1020,70 @@ def update_listing():
     /* ==============================================================
        INTERACTIVE MASTER PLAN SECTION
        ============================================================== */
+    /* Focus Headers for Section 1 and Section 2 */
+    .section-focus-header {{
+      margin-bottom: 24px;
+      text-align: left;
+    }}
+    .sfh-step {{
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--primary);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }}
+    .sfh-title {{
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.01em;
+    }}
+    .sfh-sub {{
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }}
+    .inventory-section-wrap {{
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }}
+    .btn-inquire-action {{
+      flex: 1.4;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #c9a96e 0%, #b38e4a 100%);
+      color: #1f2421;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }}
+    .btn-inquire-action:hover {{
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(201,169,110,0.35);
+    }}
+    .dock-btn-map {{
+      background: var(--gold);
+      color: #1a1510;
+    }}
+    .dock-btn-cart {{
+      background: #2563eb;
+      color: #ffffff;
+    }}
+
     .masterplan-interactive-section {{
       background: #ffffff;
       border: 1px solid var(--border-color);
@@ -3987,8 +4042,7 @@ def update_listing():
         <span><i class="fa-solid fa-shield-halved" style="color:#4ade80;"></i> Sản phẩm 100% Thổ cư</span>
       </div>
       <div class="topbar-right">
-        <a href="tel:0909000712" style="font-weight:700; color:#fff; background:rgba(201,169,110,0.22); padding:3px 10px; border-radius:14px; border:1px solid rgba(201,169,110,0.5);"><i class="fa-solid fa-phone-volume" style="color:var(--gold);"></i> Check Căn: 0909 000 712</a>
-        <a href="https://zalo.me/0909000712" target="_blank" style="font-weight:700; color:#0068FF; background:#fff; padding:3px 10px; border-radius:14px;"><i class="fa-solid fa-comment-dots"></i> Zalo Khóa Cọc</a>
+        <span><i class="fa-solid fa-gem" style="color:var(--gold);"></i> 21 Sản Phẩm Giới Hạn Đợt 1</span>
         <a href="gioithieu"><i class="fa-solid fa-book-open"></i> Bản Giới Thiệu (Pitch Deck)</a>
       </div>
     </div>
@@ -4007,7 +4061,6 @@ def update_listing():
         <li><a href="/">Trang Chủ</a></li>
         <li><a href="/gioithieu">Giới Thiệu</a></li>
         <li><a href="/giohang" class="active"><i class="fa-solid fa-cart-shopping" style="color:var(--gold-dark);"></i> Giỏ Hàng Mở Bán</a></li>
-        <li><a href="https://invitation.saigonfarmresort.com" target="_blank" rel="noopener">Thư Mời VIP</a></li>
       </ul>
     </div>
   </header>
@@ -4054,23 +4107,15 @@ def update_listing():
         </div>
       </div>
 
-      <!-- Sales Lock Deposit Callout Banner -->
+      <!-- Sales Direct Guidance Callout Banner -->
       <div class="lock-deposit-banner">
         <div class="lock-deposit-badge">
-          <i class="fa-solid fa-shield-halved"></i> QUY TRÌNH CHECK CĂN &amp; KHÓA CỌC TRỰC TIẾP
+          <i class="fa-solid fa-shield-halved"></i> QUY TRÌNH CHECK CĂN &amp; ĐĂNG KÝ NGUYỆN VỌNG ĐỢT 1
         </div>
         <div class="lock-deposit-grid">
           <div class="lock-deposit-text">
-            <h3><i class="fa-solid fa-phone-volume" style="color: #ffd54f; margin-right: 8px;"></i>Hotline / Zalo Quản Lý Giỏ Hàng: <a href="tel:0909000712" class="hotline-phone-highlight">0909 000 712</a></h3>
-            <p>Dành riêng cho Chuyên viên kinh doanh &amp; Quản lý bán hàng: Vui lòng gọi hoặc nhắn Zalo trực tiếp đến <a href="tel:0909000712" class="hotline-inline-highlight">0909 000 712</a> để kiểm tra tình trạng còn/hết của mã căn và khóa cọc ngay trong thời gian thực trước khi tiến hành nhận tiền khách hàng.</p>
-          </div>
-          <div class="lock-deposit-cta-group">
-            <a href="tel:0909000712" class="btn-lock-phone">
-              <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
-            </a>
-            <a href="https://zalo.me/0909000712" target="_blank" class="btn-lock-zalo">
-              <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc
-            </a>
+            <h3><i class="fa-solid fa-file-signature" style="color: #ffd54f; margin-right: 8px;"></i>Đăng Ký &amp; Nhận Báo Giá Trực Tiếp Từng Mã Căn</h3>
+            <p>Quý khách hàng &amp; Đối tác có thể nhấp trực tiếp vào từng căn trên Bản đồ hoặc Giỏ hàng bên dưới để xem chi tiết thông số, hoặc bấm <strong>Nhận Báo Giá</strong> để được bộ phận tư vấn gửi hồ sơ pháp lý và bảng tính ưu đãi sớm nhất.</p>
           </div>
         </div>
       </div>
@@ -4105,49 +4150,39 @@ def update_listing():
   <main class="main-content">
 
     <!-- ==============================================================
-         INTERACTIVE MASTER PLAN (2D & 3D MULTI-PERSPECTIVE)
+         PHẦN 1: BẢN ĐỒ PHÂN LÔ TƯƠNG TÁC
          ============================================================== -->
     <section class="masterplan-interactive-section" id="masterplanSection">
-      <!-- Perspective Mode Switcher Tabs -->
-      <div class="mp-perspective-switcher">
-        <button type="button" class="mp-view-tab active" id="tabMp2D" onclick="switchMasterPlanPerspective('2d')">
-          <i class="fa-solid fa-map-location-dot"></i>
-          <span class="tab-label">Sơ Đồ Phân Lô 2D</span>
-          <span class="tab-badge">{total_count} Căn · Tương Tác Ghim</span>
-        </button>
-        <button type="button" class="mp-view-tab" id="tabMp3DWide" onclick="switchMasterPlanPerspective('3d-wide')">
-          <i class="fa-solid fa-mountain-sun"></i>
-          <span class="tab-label">3D Toàn Cảnh Hồ Sinh Thái</span>
-          <span class="tab-badge">Góc Rộng 5K Ven Hồ</span>
-        </button>
-        <button type="button" class="mp-view-tab" id="tabMp3DClose" onclick="switchMasterPlanPerspective('3d-close')">
-          <i class="fa-solid fa-house-chimney-window"></i>
-          <span class="tab-label">3D Cận Cảnh Quần Thể</span>
-          <span class="tab-badge">Biệt Phủ & Bến Thuyền</span>
-        </button>
+      <!-- Section 1 Header Badge -->
+      <div class="section-focus-header">
+        <span class="sfh-step">PHẦN 1</span>
+        <h2 class="sfh-title"><i class="fa-solid fa-map-location-dot" style="color:var(--gold);"></i> BẢN ĐỒ PHÂN LÔ TƯƠNG TÁC</h2>
+        <p class="sfh-sub">Chạm hoặc click vào từng ghim lô trên sơ đồ để xem thông số chi tiết, cảnh quan, diện tích và đơn giá niêm yết</p>
       </div>
 
-      <!-- VIEW 1: 2D Interactive Lot Map -->
+      <!-- VIEW: 2D Interactive Lot Map -->
       <div class="mp-perspective-panel active" id="panelMp2D">
         <div class="map-header">
           <div class="map-title-group">
-            <h2><i class="fa-solid fa-map-location-dot" style="color:var(--gold);"></i> SƠ ĐỒ MẶT BẰNG PHÂN LÔ TƯƠNG TÁC</h2>
-            <p>Click hoặc chạm vào từng lô trên sơ đồ để xem vị trí thực tế, cảnh quan, diện tích và giá niêm yết gốc đợt 1</p>
+            <div class="map-legend-group">
+              <div class="legend-item legend-manor">
+                <span class="legend-dot"></span> Biệt Phủ Điền Trang ({manor_count})
+              </div>
+              <div class="legend-item legend-founders">
+                <span class="legend-dot"></span> Điền Sản ({founders_count})
+              </div>
+              <div class="legend-item legend-haven">
+                <span class="legend-dot"></span> Điền An ({haven_count})
+              </div>
+              <div class="legend-item legend-reserved">
+                <span class="legend-dot"></span> Đang Giữ Chỗ ({reserved_count})
+              </div>
+            </div>
           </div>
-
-          <div class="map-legend-group">
-            <div class="legend-item legend-manor">
-              <span class="legend-dot"></span> Biệt Phủ Điền Trang ({manor_count})
-            </div>
-            <div class="legend-item legend-founders">
-              <span class="legend-dot"></span> Điền Sản ({founders_count})
-            </div>
-            <div class="legend-item legend-haven">
-              <span class="legend-dot"></span> Điền An ({haven_count})
-            </div>
-            <div class="legend-item legend-reserved">
-              <span class="legend-dot"></span> Đang Giữ Chỗ ({reserved_count})
-            </div>
+          <div class="mp-actions-group">
+            <button type="button" class="btn-mp-action" onclick="toggleMapFullscreen('mapViewport')">
+              <i class="fa-solid fa-expand"></i> Toàn Màn Hình
+            </button>
           </div>
         </div>
 
@@ -4181,116 +4216,18 @@ def update_listing():
           </div>
         </div>
       </div>
-
-      <!-- VIEW 2: 3D Wide Perspective (Ven hồ 8ha nhìn vào thung lũng & biệt phủ) -->
-      <div class="mp-perspective-panel" id="panelMp3DWide" style="display:none;">
-        <div class="map-header">
-          <div class="map-title-group">
-            <h2><i class="fa-solid fa-mountain-sun" style="color:var(--gold);"></i> PHỐI CẢNH 3D QUẦN THỂ TIỆN ÍCH 30.000 M² &amp; HỒ 100HA</h2>
-            <p>Góc nhìn chim bay từ mặt hồ sinh thái 8ha, bao quát toàn bộ thung lũng ruộng lúa, cụm Biệt Phủ Điền Trang và rặng núi hùng vĩ</p>
-          </div>
-          <div class="mp-actions-group">
-            <button type="button" class="btn-mp-action" onclick="openMasterplanLightbox('/assets/Index_asset/3D new 2026/SGFR_3D-Tien ich.jpg', 'Phối Cảnh 3D Toàn Cảnh Ven Hồ Sinh Thái (Độ phân giải siêu nét 5K)')">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> Mở Bản Gốc Siêu Nét 5K
-            </button>
-          </div>
-        </div>
-
-        <div class="map-viewport" id="mapViewport3DWide">
-          <div class="map-canvas" id="mapCanvas3DWide">
-            <div class="map-stage map-stage-3d-wide" id="mapStage3DWide">
-              <img src="/assets/Index_asset/3D new 2026/SGFR_3D-Tien ich.jpg" 
-                   alt="Phối cảnh 3D toàn cảnh ven hồ Saigon Farm Resort" 
-                   class="map-image"
-                   id="masterPlan3DWideImg">
-            </div>
-          </div>
-
-          <div class="map-controls-floating">
-            <button type="button" class="map-ctrl-btn" onclick="zoom3D('wide', 1.25)" title="Phóng to"><i class="fa-solid fa-plus"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="zoom3D('wide', 0.8)" title="Thu nhỏ"><i class="fa-solid fa-minus"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="reset3D('wide')" title="Đặt lại góc nhìn"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="toggleMapFullscreen('mapViewport3DWide')" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
-          </div>
-
-          <div class="map-hint-badge">
-            <i class="fa-solid fa-hand-pointer"></i> <span>Kéo chuột/chạm để ngắm toàn cảnh · Cuộn để soi chi tiết</span>
-          </div>
-
-          <!-- Feature callouts on 3D -->
-          <div class="mp-feature-overlay">
-            <span class="feature-tag"><i class="fa-solid fa-water"></i> Hồ sinh thái 8ha</span>
-            <span class="feature-tag"><i class="fa-solid fa-wheat-awn"></i> Thung lũng lúa xanh</span>
-            <span class="feature-tag"><i class="fa-solid fa-tree"></i> Đồi chè Oolong</span>
-            <span class="feature-tag"><i class="fa-solid fa-landmark"></i> Biệt Phủ Điền Trang</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- VIEW 3: 3D Close-up (Cận cảnh quần thể biệt phủ, bến thuyền, công viên) -->
-      <div class="mp-perspective-panel" id="panelMp3DClose" style="display:none;">
-        <div class="map-header">
-          <div class="map-title-group">
-            <h2><i class="fa-solid fa-house-chimney-window" style="color:var(--gold);"></i> PHỐI CẢNH 3D TOÀN CẢNH HOÀNG HÔN VEN HỒ</h2>
-            <p>Góc nhìn chi tiết kiến trúc ngói âm dương truyền thống, bến chèo thuyền SUP ven hồ, lối tản bộ hoa và không gian sống sinh thái</p>
-          </div>
-          <div class="mp-actions-group">
-            <button type="button" class="btn-mp-action" onclick="openMasterplanLightbox('/assets/Index_asset/3D new 2026/SGFR_TỔNG QUAN HOÀNG HÔN.jpg', 'Phối Cảnh 3D Cận Cảnh Quần Thể Nghỉ Dưỡng Saigon Farm Resort')">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> Mở Ảnh Độ Nét Cao
-            </button>
-          </div>
-        </div>
-
-        <div class="map-viewport" id="mapViewport3DClose">
-          <div class="map-canvas" id="mapCanvas3DClose">
-            <div class="map-stage map-stage-3d-close" id="mapStage3DClose">
-              <img src="/assets/Index_asset/3D new 2026/SGFR_TỔNG QUAN HOÀNG HÔN.jpg" 
-                   alt="Phối cảnh 3D cận cảnh quần thể Saigon Farm Resort" 
-                   class="map-image"
-                   id="masterPlan3DCloseImg">
-            </div>
-          </div>
-
-          <div class="map-controls-floating">
-            <button type="button" class="map-ctrl-btn" onclick="zoom3D('close', 1.25)" title="Phóng to"><i class="fa-solid fa-plus"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="zoom3D('close', 0.8)" title="Thu nhỏ"><i class="fa-solid fa-minus"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="reset3D('close')" title="Đặt lại góc nhìn"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button type="button" class="map-ctrl-btn" onclick="toggleMapFullscreen('mapViewport3DClose')" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
-          </div>
-
-          <div class="map-hint-badge">
-            <i class="fa-solid fa-hand-pointer"></i> <span>Kéo để di chuyển · Cuộn chuột hoặc chạm 2 ngón để phóng to</span>
-          </div>
-
-          <div class="mp-feature-overlay">
-            <span class="feature-tag"><i class="fa-solid fa-sailboat"></i> Bến thuyền Kayak & SUP</span>
-            <span class="feature-tag"><i class="fa-solid fa-campground"></i> Công viên lễ hội bãi cỏ</span>
-            <span class="feature-tag"><i class="fa-solid fa-spa"></i> Khu Clubhouse & Wellness</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ==============================================================
-         BỘ SƯU TẬP 20 PHỐI CẢNH 3D TIỆN ÍCH MỚI NHẤT 2026
+         PHẦN 2: GIỎ HÀNG & BẢNG GIÁ ĐỢT 1
          ============================================================== -->
-    <section class="master-3d-showcase" id="tienIch3DSection">
-      <div class="m3d-header">
-        <div>
-          <span class="m3d-badge"><i class="fa-solid fa-sparkles"></i> Bộ Sưu Tập Phối Cảnh 3D Mới 2026</span>
-          <h2 class="m3d-title"><i class="fa-solid fa-gem" style="color:var(--gold);"></i> HỆ THỐNG TIỆN ÍCH &amp; CẢNH QUAN SINH THÁI</h2>
-          <p class="m3d-sub">Toàn bộ 20 góc phối cảnh 3D thực tế về tiện ích ven hồ, clubhouse và cảnh quan sinh thái Saigon Farm Resort. Nhấp vào bất kỳ hình nào để mở xem toàn màn hình và bấm tới lui để lướt qua toàn bộ hình ảnh.</p>
-        </div>
-        <div>
-          <button type="button" class="btn-mp-action" onclick="openGallery3DLightbox(0)">
-            <i class="fa-solid fa-expand"></i> Mở Xem Toàn Màn Hình (20 Hình)
-          </button>
-        </div>
+    <section class="inventory-section-wrap" id="gioHangSection">
+      <!-- Section 2 Header Badge -->
+      <div class="section-focus-header">
+        <span class="sfh-step">PHẦN 2</span>
+        <h2 class="sfh-title"><i class="fa-solid fa-cart-shopping" style="color:var(--gold);"></i> GIỎ HÀNG &amp; BẢNG GIÁ MỞ BÁN ĐỢT 1 ({total_count} CĂN)</h2>
+        <p class="sfh-sub">Tra cứu thông số, lọc theo phân khu, hướng, cảnh quan hoặc xuất bảng giá chi tiết</p>
       </div>
-      <div class="m3d-grid">
-{m3d_cards_rendered}
-      </div>
-    </section>
 
     <!-- Control Toolbar -->
     <div class="control-toolbar">
@@ -4443,6 +4380,7 @@ def update_listing():
       </button>
     </div>
 
+    </section>
   </main>
 
   <!-- Booking Modal -->
@@ -4459,11 +4397,10 @@ def update_listing():
           <div class="mlp-price" id="modalLotPrice">13,85 Tỷ (Giá gốc niêm yết)</div>
         </div>
 
-        <div class="modal-direct-lock">
-          <div class="mdl-title"><i class="fa-solid fa-bolt" style="color:var(--gold);"></i> Kiểm tra tình trạng căn &amp; Khóa cọc nhanh:</div>
-          <div class="mdl-actions">
-            <a href="tel:0909000712" class="btn-mdl-call"><i class="fa-solid fa-phone"></i> Gọi 0909 000 712</a>
-            <a href="https://zalo.me/0909000712" target="_blank" class="btn-mdl-zalo"><i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc</a>
+        <div class="modal-direct-lock" style="background:#fdfbf7; border:1px solid #ebdcc5; border-radius:8px; padding:12px 14px; margin-bottom:16px;">
+          <div style="font-size:0.86rem; color:#4a3f35; line-height:1.5;">
+            <i class="fa-solid fa-shield-halved" style="color:var(--gold); margin-right:6px;"></i>
+            <strong>Chính sách bảo mật nguồn khách:</strong> Đăng ký nhận bảng tính chi tiết và chính sách ưu đãi Đợt 1. Sau khi gửi, Quý khách vui lòng liên hệ với chuyên viên tư vấn / đối tác đã gửi đường link này để được hỗ trợ khóa căn ưu tiên.
           </div>
         </div>
 
@@ -4504,44 +4441,30 @@ def update_listing():
     </div>
   </div>
 
-  <!-- Lightbox Modal for 5K MasterPlan & 3D Showcase -->
-  <div class="mp-lightbox-modal" id="mpLightboxModal" onclick="closeMasterplanLightbox(event)">
-    <div class="mp-lightbox-dialog">
-      <div class="mp-lightbox-header">
-        <h4 id="mpLightboxTitle"><i class="fa-solid fa-images" style="color:var(--gold);"></i> Phối Cảnh 3D Tiện Ích</h4>
-        <button type="button" class="mp-lightbox-close" onclick="closeMasterplanLightbox()">&times;</button>
+  <!-- Thank You Modal -->
+  <div class="modal-overlay" id="thankyouModal" onclick="closeThankyouModal(event)">
+    <div class="modal-card" style="text-align:center; padding:36px 24px; max-width:480px;">
+      <div style="width:64px; height:64px; border-radius:50%; background:#ecfdf5; color:#059669; display:inline-flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 16px;">
+        <i class="fa-solid fa-check"></i>
       </div>
-      <div class="mp-lightbox-body" id="mpLightboxBody">
-        <button type="button" class="lb-nav-btn lb-prev-btn" id="lbPrevBtn" onclick="prevGalleryImage(event)" title="Xem hình trước (Phím mũi tên trái)">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <img id="mpLightboxImg" src="" alt="Saigon Farm Resort 3D" title="Click để phóng to 100% / thu nhỏ">
-        <button type="button" class="lb-nav-btn lb-next-btn" id="lbNextBtn" onclick="nextGalleryImage(event)" title="Xem hình kế tiếp (Phím mũi tên phải)">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
+      <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:var(--primary); margin-bottom:12px;">ĐÃ GHI NHẬN YÊU CẦU THÀNH CÔNG</h3>
+      <p style="font-size:0.95rem; color:#475569; line-height:1.6; margin-bottom:24px;">
+        Cảm ơn Quý khách / Quý đối tác đã quan tâm đến giỏ hàng Saigon Farm Resort.<br/>
+        <strong>Quý khách vui lòng liên hệ trực tiếp với chuyên viên tư vấn / đối tác đã gửi đường link này</strong> để được hỗ trợ kiểm tra tình trạng mã căn trong thời gian thực và nhận chính sách ưu đãi Đợt 1 tốt nhất.
+      </p>
+      <button type="button" class="modal-submit-btn" onclick="closeThankyouModal()" style="width:100%; border:none; cursor:pointer;">
+        Đã Hiểu &amp; Đóng
+      </button>
     </div>
   </div>
 
   <!-- Mobile Fixed Bottom Dock -->
   <div class="mobile-bottom-dock">
-    <a href="tel:0909000712" class="dock-btn dock-btn-call">
-      <i class="fa-solid fa-phone"></i> Gọi 0909 000 712
+    <a href="#masterplanSection" class="dock-btn dock-btn-map">
+      <i class="fa-solid fa-map-location-dot"></i> 1. Bản Đồ Phân Lô
     </a>
-    <a href="https://zalo.me/0909000712" target="_blank" class="dock-btn dock-btn-zalo">
-      <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Khóa Cọc
-    </a>
-  </div>
-
-  <!-- Floating Sales CTA Bar -->
-  <div class="floating-sales-cta">
-    <a href="tel:0909000712" class="float-sales-btn float-call" title="Gọi kiểm tra giỏ hàng 0909 000 712">
-      <i class="fa-solid fa-phone"></i>
-      <span class="float-btn-label">Check Căn: <strong>0909 000 712</strong></span>
-    </a>
-    <a href="https://zalo.me/0909000712" target="_blank" class="float-sales-btn float-zalo" title="Zalo khóa cọc 0909 000 712">
-      <i class="fa-solid fa-comment-dots"></i>
-      <span class="float-btn-label">Zalo Khóa Cọc</span>
+    <a href="#gioHangSection" class="dock-btn dock-btn-cart">
+      <i class="fa-solid fa-cart-shopping"></i> 2. Giỏ Hàng ({total_count})
     </a>
   </div>
 
@@ -4549,6 +4472,7 @@ def update_listing():
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-col">
+        <img src="/assets/Index_asset/LOGO_PNG/LOGO_SGF_2_WHITE.png" alt="Saigon Farm Resort" style="height:38px; width:auto; margin-bottom:14px; display:block;">
         <h4 style="color:#ffffff;">SAIGON FARM RESORT</h4>
         <p style="font-size:0.86rem; color:#dfd7cc; line-height:1.6; margin-bottom:14px;">
           Quần thể điền trang nghỉ dưỡng sinh thái ven hồ 100ha đầu tiên tại TP. Hồ Chí Minh. Bộ sưu tập 34 sản phẩm giới hạn 100% thổ cư sổ đỏ riêng.
@@ -4577,13 +4501,12 @@ def update_listing():
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Liên Hệ Ban Quản Lý</h4>
+        <h4>Tư Vấn &amp; Trải Nghiệm</h4>
         <p style="font-size:0.86rem; color:#dfd7cc; line-height:1.6; margin-bottom:10px;">
-          Hotline Quản Lý Giỏ Hàng & Khóa Cọc:<br/>
-          <strong style="font-size:1.15rem; color:var(--gold);">0909 000 712</strong> (Call / Zalo)
+          Quý khách và Quý đối tác vui lòng liên hệ trực tiếp với chuyên viên tư vấn đã gửi đường link này để được cung cấp trọn bộ hồ sơ pháp lý, bảng tính dòng tiền và sắp xếp xe đưa đón khảo sát thực địa.
         </p>
         <p style="font-size:0.82rem; color:#aaa;">
-          Hỗ trợ tư vấn 24/7 · Xe đưa đón khảo sát thực tế dự án miễn phí cuối tuần.
+          Hỗ trợ thông tin 24/7 · Xe đưa đón khảo sát thực tế dự án miễn phí cuối tuần.
         </p>
       </div>
     </div>
@@ -5291,14 +5214,22 @@ def update_listing():
 
     function handleFormSubmit(e) {{
       e.preventDefault();
-      const name = document.getElementById('formName').value;
-      const phone = document.getElementById('formPhone').value;
-      const code = document.getElementById('formCode').value || 'Tư vấn chung';
-      const need = document.getElementById('formNeed').value;
-
-      alert(`Cảm ơn Quý khách ${{name}}! Yêu cầu nhận bảng tính & chính sách cho sản phẩm ${{code}} đã được chuyển đến Ban Quản Lý Dự Án. Chuyên viên sẽ liên hệ lại qua SĐT/Zalo ${{phone}} trong ít phút.`);
       closeBookingModal();
       document.getElementById('bookingForm').reset();
+      const thankyouModal = document.getElementById('thankyouModal');
+      if (thankyouModal) {{
+        thankyouModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }}
+    }}
+
+    function closeThankyouModal(e) {{
+      if (e && e.target && e.target.id !== 'thankyouModal') return;
+      const thankyouModal = document.getElementById('thankyouModal');
+      if (thankyouModal) {{
+        thankyouModal.style.display = 'none';
+        document.body.style.overflow = '';
+      }}
     }}
 
     // Lot Share Link Copy Handler
