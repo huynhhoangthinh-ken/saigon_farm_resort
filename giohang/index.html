@@ -8837,7 +8837,7 @@
       };
     }
 
-    // Initialize 3 Viewers
+    // Initialize 2D Interactive Lot Map Viewer
     const STAGE_WIDTH = 2560;
     const STAGE_HEIGHT = 1918;
 
@@ -8851,77 +8851,9 @@
       zoomMultiplier: 1.35
     });
 
-    const viewer3DWide = createPanZoomViewer({
-      viewportId: 'mapViewport3DWide',
-      canvasId: 'mapCanvas3DWide',
-      stageWidth: 2560,
-      stageHeight: 1440,
-      focusX: 0.5,
-      focusY: 0.5,
-      zoomMultiplier: 1.05
-    });
-
-    const viewer3DClose = createPanZoomViewer({
-      viewportId: 'mapViewport3DClose',
-      canvasId: 'mapCanvas3DClose',
-      stageWidth: 2495,
-      stageHeight: 1403,
-      focusX: 0.5,
-      focusY: 0.5,
-      zoomMultiplier: 1.05
-    });
-
     // Helper functions for 2D Controls
     function zoomMap(factor) { viewer2D.zoom(factor); }
     function resetMap() { viewer2D.reset(); }
-
-    // Helper functions for 3D Controls
-    function zoom3D(mode, factor) {
-      if (mode === 'wide') viewer3DWide.zoom(factor);
-      else viewer3DClose.zoom(factor);
-    }
-    function reset3D(mode) {
-      if (mode === 'wide') viewer3DWide.reset();
-      else viewer3DClose.reset();
-    }
-
-    // Perspective Switcher Logic
-    function switchMasterPlanPerspective(perspective) {
-      currentPerspective = perspective;
-
-      // Update Tab Buttons
-      const tab2D = document.getElementById('tabMp2D');
-      const tab3DWide = document.getElementById('tabMp3DWide');
-      const tab3DClose = document.getElementById('tabMp3DClose');
-      if (tab2D) tab2D.classList.toggle('active', perspective === '2d');
-      if (tab3DWide) tab3DWide.classList.toggle('active', perspective === '3d-wide');
-      if (tab3DClose) tab3DClose.classList.toggle('active', perspective === '3d-close');
-
-      // Update Panels
-      const panel2D = document.getElementById('panelMp2D');
-      const panel3DWide = document.getElementById('panelMp3DWide');
-      const panel3DClose = document.getElementById('panelMp3DClose');
-
-      if (panel2D) {
-        panel2D.style.display = perspective === '2d' ? 'block' : 'none';
-        panel2D.classList.toggle('active', perspective === '2d');
-      }
-      if (panel3DWide) {
-        panel3DWide.style.display = perspective === '3d-wide' ? 'block' : 'none';
-        panel3DWide.classList.toggle('active', perspective === '3d-wide');
-      }
-      if (panel3DClose) {
-        panel3DClose.style.display = perspective === '3d-close' ? 'block' : 'none';
-        panel3DClose.classList.toggle('active', perspective === '3d-close');
-      }
-
-      // Fit viewer to viewport when activated
-      setTimeout(() => {
-        if (perspective === '2d') viewer2D.fitToViewport();
-        else if (perspective === '3d-wide') viewer3DWide.fitToViewport();
-        else if (perspective === '3d-close') viewer3DClose.fitToViewport();
-      }, 60);
-    }
 
     // Fullscreen Toggle
     function toggleMapFullscreen(viewportId) {
@@ -8931,147 +8863,6 @@
       } else {
         document.exitFullscreen();
       }
-    }
-
-    // 3D Showcase Gallery & MasterPlan Lightbox Controller (All 23 Images)
-    const GALLERY_3D_ITEMS = [{{"id": 1, "src_file": "SGFR_TỔNG QUAN HOÀNG HÔN.jpg", "semantic_name": "SGFR_01_TONG_QUAN_HOANG_HON", "title": "Toàn Cảnh Hoàng Hôn Saigon Farm Resort", "tag": "QUY HOẠCH TOÀN KHU 100HA", "category": "Toàn Cảnh", "desc": "Đại cảnh hoàng hôn buông xuống mặt hồ sinh thái 100ha và quần thể điền trang nghỉ dưỡng thanh bình liền kề TP.HCM.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_1.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_1.jpg"}}, {{"id": 2, "src_file": "SGFR_2 - BIỆT THỰ SÂN VƯỜN.jpg", "semantic_name": "SGFR_02_BIET_THU_SAN_VUON", "title": "Biệt Thự Sân Vườn Sinh Thái Điền An", "tag": "DÒNG SẢN PHẨM ĐIỀN AN", "category": "Biệt Thự", "desc": "Kiến trúc nhà vườn 1 tầng trệt thuần khiết, hòa mình vào không gian vườn thảo mộc và cảnh quan thiên nhiên xanh mát.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_2.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_2.jpg"}}, {{"id": 3, "src_file": "SGFR_3 - HỒ BƠI CHÍNH.jpg", "semantic_name": "SGFR_03_HO_BOI_CHINH", "title": "Hồ Bơi Trung Tâm Resort", "tag": "TIỆN ÍCH NGHỈ DƯỠNG", "category": "Tiện Ích Nước", "desc": "Tổ hợp hồ bơi resort trung tâm với không gian thư giãn lộ thiên, ghế tắm nắng và quầy lounge xanh mát.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_3.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_3.jpg"}}, {{"id": 4, "src_file": "SGFR_4 - HỒ BƠI VÔ CỰC.jpg", "semantic_name": "SGFR_04_HO_BOI_VO_CUC", "title": "Hồ Bơi Vô Cực Điện Phân Khoáng Muối Ven Hồ", "tag": "OASIS POOL ĐẲNG CẤP", "category": "Tiện Ích Nước", "desc": "Mặt nước tràn bờ nối liền không gian hồ tự nhiên 100ha, sử dụng công nghệ điện phân muối khoáng dưỡng sinh thanh lọc cơ thể.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_4.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_4.jpg"}}, {{"id": 5, "src_file": "SGFR_5 - LỄ TÂN.jpg", "semantic_name": "SGFR_05_LE_TAN", "title": "Nhà Lễ Tân & Sảnh Đón Tiếp MDS Living", "tag": "DỊCH VỤ QUẢN GIA 5 SAO", "category": "Dịch Vụ", "desc": "Sảnh tiếp đón sang trọng, biểu tượng của sự hiếu khách ân cần và chuẩn mực dịch vụ quản gia MDS Living 24/7.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_5.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_5.jpg"}}, {{"id": 6, "src_file": "SGFR_6 - SPA.jpg", "semantic_name": "SGFR_06_SPA", "title": "Khu Trị Liệu Dưỡng Sinh & Thảo Dược Spa", "tag": "WELLNESS & DƯỠNG SINH", "category": "Chăm Sóc Sức Khỏe", "desc": "Liệu pháp spa thảo mộc tự nhiên, ngâm tắm khoáng dưỡng sinh và chăm sóc sức khỏe toàn diện giữa thiên nhiên tĩnh lặng.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_6.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_6.jpg"}}, {{"id": 7, "src_file": "SGFR_7 - TOP VIEW LỐI ĐI GỖ.jpg", "semantic_name": "SGFR_07_TOP_VIEW_LOI_DI_GO", "title": "Cầu Gỗ Ven Hồ & Lối Dạo Bộ Thủy Trúc (Top View)", "tag": "BOARDWALK SINH THÁI", "category": "Cảnh Quan", "desc": "Góc nhìn từ trên cao xuống tuyến cầu gỗ uốn lượn ven mặt nước, kết nối bến thuyền và hồ sen thanh tịnh.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_7.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_7.jpg"}}, {{"id": 8, "src_file": "SGFR_8 - CÔNG VIÊN HỒ.jpg", "semantic_name": "SGFR_08_CONG_VIEN_HO", "title": "Công Viên Cảnh Quan Hồ & Không Gian Dã Ngoại", "tag": "LAKESIDE PARK & DÃ NGOẠI", "category": "Cảnh Quan", "desc": "Thảm cỏ rộng mở ven hồ sinh thái dành cho các hoạt động cắm trại dã ngoại, sinh hoạt gia đình và tiệc nướng BBQ ngoài trời.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_8.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_8.jpg"}}, {{"id": 9, "src_file": "SGFR_9 - LAKESIDE PROMENADE.jpg", "semantic_name": "SGFR_09_LAKESIDE_PROMENADE", "title": "Tuyến Dạo Bộ Ven Hồ Lakeside Promenade", "tag": "LAKESIDE PROMENADE", "category": "Cảnh Quan", "desc": "Cung đường ven hồ rợp bóng mát, nơi lý tưởng để chạy bộ đón bình minh, tản bộ ngắm hoàng hôn và tái nạp năng lượng.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_9.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_9.jpg"}}, {{"id": 10, "src_file": "SGFR_10 - GYM.jpg", "semantic_name": "SGFR_10_GYM", "title": "Trung Tâm Thể Thao Đa Năng & Phòng Gym Hướng Hồ", "tag": "FITNESS & THỂ THAO", "category": "Chăm Sóc Sức Khỏe", "desc": "Phòng tập thể hình hiện đại trang bị máy móc tiêu chuẩn quốc tế với tầm nhìn panorama mở trọn ra mặt hồ xanh biếc.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_10.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_10.jpg"}}, {{"id": 11, "src_file": "SGFR_11 - SÂN KHẤU.jpg", "semantic_name": "SGFR_11_SAN_KHAU", "title": "Sân Khấu Nghệ Thuật & Sự Kiện Văn Hóa Ngoài Trời", "tag": "ĐÀI ÂM SẮC & SỰ KIỆN", "category": "Văn Hóa", "desc": "Không gian biểu diễn nghệ thuật đương đại và hòa nhạc đờn ca tài tử sát mép nước, nơi hội tụ cảm xúc và giao lưu tinh hoa.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_11.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_11.jpg"}}, {{"id": 12, "src_file": "SGFR_12 - THE LAKE DINING.jpg", "semantic_name": "SGFR_12_THE_LAKE_DINING", "title": "Nhà Hàng Ẩm Thực Sinh Thái The Lake Dining", "tag": "THE LAKE DINING • FARM-TO-TABLE", "category": "Ẩm Thực", "desc": "Nhà hàng phong vị đồng quê và ẩm thực thượng lưu chuẩn Farm-to-Table với kiến trúc mái vòm gỗ mộc bên mặt hồ.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_12.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_12.jpg"}}, {{"id": 13, "src_file": "SGFR_13 - ĐƯỜNG NỘI KHU VILLA A10.jpg", "semantic_name": "SGFR_13_DUONG_NOI_KHU_VILLA_A10", "title": "Tuyến Đường Nội Khu Cảnh Quan Dẫn Vào Villa A10", "tag": "HẠ TẦNG XANH SINH THÁI", "category": "Hạ Tầng", "desc": "Tuyến đường nội bộ trải nhựa rợp bóng cây xanh bản địa, kết nối các cụm điền trang với hệ thống chiếu sáng nghệ thuật ban đêm.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_13.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_13.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_13.jpg"}}, {{"id": 14, "src_file": "SGFR_14 - CỔNG CHÍNH.jpg", "semantic_name": "SGFR_14_CONG_CHINH", "title": "Cổng Chào Chánh Điện Saigon Farm Resort", "tag": "CỔNG CHÀO ĐẠI CẢNH", "category": "Kiến Trúc", "desc": "Cổng đón biểu tượng uy nghi vững chãi, chạm khắc tinh xảo mang dấu ấn bản sắc Việt mở ra quần thể nghỉ dưỡng điền trang.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_14.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_14.jpg"}}, {{"id": 15, "src_file": "SGFR_15 - BIỆT THỰ A10.jpg", "semantic_name": "SGFR_15_BIET_THU_A10", "title": "Phối Cảnh Chi Tiết Biệt Phủ Điền Trang A10", "tag": "BIỆT PHỦ ĐIỀN TRANG A10", "category": "Biệt Thự", "desc": "Mẫu dinh thự mẫu mực A10 với khuôn viên hơn 1.000m², hồ bơi riêng biệt, mái ngói truyền thống và hiên trà đón gió hồ.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_15.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_15.jpg"}}, {{"id": 16, "src_file": "SGFR_16 - KHU BIỆT THỰ.jpg", "semantic_name": "SGFR_16_KHU_BIET_THU", "title": "Tổng Thể Khu Biệt Thự Điền Trang Sinh Thái", "tag": "QUẦN THỂ ĐIỀN SẢN", "category": "Biệt Thự", "desc": "Dãy biệt thự sinh thái bố trí theo địa hình gợn sóng tự nhiên, mật độ xây dựng chỉ dưới 15% tôn trọng tối đa mảng xanh.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_16.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.jpg"}}, {{"id": 17, "src_file": "SGFR_17 - BIỆT THỰ GÓC SÂN.jpg", "semantic_name": "SGFR_17_BIET_THU_GOC_SAN", "title": "Góc Sân Vườn Biệt Thự & Hiên Nhà Thuần Việt", "tag": "KIẾN TRÚC HIÊN NHÀ VIỆT", "category": "Biệt Thự", "desc": "Góc nhìn cận cảnh sân vườn lát đá tự nhiên, hàng rào thảo mộc và không gian hiên nhà thoáng đãng đậm chất quê hương.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_17.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_17.jpg"}}, {{"id": 18, "src_file": "SGFR_18 - LÀNG THƯỢNG KHÁCH.jpg", "semantic_name": "SGFR_18_LANG_THUONG_KHACH", "title": "Làng Thượng Khách - Khu Nghỉ Dưỡng Thượng Lưu", "tag": "LÀNG THƯỢNG KHÁCH RETREAT", "category": "Khu Lưu Trú", "desc": "Quần thể nhà nghỉ dưỡng thượng khách mang phong cách kiến trúc mộc mạc tinh tế, phục vụ du khách và người thân của gia chủ.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_18.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_18.jpg"}}, {{"id": 19, "src_file": "SGFR_19 - KHU CHUYÊN GIA.jpg", "semantic_name": "SGFR_19_KHU_CHUYEN_GIA", "title": "Khu Biệt Thự Lưu Trú Chuyên Gia & Ban Vận Hành", "tag": "KHU CHUYÊN GIA SINH THÁI", "category": "Hạ Tầng", "desc": "Khu lưu trú tiện nghi dành cho các chuyên gia nông nghiệp sinh thái, đội ngũ quản gia và vận hành resort chuẩn quốc tế.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_19.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_19.jpg"}}, {{"id": 20, "src_file": "SGFR_20 - LÀNG THƯỢNG KHÁCH BÊN RUỘNG.jpg", "semantic_name": "SGFR_20_LANG_THUONG_KHACH_BEN_RUONG", "title": "Làng Thượng Khách Bên Cánh Đồng Lúa Sinh Thái", "tag": "ĐỒNG LÚA & BẢN SẮC NÔNG NGHIỆP", "category": "Văn Hóa", "desc": "Khung cảnh thanh bình độc nhất vô nhị: biệt thự nép mình bên những sóng lúa vàng ươm và con kênh dẫn nước mát lành.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_20.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_20.jpg"}}, {{"id": 21, "src_file": "SGFR_21 - KHU VILLA VEN SÔNG.jpg", "semantic_name": "SGFR_21_KHU_VILLA_VEN_SONG", "title": "Khu Biệt Thự Ven Sông & Kênh Thủy Sinh Phong Thủy", "tag": "VILLA VEN SÔNG TỤ THỦY", "category": "Biệt Thự", "desc": "Những căn biệt thự sở hữu mặt tiền kênh nước tự nhiên, phong thủy tụ tài vượng khí và không gian câu cá thư thái.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_21.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_21.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_21.jpg"}}, {{"id": 22, "src_file": "SGFR_2b - TỔNG QUAN.jpg", "semantic_name": "SGFR_22_TONG_QUAN_AERIAL", "title": "Phối Cảnh Toàn Cảnh Saigon Farm Resort (Flycam View)", "tag": "FLYCAM TỔNG THỂ DỰ ÁN", "category": "Toàn Cảnh", "desc": "Góc nhìn flycam toàn cảnh 360 độ từ trên cao ôm trọn hồ nước 100ha, hệ thống giao thông và quy hoạch phân khu hoàn chỉnh.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_22.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_22.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_22.jpg"}}, {{"id": 23, "src_file": "SGFR_TỔNG QUAN 2.jpg", "semantic_name": "SGFR_23_TONG_QUAN_2", "title": "Đại Phối Cảnh Quần Thể Điền Trang Saigon Farm Resort", "tag": "ĐẠI CẢNH 3D MASTER VIEW", "category": "Toàn Cảnh", "desc": "Bức tranh tổng thể hoàn mỹ kết hợp giữa thiên nhiên nguyên sơ, tiện ích đẳng cấp và kiến trúc điền trang bền vững truyền đời.", "webp_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_23.webp", "thumb_url": "/assets/Index_asset/3D_SGFR_Photo_logo/thumb/SGFR_23.webp", "jpg_url": "/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_23.jpg"}}];
-    const GALLERY_3D_URLS = GALLERY_3D_ITEMS.map(it => it.webp_url);
-    let currentGalleryIdx = 0;
-    let isGallery3DMode = false;
-
-    function openGallery3DLightbox(idx) {
-      isGallery3DMode = true;
-      currentGalleryIdx = typeof idx === 'number' ? idx : 0;
-      updateGallery3DView();
-      const modal = document.getElementById('mpLightboxModal');
-      if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function updateGallery3DView() {
-      const img = document.getElementById('mpLightboxImg');
-      const titleEl = document.getElementById('mpLightboxTitle');
-      const prevBtn = document.getElementById('lbPrevBtn');
-      const nextBtn = document.getElementById('lbNextBtn');
-
-      if (prevBtn) prevBtn.style.display = isGallery3DMode ? 'flex' : 'none';
-      if (nextBtn) nextBtn.style.display = isGallery3DMode ? 'flex' : 'none';
-
-      if (isGallery3DMode) {
-        if (img) {
-          img.src = GALLERY_3D_URLS[currentGalleryIdx];
-          img.classList.remove('zoomed-in');
-        }
-        if (titleEl) {
-          const curItem = GALLERY_3D_ITEMS[currentGalleryIdx] || {};
-          const tName = curItem.title || 'Phối Cảnh 3D';
-          const tTag = curItem.tag || 'SAIGON FARM RESORT';
-          titleEl.innerHTML = `<i class="fa-solid fa-images" style="color:var(--gold); margin-right: 6px;"></i> <span style="color:var(--gold); font-weight:800;">#${currentGalleryIdx + 1 < 10 ? '0' + (currentGalleryIdx + 1) : currentGalleryIdx + 1}:</span> ${tName} <span style="font-size:0.75rem; color:#aaa; margin-left: 8px;">(${currentGalleryIdx + 1} / ${GALLERY_3D_ITEMS.length})</span>`;
-        }
-      }
-    }
-
-    function prevGalleryImage(event) {
-      if (event) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      if (!isGallery3DMode) return;
-      currentGalleryIdx = (currentGalleryIdx - 1 + GALLERY_3D_URLS.length) % GALLERY_3D_URLS.length;
-      updateGallery3DView();
-    }
-
-    function nextGalleryImage(event) {
-      if (event) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      if (!isGallery3DMode) return;
-      currentGalleryIdx = (currentGalleryIdx + 1) % GALLERY_3D_URLS.length;
-      updateGallery3DView();
-    }
-
-    function openMasterplanLightbox(imgUrl, title) {
-      isGallery3DMode = false;
-      const modal = document.getElementById('mpLightboxModal');
-      const img = document.getElementById('mpLightboxImg');
-      const titleEl = document.getElementById('mpLightboxTitle');
-      const prevBtn = document.getElementById('lbPrevBtn');
-      const nextBtn = document.getElementById('lbNextBtn');
-
-      if (prevBtn) prevBtn.style.display = 'none';
-      if (nextBtn) nextBtn.style.display = 'none';
-
-      if (img) {
-        img.src = imgUrl;
-        img.classList.remove('zoomed-in');
-      }
-      if (titleEl) {
-        titleEl.innerHTML = `<i class="fa-solid fa-mountain-sun" style="color:var(--gold);"></i> ${title || 'Phối Cảnh MasterPlan 3D'}`;
-      }
-      if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeMasterplanLightbox(event) {
-      if (event && event.target && event.target.closest('.mp-lightbox-dialog') && !event.target.closest('.mp-lightbox-close')) {
-        return;
-      }
-      const modal = document.getElementById('mpLightboxModal');
-      if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    }
-
-    // Toggle zoom on lightbox image
-    const lbImg = document.getElementById('mpLightboxImg');
-    if (lbImg) {
-      lbImg.addEventListener('click', () => {
-        lbImg.classList.toggle('zoomed-in');
-      });
-    }
-
-    // Keyboard navigation (Phím mũi tên trái/phải xem ảnh, Esc để đóng)
-    document.addEventListener('keydown', (e) => {
-      const modal = document.getElementById('mpLightboxModal');
-      if (!modal || !modal.classList.contains('active')) return;
-      if (e.key === 'ArrowLeft') {
-        prevGalleryImage(e);
-      } else if (e.key === 'ArrowRight') {
-        nextGalleryImage(e);
-      } else if (e.key === 'Escape') {
-        closeMasterplanLightbox();
-      }
-    });
-
-    // Touch swipe navigation for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const lbModalEl = document.getElementById('mpLightboxModal');
-    if (lbModalEl) {
-      lbModalEl.addEventListener('touchstart', (e) => {
-        if (e.changedTouches && e.changedTouches[0]) {
-          touchStartX = e.changedTouches[0].screenX;
-        }
-      }, { passive: true });
-      lbModalEl.addEventListener('touchend', (e) => {
-        if (e.changedTouches && e.changedTouches[0]) {
-          touchEndX = e.changedTouches[0].screenX;
-          const diff = touchStartX - touchEndX;
-          if (Math.abs(diff) > 45) {
-            if (diff > 0) {
-              nextGalleryImage(e);
-            } else {
-              prevGalleryImage(e);
-            }
-          }
-        }
-      }, { passive: true });
     }
 
     // Initial fits on load, DOM ready, and image ready
@@ -9125,11 +8916,6 @@
 
     function locateOnMap(code) {
       const c = code.toLowerCase();
-      // Auto-switch to 2D lot map if currently in 3D
-      if (currentPerspective !== '2d') {
-        switchMasterPlanPerspective('2d');
-      }
-
       const pin = document.getElementById('hotspot-' + c);
       const sec = document.getElementById('masterplanSection');
       if (sec) {

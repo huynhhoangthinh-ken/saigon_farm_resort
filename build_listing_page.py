@@ -4655,7 +4655,7 @@ def update_listing():
       }};
     }}
 
-    // Initialize 3 Viewers
+    // Initialize 2D Interactive Lot Map Viewer
     const STAGE_WIDTH = 2560;
     const STAGE_HEIGHT = 1918;
 
@@ -4669,77 +4669,9 @@ def update_listing():
       zoomMultiplier: 1.35
     }});
 
-    const viewer3DWide = createPanZoomViewer({{
-      viewportId: 'mapViewport3DWide',
-      canvasId: 'mapCanvas3DWide',
-      stageWidth: 2560,
-      stageHeight: 1440,
-      focusX: 0.5,
-      focusY: 0.5,
-      zoomMultiplier: 1.05
-    }});
-
-    const viewer3DClose = createPanZoomViewer({{
-      viewportId: 'mapViewport3DClose',
-      canvasId: 'mapCanvas3DClose',
-      stageWidth: 2495,
-      stageHeight: 1403,
-      focusX: 0.5,
-      focusY: 0.5,
-      zoomMultiplier: 1.05
-    }});
-
     // Helper functions for 2D Controls
     function zoomMap(factor) {{ viewer2D.zoom(factor); }}
     function resetMap() {{ viewer2D.reset(); }}
-
-    // Helper functions for 3D Controls
-    function zoom3D(mode, factor) {{
-      if (mode === 'wide') viewer3DWide.zoom(factor);
-      else viewer3DClose.zoom(factor);
-    }}
-    function reset3D(mode) {{
-      if (mode === 'wide') viewer3DWide.reset();
-      else viewer3DClose.reset();
-    }}
-
-    // Perspective Switcher Logic
-    function switchMasterPlanPerspective(perspective) {{
-      currentPerspective = perspective;
-
-      // Update Tab Buttons
-      const tab2D = document.getElementById('tabMp2D');
-      const tab3DWide = document.getElementById('tabMp3DWide');
-      const tab3DClose = document.getElementById('tabMp3DClose');
-      if (tab2D) tab2D.classList.toggle('active', perspective === '2d');
-      if (tab3DWide) tab3DWide.classList.toggle('active', perspective === '3d-wide');
-      if (tab3DClose) tab3DClose.classList.toggle('active', perspective === '3d-close');
-
-      // Update Panels
-      const panel2D = document.getElementById('panelMp2D');
-      const panel3DWide = document.getElementById('panelMp3DWide');
-      const panel3DClose = document.getElementById('panelMp3DClose');
-
-      if (panel2D) {{
-        panel2D.style.display = perspective === '2d' ? 'block' : 'none';
-        panel2D.classList.toggle('active', perspective === '2d');
-      }}
-      if (panel3DWide) {{
-        panel3DWide.style.display = perspective === '3d-wide' ? 'block' : 'none';
-        panel3DWide.classList.toggle('active', perspective === '3d-wide');
-      }}
-      if (panel3DClose) {{
-        panel3DClose.style.display = perspective === '3d-close' ? 'block' : 'none';
-        panel3DClose.classList.toggle('active', perspective === '3d-close');
-      }}
-
-      // Fit viewer to viewport when activated
-      setTimeout(() => {{
-        if (perspective === '2d') viewer2D.fitToViewport();
-        else if (perspective === '3d-wide') viewer3DWide.fitToViewport();
-        else if (perspective === '3d-close') viewer3DClose.fitToViewport();
-      }}, 60);
-    }}
 
     // Fullscreen Toggle
     function toggleMapFullscreen(viewportId) {{
@@ -4749,147 +4681,6 @@ def update_listing():
       }} else {{
         document.exitFullscreen();
       }}
-    }}
-
-    // 3D Showcase Gallery & MasterPlan Lightbox Controller (All 23 Images)
-    const GALLERY_3D_ITEMS = {gallery_3d_items_json};
-    const GALLERY_3D_URLS = GALLERY_3D_ITEMS.map(it => it.webp_url);
-    let currentGalleryIdx = 0;
-    let isGallery3DMode = false;
-
-    function openGallery3DLightbox(idx) {{
-      isGallery3DMode = true;
-      currentGalleryIdx = typeof idx === 'number' ? idx : 0;
-      updateGallery3DView();
-      const modal = document.getElementById('mpLightboxModal');
-      if (modal) {{
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }}
-    }}
-
-    function updateGallery3DView() {{
-      const img = document.getElementById('mpLightboxImg');
-      const titleEl = document.getElementById('mpLightboxTitle');
-      const prevBtn = document.getElementById('lbPrevBtn');
-      const nextBtn = document.getElementById('lbNextBtn');
-
-      if (prevBtn) prevBtn.style.display = isGallery3DMode ? 'flex' : 'none';
-      if (nextBtn) nextBtn.style.display = isGallery3DMode ? 'flex' : 'none';
-
-      if (isGallery3DMode) {{
-        if (img) {{
-          img.src = GALLERY_3D_URLS[currentGalleryIdx];
-          img.classList.remove('zoomed-in');
-        }}
-        if (titleEl) {{
-          const curItem = GALLERY_3D_ITEMS[currentGalleryIdx] || {{}};
-          const tName = curItem.title || 'Phối Cảnh 3D';
-          const tTag = curItem.tag || 'SAIGON FARM RESORT';
-          titleEl.innerHTML = `<i class="fa-solid fa-images" style="color:var(--gold); margin-right: 6px;"></i> <span style="color:var(--gold); font-weight:800;">#${{currentGalleryIdx + 1 < 10 ? '0' + (currentGalleryIdx + 1) : currentGalleryIdx + 1}}:</span> ${{tName}} <span style="font-size:0.75rem; color:#aaa; margin-left: 8px;">(${{currentGalleryIdx + 1}} / ${{GALLERY_3D_ITEMS.length}})</span>`;
-        }}
-      }}
-    }}
-
-    function prevGalleryImage(event) {{
-      if (event) {{
-        event.preventDefault();
-        event.stopPropagation();
-      }}
-      if (!isGallery3DMode) return;
-      currentGalleryIdx = (currentGalleryIdx - 1 + GALLERY_3D_URLS.length) % GALLERY_3D_URLS.length;
-      updateGallery3DView();
-    }}
-
-    function nextGalleryImage(event) {{
-      if (event) {{
-        event.preventDefault();
-        event.stopPropagation();
-      }}
-      if (!isGallery3DMode) return;
-      currentGalleryIdx = (currentGalleryIdx + 1) % GALLERY_3D_URLS.length;
-      updateGallery3DView();
-    }}
-
-    function openMasterplanLightbox(imgUrl, title) {{
-      isGallery3DMode = false;
-      const modal = document.getElementById('mpLightboxModal');
-      const img = document.getElementById('mpLightboxImg');
-      const titleEl = document.getElementById('mpLightboxTitle');
-      const prevBtn = document.getElementById('lbPrevBtn');
-      const nextBtn = document.getElementById('lbNextBtn');
-
-      if (prevBtn) prevBtn.style.display = 'none';
-      if (nextBtn) nextBtn.style.display = 'none';
-
-      if (img) {{
-        img.src = imgUrl;
-        img.classList.remove('zoomed-in');
-      }}
-      if (titleEl) {{
-        titleEl.innerHTML = `<i class="fa-solid fa-mountain-sun" style="color:var(--gold);"></i> ${{title || 'Phối Cảnh MasterPlan 3D'}}`;
-      }}
-      if (modal) {{
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }}
-    }}
-
-    function closeMasterplanLightbox(event) {{
-      if (event && event.target && event.target.closest('.mp-lightbox-dialog') && !event.target.closest('.mp-lightbox-close')) {{
-        return;
-      }}
-      const modal = document.getElementById('mpLightboxModal');
-      if (modal) {{
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }}
-    }}
-
-    // Toggle zoom on lightbox image
-    const lbImg = document.getElementById('mpLightboxImg');
-    if (lbImg) {{
-      lbImg.addEventListener('click', () => {{
-        lbImg.classList.toggle('zoomed-in');
-      }});
-    }}
-
-    // Keyboard navigation (Phím mũi tên trái/phải xem ảnh, Esc để đóng)
-    document.addEventListener('keydown', (e) => {{
-      const modal = document.getElementById('mpLightboxModal');
-      if (!modal || !modal.classList.contains('active')) return;
-      if (e.key === 'ArrowLeft') {{
-        prevGalleryImage(e);
-      }} else if (e.key === 'ArrowRight') {{
-        nextGalleryImage(e);
-      }} else if (e.key === 'Escape') {{
-        closeMasterplanLightbox();
-      }}
-    }});
-
-    // Touch swipe navigation for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const lbModalEl = document.getElementById('mpLightboxModal');
-    if (lbModalEl) {{
-      lbModalEl.addEventListener('touchstart', (e) => {{
-        if (e.changedTouches && e.changedTouches[0]) {{
-          touchStartX = e.changedTouches[0].screenX;
-        }}
-      }}, {{ passive: true }});
-      lbModalEl.addEventListener('touchend', (e) => {{
-        if (e.changedTouches && e.changedTouches[0]) {{
-          touchEndX = e.changedTouches[0].screenX;
-          const diff = touchStartX - touchEndX;
-          if (Math.abs(diff) > 45) {{
-            if (diff > 0) {{
-              nextGalleryImage(e);
-            }} else {{
-              prevGalleryImage(e);
-            }}
-          }}
-        }}
-      }}, {{ passive: true }});
     }}
 
     // Initial fits on load, DOM ready, and image ready
@@ -4943,11 +4734,6 @@ def update_listing():
 
     function locateOnMap(code) {{
       const c = code.toLowerCase();
-      // Auto-switch to 2D lot map if currently in 3D
-      if (currentPerspective !== '2d') {{
-        switchMasterPlanPerspective('2d');
-      }}
-
       const pin = document.getElementById('hotspot-' + c);
       const sec = document.getElementById('masterplanSection');
       if (sec) {{
