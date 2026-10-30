@@ -1014,7 +1014,7 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-bottom: 12px;
-      white-space: nowrap !important;
+      line-height: 1.35;
     }
 
     .product-brief {
@@ -1028,16 +1028,17 @@
     .product-specs-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 8px;
       background: var(--bg-page);
       border: 1px solid var(--color-border);
-      border-radius: 6px;
-      padding: 12px;
+      border-radius: 8px;
+      padding: 12px 10px;
       margin-bottom: 18px;
     }
 
     .spec-cell {
       text-align: center;
+      padding: 0 4px;
     }
 
     .spec-cell span {
@@ -1045,15 +1046,17 @@
       font-size: 0.72rem;
       color: var(--color-muted);
       text-transform: uppercase;
-      margin-bottom: 2px;
-      white-space: nowrap !important;
+      margin-bottom: 3px;
+      letter-spacing: 0.3px;
+      line-height: 1.25;
     }
 
     .spec-cell strong {
       font-family: var(--font-heading);
       font-size: 0.86rem;
       color: var(--color-dark);
-      white-space: nowrap !important;
+      line-height: 1.3;
+      display: block;
     }
 
     .product-action {
@@ -1062,6 +1065,7 @@
       justify-content: space-between;
       border-top: 1px solid var(--color-border);
       padding-top: 14px;
+      gap: 10px;
     }
 
     .product-cert {
@@ -1070,7 +1074,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      white-space: nowrap !important;
+      line-height: 1.3;
     }
 
     .product-cert i {
@@ -1086,7 +1090,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      white-space: nowrap !important;
+      line-height: 1.3;
     }
 
     .btn-lot-link:hover {
@@ -1549,6 +1553,55 @@
       .products-grid {
         grid-template-columns: 1fr;
       }
+      .product-detail {
+        padding: 20px 16px;
+      }
+      .product-specs-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 12px 14px;
+        margin-bottom: 16px;
+      }
+      .spec-cell {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 6px 0;
+        border-bottom: 1px dashed rgba(228, 216, 200, 0.7);
+      }
+      .spec-cell:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .spec-cell span {
+        margin-bottom: 0;
+        font-size: 0.78rem;
+      }
+      .spec-cell strong {
+        text-align: right;
+        font-size: 0.86rem;
+      }
+      .product-action {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding-top: 12px;
+      }
+      .product-cert {
+        justify-content: center;
+        font-size: 0.82rem;
+      }
+      .btn-lot-link {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        background: rgba(194, 155, 83, 0.12);
+        border: 1px solid var(--color-gold);
+        border-radius: 6px;
+        font-size: 0.84rem;
+        box-sizing: border-box;
+      }
       .trust-dual-grid {
         grid-template-columns: 1fr;
       }
@@ -1671,9 +1724,6 @@
       <a href="#dang-ky" onclick="toggleMobileDrawer()" class="drawer-btn-cta">
         <i class="fa-solid fa-car-side"></i> Đăng Ký Khảo Sát Limousine
       </a>
-      <p style="font-size:0.75rem; color:var(--color-muted); text-align:center; margin-top:14px;">
-        Hotline VIP: <strong>0909 000 712</strong>
-      </p>
     </div>
   </aside>
 
@@ -1932,7 +1982,7 @@
             <div class="product-specs-row">
               <div class="spec-cell">
                 <span>Diện Tích Khuôn Viên</span>
-                <strong>543,61 – 966,37 m²</strong>
+                <strong>1.000 – 1.800 m²</strong>
               </div>
               <div class="spec-cell">
                 <span>Tầm Nhìn Độc Bản</span>
@@ -1972,7 +2022,7 @@
             <div class="product-specs-row">
               <div class="spec-cell">
                 <span>Diện Tích Khuôn Viên</span>
-                <strong>828,50 – 1.298,93 m²</strong>
+                <strong>500 – 800 m²</strong>
               </div>
               <div class="spec-cell">
                 <span>Tầm Nhìn Độc Bản</span>
@@ -2012,11 +2062,11 @@
             <div class="product-specs-row">
               <div class="spec-cell">
                 <span>Diện Tích Khuôn Viên</span>
-                <strong>1.044,86 – 1.274,69 m²</strong>
+                <strong>250 – 400 m²</strong>
               </div>
               <div class="spec-cell">
-                <span>Mô Hình Vận Hành</span>
-                <strong>Lưu Trú 20–30 Phòng</strong>
+                <span>Tầm Nhìn Độc Bản</span>
+                <strong>Lưu Trú &amp; Nghỉ Dưỡng</strong>
               </div>
               <div class="spec-cell">
                 <span>Pháp Lý Sở Hữu</span>
@@ -2051,8 +2101,8 @@
             </p>
             <div class="product-specs-row">
               <div class="spec-cell">
-                <span>Diện Tích Từng Lô</span>
-                <strong>350 – 400 m² / lô</strong>
+                <span>Diện Tích Khuôn Viên</span>
+                <strong>150 – 250 m²</strong>
               </div>
               <div class="spec-cell">
                 <span>Tầm Nhìn Độc Bản</span>
@@ -2215,15 +2265,15 @@
             </div>
             <div class="form-item">
               <label for="clientPhone">Số Điện Thoại / Zalo</label>
-              <input type="tel" id="clientPhone" class="form-input" placeholder="0909 000 712" required>
+              <input type="tel" id="clientPhone" class="form-input" placeholder="Nhập số điện thoại của Quý khách..." required>
             </div>
             <div class="form-item">
               <label for="productInterest">Dòng Sản Phẩm Quan Tâm</label>
               <select id="productInterest" class="form-input">
-                <option value="Biệt Phủ Điền Trang (543,61 – 966,37 m²)">Biệt Phủ Điền Trang (543,61 – 966,37 m²)</option>
-                <option value="Điền Sản Founders (828,50 – 1.298,93 m²)">Điền Sản Founders (828,50 – 1.298,93 m²)</option>
-                <option value="Điền An Haven (1.044,86 – 1.274,69 m²)">Điền An Haven (1.044,86 – 1.274,69 m²)</option>
-                <option value="Điền Viên Boutique (350 – 400 m²)">Điền Viên Boutique (350 – 400 m² / lô)</option>
+                <option value="Biệt Phủ Điền Trang (1.000 – 1.800 m²)">Biệt Phủ Điền Trang (1.000 – 1.800 m²)</option>
+                <option value="Điền Sản (500 – 800 m²)">Điền Sản (500 – 800 m²)</option>
+                <option value="Điền An (250 – 400 m²)">Điền An (250 – 400 m²)</option>
+                <option value="Điền Viên (150 – 250 m²)">Điền Viên (150 – 250 m²)</option>
               </select>
             </div>
             <div class="form-item">
@@ -2283,7 +2333,6 @@
             <li><strong>MDS Land</strong> (Chủ đầu tư)</li>
             <li><strong>MDS Living</strong> (Quản lý vận hành)</li>
             <li><strong>Đại Chúng Properties</strong> (Tổng đại lý)</li>
-            <li>Hotline: <a href="tel:0909000712" style="color:var(--color-gold);">0909 000 712</a></li>
           </ul>
         </div>
       </div>
