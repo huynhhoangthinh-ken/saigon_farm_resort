@@ -82,10 +82,8 @@
     }
 
     .invitation-header {
-      background: var(--color-wood-deep) url('assets/patterns/gold_dong_son_drum.png') no-repeat center !important;
-      background-size: 380px !important;
       background: var(--color-wood-deep);
-      padding: 40px 30px;
+      padding: 42px 30px;
       text-align: center;
       color: #ffffff;
       border-bottom: 2px solid var(--color-gold);
@@ -368,6 +366,155 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* POPUP MODAL CẢM ƠN */
+    .thankyou-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(22, 16, 12, 0.82);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeInModal 0.25s ease-out;
+    }
+
+    @keyframes fadeInModal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .thankyou-modal-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      max-width: 480px;
+      width: 100%;
+      padding: 34px 26px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      animation: slideUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideUpModal {
+      from { transform: translateY(20px) scale(0.96); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      font-size: 1.8rem;
+      line-height: 1;
+      color: var(--color-muted);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover {
+      color: var(--color-dark);
+    }
+
+    .modal-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(194, 155, 83, 0.15);
+      border: 2px solid var(--color-gold);
+      color: var(--color-gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 16px;
+    }
+
+    .modal-title {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--color-dark);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .modal-welcome {
+      font-size: 0.92rem;
+      color: var(--color-body);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .modal-advisor-box {
+      background: var(--color-gold-light);
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-gold);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: left;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 22px;
+    }
+
+    .advisor-icon {
+      font-size: 1.5rem;
+      color: var(--color-gold-dark);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .advisor-info h4 {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-gold-dark);
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .advisor-info p {
+      font-size: 0.86rem;
+      color: var(--color-wood);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .btn-modal-close {
+      width: 100%;
+      background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+      color: #16100C;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 13px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(194, 155, 83, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .btn-modal-close:hover {
+      background: linear-gradient(135deg, #dfb262 0%, var(--color-gold) 100%);
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
@@ -462,15 +609,15 @@
             </div>
             <div class="rsvp-group">
               <label for="rsvpPhone">Số Điện Thoại / Zalo</label>
-              <input type="tel" id="rsvpPhone" class="rsvp-control" placeholder="0909 000 712" required>
+              <input type="tel" id="rsvpPhone" class="rsvp-control" placeholder="Nhập số điện thoại của Quý khách..." required>
             </div>
             <div class="rsvp-group">
               <label for="rsvpGuests">Số Lượng Khách Đi Kèm</label>
               <select id="rsvpGuests" class="rsvp-control">
-                <option value="1">1 Thượng Khách</option>
-                <option value="2" selected>2 Thượng Khách</option>
-                <option value="3">3 Thượng Khách</option>
-                <option value="4">Gia đình (4 người)</option>
+                <option value="1 Thượng Khách">1 Thượng Khách</option>
+                <option value="2 Thượng Khách" selected>2 Thượng Khách</option>
+                <option value="3 Thượng Khách">3 Thượng Khách</option>
+                <option value="Gia đình (4 người)">Gia đình (4 người)</option>
               </select>
             </div>
             <div class="rsvp-group">
@@ -495,10 +642,41 @@
         <p style="margin-bottom:6px;">
           <strong>Địa chỉ dự án:</strong> Hồ Lồ Ô, Khu vực Đất Đỏ, Xã Đất Đỏ, TP Hồ Chí Minh
         </p>
-        <p>
-          Hotline Quản Gia VIP: <a href="tel:0909000712" style="color:var(--color-gold-dark); font-weight:700;">0909 000 712</a> &nbsp;·&nbsp; Email: vip@saigonfarmresort.com
-        </p>
       </footer>
+    </div>
+  </div>
+
+  <!-- POPUP MODAL CẢM ƠN VIP -->
+  <div class="thankyou-modal-overlay" id="thankyouModal" style="display:none;" onclick="handleOverlayClick(event)">
+    <div class="thankyou-modal-card">
+      <button type="button" class="modal-close" onclick="closeThankyouModal()" aria-label="Đóng">&times;</button>
+      
+      <div class="modal-icon-wrap">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      
+      <h3 class="modal-title">Ghi Nhận Đăng Ký Thành Công!</h3>
+      
+      <p class="modal-welcome">
+        Kính chào Quý khách <strong id="modalName"></strong> (<span id="modalPhone"></span>),<br>
+        Hành trình trải nghiệm thực địa VIP dành cho <strong id="modalGuests"></strong> ngày <strong id="modalDate"></strong> đã được tiếp nhận.
+      </p>
+
+      <div class="modal-advisor-box">
+        <div class="advisor-icon">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <div class="advisor-info">
+          <h4>KẾT NỐI VỚI CHUYÊN VIÊN ĐÓN TIẾP</h4>
+          <p>
+            Quý khách vui lòng liên hệ trực tiếp với <strong>Người / Chuyên viên đã gửi đường link thư mời này cho Quý vị</strong> để được xác nhận giờ xe Limousine VIP đón và phục vụ chu đáo nhất.
+          </p>
+        </div>
+      </div>
+
+      <button type="button" class="btn-modal-close" onclick="closeThankyouModal()">
+        <i class="fa-solid fa-check"></i> Đã Hiểu &amp; Hoàn Tất
+      </button>
     </div>
   </div>
 
@@ -508,8 +686,25 @@
       const name = document.getElementById('rsvpName').value;
       const phone = document.getElementById('rsvpPhone').value;
       const guests = document.getElementById('rsvpGuests').value;
-      alert('Kính chào Quý khách ' + name + ' (' + phone + '). Lịch đăng ký tham quan thực địa dành cho ' + guests + ' thượng khách đã được ghi nhận. Quản gia VIP sẽ liên hệ xác nhận chuyến xe Limousine đón Quý vị.');
+      const date = document.getElementById('rsvpDate').value;
+      
+      document.getElementById('modalName').textContent = name;
+      document.getElementById('modalPhone').textContent = phone;
+      document.getElementById('modalGuests').textContent = guests;
+      document.getElementById('modalDate').textContent = date || 'sắp tới';
+      
+      document.getElementById('thankyouModal').style.display = 'flex';
       document.getElementById('rsvpForm').reset();
+    }
+
+    function closeThankyouModal() {
+      document.getElementById('thankyouModal').style.display = 'none';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target.id === 'thankyouModal') {
+        closeThankyouModal();
+      }
     }
   </script>
 </body>
