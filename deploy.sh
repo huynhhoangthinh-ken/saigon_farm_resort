@@ -38,7 +38,6 @@ if git diff-index --quiet HEAD --; then
 else
     echo "📦 [2/3] Đang Commit..."
     git commit -m "$COMMIT_MSG"
-    git push origin main 2>/dev/null || echo "⚠️ Bỏ qua git push (chưa cấu hình token GitHub), tiếp tục deploy Cloudflare..."
 fi
 
 echo "📦 [3/4] Đóng gói website chuẩn hóa (dist-site)..."
