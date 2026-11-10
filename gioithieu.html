@@ -964,15 +964,24 @@
     }
 
     .product-media {
-      height: 240px;
+      width: 100%;
+      aspect-ratio: 3 / 2;
       position: relative;
       overflow: hidden;
+      background: var(--color-wood-deep);
     }
 
     .product-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .product-box:hover .product-media img {
+      transform: scale(1.03);
     }
 
     .product-tag {
