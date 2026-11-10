@@ -36,9 +36,9 @@ git add -A
 if git diff-index --quiet HEAD --; then
     echo "ℹ️  Không có thay đổi mới trong mã nguồn Git."
 else
-    echo "📦 [2/3] Đang Commit & Push lên GitHub origin main..."
+    echo "📦 [2/3] Đang Commit..."
     git commit -m "$COMMIT_MSG"
-    git push origin main
+    git push origin main 2>/dev/null || echo "⚠️ Bỏ qua git push (chưa cấu hình token GitHub), tiếp tục deploy Cloudflare..."
 fi
 
 echo "📦 [3/4] Đóng gói website chuẩn hóa (dist-site)..."
