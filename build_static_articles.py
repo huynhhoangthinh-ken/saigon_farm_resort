@@ -359,9 +359,9 @@ def generate_article_html(post, slug, related_posts):
           </ul>
         </div>
         <div>
-          <h4 class="footer-col-heading">Về Dự Án</h4>
+          <h4 class="footer-col-heading">Về Quần Thể</h4>
           <ul class="footer-links-list">
-            <li><a href="/gioithieu">Hồ Sơ Quy Hoạch Dự Án</a></li>
+            <li><a href="/gioithieu">Hồ Sơ Quy Hoạch Quần Thể</a></li>
             <li><a href="/story">Tạp Chí Story (98 Trang)</a></li>
             <li><a href="/lien-he">Liên Hệ Ban Quản Lý</a></li>
           </ul>

@@ -490,7 +490,7 @@ def build_unit_page_html(item, all_items):
               <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--primary); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
                 <i class="fa-solid fa-person-digging" style="color: var(--gold-dark);"></i> 2. Tiến Độ Thanh Toán Giá Trị Xây Dựng Biệt Phủ ({const_bil})
               </h3>
-              <p style="font-size: 0.88rem; color: #555; margin-bottom: 12px;">Áp dụng đối với sản phẩm Biệt Phủ có ký Hợp đồng thi công xây dựng theo mẫu kiến trúc chuẩn của dự án:</p>
+              <p style="font-size: 0.88rem; color: #555; margin-bottom: 12px;">Áp dụng đối với sản phẩm Biệt Phủ có ký Hợp đồng thi công xây dựng theo mẫu kiến trúc chuẩn của quần thể:</p>
               <div class="installment-table-wrap">
                 <table class="installment-table">
                   <thead>
@@ -3791,7 +3791,7 @@ def build_unit_page_html(item, all_items):
         </p>
       </div>
       <div class="footer-col">
-        <h5>Thông Tin Dự Án</h5>
+        <h5>Thông Tin Quần Thể</h5>
         <ul class="footer-links">
           <li><a href="/"><i class="fa-solid fa-angle-right"></i> Trang Chủ Saigon Farm Resort</a></li>
           <li><a href="/gioi-thieu.html"><i class="fa-solid fa-angle-right"></i> Thuyết Minh Quy Hoạch 100ha</a></li>
@@ -4295,7 +4295,7 @@ def main():
 </head>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; padding: 60px 20px; color: #1E1713;">
   <h2 style="font-size: 1.5rem; margin-bottom: 12px;">Mã Căn {u_upper} Chưa Mở Bán Trong Đợt 1</h2>
-  <p style="color: #64748b; font-size: 1rem; margin-bottom: 24px;">Hiện tại dự án chỉ mở bán 21 sản phẩm Đợt 1 (11 Điền Sản, 4 Điền An, 6 Biệt Phủ).</p>
+  <p style="color: #64748b; font-size: 1rem; margin-bottom: 24px;">Hiện tại chỉ mở bán 21 sản phẩm Đợt 1 (11 Điền Sản, 4 Điền An, 6 Biệt Phủ).</p>
   <p>Đang chuyển hướng quý khách về <a href="/giohang" style="color: #0284c7; font-weight: 700; text-decoration: underline;">Giỏ Hàng Mở Bán Đợt 1</a>...</p>
 </body>
 </html>"""
