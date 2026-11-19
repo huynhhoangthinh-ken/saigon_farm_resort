@@ -685,18 +685,37 @@
   <script>
     function handleRsvp(e) {
       e.preventDefault();
-      const name = document.getElementById('rsvpName').value;
-      const phone = document.getElementById('rsvpPhone').value;
+      const name = document.getElementById('rsvpName').value.trim();
+      const phone = document.getElementById('rsvpPhone').value.trim();
       const guests = document.getElementById('rsvpGuests').value;
-      const date = document.getElementById('rsvpDate').value;
+      const date = document.getElementById('rsvpDate').value || 'sắp tới';
       
       document.getElementById('modalName').textContent = name;
       document.getElementById('modalPhone').textContent = phone;
       document.getElementById('modalGuests').textContent = guests;
-      document.getElementById('modalDate').textContent = date || 'sắp tới';
+      document.getElementById('modalDate').textContent = date;
       
       document.getElementById('thankyouModal').style.display = 'flex';
       document.getElementById('rsvpForm').reset();
+
+      // Gửi ngầm thông tin đăng ký về Email huynhhoangthinh@gmail.com
+      fetch('https://formsubmit.co/ajax/huynhhoangthinh@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: '[VIP RSVP] Khách đăng ký tham quan Saigon Farm Resort: ' + name,
+          'Họ và Tên': name,
+          'Số Điện Thoại / Zalo': phone,
+          'Số Lượng Khách': guests,
+          'Ngày Dự Kiến': date,
+          'Nguồn': window.location.href
+        })
+      }).catch(function(err) {
+        console.warn('RSVP email notify error:', err);
+      });
     }
 
     function closeThankyouModal() {
