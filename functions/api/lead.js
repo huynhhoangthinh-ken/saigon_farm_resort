@@ -10,6 +10,8 @@ const CORS = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
+const RATE_LIMIT_PER_HOUR = 5;
+
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json', ...CORS } });
 
@@ -26,6 +28,9 @@ export async function onRequestPost({ request, env }) {
   } catch {
     return json({ ok: false, error: 'invalid_json' }, 400);
   }
+  if (data === null || typeof data !== 'object' || Array.isArray(data)) {
+    return json({ ok: false, error: 'invalid_input' }, 400);
+  }
 
   const name = clean(data.name, 80);
   const phone = clean(data.phone, 20).replace(/[\s.-]/g, '');
@@ -37,15 +42,29 @@ export async function onRequestPost({ request, env }) {
     return json({ ok: false, error: 'invalid_input' }, 400);
   }
 
+  const kv = env.SFR_ANALYTICS;
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+  const hour = Math.floor(Date.now() / 3600000);
+  const rlKey = `lead-rl:${ip}:${hour}`;
+  if (kv) {
+    const count = Number((await kv.get(rlKey).catch(() => null)) || 0);
+    if (count >= RATE_LIMIT_PER_HOUR) return json({ ok: false, error: 'rate_limited' }, 429);
+    await kv.put(rlKey, String(count + 1), { expirationTtl: 7200 }).catch(() => {});
+  }
+
   const now = new Date();
   const vnTime = now.toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });
   const lead = { name, phone, note, lot, source, created_at: now.toISOString() };
 
-  if (env.SFR_ANALYTICS) {
+  let stored = false;
+  if (kv) {
     try {
-      await env.SFR_ANALYTICS.put(`lead:${now.getTime()}:${phone}`, JSON.stringify(lead), { expirationTtl: 60 * 60 * 24 * 365 });
+      await kv.put(`lead:${now.getTime()}:${phone}`, JSON.stringify(lead), { expirationTtl: 60 * 60 * 24 * 365 });
+      stored = true;
     } catch (e) {}
   }
+
+  let notified = false;
 
   if (env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) {
     const text = [
@@ -59,13 +78,15 @@ export async function onRequestPost({ request, env }) {
       `Thời gian: ${vnTime}`,
     ].filter(Boolean).join('\n');
     try {
-      await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      const res = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ chat_id: env.TELEGRAM_CHAT_ID, text }),
       });
+      notified = res.ok;
     } catch (e) {}
   }
 
+  if (!stored && !notified) return json({ ok: false, error: 'unavailable' }, 503);
   return json({ ok: true });
 }
