@@ -423,5 +423,6 @@ https://www.saigonfarmresort.com/* https://saigonfarmresort.com/:splat 301
 /ung-dung/map /ung-dung/index.html 200
 /ung-dung/gallery /ung-dung/index.html 200
 /ung-dung/contact /ung-dung/index.html 200
+/ung-dung/settings /ung-dung/index.html 200
 /ung-dung/dien-vien /ung-dung/index.html 200
 /ung-dung/product/* /ung-dung/index.html 200
