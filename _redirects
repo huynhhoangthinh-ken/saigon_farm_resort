@@ -413,3 +413,15 @@ https://www.saigonfarmresort.com/* https://saigonfarmresort.com/:splat 301
 /listing/B24 /b24 301
 /giong/b24 /b24 301
 /giong/B24 /b24 301
+
+# Saigon Farm Resort web app (Expo single-page app) — explicit routes only, so bundled assets are never rewritten
+/ung-dung/visit /ung-dung/index.html 200
+/ung-dung/location /ung-dung/index.html 200
+/ung-dung/amenities /ung-dung/index.html 200
+/ung-dung/compare /ung-dung/index.html 200
+/ung-dung/faq /ung-dung/index.html 200
+/ung-dung/map /ung-dung/index.html 200
+/ung-dung/gallery /ung-dung/index.html 200
+/ung-dung/contact /ung-dung/index.html 200
+/ung-dung/dien-vien /ung-dung/index.html 200
+/ung-dung/product/* /ung-dung/index.html 200
