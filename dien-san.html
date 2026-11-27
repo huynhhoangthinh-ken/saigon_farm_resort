@@ -16,7 +16,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Điền Sản (The Founders Collection) | Saigon Farm Resort - Giỏ Hàng Mở Bán 2026</title>
-  <meta name="description" content="Điền Sản (The Founders Collection) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay. Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của chủ đầu tư. Không bắt buộc xây dựng ngay.">
+  <meta name="description" content="Điền Sản (The Founders Collection) tại Saigon Farm Resort. Đất 100% thổ cư, sổ đỏ riêng từng lô, công chứng sang tên ngay. Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của đơn vị phát triển. Không bắt buộc xây dựng ngay.">
   <meta name="keywords" content="Saigon Farm Resort, Điền Sản, The Founders Collection, điền trang sinh thái, đất nghỉ dưỡng hồ tràm, đất đỏ TP Hồ Chí Minh">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://saigonfarmresort.com/dien-san">
@@ -45,7 +45,7 @@
         "@type": "RealEstateListing",
         "@id": "https://saigonfarmresort.com/dien-san#listing",
         "name": "Điền Sản (The Founders Collection) - Saigon Farm Resort",
-        "description": "Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của chủ đầu tư. Không bắt buộc xây dựng ngay.",
+        "description": "Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của đơn vị phát triển. Không bắt buộc xây dựng ngay.",
         "url": "https://saigonfarmresort.com/dien-san",
         "image": "https://saigonfarmresort.com/assets/Index_asset/3D_SGFR_Photo_logo/SGFR_16.webp",
         "provider": {
@@ -1157,6 +1157,20 @@
       gap: 5px;
     }
 
+
+    /* Typography balance & semantic line-breaking */
+    .hero-title, .hero-subtitle, .section-title, .card-title, .switch-title {
+      text-wrap: balance;
+    }
+    .hero-desc, .section-sub, .card-desc, .switch-desc, .modal-desc {
+      text-wrap: pretty;
+    }
+    .br-desktop { display: inline; }
+    .nowrap-desktop { white-space: nowrap; }
+    @media (max-width: 768px) {
+      .br-desktop { display: none; }
+      .nowrap-desktop { white-space: normal; }
+    }
   </style>
 </head>
 <body>
@@ -1203,8 +1217,8 @@
     <div class="hero-container">
       <span class="hero-badge"><i class="fa-solid fa-star"></i> 11 Sản Phẩm Mở Bán Đợt 1 (Chỉ Bán Đất)</span>
       <h1 class="hero-title">Điền Sản<br><span style="color: var(--gold); font-size: 0.8em; font-weight: 400; font-style: italic;">The Founders Collection</span></h1>
-      <p class="hero-subtitle">Tích Sản Tài Chính & Quyền Ưu Tiên Ra Hàng Đón Sóng Hạ Tầng</p>
-      <p class="hero-desc">Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của chủ đầu tư. Không bắt buộc xây dựng ngay.</p>
+      <p class="hero-subtitle"><span class="nowrap-desktop">Tích&nbsp;Sản Tài&nbsp;Chính</span> <span class="nowrap-desktop">&amp;&nbsp;Quyền Ưu&nbsp;Tiên Ra&nbsp;Hàng Đón&nbsp;Sóng Hạ&nbsp;Tầng</span></p>
+      <p class="hero-desc">Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của đơn vị phát triển. Không bắt buộc xây dựng ngay.</p>
       
       <div class="hero-stats-bar">
         
@@ -1234,15 +1248,15 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">TRIẾT LÝ &amp; HÌNH THỨC SẢN PHẨM</span>
-        <h2 class="section-title">Ý Nghĩa Dòng Sản Phẩm &amp; Quy Chuẩn Bàn Giao</h2>
-        <p class="section-sub">Mỗi dòng sản phẩm tại Saigon Farm Resort được thiết kế chuyên biệt để đáp ứng đúng mục đích an cư, nghỉ dưỡng hoặc sinh lời bền vững của Quý chủ nhân.</p>
+        <h2 class="section-title"><span class="nowrap-desktop">Ý&nbsp;Nghĩa Dòng Sản&nbsp;Phẩm</span> <span class="nowrap-desktop">&amp;&nbsp;Quy&nbsp;Chuẩn Bàn&nbsp;Giao</span></h2>
+        <p class="section-sub">Mỗi dòng sản&nbsp;phẩm tại Saigon&nbsp;Farm&nbsp;Resort được thiết&nbsp;kế chuyên&nbsp;biệt<br class="br-desktop"> để đáp&nbsp;ứng đúng mục&nbsp;đích an&nbsp;cư, nghỉ&nbsp;dưỡng hoặc sinh&nbsp;lời bền&nbsp;vững của Quý&nbsp;chủ&nbsp;nhân.</p>
       </div>
 
       <div class="overview-grid">
         <div class="overview-content">
           <h3>Ý Nghĩa &amp; Bản Sắc Điền Sản</h3>
           <p style="font-size: 1.02rem; color: #333; margin-bottom: 20px; line-height: 1.75;">
-            Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của chủ đầu tư. Không bắt buộc xây dựng ngay.
+            Dòng đầu tư đón đầu chu kỳ tăng trưởng. Vào tiền sớm, hưởng biên độ giá giai đoạn 1, quyền chọn vị trí trước, ra hàng theo lộ trình giá của đơn vị phát triển. Không bắt buộc xây dựng ngay.
           </p>
           <div style="background: #fbf9f5; border-left: 4px solid var(--gold); padding: 18px 20px; border-radius: 6px; margin-bottom: 22px;">
             <h5 style="color: var(--primary-dark); font-size: 1rem; margin-bottom: 6px; font-weight: 700;">HÌNH THỨC SẢN PHẨM BÀN GIAO:</h5>
@@ -1301,8 +1315,8 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">DANH SÁCH MÃ CĂN MỞ BÁN</span>
-        <h2 class="section-title">Bảng Giỏ Hàng Điền Sản</h2>
-        <p class="section-sub">Tổng hợp chi tiết các mã lô, diện tích quy hoạch, đặc tính vị trí và mức độ phù hợp. Bảng giá chính thức do Đơn vị Phát triển MDS Land công bố trước thời điểm mở bán.</p>
+        <h2 class="section-title">Bảng Giỏ&nbsp;Hàng Điền&nbsp;Sản</h2>
+        <p class="section-sub">Tổng&nbsp;hợp chi&nbsp;tiết các mã&nbsp;lô, diện&nbsp;tích quy&nbsp;hoạch, đặc&nbsp;tính vị&nbsp;trí và mức&nbsp;độ phù&nbsp;hợp.<br class="br-desktop"> Bảng&nbsp;giá chính&nbsp;thức do Đơn&nbsp;vị Phát&nbsp;triển MDS&nbsp;Land công&nbsp;bố trước thời&nbsp;điểm mở&nbsp;bán.</p>
       </div>
 
       <!-- Controls & Filter -->
@@ -1732,7 +1746,7 @@
       <div class="masterplan-wrap">
         <div>
           <span class="section-tag" style="color: var(--gold);">QUY HOẠCH TỔNG THỂ ĐIỀN TRANG</span>
-          <h2 class="section-title" style="color: #fff; margin-bottom: 20px;">Mặt Bằng &amp; Hệ Thống Tiện Ích 30.000 m²</h2>
+          <h2 class="section-title" style="color: #fff; margin-bottom: 20px;"><span class="nowrap-desktop">Mặt&nbsp;Bằng &amp; Hệ&nbsp;Thống</span> <span class="nowrap-desktop">Tiện&nbsp;Ích 30.000&nbsp;m²</span></h2>
           <p style="color: #c2d1cb; line-height: 1.7; margin-bottom: 24px;">
             Saigon Farm Resort được quy hoạch bài bản với mật độ xây dựng thấp kỷ lục. Trung tâm là quần thể tiện ích sinh thái 5 sao: Clubhouse ven hồ, Hồ bơi điện phân khoáng muối, Sân Pickleball, Làng ngựa quý tộc Việt Mã Viên, Bến thuyền Kayak và Đầm sen ngát hương.
           </p>
@@ -1759,8 +1773,8 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">BỘ SƯU TẬP ĐIỀN TRANG KHÁC</span>
-        <h2 class="section-title">Khám Phá Các Dòng Sản Phẩm Cùng Giỏ Hàng</h2>
-        <p class="section-sub">Tìm hiểu thêm các phương án đầu tư và sở hữu biệt phủ điền trang phù hợp với khẩu vị tài chính của Quý khách.</p>
+        <h2 class="section-title"><span class="nowrap-desktop">Khám&nbsp;Phá Các Dòng Sản&nbsp;Phẩm</span> <span class="nowrap-desktop">Cùng Giỏ&nbsp;Hàng</span></h2>
+        <p class="section-sub">Tìm&nbsp;hiểu thêm các phương&nbsp;án đầu&nbsp;tư và sở&nbsp;hữu biệt&nbsp;phủ điền&nbsp;trang<br class="br-desktop"> phù&nbsp;hợp với khẩu&nbsp;vị tài&nbsp;chính của Quý&nbsp;khách.</p>
       </div>
 
       <div class="switch-grid">

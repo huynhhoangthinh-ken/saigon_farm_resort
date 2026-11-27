@@ -515,6 +515,25 @@
       background: linear-gradient(135deg, #dfb262 0%, var(--color-gold) 100%);
       transform: translateY(-2px);
     }
+
+    /* Typography balance & semantic line-breaking */
+    .invitation-title,
+    .invitation-subtitle,
+    .rsvp-header h3,
+    .privileges-title,
+    .value-text strong {
+      text-wrap: balance;
+    }
+
+    .salutation,
+    .value-text p,
+    .privileges-list li,
+    .rsvp-header p {
+      text-wrap: pretty;
+    }
+
+    .br-desktop { display: inline; }
+    @media (max-width: 768px) { .br-desktop { display: none; } }
   </style>
 </head>
 <body>
@@ -523,18 +542,19 @@
     <!-- HEADER -->
     <header class="invitation-header">
       <img src="assets/Index_asset/LOGO_PNG/LOGO_SGF_WHITE.png" alt="Saigon Farm Resort Logo" class="invitation-logo">
-      <div class="invitation-pretitle">Đại Chúng Properties &amp; MDS Land</div>
-      <h1 class="invitation-title">THƯ MỜI TRẢI NGHIỆM THỰC ĐỊA VIP</h1>
+      <div class="invitation-pretitle">Đại&nbsp;Chúng Properties &amp; MDS&nbsp;Land</div>
+      <h1 class="invitation-title">THƯ&nbsp;MỜI TRẢI&nbsp;NGHIỆM THỰC&nbsp;ĐỊA VIP</h1>
       <p class="invitation-subtitle">
-        Khám phá Quần Thể Điền Trang Nghỉ Dưỡng Sinh Thái Ven Hồ 100ha — Bản Sắc Việt Đương Đại
+        Khám&nbsp;phá Quần&nbsp;Thể Điền&nbsp;Trang Nghỉ&nbsp;Dưỡng Sinh&nbsp;Thái Ven&nbsp;Hồ&nbsp;100ha<br class="br-desktop">
+        — Bản&nbsp;Sắc Việt Đương&nbsp;Đại
       </p>
     </header>
 
     <!-- BODY -->
     <div class="invitation-body">
       <div class="salutation">
-        <strong>Kính gửi Quý Đối Tác Chiến Lược &amp; Quý Khách Hàng Thượng Lưu,</strong><br>
-        Đại Chúng Properties và MDS Land trân trọng kính mời Quý vị tham gia hành trình trải nghiệm thực địa đặc quyền tại Saigon Farm Resort — Quần thể điền trang nghỉ dưỡng sinh thái ven hồ quy mô bậc nhất khu vực.
+        <strong>Kính gửi Quý Đối&nbsp;Tác Chiến&nbsp;Lược &amp; Quý Khách&nbsp;Hàng Thượng&nbsp;Lưu,</strong><br>
+        Đại&nbsp;Chúng Properties và MDS&nbsp;Land trân&nbsp;trọng kính&nbsp;mời Quý&nbsp;vị tham&nbsp;gia hành&nbsp;trình trải&nbsp;nghiệm thực&nbsp;địa đặc&nbsp;quyền tại Saigon&nbsp;Farm&nbsp;Resort — Quần&nbsp;thể điền&nbsp;trang nghỉ&nbsp;dưỡng sinh&nbsp;thái ven&nbsp;hồ quy&nbsp;mô bậc&nbsp;nhất khu&nbsp;vực.
       </div>
 
       <!-- 4 GIÁ TRỊ CỐT LÕI -->
@@ -542,32 +562,32 @@
         <div class="value-card">
           <i class="fa-solid fa-water value-icon"></i>
           <div class="value-text">
-            <strong>Mặt Nước Hồ 100 Hecta</strong>
-            <p>Vi khí hậu tự nhiên mát lành quanh năm, mật độ ion âm thanh khiết tựa hồ ngọc.</p>
+            <strong>Mặt&nbsp;Nước Hồ 100&nbsp;Hecta</strong>
+            <p>Vi&nbsp;khí&nbsp;hậu tự&nbsp;nhiên mát&nbsp;lành quanh&nbsp;năm, mật&nbsp;độ ion&nbsp;âm thanh&nbsp;khiết tựa hồ&nbsp;ngọc.</p>
           </div>
         </div>
 
         <div class="value-card">
           <i class="fa-solid fa-certificate value-icon"></i>
           <div class="value-text">
-            <strong>100% Sổ Đỏ Riêng Trao Tay</strong>
-            <p>Đất thổ cư sở hữu lâu dài, sẵn sàng công chứng chuyển nhượng quyền sử dụng ngay.</p>
+            <strong>100% Sổ&nbsp;Đỏ Riêng Trao&nbsp;Tay</strong>
+            <p>Đất thổ&nbsp;cư sở&nbsp;hữu lâu&nbsp;dài, sẵn&nbsp;sàng công&nbsp;chứng chuyển&nbsp;nhượng quyền sử&nbsp;dụng ngay.</p>
           </div>
         </div>
 
         <div class="value-card">
           <i class="fa-solid fa-spa value-icon"></i>
           <div class="value-text">
-            <strong>30.000 m² Tiện Ích Chuẩn 5 Sao</strong>
-            <p>Bến du thuyền, hồ bơi khoáng muối vô cực điện phân, nhà hàng Nếp Việt, spa Nam Y.</p>
+            <strong>30.000&nbsp;m² Tiện&nbsp;Ích Chuẩn 5&nbsp;Sao</strong>
+            <p>Bến du&nbsp;thuyền, hồ&nbsp;bơi khoáng&nbsp;muối vô&nbsp;cực điện&nbsp;phân, nhà&nbsp;hàng Nếp&nbsp;Việt, spa Nam&nbsp;Y.</p>
           </div>
         </div>
 
         <div class="value-card">
           <i class="fa-solid fa-shield-halved value-icon"></i>
           <div class="value-text">
-            <strong>Vận Hành Bởi MDS Living</strong>
-            <p>Dịch vụ quản gia resort chuyên biệt &amp; bài toán dòng tiền cam kết khai thác bền vững.</p>
+            <strong>Vận&nbsp;Hành Bởi MDS&nbsp;Living</strong>
+            <p>Dịch&nbsp;vụ quản&nbsp;gia resort chuyên&nbsp;biệt &amp; bài&nbsp;toán dòng&nbsp;tiền cam&nbsp;kết khai&nbsp;thác bền&nbsp;vững.</p>
           </div>
         </div>
       </div>
