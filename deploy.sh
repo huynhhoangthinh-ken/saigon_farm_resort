@@ -58,7 +58,7 @@ for f in os.listdir('.'):
 folders = [
     'assets', 'css', 'js', 'data', 'bai-viet', 'listing', 'giohang', 'short',
     'introduction', 'gioithieu', 'gioi-thieu', 'investment', 'investor', 'dien-an',
-    'dien-san', 'biet-phu-dien-trang', 'cam-on', 'story', 'article', 'animation'
+    'dien-san', 'biet-phu-dien-trang', 'cam-on', 'story', 'article', 'animation', 'ung-dung'
 ]
 
 # Include all 34 individual unit folders
